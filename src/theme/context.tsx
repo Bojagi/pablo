@@ -1,12 +1,15 @@
 import * as React from "react";
 import { ThemeProvider, useTheme } from "styled-components";
+import { defaultComponentStyles } from "./defaultComponentStyles";
 import { defaultTheme } from "./defaultTheme";
 import { PabloTheme } from "./types";
 
 export const pabloThemeContext = React.createContext<PabloTheme>(defaultTheme);
+export const pabloComponentStylesContext = React.createContext<any>(defaultComponentStyles);
 
 export interface PabloThemeProviderProps {
   theme?: PabloTheme;
+  componentStyles?: any;
   children: React.ReactNode;
 }
 
@@ -14,14 +17,20 @@ export interface PabloThemeableProps {
   theme: PabloTheme;
 }
 
-export const PabloThemeProvider = ({theme = defaultTheme, children}: PabloThemeProviderProps) => {
+export const PabloThemeProvider = ({
+  theme = defaultTheme,
+  componentStyles = defaultComponentStyles,
+  children
+}: PabloThemeProviderProps) => {
   const scTheme = useTheme() || {};
   
   return (
     <pabloThemeContext.Provider value={theme}>
-      <ThemeProvider theme={{...scTheme, ...theme}}>
-        {children}
-      </ThemeProvider>
+      <pabloComponentStylesContext.Provider value={componentStyles}>
+        <ThemeProvider theme={{...scTheme, ...theme, componentStyles}}>
+          {children}
+        </ThemeProvider>
+      </pabloComponentStylesContext.Provider>
     </pabloThemeContext.Provider>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { BoxProps } from "../Box";
 import { ButtonBase } from "../ButtonBase";
-import { getColor } from "../styleHelpers";
+import { getComponentStyle } from "../styleHelpers";
 import { ButtonTypography } from "../Typography";
 
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
@@ -16,127 +16,31 @@ export interface ButtonProps extends Omit<BoxProps, 'color'> {
   className?: string;
 };
 
-const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase)`
-  ${props => {
-    switch(props.color) {
-      case 'black':
-        return css`
-          color: ${getColor('common', 'blackContrastText')};
-          background: ${getColor('common', 'black')};
-          border-color: ${getColor('common', 'black')};
-        `;
-      case 'positive':
-        return css`
-          color: ${getColor('positive', 'contrastText')};
-          background: ${getColor('positive')};
-          border-color: ${getColor('positive')};
+const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+  color: ${getComponentStyle('button.primary.{color}.color')};
+  background: ${getComponentStyle('button.primary.{color}.backgroundColor')};
+  border-color: ${getComponentStyle('button.primary.{color}.borderColor')};
 
-          &:hover:not(:disabled) {
-            background: ${getColor('positive', 'dark')};
-            border-color: ${getColor('positive', 'dark')};
-          }
-        `;
-      case 'negative':
-        return css`
-          color: ${getColor('negative', 'contrastText')};
-          background: ${getColor('negative')};
-          border-color: ${getColor('negative')};
-
-          &:hover:not(:disabled) {
-            background: ${getColor('negative', 'dark')};
-            border-color: ${getColor('negative', 'dark')};
-          }
-        `;
-      case 'brand':
-      default:
-        return css`
-          color: ${getColor('brand', 'contrastText')};
-          background: ${getColor('brand')};
-          border-color: ${getColor('brand')};
-
-          &:hover:not(:disabled) {
-            background: ${getColor('brand', 'dark')};
-            border-color: ${getColor('brand', 'dark')};
-          }
-        `;
-    }
-  }}
+  &:hover:not(:disabled) {
+    background: ${getComponentStyle('button.primary.{color}.hover.backgroundColor')};
+    border-color: ${getComponentStyle('button.primary.{color}.hover.borderColor')};
+  }
 `;
 
-const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase)`
-  ${props => {
-    switch(props.color) {
-      case 'black':
-        return css`
-          color: ${getColor('common', 'black')};
-          border-color: ${getColor('common', 'black')};
-        `;
-      case 'positive':
-        return css`
-          color: ${getColor('positive')};
-          border-color: ${getColor('positive')};
+const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+  color: ${getComponentStyle('button.secondary.{color}.color')};
+  border-color: ${getComponentStyle('button.secondary.{color}.borderColor')};
 
-          &:hover:not(:disabled) {
-            background: ${getColor('positive', 'light')};
-          }
-        `;
-      case 'negative':
-        return css`
-          color: ${getColor('negative')};
-          border-color: ${getColor('negative')};
-
-          &:hover:not(:disabled) {
-            background: ${getColor('negative', 'light')};
-          }
-        `;
-      case 'brand':
-      default:
-        return css`
-          color: ${getColor('brand')};
-          border-color: ${getColor('brand')};
-
-          &:hover:not(:disabled) {
-            background: ${getColor('brand', 'light')};
-          }
-        `;
-    }
-  }}
+  &:hover:not(:disabled) {
+    background: ${getComponentStyle('button.secondary.{color}.hover.backgroundColor')};
+  }
 `;
 
-const ButtonText = styled<React.FC<ButtonProps>>(ButtonBase)`
-  ${props => {
-    switch(props.color) {
-      case 'black':
-        return css`
-          color: ${getColor('common', 'black')};
-        `;
-      case 'positive':
-        return css`
-          color: ${getColor('positive')};
-  
-          &:hover:not(:disabled) {
-            background: ${getColor('positive', 'light')};
-          }
-        `;
-      case 'negative':
-        return css`
-          color: ${getColor('negative')};
-  
-          &:hover:not(:disabled) {
-            background: ${getColor('negative', 'light')};
-          }
-        `;
-      case 'brand':
-      default:
-        return css`
-          color: ${getColor('brand')};
-  
-          &:hover:not(:disabled) {
-            background: ${getColor('brand', 'light')};
-          }
-        `;
-    }
-  }}
+const ButtonText = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+  color: ${getComponentStyle('button.text.{color}.color')};
+  &:hover:not(:disabled) {
+    background: ${getComponentStyle('button.text.{color}.hover.backgroundColor')}
+  }
 `;
 
 const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {

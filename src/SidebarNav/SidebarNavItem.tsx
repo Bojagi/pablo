@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { ButtonBase, ButtonBaseProps } from "../ButtonBase";
-import { getColor } from "../styleHelpers";
+import { getComponentStyle } from "../styleHelpers";
 import { Typography } from "../Typography";
 
 
@@ -14,11 +14,11 @@ const SidebarNavItemWrapper = styled<React.FC<SidebarNavItemProps>>(ButtonBase).
   as: 'li',
 })`
   ${props => props.active && css`
-    background-color: ${getColor('brand', 'light')};
+    background-color: ${getComponentStyle('sidebarNav.item.active.backgroundColor')};
   `}
 
   &:hover {
-    background-color: ${getColor('brand', 'light')};
+    background-color: ${getComponentStyle('sidebarNav.item.hover.backgroundColor')};
   }
 `;
 

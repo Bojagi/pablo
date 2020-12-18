@@ -2,7 +2,7 @@ import React from "react"
 import styled, { css } from "styled-components";
 import { BoxProps } from "../Box";
 import { ButtonBase } from "../ButtonBase"
-import { getColor, getSpacing } from "../styleHelpers";
+import { getComponentStyle } from "../styleHelpers";
 import { Typography } from "../Typography"
 
 export interface TabProps extends BoxProps {
@@ -12,26 +12,26 @@ export interface TabProps extends BoxProps {
 }
 
 const TabButton = styled<React.FC<Partial<TabProps>>>(ButtonBase)`
-  color: ${getColor('common', 'black')};
+  color: ${getComponentStyle('tabs.tab.color')};
   position: relative;
-  padding: ${getSpacing(1)} ${getSpacing(1.5)} ${getSpacing(1.5)};
+  padding: ${getComponentStyle('tabs.tab.padding')};
 
   &:hover {
-    background-color: ${getColor('brand', 'light')};
+    background-color: ${getComponentStyle('tabs.tab.hover.backgroundColor')};
   }
 
   ${props => props.active && css`
-    color: ${getColor('brand')};
+    color: ${getComponentStyle('tabs.tab.active.color')};
     &:after {
       content: '';
       position: absolute;
       bottom: 0;
-      left: ${getSpacing(1)};
-      width: calc(100% - ${getSpacing(2)});
-      height: ${getSpacing(0.5)};
-      border-top-left-radius: ${getSpacing(0.5)};
-      border-top-right-radius: ${getSpacing(0.5)};
-      background-color: ${getColor('brand')};
+      left: ${getComponentStyle('tabs.tab.active.bottomBorder.gap')};
+      width: calc(100% - ${getComponentStyle('tabs.tab.active.bottomBorder.gap')} - ${getComponentStyle('tabs.tab.active.bottomBorder.gap')});
+      height: ${getComponentStyle('tabs.tab.active.bottomBorder.thickness')};
+      border-top-left-radius: ${getComponentStyle('tabs.tab.active.bottomBorder.radius')};
+      border-top-right-radius: ${getComponentStyle('tabs.tab.active.bottomBorder.radius')};
+      background-color: ${getComponentStyle('tabs.tab.active.bottomBorder.color')};
     }
   `}
 `;
