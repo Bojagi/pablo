@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:Bojagi/pablo.git",
-  "author": "Simon Jentsch <simon@bojagi.io>",
+  "contributors": [
+    "Simon Jentsch <simon@bojagi.io>"
+  ],
   "license": "UNLICENSED",
   "peerDependencies": {
     "react": "^17.0.1",
