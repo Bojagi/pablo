@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { BoxProps } from "../Box";
+import { Box, BoxProps } from "../Box";
 import { ButtonBase } from "../ButtonBase";
 import { getComponentStyle } from "../styleHelpers";
+import { useComponentStyle } from "../theme";
 import { ButtonTypography } from "../Typography";
 
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
@@ -11,6 +12,7 @@ export type ButtonColor = 'brand' | 'black' | 'negative' | 'positive';
 export interface ButtonProps extends Omit<BoxProps, 'color'> {
   children: React.ReactNode;
   variant?: ButtonVariant;
+  icon?: React.ReactNode;
   color?: ButtonColor;
   disabled?: boolean;
   className?: string;
@@ -49,10 +51,14 @@ const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
   text: ButtonText,
 };
 
-export const Button = ({color = 'brand', variant = 'primary', children, className, disabled, ...props}: ButtonProps) => {
+export const Button = ({color = 'brand', variant = 'primary', icon, children, className, disabled, ...props}: ButtonProps) => {
   const InnerButton = buttonMap[variant] || ButtonPrimary;
+  const iconGap = useComponentStyle('button.base.iconGap') as number;
   return (
     <InnerButton {...props} className={className} disabled={disabled} color={color}>
+      {icon && (
+        <Box display="flex" mr={iconGap}>{icon}</Box>
+      )}
       <ButtonTypography>{children}</ButtonTypography>
     </InnerButton>
   );

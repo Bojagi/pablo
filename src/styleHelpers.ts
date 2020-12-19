@@ -1,7 +1,7 @@
 import { PabloThemeableProps } from "./theme";
 import { Colors } from "./theme/colors";
 
-type InterpolateFn<T> = (props: PabloThemeableProps) => T;
+export type InterpolateFn<T> = (props: PabloThemeableProps) => T;
 
 export type GetSpacingFn = 
   | ((multiplier: number, suffix?: string) => InterpolateFn<string>)
