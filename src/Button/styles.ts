@@ -24,22 +24,10 @@ export interface ButtonPrimaryShadedVariantStyles {
   },
 }
 
-export interface ButtonPrimaryVariantStyles {
-  brand: ButtonPrimaryShadedVariantStyles;
-  positive: ButtonPrimaryShadedVariantStyles;
-  negative: ButtonPrimaryShadedVariantStyles;
-  black: ButtonPrimaryShadedVariantStyles;
-}
+
 
 export interface ButtonSecondaryShadedVariantStyles extends ButtonTextShadedVariantStyles {
   borderColor: Style;
-}
-
-export interface ButtonSecondaryVariantStyles {
-  brand: ButtonSecondaryShadedVariantStyles;
-  positive: ButtonSecondaryShadedVariantStyles;
-  negative: ButtonSecondaryShadedVariantStyles;
-  black: ButtonSecondaryShadedVariantStyles;
 }
 
 export interface ButtonTextShadedVariantStyles {
@@ -49,12 +37,16 @@ export interface ButtonTextShadedVariantStyles {
   },
 }
 
-export interface ButtonTextVariantStyles {
-  brand: ButtonTextShadedVariantStyles;
-  positive: ButtonTextShadedVariantStyles;
-  negative: ButtonTextShadedVariantStyles;
-  black: ButtonTextShadedVariantStyles;
+export interface ButtonVariantStyles<T> {
+  brand: T;
+  positive: T;
+  negative: T;
+  black: T;
 }
+
+export type ButtonPrimaryVariantStyles = ButtonVariantStyles<ButtonPrimaryShadedVariantStyles>;
+export type ButtonSecondaryVariantStyles = ButtonVariantStyles<ButtonSecondaryVariantStyles>;
+export type ButtonTextVariantStyles = ButtonVariantStyles<ButtonTextShadedVariantStyles>;
 
 export interface ButtonStyles {
   base: ButtonBaseStyles;
