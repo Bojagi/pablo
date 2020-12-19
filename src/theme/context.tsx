@@ -1,16 +1,17 @@
 import * as React from "react";
 import { ThemeProvider, useTheme } from "styled-components";
 import { getComponentStyle } from "../styleHelpers";
-import { defaultComponentStyles } from "./defaultComponentStyles";
+import { ComponentStyles, defaultComponentStyles } from "./defaultComponentStyles";
 import { defaultTheme } from "./defaultTheme";
 import { PabloTheme } from "./types";
+import merge from 'deepmerge';
 
 export const pabloThemeContext = React.createContext<PabloTheme>(defaultTheme);
 export const pabloComponentStylesContext = React.createContext<any>(defaultComponentStyles);
 
 export interface PabloThemeProviderProps {
-  theme?: PabloTheme;
-  componentStyles?: any;
+  theme?: RecursivePartial<PabloTheme>;
+  componentStyles?: RecursivePartial<ComponentStyles>;
   children: React.ReactNode;
 }
 
@@ -18,17 +19,26 @@ export interface PabloThemeableProps {
   theme: PabloTheme;
 }
 
+type RecursivePartial<T> = {
+  [P in keyof T]?:
+    T[P] extends (infer U)[] ? RecursivePartial<U>[] :
+    T[P] extends object ? RecursivePartial<T[P]> :
+    T[P];
+};
+
 export const PabloThemeProvider = ({
-  theme = defaultTheme,
-  componentStyles = defaultComponentStyles,
+  theme = {},
+  componentStyles = {},
   children
 }: PabloThemeProviderProps) => {
   const scTheme = useTheme() || {};
+  const mergedTheme = merge(defaultTheme, theme) as PabloTheme;
+  const mergedComponentStyles = merge(defaultComponentStyles, componentStyles) as ComponentStyles;
   
   return (
-    <pabloThemeContext.Provider value={theme}>
-      <pabloComponentStylesContext.Provider value={componentStyles}>
-        <ThemeProvider theme={{...scTheme, ...theme, componentStyles}}>
+    <pabloThemeContext.Provider value={mergedTheme}>
+      <pabloComponentStylesContext.Provider value={mergedComponentStyles}>
+        <ThemeProvider theme={{...scTheme, ...mergedTheme, componentStyles: mergedComponentStyles}}>
           {children}
         </ThemeProvider>
       </pabloComponentStylesContext.Provider>

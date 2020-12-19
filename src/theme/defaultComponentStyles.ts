@@ -3,7 +3,7 @@ import { CardStyles, cardStyles } from "../Card/styles";
 import { sidebarNavStyles, SidebarNavStyles } from "../SidebarNav/styles";
 import { TabsStyles, tabsStyles } from "../Tabs/styles";
 
-interface ComponentStyles {
+export interface ComponentStyles {
   card: CardStyles;
   tabs: TabsStyles;
   sidebarNav: SidebarNavStyles;

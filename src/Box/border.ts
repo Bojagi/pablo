@@ -34,5 +34,5 @@ const getBorderStyle = (value: BorderType, property: string) => {
     return buildBorderStyle(property, value);
   }
 
-  return value;
+  return `${property}: ${value}`;
 }
