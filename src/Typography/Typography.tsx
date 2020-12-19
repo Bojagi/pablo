@@ -10,62 +10,75 @@ export interface TypographyProps extends BoxProps {
 };
 
 const baseTypographyStyle = css`
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: ${props => props.theme.typography.base.fontFamily};
   font-style: normal;
-  font-weight: normal;
+  font-weight: ${props => props.theme.typography.base.fontWeight};
   margin: 0;
 `;
 
 export const Paragraph = styled.p`
   ${baseTypographyStyle}
-  font-size: 14px;
-  line-height: 20px;
+  font-size: ${props => props.theme.typography.paragraph.fontSize};
+  line-height: ${props => props.theme.typography.paragraph.lineHeight};
+  margin-bottom: ${props => props.theme.typography.paragraph.marginBottom};
   ${boxInterpolateFn}
 `;
 
-export const ParagraphBold = styled(Paragraph)`
-  font-weight: 500;
+export const ParagraphBold = styled.p`
+  ${baseTypographyStyle}
+  font-size: ${props => props.theme.typography.paragraphBold.fontSize};
+  line-height: ${props => props.theme.typography.paragraphBold.lineHeight};
+  font-weight: ${props => props.theme.typography.paragraphBold.fontWeight};
+  margin-bottom: ${props => props.theme.typography.paragraphBold.marginBottom};
   ${boxInterpolateFn}
 `;
 
 export const ButtonTypography = styled.span`
   ${baseTypographyStyle}
-  font-size: 14px;
-  line-height: 18px;
+  font-size: ${props => props.theme.typography.button.fontSize};
+  line-height: ${props => props.theme.typography.button.lineHeight};
+  margin-bottom: ${props => props.theme.typography.button.marginBottom};
   ${boxInterpolateFn}
 `;
 
 export const Headline = styled.h2`
   ${baseTypographyStyle}
-  font-size: 28px;
-  line-height: 36px;
-  margin: 0;
+  font-size: ${props => props.theme.typography.headline.fontSize};
+  line-height: ${props => props.theme.typography.headline.lineHeight};
+  margin-bottom: ${props => props.theme.typography.headline.marginBottom};
   ${boxInterpolateFn}
 `;
 
 export const Title = styled.h3`
   ${baseTypographyStyle}
-  font-size: 24px;
-  line-height: 31px;
+  font-size: ${props => props.theme.typography.title.fontSize};
+  line-height: ${props => props.theme.typography.title.lineHeight};
+  margin-bottom: ${props => props.theme.typography.title.marginBottom};
   ${boxInterpolateFn}
 `;
 
 export const Subtitle = styled.h4`
   ${baseTypographyStyle}
-  font-size: 16px;
-  line-height: 21px;
+  font-size: ${props => props.theme.typography.subtitle.fontSize};
+  line-height: ${props => props.theme.typography.subtitle.lineHeight};
+  margin-bottom: ${props => props.theme.typography.subtitle.marginBottom};
   ${boxInterpolateFn}
 `;
 
 export const InfoText = styled.p`
   ${baseTypographyStyle}
-  font-size: 12px;
-  line-height: 18px;
+  font-size: ${props => props.theme.typography.info.fontSize};
+  line-height: ${props => props.theme.typography.info.lineHeight};
+  margin-bottom: ${props => props.theme.typography.info.marginBottom};
   ${boxInterpolateFn}
 `;
 
-export const InfoTextBold = styled(InfoText)`
-  font-weight: 500;
+export const InfoTextBold = styled.p`
+  ${baseTypographyStyle}
+  font-size: ${props => props.theme.typography.infoBold.fontSize};
+  line-height: ${props => props.theme.typography.infoBold.lineHeight};
+  font-weight: ${props => props.theme.typography.infoBold.fontWeight};
+  margin-bottom: ${props => props.theme.typography.infoBold.marginBottom};
   ${boxInterpolateFn}
 `;
 

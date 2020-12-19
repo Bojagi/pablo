@@ -36,22 +36,22 @@ export interface TabsStyles {
 export const tabsStyles = {
   gapSpacing: 0.5,
   tab: {
-  color: getColor('common', 'black'),
-  padding: css`${getSpacing(1)} ${getSpacing(1.5)}`,
-  margin: css`0 0 ${getSpacing(0.5)}`,
-  hover: {
-    backgroundColor: getColor('brand', 'light'),
-  },
-  active: {
-    padding: css`${getSpacing(1)} ${getSpacing(1.5)} ${getSpacing(1.5)}`,
-    margin: '0',
-    color: getColor('brand'),
-    bottomBorder: {
+    color: getColor('common', 'black'),
+    padding: css`${getSpacing(1)} ${getSpacing(1.5)}`,
+    margin: css`0 0 ${getSpacing(0.5)}`,
+    hover: {
+      backgroundColor: getColor('brand', 'light'),
+    },
+    active: {
+      padding: css`${getSpacing(1)} ${getSpacing(1.5)} ${getSpacing(1.5)}`,
+      margin: '0',
       color: getColor('brand'),
-      thickness: getSpacing(0.5),
-      gap: getSpacing(1),
-      radius: getSpacing(0.5),
-    }
+      bottomBorder: {
+        color: getColor('brand'),
+        thickness: getSpacing(0.5),
+        gap: getSpacing(1),
+        radius: getSpacing(0.5),
+      }
+    },
   },
-}
-},
+};
