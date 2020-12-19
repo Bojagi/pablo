@@ -13,6 +13,7 @@ export interface SidebarNavItemProps extends ButtonBaseProps {
 const SidebarNavItemWrapper = styled<React.FC<SidebarNavItemProps>>(ButtonBase).attrs({
   as: 'li',
 })`
+  margin: ${getComponentStyle('sidebarNav.item.marginY')} 0;
   ${props => props.active && css`
     background-color: ${getComponentStyle('sidebarNav.item.active.backgroundColor')};
   `}
@@ -23,7 +24,7 @@ const SidebarNavItemWrapper = styled<React.FC<SidebarNavItemProps>>(ButtonBase).
 `;
 
 export const SidebarNavItem = ({ children, ...props }: SidebarNavItemProps) => (
-  <SidebarNavItemWrapper my={0.5} {...props}>
+  <SidebarNavItemWrapper {...props}>
     <Typography variant="button">{children}</Typography>
   </SidebarNavItemWrapper>
 )

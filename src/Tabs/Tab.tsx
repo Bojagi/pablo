@@ -27,7 +27,7 @@ const TabButton = styled<React.FC<Partial<TabProps>>>(ButtonBase)`
       position: absolute;
       bottom: 0;
       left: ${getComponentStyle('tabs.tab.active.bottomBorder.gap')};
-      width: calc(100% - ${getComponentStyle('tabs.tab.active.bottomBorder.gap')} - ${getComponentStyle('tabs.tab.active.bottomBorder.gap')});
+      width: calc(100% - 2 * ${getComponentStyle('tabs.tab.active.bottomBorder.gap')});
       height: ${getComponentStyle('tabs.tab.active.bottomBorder.thickness')};
       border-top-left-radius: ${getComponentStyle('tabs.tab.active.bottomBorder.radius')};
       border-top-right-radius: ${getComponentStyle('tabs.tab.active.bottomBorder.radius')};

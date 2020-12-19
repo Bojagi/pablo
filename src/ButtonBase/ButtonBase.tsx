@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { boxInterpolateFn, BoxProps } from "../Box";
-import { getSpacing } from "../styleHelpers";
+import { getComponentStyle, transitionTransformer } from "../styleHelpers";
 
 export interface ButtonBaseProps extends BoxProps {};
 
@@ -9,11 +9,11 @@ export const ButtonBase = styled.button<ButtonBaseProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: ${getSpacing(0.5)} ${getSpacing(1)};
-  border: 1px solid transparent;
+  padding: ${getComponentStyle('button.base.padding')};
+  border: ${getComponentStyle('button.base.borderSize')}px solid transparent;
   background: transparent;
-  border-radius: ${getSpacing(0.5)};
-  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: ${getComponentStyle('button.base.borderRadius')};
+  transition: ${getComponentStyle('button.base.transitions', transitionTransformer)};
   outline: none;
 
   &:not(:disabled) {
@@ -21,7 +21,7 @@ export const ButtonBase = styled.button<ButtonBaseProps>`
   }
 
   &:disabled {
-    opacity: 0.4;
+    opacity: ${getComponentStyle('button.base.disabled.opacity')};
     cursor: normal;
   }
 `;

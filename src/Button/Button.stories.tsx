@@ -16,7 +16,7 @@ const baseStory = args => <Box display="flex" mx={-1}>
 </Box>
 
 export const Brand = baseStory.bind(null);
-Brand.args = {};
+Brand.args = {color: 'brand'};
 
 export const Black = baseStory.bind(null);
 Black.args = {color: 'black'};

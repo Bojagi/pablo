@@ -1,5 +1,6 @@
 import * as React from "react";
 import { ThemeProvider, useTheme } from "styled-components";
+import { getComponentStyle } from "../styleHelpers";
 import { defaultComponentStyles } from "./defaultComponentStyles";
 import { defaultTheme } from "./defaultTheme";
 import { PabloTheme } from "./types";
@@ -37,6 +38,11 @@ export const PabloThemeProvider = ({
   
 export const usePabloTheme = () => {
   return React.useContext(pabloThemeContext);
+}
+
+export const useComponentStyle = (path: string) => {
+  const componentStyles = React.useContext(pabloComponentStylesContext);
+  return getComponentStyle(path)({ theme: { componentStyles } });
 }
 
 export const withPabloTheme = <TProps,>() => 

@@ -7,8 +7,13 @@ export const defaultComponentStyles = {
     borderRadius: getSpacing(1),
     backgroundColor: getColor('common', 'white'),
     color: getColor('common', 'whiteContrastText'),
+    shadow: [
+      '0px 1px 2px rgba(0, 0, 0, 0.1)',
+      '0px 4px 10px rgba(0, 0, 0, 0.05)',
+    ],
   },
   tabs: {
+    gapSpacing: 0.5,
     tab: {
       color: getColor('common', 'black'),
       padding: css`${getSpacing(1)} ${getSpacing(1.5)} ${getSpacing(1.5)}`,
@@ -27,7 +32,10 @@ export const defaultComponentStyles = {
     }
   },
   sidebarNav: {
+    borderLeft: 'light',
+    borderLeftSpacing: 2,
     item: {
+      marginY: getSpacing(1),
       active: {
         backgroundColor: getColor('brand', 'light'),
       },
@@ -37,6 +45,18 @@ export const defaultComponentStyles = {
     },
   },
   button: {
+    base: {
+      borderRadius: getSpacing(0.5),
+      disabled: {
+        opacity: 0.4,
+      },
+      borderSize: 1,
+      padding: css`${getSpacing(0.5)} ${getSpacing(1)}`,
+      transitions: [
+        ['background-color, 0.3s'],
+        ['border-color', '0.3s'],
+      ],
+    },
     primary: {
       brand: createShadedButtonPrimaryStyles('brand'),
       positive: createShadedButtonPrimaryStyles('positive'),

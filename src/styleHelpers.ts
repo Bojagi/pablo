@@ -10,7 +10,7 @@ export type GetSpacingFn =
 
 export const getSpacing: GetSpacingFn = (multiplier: number, suffix: string = 'px') => 
   ({theme}: PabloThemeableProps) => {
-    const spacing = theme.getSpacing(multiplier);
+    const spacing = theme.spacing.unit * multiplier;
     return (suffix ? `${spacing}${suffix}` : spacing) as any;
   }
 
@@ -19,14 +19,23 @@ export const getColor = (name: keyof Colors, variant: string = 'main') =>
     return theme.colors[name][variant];
   }
 
-export const getComponentStyle = (path: string) => {
+export const getComponentStyle = (
+  path: string, 
+  transformFn: (value: unknown) => string | number = v => v as string
+) => {
   return ({theme, ...props}) => {
     const interpolatedPath = path.replace(/\{(.*?)\}/g, (_, val) => props[val] || val);
     const value = interpolatedPath.split('.').reduce((acc, key) => acc[key] || {}, theme.componentStyles || {});
     if (typeof value === 'function') { 
-      return value({theme});
+      return transformFn(value({theme}));
     }
 
-    return value;
+    return transformFn(value);
   }
 }
+
+export const transitionTransformer = (transitions: string[][]) => 
+  transitions.map(param => param.join(' ')).join(', ');
+
+export const shadowTransformer = (shadows: string[]) => 
+  shadows.join(', ');
