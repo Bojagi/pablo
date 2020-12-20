@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { Box, BoxProps } from "../Box";
-import { ButtonBase } from "../ButtonBase";
-import { getComponentStyle } from "../styleHelpers";
-import { useComponentStyle } from "../theme";
-import { ButtonTypography } from "../Typography";
+import React from 'react';
+import styled from 'styled-components';
+import { Box, BoxProps } from '../Box';
+import { ButtonBase } from '../ButtonBase';
+import { getComponentStyle } from '../styleHelpers';
+import { useComponentStyle } from '../theme';
+import { ButtonTypography } from '../Typography';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
-export type ButtonColor = 'brand' | 'black' | 'negative' | 'positive';
+export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 
 export interface ButtonProps extends Omit<BoxProps, 'color'> {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export interface ButtonProps extends Omit<BoxProps, 'color'> {
   color?: ButtonColor;
   disabled?: boolean;
   className?: string;
-};
+}
 
 const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   color: ${getComponentStyle('button.primary.{color}.color')};
@@ -34,6 +34,7 @@ const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   border-color: ${getComponentStyle('button.secondary.{color}.borderColor')};
 
   &:hover:not(:disabled) {
+    color: ${getComponentStyle('button.secondary.{color}.hover.color')};
     background: ${getComponentStyle('button.secondary.{color}.hover.backgroundColor')};
   }
 `;
@@ -41,7 +42,8 @@ const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
 const ButtonText = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   color: ${getComponentStyle('button.text.{color}.color')};
   &:hover:not(:disabled) {
-    background: ${getComponentStyle('button.text.{color}.hover.backgroundColor')}
+    color: ${getComponentStyle('button.secondary.{color}.hover.color')};
+    background: ${getComponentStyle('button.text.{color}.hover.backgroundColor')};
   }
 `;
 
@@ -51,13 +53,23 @@ const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
   text: ButtonText,
 };
 
-export const Button = ({color = 'brand', variant = 'primary', icon, children, className, disabled, ...props}: ButtonProps) => {
+export const Button = ({
+  color = 'brand',
+  variant = 'primary',
+  icon,
+  children,
+  className,
+  disabled,
+  ...props
+}: ButtonProps) => {
   const InnerButton = buttonMap[variant] || ButtonPrimary;
   const iconGap = useComponentStyle('button.base.iconGap') as number;
   return (
     <InnerButton {...props} className={className} disabled={disabled} color={color}>
       {icon && (
-        <Box display="flex" mr={iconGap}>{icon}</Box>
+        <Box display="flex" mr={iconGap}>
+          {icon}
+        </Box>
       )}
       <ButtonTypography>{children}</ButtonTypography>
     </InnerButton>

@@ -27,6 +27,7 @@ export interface ButtonPrimaryShadedVariantStyles {
 export interface ButtonTextShadedVariantStyles {
   color: Style;
   hover: {
+    color: Style;
     backgroundColor: Style;
   };
 }
@@ -70,14 +71,14 @@ export const buttonStyles = {
     brand: createShadedButtonPrimaryStyles('brand'),
     positive: createShadedButtonPrimaryStyles('positive'),
     negative: createShadedButtonPrimaryStyles('negative'),
-    black: {
-      color: getColor('common', 'blackContrastText'),
-      backgroundColor: getColor('common', 'black'),
-      borderColor: getColor('common', 'black'),
+    plain: {
+      color: getColor('common', 'black'),
+      backgroundColor: getColor('gray', '50'),
+      borderColor: getColor('gray', '100'),
       hover: {
-        color: getColor('common', 'blackContrastText'),
-        backgroundColor: getColor('common', 'black'),
-        borderColor: getColor('common', 'black'),
+        color: getColor('common', 'black'),
+        backgroundColor: getColor('gray', '100'),
+        borderColor: getColor('gray', '200'),
       },
     },
   },
@@ -85,11 +86,11 @@ export const buttonStyles = {
     brand: createShadedButtonSecondaryStyles('brand'),
     positive: createShadedButtonSecondaryStyles('positive'),
     negative: createShadedButtonSecondaryStyles('negative'),
-    black: {
+    plain: {
       color: getColor('common', 'black'),
       borderColor: getColor('common', 'black'),
       hover: {
-        backgroundColor: getColor('common', 'black'),
+        backgroundColor: getColor('gray', '50'),
       },
     },
   },
@@ -97,10 +98,10 @@ export const buttonStyles = {
     brand: createShadedButtonTextStyles('brand'),
     positive: createShadedButtonTextStyles('positive'),
     negative: createShadedButtonTextStyles('negative'),
-    black: {
+    plain: {
       color: getColor('common', 'black'),
       hover: {
-        backgroundColor: getColor('common', 'black'),
+        backgroundColor: getColor('gray', '50'),
       },
     },
   },
@@ -136,6 +137,7 @@ function createShadedButtonTextStyles(
   return {
     color: getColor(color),
     hover: {
+      color: getColor(color, 'dark'),
       backgroundColor: getColor(color, 'light'),
     },
   };
