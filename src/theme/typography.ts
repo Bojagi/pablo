@@ -12,15 +12,15 @@ export interface TypographyDefinition {
 }
 
 export interface Typography {
-  base: TypographyBase,
-  paragraph: TypographyDefinition,
-  paragraphBold: TypographyDefinition,
-  button: TypographyDefinition,
-  headline: TypographyDefinition,
-  title: TypographyDefinition,
-  subtitle: TypographyDefinition,
-  info: TypographyDefinition,
-  infoBold: TypographyDefinition,
+  base: TypographyBase;
+  paragraph: TypographyDefinition;
+  paragraphBold: TypographyDefinition;
+  button: TypographyDefinition;
+  headline: TypographyDefinition;
+  title: TypographyDefinition;
+  subtitle: TypographyDefinition;
+  info: TypographyDefinition;
+  infoBold: TypographyDefinition;
 }
 
 export const typography: Typography = {

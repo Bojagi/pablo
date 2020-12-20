@@ -7,4 +7,4 @@ export const defaultTheme: PabloTheme = {
   spacing,
   colors,
   typography,
-}
+};

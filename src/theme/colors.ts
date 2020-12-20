@@ -1,28 +1,27 @@
-
 export type ShadedColor = {
   main: string;
   dark: string;
   light: string;
   contrastText: string;
   contrastTextLight: string;
-}
+};
 
 export type CommonColors = {
   white: string;
   black: string;
   whiteContrastText: string;
   blackContrastText: string;
-}
+};
 
 export type TextColors = {
   main: string;
   info: string;
-}
+};
 
 export type BorderColors = {
   main: string;
   light: string;
-}
+};
 
 export type AllColors = ShadedColor & TextColors & BorderColors & CommonColors;
 
@@ -46,13 +45,13 @@ export const colors: Colors = {
     whiteContrastText: BLACK,
     blackContrastText: WHITE,
   },
-  borders: { 
+  borders: {
     main: `${BLACK}${getHexByte(0.25)}`,
     light: `${BLACK}${getHexByte(0.1)}`,
   },
   text: {
     main: BLACK,
-    info: `${BLACK}${getHexByte(0.5)}`
+    info: `${BLACK}${getHexByte(0.5)}`,
   },
   brand: {
     light: '#EBE7FF',
@@ -82,12 +81,12 @@ export const colors: Colors = {
     contrastText: WHITE,
     contrastTextLight: BLACK,
   },
-}
+};
 
 /**
  * Get hex color byte (e.g. to get transparency)
  * @param value Percentage value (between 0.0 and 1.0)
  */
 function getHexByte(value: number) {
-  return (Math.round(255*value/16)*16).toString(16);
+  return (Math.round((255 * value) / 16) * 16).toString(16);
 }

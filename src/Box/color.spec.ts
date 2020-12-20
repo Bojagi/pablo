@@ -25,29 +25,27 @@ describe.each([
   ['bgColor', 'background-color'],
 ])('"%s" prop', (prop, cssPropName) => {
   test('pass "brand.main', () => {
-    const props = { theme, [prop]: "brand.main" };
+    const props = { theme, [prop]: 'brand.main' };
     const result: any = colorInterpolateFn(props);
     const renderedResult = renderCssResult(result, props);
-    expect(renderedResult).toEqual(`${cssPropName}:mainBrand;`)
+    expect(renderedResult).toEqual(`${cssPropName}:mainBrand;`);
   });
   test('pass "brand.light', () => {
-    const props = { theme, [prop]: "brand.light" };
+    const props = { theme, [prop]: 'brand.light' };
     const result: any = colorInterpolateFn(props);
     const renderedResult = renderCssResult(result, props);
-    expect(renderedResult).toEqual(`${cssPropName}:lightBrand;`)
+    expect(renderedResult).toEqual(`${cssPropName}:lightBrand;`);
   });
   test('pass "neutral.main', () => {
-    const props = { theme, [prop]: "neutral.main" };
+    const props = { theme, [prop]: 'neutral.main' };
     const result: any = colorInterpolateFn(props);
     const renderedResult = renderCssResult(result, props);
-    expect(renderedResult).toEqual(`${cssPropName}:mainNeutral;`)
+    expect(renderedResult).toEqual(`${cssPropName}:mainNeutral;`);
   });
   test('pass "neutral.light', () => {
-    const props = { theme, [prop]: "neutral.light" };
+    const props = { theme, [prop]: 'neutral.light' };
     const result: any = colorInterpolateFn(props);
     const renderedResult = renderCssResult(result, props);
-    expect(renderedResult).toEqual(`${cssPropName}:lightNeutral;`)
+    expect(renderedResult).toEqual(`${cssPropName}:lightNeutral;`);
   });
-  
 });
-

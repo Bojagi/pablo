@@ -1,13 +1,13 @@
-import { css } from "styled-components";
-import { getColor, getSpacing } from "../styleHelpers";
-import { Style } from "../theme/types";
+import { css } from 'styled-components';
+import { getColor, getSpacing } from '../styleHelpers';
+import { Style } from '../theme/types';
 
 export interface ButtonBaseStyles {
   iconGap: number;
   borderRadius: Style;
   disabled: {
     opacity: number;
-  },
+  };
   borderSize: number;
   padding: Style;
   transitions: string[][];
@@ -21,20 +21,18 @@ export interface ButtonPrimaryShadedVariantStyles {
     color: Style;
     backgroundColor: Style;
     borderColor: Style;
-  },
-}
-
-
-
-export interface ButtonSecondaryShadedVariantStyles extends ButtonTextShadedVariantStyles {
-  borderColor: Style;
+  };
 }
 
 export interface ButtonTextShadedVariantStyles {
   color: Style;
   hover: {
     backgroundColor: Style;
-  },
+  };
+}
+
+export interface ButtonSecondaryShadedVariantStyles extends ButtonTextShadedVariantStyles {
+  borderColor: Style;
 }
 
 export interface ButtonVariantStyles<T> {
@@ -63,11 +61,10 @@ export const buttonStyles = {
       opacity: 0.4,
     },
     borderSize: 1,
-    padding: css`${getSpacing(0.5)} ${getSpacing(1)}`,
-    transitions: [
-      ['background-color, 0.3s'],
-      ['border-color', '0.3s'],
-    ],
+    padding: css`
+      ${getSpacing(0.5)} ${getSpacing(1)}
+    `,
+    transitions: [['background-color, 0.3s'], ['border-color', '0.3s']],
   },
   primary: {
     brand: createShadedButtonPrimaryStyles('brand'),
@@ -109,7 +106,9 @@ export const buttonStyles = {
   },
 };
 
-function createShadedButtonPrimaryStyles(color: 'brand' | 'negative' | 'positive'): ButtonPrimaryShadedVariantStyles {
+function createShadedButtonPrimaryStyles(
+  color: 'brand' | 'negative' | 'positive'
+): ButtonPrimaryShadedVariantStyles {
   return {
     color: getColor(color, 'contrastText'),
     backgroundColor: getColor(color),
@@ -119,21 +118,25 @@ function createShadedButtonPrimaryStyles(color: 'brand' | 'negative' | 'positive
       backgroundColor: getColor(color, 'dark'),
       borderColor: getColor(color, 'dark'),
     },
-  }
+  };
 }
 
-function createShadedButtonSecondaryStyles(color: 'brand' | 'negative' | 'positive'): ButtonSecondaryShadedVariantStyles {
+function createShadedButtonSecondaryStyles(
+  color: 'brand' | 'negative' | 'positive'
+): ButtonSecondaryShadedVariantStyles {
   return {
     ...createShadedButtonTextStyles(color),
     borderColor: getColor(color),
-  }
+  };
 }
 
-function createShadedButtonTextStyles(color: 'brand' | 'negative' | 'positive'): ButtonTextShadedVariantStyles {
+function createShadedButtonTextStyles(
+  color: 'brand' | 'negative' | 'positive'
+): ButtonTextShadedVariantStyles {
   return {
     color: getColor(color),
     hover: {
       backgroundColor: getColor(color, 'light'),
     },
-  }
+  };
 }

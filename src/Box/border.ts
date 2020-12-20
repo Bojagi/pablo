@@ -1,8 +1,9 @@
-import { css } from "styled-components";
-import { getColor } from "../styleHelpers";
-import { PabloThemeableProps } from "../theme";
-import { BorderColors } from "../theme/colors";
+import { css } from 'styled-components';
+import { getColor } from '../styleHelpers';
+import { PabloThemeableProps } from '../theme';
+import { BorderColors } from '../theme/colors';
 
+// eslint-disable-next-line no-use-before-define
 type BorderType = boolean | keyof BoxBorderProps | string;
 
 export interface BoxBorderProps {
@@ -22,15 +23,15 @@ export const borderInterpolateFn = (props: PabloThemeableProps & BoxBorderProps)
 `;
 
 function buildBorderStyle(property: string, variant: keyof BorderColors = 'main') {
-  return  props => `${property}: 1px solid ${getColor('borders', variant)(props)};`;
+  return (props) => `${property}: 1px solid ${getColor('borders', variant)(props)};`;
 }
 
-const getBorderStyle = (value: BorderType, property: string) => {
-  if (value === true) {
+function getBorderStyle(value: BorderType, property: string) {
+  if (value === true) {
     return buildBorderStyle(property);
   }
 
-  if (value === 'main' || value === 'light') {
+  if (value === 'main' || value === 'light') {
     return buildBorderStyle(property, value);
   }
 

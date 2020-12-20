@@ -1,7 +1,7 @@
-import { buttonStyles, ButtonStyles } from "../Button/styles";
-import { CardStyles, cardStyles } from "../Card/styles";
-import { sidebarNavStyles, SidebarNavStyles } from "../SidebarNav/styles";
-import { TabsStyles, tabsStyles } from "../Tabs/styles";
+import { buttonStyles, ButtonStyles } from '../Button/styles';
+import { CardStyles, cardStyles } from '../Card/styles';
+import { sidebarNavStyles, SidebarNavStyles } from '../SidebarNav/styles';
+import { TabsStyles, tabsStyles } from '../Tabs/styles';
 
 export interface ComponentStyles {
   card: CardStyles;
