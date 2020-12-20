@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { GitPullRequest } from 'react-feather';
 import { Box } from '../Box';
 import { Button } from './Button';

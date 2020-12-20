@@ -1,6 +1,6 @@
-import React from "react";
-import { Paragraph, Title } from "../Typography";
-import { Card } from "./Card";
+import React from 'react';
+import { Paragraph, Title } from '../Typography';
+import { Card } from './Card';
 
 export default {
   title: 'Card',

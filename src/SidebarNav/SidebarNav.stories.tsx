@@ -1,6 +1,6 @@
-import React from "react";
-import { SidebarNav } from "./SidebarNav";
-import { SidebarNavItem } from "./SidebarNavItem";
+import React from 'react';
+import { SidebarNav } from './SidebarNav';
+import { SidebarNavItem } from './SidebarNavItem';
 
 export default {
   title: 'SidebarNav',

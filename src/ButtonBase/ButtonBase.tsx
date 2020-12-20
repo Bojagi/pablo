@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { boxInterpolateFn, BoxProps } from "../Box";
-import { getComponentStyle, transitionTransformer } from "../styleHelpers";
+import styled from 'styled-components';
+import { boxInterpolateFn, BoxProps } from '../Box';
+import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 
-export interface ButtonBaseProps extends BoxProps {};
+export interface ButtonBaseProps extends BoxProps {}
 
 export const ButtonBase = styled.button<ButtonBaseProps>`
   ${boxInterpolateFn}
