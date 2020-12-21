@@ -23,6 +23,11 @@ const TabButton = styled<React.FC<Partial<TabProps>>>(ButtonBase)`
     background-color: ${getComponentStyle('tabs.tab.hover.backgroundColor')};
   }
 
+  &:focus {
+    box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')}
+      ${getComponentStyle('tabs.tab.hover.backgroundColor')};
+  }
+
   ${(props) =>
     props.active &&
     css`
