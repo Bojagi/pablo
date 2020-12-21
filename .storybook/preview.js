@@ -22,29 +22,7 @@ const GlobalStyle = createGlobalStyle`
 export const decorators = [(Story) => (
   <>
     <GlobalStyle />
-    <PabloThemeProvider componentStyles={{
-      button: {
-        base: {
-          padding: getSpacing(1.5),
-        }
-      },
-      card: {
-        padding: getSpacing(2),
-      },
-      sidebarNav: {
-        borderLeft: '2px dashed red',
-      },
-      tabs: {
-        tab: {
-          active: {
-            bottomBorder: {
-              radius: 0,
-              gap: getSpacing(0),
-            }
-          }
-        }
-      }
-    }}>
+    <PabloThemeProvider>
       <Story/>
     </PabloThemeProvider>
   </>

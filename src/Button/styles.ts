@@ -8,15 +8,24 @@ export interface ButtonBaseStyles {
   disabled: {
     opacity: number;
   };
+  focus: {
+    outlineSize: string;
+  };
   borderSize: number;
-  padding: Style;
   transitions: string[][];
+}
+
+export interface ButtonSizeStyles {
+  padding: Style;
 }
 
 export interface ButtonPrimaryShadedVariantStyles {
   color: Style;
   backgroundColor: Style;
   borderColor: Style;
+  focus: {
+    outlineColor: Style;
+  };
   hover: {
     color: Style;
     backgroundColor: Style;
@@ -34,6 +43,9 @@ export interface ButtonTextShadedVariantStyles {
 
 export interface ButtonSecondaryShadedVariantStyles extends ButtonTextShadedVariantStyles {
   borderColor: Style;
+  focus: {
+    outlineColor: Style;
+  };
 }
 
 export interface ButtonVariantStyles<T> {
@@ -62,10 +74,31 @@ export const buttonStyles = {
       opacity: 0.4,
     },
     borderSize: 1,
-    padding: css`
-      ${getSpacing(0.5)} ${getSpacing(1)}
-    `,
-    transitions: [['background-color, 0.3s'], ['border-color', '0.3s']],
+    focus: {
+      outlineSize: getSpacing(0.5),
+    },
+    transitions: [
+      ['background-color, 0.3s'],
+      ['border-color', '0.3s'],
+      ['box-shadow', '0.3s', 'ease-in-out'],
+    ],
+  },
+  sizes: {
+    small: {
+      padding: css`
+        ${getSpacing(0.5)} ${getSpacing(1)}
+      `,
+    },
+    medium: {
+      padding: css`
+        ${getSpacing(1)} ${getSpacing(1.5)}
+      `,
+    },
+    large: {
+      padding: css`
+        ${getSpacing(1.5)} ${getSpacing(2.5)}
+      `,
+    },
   },
   primary: {
     brand: createShadedButtonPrimaryStyles('brand'),
@@ -75,6 +108,9 @@ export const buttonStyles = {
       color: getColor('common', 'black'),
       backgroundColor: getColor('gray', '50'),
       borderColor: getColor('gray', '100'),
+      focus: {
+        outlineColor: getColor('gray', '50'),
+      },
       hover: {
         color: getColor('common', 'black'),
         backgroundColor: getColor('gray', '100'),
@@ -89,6 +125,9 @@ export const buttonStyles = {
     plain: {
       color: getColor('common', 'black'),
       borderColor: getColor('common', 'black'),
+      focus: {
+        outlineColor: getColor('gray', '50'),
+      },
       hover: {
         backgroundColor: getColor('gray', '50'),
       },
@@ -114,6 +153,9 @@ function createShadedButtonPrimaryStyles(
     color: getColor(color, 'contrastText'),
     backgroundColor: getColor(color),
     borderColor: getColor(color),
+    focus: {
+      outlineColor: getColor(color, 'light'),
+    },
     hover: {
       color: getColor(color, 'contrastText'),
       backgroundColor: getColor(color, 'dark'),
@@ -127,6 +169,9 @@ function createShadedButtonSecondaryStyles(
 ): ButtonSecondaryShadedVariantStyles {
   return {
     ...createShadedButtonTextStyles(color),
+    focus: {
+      outlineColor: getColor(color, 'light'),
+    },
     borderColor: getColor(color),
   };
 }
