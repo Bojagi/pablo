@@ -7,7 +7,11 @@ import { defaultTheme } from './defaultTheme';
 import { PabloTheme } from './types';
 
 export const pabloThemeContext = React.createContext<PabloTheme>(defaultTheme);
-export const pabloComponentStylesContext = React.createContext<any>(defaultComponentStyles);
+export const pabloComponentStylesContext = React.createContext<ComponentStyles>(
+  defaultComponentStyles
+);
+
+export const useComponentStyleContext = () => React.useContext(pabloComponentStylesContext);
 
 export interface PabloThemeProviderProps {
   theme?: RecursivePartial<PabloTheme>;

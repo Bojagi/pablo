@@ -28,3 +28,14 @@ export const Small = baseStory.bind(null);
 Small.args = {
   size: 'small',
 };
+
+export const WithLabel = () => (
+  <>
+    <Box mb={1}>
+      <ControlledSwitch checked={true} label="Hans Wurst" />
+    </Box>
+    <Box mb={1}>
+      <ControlledSwitch size="small" checked={true} label="Hans Wurst" />
+    </Box>
+  </>
+);

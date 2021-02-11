@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 import { getSpacing } from '../styleHelpers';
+import { isDefined } from '../utils/isDefined';
 
 export interface BoxMarginProps {
   m?: number;
@@ -22,66 +23,66 @@ export interface BoxPaddingProps {
 }
 
 export const marginInterpolateFn = (props: BoxMarginProps) => css`
-  ${props.m &&
+  ${isDefined(props.m) &&
   css`
     margin: ${getSpacing(props.m)};
   `}
-  ${props.mx &&
+  ${isDefined(props.mx) &&
   css`
     margin-left: ${getSpacing(props.mx)};
     margin-right: ${getSpacing(props.mx)};
   `}
-  ${props.my &&
+  ${isDefined(props.my) &&
   css`
     margin-top: ${getSpacing(props.my)};
     margin-bottom: ${getSpacing(props.my)};
   `}
-  ${props.mr &&
+  ${isDefined(props.mr) &&
   css`
     margin-right: ${getSpacing(props.mr)};
   `}
-  ${props.mb &&
+  ${isDefined(props.mb) &&
   css`
     margin-bottom: ${getSpacing(props.mb)};
   `}
-  ${props.ml &&
+  ${isDefined(props.ml) &&
   css`
     margin-left: ${getSpacing(props.ml)};
   `}
-  ${props.mt &&
+  ${isDefined(props.mt) &&
   css`
     margin-top: ${getSpacing(props.mt)};
   `}
 `;
 
 export const paddingInterpolateFn = (props: BoxPaddingProps) => css`
-  ${props.p &&
+  ${isDefined(props.p) &&
   css`
     padding: ${getSpacing(props.p)};
   `}
-  ${props.px &&
+  ${isDefined(props.px) &&
   css`
     padding-left: ${getSpacing(props.px)};
     padding-right: ${getSpacing(props.px)};
   `}
-  ${props.py &&
+  ${isDefined(props.py) &&
   css`
     padding-top: ${getSpacing(props.py)};
     padding-bottom: ${getSpacing(props.py)};
   `}
-  ${props.pr &&
+  ${isDefined(props.pr) &&
   css`
     padding-right: ${getSpacing(props.pr)};
   `}
-  ${props.pb &&
+  ${isDefined(props.pb) &&
   css`
     padding-bottom: ${getSpacing(props.pb)};
   `}
-  ${props.pl &&
+  ${isDefined(props.pl) &&
   css`
     padding-left: ${getSpacing(props.pl)};
   `}
-  ${props.pt &&
+  ${isDefined(props.pt) &&
   css`
     padding-top: ${getSpacing(props.pt)};
   `}

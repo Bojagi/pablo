@@ -1,17 +1,19 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { boxInterpolateFn, BoxProps } from '../Box';
+import { Box, BoxProps } from '../Box';
 import { getSpacing, getComponentStyle, getComponentStyleByProp } from '../styleHelpers';
+import { useComponentStyleContext } from '../theme';
+import { Typography } from '../Typography';
+import { useUniqueId } from '../utils/useUniqueId';
 
-export type SwitchSize = 'small' | 'medium';
+export type CheckboxSize = 'small' | 'medium';
 
-interface SwitchBoxProps extends BoxProps {
+interface CheckboxBoxProps {
   disabled?: boolean;
-  size?: SwitchSize;
+  size?: CheckboxSize;
 }
 
-const CheckboxBox = styled.div<SwitchBoxProps>`
-  ${boxInterpolateFn}
+const CheckboxBox = styled.div<CheckboxBoxProps>`
   position: relative;
   width: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
   height: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
@@ -40,13 +42,13 @@ const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
     `}
 `;
 
-interface SwitchHandleProps {
+interface CheckboxHandleProps {
   disabled?: boolean;
   checked: boolean;
-  size?: SwitchSize;
+  size?: CheckboxSize;
 }
 
-const CheckboxHandle = styled.div<SwitchHandleProps>`
+const CheckboxHandle = styled.div<CheckboxHandleProps>`
   width: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
   height: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
   transform: scale(${(props: any) => (props.checked ? 1 : 0)});
@@ -55,11 +57,12 @@ const CheckboxHandle = styled.div<SwitchHandleProps>`
   background-color: ${getComponentStyle('checkbox.handleColor')};
 `;
 
-export interface SwitchProps extends BoxProps {
+export interface CheckboxProps extends BoxProps {
   className?: string;
   disabled?: boolean;
   name?: string;
-  size?: SwitchSize;
+  size?: CheckboxSize;
+  label?: React.ReactNode;
   checked: boolean;
   onClick?: () => void;
 }
@@ -70,24 +73,40 @@ export const Checkbox = ({
   name,
   disabled,
   checked,
+  label,
   onClick,
   ...props
-}: SwitchProps) => (
-  <CheckboxBox
-    className={className}
-    onClick={!disabled ? onClick : undefined}
-    disabled={disabled}
-    size={size}
-    {...props}
-  >
-    <CheckboxHandle checked={checked} size={size} />
-    <HiddenInput
-      name={name}
-      checked={checked}
-      disabled={disabled}
-      onChange={!disabled ? onClick : undefined}
-    />
-  </CheckboxBox>
-);
+}: CheckboxProps) => {
+  const id = useUniqueId('checkbox');
+  const componentStyles = useComponentStyleContext();
+  const typographyVariant = componentStyles.checkbox.typographyVariant[size];
+  return (
+    <Box display="flex" alignItems="center" {...props}>
+      <CheckboxBox
+        className={className}
+        onClick={!disabled ? onClick : undefined}
+        disabled={disabled}
+        size={size}
+        {...props}
+      >
+        <CheckboxHandle checked={checked} size={size} />
+        <HiddenInput
+          id={id}
+          name={name}
+          checked={checked}
+          disabled={disabled}
+          onChange={!disabled ? onClick : undefined}
+        />
+      </CheckboxBox>
+      {label && (
+        <label htmlFor={id}>
+          <Typography ml={1} mb={0} variant={typographyVariant}>
+            {label}
+          </Typography>
+        </label>
+      )}
+    </Box>
+  );
+};
 
 getSpacing(2.25, false);

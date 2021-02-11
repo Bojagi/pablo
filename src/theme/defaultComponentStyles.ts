@@ -4,6 +4,7 @@ import { sidebarNavStyles, SidebarNavStyles } from '../SidebarNav/styles';
 import { SwitchStyles, switchStyles } from '../Switch/styles';
 import { TabsStyles, tabsStyles } from '../Tabs/styles';
 import { CheckboxStyles, checkboxStyles } from '../Checkbox/styles';
+import { RadioStyles, radioStyles } from '../Radio/styles';
 
 export interface ComponentStyles {
   card: CardStyles;
@@ -12,6 +13,7 @@ export interface ComponentStyles {
   button: ButtonStyles;
   checkbox: CheckboxStyles;
   switch: SwitchStyles;
+  radio: RadioStyles;
 }
 
 export const defaultComponentStyles: ComponentStyles = {
@@ -21,4 +23,5 @@ export const defaultComponentStyles: ComponentStyles = {
   button: buttonStyles,
   checkbox: checkboxStyles,
   switch: switchStyles,
+  radio: radioStyles,
 };
