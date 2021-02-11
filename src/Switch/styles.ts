@@ -8,8 +8,10 @@ export interface SwitchStyles {
   backgroundColor: Style;
   handleColorChecked: Style;
   handleColorUnchecked: Style;
-  handleSizeMedium: Style;
-  handleSizeSmall: Style;
+  handleSize: {
+    medium: Style;
+    small: Style;
+  };
   handleTransition: Style;
 }
 
@@ -20,7 +22,9 @@ export const switchStyles: SwitchStyles = {
   backgroundColor: getColor('common', 'white'),
   handleColorChecked: getColor('brand'),
   handleColorUnchecked: getColor('gray', '500'),
-  handleSizeMedium: getSpacing(2.25),
-  handleSizeSmall: getSpacing(1.5),
+  handleSize: {
+    medium: getSpacing(2.25),
+    small: getSpacing(1.5),
+  },
   handleTransition: 'background-color 0.15s ease-in-out, transform 0.15s ease-in-out',
 };
