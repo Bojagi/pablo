@@ -1,6 +1,7 @@
 import { buttonStyles, ButtonStyles } from '../Button/styles';
 import { CardStyles, cardStyles } from '../Card/styles';
 import { sidebarNavStyles, SidebarNavStyles } from '../SidebarNav/styles';
+import { SwitchStyles, switchStyles } from '../Switch/styles';
 import { TabsStyles, tabsStyles } from '../Tabs/styles';
 
 export interface ComponentStyles {
@@ -8,6 +9,7 @@ export interface ComponentStyles {
   tabs: TabsStyles;
   sidebarNav: SidebarNavStyles;
   button: ButtonStyles;
+  switch: SwitchStyles;
 }
 
 export const defaultComponentStyles: ComponentStyles = {
@@ -15,4 +17,5 @@ export const defaultComponentStyles: ComponentStyles = {
   tabs: tabsStyles,
   sidebarNav: sidebarNavStyles,
   button: buttonStyles,
+  switch: switchStyles,
 };
