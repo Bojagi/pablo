@@ -1,7 +1,8 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { PabloThemeProvider } from '../src/theme';
-import { getSpacing } from '../src/styleHelpers';
+import { getSpacing, getColor } from '../src/styleHelpers';
+import { css } from 'styled-components';
 
 export const parameters = {
   backgrounds: {
@@ -22,7 +23,22 @@ const GlobalStyle = createGlobalStyle`
 export const decorators = [(Story) => (
   <>
     <GlobalStyle />
-    <PabloThemeProvider>
+    <PabloThemeProvider componentStyles={{
+      // button: {
+      //   base: {
+      //     iconGap: 3,
+      //   },
+      // },
+      // sidebarNav: {
+      //   borderLeftSpacing: 5,
+      //   item: {
+      //     hover: {
+      //       backgroundColor: getColor('positive', 'main'),
+      //     },
+      //   },
+      //   borderLeft: css`2px dotted red`,
+      // },
+    }}>
       <Story/>
     </PabloThemeProvider>
   </>
