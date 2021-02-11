@@ -7,18 +7,17 @@ export type SwitchSize = 'small' | 'medium';
 
 interface SwitchBoxProps extends BoxProps {
   disabled?: boolean;
-  handleSizeStyle: string;
   size?: SwitchSize;
 }
 
 const SwitchBox = styled.div<SwitchBoxProps>`
   ${boxInterpolateFn}
   position: relative;
-  width: calc(2 * ${(props) => getComponentStyle(props.handleSizeStyle)(props)});
-  height: ${(props) => getComponentStyle(props.handleSizeStyle)(props)};
+  width: calc(2 * ${(props) => getComponentStyle(`switch.handleSize.${props.size}`)(props)});
+  height: ${(props) => getComponentStyle(`switch.handleSize.${props.size}`)(props)};
   border-radius: calc(
     (
-        ${(props) => getComponentStyle(props.handleSizeStyle)(props)} + 2 *
+        ${(props) => getComponentStyle(`switch.handleSize.${props.size}`)(props)} + 2 *
           ${getComponentStyle('switch.innerPadding')} + 2 *
           ${getComponentStyle('switch.borderWidth')}px
       ) * 0.5
@@ -50,15 +49,15 @@ const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
 interface SwitchHandleProps {
   disabled?: boolean;
   checked: boolean;
-  handleSizeStyle: string;
   size?: SwitchSize;
 }
 
 const SwitchHandle = styled.div<SwitchHandleProps>`
-  width: ${getComponentStyleByProp('handleSizeStyle')};
-  height: ${getComponentStyleByProp('handleSizeStyle')};
+  width: ${getComponentStyleByProp('size', 'switch.handleSize.')};
+  height: ${getComponentStyleByProp('size', 'switch.handleSize.')};
   transform: translateX(
-    ${(props: any) => (props.checked ? getComponentStyle(props.handleSizeStyle)(props) : 0)}
+    ${(props: any) =>
+      props.checked ? getComponentStyle(`switch.handleSize.${props.size}`)(props) : 0}
   );
   border-radius: 50%;
   transition: ${getComponentStyle('switch.handleTransition')};
@@ -85,21 +84,11 @@ export const Switch = ({
   checked,
   onClick,
   ...props
-}: SwitchProps) => {
-  const handleSizeStyle = size === 'small' ? 'switch.handleSizeSmall' : 'switch.handleSizeMedium';
-  return (
-    <SwitchBox
-      className={className}
-      onClick={onClick}
-      disabled={disabled}
-      size={size}
-      handleSizeStyle={handleSizeStyle}
-      {...props}
-    >
-      <SwitchHandle checked={checked} size={size} handleSizeStyle={handleSizeStyle} />
-      <HiddenInput name={name} checked={checked} disabled={disabled} onClick={onClick} />
-    </SwitchBox>
-  );
-};
+}: SwitchProps) => (
+  <SwitchBox className={className} onClick={onClick} disabled={disabled} size={size} {...props}>
+    <SwitchHandle checked={checked} size={size} />
+    <HiddenInput name={name} checked={checked} disabled={disabled} onClick={onClick} />
+  </SwitchBox>
+);
 
 getSpacing(2.25, false);
