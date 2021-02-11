@@ -85,9 +85,20 @@ export const Switch = ({
   onClick,
   ...props
 }: SwitchProps) => (
-  <SwitchBox className={className} onClick={onClick} disabled={disabled} size={size} {...props}>
+  <SwitchBox
+    className={className}
+    onClick={!disabled ? onClick : undefined}
+    disabled={disabled}
+    size={size}
+    {...props}
+  >
     <SwitchHandle checked={checked} size={size} />
-    <HiddenInput name={name} checked={checked} disabled={disabled} onClick={onClick} />
+    <HiddenInput
+      name={name}
+      checked={checked}
+      disabled={disabled}
+      onClick={!disabled ? onClick : undefined}
+    />
   </SwitchBox>
 );
 
