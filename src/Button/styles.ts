@@ -9,7 +9,7 @@ export interface ButtonBaseStyles {
     opacity: number;
   };
   focus: {
-    outlineSize: string;
+    outlineSize: Style;
   };
   borderSize: number;
   transitions: string[][];
@@ -52,7 +52,6 @@ export interface ButtonVariantStyles<T> {
   brand: T;
   positive: T;
   negative: T;
-  black: T;
 }
 
 export type ButtonPrimaryVariantStyles = ButtonVariantStyles<ButtonPrimaryShadedVariantStyles>;

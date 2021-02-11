@@ -1,19 +1,21 @@
+import { FlattenInterpolation, ThemedStyledProps } from 'styled-components';
 import { PabloThemeableProps } from './theme';
 import { Colors } from './theme/colors';
+import { PabloTheme } from './theme/types';
 
 export type InterpolateFn<T> = (props: PabloThemeableProps) => T;
 
-export type GetSpacingFn =
-  | ((multiplier: number, suffix?: string) => InterpolateFn<string>)
-  | ((multiplier: number) => InterpolateFn<string>)
-  | ((multiplier: number, suffix?: false) => InterpolateFn<number>);
-
-export const getSpacing: GetSpacingFn = (multiplier: number, suffix: string = 'px') => ({
-  theme,
-}: PabloThemeableProps) => {
-  const spacing = theme.spacing.unit * multiplier;
-  return (suffix ? `${spacing}${suffix}` : spacing) as any;
-};
+/* eslint-disable no-redeclare */
+export function getSpacing(multiplier: number): InterpolateFn<string>;
+export function getSpacing(multiplier: number, suffix: string): InterpolateFn<string>;
+export function getSpacing(multiplier: number, suffix: false): InterpolateFn<number>;
+export function getSpacing(multiplier: any, suffix: any = 'px'): any {
+  return ({ theme }: PabloThemeableProps) => {
+    const spacing = theme.spacing.unit * multiplier;
+    return (suffix !== false ? `${spacing}${suffix}` : spacing) as any;
+  };
+}
+/* eslint-enable no-redeclare */
 
 export const getColor = (name: keyof Colors, variant: string = 'main') => ({
   theme,
@@ -38,3 +40,15 @@ export const transitionTransformer = (transitions: string[][]) =>
   transitions.map((param) => param.join(' ')).join(', ');
 
 export const shadowTransformer = (shadows: string[]) => shadows.join(', ');
+
+export function conditionalStyles<P extends Record<string, any>, PK extends keyof P = keyof P>(
+  propKey: PK,
+  styleMap: Record<P[PK], FlattenInterpolation<ThemedStyledProps<P, PabloTheme>>>
+) {
+  return (props: P & PabloThemeableProps): FlattenInterpolation<ThemedStyledProps<P, PabloTheme>> =>
+    styleMap[props[propKey]];
+}
+
+export const getComponentStyleByProp = <P extends Record<string, any>>(propKey: keyof P) => (
+  props: ThemedStyledProps<P, PabloTheme>
+) => getComponentStyle((props[propKey] as unknown) as string)(props);
