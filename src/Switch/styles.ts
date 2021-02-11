@@ -1,5 +1,6 @@
 import { getColor, getSpacing } from '../styleHelpers';
 import { Style } from '../theme/types';
+import { TypographyVariant } from '../Typography';
 
 export interface SwitchStyles {
   innerPadding: Style;
@@ -13,6 +14,10 @@ export interface SwitchStyles {
     small: Style;
   };
   handleTransition: Style;
+  typographyVariant: {
+    medium: TypographyVariant;
+    small: TypographyVariant;
+  };
 }
 
 export const switchStyles: SwitchStyles = {
@@ -27,4 +32,8 @@ export const switchStyles: SwitchStyles = {
     small: getSpacing(1.5),
   },
   handleTransition: 'background-color 0.15s ease-in-out, transform 0.15s ease-in-out',
+  typographyVariant: {
+    medium: 'subtitle',
+    small: 'paragraph',
+  },
 };

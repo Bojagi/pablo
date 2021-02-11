@@ -2,7 +2,7 @@ import { getColor, getSpacing } from '../styleHelpers';
 import { Style } from '../theme/types';
 import { TypographyVariant } from '../Typography';
 
-export interface CheckboxStyles {
+export interface RadioStyles {
   innerPadding: {
     medium: Style;
     small: Style;
@@ -11,9 +11,11 @@ export interface CheckboxStyles {
   borderColor: Style;
   backgroundColor: Style;
   handleColor: Style;
-  innerBorderRadius: Style | string;
-  outerBorderRadius: Style | string;
   handleSize: {
+    medium: Style;
+    small: Style;
+  };
+  groupItemGap: {
     medium: Style;
     small: Style;
   };
@@ -24,7 +26,7 @@ export interface CheckboxStyles {
   };
 }
 
-export const checkboxStyles: CheckboxStyles = {
+export const radioStyles: RadioStyles = {
   innerPadding: {
     medium: getSpacing(0.75),
     small: getSpacing(0.5),
@@ -37,9 +39,11 @@ export const checkboxStyles: CheckboxStyles = {
     medium: getSpacing(1.5),
     small: getSpacing(1),
   },
-  innerBorderRadius: '3px',
-  outerBorderRadius: '4px',
   handleTransition: 'transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+  groupItemGap: {
+    medium: getSpacing(1.5),
+    small: getSpacing(1),
+  },
   typographyVariant: {
     medium: 'subtitle',
     small: 'paragraph',
