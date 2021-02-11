@@ -1,0 +1,31 @@
+name: Test
+
+on: push
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      
+      - name: install
+        run: 'yarn'
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Test
+        run: yarn test
+      
+      - name: Bojagi deploy
+        run: yarn bojagi deploy
+        env:
+          BOJAGI_SECRET: ${{secrets.BOJAGI_SECRET}}
