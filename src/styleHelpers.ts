@@ -12,8 +12,6 @@ export function getSpacing(multiplier: number, suffix: false): InterpolateFn<num
 export function getSpacing(multiplier: any, suffix: any = 'px'): any {
   return ({ theme }: PabloThemeableProps) => {
     const spacing = theme.spacing.unit * multiplier;
-    console.log('spacing', spacing);
-
     return (suffix !== false ? `${spacing}${suffix}` : spacing) as any;
   };
 }

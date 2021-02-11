@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 import { getSpacing } from '../styleHelpers';
+import { isDefined } from '../utils/isDefined';
 
 export interface BoxMarginProps {
   m?: number;
@@ -86,7 +87,3 @@ export const paddingInterpolateFn = (props: BoxPaddingProps) => css`
     padding-top: ${getSpacing(props.pt)};
   `}
 `;
-
-function isDefined(value: any): value is true {
-  return value || value === 0;
-}
