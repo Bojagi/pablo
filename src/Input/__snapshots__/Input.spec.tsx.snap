@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render without value 1`] = `
+.c0 {
+  padding: 6px 12px;
+  border: 1px solid #00000040;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: "IBM Plex Sans",sans-serif;
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  outline: none;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 3px #EBE7FF;
+}
+
+<div>
+  <div
+    class=""
+  >
+    <input
+      class="c0"
+      data-testid="pbl-input"
+      id="custom-id"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Show error when an error message is given 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  margin-top: 4px;
+  color: #F44336;
+}
+
+.c0 {
+  padding: 6px 12px;
+  border: 1px solid #00000040;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: "IBM Plex Sans",sans-serif;
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  outline: none;
+  border-color: #F44336;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 3px #EBE7FF;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 3px #FFD3D0;
+}
+
+<div>
+  <div
+    class=""
+  >
+    <input
+      class="c0"
+      data-testid="pbl-input"
+      id="custom-id"
+      value="some"
+    />
+    <p
+      class="c1"
+      color="negative.main"
+      data-testid="pbl-input-infotext"
+    >
+      Something 
+      <strong>
+        terrible
+      </strong>
+       happened!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Show infotext when available 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  margin-bottom: 0;
+  margin-top: 4px;
+  color: #00000080;
+}
+
+.c0 {
+  padding: 6px 12px;
+  border: 1px solid #00000040;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: "IBM Plex Sans",sans-serif;
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  outline: none;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 3px #EBE7FF;
+}
+
+<div>
+  <div
+    class=""
+  >
+    <input
+      class="c0"
+      data-testid="pbl-input"
+      id="custom-id"
+      value="some"
+    />
+    <p
+      class="c1"
+      color="text.info"
+      data-testid="pbl-input-infotext"
+    >
+      Something that 
+      <strong>
+        helps
+      </strong>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Show label when available 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  font-weight: 500;
+  margin-bottom: 0.75em;
+  margin-bottom: 6px;
+}
+
+.c1 {
+  padding: 6px 12px;
+  border: 1px solid #00000040;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: "IBM Plex Sans",sans-serif;
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  outline: none;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 3px #EBE7FF;
+}
+
+<div>
+  <div
+    class=""
+  >
+    <label
+      data-testid="pbl-input-label"
+      for="custom-id"
+    >
+      <p
+        class="c0"
+      >
+        Your 
+        <strong>
+          name
+        </strong>
+      </p>
+    </label>
+    <input
+      class="c1"
+      data-testid="pbl-input"
+      id="custom-id"
+      value="some"
+    />
+  </div>
+</div>
+`;

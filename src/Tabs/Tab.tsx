@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
 import { ButtonBase } from '../ButtonBase';
-import { getComponentStyle } from '../styleHelpers';
+import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { useComponentStyle } from '../theme';
 import { Typography } from '../Typography';
 
@@ -11,9 +11,11 @@ export interface TabProps extends BoxProps {
   icon?: React.ReactNode;
   name: string;
   children: React.ReactNode;
+  // eslint-disable-next-line no-undef
+  onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
 }
 
-const TabButton = styled<React.FC<Partial<TabProps>>>(ButtonBase)`
+const TabButton = styled<React.FC<Partial<TabProps>>>((ButtonBase as unknown) as any)`
   color: ${getComponentStyle('tabs.tab.color')};
   position: relative;
   padding: ${getComponentStyle('tabs.tab.padding')};
@@ -48,10 +50,22 @@ const TabButton = styled<React.FC<Partial<TabProps>>>(ButtonBase)`
     `}
 `;
 
-export const Tab = ({ children, active, icon, ...props }: TabProps) => {
+export const Tab = ({ children, active, icon, onClick, ...props }: TabProps) => {
   const iconGap = useComponentStyle('button.base.iconGap') as number;
   return (
-    <TabButton {...props} active={active}>
+    <TabButton
+      data-testid="pbl-tab"
+      {...props}
+      active={active}
+      onClick={(e) => {
+        e.stopPropagation();
+        if (onClick) {
+          onClick(e);
+        }
+
+        e.currentTarget.blur();
+      }}
+    >
       {icon && (
         <Box display="flex" mr={iconGap}>
           {icon}

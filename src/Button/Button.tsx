@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
 import { ButtonBase, ButtonBaseProps } from '../ButtonBase';
-import { getComponentStyle, getColor } from '../styleHelpers';
+import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { useComponentStyle } from '../theme';
 import { Style } from '../theme/types';
 import { ButtonTypography } from '../Typography';
@@ -81,11 +81,18 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const InnerButton = buttonMap[variant] || ButtonPrimary;
+
   const iconGap = useComponentStyle('button.base.iconGap') as number;
   return (
-    <InnerButton {...props} className={className} disabled={disabled} color={color}>
+    <InnerButton
+      data-testid="pbl-button"
+      {...props}
+      className={className}
+      disabled={disabled}
+      color={color}
+    >
       {icon && (
-        <Box display="flex" mr={iconGap}>
+        <Box data-testid="pbl-button-icon" display="flex" mr={iconGap}>
           {icon}
         </Box>
       )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getComponentStyle, transitionTransformer } from '../styleHelpers';
+import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 import { InfoText, ParagraphBold } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
 
@@ -60,11 +60,12 @@ export function Input({
   return (
     <Box {...props}>
       {label && (
-        <label htmlFor={id}>
+        <label data-testid="pbl-input-label" htmlFor={id}>
           <ParagraphBold mb={0.75}>{label}</ParagraphBold>
         </label>
       )}
       <InnerInput
+        data-testid="pbl-input"
         id={id}
         error={error}
         value={value}
@@ -72,7 +73,11 @@ export function Input({
         {...props}
       />
       {actualInfoText && (
-        <InfoText mt={0.5} color={error ? 'negative.main' : 'text.info'}>
+        <InfoText
+          data-testid="pbl-input-infotext"
+          mt={0.5}
+          color={error ? 'negative.main' : 'text.info'}
+        >
           {actualInfoText}
         </InfoText>
       )}

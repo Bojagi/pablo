@@ -6,9 +6,9 @@ export default {
   title: 'Switch',
 };
 
-const ControlledSwitch = ({ checked: checkedInitial, ...props }: SwitchProps) => {
+const ControlledSwitch = ({ checked: checkedInitial, ...props }: Omit<SwitchProps, 'onChange'>) => {
   const [checked, setChecked] = React.useState(checkedInitial);
-  return <Switch checked={checked} onClick={() => setChecked(!checked)} {...props} />;
+  return <Switch checked={checked} {...props} onChange={() => setChecked(!checked)} />;
 };
 
 const baseStory = (args) => (

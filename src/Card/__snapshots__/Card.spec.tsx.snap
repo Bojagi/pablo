@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render card 1`] = `
+.c0 {
+  padding: 16px;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1),0px 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Hello
+  </div>
+</div>
+`;

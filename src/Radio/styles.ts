@@ -1,4 +1,5 @@
-import { getColor, getSpacing } from '../styleHelpers';
+import { getColor } from '../utils/styleHelpers/getColor';
+import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { TypographyVariant } from '../Typography';
 

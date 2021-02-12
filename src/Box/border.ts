@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import { getColor } from '../styleHelpers';
-import { PabloThemeableProps } from '../theme';
+import { getColor } from '../utils/styleHelpers/getColor';
+import { PabloThemeableProps } from '../theme/types';
 import { BorderColors } from '../theme/colors';
 
 // eslint-disable-next-line no-use-before-define

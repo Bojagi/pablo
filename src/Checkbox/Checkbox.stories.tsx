@@ -6,9 +6,12 @@ export default {
   title: 'Checkbox',
 };
 
-const ControlledCheckbox = ({ checked: checkedInitial, ...props }: CheckboxProps) => {
+const ControlledCheckbox = ({
+  checked: checkedInitial,
+  ...props
+}: Omit<CheckboxProps, 'onChange'>) => {
   const [checked, setChecked] = React.useState(checkedInitial);
-  return <Checkbox checked={checked} onClick={() => setChecked(!checked)} {...props} />;
+  return <Checkbox checked={checked} onChange={() => setChecked(!checked)} {...props} />;
 };
 
 const baseStory = (args) => (

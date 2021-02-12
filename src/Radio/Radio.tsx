@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getSpacing, getComponentStyle } from '../styleHelpers';
+import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
@@ -58,6 +59,7 @@ const RadioHandle = styled.div<RadioHandleProps>`
 `;
 
 export interface RadioProps extends BoxProps {
+  id?: string;
   className?: string;
   disabled?: boolean;
   name?: string;
@@ -65,10 +67,14 @@ export interface RadioProps extends BoxProps {
   value: string;
   label?: React.ReactNode;
   checked?: boolean;
-  onClick?: () => void;
+  // eslint-disable-next-line no-undef
+  onChange?: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
+  // eslint-disable-next-line no-undef
+  onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
 export const Radio = ({
+  id: idProp,
   className,
   size = 'medium',
   name,
@@ -76,27 +82,38 @@ export const Radio = ({
   value,
   label,
   checked = false,
+  onChange,
   onClick,
   ...props
 }: RadioProps) => {
-  const id = useUniqueId('radio');
+  const generatedId = useUniqueId('radio');
+  const id = idProp || generatedId;
   const componentStyles = useComponentStyleContext();
   const typographyVariant = componentStyles.radio.typographyVariant[size];
+
   return (
     <Box className={className} display="flex" alignItems="center" {...props}>
-      <RadioBox onClick={!disabled ? onClick : undefined} disabled={disabled} size={size}>
-        <RadioHandle checked={checked} size={size} />
+      <RadioBox data-testid="pbl-radio" disabled={disabled} size={size}>
+        <RadioHandle data-testid="pbl-radio-handle" checked={checked} size={size} />
         <HiddenInput
           id={id}
+          data-testid="pbl-radio-input"
           name={name}
           checked={checked}
           disabled={disabled}
           value={value}
-          onChange={!disabled ? onClick : undefined}
+          onClick={onClick}
+          onChange={
+            onChange
+              ? (e) => {
+                  onChange(e.target.value, e);
+                }
+              : undefined
+          }
         />
       </RadioBox>
       {label && (
-        <label htmlFor={id}>
+        <label data-testid="pbl-radio-label" htmlFor={id}>
           <Typography ml={1} mb={0} variant={typographyVariant}>
             {label}
           </Typography>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { PabloThemeProvider } from '../src/theme';
-import { getSpacing, getColor } from '../src/styleHelpers';
+import { getSpacing } from '../src/styleHelpers/getSpacing';
+import { getColor } from '../src/styleHelpers/getColor';
 import { css } from 'styled-components';
 
 export const parameters = {

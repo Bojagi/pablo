@@ -1,28 +1,18 @@
-import { buttonStyles, ButtonStyles } from '../Button/styles';
-import { CardStyles, cardStyles } from '../Card/styles';
-import { sidebarNavStyles, SidebarNavStyles } from '../SidebarNav/styles';
-import { SwitchStyles, switchStyles } from '../Switch/styles';
-import { TabsStyles, tabsStyles } from '../Tabs/styles';
-import { CheckboxStyles, checkboxStyles } from '../Checkbox/styles';
-import { RadioStyles, radioStyles } from '../Radio/styles';
-import { inputStyles, InputStyles } from '../Input/styles';
-
-export interface ComponentStyles {
-  card: CardStyles;
-  tabs: TabsStyles;
-  sidebarNav: SidebarNavStyles;
-  button: ButtonStyles;
-  checkbox: CheckboxStyles;
-  switch: SwitchStyles;
-  radio: RadioStyles;
-  input: InputStyles;
-}
+import { buttonStyles } from '../Button/styles';
+import { cardStyles } from '../Card/styles';
+import { sidebarNavStyles } from '../SidebarNav/styles';
+import { switchStyles } from '../Switch/styles';
+import { tabsStyles } from '../Tabs/styles';
+import { checkboxStyles } from '../Checkbox/styles';
+import { radioStyles } from '../Radio/styles';
+import { inputStyles } from '../Input/styles';
+import { ComponentStyles } from './types';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
   tabs: tabsStyles,
   sidebarNav: sidebarNavStyles,
-  button: buttonStyles,
+  button: buttonStyles as any,
   checkbox: checkboxStyles,
   switch: switchStyles,
   radio: radioStyles,

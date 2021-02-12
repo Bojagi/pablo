@@ -8,5 +8,5 @@ export * from './Card';
 export * from './SidebarNav';
 export * from './Tabs';
 export * from './Typography';
-export * from './styleHelpers';
+export * from './utils/styleHelpers';
 export * from './theme';

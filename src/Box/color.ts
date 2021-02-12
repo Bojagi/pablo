@@ -1,7 +1,6 @@
 import { css } from 'styled-components';
-import { PabloThemeableProps } from '../theme';
+import { PabloThemeableProps, PabloTheme } from '../theme/types';
 import { AllColors, Colors } from '../theme/colors';
-import { PabloTheme } from '../theme/types';
 
 export type ColorPath<
   TName extends keyof Colors = keyof Colors,
