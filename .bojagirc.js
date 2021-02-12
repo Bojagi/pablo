@@ -1,3 +1,3 @@
-module.exports = {	
-  webpackConfig: './.bojagi/webpack.config.js',	
+module.exports = {
+  webpackConfig: './.bojagi/webpack.config.js',
 }
