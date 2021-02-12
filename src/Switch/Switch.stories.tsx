@@ -31,10 +31,10 @@ Small.args = {
 
 export const WithLabel = () => (
   <>
-    <Box mb={1}>
+    <Box mb={4}>
       <ControlledSwitch checked={true} label="Hans Wurst" />
     </Box>
-    <Box mb={1}>
+    <Box mb={4}>
       <ControlledSwitch size="small" checked={true} label="Hans Wurst" />
     </Box>
   </>

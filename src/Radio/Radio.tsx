@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getSpacing, getComponentStyle, getComponentStyleByProp } from '../styleHelpers';
+import { getSpacing, getComponentStyle } from '../styleHelpers';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
@@ -15,10 +15,10 @@ interface RadioBoxProps {
 
 const RadioBox = styled.div<RadioBoxProps>`
   position: relative;
-  width: ${getComponentStyleByProp('size', 'radio.handleSize.')};
-  height: ${getComponentStyleByProp('size', 'radio.handleSize.')};
+  width: ${getComponentStyle('radio.handleSize.{size}')};
+  height: ${getComponentStyle('radio.handleSize.{size}')};
   border-radius: 50%;
-  padding: ${getComponentStyleByProp('size', 'radio.innerPadding.')};
+  padding: ${getComponentStyle('radio.innerPadding.{size}')};
   background-color: ${getComponentStyle('radio.backgroundColor')};
   border: ${getComponentStyle('radio.borderWidth')}px solid
     ${getComponentStyle('radio.borderColor')};
@@ -49,8 +49,8 @@ interface RadioHandleProps {
 }
 
 const RadioHandle = styled.div<RadioHandleProps>`
-  width: ${getComponentStyleByProp('size', 'radio.handleSize.')};
-  height: ${getComponentStyleByProp('size', 'radio.handleSize.')};
+  width: ${getComponentStyle('radio.handleSize.{size}')};
+  height: ${getComponentStyle('radio.handleSize.{size}')};
   transform: scale(${(props: any) => (props.checked ? 1 : 0)});
   border-radius: 50%;
   transition: ${getComponentStyle('radio.handleTransition')};

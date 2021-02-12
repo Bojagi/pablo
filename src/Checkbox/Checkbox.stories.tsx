@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box } from '../Box';
-import { Checkbox, SwitchProps } from './Checkbox';
+import { Checkbox, CheckboxProps } from './Checkbox';
 
 export default {
   title: 'Checkbox',
 };
 
-const ControlledCheckbox = ({ checked: checkedInitial, ...props }: SwitchProps) => {
+const ControlledCheckbox = ({ checked: checkedInitial, ...props }: CheckboxProps) => {
   const [checked, setChecked] = React.useState(checkedInitial);
   return <Checkbox checked={checked} onClick={() => setChecked(!checked)} {...props} />;
 };
@@ -31,13 +31,13 @@ Small.args = {
 
 export const WithLabels = () => (
   <>
-    <Box display="flex" mx={-1} mb={1}>
-      <ControlledCheckbox mx={1} checked={true} label="Hans" />
-      <ControlledCheckbox mx={1} checked={false} label="Wurst" />
+    <Box mb={4}>
+      <ControlledCheckbox mb={1} checked={true} label="Hans" />
+      <ControlledCheckbox mb={1} checked={false} label="Wurst" />
     </Box>
-    <Box display="flex" mx={-1} mb={1}>
-      <ControlledCheckbox mx={1} checked={true} size="small" label="Hans" />
-      <ControlledCheckbox mx={1} checked={false} size="small" label="Wurst" />
+    <Box mb={4}>
+      <ControlledCheckbox mb={1} checked={true} size="small" label="Hans" />
+      <ControlledCheckbox mb={1} checked={false} size="small" label="Wurst" />
     </Box>
   </>
 );
