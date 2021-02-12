@@ -8,6 +8,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
+    "outDir": "lib",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": false,
     "noImplicitThis": true,

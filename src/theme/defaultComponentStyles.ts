@@ -5,6 +5,7 @@ import { SwitchStyles, switchStyles } from '../Switch/styles';
 import { TabsStyles, tabsStyles } from '../Tabs/styles';
 import { CheckboxStyles, checkboxStyles } from '../Checkbox/styles';
 import { RadioStyles, radioStyles } from '../Radio/styles';
+import { inputStyles, InputStyles } from '../Input/styles';
 
 export interface ComponentStyles {
   card: CardStyles;
@@ -14,6 +15,7 @@ export interface ComponentStyles {
   checkbox: CheckboxStyles;
   switch: SwitchStyles;
   radio: RadioStyles;
+  input: InputStyles;
 }
 
 export const defaultComponentStyles: ComponentStyles = {
@@ -24,4 +26,5 @@ export const defaultComponentStyles: ComponentStyles = {
   checkbox: checkboxStyles,
   switch: switchStyles,
   radio: radioStyles,
+  input: inputStyles,
 };

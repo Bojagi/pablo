@@ -24,7 +24,7 @@ const baseTypographyStyle = css`
   margin: 0;
 `;
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.p<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.paragraph.fontSize};
   line-height: ${(props) => props.theme.typography.paragraph.lineHeight};
@@ -32,7 +32,7 @@ export const Paragraph = styled.p`
   ${boxInterpolateFn}
 `;
 
-export const ParagraphBold = styled.p`
+export const ParagraphBold = styled.p<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.paragraphBold.fontSize};
   line-height: ${(props) => props.theme.typography.paragraphBold.lineHeight};
@@ -41,7 +41,7 @@ export const ParagraphBold = styled.p`
   ${boxInterpolateFn}
 `;
 
-export const ButtonTypography = styled.span`
+export const ButtonTypography = styled.span<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.button.fontSize};
   line-height: ${(props) => props.theme.typography.button.lineHeight};
@@ -49,7 +49,7 @@ export const ButtonTypography = styled.span`
   ${boxInterpolateFn}
 `;
 
-export const Headline = styled.h2`
+export const Headline = styled.h2<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.headline.fontSize};
   line-height: ${(props) => props.theme.typography.headline.lineHeight};
@@ -57,7 +57,7 @@ export const Headline = styled.h2`
   ${boxInterpolateFn}
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h3<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.title.fontSize};
   line-height: ${(props) => props.theme.typography.title.lineHeight};
@@ -65,7 +65,7 @@ export const Title = styled.h3`
   ${boxInterpolateFn}
 `;
 
-export const Subtitle = styled.h4`
+export const Subtitle = styled.h4<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.subtitle.fontSize};
   line-height: ${(props) => props.theme.typography.subtitle.lineHeight};
@@ -73,7 +73,7 @@ export const Subtitle = styled.h4`
   ${boxInterpolateFn}
 `;
 
-export const InfoText = styled.p`
+export const InfoText = styled.p<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.info.fontSize};
   line-height: ${(props) => props.theme.typography.info.lineHeight};
@@ -81,7 +81,7 @@ export const InfoText = styled.p`
   ${boxInterpolateFn}
 `;
 
-export const InfoTextBold = styled.p`
+export const InfoTextBold = styled.p<BoxProps>`
   ${baseTypographyStyle}
   font-size: ${(props) => props.theme.typography.infoBold.fontSize};
   line-height: ${(props) => props.theme.typography.infoBold.lineHeight};

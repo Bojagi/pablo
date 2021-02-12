@@ -48,9 +48,3 @@ export function conditionalStyles<P extends Record<string, any>, PK extends keyo
   return (props: P & PabloThemeableProps): FlattenInterpolation<ThemedStyledProps<P, PabloTheme>> =>
     styleMap[props[propKey]];
 }
-
-export const getComponentStyleByProp = <P extends Record<string, any>>(
-  propKey: keyof P,
-  prefix: string = ''
-) => (props: ThemedStyledProps<P, PabloTheme>) =>
-  getComponentStyle(((prefix + props[propKey]) as unknown) as string)(props);

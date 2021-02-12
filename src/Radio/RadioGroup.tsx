@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box } from '../Box';
-import { getComponentStyleByProp } from '../styleHelpers';
+import { getComponentStyle } from '../styleHelpers';
 import { RadioSize } from './Radio';
 
 const RadioGroupItem = styled.div<{ size: RadioSize }>`
-  margin-bottom: ${getComponentStyleByProp('size', 'radio.groupItemGap.')};
+  margin-bottom: ${getComponentStyle('radio.groupItemGap.{size}')};
 `;
 
 export function RadioGroup({ value, onChange, children, size, ...props }) {

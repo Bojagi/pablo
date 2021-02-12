@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getSpacing, getComponentStyle, getComponentStyleByProp } from '../styleHelpers';
+import { getSpacing, getComponentStyle } from '../styleHelpers';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
@@ -15,11 +15,11 @@ interface SwitchBoxProps {
 
 const SwitchBox = styled.div<SwitchBoxProps>`
   position: relative;
-  width: calc(2 * ${(props) => getComponentStyle(`switch.handleSize.${props.size}`)(props)});
-  height: ${(props) => getComponentStyle(`switch.handleSize.${props.size}`)(props)};
+  width: calc(2 * ${(props) => getComponentStyle('switch.handleSize.{size}')(props)});
+  height: ${(props) => getComponentStyle('switch.handleSize.{size}')(props)};
   border-radius: calc(
     (
-        ${(props) => getComponentStyle(`switch.handleSize.${props.size}`)(props)} + 2 *
+        ${(props) => getComponentStyle('switch.handleSize.{size}')(props)} + 2 *
           ${getComponentStyle('switch.innerPadding')} + 2 *
           ${getComponentStyle('switch.borderWidth')}px
       ) * 0.5
@@ -55,11 +55,10 @@ interface SwitchHandleProps {
 }
 
 const SwitchHandle = styled.div<SwitchHandleProps>`
-  width: ${getComponentStyleByProp('size', 'switch.handleSize.')};
-  height: ${getComponentStyleByProp('size', 'switch.handleSize.')};
+  width: ${getComponentStyle('switch.handleSize.{size}')};
+  height: ${getComponentStyle('switch.handleSize.{size}')};
   transform: translateX(
-    ${(props: any) =>
-      props.checked ? getComponentStyle(`switch.handleSize.${props.size}`)(props) : 0}
+    ${(props: any) => (props.checked ? getComponentStyle('switch.handleSize.{size}')(props) : 0)}
   );
   border-radius: 50%;
   transition: ${getComponentStyle('switch.handleTransition')};

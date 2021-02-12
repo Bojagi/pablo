@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getSpacing, getComponentStyle, getComponentStyleByProp } from '../styleHelpers';
+import { getComponentStyle } from '../styleHelpers';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
@@ -15,10 +15,10 @@ interface CheckboxBoxProps {
 
 const CheckboxBox = styled.div<CheckboxBoxProps>`
   position: relative;
-  width: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
-  height: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
+  width: ${getComponentStyle('checkbox.handleSize.{size}')};
+  height: ${getComponentStyle('checkbox.handleSize.{size}')};
   border-radius: ${getComponentStyle('checkbox.outerBorderRadius')};
-  padding: ${getComponentStyleByProp('size', 'checkbox.innerPadding.')};
+  padding: ${getComponentStyle('checkbox.innerPadding.{size}')};
   background-color: ${getComponentStyle('checkbox.backgroundColor')};
   border: ${getComponentStyle('checkbox.borderWidth')}px solid
     ${getComponentStyle('checkbox.borderColor')};
@@ -49,8 +49,8 @@ interface CheckboxHandleProps {
 }
 
 const CheckboxHandle = styled.div<CheckboxHandleProps>`
-  width: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
-  height: ${getComponentStyleByProp('size', 'checkbox.handleSize.')};
+  width: ${getComponentStyle('checkbox.handleSize.{size}')};
+  height: ${getComponentStyle('checkbox.handleSize.{size}')};
   transform: scale(${(props: any) => (props.checked ? 1 : 0)});
   border-radius: ${getComponentStyle('checkbox.innerBorderRadius')};
   transition: ${getComponentStyle('checkbox.handleTransition')};
@@ -108,5 +108,3 @@ export const Checkbox = ({
     </Box>
   );
 };
-
-getSpacing(2.25, false);
