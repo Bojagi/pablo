@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`circle variant Render size large 1`] = `
+.c0 {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="64"
+    width="64"
+  />
+</div>
+`;
+
+exports[`circle variant Render size medium 1`] = `
+.c0 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="40"
+    width="40"
+  />
+</div>
+`;
+
+exports[`circle variant Render size small 1`] = `
+.c0 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="32"
+    width="32"
+  />
+</div>
+`;
+
+exports[`circle variant Render size tiny 1`] = `
+.c0 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="24"
+    width="24"
+  />
+</div>
+`;
+
+exports[`square variant Render size large 1`] = `
+.c0 {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="64"
+    width="64"
+  />
+</div>
+`;
+
+exports[`square variant Render size medium 1`] = `
+.c0 {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="40"
+    width="40"
+  />
+</div>
+`;
+
+exports[`square variant Render size small 1`] = `
+.c0 {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="32"
+    width="32"
+  />
+</div>
+`;
+
+exports[`square variant Render size tiny 1`] = `
+.c0 {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+}
+
+<div>
+  <img
+    class="c0"
+    data-testid="pbl-avatar"
+    height="24"
+    width="24"
+  />
+</div>
+`;
