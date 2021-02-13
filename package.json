@@ -32,7 +32,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.10",
-    "@bojagi/cli": "^0.13.1",
+    "@bojagi/cli": "^0.14.1",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
