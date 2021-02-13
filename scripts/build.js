@@ -34,8 +34,7 @@ async function run(argv) {
   const babelConfigPath = path.resolve(__dirname, '../babel.config.js');
   const srcDir = path.resolve('./src');
   const outDir = path.resolve(
-    // Local development should always build into lib to prevent the files to land in the main folder
-    !process.env.CI ? relativeOutDir || 'lib' : relativeOutDir,
+    relativeOutDir,
     {
       cjs: '.',
       esm: './esm',
