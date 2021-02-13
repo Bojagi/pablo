@@ -3,7 +3,6 @@ import { getColor } from '../utils/styleHelpers/getColor';
 import { PabloThemeableProps } from '../theme/types';
 import { BorderColors } from '../theme/colors';
 
-// eslint-disable-next-line no-use-before-define
 type BorderType = boolean | keyof BoxBorderProps | string;
 
 export interface BoxBorderProps {

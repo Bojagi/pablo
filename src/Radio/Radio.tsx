@@ -67,9 +67,7 @@ export interface RadioProps extends BoxProps {
   value: string;
   label?: React.ReactNode;
   checked?: boolean;
-  // eslint-disable-next-line no-undef
   onChange?: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
-  // eslint-disable-next-line no-undef
   onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 

@@ -77,9 +77,7 @@ export interface SwitchProps extends BoxProps {
   size?: SwitchSize;
   label?: React.ReactNode;
   checked: boolean;
-  // eslint-disable-next-line no-undef
   onChange: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
-  // eslint-disable-next-line no-undef
   onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 

@@ -11,7 +11,6 @@ export interface TabProps extends BoxProps {
   icon?: React.ReactNode;
   name: string;
   children: React.ReactNode;
-  // eslint-disable-next-line no-undef
   onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
 }
 

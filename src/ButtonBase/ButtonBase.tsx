@@ -3,7 +3,6 @@ import { boxInterpolateFn, BoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 
 export type ButtonSize = 'small' | 'medium' | 'large';
-// eslint-disable-next-line no-undef
 export interface ButtonBaseProps extends BoxProps {
   size?: ButtonSize;
 }

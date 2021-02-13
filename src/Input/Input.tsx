@@ -11,7 +11,6 @@ export interface InputProps extends BoxProps {
   error?: React.ReactNode;
   label?: React.ReactNode;
   infoText?: React.ReactNode;
-  // eslint-disable-next-line no-undef
   onChange: (newValue: string, e: React.FormEvent<HTMLInputElement>) => void;
 }
 
