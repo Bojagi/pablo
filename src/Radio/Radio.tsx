@@ -1,17 +1,19 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
+import { hijackCbBefore } from '../utils/hijackCb';
 
 export type RadioSize = 'small' | 'medium';
 
 interface RadioBoxProps {
   disabled?: boolean;
   size?: RadioSize;
+  focus: boolean;
 }
 
 const RadioBox = styled.div<RadioBoxProps>`
@@ -24,6 +26,15 @@ const RadioBox = styled.div<RadioBoxProps>`
   border: ${getComponentStyle('radio.borderWidth')}px solid
     ${getComponentStyle('radio.borderColor')};
   opacity: ${(props) => (props.disabled ? 0.3 : 1)};
+  transition: ${getComponentStyle('radio.boxTransition', transitionTransformer)};
+
+  ${(props) =>
+    props.focus &&
+    css`
+      box-shadow: 0 0 0 ${getComponentStyle('radio.focus.outlineSize')}
+        ${getComponentStyle('radio.focus.outlineColor')};
+    `};
+  }
 `;
 
 const HiddenInput = styled.input.attrs({ type: 'radio' })`
@@ -45,7 +56,7 @@ const HiddenInput = styled.input.attrs({ type: 'radio' })`
 
 interface RadioHandleProps {
   disabled?: boolean;
-  checked: boolean;
+  checked?: boolean;
   size?: RadioSize;
 }
 
@@ -54,7 +65,7 @@ const RadioHandle = styled.div<RadioHandleProps>`
   height: ${getComponentStyle('radio.handleSize.{size}')};
   transform: scale(${(props: any) => (props.checked ? 1 : 0)});
   border-radius: 50%;
-  transition: ${getComponentStyle('radio.handleTransition')};
+  transition: ${getComponentStyle('radio.handleTransition', transitionTransformer)};
   background-color: ${getComponentStyle('radio.handleColor')};
 `;
 
@@ -69,6 +80,8 @@ export interface RadioProps extends BoxProps {
   checked?: boolean;
   onChange?: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
   onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
 }
 
 export const Radio = ({
@@ -79,19 +92,22 @@ export const Radio = ({
   disabled,
   value,
   label,
-  checked = false,
+  checked,
   onChange,
   onClick,
+  onFocus,
+  onBlur,
   ...props
 }: RadioProps) => {
   const generatedId = useUniqueId('radio');
   const id = idProp || generatedId;
   const componentStyles = useComponentStyleContext();
   const typographyVariant = componentStyles.radio.typographyVariant[size];
+  const [focus, setFocus] = React.useState(false);
 
   return (
     <Box className={className} display="flex" alignItems="center" {...props}>
-      <RadioBox data-testid="pbl-radio" disabled={disabled} size={size}>
+      <RadioBox data-testid="pbl-radio" disabled={disabled} size={size} focus={focus}>
         <RadioHandle data-testid="pbl-radio-handle" checked={checked} size={size} />
         <HiddenInput
           id={id}
@@ -108,6 +124,8 @@ export const Radio = ({
                 }
               : undefined
           }
+          onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
+          onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
         />
       </RadioBox>
       {label && (

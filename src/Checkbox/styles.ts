@@ -18,7 +18,12 @@ export interface CheckboxStyles {
     medium: Style;
     small: Style;
   };
-  handleTransition: Style;
+  focus: {
+    outlineSize: Style;
+    outlineColor: Style;
+  };
+  boxTransition: string[][];
+  handleTransition: string[][];
   typographyVariant: {
     medium: TypographyVariant;
     small: TypographyVariant;
@@ -40,7 +45,12 @@ export const checkboxStyles: CheckboxStyles = {
   },
   innerBorderRadius: '3px',
   outerBorderRadius: '4px',
-  handleTransition: 'transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
+  focus: {
+    outlineSize: getSpacing(0.375),
+    outlineColor: getColor('brand', 'light'),
+  },
+  boxTransition: [['box-shadow', '0.3s', 'ease-in-out']],
+  handleTransition: [['transform', '0.15s', 'cubic-bezier(0.34, 1.56, 0.64, 1)']],
   typographyVariant: {
     medium: 'subtitle',
     small: 'paragraph',
