@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getSpacing, getComponentStyle } from '../styleHelpers';
+import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
@@ -69,47 +70,55 @@ const SwitchHandle = styled.div<SwitchHandleProps>`
 `;
 
 export interface SwitchProps extends BoxProps {
+  id?: string;
   className?: string;
   disabled?: boolean;
   name?: string;
   size?: SwitchSize;
   label?: React.ReactNode;
   checked: boolean;
-  onClick?: () => void;
+  onChange: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
+  onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
 export const Switch = ({
+  id: idProp,
   className,
   size = 'medium',
   name,
   disabled,
   checked,
   label,
+  onChange,
   onClick,
   ...props
 }: SwitchProps) => {
-  const id = useUniqueId('switch');
+  const generatedId = useUniqueId('switch');
+  const id = idProp || generatedId;
   const componentStyles = useComponentStyleContext();
   const typographyVariant = componentStyles.switch.typographyVariant[size];
   return (
     <Box display="flex" alignItems="center" className={className} {...props}>
-      <SwitchBox
-        onClick={!disabled ? onClick : undefined}
-        disabled={disabled}
-        size={size}
-        {...props}
-      >
-        <SwitchHandle checked={checked} size={size} />
+      <SwitchBox data-testid="pbl-switch" disabled={disabled} size={size} {...props}>
+        <SwitchHandle data-testid="pbl-switch-handle" checked={checked} size={size} />
         <HiddenInput
           id={id}
           name={name}
+          data-testid="pbl-switch-input"
           checked={checked}
           disabled={disabled}
-          onClick={!disabled ? onClick : undefined}
+          onClick={onClick}
+          onChange={
+            onChange
+              ? (e) => {
+                  onChange(e.target.value, e);
+                }
+              : undefined
+          }
         />
       </SwitchBox>
       {label && (
-        <label htmlFor={id}>
+        <label data-testid="pbl-switch-label" htmlFor={id}>
           <Typography ml={1} mb={0} variant={typographyVariant}>
             {label}
           </Typography>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { ButtonBase, ButtonBaseProps } from '../ButtonBase';
-import { getComponentStyle } from '../styleHelpers';
+import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
 export interface SidebarNavItemProps extends ButtonBaseProps {
@@ -25,7 +25,7 @@ const SidebarNavItemWrapper = styled<React.FC<SidebarNavItemProps>>(ButtonBase).
 `;
 
 export const SidebarNavItem = ({ children, ...props }: SidebarNavItemProps) => (
-  <SidebarNavItemWrapper {...props}>
+  <SidebarNavItemWrapper data-testid="pbl-sidebarnav-item" {...props}>
     <Typography variant="button">{children}</Typography>
   </SidebarNavItemWrapper>
 );

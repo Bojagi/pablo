@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getComponentStyle } from '../styleHelpers';
+import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
@@ -58,48 +58,61 @@ const CheckboxHandle = styled.div<CheckboxHandleProps>`
 `;
 
 export interface CheckboxProps extends BoxProps {
+  id?: string;
   className?: string;
   disabled?: boolean;
   name?: string;
   size?: CheckboxSize;
   label?: React.ReactNode;
   checked: boolean;
-  onClick?: () => void;
+  onChange: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
+  onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
 export const Checkbox = ({
+  id: idProp,
   className,
   size = 'medium',
   name,
   disabled,
   checked,
   label,
+  onChange,
   onClick,
   ...props
 }: CheckboxProps) => {
-  const id = useUniqueId('checkbox');
+  const generatedId = useUniqueId('checkbox');
+  const id = idProp || generatedId;
   const componentStyles = useComponentStyleContext();
   const typographyVariant = componentStyles.checkbox.typographyVariant[size];
   return (
     <Box display="flex" alignItems="center" {...props}>
       <CheckboxBox
+        data-testid="pbl-checkbox"
         className={className}
-        onClick={!disabled ? onClick : undefined}
         disabled={disabled}
         size={size}
         {...props}
       >
-        <CheckboxHandle checked={checked} size={size} />
+        <CheckboxHandle data-testid="pbl-checkbox-handle" checked={checked} size={size} />
         <HiddenInput
           id={id}
+          data-testid="pbl-checkbox-input"
           name={name}
           checked={checked}
           disabled={disabled}
-          onChange={!disabled ? onClick : undefined}
+          onChange={
+            onChange
+              ? (e) => {
+                  onChange(e.target.value, e);
+                }
+              : undefined
+          }
+          onClick={onClick}
         />
       </CheckboxBox>
       {label && (
-        <label htmlFor={id}>
+        <label data-testid="pbl-checkbox-label" htmlFor={id}>
           <Typography ml={1} mb={0} variant={typographyVariant}>
             {label}
           </Typography>

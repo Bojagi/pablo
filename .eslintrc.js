@@ -13,8 +13,13 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'global-require': 'off',
+    'no-undef': 'off',
     'import/no-dynamic-require': 'off',
     'import/no-named-as-default': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.spec.ts', '**/*.spec.tsx'] },
+    ],
     'import/no-named-as-default-member': 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', 'nofunc'],

@@ -11,7 +11,13 @@ export const SidebarNav = ({ children, ...props }) => {
   const borderLeft = useComponentStyle('sidebarNav.borderLeft') as string;
   const borderLeftSpacing = useComponentStyle('sidebarNav.borderLeftSpacing') as number;
   return (
-    <Box borderLeft={borderLeft} pl={borderLeftSpacing} as="ul" {...props}>
+    <Box
+      borderLeft={borderLeft}
+      data-testid="pbl-sidebarnav"
+      pl={borderLeftSpacing}
+      as="ul"
+      {...props}
+    >
       {children}
     </Box>
   );

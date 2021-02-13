@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { boxInterpolateFn, BoxProps } from '../Box';
-import { getComponentStyle, shadowTransformer } from '../styleHelpers';
+import { getComponentStyle, shadowTransformer } from '../utils/styleHelpers/getComponentStyle';
 
 export const Card = styled.div<BoxProps>`
   padding: ${getComponentStyle('card.padding')};

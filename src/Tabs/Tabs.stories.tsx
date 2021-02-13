@@ -25,6 +25,17 @@ export const TabsWithSelectedProp = () => (
   </Tabs>
 );
 
+export const TabsWithOnSelectCb = () => {
+  const [selected, setSelected] = React.useState('second');
+  return (
+    <Tabs selected={selected} onSelect={setSelected}>
+      <Tab name="first">First tab</Tab>
+      <Tab name="second">Second tab</Tab>
+      <Tab name="third">Third tab</Tab>
+    </Tabs>
+  );
+};
+
 export const TabsWithIcons = () => (
   <Tabs selected="second">
     <Tab name="first" icon={<BookOpen size={16} />}>

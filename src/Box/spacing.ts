@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { getSpacing } from '../styleHelpers';
+import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { isDefined } from '../utils/isDefined';
 
 export interface BoxMarginProps {
