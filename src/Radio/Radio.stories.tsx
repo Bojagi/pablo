@@ -9,7 +9,9 @@ export default {
 
 const ControlledRadio = ({ checked: checkedInitial, ...props }: RadioProps) => {
   const [checked, setChecked] = React.useState(checkedInitial);
-  return <Radio checked={checked} onClick={() => setChecked(!checked)} {...props} />;
+  return (
+    <Radio checked={checked} onChange={() => {}} onClick={() => setChecked(!checked)} {...props} />
+  );
 };
 
 const baseStory = (args) => (

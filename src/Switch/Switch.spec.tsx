@@ -124,6 +124,36 @@ test('Render without onChange function ', () => {
   });
 });
 
+test('Forward onFocus and onBlur to input and show focus outline', () => {
+  const onFocusMock = jest.fn();
+  const onBlurMock = jest.fn();
+  const { getByTestId } = renderComponent({
+    onChange: undefined,
+    checked: undefined,
+    onFocus: onFocusMock,
+    onBlur: onBlurMock,
+  });
+
+  expect(onFocusMock).toHaveBeenCalledTimes(0);
+  act(() => {
+    fireEvent.focus(getByTestId('pbl-switch-input'));
+  });
+  expect(onFocusMock).toHaveBeenCalledTimes(1);
+
+  expect(getByTestId('pbl-switch')).toHaveStyleRule(
+    'box-shadow',
+    `0 0 0 3px ${defaultTheme.colors.brand.light}`
+  );
+
+  expect(onBlurMock).toHaveBeenCalledTimes(0);
+  act(() => {
+    fireEvent.blur(getByTestId('pbl-switch-input'));
+  });
+  expect(onBlurMock).toHaveBeenCalledTimes(1);
+
+  expect(getByTestId('pbl-switch')).toHaveStyleRule('box-shadow', undefined);
+});
+
 function renderComponent(props) {
   return render(
     <PabloThemeProvider>

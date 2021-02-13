@@ -1,17 +1,19 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
+import { hijackCbBefore } from '../utils/hijackCb';
 
 export type SwitchSize = 'small' | 'medium';
 
 interface SwitchBoxProps {
   disabled?: boolean;
   size?: SwitchSize;
+  focus: boolean;
 }
 
 const SwitchBox = styled.div<SwitchBoxProps>`
@@ -30,6 +32,16 @@ const SwitchBox = styled.div<SwitchBoxProps>`
   border: ${getComponentStyle('switch.borderWidth')}px solid
     ${getComponentStyle('switch.borderColor')};
   opacity: ${(props) => (props.disabled ? 0.3 : 1)};
+
+  transition: ${getComponentStyle('switch.boxTransition', transitionTransformer)};
+
+  ${(props) =>
+    props.focus &&
+    css`
+      box-shadow: 0 0 0 ${getComponentStyle('switch.focus.outlineSize')}
+        ${getComponentStyle('switch.focus.outlineColor')};
+    `};
+  }
 `;
 
 const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
@@ -79,6 +91,8 @@ export interface SwitchProps extends BoxProps {
   checked: boolean;
   onChange: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
   onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
 }
 
 export const Switch = ({
@@ -91,15 +105,19 @@ export const Switch = ({
   label,
   onChange,
   onClick,
+  onFocus,
+  onBlur,
   ...props
 }: SwitchProps) => {
   const generatedId = useUniqueId('switch');
   const id = idProp || generatedId;
   const componentStyles = useComponentStyleContext();
   const typographyVariant = componentStyles.switch.typographyVariant[size];
+  const [focus, setFocus] = React.useState(false);
+
   return (
     <Box display="flex" alignItems="center" className={className} {...props}>
-      <SwitchBox data-testid="pbl-switch" disabled={disabled} size={size} {...props}>
+      <SwitchBox data-testid="pbl-switch" disabled={disabled} size={size} focus={focus} {...props}>
         <SwitchHandle data-testid="pbl-switch-handle" checked={checked} size={size} />
         <HiddenInput
           id={id}
@@ -115,6 +133,8 @@ export const Switch = ({
                 }
               : undefined
           }
+          onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
+          onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
         />
       </SwitchBox>
       {label && (

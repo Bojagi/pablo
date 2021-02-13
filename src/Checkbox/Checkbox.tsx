@@ -1,16 +1,18 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, BoxProps } from '../Box';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 import { useComponentStyleContext } from '../theme';
 import { Typography } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
+import { hijackCbBefore } from '../utils/hijackCb';
 
 export type CheckboxSize = 'small' | 'medium';
 
 interface CheckboxBoxProps {
   disabled?: boolean;
   size?: CheckboxSize;
+  focus: boolean;
 }
 
 const CheckboxBox = styled.div<CheckboxBoxProps>`
@@ -23,6 +25,16 @@ const CheckboxBox = styled.div<CheckboxBoxProps>`
   border: ${getComponentStyle('checkbox.borderWidth')}px solid
     ${getComponentStyle('checkbox.borderColor')};
   opacity: ${(props) => (props.disabled ? 0.3 : 1)};
+
+  transition: ${getComponentStyle('checkbox.boxTransition', transitionTransformer)};
+
+  ${(props) =>
+    props.focus &&
+    css`
+      box-shadow: 0 0 0 ${getComponentStyle('checkbox.focus.outlineSize')}
+        ${getComponentStyle('checkbox.focus.outlineColor')};
+    `};
+  }
 `;
 
 const HiddenInput = styled.input.attrs({ type: 'checkbox' })`
@@ -67,6 +79,8 @@ export interface CheckboxProps extends BoxProps {
   checked: boolean;
   onChange: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
   onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
+  onFocus?: () => void;
+  onBlur?: () => void;
 }
 
 export const Checkbox = ({
@@ -79,12 +93,16 @@ export const Checkbox = ({
   label,
   onChange,
   onClick,
+  onFocus,
+  onBlur,
   ...props
 }: CheckboxProps) => {
   const generatedId = useUniqueId('checkbox');
   const id = idProp || generatedId;
   const componentStyles = useComponentStyleContext();
   const typographyVariant = componentStyles.checkbox.typographyVariant[size];
+  const [focus, setFocus] = React.useState(false);
+
   return (
     <Box display="flex" alignItems="center" {...props}>
       <CheckboxBox
@@ -92,6 +110,7 @@ export const Checkbox = ({
         className={className}
         disabled={disabled}
         size={size}
+        focus={focus}
         {...props}
       >
         <CheckboxHandle data-testid="pbl-checkbox-handle" checked={checked} size={size} />
@@ -109,6 +128,8 @@ export const Checkbox = ({
               : undefined
           }
           onClick={onClick}
+          onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
+          onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
         />
       </CheckboxBox>
       {label && (

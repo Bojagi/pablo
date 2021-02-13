@@ -21,6 +21,8 @@ exports[`Render radio checked 1`] = `
   background-color: #ffffff;
   border: 1px solid #00000040;
   opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .c3 {
@@ -96,6 +98,8 @@ exports[`Render radio unchecked 1`] = `
   background-color: #ffffff;
   border: 1px solid #00000040;
   opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .c3 {

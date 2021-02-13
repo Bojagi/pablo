@@ -14,6 +14,11 @@ export interface SwitchStyles {
     medium: Style;
     small: Style;
   };
+  focus: {
+    outlineSize: Style;
+    outlineColor: Style;
+  };
+  boxTransition: string[][];
   handleTransition: Style;
   typographyVariant: {
     medium: TypographyVariant;
@@ -32,6 +37,11 @@ export const switchStyles: SwitchStyles = {
     medium: getSpacing(2.25),
     small: getSpacing(1.5),
   },
+  focus: {
+    outlineSize: getSpacing(0.375),
+    outlineColor: getColor('brand', 'light'),
+  },
+  boxTransition: [['box-shadow', '0.3s', 'ease-in-out']],
   handleTransition: 'background-color 0.15s ease-in-out, transform 0.15s ease-in-out',
   typographyVariant: {
     medium: 'subtitle',
