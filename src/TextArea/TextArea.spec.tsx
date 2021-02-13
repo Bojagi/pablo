@@ -1,17 +1,17 @@
 import { act, fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
-import { Input } from './Input';
+import { TextArea } from './TextArea';
 
 test('Render without value', () => {
   const { container, getByTestId } = renderComponent({});
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-input')).toHaveValue('');
+  expect(getByTestId('pbl-textarea')).toHaveValue('');
 });
 
 test('Render with value', () => {
   const { getByTestId } = renderComponent({ value: 'some' });
-  expect(getByTestId('pbl-input')).toHaveValue('some');
+  expect(getByTestId('pbl-textarea')).toHaveValue('some');
 });
 
 test('Show label when available', () => {
@@ -24,7 +24,7 @@ test('Show label when available', () => {
     ),
   });
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-input-label')).toHaveTextContent('Your name');
+  expect(getByTestId('pbl-textarea-label')).toHaveTextContent('Your name');
 });
 
 test('Show infotext when available', () => {
@@ -37,7 +37,7 @@ test('Show infotext when available', () => {
     ),
   });
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-input-infotext')).toHaveTextContent('Something that helps');
+  expect(getByTestId('pbl-textarea-infotext')).toHaveTextContent('Something that helps');
 });
 
 test('Show error when an error message is given', () => {
@@ -50,7 +50,7 @@ test('Show error when an error message is given', () => {
     ),
   });
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-input-infotext')).toHaveTextContent('Something terrible happened!');
+  expect(getByTestId('pbl-textarea-infotext')).toHaveTextContent('Something terrible happened!');
 });
 
 test('Show error instead of infotext when both are set', () => {
@@ -67,7 +67,7 @@ test('Show error instead of infotext when both are set', () => {
       </>
     ),
   });
-  expect(getByTestId('pbl-input-infotext')).toHaveTextContent('Something terrible happened!');
+  expect(getByTestId('pbl-textarea-infotext')).toHaveTextContent('Something terrible happened!');
 });
 
 test('Render with custom width when "width" prop is set', () => {
@@ -75,7 +75,7 @@ test('Render with custom width when "width" prop is set', () => {
     width: '600em',
   });
 
-  expect(getByTestId('pbl-input')).toHaveStyleRule('width', '600em');
+  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', '600em');
 });
 
 test('Render with custom px width when number "width" prop is set', () => {
@@ -83,7 +83,7 @@ test('Render with custom px width when number "width" prop is set', () => {
     width: 600,
   });
 
-  expect(getByTestId('pbl-input')).toHaveStyleRule('width', '600px');
+  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', '600px');
 });
 
 test('Render with width 100% when "fullWidth" prop is set', () => {
@@ -92,10 +92,10 @@ test('Render with width 100% when "fullWidth" prop is set', () => {
     fullWidth: true,
   });
 
-  expect(getByTestId('pbl-input')).toHaveStyleRule('width', '100%');
+  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', '100%');
 });
 
-test('Trigger onChange event when the content of the inner input changed', () => {
+test('Trigger onChange event when the content of the inner textarea changed', () => {
   const onChangeMock = jest.fn();
   const { getByTestId } = renderComponent({
     value: 'some',
@@ -104,7 +104,7 @@ test('Trigger onChange event when the content of the inner input changed', () =>
 
   expect(onChangeMock).toHaveBeenCalledTimes(0);
   act(() => {
-    fireEvent.change(getByTestId('pbl-input'), { target: { value: 'newValue' } });
+    fireEvent.change(getByTestId('pbl-textarea'), { target: { value: 'newValue' } });
   });
   expect(onChangeMock).toHaveBeenCalledTimes(1);
   expect(onChangeMock).toHaveBeenCalledWith(
@@ -121,13 +121,16 @@ test('Use generated id when no "id" prop is set', () => {
     onChange: onChangeMock,
   });
 
-  expect(getByTestId('pbl-input')).toHaveAttribute('id', expect.stringContaining('pbl-input-'));
+  expect(getByTestId('pbl-textarea')).toHaveAttribute(
+    'id',
+    expect.stringContaining('pbl-textarea-')
+  );
 });
 
 function renderComponent(props) {
   return render(
     <PabloThemeProvider>
-      <Input id="custom-id" {...props} />
+      <TextArea id="custom-id" {...props} />
     </PabloThemeProvider>
   );
 }

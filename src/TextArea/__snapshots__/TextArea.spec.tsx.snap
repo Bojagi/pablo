@@ -2,7 +2,8 @@
 
 exports[`Render without value 1`] = `
 .c0 {
-  width: 300px;
+  width: 500px;
+  resize: none;
   box-sizing: border-box;
   padding: 6px 12px;
   border: 1px solid #00000040;
@@ -22,12 +23,11 @@ exports[`Render without value 1`] = `
   <div
     class=""
   >
-    <input
+    <textarea
       class="c0"
-      data-testid="pbl-input"
+      data-testid="pbl-textarea"
       id="custom-id"
-      value=""
-      width="300"
+      width="500"
     />
   </div>
 </div>
@@ -47,7 +47,8 @@ exports[`Show error when an error message is given 1`] = `
 }
 
 .c0 {
-  width: 300px;
+  width: 500px;
+  resize: none;
   box-sizing: border-box;
   padding: 6px 12px;
   border: 1px solid #00000040;
@@ -72,17 +73,18 @@ exports[`Show error when an error message is given 1`] = `
   <div
     class=""
   >
-    <input
+    <textarea
       class="c0"
-      data-testid="pbl-input"
+      data-testid="pbl-textarea"
       id="custom-id"
-      value="some"
-      width="300"
-    />
+      width="500"
+    >
+      some
+    </textarea>
     <p
       class="c1"
       color="negative.main"
-      data-testid="pbl-input-infotext"
+      data-testid="pbl-textarea-infotext"
     >
       Something 
       <strong>
@@ -108,7 +110,8 @@ exports[`Show infotext when available 1`] = `
 }
 
 .c0 {
-  width: 300px;
+  width: 500px;
+  resize: none;
   box-sizing: border-box;
   padding: 6px 12px;
   border: 1px solid #00000040;
@@ -128,17 +131,18 @@ exports[`Show infotext when available 1`] = `
   <div
     class=""
   >
-    <input
+    <textarea
       class="c0"
-      data-testid="pbl-input"
+      data-testid="pbl-textarea"
       id="custom-id"
-      value="some"
-      width="300"
-    />
+      width="500"
+    >
+      some
+    </textarea>
     <p
       class="c1"
       color="text.info"
-      data-testid="pbl-input-infotext"
+      data-testid="pbl-textarea-infotext"
     >
       Something that 
       <strong>
@@ -163,7 +167,8 @@ exports[`Show label when available 1`] = `
 }
 
 .c1 {
-  width: 300px;
+  width: 500px;
+  resize: none;
   box-sizing: border-box;
   padding: 6px 12px;
   border: 1px solid #00000040;
@@ -184,7 +189,7 @@ exports[`Show label when available 1`] = `
     class=""
   >
     <label
-      data-testid="pbl-input-label"
+      data-testid="pbl-textarea-label"
       for="custom-id"
     >
       <p
@@ -196,13 +201,14 @@ exports[`Show label when available 1`] = `
         </strong>
       </p>
     </label>
-    <input
+    <textarea
       class="c1"
-      data-testid="pbl-input"
+      data-testid="pbl-textarea"
       id="custom-id"
-      value="some"
-      width="300"
-    />
+      width="500"
+    >
+      some
+    </textarea>
   </div>
 </div>
 `;
