@@ -17,6 +17,7 @@ import { InputStyles } from '../Input/styles';
 import { Colors } from './colors';
 import { Spacing } from './spacing';
 import { Typography } from './typography';
+import { TextAreaStyles } from '../TextArea/styles';
 
 export type Style =
   | string
@@ -47,6 +48,7 @@ export interface ComponentStyles {
   switch: SwitchStyles;
   radio: RadioStyles;
   input: InputStyles;
+  textarea: TextAreaStyles;
 }
 
 export interface PabloThemeProviderProps {

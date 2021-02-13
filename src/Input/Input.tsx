@@ -4,6 +4,8 @@ import { Box, BoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 import { InfoText, ParagraphBold } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
+import { interpolateSize } from '../utils/interpolateSize';
+import { useComponentStyle } from '../theme';
 
 export interface InputProps extends BoxProps {
   id?: string;
@@ -11,14 +13,25 @@ export interface InputProps extends BoxProps {
   error?: React.ReactNode;
   label?: React.ReactNode;
   infoText?: React.ReactNode;
+  fullWidth?: boolean;
+  width?: string | number;
   onChange: (newValue: string, e: React.FormEvent<HTMLInputElement>) => void;
 }
 
 export interface InnerInputProps {
   error?: React.ReactNode;
+  fullWidth?: boolean;
+  width: string | number;
 }
 
 const InnerInput = styled.input<InnerInputProps>`
+  width: ${(props) => interpolateSize(props.width)};
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+    `}
+  box-sizing: border-box;
   padding: ${getComponentStyle('input.padding')};
   border: ${getComponentStyle('input.borderWidth')}px solid
     ${getComponentStyle('input.borderColor')};
@@ -50,12 +63,15 @@ export function Input({
   error,
   label,
   infoText,
+  fullWidth,
+  width,
   onChange,
   ...props
 }: InputProps) {
   const generatedId = useUniqueId('input');
   const id = idProp || generatedId;
   const actualInfoText = error || infoText;
+  const defaultWidth = useComponentStyle('input.defaultWidth');
   return (
     <Box {...props}>
       {label && (
@@ -68,6 +84,8 @@ export function Input({
         id={id}
         error={error}
         value={value}
+        fullWidth={fullWidth}
+        width={width || defaultWidth}
         onChange={(e) => onChange(e.target.value, e)}
         {...props}
       />

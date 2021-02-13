@@ -1,26 +1,26 @@
 import React from 'react';
 import { Box } from '../Box';
-import { Input, InputProps } from './Input';
+import { TextArea, TextAreaProps } from './TextArea';
 
 export default {
-  title: 'Input',
+  title: 'TextArea',
 };
 
-const ControlledInput = ({ value: valueInitial, ...props }: Omit<InputProps, 'onChange'>) => {
+const ControlledTextArea = ({ value: valueInitial, ...props }: Omit<TextAreaProps, 'onChange'>) => {
   const [value, setValue] = React.useState(valueInitial);
-  return <Input value={value} mb={1} {...props} onChange={setValue} />;
+  return <TextArea rows={3} value={value} mb={1} {...props} onChange={setValue} />;
 };
 
-const baseStory = (args) => <ControlledInput {...args} />;
+const baseStory = (args) => <ControlledTextArea {...args} />;
+
+export const Inline = baseStory.bind(null);
+Inline.args = {};
 
 export const FullWidth = baseStory.bind(null);
 FullWidth.args = { fullWidth: true };
 
 export const FixedWidth = baseStory.bind(null);
 FixedWidth.args = { width: 800 };
-
-export const Inline = baseStory.bind(null);
-Inline.args = {};
 
 export const WithLabel = baseStory.bind(null);
 WithLabel.args = {
@@ -56,16 +56,16 @@ Error.args = {
   ),
 };
 
-export const MultipleInputs = () => (
+export const MultipleTextAreas = () => (
   <Box>
     <Box mb={1.5}>
-      <ControlledInput label="first name" />
+      <ControlledTextArea label="first name" />
     </Box>
     <Box mb={1.5}>
-      <ControlledInput label="last name" />
+      <ControlledTextArea label="last name" />
     </Box>
     <Box mb={1.5}>
-      <ControlledInput label="credit card no." infoText="optional" />
+      <ControlledTextArea label="credit card no." infoText="optional" />
     </Box>
   </Box>
 );

@@ -3,7 +3,7 @@ import { getColor } from '../utils/styleHelpers/getColor';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 
-export interface InputStyles {
+export interface TextAreaStyles {
   padding: Style;
   defaultWidth: number | string;
   borderWidth: number;
@@ -23,11 +23,11 @@ export interface InputStyles {
   };
 }
 
-export const inputStyles: InputStyles = {
+export const textareaStyles: TextAreaStyles = {
   padding: css`
     ${getSpacing(0.75)} ${getSpacing(1.5)}
   `,
-  defaultWidth: 300,
+  defaultWidth: 500,
   fontFamily: (props) => props.theme.typography.base.fontFamily,
   borderWidth: 1,
   borderColor: getColor('borders'),

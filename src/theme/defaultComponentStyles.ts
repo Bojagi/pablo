@@ -7,6 +7,7 @@ import { checkboxStyles } from '../Checkbox/styles';
 import { radioStyles } from '../Radio/styles';
 import { inputStyles } from '../Input/styles';
 import { ComponentStyles } from './types';
+import { textareaStyles } from '../TextArea/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -17,4 +18,5 @@ export const defaultComponentStyles: ComponentStyles = {
   switch: switchStyles,
   radio: radioStyles,
   input: inputStyles,
+  textarea: textareaStyles,
 };
