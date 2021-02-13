@@ -74,4 +74,4 @@ SecondaryWithIcon.args = {
 };
 
 export const TextWithIcon = baseStory.bind(null);
-TextWithIcon.args = { size: 'small', variant: 'text', icon: <GitPullRequest size={16} /> };
+TextWithIcon.args = { variant: 'text', icon: <GitPullRequest size={16} /> };
