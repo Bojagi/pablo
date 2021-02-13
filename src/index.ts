@@ -1,6 +1,7 @@
 export * from './Box';
 export * from './Button';
 export * from './ButtonBase';
+export * from './Input';
 export * from './Switch';
 export * from './Checkbox';
 export * from './Radio';

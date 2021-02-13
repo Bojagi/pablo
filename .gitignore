@@ -64,7 +64,6 @@ typings/
 .terraform
 dist
 .serverless
-lib
 .webpack
 ignore*
 .vscode
@@ -76,3 +75,4 @@ local-*
 tmp
 *.pem
 
+build
