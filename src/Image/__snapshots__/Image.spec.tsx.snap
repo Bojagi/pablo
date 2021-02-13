@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render image 1`] = `
+<div>
+  <img
+    alt="Social media preview"
+    class=""
+    src="https://bojagi.io/images/bojagi-social-preview.jpg"
+  />
+</div>
+`;

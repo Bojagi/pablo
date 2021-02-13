@@ -37,9 +37,10 @@ export const PabloThemeProvider = ({
 
 export const usePabloTheme = () => React.useContext(pabloThemeContext);
 
-export const useComponentStyle = (path: string) => {
+export const useComponentStyle = (path: string, props: Record<string, any> = {}) => {
   const componentStyles = useComponentStyleContext();
-  return getComponentStyle(path)({ theme: { componentStyles } });
+  const theme = useTheme();
+  return getComponentStyle(path)({ ...props, theme: { ...theme, componentStyles } });
 };
 
 export const withPabloTheme = <TProps,>() => (

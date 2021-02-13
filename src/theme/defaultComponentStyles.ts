@@ -8,6 +8,7 @@ import { radioStyles } from '../Radio/styles';
 import { inputStyles } from '../Input/styles';
 import { ComponentStyles } from './types';
 import { textareaStyles } from '../TextArea/styles';
+import { avatarStyles } from '../Avatar/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -19,4 +20,5 @@ export const defaultComponentStyles: ComponentStyles = {
   radio: radioStyles,
   input: inputStyles,
   textarea: textareaStyles,
+  avatar: avatarStyles,
 };
