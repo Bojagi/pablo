@@ -2,14 +2,14 @@
 
 exports[`Render switch checked 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c1 {
@@ -54,7 +54,6 @@ exports[`Render switch checked 1`] = `
 <div>
   <div
     class="c0"
-    display="flex"
   >
     <div
       class="c1"
@@ -78,14 +77,14 @@ exports[`Render switch checked 1`] = `
 
 exports[`Render switch unchecked 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c1 {
@@ -130,7 +129,6 @@ exports[`Render switch unchecked 1`] = `
 <div>
   <div
     class="c0"
-    display="flex"
   >
     <div
       class="c1"
