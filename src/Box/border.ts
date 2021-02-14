@@ -1,9 +1,8 @@
 import { css } from 'styled-components';
 import { getColor } from '../utils/styleHelpers/getColor';
-import { PabloThemeableProps } from '../theme/types';
-import { BorderColors } from '../theme/colors';
+import { interpolateFnFactory } from './interpolateFnFactory';
 
-type BorderType = boolean | keyof BoxBorderProps | string;
+type BorderType = true | keyof BoxBorderProps | string;
 
 export interface BoxBorderProps {
   border?: BorderType;
@@ -13,26 +12,26 @@ export interface BoxBorderProps {
   borderLeft?: BorderType;
 }
 
-export const borderInterpolateFn = (props: PabloThemeableProps & BoxBorderProps) => css`
-  ${props.border && getBorderStyle(props.border, 'border')}
-  ${props.borderTop && getBorderStyle(props.borderTop, 'border-top')}
-  ${props.borderRight && getBorderStyle(props.borderRight, 'border-right')}
-  ${props.borderBottom && getBorderStyle(props.borderBottom, 'border-bottom')}
-  ${props.borderLeft && getBorderStyle(props.borderLeft, 'border-left')}
-`;
+export const borderInterpolateFn = interpolateFnFactory<BoxBorderProps>(
+  ['border', 'border', buildBorderStyle],
+  ['borderTop', 'border-top', buildBorderStyle],
+  ['borderRight', 'border-right', buildBorderStyle],
+  ['borderBottom', 'border-bottom', buildBorderStyle],
+  ['borderLeft', 'border-left', buildBorderStyle]
+);
 
-function buildBorderStyle(property: string, variant: keyof BorderColors = 'main') {
-  return (props) => `${property}: 1px solid ${getColor('borders', variant)(props)};`;
+function buildBorderStyle(value) {
+  if (value === true || value === 'main' || value === 'light') {
+    return css`1px solid ${getBorderColor(value)}`;
+  }
+
+  return value;
 }
 
-function getBorderStyle(value: BorderType, property: string) {
+function getBorderColor(value: BorderType) {
   if (value === true) {
-    return buildBorderStyle(property);
+    return getColor('borders', 'main');
   }
 
-  if (value === 'main' || value === 'light') {
-    return buildBorderStyle(property, value);
-  }
-
-  return `${property}: ${value}`;
+  return getColor('borders', value);
 }

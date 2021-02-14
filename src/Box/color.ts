@@ -1,6 +1,6 @@
-import { css } from 'styled-components';
-import { PabloThemeableProps, PabloTheme } from '../theme/types';
+import { PabloTheme } from '../theme/types';
 import { AllColors, Colors } from '../theme/colors';
+import { interpolateFnFactory } from './interpolateFnFactory';
 
 export type ColorPath<
   TName extends keyof Colors = keyof Colors,
@@ -12,18 +12,12 @@ export interface BoxColorProps {
   bgColor?: ColorPath;
 }
 
-const getColorByPath = (theme: PabloTheme, path: string) => {
+export const colorInterpolateFn = interpolateFnFactory<BoxColorProps>(
+  ['color', 'color', getColorByPath],
+  ['bgColor', 'background-color', getColorByPath]
+);
+
+function getColorByPath(path: string, { theme }: { theme: PabloTheme }) {
   const splitPath = path.split('.');
   return splitPath.reduce((acc, key) => acc[key], theme.colors);
-};
-
-export const colorInterpolateFn = (props: PabloThemeableProps & BoxColorProps) => css`
-  ${typeof props.color === 'string' &&
-  css`
-    color: ${getColorByPath(props.theme, (props.color as unknown) as string)};
-  `}
-  ${typeof props.bgColor === 'string' &&
-  css`
-    background-color: ${getColorByPath(props.theme, (props.bgColor as unknown) as string)};
-  `}
-`;
+}

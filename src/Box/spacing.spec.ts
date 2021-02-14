@@ -1,4 +1,4 @@
-import { renderCssResult } from '../../testUtils/renderCssResult';
+import { renderStyledComponent } from '../../testUtils/renderStyledComponent';
 import { marginInterpolateFn, paddingInterpolateFn } from './spacing';
 
 const theme: any = {
@@ -12,29 +12,29 @@ describe.each([
   ['padding', 'p', paddingInterpolateFn],
 ])('%s', (name, short, interpolateFn: any) => {
   test('pass no props', () => {
-    const result = interpolateFn({ theme });
-    const renderedResult = renderCssResult(result, { theme });
-    expect(renderedResult).toEqual('');
+    const props = { theme };
+    const elem = renderStyledComponent(props, interpolateFn);
+    expect(elem).not.toHaveStyleRule(name);
   });
 
   test(`pass ${name} for all directions`, () => {
-    const result = interpolateFn({ theme, [short]: 2 });
-    const renderedResult = renderCssResult(result, { theme });
-    expect(renderedResult).toEqual(`${name}:12px;`);
+    const props = { theme, [short]: 2 };
+    const elem = renderStyledComponent(props, interpolateFn);
+    expect(elem).toHaveStyleRule(name, '12px');
   });
 
   test(`pass x direction ${name}`, () => {
-    const result = interpolateFn({ theme, [`${short}x`]: 2 });
-    const renderedResult = renderCssResult(result, { theme });
-    expect(renderedResult).toContain(`${name}-left:12px;`);
-    expect(renderedResult).toContain(`${name}-right:12px;`);
+    const props = { theme, [`${short}x`]: 2 };
+    const elem = renderStyledComponent(props, interpolateFn);
+    expect(elem).toHaveStyleRule(`${name}-left`, '12px');
+    expect(elem).toHaveStyleRule(`${name}-right`, '12px');
   });
 
   test(`pass y direction ${name}`, () => {
-    const result = interpolateFn({ theme, [`${short}y`]: 2 });
-    const renderedResult = renderCssResult(result, { theme });
-    expect(renderedResult).toContain(`${name}-top:12px;`);
-    expect(renderedResult).toContain(`${name}-bottom:12px;`);
+    const props = { theme, [`${short}y`]: 2 };
+    const elem = renderStyledComponent(props, interpolateFn);
+    expect(elem).toHaveStyleRule(`${name}-top`, '12px');
+    expect(elem).toHaveStyleRule(`${name}-bottom`, '12px');
   });
 
   test.each([
@@ -43,8 +43,8 @@ describe.each([
     ['bottom', 'b'],
     ['left', 'l'],
   ])(`pass %s direction ${name}`, (direction, shortDir) => {
-    const result = interpolateFn({ theme, [`${short}${shortDir}`]: 2 });
-    const renderedResult = renderCssResult(result, { theme });
-    expect(renderedResult).toEqual(`${name}-${direction}:12px;`);
+    const props = { theme, [`${short}${shortDir}`]: 2 };
+    const elem = renderStyledComponent(props, interpolateFn);
+    expect(elem).toHaveStyleRule(`${name}-${direction}`, '12px');
   });
 });
