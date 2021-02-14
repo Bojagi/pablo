@@ -1,11 +1,10 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { boxInterpolateFn, BoxProps } from '../Box';
+import { BoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
-import { InfoText, ParagraphBold } from '../Typography';
-import { useUniqueId } from '../utils/useUniqueId';
 import { interpolateSize } from '../utils/interpolateSize';
 import { useComponentStyle } from '../theme';
+import { BaseInput, InnerInputProps } from '../BaseInput/BaseInput';
 
 export interface TextAreaProps extends BoxProps {
   id?: string;
@@ -19,20 +18,13 @@ export interface TextAreaProps extends BoxProps {
   onChange: (newValue: string, e: React.FormEvent<HTMLTextAreaElement>) => void;
 }
 
-interface TextAreaBoxProps extends BoxProps {}
-
-const TextAreaBox = styled.div<TextAreaBoxProps>`
-  ${boxInterpolateFn}
-`;
-
-interface InnerTextAreaProps {
-  error?: React.ReactNode;
-  fullWidth?: boolean;
-  width: string | number;
-}
+interface InnerTextAreaProps
+  extends InnerInputProps<{
+    rows: number | undefined;
+  }> {}
 
 const InnerTextArea = styled.textarea<InnerTextAreaProps>`
-  width: ${(props) => interpolateSize(props.width)};
+  width: ${(props) => (props.width ? interpolateSize(props.width) : 'auto')};
   ${(props) =>
     props.fullWidth &&
     css`
@@ -65,49 +57,15 @@ const InnerTextArea = styled.textarea<InnerTextAreaProps>`
     `}
 `;
 
-export function TextArea({
-  id: idProp,
-  value,
-  error,
-  label,
-  infoText,
-  fullWidth,
-  width,
-  onChange,
-  rows,
-  ...props
-}: TextAreaProps) {
-  const generatedId = useUniqueId('textarea');
-  const id = idProp || generatedId;
-  const actualInfoText = error || infoText;
-  const defaultWidth = useComponentStyle('textarea.defaultWidth');
+export function TextArea({ rows, onChange, ...props }: TextAreaProps) {
+  const rowsWithFallback = (useComponentStyle('textarea.defaultRows') as number) || rows;
   return (
-    <TextAreaBox {...props}>
-      {label && (
-        <label data-testid="pbl-textarea-label" htmlFor={id}>
-          <ParagraphBold mb={0.75}>{label}</ParagraphBold>
-        </label>
-      )}
-      <InnerTextArea
-        data-testid="pbl-textarea"
-        id={id}
-        rows={rows}
-        error={error}
-        width={width || defaultWidth}
-        value={value}
-        fullWidth={fullWidth}
-        onChange={(e) => onChange(e.target.value, e)}
-        {...props}
-      />
-      {actualInfoText && (
-        <InfoText
-          data-testid="pbl-textarea-infotext"
-          mt={0.5}
-          color={error ? 'negative.main' : 'text.info'}
-        >
-          {actualInfoText}
-        </InfoText>
-      )}
-    </TextAreaBox>
+    <BaseInput
+      name="textarea"
+      {...props}
+      onChange={onChange}
+      rows={rowsWithFallback}
+      inputComponent={InnerTextArea}
+    />
   );
 }

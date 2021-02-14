@@ -1,22 +1,15 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Box, BoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
-import { useComponentStyleContext } from '../theme';
-import { Typography } from '../Typography';
-import { useUniqueId } from '../utils/useUniqueId';
-import { hijackCbBefore } from '../utils/hijackCb';
+import {
+  BaseCheckable,
+  BaseCheckableProps,
+  CheckableBoxProps,
+  CheckableHandleProps,
+} from '../BaseCheckable/BaseCheckable';
 
-export type RadioSize = 'small' | 'medium';
-
-interface RadioBoxProps {
-  disabled?: boolean;
-  size?: RadioSize;
-  focus: boolean;
-}
-
-const RadioBox = styled.div<RadioBoxProps>`
+const RadioBox = styled.div<CheckableBoxProps>`
   position: relative;
   width: ${getComponentStyle('radio.handleSize.{size}')};
   height: ${getComponentStyle('radio.handleSize.{size}')};
@@ -37,30 +30,7 @@ const RadioBox = styled.div<RadioBoxProps>`
   }
 `;
 
-const HiddenInput = styled.input.attrs({ type: 'radio' })`
-  position: absolute;
-  display: block;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  ${(props) =>
-    !props.disabled &&
-    css`
-      cursor: pointer;
-    `}
-`;
-
-interface RadioHandleProps {
-  disabled?: boolean;
-  checked?: boolean;
-  size?: RadioSize;
-}
-
-const RadioHandle = styled.div<RadioHandleProps>`
+const RadioHandle = styled.div<CheckableHandleProps>`
   width: ${getComponentStyle('radio.handleSize.{size}')};
   height: ${getComponentStyle('radio.handleSize.{size}')};
   transform: scale(${(props: any) => (props.checked ? 1 : 0)});
@@ -69,74 +39,18 @@ const RadioHandle = styled.div<RadioHandleProps>`
   background-color: ${getComponentStyle('radio.handleColor')};
 `;
 
-export interface RadioProps extends BoxProps {
-  id?: string;
-  className?: string;
-  disabled?: boolean;
-  name?: string;
-  size?: RadioSize;
+export interface RadioProps extends BaseCheckableProps {
   value: string;
-  label?: React.ReactNode;
-  checked?: boolean;
-  onChange?: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
-  onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
-  onFocus?: () => void;
-  onBlur?: () => void;
 }
 
-export const Radio = ({
-  id: idProp,
-  className,
-  size = 'medium',
-  name,
-  disabled,
-  value,
-  label,
-  checked,
-  onChange,
-  onClick,
-  onFocus,
-  onBlur,
-  ...props
-}: RadioProps) => {
-  const generatedId = useUniqueId('radio');
-  const id = idProp || generatedId;
-  const componentStyles = useComponentStyleContext();
-  const typographyVariant = componentStyles.radio.typographyVariant[size];
-  const [focus, setFocus] = React.useState(false);
-
-  return (
-    <Box className={className} flex alignItems="center" {...props}>
-      <RadioBox data-testid="pbl-radio" disabled={disabled} size={size} focus={focus}>
-        <RadioHandle data-testid="pbl-radio-handle" checked={checked} size={size} />
-        <HiddenInput
-          id={id}
-          data-testid="pbl-radio-input"
-          name={name}
-          checked={checked}
-          disabled={disabled}
-          value={value}
-          onClick={onClick}
-          onChange={
-            onChange
-              ? (e) => {
-                  onChange(e.target.value, e);
-                }
-              : undefined
-          }
-          onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
-          onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
-        />
-      </RadioBox>
-      {label && (
-        <label data-testid="pbl-radio-label" htmlFor={id}>
-          <Typography ml={1} mb={0} variant={typographyVariant}>
-            {label}
-          </Typography>
-        </label>
-      )}
-    </Box>
-  );
-};
+export const Radio = (props: RadioProps) => (
+  <BaseCheckable
+    componentName="radio"
+    componentType="radio"
+    componentBox={RadioBox}
+    componentHandle={RadioHandle}
+    {...props}
+  />
+);
 
 getSpacing(2.25, false);

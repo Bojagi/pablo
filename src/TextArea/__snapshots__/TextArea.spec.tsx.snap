@@ -22,11 +22,13 @@ exports[`Render without value 1`] = `
 <div>
   <div
     class=""
+    rows="3"
   >
     <textarea
       class="c0"
       data-testid="pbl-textarea"
       id="custom-id"
+      rows="3"
       width="500"
     />
   </div>
@@ -72,11 +74,13 @@ exports[`Show error when an error message is given 1`] = `
 <div>
   <div
     class=""
+    rows="3"
   >
     <textarea
       class="c0"
       data-testid="pbl-textarea"
       id="custom-id"
+      rows="3"
       width="500"
     >
       some
@@ -130,11 +134,13 @@ exports[`Show infotext when available 1`] = `
 <div>
   <div
     class=""
+    rows="3"
   >
     <textarea
       class="c0"
       data-testid="pbl-textarea"
       id="custom-id"
+      rows="3"
       width="500"
     >
       some
@@ -187,6 +193,7 @@ exports[`Show label when available 1`] = `
 <div>
   <div
     class=""
+    rows="3"
   >
     <label
       data-testid="pbl-textarea-label"
@@ -205,6 +212,7 @@ exports[`Show label when available 1`] = `
       class="c1"
       data-testid="pbl-textarea"
       id="custom-id"
+      rows="3"
       width="500"
     >
       some
