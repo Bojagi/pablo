@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Bold, Italic, Crop, Edit, Underline } from 'react-feather';
 import { Toolbar } from './Toolbar';
 import { ToolbarDivider } from './ToolbarDivider';
