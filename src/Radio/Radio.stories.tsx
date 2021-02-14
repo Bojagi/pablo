@@ -15,7 +15,7 @@ const ControlledRadio = ({ checked: checkedInitial, ...props }: RadioProps) => {
 };
 
 const baseStory = (args) => (
-  <Box display="flex" mx={-1} mb={1}>
+  <Box flex mx={-1} mb={1}>
     <ControlledRadio mx={1} value="1" name="hans" checked={true} {...args} />
     <ControlledRadio mx={1} value="2" name="hans" checked={false} {...args} />
     <ControlledRadio mx={1} value="3" name="hans" checked={true} disabled={true} {...args} />

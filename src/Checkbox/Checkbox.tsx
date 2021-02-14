@@ -104,7 +104,7 @@ export const Checkbox = ({
   const [focus, setFocus] = React.useState(false);
 
   return (
-    <Box display="flex" alignItems="center" {...props}>
+    <Box flex alignItems="center" {...props}>
       <CheckboxBox
         data-testid="pbl-checkbox"
         className={className}

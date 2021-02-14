@@ -116,7 +116,7 @@ export const Switch = ({
   const [focus, setFocus] = React.useState(false);
 
   return (
-    <Box display="flex" alignItems="center" className={className} {...props}>
+    <Box flex alignItems="center" className={className} {...props}>
       <SwitchBox data-testid="pbl-switch" disabled={disabled} size={size} focus={focus} {...props}>
         <SwitchHandle data-testid="pbl-switch-handle" checked={checked} size={size} />
         <HiddenInput
