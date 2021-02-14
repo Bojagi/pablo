@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { boxInterpolateFn, BoxProps } from '../Box';
 import { Typography } from '../Typography';
 import { conditionalStyles, getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
@@ -17,14 +18,15 @@ import {
 
 export type TooltipSide = 'top' | 'right' | 'bottom' | 'left';
 
-export interface TooltipProps {
+export interface TooltipProps extends BoxProps {
   content: React.ReactNode;
   side?: TooltipSide;
   delay?: number;
   children: React.ReactNode;
 }
 
-const TooltipWrapper = styled.div`
+const TooltipWrapper = styled.div<BoxProps>`
+  ${boxInterpolateFn}
   position: relative;
 `;
 
@@ -74,7 +76,7 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
   }
 `;
 
-export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipProps) {
+export function Tooltip({ content, children, side = 'top', delay = 0, ...props }: TooltipProps) {
   const [elem, setElem] = React.useState<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useDelayedBooleanState(false, delay);
   const [contentHeight, setContentHeight] = React.useState(0);
@@ -104,6 +106,7 @@ export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipP
       data-testid="pbl-tooltip-wrapper"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      {...props}
     >
       <TooltipPopover
         data-testid="pbl-tooltip-popover"

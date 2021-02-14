@@ -21,8 +21,6 @@ interface AvatarImageProps extends ImageProps {
 }
 
 const AvatarImage = styled<React.FC<AvatarImageProps>>(Image)`
-  width: ${getComponentStyle('avatar.size.{size}')}px;
-  height: ${getComponentStyle('avatar.size.{size}')}px;
   ${conditionalStyles('variant', {
     square: css`
       border-radius: ${getComponentStyle('avatar.square.borderRadius')}px;

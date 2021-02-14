@@ -7,7 +7,6 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
     "outDir": "lib",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": false,
@@ -18,6 +17,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
-  "include": ["src", "./jestSetup.ts"],
+  "include": ["src", "./jestSetup.ts", "testUtils/renderStyledComponent.tsx"],
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest"]
 }
