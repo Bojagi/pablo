@@ -96,7 +96,7 @@ export function BaseCheckable({
       >
         <ComponentHandle
           data-testid={`pbl-${componentName}-handle`}
-          checked={checked}
+          checked={checked || false}
           size={size}
         />
         <HiddenInput

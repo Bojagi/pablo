@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CheckableSize } from '../BaseCheckable/BaseCheckable';
 import { Box, BoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
-import { RadioProps, RadioSize } from './Radio';
+import { RadioProps } from './Radio';
 
-const RadioGroupItem = styled.div<{ size: RadioSize }>`
+const RadioGroupItem = styled.div<{ size: CheckableSize }>`
   margin-bottom: ${getComponentStyle('radio.groupItemGap.{size}')};
 `;
 
@@ -13,7 +14,7 @@ export interface RadioGroupProps extends BoxProps {
   value?: string;
   onChange: (value: string) => void;
   children: React.ReactElement<RadioProps> | React.ReactElement<RadioProps>[];
-  size?: RadioSize;
+  size?: CheckableSize;
   name?: string;
 }
 
