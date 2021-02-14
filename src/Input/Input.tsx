@@ -1,10 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Box, BoxProps } from '../Box';
+import { BoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
-import { InfoText, ParagraphBold } from '../Typography';
-import { useUniqueId } from '../utils/useUniqueId';
 import { interpolateSize } from '../utils/interpolateSize';
+import { BaseInput, InnerInputProps } from '../BaseInput/BaseInput';
 import { useComponentStyle } from '../theme';
 
 export interface InputProps extends BoxProps {
@@ -16,12 +15,6 @@ export interface InputProps extends BoxProps {
   fullWidth?: boolean;
   width?: string | number;
   onChange: (newValue: string, e: React.FormEvent<HTMLInputElement>) => void;
-}
-
-export interface InnerInputProps {
-  error?: React.ReactNode;
-  fullWidth?: boolean;
-  width: string | number;
 }
 
 const InnerInput = styled.input<InnerInputProps>`
@@ -57,47 +50,9 @@ const InnerInput = styled.input<InnerInputProps>`
     `}
 `;
 
-export function Input({
-  id: idProp,
-  value,
-  error,
-  label,
-  infoText,
-  fullWidth,
-  width,
-  onChange,
-  ...props
-}: InputProps) {
-  const generatedId = useUniqueId('input');
-  const id = idProp || generatedId;
-  const actualInfoText = error || infoText;
+export function Input({ width, ...props }: InputProps) {
   const defaultWidth = useComponentStyle('input.defaultWidth');
   return (
-    <Box {...props}>
-      {label && (
-        <label data-testid="pbl-input-label" htmlFor={id}>
-          <ParagraphBold mb={0.75}>{label}</ParagraphBold>
-        </label>
-      )}
-      <InnerInput
-        data-testid="pbl-input"
-        id={id}
-        error={error}
-        value={value}
-        fullWidth={fullWidth}
-        width={width || defaultWidth}
-        onChange={(e) => onChange(e.target.value, e)}
-        {...props}
-      />
-      {actualInfoText && (
-        <InfoText
-          data-testid="pbl-input-infotext"
-          mt={0.5}
-          color={error ? 'negative.main' : 'text.info'}
-        >
-          {actualInfoText}
-        </InfoText>
-      )}
-    </Box>
+    <BaseInput name="input" width={width || defaultWidth} inputComponent={InnerInput} {...props} />
   );
 }

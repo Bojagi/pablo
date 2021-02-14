@@ -28,19 +28,6 @@ exports[`Render with nothing selected 1`] = `
   margin-left: 8px;
 }
 
-.c2 {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  padding: 6px;
-  background-color: #ffffff;
-  border: 1px solid #00000040;
-  opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
 .c4 {
   position: absolute;
   display: block;
@@ -52,6 +39,19 @@ exports[`Render with nothing selected 1`] = `
   height: 100%;
   opacity: 0;
   cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #00000040;
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .c3 {
@@ -209,19 +209,6 @@ exports[`Work with one radio button 1`] = `
   margin-left: 8px;
 }
 
-.c2 {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  padding: 6px;
-  background-color: #ffffff;
-  border: 1px solid #00000040;
-  opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
 .c4 {
   position: absolute;
   display: block;
@@ -233,6 +220,19 @@ exports[`Work with one radio button 1`] = `
   height: 100%;
   opacity: 0;
   cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #00000040;
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .c3 {

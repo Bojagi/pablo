@@ -12,19 +12,6 @@ exports[`Render radio checked 1`] = `
   display: flex;
 }
 
-.c1 {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  padding: 6px;
-  background-color: #ffffff;
-  border: 1px solid #00000040;
-  opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
 .c3 {
   position: absolute;
   display: block;
@@ -36,6 +23,19 @@ exports[`Render radio checked 1`] = `
   height: 100%;
   opacity: 0;
   cursor: pointer;
+}
+
+.c1 {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #00000040;
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .c2 {
@@ -88,19 +88,6 @@ exports[`Render radio unchecked 1`] = `
   display: flex;
 }
 
-.c1 {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  padding: 6px;
-  background-color: #ffffff;
-  border: 1px solid #00000040;
-  opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
 .c3 {
   position: absolute;
   display: block;
@@ -112,6 +99,19 @@ exports[`Render radio unchecked 1`] = `
   height: 100%;
   opacity: 0;
   cursor: pointer;
+}
+
+.c1 {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #00000040;
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .c2 {
