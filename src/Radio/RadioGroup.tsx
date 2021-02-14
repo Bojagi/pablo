@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, BoxProps } from '../Box';
+import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { RadioProps, RadioSize } from './Radio';
 
@@ -26,7 +27,7 @@ export function RadioGroup({
 }: RadioGroupProps) {
   return (
     <Box role="radiogroup" {...props}>
-      {(Array.isArray(children) ? children : [children]).map((child) => (
+      {guaranteeArray(children).map((child) => (
         <RadioGroupItem key={child.props.value} size={size}>
           {React.cloneElement(child, {
             checked: value === child.props.value,

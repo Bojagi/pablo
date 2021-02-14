@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { boxInterpolateFn, BoxProps } from '../Box';
+import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../utils/styleHelpers';
 import { ToolbarItem, ToolbarItemProps } from './ToolbarItem';
 
@@ -17,12 +18,13 @@ export interface ToolbarProps extends BoxProps {
   selected?: string;
 }
 
-export function Toolbar({ children, selected, ...props }) {
-  const interpolatedChildren = children.map((child, index) => {
+export function Toolbar({ children, selected, ...props }: ToolbarProps) {
+  const interpolatedChildren = guaranteeArray(children).map((child, index) => {
     if (child.type === ToolbarItem) {
+      const childProps = child.props as ToolbarItemProps;
       return React.cloneElement(child, {
-        key: child.props.name,
-        active: selected ? child.props.name === selected : child.props.active,
+        key: childProps.name,
+        active: selected ? childProps.name === selected : childProps.active,
       });
     }
 

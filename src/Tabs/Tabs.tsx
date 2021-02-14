@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, BoxProps } from '../Box';
 import { useComponentStyle } from '../theme';
+import { guaranteeArray } from '../utils/guaranteeArray';
 import { TabProps } from './Tab';
 
 export interface TabsProps extends BoxProps {
@@ -13,7 +14,7 @@ export const Tabs = ({ children, selected, onSelect, ...props }: TabsProps) => {
   const gap = useComponentStyle('tabs.gapSpacing') as number;
   return (
     <Box mx={-gap} flex {...props}>
-      {(Array.isArray(children) ? children : [children]).map((child) =>
+      {guaranteeArray(children).map((child) =>
         React.cloneElement(child, {
           key: child.props.name,
           mx: gap,

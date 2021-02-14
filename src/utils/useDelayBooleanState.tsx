@@ -15,6 +15,11 @@ export function useDelayedBooleanState(
   const [inputState, setInputState] = React.useState<boolean>(initialValue);
 
   React.useEffect(() => {
+    // Do nothing if input and output state match (e.g. initial true value)
+    if (inputState === outputState) {
+      return () => {};
+    }
+
     if (!inputState) {
       setOutputState(inputState);
       return () => {};
@@ -26,7 +31,7 @@ export function useDelayedBooleanState(
     return () => {
       clearTimeout(delayTimeout);
     };
-  }, [delay, inputState]);
+  }, [delay, outputState, inputState]);
 
   return [outputState, setInputState];
 }

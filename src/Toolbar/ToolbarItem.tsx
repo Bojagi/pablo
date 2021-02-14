@@ -88,7 +88,12 @@ export function ToolbarItem({
 }: ToolbarItemProps) {
   return (
     <Tooltip delay={500} side={tooltipSide} content={tooltip}>
-      <ToolbarItemButton active={active} onClick={() => onClick && onClick(name)} {...props}>
+      <ToolbarItemButton
+        data-testid="pbl-toolbar-item-button"
+        active={active}
+        onClick={() => onClick && onClick(name)}
+        {...props}
+      >
         <ToolbarItemIconBox active={active}>{icon}</ToolbarItemIconBox>
       </ToolbarItemButton>
     </Tooltip>

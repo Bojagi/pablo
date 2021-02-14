@@ -92,7 +92,7 @@ export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipP
     }
 
     return () => {};
-  }, [elem, setContentHeight]);
+  }, [elem]);
 
   if (!content) {
     return <>{children}</>;
@@ -101,10 +101,12 @@ export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipP
   return (
     <TooltipWrapper
       ref={setElem}
+      data-testid="pbl-tooltip-wrapper"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <TooltipPopover
+        data-testid="pbl-tooltip-popover"
         isVisible={isHovered}
         side={side}
         contentWidth={contentWidth}
