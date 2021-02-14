@@ -11,13 +11,41 @@ export default {
 export const SimpleToolbar = () => {
   const [selectedTool, setSelectedTool] = React.useState('bold');
   return (
-    <Toolbar selected={selectedTool}>
-      <ToolbarItem name="bold" onClick={setSelectedTool} icon={<Bold size={20} />} />
-      <ToolbarItem name="underline" onClick={setSelectedTool} icon={<Underline size={20} />} />
-      <ToolbarItem name="italic" onClick={setSelectedTool} icon={<Italic size={20} />} />
+    <Toolbar my={3} mx={14} selected={selectedTool}>
+      <ToolbarItem
+        name="bold"
+        tooltip="Make text bold"
+        tooltipSide="left"
+        onClick={setSelectedTool}
+        icon={<Bold size={20} />}
+      />
+      <ToolbarItem
+        name="underline"
+        tooltip="Underline text"
+        onClick={setSelectedTool}
+        icon={<Underline size={20} />}
+      />
+      <ToolbarItem
+        name="italic"
+        tooltip="Make text italic"
+        tooltipSide="bottom"
+        onClick={setSelectedTool}
+        icon={<Italic size={20} />}
+      />
       <ToolbarDivider />
-      <ToolbarItem name="edit" onClick={setSelectedTool} icon={<Edit size={20} />} />
-      <ToolbarItem name="crop" onClick={setSelectedTool} icon={<Crop size={20} />} />
+      <ToolbarItem
+        name="edit"
+        tooltip="Edit the item"
+        onClick={setSelectedTool}
+        icon={<Edit size={20} />}
+      />
+      <ToolbarItem
+        name="crop"
+        tooltip="Crop image"
+        tooltipSide="right"
+        onClick={setSelectedTool}
+        icon={<Crop size={20} />}
+      />
     </Toolbar>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { boxInterpolateFn, BoxProps } from '../Box';
+import { Tooltip, TooltipSide } from '../Tooltip/Tooltip';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
 
 interface ToolbarItemButtonProps extends BoxProps {
@@ -70,14 +71,26 @@ export interface ToolbarItemProps extends BoxProps {
   active?: boolean;
   icon: React.ReactNode;
   disabled?: boolean;
+  tooltip?: React.ReactNode;
+  tooltipSide?: TooltipSide;
   onClick?: (name: string) => void;
   name: string;
 }
 
-export function ToolbarItem({ active, icon, name, onClick, ...props }: ToolbarItemProps) {
+export function ToolbarItem({
+  active,
+  tooltip,
+  tooltipSide,
+  icon,
+  name,
+  onClick,
+  ...props
+}: ToolbarItemProps) {
   return (
-    <ToolbarItemButton active={active} onClick={() => onClick && onClick(name)} {...props}>
-      <ToolbarItemIconBox active={active}>{icon}</ToolbarItemIconBox>
-    </ToolbarItemButton>
+    <Tooltip delay={500} side={tooltipSide} content={tooltip}>
+      <ToolbarItemButton active={active} onClick={() => onClick && onClick(name)} {...props}>
+        <ToolbarItemIconBox active={active}>{icon}</ToolbarItemIconBox>
+      </ToolbarItemButton>
+    </Tooltip>
   );
 }

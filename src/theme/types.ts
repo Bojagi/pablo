@@ -20,6 +20,7 @@ import { Typography } from './typography';
 import { TextAreaStyles } from '../TextArea/styles';
 import { AvatarStyles } from '../Avatar/styles';
 import { ToolbarStyles } from '../Toolbar/styles';
+import { TooltipStyles } from '../Tooltip/styles';
 
 export type Style =
   | string
@@ -53,6 +54,7 @@ export interface ComponentStyles {
   textarea: TextAreaStyles;
   avatar: AvatarStyles;
   toolbar: ToolbarStyles;
+  tooltip: TooltipStyles;
 }
 
 export interface PabloThemeProviderProps {
