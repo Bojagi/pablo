@@ -16,8 +16,8 @@ export interface BaseCheckableProps extends BoxProps {
   size?: CheckableSize;
   value?: string;
   label?: React.ReactNode;
-  checked: boolean;
-  onChange: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
+  checked?: boolean;
+  onChange?: (value: string, e: React.FormEvent<HTMLInputElement>) => void;
   onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
   onFocus?: () => void;
   onBlur?: () => void;

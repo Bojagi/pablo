@@ -57,13 +57,15 @@ const InnerTextArea = styled.textarea<InnerTextAreaProps>`
     `}
 `;
 
-export function TextArea({ rows, onChange, ...props }: TextAreaProps) {
+export function TextArea({ rows, width, ...props }: TextAreaProps) {
   const rowsWithFallback = (useComponentStyle('textarea.defaultRows') as number) || rows;
+  const defaultWidth = useComponentStyle('textarea.defaultWidth');
+
   return (
     <BaseInput
       name="textarea"
       {...props}
-      onChange={onChange}
+      width={width || defaultWidth}
       rows={rowsWithFallback}
       inputComponent={InnerTextArea}
     />

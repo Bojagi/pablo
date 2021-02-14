@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box } from '../Box';
-import { useComponentStyle } from '../theme/context';
 import { InfoText, ParagraphBold } from '../Typography';
 import { useUniqueId } from '../utils/useUniqueId';
 
@@ -15,10 +14,10 @@ export interface BaseInputProps<E extends HTMLElement> {
   onChange?: (newValue: string, e: React.FormEvent<E>) => void;
 }
 
-export type InnerInputProps<P> = P & {
+export type InnerInputProps<P = {}> = P & {
   error?: React.ReactNode;
   fullWidth?: boolean;
-  width?: string | number;
+  width: string | number;
 };
 
 export type BaseInputOuterProps<P extends Record<string, any>, E extends HTMLElement> = Omit<
@@ -36,6 +35,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   onChange,
   label,
   id: idProp,
+  width,
   value,
   ...props
 }: BaseInputOuterProps<P, E>) {
@@ -43,7 +43,6 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const generatedId = useUniqueId(name);
   const id = idProp || generatedId;
   const actualInfoText = props.error || props.infoText;
-  const defaultWidth = useComponentStyle(`${name}.defaultWidth`);
   return (
     <Box {...props}>
       {label && (
@@ -58,7 +57,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
         error={props.error}
         value={value}
         fullWidth={props.fullWidth}
-        width={props.width || defaultWidth}
+        width={width}
         onChange={(e) => onChange && onChange(e.target.value, e)}
       />
       {actualInfoText && (

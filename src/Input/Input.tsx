@@ -4,6 +4,7 @@ import { BoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 import { interpolateSize } from '../utils/interpolateSize';
 import { BaseInput, InnerInputProps } from '../BaseInput/BaseInput';
+import { useComponentStyle } from '../theme';
 
 export interface InputProps extends BoxProps {
   id?: string;
@@ -49,6 +50,9 @@ const InnerInput = styled.input<InnerInputProps>`
     `}
 `;
 
-export function Input(props: InputProps) {
-  return <BaseInput name="input" inputComponent={InnerInput} {...props} />;
+export function Input({ width, ...props }: InputProps) {
+  const defaultWidth = useComponentStyle('input.defaultWidth');
+  return (
+    <BaseInput name="input" width={width || defaultWidth} inputComponent={InnerInput} {...props} />
+  );
 }
