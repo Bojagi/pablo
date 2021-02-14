@@ -2,11 +2,11 @@
 
 exports[`render button with icon 1`] = `
 .c2 {
+  margin-right: 8px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
 }
 
 .c0 {
@@ -78,7 +78,6 @@ exports[`render button with icon 1`] = `
     <div
       class="c2"
       data-testid="pbl-button-icon"
-      display="flex"
     >
       <div>
         myIcon

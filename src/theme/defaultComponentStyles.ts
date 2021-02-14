@@ -9,6 +9,8 @@ import { inputStyles } from '../Input/styles';
 import { ComponentStyles } from './types';
 import { textareaStyles } from '../TextArea/styles';
 import { avatarStyles } from '../Avatar/styles';
+import { toolbarStyles } from '../Toolbar/styles';
+import { tooltipStyles } from '../Tooltip/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -21,4 +23,6 @@ export const defaultComponentStyles: ComponentStyles = {
   input: inputStyles,
   textarea: textareaStyles,
   avatar: avatarStyles,
+  toolbar: toolbarStyles,
+  tooltip: tooltipStyles,
 };

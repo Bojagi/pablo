@@ -106,7 +106,7 @@ export const Radio = ({
   const [focus, setFocus] = React.useState(false);
 
   return (
-    <Box className={className} display="flex" alignItems="center" {...props}>
+    <Box className={className} flex alignItems="center" {...props}>
       <RadioBox data-testid="pbl-radio" disabled={disabled} size={size} focus={focus}>
         <RadioHandle data-testid="pbl-radio-handle" checked={checked} size={size} />
         <HiddenInput

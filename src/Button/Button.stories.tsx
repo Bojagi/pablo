@@ -10,7 +10,7 @@ export default {
 };
 
 const SetOfButtons = (args) => (
-  <Box display="flex" mx={-1} mb={1}>
+  <Box flex mx={-1} mb={1}>
     <Button mx={1} {...args} color="brand">
       Brand
     </Button>

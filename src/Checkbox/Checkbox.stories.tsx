@@ -15,7 +15,7 @@ const ControlledCheckbox = ({
 };
 
 const baseStory = (args) => (
-  <Box display="flex" mx={-1} mb={1}>
+  <Box flex mx={-1} mb={1}>
     <ControlledCheckbox mx={1} checked={true} {...args} />
     <ControlledCheckbox mx={1} checked={false} {...args} />
     <ControlledCheckbox mx={1} checked={true} disabled={true} {...args} />

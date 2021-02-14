@@ -66,7 +66,7 @@ export const Tab = ({ children, active, icon, onClick, ...props }: TabProps) => 
       }}
     >
       {icon && (
-        <Box display="flex" mr={iconGap}>
+        <Box flex mr={iconGap}>
           {icon}
         </Box>
       )}

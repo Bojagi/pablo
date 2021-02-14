@@ -92,7 +92,7 @@ export const Button = ({
       color={color}
     >
       {icon && (
-        <Box data-testid="pbl-button-icon" display="flex" mr={iconGap}>
+        <Box data-testid="pbl-button-icon" flex mr={iconGap}>
           {icon}
         </Box>
       )}

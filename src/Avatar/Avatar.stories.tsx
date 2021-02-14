@@ -7,7 +7,7 @@ export default {
 };
 
 const BaseStory = (args) => (
-  <Box display="flex" mx={-1}>
+  <Box flex mx={-1}>
     <Avatar
       mx={1}
       size="large"
