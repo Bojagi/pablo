@@ -4,7 +4,14 @@ import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 
 export interface ButtonBaseStyles {
-  iconGap: number;
+  icon: {
+    gap: Style;
+    size: {
+      small: Style;
+      medium: Style;
+      large: Style;
+    };
+  };
   borderRadius: Style;
   disabled: {
     opacity: number;
@@ -51,25 +58,38 @@ export interface ButtonSecondaryShadedVariantStyles extends ButtonTextShadedVari
 
 export interface ButtonVariantStyles<T> {
   brand: T;
+  plain: T;
   positive: T;
   negative: T;
 }
 
 export type ButtonPrimaryVariantStyles = ButtonVariantStyles<ButtonPrimaryShadedVariantStyles>;
-export type ButtonSecondaryVariantStyles = ButtonVariantStyles<ButtonSecondaryVariantStyles>;
+export type ButtonSecondaryVariantStyles = ButtonVariantStyles<ButtonSecondaryShadedVariantStyles>;
 export type ButtonTextVariantStyles = ButtonVariantStyles<ButtonTextShadedVariantStyles>;
 
 export interface ButtonStyles {
   base: ButtonBaseStyles;
+  sizes: {
+    small: ButtonSizeStyles;
+    medium: ButtonSizeStyles;
+    large: ButtonSizeStyles;
+  };
   primary: ButtonPrimaryVariantStyles;
   secondary: ButtonSecondaryVariantStyles;
   text: ButtonTextVariantStyles;
 }
 
-export const buttonStyles = {
+export const buttonStyles: ButtonStyles = {
   base: {
-    iconGap: 1,
     borderRadius: getSpacing(0.5),
+    icon: {
+      gap: getSpacing(1),
+      size: {
+        small: getSpacing(2.5),
+        medium: getSpacing(2.5),
+        large: getSpacing(2.5),
+      },
+    },
     disabled: {
       opacity: 0.4,
     },
@@ -129,6 +149,7 @@ export const buttonStyles = {
         outlineColor: getColor('gray', '50'),
       },
       hover: {
+        color: getColor('common', 'black'),
         backgroundColor: getColor('gray', '50'),
       },
     },
@@ -140,6 +161,7 @@ export const buttonStyles = {
     plain: {
       color: getColor('common', 'black'),
       hover: {
+        color: getColor('common', 'black'),
         backgroundColor: getColor('gray', '50'),
       },
     },

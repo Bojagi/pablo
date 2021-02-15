@@ -2,6 +2,7 @@ import { css } from 'styled-components';
 import { getColor } from '../utils/styleHelpers/getColor';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { Style } from '../theme/types';
+import { getComponentStyle } from '../utils/styleHelpers';
 
 export interface TabActiveBorderBottomStyles {
   color: Style;
@@ -22,6 +23,10 @@ export interface TabHoverStyles {
 }
 
 export interface TabStyles {
+  icon: {
+    gap: Style;
+    size: Style;
+  };
   color: Style;
   padding: Style;
   margin: Style;
@@ -30,20 +35,24 @@ export interface TabStyles {
 }
 
 export interface TabsStyles {
-  gapSpacing: number;
+  gap: Style;
   tab: TabStyles;
 }
 
-export const tabsStyles = {
-  gapSpacing: 0.5,
+export const tabsStyles: TabsStyles = {
+  gap: getSpacing(0.5),
   tab: {
     color: getColor('common', 'black'),
+    icon: {
+      gap: getComponentStyle('button.base.icon.gap'),
+      size: getComponentStyle('button.base.icon.size.medium'),
+    },
     padding: css`
       ${getSpacing(1)} ${getSpacing(1.5)}
     `,
     margin: css`0 0 ${getSpacing(0.5)}`,
     hover: {
-      backgroundColor: getColor('brand', 'light'),
+      backgroundColor: getComponentStyle('button.text.brand.hover.backgroundColor'),
     },
     active: {
       padding: css`

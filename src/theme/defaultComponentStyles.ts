@@ -14,6 +14,7 @@ import { tooltipStyles } from '../Tooltip/styles';
 import { iconButtonStyles } from '../IconButton/styles';
 import { modalStyles } from '../Modal/styles';
 import { buttonBarStyles } from '../ButtonBar/styles';
+import { linkStyles } from '../Link/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -31,4 +32,5 @@ export const defaultComponentStyles: ComponentStyles = {
   iconButton: iconButtonStyles,
   modal: modalStyles,
   buttonBar: buttonBarStyles,
+  link: linkStyles,
 };
