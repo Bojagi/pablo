@@ -4,9 +4,9 @@ import { IconButton } from './IconButton';
 import { defaultTheme, PabloThemeProvider } from '../theme';
 
 test.each([
-  ['small', '24px', '16px'],
-  ['medium', '32px', '24px'],
-  ['large', '40px', '32px'],
+  ['small', '24px', '20px'],
+  ['medium', '32px', '28px'],
+  ['large', '40px', '36px'],
 ])(
   'Render %s icon button with correct styles',
   (sizeName, expectedButtonSize, expectedIconSize) => {

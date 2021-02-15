@@ -28,8 +28,8 @@ exports[`Render large icon button with correct styles 1`] = `
 }
 
 .c0 > * {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   -webkit-transition: -webkit-transform 0.2s;
   -webkit-transition: transform 0.2s;
   transition: transform 0.2s;
@@ -94,8 +94,8 @@ exports[`Render medium icon button with correct styles 1`] = `
 }
 
 .c0 > * {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   -webkit-transition: -webkit-transform 0.2s;
   -webkit-transition: transform 0.2s;
   transition: transform 0.2s;
@@ -160,8 +160,8 @@ exports[`Render small icon button with correct styles 1`] = `
 }
 
 .c0 > * {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   -webkit-transition: -webkit-transform 0.2s;
   -webkit-transition: transform 0.2s;
   transition: transform 0.2s;

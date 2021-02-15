@@ -53,9 +53,9 @@ export const iconButtonStyles: IconButtonStyles = {
       scale: 0.833333333,
     },
     size: {
-      small: getSpacing(2),
-      medium: getSpacing(3),
-      large: getSpacing(4),
+      small: getSpacing(2.5),
+      medium: getSpacing(3.5),
+      large: getSpacing(4.5),
     },
   },
   borderRadius: 6,
