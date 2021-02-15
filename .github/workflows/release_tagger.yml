@@ -2,10 +2,9 @@ name: Release Tagger
 on: 
   workflow_dispatch:
     inputs:
-      version:
-        description: 'New version'
-        required: true
-        default: '0.x.x'
+      version_should_match:
+        description: 'Version should match (optional)'
+        required: false
 
 jobs:
   releaseVersion:
@@ -16,17 +15,17 @@ jobs:
         echo "Publish new version ${{ github.event.inputs.version }}"
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: Get release
-      id: get_release
-      uses: agners/get-draft-release@v1.2.2
+    - name: install
+      run: 'yarn'
+    - run: |
+        export VERSION_SHOULD_MATCH=${{ github.event.inputs.version_should_match }}
+        export RELEASE_VERSION=$(node ./scripts/getDraftReleaseVersion)
+        yarn run publish $RELEASE_VERSION
+        node ./scripts/publishDraftRelease
+      name: 'Publish'
       env:
         GITHUB_TOKEN: ${{ github.token }}
-    - run: |
-        RELEASE_VERSION=$(echo "${{ steps.get_release.outputs.tag_name }}" | cut -c 2-)
-        yarn run publish $RELEASE_VERSION
-      name: 'Publish'
