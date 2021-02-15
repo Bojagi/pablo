@@ -67,7 +67,7 @@ autolabeler:
       - '/^chore/i'
 
 template: |
-  We are very prod to release version $RESOLVED_VERSION 🌈
+  We are very prod to release version **$RESOLVED_VERSION** 🌈
 
   <!-- Optional: add a release summary here -->
 
