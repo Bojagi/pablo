@@ -16,17 +16,15 @@ jobs:
         echo "Publish new version ${{ github.event.inputs.version }}"
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: Get release
-      id: get_release
-      uses: agners/get-draft-release@v1.2.2
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
+    - name: install
+      run: 'yarn'
     - run: |
-        RELEASE_VERSION=$(echo "${{ steps.get_release.outputs.tag_name }}" | cut -c 2-)
+        RELEASE_VERSION=$(node ./script/getDraftReleaseVersion)
         yarn run publish $RELEASE_VERSION
       name: 'Publish'
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
