@@ -23,7 +23,7 @@ jobs:
     - name: install
       run: 'yarn'
     - run: |
-        RELEASE_VERSION=$(node ./script/getDraftReleaseVersion)
+        RELEASE_VERSION=$(node ./scripts/getDraftReleaseVersion)
         yarn run publish $RELEASE_VERSION
       name: 'Publish'
       env:
