@@ -1,6 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { X } from 'react-feather';
+import { MoreHorizontal, X } from 'react-feather';
 import { Button } from '../Button';
 import { ButtonBar } from '../ButtonBar/ButtonBar';
 import { IconButton } from '../IconButton';
@@ -61,8 +61,24 @@ WithTopRightItem.args = {
   title: 'Hallo',
   topRightItem: ({ onClose }) => (
     <IconButton size="medium">
-      <X onClick={onClose} size={24} />
+      <X onClick={onClose} />
     </IconButton>
+  ),
+  additionalBody: ModalButtonBar,
+};
+
+export const WithMultipleTopRightItems = BaseStory.bind(null);
+WithMultipleTopRightItems.args = {
+  title: 'Hallo',
+  topRightItem: ({ onClose }) => (
+    <ButtonBar>
+      <IconButton size="medium">
+        <MoreHorizontal />
+      </IconButton>
+      <IconButton size="medium" onClick={onClose}>
+        <X />
+      </IconButton>
+    </ButtonBar>
   ),
   additionalBody: ModalButtonBar,
 };
@@ -75,7 +91,11 @@ WithoutTitle.args = {
 export const WithAdditionalPanes = BaseStory.bind(null);
 WithAdditionalPanes.args = {
   title: 'Hallo',
-  topRightItem: ({ onClose }) => <X onClick={onClose} size={24} />,
+  topRightItem: ({ onClose }) => (
+    <IconButton size="medium">
+      <X onClick={onClose} />
+    </IconButton>
+  ),
   additionalPanes: [
     <>
       <TextContent />
