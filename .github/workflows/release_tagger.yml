@@ -25,6 +25,7 @@ jobs:
         export VERSION_SHOULD_MATCH=${{ github.event.inputs.version_should_match }}
         RELEASE_VERSION=$(node ./scripts/getDraftReleaseVersion)
         yarn run publish $RELEASE_VERSION
+        node ./scripts/publishDraftRelease
       name: 'Publish'
       env:
         GITHUB_TOKEN: ${{ github.token }}
