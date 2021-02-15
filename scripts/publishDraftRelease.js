@@ -28,7 +28,7 @@ async function run() {
   try {
     await octokit.repos.updateRelease({
       ...OWNER_REPO,
-      release_id: draftRelease.release_id,
+      release_id: draftRelease.id,
       draft: false,
     });
   } catch (err) {
