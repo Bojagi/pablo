@@ -21,6 +21,7 @@
     "build:esm": "BABEL_ENV=esm node ./scripts/build.js esm",
     "build:types": "tsc -p tsconfig.build.json",
     "build:copy-files": "cp package.json build/package.json && cp README.md build/README.md",
+    "publish": "echo TODO: Add publish script. But published version would be:",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
@@ -38,6 +39,7 @@
     "@babel/plugin-transform-typescript": "^7.12.16",
     "@babel/preset-typescript": "^7.12.16",
     "@bojagi/cli": "^0.14.1",
+    "@octokit/rest": "^18.1.1",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
