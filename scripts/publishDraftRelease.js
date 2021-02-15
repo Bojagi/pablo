@@ -10,7 +10,10 @@ const octokit = new Octokit({
 async function run() {
   const { data } = await octokit.repos.listReleases(OWNER_REPO);
   const draftRelease = data.find(
-    (r) => r.draft && r.tag_name === `v${process.env.RELEASE_VERSION}`
+    (r) =>
+      r.draft &&
+      (r.tag_name === `v${process.env.RELEASE_VERSION}` ||
+        r.tag_name === process.env.RELEASE_VERSION)
   );
 
   if (!draftRelease) {
@@ -24,7 +27,7 @@ async function run() {
     draft: false,
   });
 
-  console.log(`Published release ${process.env.RELEASE_VERSION}`);
+  console.info(`Published release ${process.env.RELEASE_VERSION}`);
 
   return process.exit(0);
 }
