@@ -1,5 +1,5 @@
-name-template: 'v$RESOLVED_VERSION 🦄'
-tag-template: 'v$RESOLVED_VERSION'
+name-template: 'v$RESOLVED_VERSION 👩‍🚀'
+tag-template: 'v$RESOLVED_VERSION' 
 
 category-template: '### $TITLE'
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
@@ -49,7 +49,8 @@ exclude-labels:
   - test
 
 replacers:
-  - search: '/(fix|feat|test|chore|perf|docs)+?(\(\w+\))*?\:/g'
+  # Remove commit prefixes 
+  - search: '/(fix|feat|test|chore|perf|docs)+?(\(\w+\))*?\:\s+/g'
     replace: ''
 
 autolabeler:
