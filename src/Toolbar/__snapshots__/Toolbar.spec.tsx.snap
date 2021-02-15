@@ -50,12 +50,12 @@ exports[`Render toolbar 1`] = `
 }
 
 .c1:hover:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #f0f0f0;
   color: #000000;
 }
 
 .c1:focus:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #e0e0e0;
   color: #000000;
 }
 

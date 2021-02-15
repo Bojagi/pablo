@@ -48,12 +48,12 @@ exports[`Render large icon button with correct styles 1`] = `
 }
 
 .c0:hover:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #f0f0f0;
   color: #000000;
 }
 
 .c0:focus:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #e0e0e0;
   color: #000000;
 }
 
@@ -114,12 +114,12 @@ exports[`Render medium icon button with correct styles 1`] = `
 }
 
 .c0:hover:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #f0f0f0;
   color: #000000;
 }
 
 .c0:focus:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #e0e0e0;
   color: #000000;
 }
 
@@ -180,12 +180,12 @@ exports[`Render small icon button with correct styles 1`] = `
 }
 
 .c0:hover:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #f0f0f0;
   color: #000000;
 }
 
 .c0:focus:not(:disabled) {
-  background-color: #EBE7FF;
+  background-color: #e0e0e0;
   color: #000000;
 }
 
