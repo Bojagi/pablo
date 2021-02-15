@@ -11,6 +11,9 @@ import { textareaStyles } from '../TextArea/styles';
 import { avatarStyles } from '../Avatar/styles';
 import { toolbarStyles } from '../Toolbar/styles';
 import { tooltipStyles } from '../Tooltip/styles';
+import { iconButtonStyles } from '../IconButton/styles';
+import { modalStyles } from '../Modal/styles';
+import { buttonBarStyles } from '../ButtonBar/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -25,4 +28,7 @@ export const defaultComponentStyles: ComponentStyles = {
   avatar: avatarStyles,
   toolbar: toolbarStyles,
   tooltip: tooltipStyles,
+  iconButton: iconButtonStyles,
+  modal: modalStyles,
+  buttonBar: buttonBarStyles,
 };

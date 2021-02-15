@@ -21,6 +21,9 @@ import { TextAreaStyles } from '../TextArea/styles';
 import { AvatarStyles } from '../Avatar/styles';
 import { ToolbarStyles } from '../Toolbar/styles';
 import { TooltipStyles } from '../Tooltip/styles';
+import { IconButtonStyles } from '../IconButton/styles';
+import { ModalStyles } from '../Modal/styles';
+import { ButtonBarStyles } from '../ButtonBar/styles';
 
 export type Style =
   | string
@@ -55,6 +58,9 @@ export interface ComponentStyles {
   avatar: AvatarStyles;
   toolbar: ToolbarStyles;
   tooltip: TooltipStyles;
+  iconButton: IconButtonStyles;
+  modal: ModalStyles;
+  buttonBar: ButtonBarStyles;
 }
 
 export interface PabloThemeProviderProps {
