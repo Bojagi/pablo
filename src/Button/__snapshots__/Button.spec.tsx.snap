@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render button with icon 1`] = `
-.c2 {
-  margin-right: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c0 {
   color: light:#EBE7FF;
   main: #6A50F2;
@@ -26,7 +18,7 @@ exports[`render button with icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -67,6 +59,29 @@ exports[`render button with icon 1`] = `
 .c1:hover:not(:disabled) {
   background: #301A9E;
   border-color: #301A9E;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.c2 > * {
+  width: 20px;
+  height: 20px;
 }
 
 <div>
@@ -110,7 +125,7 @@ exports[`render primary brand color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -186,7 +201,7 @@ exports[`render primary negative color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -257,7 +272,7 @@ exports[`render primary plain color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -333,7 +348,7 @@ exports[`render primary positive color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -409,7 +424,7 @@ exports[`render secondary brand color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -484,7 +499,7 @@ exports[`render secondary negative color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -554,7 +569,7 @@ exports[`render secondary plain color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -592,6 +607,7 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .c1:hover:not(:disabled) {
+  color: #000000;
   background: #f0f0f0;
 }
 
@@ -628,7 +644,7 @@ exports[`render secondary positive color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -703,7 +719,7 @@ exports[`render text brand color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -777,7 +793,7 @@ exports[`render text negative color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -846,7 +862,7 @@ exports[`render text plain color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -883,6 +899,7 @@ exports[`render text plain color button 1`] = `
 }
 
 .c1:hover:not(:disabled) {
+  color: #000000;
   background: #f0f0f0;
 }
 
@@ -919,7 +936,7 @@ exports[`render text positive color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;

@@ -12,8 +12,9 @@ export interface TabsProps extends BoxProps {
 
 export const Tabs = ({ children, selected, onSelect, ...props }: TabsProps) => {
   const gap = useComponentStyle('tabs.gap');
+
   return (
-    <Box mx={-gap} flex {...props}>
+    <Box mx={`-${gap}`} flex {...props}>
       {guaranteeArray(children).map((child) =>
         React.cloneElement(child, {
           key: child.props.name,

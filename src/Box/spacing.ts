@@ -46,5 +46,6 @@ function transformSpacing(value: string | number | InterpolateFn<any>) {
   if (typeof value !== 'number') {
     return value;
   }
+
   return getSpacing(value);
 }
