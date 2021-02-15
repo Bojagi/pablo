@@ -13,6 +13,19 @@ jobs:
     steps:
     - run: |
         echo "Publish new version ${{ github.event.inputs.version }}"
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Get release
+      id: get_release
+      uses: agners/get-draft-release@v0.1.0
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
     - run: |
-        yarn run publish ${{ github.event.inputs.version }}
+        RELEASE_VERSION=$(echo "${{ steps.get_release.outputs.tag_name }}" | cut -c 2-)
+        yarn run publish $RELEASE_VERSION
       name: 'Publish'
