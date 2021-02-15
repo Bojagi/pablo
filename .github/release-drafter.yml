@@ -48,6 +48,10 @@ exclude-labels:
   - invalid
   - test
 
+replacers:
+  - search: '/(fix|feat|test|chore|perf|docs)+?(\(\w+\))*?\:/g'
+    replace: ''
+
 autolabeler:
   - label: 'bug'  
     title:
