@@ -21,6 +21,8 @@ async function run() {
     return process.exit(0);
   }
 
+  console.log(JSON.stringify(draftRelease, null, 2)
+
   console.info(`Try to update release with id "${draftRelease.release_id}"`);
 
   try {
