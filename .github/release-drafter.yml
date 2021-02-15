@@ -11,15 +11,20 @@ version-resolver:
       - 'major'
   minor:
     labels:
+      - 'feature'
       - 'minor' 
-      - 'feature' # for now as it is pre 1.0
   patch:
     labels:
+      - 'bug'
+      - 'fix'
       - 'chore'
       - 'patch'
   default: patch
 
 categories:
+  - title: '💥 Breaking changes'
+    labels:
+      - 'breaking'
   - title: '🚀 Features'
     labels:
       - 'feature'
@@ -40,7 +45,7 @@ exclude-labels:
   - invalid
 
 autolabeler:
-  - label: 'bug'
+  - label: 'bug'  
     title:
       - '/^fix/i'
   - label: 'feature'
