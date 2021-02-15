@@ -22,7 +22,7 @@ jobs:
         node-version: '12.x'
     - name: Get release
       id: get_release
-      uses: agners/get-draft-release@v0.1.0
+      uses: agners/get-draft-release@v1.2.2
       env:
         GITHUB_TOKEN: ${{ github.token }}
     - run: |
