@@ -47,12 +47,12 @@ test('Get component style with content being a interpolation function', () => {
 
 test('Get empty object component style with unknown path', () => {
   const result = getComponentStyle('button.unknown.color')({ theme });
-  expect(result).toEqual({});
+  expect(result).toBeUndefined();
 });
 
 test('Get empty object component style with componentStyles being undefined', () => {
   const result = getComponentStyle('button.hover.color')({ theme: {} });
-  expect(result).toEqual({});
+  expect(result).toBeUndefined();
 });
 
 test('Get component style with transition transform function', () => {

@@ -1,89 +1,50 @@
-import { css } from 'styled-components';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
-import { isDefined } from '../utils/isDefined';
+import { interpolateFnFactory } from './interpolateFnFactory';
+import { InterpolateFn } from '../utils/styleHelpers';
 
 export interface BoxMarginProps {
-  m?: number;
-  mx?: number;
-  my?: number;
-  mr?: number;
-  mb?: number;
-  ml?: number;
-  mt?: number;
+  m?: number | string;
+  mx?: number | string;
+  my?: number | string;
+  mr?: number | string;
+  mb?: number | string;
+  ml?: number | string;
+  mt?: number | string;
 }
 
 export interface BoxPaddingProps {
-  p?: number;
-  px?: number;
-  py?: number;
-  pr?: number;
-  pb?: number;
-  pl?: number;
-  pt?: number;
+  p?: number | string;
+  px?: number | string;
+  py?: number | string;
+  pr?: number | string;
+  pb?: number | string;
+  pl?: number | string;
+  pt?: number | string;
 }
 
-export const marginInterpolateFn = (props: BoxMarginProps) => css`
-  ${isDefined(props.m) &&
-  css`
-    margin: ${getSpacing(props.m)};
-  `}
-  ${isDefined(props.mx) &&
-  css`
-    margin-left: ${getSpacing(props.mx)};
-    margin-right: ${getSpacing(props.mx)};
-  `}
-  ${isDefined(props.my) &&
-  css`
-    margin-top: ${getSpacing(props.my)};
-    margin-bottom: ${getSpacing(props.my)};
-  `}
-  ${isDefined(props.mr) &&
-  css`
-    margin-right: ${getSpacing(props.mr)};
-  `}
-  ${isDefined(props.mb) &&
-  css`
-    margin-bottom: ${getSpacing(props.mb)};
-  `}
-  ${isDefined(props.ml) &&
-  css`
-    margin-left: ${getSpacing(props.ml)};
-  `}
-  ${isDefined(props.mt) &&
-  css`
-    margin-top: ${getSpacing(props.mt)};
-  `}
-`;
+export const marginInterpolateFn = interpolateFnFactory<BoxMarginProps>(
+  ['m', 'margin', transformSpacing],
+  ['mx', ['margin-left', 'margin-right'], transformSpacing],
+  ['my', ['margin-top', 'margin-bottom'], transformSpacing],
+  ['mt', 'margin-top', transformSpacing],
+  ['mr', 'margin-right', transformSpacing],
+  ['mb', 'margin-bottom', transformSpacing],
+  ['ml', 'margin-left', transformSpacing]
+);
 
-export const paddingInterpolateFn = (props: BoxPaddingProps) => css`
-  ${isDefined(props.p) &&
-  css`
-    padding: ${getSpacing(props.p)};
-  `}
-  ${isDefined(props.px) &&
-  css`
-    padding-left: ${getSpacing(props.px)};
-    padding-right: ${getSpacing(props.px)};
-  `}
-  ${isDefined(props.py) &&
-  css`
-    padding-top: ${getSpacing(props.py)};
-    padding-bottom: ${getSpacing(props.py)};
-  `}
-  ${isDefined(props.pr) &&
-  css`
-    padding-right: ${getSpacing(props.pr)};
-  `}
-  ${isDefined(props.pb) &&
-  css`
-    padding-bottom: ${getSpacing(props.pb)};
-  `}
-  ${isDefined(props.pl) &&
-  css`
-    padding-left: ${getSpacing(props.pl)};
-  `}
-  ${isDefined(props.pt) &&
-  css`
-    padding-top: ${getSpacing(props.pt)};
-  `}
-`;
+export const paddingInterpolateFn = interpolateFnFactory<BoxPaddingProps>(
+  ['p', 'padding', transformSpacing],
+  ['px', ['padding-left', 'padding-right'], transformSpacing],
+  ['py', ['padding-top', 'padding-bottom'], transformSpacing],
+  ['pt', 'padding-top', transformSpacing],
+  ['pr', 'padding-right', transformSpacing],
+  ['pb', 'padding-bottom', transformSpacing],
+  ['pl', 'padding-left', transformSpacing]
+);
+
+function transformSpacing(value: string | number | InterpolateFn<any>) {
+  if (typeof value !== 'number') {
+    return value;
+  }
+  return getSpacing(value);
+}

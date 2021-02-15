@@ -5,6 +5,7 @@ import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/
 export type ButtonSize = 'small' | 'medium' | 'large';
 export interface ButtonBaseProps extends BoxProps {
   size?: ButtonSize;
+  onClick?: () => void;
 }
 
 export const ButtonBase = styled.button

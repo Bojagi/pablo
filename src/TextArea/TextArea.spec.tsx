@@ -113,6 +113,29 @@ test('Trigger onChange event when the content of the inner textarea changed', ()
   );
 });
 
+test('Render with custom row count when "rows" prop is set', () => {
+  const { getByTestId } = renderComponent({
+    rows: 10,
+  });
+
+  expect(getByTestId('pbl-textarea')).toHaveAttribute('rows', '10');
+});
+
+test('Render with width "auto" when component styles have no width', () => {
+  const { getByTestId } = renderComponent(
+    {
+      rows: 10,
+    },
+    {
+      textarea: {
+        defaultWidth: undefined,
+      },
+    }
+  );
+
+  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', 'auto');
+});
+
 test('Use generated id when no "id" prop is set', () => {
   const onChangeMock = jest.fn();
   const { getByTestId } = renderComponent({
@@ -127,9 +150,9 @@ test('Use generated id when no "id" prop is set', () => {
   );
 });
 
-function renderComponent(props) {
+function renderComponent(props, customComponentStyles = {}) {
   return render(
-    <PabloThemeProvider>
+    <PabloThemeProvider componentStyles={customComponentStyles}>
       <TextArea id="custom-id" {...props} />
     </PabloThemeProvider>
   );

@@ -1,29 +1,52 @@
-import { css, FlattenSimpleInterpolation } from 'styled-components';
+import { css, FlattenInterpolation, FlattenSimpleInterpolation } from 'styled-components';
 import { PabloThemeableProps, Style } from '../theme/types';
+import { isDefined } from '../utils/isDefined';
 
 export type PPlusThemeable<P> = P & PabloThemeableProps;
 
 export type StyleProp<PropName, P> =
   | [
       propName: PropName,
-      cssAttribute: string,
+      cssAttribute: string | string[],
       transformFn?: (value: any, props: PPlusThemeable<P>) => Style
     ]
-  | [propName: PropName, interpolationResult: FlattenSimpleInterpolation];
+  | [
+      propName: PropName,
+      interpolationFn: () => FlattenSimpleInterpolation | FlattenInterpolation<any>
+    ];
 
 export function interpolateFnFactory<P extends Record<string, any>, PK = keyof PPlusThemeable<P>>(
   ...styleProps: StyleProp<PK, P>[]
 ) {
   return (props) =>
-    styleProps
-      .filter(([propName]) => !!props[propName])
-      .map(([propName, cssAttribute, transformFn]) =>
-        typeof cssAttribute === 'string'
-          ? css`
-              ${cssAttribute}: ${transformFn
-                ? transformFn(props[propName], props)
-                : props[propName]};
-            `
-          : cssAttribute
+    styleProps.filter(([propName]) => isDefined(props[propName])).map(mapStyle<P, PK>(props));
+}
+
+function mapStyle<P extends Record<string, any>, PK = keyof PPlusThemeable<P>>(props) {
+  return ([propName, cssAttribute, transformFn]: StyleProp<PK, P>) => {
+    if (typeof cssAttribute === 'function') {
+      return cssAttribute();
+    }
+
+    if (Array.isArray(cssAttribute)) {
+      return cssAttribute.map((attribute) =>
+        mapKeyValueStyle(props, propName, attribute, transformFn)
       );
+    }
+
+    return mapKeyValueStyle(props, propName, cssAttribute, transformFn);
+  };
+}
+
+function mapKeyValueStyle(
+  props: any,
+  propName: any,
+  cssAttribute: string,
+  transformFn?: (value: any, transformProps: any) => Style
+) {
+  return css`
+    ${cssAttribute}: ${transformFn
+      ? (() => transformFn(props[propName], props))()
+      : props[propName]};
+  `;
 }

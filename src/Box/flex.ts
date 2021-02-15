@@ -37,15 +37,19 @@ export type JustifyContentValue =
 export interface BoxFlexProps {
   alignItems?: AlignItemsValue;
   justifyContent?: JustifyContentValue;
+  flexGrow?: number;
+  flexShrink?: number;
   flex?: boolean;
 }
 
 export const flexInterpolateFn = interpolateFnFactory<BoxFlexProps>(
   ['alignItems', 'align-items'],
   ['justifyContent', 'justify-content'],
+  ['flexGrow', 'flex-grow'],
+  ['flexShrink', 'flex-shrink'],
   [
     'flex',
-    css`
+    () => css`
       display: flex;
     `,
   ]

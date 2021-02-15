@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Remove mount point on unmount 1`] = `
+<body>
+  <div />
+</body>
+`;
+
+exports[`Render closed modal with just a content element 1`] = `
+.c0 {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  overflow: scroll;
+  background-color: rgba(5,0,21,0.5);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.c1 {
+  max-width: 780px;
+  margin: auto;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  padding: 24px;
+}
+
+.c2 {
+  border-radius: 12px;
+  background-color: #fafafa;
+  padding: 12px;
+}
+
+<body>
+  <div />
+  <div
+    data-testid="pbl-modal-mountpoint"
+  >
+    <div
+      class="c0"
+      data-testid="pbl-modal-backdrop"
+    >
+      <div
+        class="c1"
+        data-testid="pbl-modal-area"
+      >
+        <div
+          class="c2"
+          data-testid="pbl-modal-box"
+        >
+          <div>
+            Hello World
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Render with additional panes 1`] = `
+.c0 {
+  max-width: 780px;
+  margin: auto;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  padding: 24px;
+}
+
+.c1 {
+  border-radius: 12px;
+  background-color: #fafafa;
+  padding: 12px;
+}
+
+.c2 {
+  margin-top: 12px;
+}
+
+<div
+  class="c0"
+  data-testid="pbl-modal-area"
+>
+  <div
+    class="c1"
+    data-testid="pbl-modal-box"
+  >
+    <div>
+      Hello World
+    </div>
+  </div>
+  <div
+    class="c2"
+    data-testid="pbl-modal-pane"
+  >
+    <div
+      class="c1"
+      data-testid="pbl-modal-pane-box"
+    >
+      <div>
+        Pane 1
+      </div>
+    </div>
+  </div>
+  <div
+    class="c2"
+    data-testid="pbl-modal-pane"
+  >
+    <div
+      class="c1"
+      data-testid="pbl-modal-pane-box"
+    >
+      <div>
+        Pane 2
+      </div>
+    </div>
+  </div>
+  <div
+    class="c2"
+    data-testid="pbl-modal-pane"
+  >
+    <div
+      class="c1"
+      data-testid="pbl-modal-pane-box"
+    >
+      <div>
+        Pane 3
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Render with title 1`] = `
+.c1 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.3333333em;
+  margin-bottom: 0.5em;
+}
+
+.c0 {
+  border-radius: 12px;
+  background-color: #fafafa;
+  padding: 12px;
+}
+
+<div
+  class="c0"
+  data-testid="pbl-modal-box"
+>
+  <div
+    class="c1"
+    data-testid="pbl-modal-title-box"
+  >
+    <h3
+      class="c2"
+    >
+      Hans 
+      <strong>
+        Wurst
+      </strong>
+    </h3>
+  </div>
+  <div>
+    Hello World
+  </div>
+</div>
+`;
+
+exports[`Render with title and topRightItem 1`] = `
+.c1 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.3333333em;
+  margin-bottom: 0.5em;
+}
+
+.c0 {
+  border-radius: 12px;
+  background-color: #fafafa;
+  padding: 12px;
+}
+
+<div
+  class="c0"
+  data-testid="pbl-modal-box"
+>
+  <div
+    class="c1"
+    data-testid="pbl-modal-title-box"
+  >
+    <h3
+      class="c2"
+    >
+      Hans 
+      <strong>
+        Wurst
+      </strong>
+    </h3>
+    <div>
+      something
+    </div>
+  </div>
+  <div>
+    Hello World
+  </div>
+</div>
+`;
+
+exports[`Render with topRightItem 1`] = `
+.c1 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  border-radius: 12px;
+  background-color: #fafafa;
+  padding: 12px;
+}
+
+<div
+  class="c0"
+  data-testid="pbl-modal-box"
+>
+  <div
+    class="c1"
+    data-testid="pbl-modal-title-box"
+  >
+    <div>
+      something
+    </div>
+  </div>
+  <div>
+    Hello World
+  </div>
+</div>
+`;

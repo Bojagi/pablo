@@ -19,22 +19,33 @@ export const parameters = {
 
 export const decorators = [(Story) => (
   <>
-    <PabloThemeProvider componentStyles={{
-      // button: {
-      //   base: {
-      //     iconGap: 3,
-      //   },
-      // },
-      // sidebarNav: {
-      //   borderLeftSpacing: 5,
-      //   item: {
-      //     hover: {
-      //       backgroundColor: getColor('positive', 'main'),
-      //     },
-      //   },
-      //   borderLeft: css`2px dotted red`,
-      // },
-    }}>
+    <PabloThemeProvider 
+      theme={{
+        // colors: {
+        //   brand: {
+        //     main: 'coral',
+        //     light: 'bisque',
+        //     dark: 'crimson',
+        //   },
+        // },
+      }}
+      componentStyles={{
+        // button: {
+        //   base: {
+        //     iconGap: 3,
+        //   },
+        // },
+        // sidebarNav: {
+        //   borderLeftSpacing: 5,
+        //   item: {
+        //     hover: {
+        //       backgroundColor: getColor('positive', 'main'),
+        //     },
+        //   },
+        //   borderLeft: css`2px dotted red`,
+        // },
+      }}
+    >
       <Story/>
     </PabloThemeProvider>
   </>
