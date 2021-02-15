@@ -77,6 +77,11 @@ WithAdditionalPanes.args = {
   title: 'Hallo',
   topRightItem: ({ onClose }) => <X onClick={onClose} size={24} />,
   additionalPanes: [
+    <>
+      <TextContent />
+      <TextContent />
+      <TextContent />
+    </>,
     <Paragraph mb={0}>Goodbye</Paragraph>,
     <Paragraph mb={0}>I am the Walrus</Paragraph>,
   ],

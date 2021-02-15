@@ -24,15 +24,15 @@ interface BackdropProps {
 }
 
 const Backdrop = styled.div<BackdropProps>`
-  z-index: 1000;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: ${getComponentStyle('modal.backdropColor')};
   position: fixed;
   width: 100vw;
   height: 100vh;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  overflow: scroll;
+  background-color: ${getComponentStyle('modal.backdropColor')};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,13 +48,20 @@ const Backdrop = styled.div<BackdropProps>`
 `;
 
 const ModalArea = styled.div`
-  width: ${getComponentStyle('modal.box.width')};
+  max-width: ${getComponentStyle('modal.box.width')};
+  margin: auto;
+  min-height: min-content;
+  padding: ${getComponentStyle('modal.padding')};
 `;
 
 const ModalBox = styled.div`
   border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
   background-color: ${getComponentStyle('modal.box.backgroundColor')};
   padding: ${getComponentStyle('modal.box.padding')};
+`;
+
+const PaneBox = styled.div`
+  margin-top: ${getComponentStyle('modal.gap')};
 `;
 
 export function Modal({
@@ -103,9 +110,9 @@ export function Modal({
         </ModalBox>
         {additionalPanes &&
           additionalPanes.map((pane) => (
-            <Box mt={1.5}>
+            <PaneBox>
               <ModalBox>{pane}</ModalBox>
-            </Box>
+            </PaneBox>
           ))}
       </ModalArea>
     </Backdrop>,
