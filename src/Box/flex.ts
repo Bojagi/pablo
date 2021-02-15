@@ -45,7 +45,7 @@ export const flexInterpolateFn = interpolateFnFactory<BoxFlexProps>(
   ['justifyContent', 'justify-content'],
   [
     'flex',
-    css`
+    () => css`
       display: flex;
     `,
   ]

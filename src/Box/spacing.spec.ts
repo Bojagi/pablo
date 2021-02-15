@@ -19,6 +19,7 @@ describe.each([
 
   test(`pass ${name} for all directions`, () => {
     const props = { theme, [short]: 2 };
+
     const elem = renderStyledComponent(props, interpolateFn);
     expect(elem).toHaveStyleRule(name, '12px');
   });

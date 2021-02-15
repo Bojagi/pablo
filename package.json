@@ -86,6 +86,8 @@
   },
   "jest": {
     "preset": "ts-jest",
+    "collectCoverageFrom": ["src/**/*.{ts,tsx}", "!**/index.ts", "!**/*.stories.tsx"],
+    
     "setupFilesAfterEnv": [
       "<rootDir>/jestSetup.ts"
     ]

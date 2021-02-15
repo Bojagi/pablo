@@ -4,7 +4,7 @@ import merge from 'deepmerge';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { defaultComponentStyles } from './defaultComponentStyles';
 import { defaultTheme } from './defaultTheme';
-import { PabloTheme, ComponentStyles, PabloThemeProviderProps, PabloThemeableProps } from './types';
+import { PabloTheme, ComponentStyles, PabloThemeProviderProps } from './types';
 
 export const pabloThemeContext = React.createContext<PabloTheme>(defaultTheme);
 export const pabloComponentStylesContext = React.createContext<ComponentStyles>(
@@ -41,11 +41,4 @@ export const useComponentStyle = (path: string, props: Record<string, any> = {})
   const componentStyles = useComponentStyleContext();
   const theme = useTheme();
   return getComponentStyle(path)({ ...props, theme: { ...theme, componentStyles } });
-};
-
-export const withPabloTheme = <TProps,>() => (
-  Component: React.ComponentType<TProps & PabloThemeableProps>
-): React.FC<TProps & PabloThemeableProps> => (props: TProps) => {
-  const theme = usePabloTheme();
-  return <Component theme={theme} {...props} />;
 };

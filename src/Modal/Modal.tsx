@@ -74,6 +74,7 @@ export function Modal({
 }: ModalProps) {
   const mountPoint = React.useMemo(() => document.createElement('div'), []);
   React.useEffect(() => {
+    mountPoint.setAttribute('data-testid', 'pbl-modal-mountpoint');
     document.body.appendChild(mountPoint);
     return () => {
       document.body.removeChild(mountPoint);
@@ -93,15 +94,16 @@ export function Modal({
   );
 
   return ReactDOM.createPortal(
-    <Backdrop onClick={handleClose} open={open}>
-      <ModalArea>
+    <Backdrop data-testid="pbl-modal-backdrop" onClick={handleClose} open={open}>
+      <ModalArea data-testid="pbl-modal-area">
         <ModalBox
+          data-testid="pbl-modal-box"
           onMouseDown={(e) => {
             (mouseDownRef.current as any) = e.currentTarget;
           }}
         >
           {(title || TopRightItem) && (
-            <Box flex justifyContent="space-between">
+            <Box data-testid="pbl-modal-title-box" flex justifyContent="space-between">
               {title && <Title>{title}</Title>}
               {TopRightItem && <TopRightItem onClose={onClose} />}
             </Box>
@@ -109,9 +111,9 @@ export function Modal({
           {children}
         </ModalBox>
         {additionalPanes &&
-          additionalPanes.map((pane) => (
-            <PaneBox>
-              <ModalBox>{pane}</ModalBox>
+          additionalPanes.map((pane, i) => (
+            <PaneBox key={i} data-testid="pbl-modal-pane">
+              <ModalBox data-testid="pbl-modal-pane-box">{pane}</ModalBox>
             </PaneBox>
           ))}
       </ModalArea>

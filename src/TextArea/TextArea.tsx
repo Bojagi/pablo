@@ -58,7 +58,8 @@ const InnerTextArea = styled.textarea<InnerTextAreaProps>`
 `;
 
 export function TextArea({ rows, width, ...props }: TextAreaProps) {
-  const rowsWithFallback = (useComponentStyle('textarea.defaultRows') as number) || rows;
+  const rowsFallback = useComponentStyle('textarea.defaultRows') as number;
+  const rowsWithFallback = rows || rowsFallback;
   const defaultWidth = useComponentStyle('textarea.defaultWidth');
 
   return (

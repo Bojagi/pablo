@@ -5,7 +5,7 @@ export const getComponentStyle = (
   const interpolatedPath = path.replace(/\{(.*?)\}/g, (_, val) => props[val] || val);
   const value = interpolatedPath
     .split('.')
-    .reduce((acc, key) => acc[key] || {}, theme.componentStyles || {});
+    .reduce((acc, key) => (acc && acc[key]) || undefined, theme.componentStyles || {});
   if (typeof value === 'function') {
     return transformFn(value({ theme }));
   }

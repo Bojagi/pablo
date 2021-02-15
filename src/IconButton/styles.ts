@@ -7,11 +7,29 @@ export interface IconButtonStyles {
     medium: Style;
     large: Style;
   };
+  icon: {
+    scale: number;
+    transition: string[][];
+    active: {
+      scale: number;
+    };
+    size: {
+      small: Style;
+      medium: Style;
+      large: Style;
+    };
+  };
   borderRadius: number;
   backgroundColor: Style;
   color: Style;
-  buttonTransition: string[][];
-  iconTransition: string[][];
+  transition: string[][];
+  active: {
+    backgroundColor: Style;
+    color: Style;
+  };
+  disabled: {
+    opacity: number;
+  };
   hover: {
     backgroundColor: Style;
     color: Style;
@@ -28,14 +46,32 @@ export const iconButtonStyles: IconButtonStyles = {
     medium: getSpacing(4),
     large: getSpacing(5),
   },
+  icon: {
+    scale: 1,
+    transition: [['transform', '0.2s']],
+    active: {
+      scale: 0.833333333,
+    },
+    size: {
+      small: getSpacing(2),
+      medium: getSpacing(3),
+      large: getSpacing(4),
+    },
+  },
   borderRadius: 6,
   backgroundColor: 'transparent',
   color: getColor('common', 'black'),
-  buttonTransition: [
+  transition: [
     ['background-color', '0.2s'],
     ['color', '0.2s'],
   ],
-  iconTransition: [['transform', '0.2s']],
+  active: {
+    backgroundColor: getColor('brand'),
+    color: getColor('common', 'white'),
+  },
+  disabled: {
+    opacity: 0.3,
+  },
   hover: {
     backgroundColor: getColor('brand', 'light'),
     color: getColor('common', 'black'),

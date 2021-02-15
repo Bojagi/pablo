@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render large icon button with correct styles 1`] = `
+.c0 {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: #000000;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s,color 0.2s;
+  transition: background-color 0.2s,color 0.2s;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > * {
+  width: 32px;
+  height: 32px;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transform: scale( 1 );
+  -ms-transform: scale( 1 );
+  transform: scale( 1 );
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.3;
+  cursor: normal;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: #EBE7FF;
+  color: #000000;
+}
+
+.c0:focus:not(:disabled) {
+  background-color: #EBE7FF;
+  color: #000000;
+}
+
+<button
+  class="c0"
+>
+  <div>
+    Icon
+  </div>
+</button>
+`;
+
+exports[`Render medium icon button with correct styles 1`] = `
+.c0 {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  color: #000000;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s,color 0.2s;
+  transition: background-color 0.2s,color 0.2s;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > * {
+  width: 24px;
+  height: 24px;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transform: scale( 1 );
+  -ms-transform: scale( 1 );
+  transform: scale( 1 );
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.3;
+  cursor: normal;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: #EBE7FF;
+  color: #000000;
+}
+
+.c0:focus:not(:disabled) {
+  background-color: #EBE7FF;
+  color: #000000;
+}
+
+<button
+  class="c0"
+>
+  <div>
+    Icon
+  </div>
+</button>
+`;
+
+exports[`Render small icon button with correct styles 1`] = `
+.c0 {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  color: #000000;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s,color 0.2s;
+  transition: background-color 0.2s,color 0.2s;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 > * {
+  width: 16px;
+  height: 16px;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transform: scale( 1 );
+  -ms-transform: scale( 1 );
+  transform: scale( 1 );
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.3;
+  cursor: normal;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: #EBE7FF;
+  color: #000000;
+}
+
+.c0:focus:not(:disabled) {
+  background-color: #EBE7FF;
+  color: #000000;
+}
+
+<button
+  class="c0"
+>
+  <div>
+    Icon
+  </div>
+</button>
+`;

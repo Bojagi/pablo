@@ -54,44 +54,6 @@ test('Render toolbar items selected by "selected" Toolbar prop', () => {
   expect(allButtons[4]).toHaveStyleRule('background-color', 'transparent');
 });
 
-test('Render toolbar items with proper hover colors', () => {
-  const { getAllByTestId } = renderComponent({ selected: 'italic' }, {});
-  const allButtons = getAllByTestId('pbl-toolbar-item-button');
-  expect(allButtons).toBeArrayOfSize(5);
-  expect(allButtons[0]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':hover',
-  });
-  expect(allButtons[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':hover',
-  });
-  // Active ones do not have a hover state, we can't test properly for it
-  expect(allButtons[3]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':hover',
-  });
-  expect(allButtons[4]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':hover',
-  });
-});
-
-test('Render toolbar items with proper focus colors', () => {
-  const { getAllByTestId } = renderComponent({ selected: 'italic' }, {});
-  const allButtons = getAllByTestId('pbl-toolbar-item-button');
-  expect(allButtons).toBeArrayOfSize(5);
-  expect(allButtons[0]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':focus',
-  });
-  expect(allButtons[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':focus',
-  });
-  // Active ones do not have a focus state, we can't test properly for it
-  expect(allButtons[3]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':focus',
-  });
-  expect(allButtons[4]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light, {
-    modifier: ':focus',
-  });
-});
-
 test('Trigger onClick on all items and call function with item name as argument', () => {
   const onClickMock = jest.fn();
   const { getAllByTestId } = renderComponent({}, { onClick: onClickMock });
