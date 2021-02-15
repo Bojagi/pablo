@@ -1,4 +1,3 @@
-import { number } from 'yargs';
 import { getColor } from '../utils/styleHelpers/getColor';
 import { Style } from '../theme/types';
 
