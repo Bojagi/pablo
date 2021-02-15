@@ -21,6 +21,7 @@
     "build:esm": "BABEL_ENV=esm node ./scripts/build.js esm",
     "build:types": "tsc -p tsconfig.build.json",
     "build:copy-files": "cp package.json build/package.json && cp README.md build/README.md",
+    "publish": "echo TODO: Add publish script",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
