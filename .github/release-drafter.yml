@@ -18,6 +18,7 @@ version-resolver:
       - 'bug'
       - 'fix'
       - 'chore'
+      - 'refactor'
       - 'patch'
   default: patch
 
@@ -34,6 +35,9 @@ categories:
       - 'fix'
       - 'bugfix'
       - 'bug'
+  - title: '👻 Internal changes'
+    labels: 
+      - 'refactor'
   - title: '🧰 Maintenance'
     labels: 
       - 'chore'
@@ -43,6 +47,7 @@ exclude-labels:
   - no-changelog
   - skip-changelog
   - invalid
+  - test
 
 autolabeler:
   - label: 'bug'  
@@ -51,6 +56,12 @@ autolabeler:
   - label: 'feature'
     title:
       - '/^feat/i'
+  - label: 'test'
+    title:
+      - '/^test/i'
+  - label: 'refactor'
+    title:
+      - '/^refactor/i'
   - label: 'chore'
     title:
       - '/^chore/i'
@@ -60,12 +71,12 @@ template: |
 
   <!-- Optional: add a release summary here -->
 
-  ## What's new 👶
-
-  $CHANGES
-
   ## Contributors
 
   Thanks to these the folks that made this release possible 🙇‍♂️
 
   $CONTRIBUTORS	
+
+  ## What's new 👶
+
+  $CHANGES
