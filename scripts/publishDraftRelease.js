@@ -21,11 +21,19 @@ async function run() {
     return process.exit(0);
   }
 
-  await octokit.repos.updateRelease({
-    ...OWNER_REPO,
-    release_id: draftRelease.release_id,
-    draft: false,
-  });
+  console.info(`Try to update release with id "${draftRelease.release_id}"`);
+
+  try {
+    await octokit.repos.updateRelease({
+      ...OWNER_REPO,
+      release_id: draftRelease.release_id,
+      draft: false,
+    });
+  } catch (err) {
+    console.error(`Could not publish the release, please do it manually`);
+    console.error(err);
+    return process.exit(1);
+  }
 
   console.info(`Published release ${process.env.RELEASE_VERSION}`);
 
