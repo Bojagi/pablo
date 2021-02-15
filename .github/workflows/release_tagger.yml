@@ -2,10 +2,9 @@ name: Release Tagger
 on: 
   workflow_dispatch:
     inputs:
-      version:
-        description: 'New version'
-        required: true
-        default: '0.x.x'
+      version_should_match:
+        description: 'Version should match (optional)'
+        required: false
 
 jobs:
   releaseVersion:
@@ -23,6 +22,7 @@ jobs:
     - name: install
       run: 'yarn'
     - run: |
+        export VERSION_SHOULD_MATCH=${{ github.event.inputs.version_should_match }}
         RELEASE_VERSION=$(node ./scripts/getDraftReleaseVersion)
         yarn run publish $RELEASE_VERSION
       name: 'Publish'

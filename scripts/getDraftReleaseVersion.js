@@ -7,8 +7,15 @@ const octokit = new Octokit({
 
 async function run() {
   const { data } = await octokit.repos.listReleases({ owner: 'bojagi', repo: 'pablo' });
-  const draftRelease = data.find((r) => r.draft);
-  if (!draftRelease) return;
+  const draftRelease = process.env.VERSION_SHOULD_MATCH
+    ? data.find((r) => r.draft && r.tag_name === `v${process.env.VERSION_SHOULD_MATCH}`)
+    : data.find((r) => r.draft);
+
+  if (!draftRelease) {
+    console.error('No matching draft found');
+    return process.exit(1);
+  }
+
   const version = draftRelease.tag_name.replace(/^v/, '');
   process.stdout.write(version);
 }
