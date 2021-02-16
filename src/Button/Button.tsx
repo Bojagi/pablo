@@ -1,9 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Box, BoxProps } from '../Box';
+import { BoxProps } from '../Box';
 import { ButtonBase, ButtonBaseProps, ButtonSize } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
-import { useComponentStyle } from '../theme';
 import { Style } from '../theme/types';
 import { ButtonTypography } from '../Typography';
 
