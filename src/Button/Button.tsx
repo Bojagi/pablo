@@ -1,9 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Box, BoxProps } from '../Box';
-import { ButtonBase, ButtonBaseProps } from '../ButtonBase';
+import { BoxProps } from '../Box';
+import { ButtonBase, ButtonBaseProps, ButtonSize } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
-import { useComponentStyle } from '../theme';
 import { Style } from '../theme/types';
 import { ButtonTypography } from '../Typography';
 
@@ -65,6 +64,24 @@ const ButtonText = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   }
 `;
 
+interface IconBoxProps {
+  size: ButtonSize;
+}
+
+const IconBox = styled.div<IconBoxProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: ${getComponentStyle('button.base.icon.gap')};
+  width: ${getComponentStyle('button.base.icon.size.{size}')};
+  height: ${getComponentStyle('button.base.icon.size.{size}')};
+
+  & > * {
+    width: ${getComponentStyle('button.base.icon.size.{size}')};
+    height: ${getComponentStyle('button.base.icon.size.{size}')};
+  }
+`;
+
 const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
   primary: ButtonPrimary,
   secondary: ButtonSecondary,
@@ -74,6 +91,7 @@ const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
 export const Button = ({
   color = 'brand',
   variant = 'primary',
+  size = 'medium',
   icon,
   children,
   className,
@@ -81,20 +99,19 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const InnerButton = buttonMap[variant] || ButtonPrimary;
-
-  const iconGap = useComponentStyle('button.base.iconGap') as number;
   return (
     <InnerButton
       data-testid="pbl-button"
       {...props}
+      size={size}
       className={className}
       disabled={disabled}
       color={color}
     >
       {icon && (
-        <Box data-testid="pbl-button-icon" flex mr={iconGap}>
+        <IconBox size={size} data-testid="pbl-button-icon">
           {icon}
-        </Box>
+        </IconBox>
       )}
       <ButtonTypography>{children}</ButtonTypography>
     </InnerButton>

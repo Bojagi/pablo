@@ -24,6 +24,7 @@ import { TooltipStyles } from '../Tooltip/styles';
 import { IconButtonStyles } from '../IconButton/styles';
 import { ModalStyles } from '../Modal/styles';
 import { ButtonBarStyles } from '../ButtonBar/styles';
+import { LinkStyles } from '../Link/styles';
 
 export type Style =
   | string
@@ -61,6 +62,7 @@ export interface ComponentStyles {
   iconButton: IconButtonStyles;
   modal: ModalStyles;
   buttonBar: ButtonBarStyles;
+  link: LinkStyles;
 }
 
 export interface PabloThemeProviderProps {

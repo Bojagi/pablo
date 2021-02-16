@@ -1,9 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Box, BoxProps } from '../Box';
+import { BoxProps } from '../Box';
 import { ButtonBase } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
-import { useComponentStyle } from '../theme';
 import { Typography } from '../Typography';
 
 export interface TabProps extends BoxProps {
@@ -49,28 +48,33 @@ const TabButton = styled<React.FC<Partial<TabProps>>>((ButtonBase as unknown) as
     `}
 `;
 
-export const Tab = ({ children, active, icon, onClick, ...props }: TabProps) => {
-  const iconGap = useComponentStyle('button.base.iconGap') as number;
-  return (
-    <TabButton
-      data-testid="pbl-tab"
-      {...props}
-      active={active}
-      onClick={(e) => {
-        e.stopPropagation();
-        if (onClick) {
-          onClick(e);
-        }
+const IconBox = styled.div`
+  display: flex;
+  margin-right: ${getComponentStyle('tabs.tab.icon.gap')};
+  width: ${getComponentStyle('tabs.tab.icon.size')};
+  height: ${getComponentStyle('tabs.tab.icon.size')};
 
-        e.currentTarget.blur();
-      }}
-    >
-      {icon && (
-        <Box flex mr={iconGap}>
-          {icon}
-        </Box>
-      )}
-      <Typography variant="button">{children}</Typography>
-    </TabButton>
-  );
-};
+  & > * {
+    width: ${getComponentStyle('tabs.tab.icon.size')};
+    height: ${getComponentStyle('tabs.tab.icon.size')};
+  }
+`;
+
+export const Tab = ({ children, active, icon, onClick, ...props }: TabProps) => (
+  <TabButton
+    data-testid="pbl-tab"
+    {...props}
+    active={active}
+    onClick={(e) => {
+      e.stopPropagation();
+      if (onClick) {
+        onClick(e);
+      }
+
+      e.currentTarget.blur();
+    }}
+  >
+    {icon && <IconBox>{icon}</IconBox>}
+    <Typography variant="button">{children}</Typography>
+  </TabButton>
+);

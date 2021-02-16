@@ -30,8 +30,8 @@ const baseStory = (args) => (
   <>
     <Subtitle>Small</Subtitle>
     <Box mb={2}>
-      <SetOfButtons {...args} />
-      <SetOfButtons disabled {...args} />
+      <SetOfButtons size="small" {...args} />
+      <SetOfButtons size="small" disabled {...args} />
     </Box>
     <Subtitle>Medium</Subtitle>
     <Box mb={2}>
