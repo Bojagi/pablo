@@ -75,7 +75,7 @@ test('Render with custom width when "width" prop is set', () => {
     width: '600em',
   });
 
-  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', '600em');
+  expect(getByTestId('pbl-textarea-wrapper')).toHaveStyleRule('width', '600em');
 });
 
 test('Render with custom px width when number "width" prop is set', () => {
@@ -83,7 +83,7 @@ test('Render with custom px width when number "width" prop is set', () => {
     width: 600,
   });
 
-  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', '600px');
+  expect(getByTestId('pbl-textarea-wrapper')).toHaveStyleRule('width', '600px');
 });
 
 test('Render with width 100% when "fullWidth" prop is set', () => {
@@ -92,7 +92,7 @@ test('Render with width 100% when "fullWidth" prop is set', () => {
     fullWidth: true,
   });
 
-  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', '100%');
+  expect(getByTestId('pbl-textarea-wrapper')).toHaveStyleRule('width', '100%');
 });
 
 test('Trigger onChange event when the content of the inner textarea changed', () => {
@@ -119,21 +119,6 @@ test('Render with custom row count when "rows" prop is set', () => {
   });
 
   expect(getByTestId('pbl-textarea')).toHaveAttribute('rows', '10');
-});
-
-test('Render with width "auto" when component styles have no width', () => {
-  const { getByTestId } = renderComponent(
-    {
-      rows: 10,
-    },
-    {
-      textarea: {
-        defaultWidth: undefined,
-      },
-    }
-  );
-
-  expect(getByTestId('pbl-textarea')).toHaveStyleRule('width', 'auto');
 });
 
 test('Use generated id when no "id" prop is set', () => {

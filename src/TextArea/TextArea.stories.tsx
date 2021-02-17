@@ -69,3 +69,6 @@ export const MultipleTextAreas = () => (
     </Box>
   </Box>
 );
+
+export const Outline = baseStory.bind(null);
+Outline.args = { variant: 'outline' };
