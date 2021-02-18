@@ -24,6 +24,7 @@
     "publish": "echo TODO: Add publish script. But published version would be:",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:size": "size-limit",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
   },
   "peerDependencies": {
