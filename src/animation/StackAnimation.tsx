@@ -2,10 +2,12 @@ import React, { ReactNode } from 'react';
 import { css } from 'styled-components';
 import { InnerInOutAnimationProps, InOutAnimation } from './InOutAnimation';
 
+const getMarginTop = (props) => (props.selfHeight ? -props.selfHeight : 0);
+
 const stackAnimationBase = css<InnerInOutAnimationProps>`
   transition: ${(props) =>
     css`opacity ${props.duration}ms, margin-top ${props.duration}ms, transform ${props.duration}ms`};
-  /* margin-top: -73px; */
+  margin-top: ${getMarginTop}px;
   opacity: 0;
   transform: translateY(50%);
 `;
@@ -18,7 +20,7 @@ const stackAnimationEnter = css`
 
 const stackAnimationExit = css`
   opacity: 0;
-  /* margin-top: -73px; */
+  margin-top: ${getMarginTop}px;
   transform: translateY(-50%);
 `;
 

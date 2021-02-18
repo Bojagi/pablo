@@ -1,10 +1,13 @@
 import React, { ReactNode, useState } from 'react';
 import Transition, { TransitionStatus } from 'react-transition-group/Transition';
 import styled, { FlattenInterpolation, FlattenSimpleInterpolation } from 'styled-components';
+import useResizeObserver from 'use-resize-observer';
 
 export interface InnerInOutAnimationProps {
   state: TransitionStatus;
   duration: number;
+  selfWidth?: number;
+  selfHeight?: number;
   baseStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
   enterStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
   exitStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
@@ -45,6 +48,8 @@ export function InOutAnimation({
   exitStyles,
 }: InOutAnimationProps) {
   const [animationIn, setAnimationIn] = useState(false);
+  const ref = React.useRef<HTMLDivElement>(null);
+  const { width, height } = useResizeObserver<HTMLDivElement>({ ref });
 
   React.useEffect(() => {
     setTimeout(() => setAnimationIn(visible));
@@ -54,10 +59,13 @@ export function InOutAnimation({
     <Transition in={animationIn} appear timeout={duration} onExited={onExited}>
       {(state) => (
         <InnerInOutAnimation
+          ref={ref}
           baseStyles={baseStyles}
           enterStyles={enterStyles}
           exitStyles={exitStyles}
           duration={duration}
+          selfWidth={width}
+          selfHeight={height}
           state={state}
         >
           {children}
