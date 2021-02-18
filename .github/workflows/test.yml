@@ -31,5 +31,6 @@ jobs:
           BOJAGI_SECRET: ${{secrets.BOJAGI_SECRET}}
       - name: Build
         run: yarn build
-      - name: TEst size limits
-        run: yarn test:size
+      - name: andresz1/size-limit-action@v1.5.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
