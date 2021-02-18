@@ -261,6 +261,7 @@ exports[`render primary negative color button 1`] = `
 
 exports[`render primary plain color button 1`] = `
 .c0 {
+  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -558,6 +559,7 @@ exports[`render secondary negative color button 1`] = `
 
 exports[`render secondary plain color button 1`] = `
 .c0 {
+  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -851,6 +853,7 @@ exports[`render text negative color button 1`] = `
 
 exports[`render text plain color button 1`] = `
 .c0 {
+  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

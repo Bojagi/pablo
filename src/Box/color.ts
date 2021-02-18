@@ -1,4 +1,4 @@
-import { PabloTheme, Style } from '../theme/types';
+import { PabloTheme } from '../theme/types';
 import { AllColors, Colors } from '../theme/colors';
 import { interpolateFnFactory } from './interpolateFnFactory';
 
@@ -8,9 +8,9 @@ export type ColorPath<
 > = `${string & TName}.${TVariant}`;
 
 export interface BoxColorProps {
-  color?: ColorPath | Style;
-  bgColor?: ColorPath | Style;
-  fillColor?: ColorPath | Style;
+  color?: ColorPath | string;
+  bgColor?: ColorPath | string;
+  fillColor?: ColorPath | string;
 }
 
 export const colorInterpolateFn = interpolateFnFactory<BoxColorProps>(

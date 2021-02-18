@@ -19,14 +19,14 @@ test.each([
     expect(buttonNode).toHaveStyleRule('background-color', 'transparent');
     expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black);
 
-    expect(buttonNode).toHaveStyleRule('background-color', defaultTheme.colors.gray['50'], {
+    expect(buttonNode).toHaveStyleRule('background-color', defaultTheme.colors.grayOpacity['50'], {
       modifier: ':hover:not(:disabled)',
     });
     expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black, {
       modifier: ':hover:not(:disabled)',
     });
 
-    expect(buttonNode).toHaveStyleRule('background-color', defaultTheme.colors.gray['100'], {
+    expect(buttonNode).toHaveStyleRule('background-color', defaultTheme.colors.grayOpacity['100'], {
       modifier: ':focus:not(:disabled)',
     });
     expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black, {
