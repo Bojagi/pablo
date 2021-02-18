@@ -11,6 +11,7 @@ import {
   marginInterpolateFn,
   paddingInterpolateFn,
 } from './spacing';
+import { BoxStyleProps, styleInterpolateFn } from './style';
 
 export * from './border';
 export * from './color';
@@ -23,7 +24,8 @@ export type BoxProps = BoxMarginProps &
   BoxColorProps &
   BoxBorderProps &
   BoxFlexProps &
-  BoxSizeProps;
+  BoxSizeProps &
+  BoxStyleProps;
 
 export const boxInterpolateFn = (props) =>
   [
@@ -34,6 +36,7 @@ export const boxInterpolateFn = (props) =>
     borderInterpolateFn,
     flexInterpolateFn,
     sizeInterpolateFn,
+    styleInterpolateFn,
   ].map((fn) => fn(props));
 
 export const Box = styled.div<BoxProps>`

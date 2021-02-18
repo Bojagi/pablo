@@ -6,6 +6,7 @@ export interface ModalStyles {
   padding: Style;
   gap: Style;
   box: {
+    shadow: string[];
     borderRadius: number;
     width: Style;
     backgroundColor: Style;
@@ -18,6 +19,7 @@ export const modalStyles: ModalStyles = {
   padding: getSpacing(3),
   gap: getSpacing(1.5),
   box: {
+    shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
     backgroundColor: '#fafafa',
     padding: getSpacing(1.5),
     width: '780px',

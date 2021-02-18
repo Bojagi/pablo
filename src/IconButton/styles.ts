@@ -73,11 +73,11 @@ export const iconButtonStyles: IconButtonStyles = {
     opacity: 0.3,
   },
   hover: {
-    backgroundColor: getColor('gray', '50'),
+    backgroundColor: getColor('grayOpacity', '50'),
     color: getColor('common', 'black'),
   },
   focus: {
-    backgroundColor: getColor('gray', '100'),
+    backgroundColor: getColor('grayOpacity', '100'),
     color: getColor('common', 'black'),
   },
 };

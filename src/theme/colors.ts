@@ -41,6 +41,7 @@ export type AllColors = ShadedColor & TextColors & BorderColors & CommonColors;
 export interface Colors {
   common: CommonColors;
   gray: GrayColors;
+  grayOpacity: GrayColors;
   borders: BorderColors;
   brand: ShadedColor;
   positive: ShadedColor;
@@ -70,6 +71,18 @@ export const colors: Colors = {
     '700': getGrayColor(0.3),
     '800': getGrayColor(0.2),
     '900': getGrayColor(0.1),
+  },
+  grayOpacity: {
+    '50': getGrayOpacityColor(0.95),
+    '100': getGrayOpacityColor(0.9),
+    '200': getGrayOpacityColor(0.8),
+    '300': getGrayOpacityColor(0.7),
+    '400': getGrayOpacityColor(0.6),
+    '500': getGrayOpacityColor(0.5),
+    '600': getGrayOpacityColor(0.4),
+    '700': getGrayOpacityColor(0.3),
+    '800': getGrayOpacityColor(0.2),
+    '900': getGrayOpacityColor(0.1),
   },
   borders: {
     main: `${BLACK}${getHexByte(0.25)}`,
@@ -119,4 +132,7 @@ function getHexByte(value: number) {
 
 function getGrayColor(value: number) {
   return `#${getHexByte(value)}${getHexByte(value)}${getHexByte(value)}`;
+}
+function getGrayOpacityColor(value: number) {
+  return `rgba(0,0,0,${value})`;
 }

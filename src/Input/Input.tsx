@@ -8,7 +8,7 @@ import { useComponentStyle } from '../theme';
 
 export interface InputProps extends BoxProps {
   id?: string;
-  value?: string;
+  value?: string | number;
   error?: React.ReactNode;
   label?: React.ReactNode;
   infoText?: React.ReactNode;
