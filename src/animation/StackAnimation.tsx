@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { css, FlattenInterpolation } from 'styled-components';
-import { InnerInOutAnimationProps, InOutAnimation } from './InOutAnimation';
+import { createInOutAnimation, InnerInOutAnimationProps } from './InOutAnimation';
 
 const getMarginTop = (props) => (props.selfHeight ? -props.selfHeight : 0);
 
@@ -31,17 +31,8 @@ export interface StackAnimationProps {
   onExited?: () => void;
 }
 
-export function StackAnimation({ duration, children, visible, onExited }: StackAnimationProps) {
-  return (
-    <InOutAnimation
-      visible={visible}
-      duration={duration}
-      onExited={onExited}
-      baseStyles={stackAnimationBase}
-      enterStyles={stackAnimationEnter}
-      exitStyles={stackAnimationExit}
-    >
-      {children}
-    </InOutAnimation>
-  );
-}
+export const StackAnimation = createInOutAnimation({
+  baseStyles: stackAnimationBase,
+  enterStyles: stackAnimationEnter,
+  exitStyles: stackAnimationExit,
+});

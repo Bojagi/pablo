@@ -28,7 +28,7 @@ export const InnerInOutAnimation = styled.div<InnerInOutAnimationProps>`
   }}
 `;
 
-interface InOutAnimationProps {
+export interface InOutAnimationProps {
   visible: boolean;
   duration: number;
   onExited?: () => void;
@@ -36,6 +36,27 @@ interface InOutAnimationProps {
   enterStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
   exitStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
   children: ReactNode;
+}
+
+export interface CreateInOutAnimationOptions {
+  baseStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  enterStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  exitStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+}
+
+export function createInOutAnimation({
+  baseStyles,
+  enterStyles,
+  exitStyles,
+}: CreateInOutAnimationOptions) {
+  return (props: InOutAnimationProps) => (
+    <InOutAnimation
+      baseStyles={baseStyles}
+      enterStyles={enterStyles}
+      exitStyles={exitStyles}
+      {...props}
+    />
+  );
 }
 
 export function InOutAnimation({
