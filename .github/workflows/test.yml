@@ -35,8 +35,7 @@ jobs:
         run: yarn bojagi deploy
         env:
           BOJAGI_SECRET: ${{secrets.BOJAGI_SECRET}}
-      - name: Build
-        run: yarn build
-      - uses: andresz1/size-limit-action@v1.5.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # TODO: Add back in when this size-limit has been merged to main, as it is running it there as well
+      # - uses: andresz1/size-limit-action@v1.5.1
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
