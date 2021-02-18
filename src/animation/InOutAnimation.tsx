@@ -8,9 +8,9 @@ export interface InnerInOutAnimationProps {
   duration: number;
   selfWidth?: number;
   selfHeight?: number;
-  baseStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  enterStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  exitStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  baseStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  enterStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  exitStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
 }
 
 export const InnerInOutAnimation = styled.div<InnerInOutAnimationProps>`
@@ -32,9 +32,9 @@ interface InOutAnimationProps {
   visible: boolean;
   duration: number;
   onExited?: () => void;
-  baseStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  enterStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  exitStyles: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  baseStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  enterStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  exitStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
   children: ReactNode;
 }
 

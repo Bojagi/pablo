@@ -53,7 +53,10 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
   const handleAddMessage = React.useCallback(
     (messageOptions: ToastMessageOptions) => {
       const id = messageOptions.id || createUniqueId('toast-message');
-      const duration = messageOptions.duration ?? DEFAULT_DURATION;
+      const duration =
+        messageOptions.duration || messageOptions.duration === 0
+          ? messageOptions.duration
+          : DEFAULT_DURATION;
       if (duration) {
         setTimeout(() => hideMessage(id), duration);
       }
