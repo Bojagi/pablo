@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render button bar 1`] = `
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c1 {
   margin-left: 4px;
   margin-right: 4px;
@@ -27,6 +37,9 @@ exports[`Render button bar 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #ffffff;
+  background: #6A50F2;
+  border-color: #6A50F2;
 }
 
 .c1:not(:disabled) {
@@ -38,27 +51,11 @@ exports[`Render button bar 1`] = `
   cursor: normal;
 }
 
-.c3 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c2 {
-  color: #ffffff;
-  background: #6A50F2;
-  border-color: #6A50F2;
-}
-
-.c2:focus {
+.c1:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c2:hover:not(:disabled) {
+.c1:hover:not(:disabled) {
   background: #301A9E;
   border-color: #301A9E;
 }
@@ -81,23 +78,23 @@ exports[`Render button bar 1`] = `
     data-testid="pbl-buttonbar"
   >
     <button
-      class="c1 c2"
+      class="c1"
       color="brand"
       data-testid="pbl-button"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Button 1
       </span>
     </button>
     <button
-      class="c1 c2"
+      class="c1"
       color="brand"
       data-testid="pbl-button"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Button 2
       </span>

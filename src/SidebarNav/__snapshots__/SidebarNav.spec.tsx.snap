@@ -6,6 +6,16 @@ exports[`Render multiple nav items 1`] = `
   border-left: 1px solid #00000020;
 }
 
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -18,13 +28,13 @@ exports[`Render multiple nav items 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  margin: 8px 0;
 }
 
 .c1:not(:disabled) {
@@ -36,30 +46,42 @@ exports[`Render multiple nav items 1`] = `
   cursor: normal;
 }
 
+.c1:hover {
+  background-color: #EBE7FF;
+}
+
 .c3 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  outline: none;
   margin: 8px 0;
-}
-
-.c2:hover {
   background-color: #EBE7FF;
 }
 
-.c4 {
-  margin: 8px 0;
-  background-color: #EBE7FF;
+.c3:not(:disabled) {
+  cursor: pointer;
 }
 
-.c4:hover {
+.c3:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c3:hover {
   background-color: #EBE7FF;
 }
 
@@ -69,31 +91,31 @@ exports[`Render multiple nav items 1`] = `
     data-testid="pbl-sidebarnav"
   >
     <li
-      class="c1 c2"
+      class="c1"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Hello
       </span>
     </li>
     <li
-      class="c1 c4"
+      class="c3"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c3"
+        class="c2"
       >
         World
       </span>
     </li>
     <li
-      class="c1 c2"
+      class="c1"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Bye
       </span>
@@ -108,6 +130,16 @@ exports[`Render one nav item 1`] = `
   border-left: 1px solid #00000020;
 }
 
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -120,13 +152,14 @@ exports[`Render one nav item 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  margin: 8px 0;
+  background-color: #EBE7FF;
 }
 
 .c1:not(:disabled) {
@@ -138,22 +171,7 @@ exports[`Render one nav item 1`] = `
   cursor: normal;
 }
 
-.c3 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c2 {
-  margin: 8px 0;
-  background-color: #EBE7FF;
-}
-
-.c2:hover {
+.c1:hover {
   background-color: #EBE7FF;
 }
 
@@ -163,11 +181,11 @@ exports[`Render one nav item 1`] = `
     data-testid="pbl-sidebarnav"
   >
     <li
-      class="c1 c2"
+      class="c1"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Hello
       </span>

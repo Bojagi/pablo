@@ -10,6 +10,16 @@ exports[`Render first selected 1`] = `
   display: flex;
 }
 
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c1 {
   margin-left: 4px;
   margin-right: 4px;
@@ -24,13 +34,19 @@ exports[`Render first selected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #000000;
+  position: relative;
+  padding: 8px 12px;
+  margin: 0 0 4px;
+  color: #6A50F2;
+  padding: 8px 12px 12px;
+  margin: 0;
 }
 
 .c1:not(:disabled) {
@@ -42,35 +58,15 @@ exports[`Render first selected 1`] = `
   cursor: normal;
 }
 
-.c3 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c2 {
-  color: #000000;
-  position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
-  color: #6A50F2;
-  padding: 8px 12px 12px;
-  margin: 0;
-}
-
-.c2:hover {
+.c1:hover {
   background-color: #EBE7FF;
 }
 
-.c2:focus {
+.c1:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c2:after {
+.c1:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -82,18 +78,46 @@ exports[`Render first selected 1`] = `
   background-color: #6A50F2;
 }
 
-.c4 {
+.c3 {
+  margin-left: 4px;
+  margin-right: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  outline: none;
   color: #000000;
   position: relative;
   padding: 8px 12px;
   margin: 0 0 4px;
 }
 
-.c4:hover {
+.c3:not(:disabled) {
+  cursor: pointer;
+}
+
+.c3:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c3:hover {
   background-color: #EBE7FF;
 }
 
-.c4:focus {
+.c3:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
@@ -102,34 +126,34 @@ exports[`Render first selected 1`] = `
     class="c0"
   >
     <button
-      class="c1 c2"
+      class="c1"
       data-testid="pbl-tab"
       name="hello"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Hello
       </span>
     </button>
     <button
-      class="c1 c4"
+      class="c3"
       data-testid="pbl-tab"
       name="world"
     >
       <span
-        class="c3"
+        class="c2"
       >
         World
       </span>
     </button>
     <button
-      class="c1 c4"
+      class="c3"
       data-testid="pbl-tab"
       name="bye"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Bye
       </span>
@@ -148,6 +172,16 @@ exports[`Render tabs with icons 1`] = `
   display: flex;
 }
 
+.c3 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c1 {
   margin-left: 4px;
   margin-right: 4px;
@@ -162,13 +196,16 @@ exports[`Render tabs with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #000000;
+  position: relative;
+  padding: 8px 12px;
+  margin: 0 0 4px;
 }
 
 .c1:not(:disabled) {
@@ -180,32 +217,34 @@ exports[`Render tabs with icons 1`] = `
   cursor: normal;
 }
 
-.c4 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c2 {
-  color: #000000;
-  position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
-}
-
-.c2:hover {
+.c1:hover {
   background-color: #EBE7FF;
 }
 
-.c2:focus {
+.c1:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c5 {
+.c4 {
+  margin-left: 4px;
+  margin-right: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  outline: none;
   color: #000000;
   position: relative;
   padding: 8px 12px;
@@ -215,15 +254,24 @@ exports[`Render tabs with icons 1`] = `
   margin: 0;
 }
 
-.c5:hover {
+.c4:not(:disabled) {
+  cursor: pointer;
+}
+
+.c4:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c4:hover {
   background-color: #EBE7FF;
 }
 
-.c5:focus {
+.c4:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c5:after {
+.c4:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -235,7 +283,7 @@ exports[`Render tabs with icons 1`] = `
   background-color: #6A50F2;
 }
 
-.c3 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -245,7 +293,7 @@ exports[`Render tabs with icons 1`] = `
   height: 20px;
 }
 
-.c3 > * {
+.c2 > * {
   width: 20px;
   height: 20px;
 }
@@ -255,12 +303,12 @@ exports[`Render tabs with icons 1`] = `
     class="c0"
   >
     <button
-      class="c1 c2"
+      class="c1"
       data-testid="pbl-tab"
       name="first"
     >
       <div
-        class="c3"
+        class="c2"
       >
         <div
           data-testid="icon1"
@@ -269,18 +317,18 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="c3"
       >
         First tab
       </span>
     </button>
     <button
-      class="c1 c5"
+      class="c4"
       data-testid="pbl-tab"
       name="second"
     >
       <div
-        class="c3"
+        class="c2"
       >
         <div
           data-testid="icon2"
@@ -289,18 +337,18 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="c3"
       >
         Second tab
       </span>
     </button>
     <button
-      class="c1 c2"
+      class="c1"
       data-testid="pbl-tab"
       name="third"
     >
       <div
-        class="c3"
+        class="c2"
       >
         <div
           data-testid="icon3"
@@ -309,7 +357,7 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="c3"
       >
         Third tab
       </span>
@@ -328,6 +376,16 @@ exports[`Work with one tab 1`] = `
   display: flex;
 }
 
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c1 {
   margin-left: 4px;
   margin-right: 4px;
@@ -342,13 +400,19 @@ exports[`Work with one tab 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #000000;
+  position: relative;
+  padding: 8px 12px;
+  margin: 0 0 4px;
+  color: #6A50F2;
+  padding: 8px 12px 12px;
+  margin: 0;
 }
 
 .c1:not(:disabled) {
@@ -360,35 +424,15 @@ exports[`Work with one tab 1`] = `
   cursor: normal;
 }
 
-.c3 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c2 {
-  color: #000000;
-  position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
-  color: #6A50F2;
-  padding: 8px 12px 12px;
-  margin: 0;
-}
-
-.c2:hover {
+.c1:hover {
   background-color: #EBE7FF;
 }
 
-.c2:focus {
+.c1:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c2:after {
+.c1:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -405,12 +449,12 @@ exports[`Work with one tab 1`] = `
     class="c0"
   >
     <button
-      class="c1 c2"
+      class="c1"
       data-testid="pbl-tab"
       name="hello"
     >
       <span
-        class="c3"
+        class="c2"
       >
         Hello
       </span>

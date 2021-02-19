@@ -18,6 +18,7 @@ version-resolver:
       - 'fix'
       - 'chore'
       - 'refactor'
+      - 'performance'
       - 'patch'
   default: patch
 
@@ -37,6 +38,9 @@ categories:
   - title: '👻 Internal changes'
     labels: 
       - 'refactor'
+  - title: '🏎 Performance improvements'
+    labels: 
+      - 'performance'
   - title: '🧰 Maintenance'
     labels: 
       - 'chore'
@@ -66,6 +70,9 @@ autolabeler:
   - label: 'refactor'
     title:
       - '/^refactor/i'
+  - label: 'performance'
+    title:
+      - '/^perf/i'
   - label: 'chore'
     title:
       - '/^chore/i'
