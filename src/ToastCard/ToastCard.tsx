@@ -30,6 +30,8 @@ export interface ToastCardProps extends BoxProps {
   onClose?: () => void;
 }
 
+const ALLOWED_TYPES: ToastType[] = ['info', 'success', 'warning', 'error'];
+
 const iconColors: Record<ToastType, string> = {
   info: 'common.white',
   success: 'positive.main',
@@ -44,7 +46,7 @@ const icons: Record<ToastType, ReactElement> = {
   error: <ErrorIcon />,
 };
 
-const displayBlockIconsCss = css`
+const displayBlockIconsCss = css<BoxProps>`
   & > * {
     display: block;
   }
@@ -53,38 +55,51 @@ const displayBlockIconsCss = css`
 export function ToastCard({
   title,
   description,
-  type,
+  type: typeProp,
   icon,
   closable = false,
   onClose = () => {},
   ...props
 }: ToastCardProps) {
+  const type = typeProp === undefined || ALLOWED_TYPES.includes(typeProp) ? typeProp : 'info';
   const color = useComponentStyle('toastCard.color') as string;
+
   return (
-    <CardWrapper {...props}>
+    <CardWrapper data-testid="pbl-toastcard" {...props}>
       <Box flex alignItems={description ? 'flex-start' : 'center'}>
         {(type || icon) && (
           <Box
             mr={1.5}
             display="inline-block"
+            data-testid="pbl-toastcard-iconbox"
             fillColor={iconColors[type || 'info'] as ColorPath}
             css={displayBlockIconsCss}
           >
-            {icon || icons[type || 'info']}
+            {icon || icons[type!]}
           </Box>
         )}
         <Box flexGrow={1}>
           <Box flex>
-            <Subtitle flexGrow={1} inline={!description}>
+            <Subtitle data-testid="pbl-toastcard-title" flexGrow={1} inline={!description}>
               {title}
             </Subtitle>
             {closable && (
-              <IconButton mx={-1} onClick={onClose} size="small" fillColor={color}>
+              <IconButton
+                data-testid="pbl-toastcard-closebtn"
+                mx={-1}
+                onClick={onClose}
+                size="small"
+                fillColor={color}
+              >
                 <CloseIcon />
               </IconButton>
             )}
           </Box>
-          {description && <Paragraph inline>{description}</Paragraph>}
+          {description && (
+            <Paragraph inline data-testid="pbl-toastcard-description">
+              {description}
+            </Paragraph>
+          )}
         </Box>
       </Box>
     </CardWrapper>

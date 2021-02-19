@@ -6,6 +6,7 @@ import { StackAnimation } from '../animation/StackAnimation';
 import { toastMessageReducer } from './toastMessageReducer';
 import { ToastStack } from './ToastStack';
 import { ToastMessageOptions, ToastStackSide } from './types';
+import { useMountedRef } from '../utils/useMountedRef';
 
 const DEFAULT_DURATION = 3000;
 export const FADE_DURATION = 300;
@@ -26,29 +27,38 @@ export interface ToastProviderProps {
 
 export function ToastProvider({ children, side = 'bottom-right' }: ToastProviderProps) {
   const [messages, dispatchMessage] = useReducer(toastMessageReducer, []);
+  const mountedRef = useMountedRef();
 
-  const addMessage = React.useCallback(
-    (message: ToastMessageOptions) =>
-      dispatchMessage({
-        type: 'add',
-        message,
-      }),
-    []
+  const addMessage = React.useCallback((message: ToastMessageOptions) => {
+    dispatchMessage({
+      type: 'add',
+      message,
+    });
+  }, []);
+
+  const removeMessage = React.useCallback(
+    (id: string) => {
+      if (mountedRef.current) {
+        dispatchMessage({
+          type: 'remove',
+          id,
+        });
+      }
+    },
+    [mountedRef]
   );
 
-  const removeMessage = React.useCallback((id: string) => {
-    dispatchMessage({
-      type: 'remove',
-      id,
-    });
-  }, []);
-
-  const hideMessage = React.useCallback((id: string) => {
-    dispatchMessage({
-      type: 'hide',
-      id,
-    });
-  }, []);
+  const hideMessage = React.useCallback(
+    (id: string) => {
+      if (mountedRef.current) {
+        dispatchMessage({
+          type: 'hide',
+          id,
+        });
+      }
+    },
+    [mountedRef]
+  );
 
   const handleAddMessage = React.useCallback(
     (messageOptions: ToastMessageOptions) => {

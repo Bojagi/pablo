@@ -47,5 +47,9 @@ const ToastStackBox = styled.div<ToastStackProps>`
 `;
 
 export function ToastStack({ children, side }: ToastStackProps) {
-  return <ToastStackBox side={side}>{children}</ToastStackBox>;
+  return (
+    <ToastStackBox data-testid="pbl-toaststack" side={side}>
+      {children}
+    </ToastStackBox>
+  );
 }

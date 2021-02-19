@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from 'react';
 import Transition, { TransitionStatus } from 'react-transition-group/Transition';
 import styled, { FlattenInterpolation, FlattenSimpleInterpolation } from 'styled-components';
 import useResizeObserver from 'use-resize-observer';
+import { useMountedRef } from '../utils/useMountedRef';
 
 export interface InnerInOutAnimationProps {
   state: TransitionStatus;
@@ -70,11 +71,12 @@ export function InOutAnimation({
 }: InOutAnimationProps) {
   const [animationIn, setAnimationIn] = useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
+  const mountedRef = useMountedRef();
   const { width, height } = useResizeObserver<HTMLDivElement>({ ref });
 
   React.useEffect(() => {
-    setTimeout(() => setAnimationIn(visible));
-  }, [visible]);
+    setTimeout(() => mountedRef.current && setAnimationIn(visible));
+  }, [visible, mountedRef]);
 
   return (
     <Transition in={animationIn} appear timeout={duration} onExited={onExited}>
