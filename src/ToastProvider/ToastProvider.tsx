@@ -72,6 +72,7 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
       }
       addMessage({
         ...messageOptions,
+        closable: !duration ? true : messageOptions.closable,
         id,
       });
     },

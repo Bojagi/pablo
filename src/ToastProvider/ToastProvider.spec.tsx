@@ -187,7 +187,6 @@ test('Should not hide message after time when duration is 0', () => {
   const { getByTestId } = renderComponent({
     duration: 0,
     type: 'success',
-    closable: true,
     side: 'top-right',
   });
 
