@@ -42,7 +42,7 @@ export const paddingInterpolateFn = interpolateFnFactory<BoxPaddingProps>(
   ['pl', 'padding-left', transformSpacing]
 );
 
-function transformSpacing(value: string | number | InterpolateFn<any>) {
+export function transformSpacing(value: string | number | InterpolateFn<any>) {
   if (typeof value !== 'number') {
     return value;
   }

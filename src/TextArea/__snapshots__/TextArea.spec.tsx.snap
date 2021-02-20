@@ -2,41 +2,61 @@
 
 exports[`Render without value 1`] = `
 .c0 {
-  width: 500px;
-  resize: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
+  width: 500px;
 }
 
-.c0:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+.c1 {
+  resize: none;
+  border: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
 }
 
 <div>
   <div
     class=""
-    rows="3"
   >
-    <textarea
+    <div
       class="c0"
-      data-testid="pbl-textarea"
-      id="custom-id"
+      data-testid="pbl-textarea-wrapper"
+      name="textarea"
       rows="3"
       width="500"
-    />
+    >
+      <textarea
+        class="c1"
+        data-testid="pbl-textarea"
+        id="custom-id"
+        rows="3"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`Show error when an error message is given 1`] = `
-.c1 {
+.c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -49,44 +69,64 @@ exports[`Show error when an error message is given 1`] = `
 }
 
 .c0 {
-  width: 500px;
-  resize: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
   border-color: #F44336;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+  width: 500px;
 }
 
 .c0:focus {
   box-shadow: 0 0 0 3px #FFD3D0;
 }
 
+.c1 {
+  resize: none;
+  border: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
+}
+
 <div>
   <div
     class=""
-    rows="3"
   >
-    <textarea
+    <div
       class="c0"
-      data-testid="pbl-textarea"
-      id="custom-id"
+      data-testid="pbl-textarea-wrapper"
+      name="textarea"
       rows="3"
       width="500"
     >
-      some
-    </textarea>
+      <textarea
+        class="c1"
+        data-testid="pbl-textarea"
+        id="custom-id"
+        rows="3"
+      >
+        some
+      </textarea>
+    </div>
     <p
-      class="c1"
+      class="c2"
       color="negative.main"
       data-testid="pbl-textarea-infotext"
     >
@@ -101,7 +141,7 @@ exports[`Show error when an error message is given 1`] = `
 `;
 
 exports[`Show infotext when available 1`] = `
-.c1 {
+.c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -114,39 +154,59 @@ exports[`Show infotext when available 1`] = `
 }
 
 .c0 {
-  width: 500px;
-  resize: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
+  width: 500px;
 }
 
-.c0:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+.c1 {
+  resize: none;
+  border: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
 }
 
 <div>
   <div
     class=""
-    rows="3"
   >
-    <textarea
+    <div
       class="c0"
-      data-testid="pbl-textarea"
-      id="custom-id"
+      data-testid="pbl-textarea-wrapper"
+      name="textarea"
       rows="3"
       width="500"
     >
-      some
-    </textarea>
+      <textarea
+        class="c1"
+        data-testid="pbl-textarea"
+        id="custom-id"
+        rows="3"
+      >
+        some
+      </textarea>
+    </div>
     <p
-      class="c1"
+      class="c2"
       color="text.info"
       data-testid="pbl-textarea-infotext"
     >
@@ -173,27 +233,40 @@ exports[`Show label when available 1`] = `
 }
 
 .c1 {
-  width: 500px;
-  resize: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
+  width: 500px;
 }
 
-.c1:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+.c2 {
+  resize: none;
+  border: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
 }
 
 <div>
   <div
     class=""
-    rows="3"
   >
     <label
       data-testid="pbl-textarea-label"
@@ -208,15 +281,22 @@ exports[`Show label when available 1`] = `
         </strong>
       </p>
     </label>
-    <textarea
+    <div
       class="c1"
-      data-testid="pbl-textarea"
-      id="custom-id"
+      data-testid="pbl-textarea-wrapper"
+      name="textarea"
       rows="3"
       width="500"
     >
-      some
-    </textarea>
+      <textarea
+        class="c2"
+        data-testid="pbl-textarea"
+        id="custom-id"
+        rows="3"
+      >
+        some
+      </textarea>
+    </div>
   </div>
 </div>
 `;
