@@ -2,39 +2,59 @@
 
 exports[`Render without value 1`] = `
 .c0 {
-  width: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
+  width: 300px;
 }
 
-.c0:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+.c1 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
 }
 
 <div>
   <div
     class=""
   >
-    <input
+    <div
       class="c0"
-      data-testid="pbl-input"
-      id="custom-id"
-      value=""
+      data-testid="pbl-input-wrapper"
+      name="input"
       width="300"
-    />
+    >
+      <input
+        class="c1"
+        data-testid="pbl-input"
+        id="custom-id"
+        value=""
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`Show error when an error message is given 1`] = `
-.c1 {
+.c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -47,40 +67,60 @@ exports[`Show error when an error message is given 1`] = `
 }
 
 .c0 {
-  width: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
   border-color: #F44336;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+  width: 300px;
 }
 
 .c0:focus {
   box-shadow: 0 0 0 3px #FFD3D0;
 }
 
+.c1 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
+}
+
 <div>
   <div
     class=""
   >
-    <input
+    <div
       class="c0"
-      data-testid="pbl-input"
-      id="custom-id"
-      value="some"
+      data-testid="pbl-input-wrapper"
+      name="input"
       width="300"
-    />
+    >
+      <input
+        class="c1"
+        data-testid="pbl-input"
+        id="custom-id"
+        value="some"
+      />
+    </div>
     <p
-      class="c1"
+      class="c2"
       color="negative.main"
       data-testid="pbl-input-infotext"
     >
@@ -95,7 +135,7 @@ exports[`Show error when an error message is given 1`] = `
 `;
 
 exports[`Show infotext when available 1`] = `
-.c1 {
+.c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -108,35 +148,55 @@ exports[`Show infotext when available 1`] = `
 }
 
 .c0 {
-  width: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
+  width: 300px;
 }
 
-.c0:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+.c1 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
 }
 
 <div>
   <div
     class=""
   >
-    <input
+    <div
       class="c0"
-      data-testid="pbl-input"
-      id="custom-id"
-      value="some"
+      data-testid="pbl-input-wrapper"
+      name="input"
       width="300"
-    />
+    >
+      <input
+        class="c1"
+        data-testid="pbl-input"
+        id="custom-id"
+        value="some"
+      />
+    </div>
     <p
-      class="c1"
+      class="c2"
       color="text.info"
       data-testid="pbl-input-infotext"
     >
@@ -163,20 +223,34 @@ exports[`Show label when available 1`] = `
 }
 
 .c1 {
-  width: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-sizing: border-box;
-  padding: 6px 12px;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
-  font-family: "IBM Plex Sans",sans-serif;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  outline: none;
+  width: 300px;
 }
 
-.c1:focus {
-  box-shadow: 0 0 0 3px #EBE7FF;
+.c2 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  padding: 6px 10px;
+  background-color: transparent;
+  font-family: "IBM Plex Sans",sans-serif;
+  outline: none;
 }
 
 <div>
@@ -196,13 +270,19 @@ exports[`Show label when available 1`] = `
         </strong>
       </p>
     </label>
-    <input
+    <div
       class="c1"
-      data-testid="pbl-input"
-      id="custom-id"
-      value="some"
+      data-testid="pbl-input-wrapper"
+      name="input"
       width="300"
-    />
+    >
+      <input
+        class="c2"
+        data-testid="pbl-input"
+        id="custom-id"
+        value="some"
+      />
+    </div>
   </div>
 </div>
 `;
