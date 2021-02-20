@@ -32,7 +32,7 @@ test('Render multiple nav items', () => {
   expect(allSidebarNav[1]).toHaveTextContent('World');
   expect(allSidebarNav[2]).toHaveTextContent('Bye');
   expect(allSidebarNav[0]).toHaveStyleRule('background-color', undefined);
-  expect(allSidebarNav[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light);
+  expect(allSidebarNav[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.lightest);
   expect(allSidebarNav[2]).toHaveStyleRule('background-color', undefined);
 });
 

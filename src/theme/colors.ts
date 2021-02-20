@@ -1,7 +1,9 @@
 export type ShadedColor = {
   main: string;
   dark: string;
+  darkest: string;
   light: string;
+  lightest: string;
   contrastText: string;
   contrastTextLight: string;
 };
@@ -20,7 +22,7 @@ export type TextColors = {
 
 export type BorderColors = {
   main: string;
-  light: string;
+  lightest: string;
 };
 
 export interface GrayColors {
@@ -73,37 +75,45 @@ export const colors: Colors = {
   },
   borders: {
     main: `${BLACK}${getHexByte(0.25)}`,
-    light: `${BLACK}${getHexByte(0.1)}`,
+    lightest: `${BLACK}${getHexByte(0.1)}`,
   },
   text: {
     main: BLACK,
     info: `${BLACK}${getHexByte(0.5)}`,
   },
   brand: {
-    light: '#EBE7FF',
+    lightest: '#EBE7FF',
+    light: '#D6CEFF',
     main: '#6A50F2',
-    dark: '#301A9E',
+    dark: '#4129BD',
+    darkest: '#281683',
     contrastText: WHITE,
     contrastTextLight: BLACK,
   },
   positive: {
-    light: '#C7F8D6',
-    main: '#35D968',
-    dark: '#30C35E',
+    lightest: '#DFF6E6',
+    light: '#BBECCB',
+    main: '#38C765',
+    dark: '#2FB85A',
+    darkest: '#108B36',
     contrastText: WHITE,
     contrastTextLight: BLACK,
   },
   negative: {
-    light: '#FFD3D0',
-    main: '#F44336',
-    dark: '#C92C21',
+    lightest: '#FFE7E5',
+    light: '#FFCFCC',
+    main: '#F21D0D',
+    dark: '#CA271B',
+    darkest: '#871A12',
     contrastText: WHITE,
     contrastTextLight: BLACK,
   },
   neutral: {
-    light: '#FCF5DB',
+    lightest: '#FCF5DB',
+    light: '#FFEB9E',
     main: '#FFDD5B',
-    dark: '#E4BB1B',
+    dark: '#EDC52A',
+    darkest: '#D6AC0B',
     contrastText: WHITE,
     contrastTextLight: BLACK,
   },

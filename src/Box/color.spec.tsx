@@ -5,11 +5,11 @@ const theme: any = {
   colors: {
     brand: {
       main: 'mainBrand',
-      light: 'lightBrand',
+      lightest: 'lightestBrand',
     },
     neutral: {
       main: 'mainNeutral',
-      light: 'lightNeutral',
+      lightest: 'lightestNeutral',
     },
   },
 };
@@ -32,10 +32,10 @@ describe.each([
     expect(elem).toHaveStyleRule(cssPropName, 'mainBrand');
     testOthersNegative(prop, elem);
   });
-  test('pass "brand.light', () => {
-    const props = { theme, [prop]: 'brand.light' };
+  test('pass "brand.lightest', () => {
+    const props = { theme, [prop]: 'brand.lightest' };
     const elem = renderStyledComponent(props, colorInterpolateFn);
-    expect(elem).toHaveStyleRule(cssPropName, 'lightBrand');
+    expect(elem).toHaveStyleRule(cssPropName, 'lightestBrand');
     testOthersNegative(prop, elem);
   });
   test('pass "neutral.main', () => {
@@ -44,10 +44,10 @@ describe.each([
     expect(elem).toHaveStyleRule(cssPropName, 'mainNeutral');
     testOthersNegative(prop, elem);
   });
-  test('pass "neutral.light', () => {
-    const props = { theme, [prop]: 'neutral.light' };
+  test('pass "neutral.lightest', () => {
+    const props = { theme, [prop]: 'neutral.lightest' };
     const elem = renderStyledComponent(props, colorInterpolateFn);
-    expect(elem).toHaveStyleRule(cssPropName, 'lightNeutral');
+    expect(elem).toHaveStyleRule(cssPropName, 'lightestNeutral');
     testOthersNegative(prop, elem);
   });
 });

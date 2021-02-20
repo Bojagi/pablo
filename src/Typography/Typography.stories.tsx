@@ -32,19 +32,19 @@ export const ColoredTypography = () => (
       <Typography mb={1} color="negative.main" variant="subtitle">
         Subtitle
       </Typography>
-      <Typography mb={1} color="positive.dark" variant="paragraph">
+      <Typography mb={1} color="positive.darkest" variant="paragraph">
         Paragraph
       </Typography>
-      <Typography mb={1} color="positive.light" variant="paragraphBold">
+      <Typography mb={1} color="positive.lightest" variant="paragraphBold">
         Paragraph Bold
       </Typography>
-      <Typography mb={1} color="brand.light" variant="info">
+      <Typography mb={1} color="brand.lightest" variant="info">
         Info Text
       </Typography>
-      <Typography mb={1} color="brand.dark" variant="infoBold">
+      <Typography mb={1} color="brand.darkest" variant="infoBold">
         Info Text Bold
       </Typography>
-      <Typography mb={1} color="neutral.dark" variant="button">
+      <Typography mb={1} color="neutral.darkest" variant="button">
         Button
       </Typography>
     </div>

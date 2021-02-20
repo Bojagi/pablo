@@ -20,7 +20,7 @@ export const Tabs = ({ children, selected, onSelect, ...props }: TabsProps) => {
           key: child.props.name,
           mx: gap,
           onClick: child.props.onClick || (() => onSelect && onSelect(child.props.name)),
-          active: selected ? selected === child.props.name : child.props.active,
+          selected: selected ? selected === child.props.name : child.props.selected,
         })
       )}
     </Box>

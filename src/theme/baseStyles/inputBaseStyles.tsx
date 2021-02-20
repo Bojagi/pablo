@@ -33,7 +33,7 @@ export const inputBaseStyles: InputBaseStyles = {
   backgroundColor: getColor('common', 'white'),
   focus: {
     outlineSize: getSpacing(0.375),
-    outlineColor: getColor('brand', 'light'),
+    outlineColor: getColor('brand', 'lightest'),
   },
   transitions: [
     ['border-color', '0.3s'],
@@ -42,7 +42,7 @@ export const inputBaseStyles: InputBaseStyles = {
   error: {
     borderColor: getColor('negative'),
     focus: {
-      outlineColor: getColor('negative', 'light'),
+      outlineColor: getColor('negative', 'lightest'),
     },
   },
 };

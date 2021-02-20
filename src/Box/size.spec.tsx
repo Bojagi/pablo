@@ -5,7 +5,7 @@ const theme: any = {
   colors: {
     borders: {
       main: 'mainBorders',
-      light: 'lightBorders',
+      lightest: 'lightestBorders',
     },
   },
 };

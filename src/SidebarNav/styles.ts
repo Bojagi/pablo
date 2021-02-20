@@ -6,6 +6,14 @@ export interface SidebarNavItemStyles {
   marginY: Style;
   active: {
     backgroundColor: Style;
+    outlineSize: Style;
+  };
+  focus: {
+    outlineColor: Style;
+    outlineSize: Style;
+  };
+  selected: {
+    backgroundColor: Style;
   };
   hover: {
     backgroundColor: Style;
@@ -19,15 +27,22 @@ export interface SidebarNavStyles {
 }
 
 export const sidebarNavStyles = {
-  borderLeft: 'light',
+  borderLeft: 'lightest',
   borderLeftSpacing: 2,
   item: {
     marginY: getSpacing(1),
+    focus: {
+      outlineColor: getColor('brand', 'lightest'),
+      outlineSize: getSpacing(0.5),
+    },
     active: {
       backgroundColor: getColor('brand', 'light'),
     },
+    selected: {
+      backgroundColor: getColor('brand', 'lightest'),
+    },
     hover: {
-      backgroundColor: getColor('brand', 'light'),
+      backgroundColor: getColor('brand', 'lightest'),
     },
   },
 };

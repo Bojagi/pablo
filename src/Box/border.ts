@@ -21,7 +21,7 @@ export const borderInterpolateFn = interpolateFnFactory<BoxBorderProps>(
 );
 
 function buildBorderStyle(value) {
-  if (value === true || value === 'main' || value === 'light') {
+  if (value === true || value === 'main' || value === 'lightest') {
     return css`1px solid ${getBorderColor(value)}`;
   }
 

@@ -18,49 +18,68 @@ export interface ButtonProps extends Omit<ButtonBaseProps, 'color'>, Omit<BoxPro
   className?: string;
 }
 
-const getButtonOutlineShadow = (color: Style) => css`
+const getButtonFocusOutlineShadow = (color: Style) => css`
   box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')} ${color};
 `;
 
 const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
-  color: ${getComponentStyle('button.primary.{color}.color')};
-  background: ${getComponentStyle('button.primary.{color}.backgroundColor')};
-  border-color: ${getComponentStyle('button.primary.{color}.borderColor')};
+  color: ${getComponentStyle('button.{color}.primary.color')};
+  background: ${getComponentStyle('button.{color}.primary.backgroundColor')};
+  border-color: ${getComponentStyle('button.{color}.primary.borderColor')};
 
   &:focus {
-    ${getButtonOutlineShadow(getComponentStyle('button.primary.{color}.focus.outlineColor'))}
+    ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
   &:hover:not(:disabled) {
-    background: ${getComponentStyle('button.primary.{color}.hover.backgroundColor')};
-    border-color: ${getComponentStyle('button.primary.{color}.hover.borderColor')};
+    background: ${getComponentStyle('button.{color}.primary.hover.backgroundColor')};
+    border-color: ${getComponentStyle('button.{color}.primary.hover.borderColor')};
+  }
+
+  &:active:not(:disabled) {
+    color: ${getComponentStyle('button.{color}.primary.active.color')};
+    background: ${getComponentStyle('button.{color}.primary.active.backgroundColor')};
+    border-color: ${getComponentStyle('button.{color}.primary.active.borderColor')};
   }
 `;
 
 const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
-  color: ${getComponentStyle('button.secondary.{color}.color')};
-  border-color: ${getComponentStyle('button.secondary.{color}.borderColor')};
+  color: ${getComponentStyle('button.{color}.secondary.color')};
+  border-color: ${getComponentStyle('button.{color}.secondary.borderColor')};
 
   &:focus {
-    ${getButtonOutlineShadow(getComponentStyle('button.primary.{color}.focus.outlineColor'))}
+    ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
   &:hover:not(:disabled) {
-    color: ${getComponentStyle('button.secondary.{color}.hover.color')};
-    background: ${getComponentStyle('button.secondary.{color}.hover.backgroundColor')};
+    color: ${getComponentStyle('button.{color}.secondary.hover.color')};
+    border-color: ${getComponentStyle('button.{color}.secondary.hover.borderColor')};
+    background: ${getComponentStyle('button.{color}.secondary.hover.backgroundColor')};
+  }
+
+  &:active:not(:disabled) {
+    color: ${getComponentStyle('button.{color}.secondary.active.color')};
+    border-color: ${getComponentStyle('button.{color}.secondary.active.borderColor')};
+    background: ${getComponentStyle('button.{color}.secondary.active.backgroundColor')};
   }
 `;
 
 const ButtonText = styled<React.FC<ButtonProps>>(ButtonBase as any)`
-  color: ${getComponentStyle('button.text.{color}.color')};
+  color: ${getComponentStyle('button.{color}.text.color')};
 
   &:focus {
-    ${getButtonOutlineShadow(getComponentStyle('button.primary.{color}.focus.outlineColor'))}
+    ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
   &:hover:not(:disabled) {
-    color: ${getComponentStyle('button.secondary.{color}.hover.color')};
-    background: ${getComponentStyle('button.text.{color}.hover.backgroundColor')};
+    color: ${getComponentStyle('button.{color}.text.hover.color')};
+    background: ${getComponentStyle('button.{color}.text.hover.backgroundColor')};
+  }
+
+  &:active:not(:disabled) {
+    color: ${getComponentStyle('button.{color}.text.active.color')};
+    border-color: ${getComponentStyle('button.{color}.text.active.borderColor')};
+    background: ${getComponentStyle('button.{color}.text.active.backgroundColor')};
   }
 `;
 

@@ -5,7 +5,7 @@ const theme: any = {
   colors: {
     borders: {
       main: 'mainBorders',
-      light: 'lightBorders',
+      lightest: 'lightestBorders',
     },
   },
 };
@@ -38,10 +38,10 @@ describe.each([
     testOthersNegative(prop, elem);
   });
 
-  test('pass main color borders in the props when value is "light"', () => {
-    const props = { theme, [prop]: 'light' };
+  test('pass main color borders in the props when value is "lightest"', () => {
+    const props = { theme, [prop]: 'lightest' };
     const elem = renderStyledComponent(props, borderInterpolateFn);
-    expect(elem).toHaveStyleRule(cssPropName, '1px solid lightBorders');
+    expect(elem).toHaveStyleRule(cssPropName, '1px solid lightestBorders');
     testOthersNegative(prop, elem);
   });
 
