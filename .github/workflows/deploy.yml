@@ -34,4 +34,4 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: deploy
-        run: yarn run deploy
+        run: ./scripts/deploy.sh
