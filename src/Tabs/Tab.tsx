@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { BoxProps } from '../Box';
-import { ButtonBase } from '../ButtonBase';
+import { buttonBaseStyles } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
@@ -13,7 +13,8 @@ export interface TabProps extends BoxProps {
   onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
 }
 
-const TabButton = styled<React.FC<Partial<TabProps>>>((ButtonBase as unknown) as any)`
+const TabButton = styled.button<Partial<TabProps>>`
+  ${buttonBaseStyles}
   color: ${getComponentStyle('tabs.tab.color')};
   position: relative;
   padding: ${getComponentStyle('tabs.tab.padding')};
