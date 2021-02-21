@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import { css } from 'styled-components';
 import { boxInterpolateFn, BoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 
@@ -8,9 +8,7 @@ export interface ButtonBaseProps extends BoxProps {
   onClick?: () => void;
 }
 
-export const ButtonBase = styled.button
-  .withConfig({})
-  .attrs((props: ButtonBaseProps) => ({ size: props.size || 'small' }))<ButtonBaseProps>`
+export const buttonBaseStyles = css<ButtonBaseProps>`
   ${boxInterpolateFn}
   display: flex;
   flex-direction: row;

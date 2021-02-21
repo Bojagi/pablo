@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render button with icon 1`] = `
+.c2 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c0 {
   color: light:#EBE7FF;
   main: #6A50F2;
@@ -25,6 +35,9 @@ exports[`render button with icon 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #ffffff;
+  background: #6A50F2;
+  border-color: #6A50F2;
 }
 
 .c0:not(:disabled) {
@@ -36,32 +49,16 @@ exports[`render button with icon 1`] = `
   cursor: normal;
 }
 
-.c3 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c1 {
-  color: #ffffff;
-  background: #6A50F2;
-  border-color: #6A50F2;
-}
-
-.c1:focus {
+.c0:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c1:hover:not(:disabled) {
+.c0:hover:not(:disabled) {
   background: #301A9E;
   border-color: #301A9E;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,19 +76,19 @@ exports[`render button with icon 1`] = `
   height: 20px;
 }
 
-.c2 > * {
+.c1 > * {
   width: 20px;
   height: 20px;
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
     color="brand"
     data-testid="pbl-button"
   >
     <div
-      class="c2"
+      class="c1"
       data-testid="pbl-button-icon"
     >
       <div>
@@ -99,7 +96,7 @@ exports[`render button with icon 1`] = `
       </div>
     </div>
     <span
-      class="c3"
+      class="c2"
     >
       Hello
     </span>
@@ -108,6 +105,16 @@ exports[`render button with icon 1`] = `
 `;
 
 exports[`render primary brand color button 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c0 {
   color: light:#EBE7FF;
   main: #6A50F2;
@@ -132,6 +139,9 @@ exports[`render primary brand color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #ffffff;
+  background: #6A50F2;
+  border-color: #6A50F2;
 }
 
 .c0:not(:disabled) {
@@ -143,39 +153,23 @@ exports[`render primary brand color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c1 {
-  color: #ffffff;
-  background: #6A50F2;
-  border-color: #6A50F2;
-}
-
-.c1:focus {
+.c0:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c1:hover:not(:disabled) {
+.c0:hover:not(:disabled) {
   background: #301A9E;
   border-color: #301A9E;
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
     color="brand"
     data-testid="pbl-button"
   >
     <span
-      class="c2"
+      class="c1"
     >
       Hello
     </span>
@@ -184,6 +178,16 @@ exports[`render primary brand color button 1`] = `
 `;
 
 exports[`render primary negative color button 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c0 {
   color: light:#FFD3D0;
   main: #F44336;
@@ -208,6 +212,9 @@ exports[`render primary negative color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #ffffff;
+  background: #F44336;
+  border-color: #F44336;
 }
 
 .c0:not(:disabled) {
@@ -219,39 +226,23 @@ exports[`render primary negative color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c1 {
-  color: #ffffff;
-  background: #F44336;
-  border-color: #F44336;
-}
-
-.c1:focus {
+.c0:focus {
   box-shadow: 0 0 0 4px #FFD3D0;
 }
 
-.c1:hover:not(:disabled) {
+.c0:hover:not(:disabled) {
   background: #C92C21;
   border-color: #C92C21;
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
     color="negative"
     data-testid="pbl-button"
   >
     <span
-      class="c2"
+      class="c1"
     >
       Hello
     </span>
@@ -260,6 +251,16 @@ exports[`render primary negative color button 1`] = `
 `;
 
 exports[`render primary plain color button 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c0 {
   color: plain;
   display: -webkit-box;
@@ -280,6 +281,9 @@ exports[`render primary plain color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #000000;
+  background: #f0f0f0;
+  border-color: #e0e0e0;
 }
 
 .c0:not(:disabled) {
@@ -291,39 +295,23 @@ exports[`render primary plain color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c1 {
-  color: #000000;
-  background: #f0f0f0;
-  border-color: #e0e0e0;
-}
-
-.c1:focus {
+.c0:focus {
   box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.c1:hover:not(:disabled) {
+.c0:hover:not(:disabled) {
   background: #e0e0e0;
   border-color: #d0d0d0;
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
     color="plain"
     data-testid="pbl-button"
   >
     <span
-      class="c2"
+      class="c1"
     >
       Hello
     </span>
@@ -332,6 +320,16 @@ exports[`render primary plain color button 1`] = `
 `;
 
 exports[`render primary positive color button 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c0 {
   color: light:#C7F8D6;
   main: #35D968;
@@ -356,6 +354,9 @@ exports[`render primary positive color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #ffffff;
+  background: #35D968;
+  border-color: #35D968;
 }
 
 .c0:not(:disabled) {
@@ -367,39 +368,23 @@ exports[`render primary positive color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c1 {
-  color: #ffffff;
-  background: #35D968;
-  border-color: #35D968;
-}
-
-.c1:focus {
+.c0:focus {
   box-shadow: 0 0 0 4px #C7F8D6;
 }
 
-.c1:hover:not(:disabled) {
+.c0:hover:not(:disabled) {
   background: #30C35E;
   border-color: #30C35E;
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
     color="positive"
     data-testid="pbl-button"
   >
     <span
-      class="c2"
+      class="c1"
     >
       Hello
     </span>
@@ -408,6 +393,16 @@ exports[`render primary positive color button 1`] = `
 `;
 
 exports[`render secondary brand color button 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c0 {
   color: light:#EBE7FF;
   main: #6A50F2;
@@ -432,6 +427,8 @@ exports[`render secondary brand color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #6A50F2;
+  border-color: #6A50F2;
 }
 
 .c0:not(:disabled) {
@@ -443,38 +440,23 @@ exports[`render secondary brand color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c1 {
-  color: #6A50F2;
-  border-color: #6A50F2;
-}
-
-.c1:focus {
+.c0:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c1:hover:not(:disabled) {
+.c0:hover:not(:disabled) {
   color: #301A9E;
   background: #EBE7FF;
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
     color="brand"
     data-testid="pbl-button"
   >
     <span
-      class="c2"
+      class="c1"
     >
       Hello
     </span>
@@ -483,6 +465,16 @@ exports[`render secondary brand color button 1`] = `
 `;
 
 exports[`render secondary negative color button 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
 .c0 {
   color: light:#FFD3D0;
   main: #F44336;
@@ -507,6 +499,8 @@ exports[`render secondary negative color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #F44336;
+  border-color: #F44336;
 }
 
 .c0:not(:disabled) {
@@ -518,7 +512,32 @@ exports[`render secondary negative color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
+.c0:focus {
+  box-shadow: 0 0 0 4px #FFD3D0;
+}
+
+.c0:hover:not(:disabled) {
+  color: #C92C21;
+  background: #FFD3D0;
+}
+
+<div>
+  <button
+    class="c0"
+    color="negative"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render secondary plain color button 1`] = `
+.c1 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -528,36 +547,6 @@ exports[`render secondary negative color button 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #F44336;
-  border-color: #F44336;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px #FFD3D0;
-}
-
-.c1:hover:not(:disabled) {
-  color: #C92C21;
-  background: #FFD3D0;
-}
-
-<div>
-  <button
-    class="c0 c1"
-    color="negative"
-    data-testid="pbl-button"
-  >
-    <span
-      class="c2"
-    >
-      Hello
-    </span>
-  </button>
-</div>
-`;
-
-exports[`render secondary plain color button 1`] = `
 .c0 {
   color: plain;
   display: -webkit-box;
@@ -578,6 +567,8 @@ exports[`render secondary plain color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #000000;
+  border-color: #000000;
 }
 
 .c0:not(:disabled) {
@@ -589,7 +580,32 @@ exports[`render secondary plain color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
+.c0:focus {
+  box-shadow: 0 0 0 4px #f0f0f0;
+}
+
+.c0:hover:not(:disabled) {
+  color: #000000;
+  background: #f0f0f0;
+}
+
+<div>
+  <button
+    class="c0"
+    color="plain"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render secondary positive color button 1`] = `
+.c1 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -599,36 +615,6 @@ exports[`render secondary plain color button 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #000000;
-  border-color: #000000;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
-}
-
-.c1:hover:not(:disabled) {
-  color: #000000;
-  background: #f0f0f0;
-}
-
-<div>
-  <button
-    class="c0 c1"
-    color="plain"
-    data-testid="pbl-button"
-  >
-    <span
-      class="c2"
-    >
-      Hello
-    </span>
-  </button>
-</div>
-`;
-
-exports[`render secondary positive color button 1`] = `
 .c0 {
   color: light:#C7F8D6;
   main: #35D968;
@@ -653,6 +639,8 @@ exports[`render secondary positive color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #35D968;
+  border-color: #35D968;
 }
 
 .c0:not(:disabled) {
@@ -664,7 +652,32 @@ exports[`render secondary positive color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
+.c0:focus {
+  box-shadow: 0 0 0 4px #C7F8D6;
+}
+
+.c0:hover:not(:disabled) {
+  color: #30C35E;
+  background: #C7F8D6;
+}
+
+<div>
+  <button
+    class="c0"
+    color="positive"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render text brand color button 1`] = `
+.c1 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -674,36 +687,6 @@ exports[`render secondary positive color button 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #35D968;
-  border-color: #35D968;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px #C7F8D6;
-}
-
-.c1:hover:not(:disabled) {
-  color: #30C35E;
-  background: #C7F8D6;
-}
-
-<div>
-  <button
-    class="c0 c1"
-    color="positive"
-    data-testid="pbl-button"
-  >
-    <span
-      class="c2"
-    >
-      Hello
-    </span>
-  </button>
-</div>
-`;
-
-exports[`render text brand color button 1`] = `
 .c0 {
   color: light:#EBE7FF;
   main: #6A50F2;
@@ -728,6 +711,7 @@ exports[`render text brand color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #6A50F2;
 }
 
 .c0:not(:disabled) {
@@ -739,7 +723,32 @@ exports[`render text brand color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
+.c0:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c0:hover:not(:disabled) {
+  color: #301A9E;
+  background: #EBE7FF;
+}
+
+<div>
+  <button
+    class="c0"
+    color="brand"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render text negative color button 1`] = `
+.c1 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -749,35 +758,6 @@ exports[`render text brand color button 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #6A50F2;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
-}
-
-.c1:hover:not(:disabled) {
-  color: #301A9E;
-  background: #EBE7FF;
-}
-
-<div>
-  <button
-    class="c0 c1"
-    color="brand"
-    data-testid="pbl-button"
-  >
-    <span
-      class="c2"
-    >
-      Hello
-    </span>
-  </button>
-</div>
-`;
-
-exports[`render text negative color button 1`] = `
 .c0 {
   color: light:#FFD3D0;
   main: #F44336;
@@ -802,6 +782,7 @@ exports[`render text negative color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #F44336;
 }
 
 .c0:not(:disabled) {
@@ -813,7 +794,32 @@ exports[`render text negative color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
+.c0:focus {
+  box-shadow: 0 0 0 4px #FFD3D0;
+}
+
+.c0:hover:not(:disabled) {
+  color: #C92C21;
+  background: #FFD3D0;
+}
+
+<div>
+  <button
+    class="c0"
+    color="negative"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render text plain color button 1`] = `
+.c1 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -823,35 +829,6 @@ exports[`render text negative color button 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #F44336;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px #FFD3D0;
-}
-
-.c1:hover:not(:disabled) {
-  color: #C92C21;
-  background: #FFD3D0;
-}
-
-<div>
-  <button
-    class="c0 c1"
-    color="negative"
-    data-testid="pbl-button"
-  >
-    <span
-      class="c2"
-    >
-      Hello
-    </span>
-  </button>
-</div>
-`;
-
-exports[`render text plain color button 1`] = `
 .c0 {
   color: plain;
   display: -webkit-box;
@@ -872,6 +849,7 @@ exports[`render text plain color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #000000;
 }
 
 .c0:not(:disabled) {
@@ -883,7 +861,32 @@ exports[`render text plain color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
+.c0:focus {
+  box-shadow: 0 0 0 4px #f0f0f0;
+}
+
+.c0:hover:not(:disabled) {
+  color: #000000;
+  background: #f0f0f0;
+}
+
+<div>
+  <button
+    class="c0"
+    color="plain"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render text positive color button 1`] = `
+.c1 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -893,35 +896,6 @@ exports[`render text plain color button 1`] = `
   margin-bottom: 0;
 }
 
-.c1 {
-  color: #000000;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
-}
-
-.c1:hover:not(:disabled) {
-  color: #000000;
-  background: #f0f0f0;
-}
-
-<div>
-  <button
-    class="c0 c1"
-    color="plain"
-    data-testid="pbl-button"
-  >
-    <span
-      class="c2"
-    >
-      Hello
-    </span>
-  </button>
-</div>
-`;
-
-exports[`render text positive color button 1`] = `
 .c0 {
   color: light:#C7F8D6;
   main: #35D968;
@@ -946,6 +920,7 @@ exports[`render text positive color button 1`] = `
   -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
   outline: none;
+  color: #35D968;
 }
 
 .c0:not(:disabled) {
@@ -957,37 +932,23 @@ exports[`render text positive color button 1`] = `
   cursor: normal;
 }
 
-.c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
-}
-
-.c1 {
-  color: #35D968;
-}
-
-.c1:focus {
+.c0:focus {
   box-shadow: 0 0 0 4px #C7F8D6;
 }
 
-.c1:hover:not(:disabled) {
+.c0:hover:not(:disabled) {
   color: #30C35E;
   background: #C7F8D6;
 }
 
 <div>
   <button
-    class="c0 c1"
+    class="c0"
     color="positive"
     data-testid="pbl-button"
   >
     <span
-      class="c2"
+      class="c1"
     >
       Hello
     </span>

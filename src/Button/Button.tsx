@@ -1,7 +1,7 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, FlattenInterpolation } from 'styled-components';
 import { BoxProps } from '../Box';
-import { ButtonBase, ButtonBaseProps, ButtonSize } from '../ButtonBase';
+import { ButtonBaseProps, buttonBaseStyles, ButtonSize } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Style } from '../theme/types';
 import { ButtonTypography } from '../Typography';
@@ -22,7 +22,8 @@ const getButtonOutlineShadow = (color: Style) => css`
   box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')} ${color};
 `;
 
-const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+const ButtonPrimary = styled.button<ButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
   color: ${getComponentStyle('button.primary.{color}.color')};
   background: ${getComponentStyle('button.primary.{color}.backgroundColor')};
   border-color: ${getComponentStyle('button.primary.{color}.borderColor')};
@@ -37,7 +38,8 @@ const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   }
 `;
 
-const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+const ButtonSecondary = styled.button<ButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
   color: ${getComponentStyle('button.secondary.{color}.color')};
   border-color: ${getComponentStyle('button.secondary.{color}.borderColor')};
 
@@ -51,7 +53,8 @@ const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   }
 `;
 
-const ButtonText = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+const ButtonText = styled.button<ButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
   color: ${getComponentStyle('button.text.{color}.color')};
 
   &:focus {
