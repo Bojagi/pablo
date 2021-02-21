@@ -262,6 +262,7 @@ exports[`render primary plain color button 1`] = `
 }
 
 .c0 {
+  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -547,6 +548,7 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .c0 {
+  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -828,6 +830,7 @@ exports[`render text plain color button 1`] = `
 }
 
 .c0 {
+  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

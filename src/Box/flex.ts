@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { Style } from '../theme/types';
 import { interpolateFnFactory } from './interpolateFnFactory';
 
 export type AlignItemsValue =
@@ -39,6 +40,8 @@ export interface BoxFlexProps {
   justifyContent?: JustifyContentValue;
   flexGrow?: number;
   flexShrink?: number;
+  flexBasis?: Style | number;
+
   flex?: boolean;
 }
 
@@ -47,6 +50,7 @@ export const flexInterpolateFn = interpolateFnFactory<BoxFlexProps>(
   ['justifyContent', 'justify-content'],
   ['flexGrow', 'flex-grow'],
   ['flexShrink', 'flex-shrink'],
+  ['flexBasis', 'flex-basis'],
   [
     'flex',
     () => css`

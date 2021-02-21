@@ -12,7 +12,7 @@ export type StyleProp<PropName, P> =
     ]
   | [
       propName: PropName,
-      interpolationFn: () => FlattenSimpleInterpolation | FlattenInterpolation<any>
+      interpolationFn: (props: P) => FlattenSimpleInterpolation | FlattenInterpolation<any>
     ];
 
 export function interpolateFnFactory<P extends Record<string, any>, PK = keyof PPlusThemeable<P>>(
@@ -25,7 +25,7 @@ export function interpolateFnFactory<P extends Record<string, any>, PK = keyof P
 function mapStyle<P extends Record<string, any>, PK = keyof PPlusThemeable<P>>(props) {
   return ([propName, cssAttribute, transformFn]: StyleProp<PK, P>) => {
     if (typeof cssAttribute === 'function') {
-      return cssAttribute();
+      return cssAttribute(props);
     }
 
     if (Array.isArray(cssAttribute)) {

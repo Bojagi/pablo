@@ -46,6 +46,7 @@ exports[`Render closed modal with just a content element 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <body>
@@ -89,6 +90,7 @@ exports[`Render with additional panes 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 .c2 {
@@ -175,6 +177,7 @@ exports[`Render with title 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <div
@@ -226,6 +229,7 @@ exports[`Render with title and topRightItem 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <div
@@ -270,6 +274,7 @@ exports[`Render with topRightItem 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <div

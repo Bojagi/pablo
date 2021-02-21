@@ -15,6 +15,7 @@ import { iconButtonStyles } from '../IconButton/styles';
 import { modalStyles } from '../Modal/styles';
 import { buttonBarStyles } from '../ButtonBar/styles';
 import { linkStyles } from '../Link/styles';
+import { toastCardStyles } from '../ToastCard/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -33,4 +34,5 @@ export const defaultComponentStyles: ComponentStyles = {
   modal: modalStyles,
   buttonBar: buttonBarStyles,
   link: linkStyles,
+  toastCard: toastCardStyles,
 };

@@ -8,16 +8,22 @@ export type ColorPath<
 > = `${string & TName}.${TVariant}`;
 
 export interface BoxColorProps {
-  color?: ColorPath;
-  bgColor?: ColorPath;
+  color?: ColorPath | string;
+  bgColor?: ColorPath | string;
+  fillColor?: ColorPath | string;
 }
 
 export const colorInterpolateFn = interpolateFnFactory<BoxColorProps>(
   ['color', 'color', getColorByPath],
-  ['bgColor', 'background-color', getColorByPath]
+  ['bgColor', 'background-color', getColorByPath],
+  ['fillColor', 'fill', getColorByPath]
 );
 
 function getColorByPath(path: string, { theme }: { theme: PabloTheme }) {
   const splitPath = path.split('.');
-  return splitPath.reduce((acc, key) => acc[key], theme.colors);
+  const pathColor = splitPath.reduce(
+    (acc, key) => (acc && acc[key] ? acc[key] : undefined),
+    theme.colors
+  );
+  return pathColor || path;
 }

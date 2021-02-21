@@ -16,6 +16,8 @@ export * from './Switch';
 export * from './Tabs';
 export * from './TextArea';
 export * from './theme';
+export * from './ToastCard';
+export * from './ToastProvider';
 export * from './Toolbar';
 export * from './Tooltip';
 export * from './Typography';

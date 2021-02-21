@@ -3,7 +3,14 @@ module.exports = (api) => {
   const modernJS = api.env(['esm', 'es']);
 
   const basePresets = modernJS
-    ? []
+    ? [
+        [
+          '@babel/env',
+          {
+            modules: useESModules ? false : 'commonjs',
+          },
+        ],
+      ]
     : [
         [
           '@babel/env',

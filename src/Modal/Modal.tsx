@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled, { css } from 'styled-components';
 import { Box } from '../Box';
 import { Title } from '../Typography';
-import { getComponentStyle } from '../utils/styleHelpers';
+import { getComponentStyle, shadowTransformer } from '../utils/styleHelpers';
 
 export interface TopRightItemProps {
   onClose?: () => void;
@@ -58,6 +58,7 @@ const ModalBox = styled.div`
   border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
   background-color: ${getComponentStyle('modal.box.backgroundColor')};
   padding: ${getComponentStyle('modal.box.padding')};
+  box-shadow: ${getComponentStyle('modal.box.shadow', shadowTransformer)};
 `;
 
 const PaneBox = styled.div`
