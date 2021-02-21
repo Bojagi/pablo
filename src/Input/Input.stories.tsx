@@ -1,5 +1,9 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Search } from 'react-feather';
 import { Box } from '../Box';
+import { IconButton } from '../IconButton';
+import { Typography } from '../Typography';
 import { Input, InputProps } from './Input';
 
 export default {
@@ -69,3 +73,29 @@ export const MultipleInputs = () => (
     </Box>
   </Box>
 );
+
+export const WithEndComponent = baseStory.bind(null);
+WithEndComponent.args = {
+  label: <>search</>,
+  fullWidth: false,
+  width: 600,
+  end: (
+    <IconButton size="small">
+      <Search />
+    </IconButton>
+  ),
+};
+
+export const WithStartComponent = baseStory.bind(null);
+WithStartComponent.args = {
+  fullWidth: false,
+  width: 600,
+  start: (
+    <Typography mb={0} variant="paragraphBold">
+      search:
+    </Typography>
+  ),
+};
+
+export const Outline = baseStory.bind(null);
+Outline.args = { variant: 'outline' };
