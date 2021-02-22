@@ -20,7 +20,6 @@ export interface ModalStyles {
 }
 
 export const modalStyles: ModalStyles = {
-
   backdropColor: getColor('blackOpacity', '600'),
   padding: getSpacing(7),
   gap: getSpacing(5),
