@@ -28,11 +28,13 @@ exports[`Render multiple nav items 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin: 8px 0;
 }
@@ -50,6 +52,14 @@ exports[`Render multiple nav items 1`] = `
   background-color: #EBE7FF;
 }
 
+.c1:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c1:active {
+  background-color: #D6CEFF;
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,11 +72,13 @@ exports[`Render multiple nav items 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin: 8px 0;
   background-color: #EBE7FF;
@@ -83,6 +95,14 @@ exports[`Render multiple nav items 1`] = `
 
 .c3:hover {
   background-color: #EBE7FF;
+}
+
+.c3:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c3:active {
+  background-color: #D6CEFF;
 }
 
 <div>
@@ -152,11 +172,13 @@ exports[`Render one nav item 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin: 8px 0;
   background-color: #EBE7FF;
@@ -173,6 +195,14 @@ exports[`Render one nav item 1`] = `
 
 .c1:hover {
   background-color: #EBE7FF;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c1:active {
+  background-color: #D6CEFF;
 }
 
 <div>

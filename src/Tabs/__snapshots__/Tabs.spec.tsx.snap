@@ -37,8 +37,9 @@ exports[`Render first selected 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
   position: relative;
@@ -64,6 +65,10 @@ exports[`Render first selected 1`] = `
 
 .c1:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c1:active {
+  background-color: #EBE7FF;
 }
 
 .c1:after {
@@ -95,8 +100,9 @@ exports[`Render first selected 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
   position: relative;
@@ -119,6 +125,10 @@ exports[`Render first selected 1`] = `
 
 .c3:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c3:active {
+  background-color: #EBE7FF;
 }
 
 <div>
@@ -199,8 +209,9 @@ exports[`Render tabs with icons 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
   position: relative;
@@ -225,6 +236,10 @@ exports[`Render tabs with icons 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
+.c1:active {
+  background-color: #EBE7FF;
+}
+
 .c4 {
   margin-left: 4px;
   margin-right: 4px;
@@ -242,8 +257,9 @@ exports[`Render tabs with icons 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
   position: relative;
@@ -269,6 +285,10 @@ exports[`Render tabs with icons 1`] = `
 
 .c4:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c4:active {
+  background-color: #EBE7FF;
 }
 
 .c4:after {
@@ -403,8 +423,9 @@ exports[`Work with one tab 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
   position: relative;
@@ -430,6 +451,10 @@ exports[`Work with one tab 1`] = `
 
 .c1:focus {
   box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c1:active {
+  background-color: #EBE7FF;
 }
 
 .c1:after {

@@ -29,8 +29,9 @@ exports[`Render button bar 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #ffffff;
   background: #6A50F2;
@@ -51,8 +52,14 @@ exports[`Render button bar 1`] = `
 }
 
 .c1:hover:not(:disabled) {
-  background: #301A9E;
-  border-color: #301A9E;
+  background: #4129BD;
+  border-color: #4129BD;
+}
+
+.c1:active:not(:disabled) {
+  color: #ffffff;
+  background: #281683;
+  border-color: #281683;
 }
 
 .c0 {

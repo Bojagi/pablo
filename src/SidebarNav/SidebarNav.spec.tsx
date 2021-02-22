@@ -16,7 +16,7 @@ test('Render one nav item', () => {
   const { container } = render(
     <PabloThemeProvider>
       <SidebarNav>
-        <SidebarNavItem active>Hello</SidebarNavItem>
+        <SidebarNavItem selected>Hello</SidebarNavItem>
       </SidebarNav>
     </PabloThemeProvider>
   );
@@ -45,7 +45,7 @@ function getRenderHtml(props) {
     <PabloThemeProvider>
       <SidebarNav onSelect={onSelectMock} {...props}>
         <SidebarNavItem>Hello</SidebarNavItem>
-        <SidebarNavItem active>World</SidebarNavItem>
+        <SidebarNavItem selected>World</SidebarNavItem>
         <SidebarNavItem>Bye</SidebarNavItem>
       </SidebarNav>
     </PabloThemeProvider>

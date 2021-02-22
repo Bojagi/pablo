@@ -77,7 +77,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 
 exports[`type error Render toast card with custom icon 1`] = `
 .c0 {
-  fill: #F44336;
+  fill: #F21D0D;
   margin-right: 12px;
 }
 
@@ -97,7 +97,7 @@ exports[`type error Render toast card with custom icon 1`] = `
 
 exports[`type error Render toast card with only title 1`] = `
 .c2 {
-  fill: #F44336;
+  fill: #F21D0D;
   margin-right: 12px;
 }
 
@@ -323,7 +323,7 @@ exports[`type info Render toast card with only title 1`] = `
 
 exports[`type success Render toast card with custom icon 1`] = `
 .c0 {
-  fill: #35D968;
+  fill: #38C765;
   margin-right: 12px;
 }
 
@@ -343,7 +343,7 @@ exports[`type success Render toast card with custom icon 1`] = `
 
 exports[`type success Render toast card with only title 1`] = `
 .c2 {
-  fill: #35D968;
+  fill: #38C765;
   margin-right: 12px;
 }
 
