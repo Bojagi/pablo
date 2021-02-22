@@ -1,12 +1,6 @@
 name: Test
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: push
 
 jobs:
   test:
@@ -37,6 +31,3 @@ jobs:
         run: yarn bojagi deploy
         env:
           BOJAGI_SECRET: ${{secrets.BOJAGI_SECRET}}
-      - uses: andresz1/size-limit-action@v1.5.1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
