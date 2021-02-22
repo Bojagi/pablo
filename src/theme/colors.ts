@@ -39,6 +39,7 @@ export interface ColorShades {
 export type AllColors = ShadedColor & TextColors & BorderColors & CommonColors;
 
 export interface Colors {
+  background: string;
   common: CommonColors;
   gray: ColorShades;
   blackOpacity: ColorShades;
@@ -55,6 +56,7 @@ export const WHITE = '#ffffff';
 export const BLACK = '#000000';
 
 export const colors: Colors = {
+  background: '#fafafa',
   common: {
     white: WHITE,
     black: BLACK,

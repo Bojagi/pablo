@@ -16,7 +16,7 @@ exports[`Render closed modal with just a content element 1`] = `
   top: 0;
   box-sizing: border-box;
   overflow: scroll;
-  background-color: rgba(5,0,21,0.5);
+  background-color: rgba(0,0,0,0.6);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
