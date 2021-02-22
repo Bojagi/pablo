@@ -11,8 +11,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - run: git rev-parse HEAD
-
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
