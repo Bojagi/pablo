@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
-import { boxInterpolateFn, BoxProps } from '../Box';
+import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
 
 export type IconButtonSize = 'small' | 'medium' | 'large';
 
-export interface IconButtonProps extends BoxProps {
+export interface IconButtonProps extends LayoutBoxProps {
   size?: IconButtonSize;
   active?: boolean;
 }
@@ -67,5 +67,5 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
           }
         `}
 
-  ${boxInterpolateFn}
+  ${({ size, ...props }) => layoutInterpolationFn(props)}
 `;

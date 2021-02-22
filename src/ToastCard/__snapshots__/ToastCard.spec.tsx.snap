@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render toast card with no type and with only title 1`] = `
-.c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c3 {
@@ -46,7 +46,7 @@ exports[`Render toast card with no type and with only title 1`] = `
   box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -77,9 +77,8 @@ exports[`Render toast card with no type and with only title 1`] = `
 
 exports[`type error Render toast card with custom icon 1`] = `
 .c0 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #F44336;
+  margin-right: 12px;
 }
 
 .c0 > * {
@@ -89,7 +88,6 @@ exports[`type error Render toast card with custom icon 1`] = `
 <div
   class="c0"
   data-testid="pbl-toastcard-iconbox"
-  display="inline-block"
 >
   <div>
     hello
@@ -98,21 +96,9 @@ exports[`type error Render toast card with custom icon 1`] = `
 `;
 
 exports[`type error Render toast card with only title 1`] = `
-.c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #F44336;
+  margin-right: 12px;
 }
 
 .c2 > * {
@@ -124,6 +110,17 @@ exports[`type error Render toast card with only title 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c4 {
@@ -153,7 +150,7 @@ exports[`type error Render toast card with only title 1`] = `
   box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -167,7 +164,6 @@ exports[`type error Render toast card with only title 1`] = `
     <div
       class="c2"
       data-testid="pbl-toastcard-iconbox"
-      display="inline-block"
     >
       <svg
         height="24"
@@ -204,9 +200,8 @@ exports[`type error Render toast card with only title 1`] = `
 
 exports[`type info Render toast card with custom icon 1`] = `
 .c0 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #ffffff;
+  margin-right: 12px;
 }
 
 .c0 > * {
@@ -216,7 +211,6 @@ exports[`type info Render toast card with custom icon 1`] = `
 <div
   class="c0"
   data-testid="pbl-toastcard-iconbox"
-  display="inline-block"
 >
   <div>
     hello
@@ -225,21 +219,9 @@ exports[`type info Render toast card with custom icon 1`] = `
 `;
 
 exports[`type info Render toast card with only title 1`] = `
-.c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #ffffff;
+  margin-right: 12px;
 }
 
 .c2 > * {
@@ -251,6 +233,17 @@ exports[`type info Render toast card with only title 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c4 {
@@ -280,7 +273,7 @@ exports[`type info Render toast card with only title 1`] = `
   box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -294,7 +287,6 @@ exports[`type info Render toast card with only title 1`] = `
     <div
       class="c2"
       data-testid="pbl-toastcard-iconbox"
-      display="inline-block"
     >
       <svg
         height="24"
@@ -331,9 +323,8 @@ exports[`type info Render toast card with only title 1`] = `
 
 exports[`type success Render toast card with custom icon 1`] = `
 .c0 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #35D968;
+  margin-right: 12px;
 }
 
 .c0 > * {
@@ -343,7 +334,6 @@ exports[`type success Render toast card with custom icon 1`] = `
 <div
   class="c0"
   data-testid="pbl-toastcard-iconbox"
-  display="inline-block"
 >
   <div>
     hello
@@ -352,21 +342,9 @@ exports[`type success Render toast card with custom icon 1`] = `
 `;
 
 exports[`type success Render toast card with only title 1`] = `
-.c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #35D968;
+  margin-right: 12px;
 }
 
 .c2 > * {
@@ -378,6 +356,17 @@ exports[`type success Render toast card with only title 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c4 {
@@ -407,7 +396,7 @@ exports[`type success Render toast card with only title 1`] = `
   box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -421,7 +410,6 @@ exports[`type success Render toast card with only title 1`] = `
     <div
       class="c2"
       data-testid="pbl-toastcard-iconbox"
-      display="inline-block"
     >
       <svg
         height="24"
@@ -458,9 +446,8 @@ exports[`type success Render toast card with only title 1`] = `
 
 exports[`type undefined Render toast card with custom icon 1`] = `
 .c0 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #ffffff;
+  margin-right: 12px;
 }
 
 .c0 > * {
@@ -470,7 +457,6 @@ exports[`type undefined Render toast card with custom icon 1`] = `
 <div
   class="c0"
   data-testid="pbl-toastcard-iconbox"
-  display="inline-block"
 >
   <div>
     hello
@@ -479,21 +465,9 @@ exports[`type undefined Render toast card with custom icon 1`] = `
 `;
 
 exports[`type undefined Render toast card with only title 1`] = `
-.c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #ffffff;
+  margin-right: 12px;
 }
 
 .c2 > * {
@@ -505,6 +479,17 @@ exports[`type undefined Render toast card with only title 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c4 {
@@ -534,7 +519,7 @@ exports[`type undefined Render toast card with only title 1`] = `
   box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -548,7 +533,6 @@ exports[`type undefined Render toast card with only title 1`] = `
     <div
       class="c2"
       data-testid="pbl-toastcard-iconbox"
-      display="inline-block"
     >
       <div>
         hi
@@ -574,9 +558,8 @@ exports[`type undefined Render toast card with only title 1`] = `
 
 exports[`type unknown Render toast card with custom icon 1`] = `
 .c0 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #ffffff;
+  margin-right: 12px;
 }
 
 .c0 > * {
@@ -586,7 +569,6 @@ exports[`type unknown Render toast card with custom icon 1`] = `
 <div
   class="c0"
   data-testid="pbl-toastcard-iconbox"
-  display="inline-block"
 >
   <div>
     hello
@@ -595,21 +577,9 @@ exports[`type unknown Render toast card with custom icon 1`] = `
 `;
 
 exports[`type unknown Render toast card with only title 1`] = `
-.c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #ffffff;
+  margin-right: 12px;
 }
 
 .c2 > * {
@@ -621,6 +591,17 @@ exports[`type unknown Render toast card with only title 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c4 {
@@ -650,7 +631,7 @@ exports[`type unknown Render toast card with only title 1`] = `
   box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -664,7 +645,6 @@ exports[`type unknown Render toast card with only title 1`] = `
     <div
       class="c2"
       data-testid="pbl-toastcard-iconbox"
-      display="inline-block"
     >
       <div>
         hi
@@ -690,9 +670,8 @@ exports[`type unknown Render toast card with only title 1`] = `
 
 exports[`type warning Render toast card with custom icon 1`] = `
 .c0 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #FFDD5B;
+  margin-right: 12px;
 }
 
 .c0 > * {
@@ -702,7 +681,6 @@ exports[`type warning Render toast card with custom icon 1`] = `
 <div
   class="c0"
   data-testid="pbl-toastcard-iconbox"
-  display="inline-block"
 >
   <div>
     hello
@@ -711,21 +689,9 @@ exports[`type warning Render toast card with custom icon 1`] = `
 `;
 
 exports[`type warning Render toast card with only title 1`] = `
-.c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .c2 {
-  display: inline-block;
-  margin-right: 12px;
   fill: #FFDD5B;
+  margin-right: 12px;
 }
 
 .c2 > * {
@@ -737,6 +703,17 @@ exports[`type warning Render toast card with only title 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c4 {
@@ -766,7 +743,7 @@ exports[`type warning Render toast card with only title 1`] = `
   box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
-  padding: 12px 20px 12px 12px;
+  padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
@@ -780,7 +757,6 @@ exports[`type warning Render toast card with only title 1`] = `
     <div
       class="c2"
       data-testid="pbl-toastcard-iconbox"
-      display="inline-block"
     >
       <svg
         height="24"

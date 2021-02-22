@@ -1,29 +1,19 @@
-import { PabloTheme } from '../theme/types';
-import { AllColors, Colors } from '../theme/colors';
-import { interpolateFnFactory } from './interpolateFnFactory';
+import { TextColorProps, BackgroundColorProps, system } from 'styled-system';
 
-export type ColorPath<
-  TName extends keyof Colors = keyof Colors,
-  TVariant extends keyof AllColors = keyof AllColors
-> = `${string & TName}.${TVariant}`;
-
-export interface BoxColorProps {
-  color?: ColorPath | string;
-  bgColor?: ColorPath | string;
-  fillColor?: ColorPath | string;
+export interface ColorProps {
+  bgColor?: BackgroundColorProps['backgroundColor'];
+  textColor?: TextColorProps['color'];
+  opacity?: number;
 }
 
-export const colorInterpolateFn = interpolateFnFactory<BoxColorProps>(
-  ['color', 'color', getColorByPath],
-  ['bgColor', 'background-color', getColorByPath],
-  ['fillColor', 'fill', getColorByPath]
-);
-
-function getColorByPath(path: string, { theme }: { theme: PabloTheme }) {
-  const splitPath = path.split('.');
-  const pathColor = splitPath.reduce(
-    (acc, key) => (acc && acc[key] ? acc[key] : undefined),
-    theme.colors
-  );
-  return pathColor || path;
-}
+export const color = system({
+  textColor: {
+    property: 'color',
+    scale: 'colors',
+  },
+  bgColor: {
+    property: 'backgroundColor',
+    scale: 'colors',
+  },
+  opacity: true,
+});

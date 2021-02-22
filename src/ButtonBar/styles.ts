@@ -6,5 +6,5 @@ export interface ButtonBarStyles {
 }
 
 export const buttonBarStyles: ButtonBarStyles = {
-  gap: getSpacing(0.5),
+  gap: getSpacing(2),
 };

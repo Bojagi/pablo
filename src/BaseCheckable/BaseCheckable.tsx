@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Box, BoxProps } from '../Box';
+import { Flex, LayoutBoxProps } from '../Box';
 import { useComponentStyleContext } from '../theme/context';
 import { Typography } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
@@ -8,7 +8,7 @@ import { useUniqueId } from '../utils/useUniqueId';
 
 export type CheckableSize = 'small' | 'medium';
 
-export interface BaseCheckableProps extends BoxProps {
+export interface BaseCheckableProps extends LayoutBoxProps {
   id?: string;
   className?: string;
   disabled?: boolean;
@@ -86,7 +86,7 @@ export function BaseCheckable({
   const [focus, setFocus] = React.useState(false);
 
   return (
-    <Box flex alignItems="center" {...props}>
+    <Flex alignItems="center" {...props}>
       <ComponentBox
         className={className}
         data-testid={`pbl-${componentName}`}
@@ -121,11 +121,11 @@ export function BaseCheckable({
       </ComponentBox>
       {label && (
         <label data-testid={`pbl-${componentName}-label`} htmlFor={id}>
-          <Typography ml={1} mb={0} variant={typographyVariant}>
+          <Typography ml={4} mb={0} variant={typographyVariant}>
             {label}
           </Typography>
         </label>
       )}
-    </Box>
+    </Flex>
   );
 }

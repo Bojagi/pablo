@@ -12,7 +12,7 @@ export default {
 
 const ControlledInput = ({ value: valueInitial, ...props }: Omit<InputProps, 'onChange'>) => {
   const [value, setValue] = React.useState(valueInitial);
-  return <Input value={value} mb={1} {...props} onChange={setValue} />;
+  return <Input value={value} mb={4} {...props} onChange={setValue} />;
 };
 
 const baseStory = (args) => <ControlledInput {...args} />;
@@ -62,13 +62,13 @@ Error.args = {
 
 export const MultipleInputs = () => (
   <Box>
-    <Box mb={1.5}>
+    <Box mb={5}>
       <ControlledInput label="first name" />
     </Box>
-    <Box mb={1.5}>
+    <Box mb={5}>
       <ControlledInput label="last name" />
     </Box>
-    <Box mb={1.5}>
+    <Box mb={5}>
       <ControlledInput label="credit card no." infoText="optional" />
     </Box>
   </Box>

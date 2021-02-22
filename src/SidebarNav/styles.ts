@@ -1,3 +1,4 @@
+import { css } from 'styled-components';
 import { getColor } from '../utils/styleHelpers/getColor';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { Style } from '../theme/types';
@@ -13,16 +14,16 @@ export interface SidebarNavItemStyles {
 }
 
 export interface SidebarNavStyles {
-  borderLeft: string;
-  borderLeftSpacing: number;
+  borderLeft: Style;
+  borderLeftSpacing: Style;
   item: SidebarNavItemStyles;
 }
 
-export const sidebarNavStyles = {
-  borderLeft: 'light',
-  borderLeftSpacing: 2,
+export const sidebarNavStyles: SidebarNavStyles = {
+  borderLeft: css`1px solid ${getColor('borders', 'light')}`,
+  borderLeftSpacing: getSpacing(6),
   item: {
-    marginY: getSpacing(1),
+    marginY: getSpacing(4),
     active: {
       backgroundColor: getColor('brand', 'light'),
     },

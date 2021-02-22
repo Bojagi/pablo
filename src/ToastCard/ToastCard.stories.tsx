@@ -8,7 +8,7 @@ export default {
 
 const BaseStory = (args) => (
   <Box>
-    <ToastCard mb={2} {...args} />
+    <ToastCard mb={2} closable {...args} />
     <ToastCard
       description="Additional text to show when stuff needs to be explained in more detail"
       {...args}

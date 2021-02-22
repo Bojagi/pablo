@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '../Box';
+import { Flex } from '../Box';
 import { Radio, RadioProps } from './Radio';
 import { RadioGroup } from './RadioGroup';
 
@@ -15,11 +15,11 @@ const ControlledRadio = ({ checked: checkedInitial, ...props }: RadioProps) => {
 };
 
 const baseStory = (args) => (
-  <Box flex mx={-1} mb={1}>
-    <ControlledRadio mx={1} value="1" name="hans" checked={true} {...args} />
-    <ControlledRadio mx={1} value="2" name="hans" checked={false} {...args} />
-    <ControlledRadio mx={1} value="3" name="hans" checked={true} disabled={true} {...args} />
-  </Box>
+  <Flex mx={-4} mb={4}>
+    <ControlledRadio mx={4} value="1" name="hans" checked={true} {...args} />
+    <ControlledRadio mx={4} value="2" name="hans" checked={false} {...args} />
+    <ControlledRadio mx={4} value="3" name="hans" checked={true} disabled={true} {...args} />
+  </Flex>
 );
 
 export const Medium = baseStory.bind(null);

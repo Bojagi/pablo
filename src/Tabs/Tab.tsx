@@ -1,11 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { BoxProps } from '../Box';
+import { LayoutBoxProps } from '../Box';
 import { buttonBaseStyles } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
-export interface TabProps extends BoxProps {
+export interface TabProps extends LayoutBoxProps {
   active?: boolean;
   icon?: React.ReactNode;
   name: string;

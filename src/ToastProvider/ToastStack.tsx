@@ -9,7 +9,7 @@ export interface ToastStackProps {
 }
 
 const ToastStackBox = styled.div<ToastStackProps>`
-  padding: ${getSpacing(1.5)};
+  padding: ${getSpacing(5)};
   width: ${getComponentStyle('toastCard.width')};
   position: fixed;
   display: flex;

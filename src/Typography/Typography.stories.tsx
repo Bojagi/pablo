@@ -50,28 +50,28 @@ export const Inline = () => (
 
 export const ColoredTypography = () => (
   <Box mb={1}>
-    <Typography mb={1} color="brand.main" variant="headline">
+    <Typography mb={1} textColor="brand.main" variant="headline">
       Headline
     </Typography>
-    <Typography mb={1} color="positive.main" variant="title">
+    <Typography mb={1} textColor="positive.main" variant="title">
       Title
     </Typography>
-    <Typography mb={1} color="negative.main" variant="subtitle">
+    <Typography mb={1} textColor="negative.main" variant="subtitle">
       Subtitle
     </Typography>
-    <Typography mb={1} color="positive.dark" variant="paragraph">
+    <Typography mb={1} textColor="positive.dark" variant="paragraph">
       Paragraph
     </Typography>
-    <Typography mb={1} color="positive.light" variant="paragraphBold">
+    <Typography mb={1} textColor="positive.light" variant="paragraphBold">
       Paragraph Bold
     </Typography>
-    <Typography mb={1} color="brand.light" variant="info">
+    <Typography mb={1} textColor="brand.light" variant="info">
       Info Text
     </Typography>
-    <Typography mb={1} color="brand.dark" variant="infoBold">
+    <Typography mb={1} textColor="brand.dark" variant="infoBold">
       Info Text Bold
     </Typography>
-    <Typography mb={1} color="neutral.dark" variant="button">
+    <Typography mb={1} textColor="neutral.dark" variant="button">
       Button
     </Typography>
   </Box>

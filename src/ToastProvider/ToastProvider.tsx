@@ -84,13 +84,13 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
       <addMessageContext.Provider value={handleAddMessage}>{children}</addMessageContext.Provider>
       <ToastStack side={side}>
         {messages.map(({ hidden, ...message }, i, arr) => (
-          <Box key={message.id} zIndex={arr.length - i}>
+          <Box key={message.id} zIndex={100 + arr.length - i}>
             <StackAnimation
               duration={FADE_DURATION}
               visible={!hidden}
               onExited={() => removeMessage(message.id!)}
             >
-              <ToastCard {...message} mb={1} onClose={() => hideMessage(message.id!)} />
+              <ToastCard {...message} mb={4} onClose={() => hideMessage(message.id!)} />
             </StackAnimation>
           </Box>
         ))}

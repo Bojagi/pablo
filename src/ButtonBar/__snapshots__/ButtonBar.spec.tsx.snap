@@ -14,11 +14,6 @@ exports[`Render button bar 1`] = `
 .c1 {
   margin-left: 4px;
   margin-right: 4px;
-  color: light:#EBE7FF;
-  main: #6A50F2;
-  dark: #301A9E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

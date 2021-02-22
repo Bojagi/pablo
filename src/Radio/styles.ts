@@ -15,7 +15,7 @@ export const radioStyles: RadioStyles = {
   ...checkableBaseStyles,
   handleColor: getColor('brand'),
   groupItemGap: {
-    medium: getSpacing(1.5),
-    small: getSpacing(1),
+    medium: getSpacing(5),
+    small: getSpacing(4),
   },
 };

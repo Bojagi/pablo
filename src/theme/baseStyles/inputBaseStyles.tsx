@@ -30,7 +30,7 @@ const filledVariantStyle = {
   borderColor: getColor('borders'),
   backgroundColor: getColor('common', 'white'),
   focus: {
-    outlineSize: getSpacing(0.375),
+    outlineSize: '3px',
     outlineColor: getColor('brand', 'light'),
   },
   error: {
@@ -44,7 +44,7 @@ const filledVariantStyle = {
 export const inputBaseStyles: InputBaseStyles = {
   defaultWidth: 300,
   padding: css`
-    ${getSpacing(0.75)} ${getSpacing(1.25)}
+    ${getSpacing(3)} ${getSpacing(4)}
   `,
   fontFamily: (props) => props.theme.typography.base.fontFamily,
   borderWidth: 1,

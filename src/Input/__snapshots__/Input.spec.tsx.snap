@@ -26,7 +26,7 @@ exports[`Render without value 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
-  padding: 6px 10px;
+  padding: 6px 8px;
   background-color: transparent;
   font-family: "IBM Plex Sans",sans-serif;
   outline: none;
@@ -96,7 +96,7 @@ exports[`Show error when an error message is given 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
-  padding: 6px 10px;
+  padding: 6px 8px;
   background-color: transparent;
   font-family: "IBM Plex Sans",sans-serif;
   outline: none;
@@ -172,7 +172,7 @@ exports[`Show infotext when available 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
-  padding: 6px 10px;
+  padding: 6px 8px;
   background-color: transparent;
   font-family: "IBM Plex Sans",sans-serif;
   outline: none;
@@ -247,7 +247,7 @@ exports[`Show label when available 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
-  padding: 6px 10px;
+  padding: 6px 8px;
   background-color: transparent;
   font-family: "IBM Plex Sans",sans-serif;
   outline: none;
