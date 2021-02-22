@@ -110,6 +110,7 @@
       "!**/index.ts",
       "!**/*.stories.tsx"
     ],
+    "testPathIgnorePatterns": ["/node_modules/", "/build/"],
     "setupFilesAfterEnv": [
       "<rootDir>/jestSetup.ts"
     ]

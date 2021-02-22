@@ -127,7 +127,6 @@ exports[`Show error when an error message is given 1`] = `
     </div>
     <p
       class="c2"
-      color="negative.main"
       data-testid="pbl-textarea-infotext"
     >
       Something 
@@ -207,7 +206,6 @@ exports[`Show infotext when available 1`] = `
     </div>
     <p
       class="c2"
-      color="text.info"
       data-testid="pbl-textarea-infotext"
     >
       Something that 
