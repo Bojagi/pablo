@@ -70,7 +70,6 @@ export function ToastCard({
         {(type || icon) && (
           <Box
             mr={5}
-            // display="inline-block"
             data-testid="pbl-toastcard-iconbox"
             fillColor={iconColors[type || 'info']}
             css={displayBlockIconsCss}
