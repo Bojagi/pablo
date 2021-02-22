@@ -1,20 +1,19 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { BoxProps } from '../Box';
-import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
-import { interpolateSize } from '../utils/interpolateSize';
+import styled from 'styled-components';
+import { LayoutBoxProps } from '../Box';
+import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { useComponentStyle } from '../theme';
-import { BaseInput, InnerInputProps } from '../BaseInput/BaseInput';
+import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
 
-export interface TextAreaProps extends BoxProps {
+export interface TextAreaProps extends LayoutBoxProps {
   id?: string;
   value?: string;
   error?: React.ReactNode;
   label?: React.ReactNode;
+  variant?: InputVariant;
   infoText?: React.ReactNode;
   rows?: number;
   fullWidth?: boolean;
-  width?: string | number;
   onChange: (newValue: string, e: React.FormEvent<HTMLTextAreaElement>) => void;
 }
 
@@ -24,46 +23,24 @@ interface InnerTextAreaProps
   }> {}
 
 const InnerTextArea = styled.textarea<InnerTextAreaProps>`
-  width: ${(props) => (props.width ? interpolateSize(props.width) : 'auto')};
-  ${(props) =>
-    props.fullWidth &&
-    css`
-      width: 100%;
-    `}
   resize: none;
+  border: 0;
+  flex-grow: 1;
   box-sizing: border-box;
   padding: ${getComponentStyle('textarea.padding')};
-  border: ${getComponentStyle('textarea.borderWidth')}px solid
-    ${getComponentStyle('textarea.borderColor')};
-  border-radius: 8px;
-  background-color: ${getComponentStyle('textarea.backgroundColor')};
+  background-color: transparent;
   font-family: ${getComponentStyle('textarea.fontFamily')};
-  transition: ${getComponentStyle('textarea.transitions', transitionTransformer)};
   outline: none;
-
-  &:focus {
-    box-shadow: 0 0 0 ${getComponentStyle('textarea.focus.outlineSize')}
-      ${getComponentStyle('textarea.focus.outlineColor')};
-  }
-
-  ${(props) =>
-    props.error &&
-    css`
-      border-color: ${getComponentStyle('textarea.error.borderColor')};
-      &:focus {
-        box-shadow: 0 0 0 ${getComponentStyle('textarea.focus.outlineSize')}
-          ${getComponentStyle('textarea.error.focus.outlineColor')};
-      }
-    `}
 `;
 
-export function TextArea({ rows, width, ...props }: TextAreaProps) {
+export function TextArea({ rows, variant = 'filled', width, ...props }: TextAreaProps) {
   const rowsFallback = useComponentStyle('textarea.defaultRows') as number;
   const rowsWithFallback = rows || rowsFallback;
   const defaultWidth = useComponentStyle('textarea.defaultWidth');
 
   return (
     <BaseInput
+      variant={variant}
       name="textarea"
       {...props}
       width={width || defaultWidth}

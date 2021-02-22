@@ -22,10 +22,10 @@ export type TextColors = {
 
 export type BorderColors = {
   main: string;
-  lightest: string;
+  light: string;
 };
 
-export interface GrayColors {
+export interface ColorShades {
   '50': string;
   '100': string;
   '200': string;
@@ -41,8 +41,11 @@ export interface GrayColors {
 export type AllColors = ShadedColor & TextColors & BorderColors & CommonColors;
 
 export interface Colors {
+  background: string;
   common: CommonColors;
-  gray: GrayColors;
+  gray: ColorShades;
+  blackOpacity: ColorShades;
+  whiteOpacity: ColorShades;
   borders: BorderColors;
   brand: ShadedColor;
   positive: ShadedColor;
@@ -55,6 +58,7 @@ export const WHITE = '#ffffff';
 export const BLACK = '#000000';
 
 export const colors: Colors = {
+  background: '#fafafa',
   common: {
     white: WHITE,
     black: BLACK,
@@ -73,9 +77,33 @@ export const colors: Colors = {
     '800': getGrayColor(0.2),
     '900': getGrayColor(0.1),
   },
+  blackOpacity: {
+    '50': getBlackOpacityColor(0.05),
+    '100': getBlackOpacityColor(0.1),
+    '200': getBlackOpacityColor(0.2),
+    '300': getBlackOpacityColor(0.3),
+    '400': getBlackOpacityColor(0.4),
+    '500': getBlackOpacityColor(0.5),
+    '600': getBlackOpacityColor(0.6),
+    '700': getBlackOpacityColor(0.7),
+    '800': getBlackOpacityColor(0.8),
+    '900': getBlackOpacityColor(0.9),
+  },
+  whiteOpacity: {
+    '50': getWhiteOpacityColor(0.05),
+    '100': getWhiteOpacityColor(0.1),
+    '200': getWhiteOpacityColor(0.2),
+    '300': getWhiteOpacityColor(0.3),
+    '400': getWhiteOpacityColor(0.4),
+    '500': getWhiteOpacityColor(0.5),
+    '600': getWhiteOpacityColor(0.6),
+    '700': getWhiteOpacityColor(0.7),
+    '800': getWhiteOpacityColor(0.8),
+    '900': getWhiteOpacityColor(0.9),
+  },
   borders: {
     main: `${BLACK}${getHexByte(0.25)}`,
-    lightest: `${BLACK}${getHexByte(0.1)}`,
+    light: `${BLACK}${getHexByte(0.1)}`,
   },
   text: {
     main: BLACK,
@@ -129,4 +157,12 @@ function getHexByte(value: number) {
 
 function getGrayColor(value: number) {
   return `#${getHexByte(value)}${getHexByte(value)}${getHexByte(value)}`;
+}
+
+function getBlackOpacityColor(value: number) {
+  return `rgba(0,0,0,${value})`;
+}
+
+function getWhiteOpacityColor(value: number) {
+  return `rgba(255,255,255,${value})`;
 }

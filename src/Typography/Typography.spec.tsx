@@ -13,40 +13,55 @@ import {
   Typography,
 } from './Typography';
 
-describe('Typography component', () => {
-  test.each([
-    [undefined],
-    ['headline'],
-    ['title'],
-    ['subtitle'],
-    ['paragraph'],
-    ['paragraphBold'],
-    ['button'],
-    ['info'],
-    ['infoBold'],
-  ])('styles with "%s" variant', (variant) => {
+describe.each([
+  [undefined],
+  ['headline'],
+  ['title'],
+  ['subtitle'],
+  ['paragraph'],
+  ['paragraphBold'],
+  ['button'],
+  ['info'],
+  ['infoBold'],
+])('Typography component with variant %s', (variant) => {
+  test('Render component', () => {
     const { container } = renderComponent({ variant });
     expect(container).toMatchSnapshot();
   });
+
+  test('Render inline component', () => {
+    const { container } = renderComponent({ variant, inline: true });
+    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toHaveStyleRule('margin-bottom', '0');
+  });
 });
 
-describe('specific typography components', () => {
-  test.each([
-    ['Headline', Headline],
-    ['Title', Title],
-    ['Subtitle', Subtitle],
-    ['Paragraph', Paragraph],
-    ['ParagraphBold', ParagraphBold],
-    ['ButtonTypography', ButtonTypography],
-    ['InfoText', InfoText],
-    ['InfoBold', InfoTextBold],
-  ])('styles of "%s" component', (_stringName, Component) => {
+describe.each([
+  ['Headline', Headline],
+  ['Title', Title],
+  ['Subtitle', Subtitle],
+  ['Paragraph', Paragraph],
+  ['ParagraphBold', ParagraphBold],
+  ['ButtonTypography', ButtonTypography],
+  ['InfoText', InfoText],
+  ['InfoBold', InfoTextBold],
+])('%s component ', (_stringName, Component) => {
+  test('Render component', () => {
     const { container } = render(
       <PabloThemeProvider>
         <Component>Hello</Component>
       </PabloThemeProvider>
     );
     expect(container).toMatchSnapshot();
+  });
+
+  test('Render inline component', () => {
+    const { container } = render(
+      <PabloThemeProvider>
+        <Component inline>Hello</Component>
+      </PabloThemeProvider>
+    );
+    expect(container.firstChild).toHaveStyleRule('margin-bottom', '0');
   });
 });
 

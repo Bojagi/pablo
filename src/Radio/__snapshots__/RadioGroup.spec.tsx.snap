@@ -2,14 +2,14 @@
 
 exports[`Render with nothing selected 1`] = `
 .c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 {
@@ -24,8 +24,8 @@ exports[`Render with nothing selected 1`] = `
   font-size: 1rem;
   line-height: 1.375em;
   margin-bottom: 0.5em;
-  margin-bottom: 0px;
   margin-left: 8px;
+  margin-bottom: 0;
 }
 
 .c4 {
@@ -183,14 +183,14 @@ exports[`Render with nothing selected 1`] = `
 
 exports[`Work with one radio button 1`] = `
 .c1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 {
@@ -205,8 +205,8 @@ exports[`Work with one radio button 1`] = `
   font-size: 1rem;
   line-height: 1.375em;
   margin-bottom: 0.5em;
-  margin-bottom: 0px;
   margin-left: 8px;
+  margin-bottom: 0;
 }
 
 .c4 {

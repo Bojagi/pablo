@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Typography component styles with "button" variant 1`] = `
+exports[`ButtonTypography component  Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -20,7 +20,7 @@ exports[`Typography component styles with "button" variant 1`] = `
 </div>
 `;
 
-exports[`Typography component styles with "headline" variant 1`] = `
+exports[`Headline component  Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -40,27 +40,7 @@ exports[`Typography component styles with "headline" variant 1`] = `
 </div>
 `;
 
-exports[`Typography component styles with "info" variant 1`] = `
-.c0 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  margin-bottom: 0;
-}
-
-<div>
-  <p
-    class="c0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component styles with "infoBold" variant 1`] = `
+exports[`InfoBold component  Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -81,7 +61,27 @@ exports[`Typography component styles with "infoBold" variant 1`] = `
 </div>
 `;
 
-exports[`Typography component styles with "paragraph" variant 1`] = `
+exports[`InfoText component  Render component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Paragraph component  Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -101,7 +101,7 @@ exports[`Typography component styles with "paragraph" variant 1`] = `
 </div>
 `;
 
-exports[`Typography component styles with "paragraphBold" variant 1`] = `
+exports[`ParagraphBold component  Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -122,7 +122,7 @@ exports[`Typography component styles with "paragraphBold" variant 1`] = `
 </div>
 `;
 
-exports[`Typography component styles with "subtitle" variant 1`] = `
+exports[`Subtitle component  Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -142,7 +142,7 @@ exports[`Typography component styles with "subtitle" variant 1`] = `
 </div>
 `;
 
-exports[`Typography component styles with "title" variant 1`] = `
+exports[`Title component  Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -162,27 +162,7 @@ exports[`Typography component styles with "title" variant 1`] = `
 </div>
 `;
 
-exports[`Typography component styles with "undefined" variant 1`] = `
-.c0 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
-}
-
-<div>
-  <p
-    class="c0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`specific typography components styles of "ButtonTypography" component 1`] = `
+exports[`Typography component with variant button Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -202,7 +182,27 @@ exports[`specific typography components styles of "ButtonTypography" component 1
 </div>
 `;
 
-exports[`specific typography components styles of "Headline" component 1`] = `
+exports[`Typography component with variant button Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+<div>
+  <span
+    class="c0"
+  >
+    Hello
+  </span>
+</div>
+`;
+
+exports[`Typography component with variant headline Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -222,7 +222,67 @@ exports[`specific typography components styles of "Headline" component 1`] = `
 </div>
 `;
 
-exports[`specific typography components styles of "InfoBold" component 1`] = `
+exports[`Typography component with variant headline Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+<div>
+  <h2
+    class="c0"
+  >
+    Hello
+  </h2>
+</div>
+`;
+
+exports[`Typography component with variant info Render component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant info Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant infoBold Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -243,7 +303,7 @@ exports[`specific typography components styles of "InfoBold" component 1`] = `
 </div>
 `;
 
-exports[`specific typography components styles of "InfoText" component 1`] = `
+exports[`Typography component with variant infoBold Render inline component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -251,6 +311,7 @@ exports[`specific typography components styles of "InfoText" component 1`] = `
   margin: 0;
   font-size: 0.75rem;
   line-height: 1.5em;
+  font-weight: 500;
   margin-bottom: 0;
 }
 
@@ -263,7 +324,7 @@ exports[`specific typography components styles of "InfoText" component 1`] = `
 </div>
 `;
 
-exports[`specific typography components styles of "Paragraph" component 1`] = `
+exports[`Typography component with variant paragraph Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -283,7 +344,27 @@ exports[`specific typography components styles of "Paragraph" component 1`] = `
 </div>
 `;
 
-exports[`specific typography components styles of "ParagraphBold" component 1`] = `
+exports[`Typography component with variant paragraph Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  margin-bottom: 0;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant paragraphBold Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -304,7 +385,28 @@ exports[`specific typography components styles of "ParagraphBold" component 1`] 
 </div>
 `;
 
-exports[`specific typography components styles of "Subtitle" component 1`] = `
+exports[`Typography component with variant paragraphBold Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant subtitle Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -324,7 +426,27 @@ exports[`specific typography components styles of "Subtitle" component 1`] = `
 </div>
 `;
 
-exports[`specific typography components styles of "Title" component 1`] = `
+exports[`Typography component with variant subtitle Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.375em;
+  margin-bottom: 0;
+}
+
+<div>
+  <h4
+    class="c0"
+  >
+    Hello
+  </h4>
+</div>
+`;
+
+exports[`Typography component with variant title Render component 1`] = `
 .c0 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -341,5 +463,65 @@ exports[`specific typography components styles of "Title" component 1`] = `
   >
     Hello
   </h3>
+</div>
+`;
+
+exports[`Typography component with variant title Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.3333333em;
+  margin-bottom: 0;
+}
+
+<div>
+  <h3
+    class="c0"
+  >
+    Hello
+  </h3>
+</div>
+`;
+
+exports[`Typography component with variant undefined Render component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  margin-bottom: 0.75em;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant undefined Render inline component 1`] = `
+.c0 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  margin-bottom: 0;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    Hello
+  </p>
 </div>
 `;

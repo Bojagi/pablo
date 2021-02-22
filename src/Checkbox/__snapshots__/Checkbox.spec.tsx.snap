@@ -2,14 +2,14 @@
 
 exports[`Render checkbox checked 1`] = `
 .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c3 {
@@ -78,14 +78,14 @@ exports[`Render checkbox checked 1`] = `
 
 exports[`Render checkbox unchecked 1`] = `
 .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c3 {
@@ -160,8 +160,8 @@ exports[`Render checkbox with label 1`] = `
   font-size: 1rem;
   line-height: 1.375em;
   margin-bottom: 0.5em;
-  margin-bottom: 0px;
   margin-left: 8px;
+  margin-bottom: 0;
 }
 
 <label

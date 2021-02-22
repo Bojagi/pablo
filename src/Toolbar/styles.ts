@@ -33,7 +33,7 @@ export interface ToolbarStyles {
 }
 
 export const toolbarStyles: ToolbarStyles = {
-  gap: getSpacing(0.5),
+  gap: getSpacing(2),
   divider: {
     width: 1,
     color: getColor('borders', 'lightest'),
@@ -45,7 +45,7 @@ export const toolbarStyles: ToolbarStyles = {
     ],
     iconTransition: [['transform', '0.2s']],
     iconScale: 1,
-    size: getSpacing(3),
+    size: '24px',
     borderRadius: 6,
     backgroundColor: 'transparent',
     color: getColor('common', 'black'),

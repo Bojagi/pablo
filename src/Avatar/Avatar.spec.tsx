@@ -4,10 +4,12 @@ import { PabloThemeProvider } from '../theme';
 import { Avatar } from './Avatar';
 
 describe.each([
+  [undefined, '6px'],
   ['square', '6px'],
   ['circle', '50%'],
 ])('%s variant', (variant, expectedBorderRadius) => {
   test.each([
+    [undefined, 40],
     ['tiny', 24],
     ['small', 32],
     ['medium', 40],

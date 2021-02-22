@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { BoxProps } from '../Box';
+import { LayoutBoxProps } from '../Box';
 import { Image, ImageProps } from '../Image';
 import { useComponentStyle } from '../theme';
 import { conditionalStyles, getComponentStyle } from '../utils/styleHelpers';
@@ -8,7 +8,7 @@ import { conditionalStyles, getComponentStyle } from '../utils/styleHelpers';
 export type AvatarSize = 'tiny' | 'small' | 'medium' | 'large';
 export type AvatarVariant = 'square' | 'circle';
 
-export interface AvatarProps extends BoxProps {
+export interface AvatarProps extends LayoutBoxProps {
   className?: string;
   src: string;
   size?: AvatarSize;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '../Box';
+import { Flex, Box } from '../Box';
 import { Checkbox, CheckboxProps } from './Checkbox';
 
 export default {
@@ -15,11 +15,11 @@ const ControlledCheckbox = ({
 };
 
 const baseStory = (args) => (
-  <Box flex mx={-1} mb={1}>
-    <ControlledCheckbox mx={1} checked={true} {...args} />
-    <ControlledCheckbox mx={1} checked={false} {...args} />
-    <ControlledCheckbox mx={1} checked={true} disabled={true} {...args} />
-  </Box>
+  <Flex mx={-4} mb={4}>
+    <ControlledCheckbox mx={4} checked={true} {...args} />
+    <ControlledCheckbox mx={4} checked={false} {...args} />
+    <ControlledCheckbox mx={4} checked={true} disabled={true} {...args} />
+  </Flex>
 );
 
 export const Medium = baseStory.bind(null);
@@ -35,12 +35,12 @@ Small.args = {
 export const WithLabels = () => (
   <>
     <Box mb={4}>
-      <ControlledCheckbox mb={1} checked={true} label="Hans" />
-      <ControlledCheckbox mb={1} checked={false} label="Wurst" />
+      <ControlledCheckbox mb={4} checked={true} label="Hans" />
+      <ControlledCheckbox mb={4} checked={false} label="Wurst" />
     </Box>
     <Box mb={4}>
-      <ControlledCheckbox mb={1} checked={true} size="small" label="Hans" />
-      <ControlledCheckbox mb={1} checked={false} size="small" label="Wurst" />
+      <ControlledCheckbox mb={4} checked={true} size="small" label="Hans" />
+      <ControlledCheckbox mb={4} checked={false} size="small" label="Wurst" />
     </Box>
   </>
 );

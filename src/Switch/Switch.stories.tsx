@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '../Box';
+import { Box, Flex } from '../Box';
 import { Switch, SwitchProps } from './Switch';
 
 export default {
@@ -12,11 +12,11 @@ const ControlledSwitch = ({ checked: checkedInitial, ...props }: Omit<SwitchProp
 };
 
 const baseStory = (args) => (
-  <Box flex mx={-1} mb={1}>
-    <ControlledSwitch mx={1} checked={true} {...args} />
-    <ControlledSwitch mx={1} checked={false} {...args} />
-    <ControlledSwitch mx={1} checked={true} disabled={true} {...args} />
-  </Box>
+  <Flex mx={-4} mb={4}>
+    <ControlledSwitch mx={4} checked={true} {...args} />
+    <ControlledSwitch mx={4} checked={false} {...args} />
+    <ControlledSwitch mx={4} checked={true} disabled={true} {...args} />
+  </Flex>
 );
 
 export const Medium = baseStory.bind(null);
@@ -31,10 +31,10 @@ Small.args = {
 
 export const WithLabel = () => (
   <>
-    <Box mb={4}>
+    <Box mb={6}>
       <ControlledSwitch checked={true} label="Hans Wurst" />
     </Box>
-    <Box mb={4}>
+    <Box mb={6}>
       <ControlledSwitch size="small" checked={true} label="Hans Wurst" />
     </Box>
   </>

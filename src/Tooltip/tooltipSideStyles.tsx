@@ -35,19 +35,19 @@ export const topArrowStyles = css`
 `;
 
 export const bottomArrowStyles = css`
-  top: -${getSpacing(1.5)};
+  top: -${getSpacing(5)};
   left: 50%;
   transform: scaleY(0.5) translateY(-50%) translateX(-50%) rotateZ(0deg);
 `;
 
 export const rightArrowStyles = css`
-  left: -${getSpacing(1.5)};
+  left: -${getSpacing(5)};
   top: 50%;
   transform: scale(0.5) translateX(-50%) translateY(-100%) rotateZ(270deg);
 `;
 
 export const leftArrowStyles = css`
-  right: -${getSpacing(1.5)};
+  right: -${getSpacing(5)};
   top: 50%;
   transform: scale(0.5) translateX(50%) translateY(-100%) rotateZ(90deg);
 `;

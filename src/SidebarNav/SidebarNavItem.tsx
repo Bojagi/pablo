@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { ButtonBase, ButtonBaseProps } from '../ButtonBase';
+import { buttonBaseStyles, ButtonBaseProps } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
@@ -9,7 +9,8 @@ export interface SidebarNavItemProps extends ButtonBaseProps {
   children: React.ReactNode;
 }
 
-const SidebarNavItemWrapper = styled<React.FC<SidebarNavItemProps>>(ButtonBase)`
+const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' })<SidebarNavItemProps>`
+  ${buttonBaseStyles}
   margin: ${getComponentStyle('sidebarNav.item.marginY')} 0;
   ${(props) =>
     props.selected &&

@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import { boxInterpolateFn, BoxProps } from '../Box';
+import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../utils/styleHelpers';
 import { ToolbarItem, ToolbarItemProps } from './ToolbarItem';
 
-const ToolbarBox = styled.div<BoxProps>`
+const ToolbarBox = styled.div<LayoutBoxProps>`
   display: flex;
   margin: 0 -${getComponentStyle('toolbar.gap')};
   height: calc(${getComponentStyle('toolbar.item.size')} + 2 * ${getComponentStyle('toolbar.gap')});
   align-items: center;
-  ${boxInterpolateFn}
+  ${layoutInterpolationFn}
 `;
 
-export interface ToolbarProps extends BoxProps {
+export interface ToolbarProps extends LayoutBoxProps {
   children: React.ReactElement<ToolbarItemProps | {}> | React.ReactElement<ToolbarItemProps | {}>[];
   selected?: string;
 }

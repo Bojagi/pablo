@@ -16,7 +16,7 @@ exports[`Render closed modal with just a content element 1`] = `
   top: 0;
   box-sizing: border-box;
   overflow: scroll;
-  background-color: rgba(5,0,21,0.5);
+  background-color: rgba(0,0,0,0.6);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,11 +29,19 @@ exports[`Render closed modal with just a content element 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   pointer-events: none;
   opacity: 0;
 }
 
 .c1 {
+  -webkit-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  transform: translateY(60px);
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
   max-width: 780px;
   margin: auto;
   min-height: -webkit-min-content;
@@ -46,6 +54,7 @@ exports[`Render closed modal with just a content element 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <body>
@@ -77,6 +86,9 @@ exports[`Render closed modal with just a content element 1`] = `
 
 exports[`Render with additional panes 1`] = `
 .c0 {
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
   max-width: 780px;
   margin: auto;
   min-height: -webkit-min-content;
@@ -89,6 +101,7 @@ exports[`Render with additional panes 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 .c2 {
@@ -98,6 +111,7 @@ exports[`Render with additional panes 1`] = `
 <div
   class="c0"
   data-testid="pbl-modal-area"
+  open=""
 >
   <div
     class="c1"
@@ -151,14 +165,14 @@ exports[`Render with additional panes 1`] = `
 
 exports[`Render with title 1`] = `
 .c1 {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c2 {
@@ -175,6 +189,7 @@ exports[`Render with title 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <div
@@ -202,14 +217,14 @@ exports[`Render with title 1`] = `
 
 exports[`Render with title and topRightItem 1`] = `
 .c1 {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c2 {
@@ -226,6 +241,7 @@ exports[`Render with title and topRightItem 1`] = `
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <div
@@ -256,20 +272,21 @@ exports[`Render with title and topRightItem 1`] = `
 
 exports[`Render with topRightItem 1`] = `
 .c1 {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c0 {
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
 <div

@@ -74,13 +74,13 @@ export interface ButtonStyles {
 
 export const buttonStyles: ButtonStyles = {
   base: {
-    borderRadius: getSpacing(0.5),
+    borderRadius: getSpacing(2),
     icon: {
-      gap: getSpacing(1),
+      gap: getSpacing(4),
       size: {
-        small: getSpacing(2.5),
-        medium: getSpacing(2.5),
-        large: getSpacing(2.5),
+        small: '20px',
+        medium: '20px',
+        large: '20px',
       },
     },
     disabled: {
@@ -88,7 +88,7 @@ export const buttonStyles: ButtonStyles = {
     },
     borderSize: 1,
     focus: {
-      outlineSize: getSpacing(0.5),
+      outlineSize: getSpacing(2),
     },
     active: {
       outlineSize: getSpacing(0.5),
@@ -105,17 +105,17 @@ export const buttonStyles: ButtonStyles = {
   sizes: {
     small: {
       padding: css`
-        ${getSpacing(0.5)} ${getSpacing(1)}
+        ${getSpacing(2)} ${getSpacing(4)}
       `,
     },
     medium: {
       padding: css`
-        ${getSpacing(1)} ${getSpacing(1.5)}
+        ${getSpacing(4)} ${getSpacing(5)}
       `,
     },
     large: {
       padding: css`
-        ${getSpacing(1.5)} ${getSpacing(2.5)}
+        ${getSpacing(5)} ${getSpacing(6)}
       `,
     },
   },

@@ -1,7 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { BoxProps } from '../Box';
-import { ButtonBase, ButtonBaseProps, ButtonSize } from '../ButtonBase';
+import styled, { css, FlattenInterpolation } from 'styled-components';
+import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Style } from '../theme/types';
 import { ButtonTypography } from '../Typography';
@@ -9,7 +8,7 @@ import { ButtonTypography } from '../Typography';
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
 export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 
-export interface ButtonProps extends Omit<ButtonBaseProps, 'color'>, Omit<BoxProps, 'color'> {
+export interface ButtonProps extends ButtonBaseProps {
   children: React.ReactNode;
   variant?: ButtonVariant;
   icon?: React.ReactNode;
@@ -22,7 +21,8 @@ const getButtonFocusOutlineShadow = (color: Style) => css`
   box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')} ${color};
 `;
 
-const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+const ButtonPrimary = styled.button<ButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
   color: ${getComponentStyle('button.{color}.primary.color')};
   background: ${getComponentStyle('button.{color}.primary.backgroundColor')};
   border-color: ${getComponentStyle('button.{color}.primary.borderColor')};
@@ -43,7 +43,8 @@ const ButtonPrimary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   }
 `;
 
-const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+const ButtonSecondary = styled.button<ButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
   color: ${getComponentStyle('button.{color}.secondary.color')};
   border-color: ${getComponentStyle('button.{color}.secondary.borderColor')};
 
@@ -64,7 +65,8 @@ const ButtonSecondary = styled<React.FC<ButtonProps>>(ButtonBase as any)`
   }
 `;
 
-const ButtonText = styled<React.FC<ButtonProps>>(ButtonBase as any)`
+const ButtonText = styled.button<ButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
   color: ${getComponentStyle('button.{color}.text.color')};
 
   &:focus {

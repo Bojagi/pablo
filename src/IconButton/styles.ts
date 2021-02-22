@@ -1,5 +1,5 @@
 import { Style } from '../theme/types';
-import { getColor, getSpacing } from '../utils/styleHelpers';
+import { getColor } from '../utils/styleHelpers';
 
 export interface IconButtonStyles {
   size: {
@@ -42,9 +42,9 @@ export interface IconButtonStyles {
 
 export const iconButtonStyles: IconButtonStyles = {
   size: {
-    small: getSpacing(3),
-    medium: getSpacing(4),
-    large: getSpacing(5),
+    small: '24px',
+    medium: '32px',
+    large: '40px',
   },
   icon: {
     scale: 1,
@@ -53,9 +53,9 @@ export const iconButtonStyles: IconButtonStyles = {
       scale: 0.833333333,
     },
     size: {
-      small: getSpacing(2.5),
-      medium: getSpacing(3.5),
-      large: getSpacing(4.5),
+      small: '20px',
+      medium: '28px',
+      large: '36px',
     },
   },
   borderRadius: 6,
@@ -73,11 +73,11 @@ export const iconButtonStyles: IconButtonStyles = {
     opacity: 0.3,
   },
   hover: {
-    backgroundColor: getColor('gray', '50'),
+    backgroundColor: getColor('blackOpacity', '50'),
     color: getColor('common', 'black'),
   },
   focus: {
-    backgroundColor: getColor('gray', '100'),
+    backgroundColor: getColor('blackOpacity', '100'),
     color: getColor('common', 'black'),
   },
 };

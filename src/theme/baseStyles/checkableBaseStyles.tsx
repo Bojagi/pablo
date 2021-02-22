@@ -28,18 +28,18 @@ export interface CheckableBaseStyles {
 
 export const checkableBaseStyles: CheckableBaseStyles = {
   innerPadding: {
-    medium: getSpacing(0.75),
-    small: getSpacing(0.5),
+    medium: getSpacing(3),
+    small: getSpacing(2),
   },
   borderWidth: 1,
   borderColor: getColor('borders'),
   backgroundColor: getColor('common', 'white'),
   handleSize: {
-    medium: getSpacing(1.5),
-    small: getSpacing(1),
+    medium: getSpacing(5),
+    small: getSpacing(4),
   },
   focus: {
-    outlineSize: getSpacing(0.375),
+    outlineSize: '3px',
     outlineColor: getColor('brand', 'lightest'),
   },
   boxTransition: [['box-shadow', '0.3s', 'ease-in-out']],

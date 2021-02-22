@@ -25,6 +25,7 @@ import { IconButtonStyles } from '../IconButton/styles';
 import { ModalStyles } from '../Modal/styles';
 import { ButtonBarStyles } from '../ButtonBar/styles';
 import { LinkStyles } from '../Link/styles';
+import { ToastCardStyles } from '../ToastCard/styles';
 
 export type Style =
   | string
@@ -33,7 +34,7 @@ export type Style =
   | FlattenSimpleInterpolation
   | InterpolationFunction<any>;
 export interface PabloTheme {
-  spacing: Spacing;
+  space: Spacing;
   colors: Colors;
   typography: Typography;
 }
@@ -63,6 +64,7 @@ export interface ComponentStyles {
   modal: ModalStyles;
   buttonBar: ButtonBarStyles;
   link: LinkStyles;
+  toastCard: ToastCardStyles;
 }
 
 export interface PabloThemeProviderProps {

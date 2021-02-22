@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import {
   BaseCheckable,
   BaseCheckableProps,
@@ -62,5 +61,3 @@ export const Switch = (props: SwitchProps) => (
     {...props}
   />
 );
-
-getSpacing(2.25, false);

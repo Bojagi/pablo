@@ -8,7 +8,7 @@ export default {
 
 const ControlledTextArea = ({ value: valueInitial, ...props }: Omit<TextAreaProps, 'onChange'>) => {
   const [value, setValue] = React.useState(valueInitial);
-  return <TextArea rows={3} value={value} mb={1} {...props} onChange={setValue} />;
+  return <TextArea rows={3} value={value} mb={4} {...props} onChange={setValue} />;
 };
 
 const baseStory = (args) => <ControlledTextArea {...args} />;
@@ -58,14 +58,17 @@ Error.args = {
 
 export const MultipleTextAreas = () => (
   <Box>
-    <Box mb={1.5}>
+    <Box mb={5}>
       <ControlledTextArea label="first name" />
     </Box>
-    <Box mb={1.5}>
+    <Box mb={5}>
       <ControlledTextArea label="last name" />
     </Box>
-    <Box mb={1.5}>
+    <Box mb={5}>
       <ControlledTextArea label="credit card no." infoText="optional" />
     </Box>
   </Box>
 );
+
+export const Outline = baseStory.bind(null);
+Outline.args = { variant: 'outline' };

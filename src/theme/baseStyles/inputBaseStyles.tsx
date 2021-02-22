@@ -2,14 +2,9 @@ import { css } from 'styled-components';
 import { getColor, getSpacing } from '../../utils/styleHelpers';
 import { Style } from '../types';
 
-export interface InputBaseStyles {
-  padding: Style;
-  defaultWidth: number | string;
-  borderWidth: number;
+export interface InputBaseVariantStyles {
   borderColor: Style;
   backgroundColor: Style;
-  fontFamily: Style;
-  transitions: string[][];
   focus: {
     outlineSize: Style;
     outlineColor: Style;
@@ -21,28 +16,45 @@ export interface InputBaseStyles {
     };
   };
 }
+export interface InputBaseStyles {
+  padding: Style;
+  defaultWidth: number | string;
+  borderWidth: number;
+  fontFamily: Style;
+  transitions: string[][];
+  outline: InputBaseVariantStyles;
+  filled: InputBaseVariantStyles;
+}
 
-export const inputBaseStyles: InputBaseStyles = {
-  defaultWidth: 300,
-  padding: css`
-    ${getSpacing(0.75)} ${getSpacing(1.5)}
-  `,
-  fontFamily: (props) => props.theme.typography.base.fontFamily,
-  borderWidth: 1,
+const filledVariantStyle = {
   borderColor: getColor('borders'),
   backgroundColor: getColor('common', 'white'),
   focus: {
-    outlineSize: getSpacing(0.375),
+    outlineSize: '3px',
     outlineColor: getColor('brand', 'lightest'),
   },
-  transitions: [
-    ['border-color', '0.3s'],
-    ['box-shadow', '0.3s', 'ease-in-out'],
-  ],
   error: {
     borderColor: getColor('negative'),
     focus: {
       outlineColor: getColor('negative', 'lightest'),
     },
   },
+};
+
+export const inputBaseStyles: InputBaseStyles = {
+  defaultWidth: 300,
+  padding: css`
+    ${getSpacing(3)} ${getSpacing(4)}
+  `,
+  fontFamily: (props) => props.theme.typography.base.fontFamily,
+  borderWidth: 1,
+  filled: filledVariantStyle,
+  outline: {
+    ...filledVariantStyle,
+    backgroundColor: 'transparent',
+  },
+  transitions: [
+    ['border-color', '0.3s'],
+    ['box-shadow', '0.3s', 'ease-in-out'],
+  ],
 };
