@@ -1,4 +1,4 @@
-import { get } from 'styled-system';
+import { get } from '@styled-system/core';
 import { PabloThemeableProps } from '../../theme/types';
 import { InterpolateFn } from './index';
 

@@ -1,4 +1,7 @@
-import { TextColorProps, BackgroundColorProps, system } from 'styled-system';
+// Only types
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { TextColorProps, BackgroundColorProps } from 'styled-system';
+import { system } from '@styled-system/core';
 
 export interface ColorProps {
   bgColor?: BackgroundColorProps['backgroundColor'];
