@@ -21,15 +21,15 @@ export interface ModalStyles {
 
 export const modalStyles: ModalStyles = {
   backdropColor: getColor('blackOpacity', '600'),
-  padding: getSpacing(3),
-  gap: getSpacing(1.5),
+  padding: getSpacing(7),
+  gap: getSpacing(5),
   backdropTransition: [['opacity', '0.3s']],
   box: {
     closedTransform: css`translateY(60px)`,
     transition: [['transform', '0.3s']],
     shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
     backgroundColor: getBackgroundColor(),
-    padding: getSpacing(1.5),
+    padding: getSpacing(5),
     width: '780px',
     borderRadius: 12,
   },

@@ -34,7 +34,7 @@ export type Style =
   | FlattenSimpleInterpolation
   | InterpolationFunction<any>;
 export interface PabloTheme {
-  spacing: Spacing;
+  space: Spacing;
   colors: Colors;
   typography: Typography;
 }

@@ -12,7 +12,7 @@ export default {
 export const SimpleToolbar = () => {
   const [selectedTool, setSelectedTool] = React.useState('bold');
   return (
-    <Toolbar my={3} mx={14} selected={selectedTool}>
+    <Toolbar my={9} mx={10} selected={selectedTool}>
       <ToolbarItem
         name="bold"
         tooltip="Make text bold"

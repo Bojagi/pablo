@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BoxProps } from '../Box';
+import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
 import { useComponentStyle } from '../theme';
 
-export interface InputProps extends BoxProps {
+export interface InputProps extends LayoutBoxProps {
   id?: string;
   value?: string | number;
   error?: React.ReactNode;
@@ -13,7 +13,6 @@ export interface InputProps extends BoxProps {
   variant?: InputVariant;
   infoText?: React.ReactNode;
   fullWidth?: boolean;
-  width?: string | number;
   end?: React.ReactNode;
   onChange: (newValue: string, e: React.FormEvent<HTMLInputElement>) => void;
 }
@@ -29,16 +28,16 @@ const InnerInput = styled.input<InnerInputProps>`
 `;
 
 export function Input({ width, variant = 'filled', ...props }: InputProps) {
-  const defaultWidth = useComponentStyle('input.defaultWidth');
+  const defaultWidth = useComponentStyle('input.defaultWidth') as any;
   const adornmentGap = useComponentStyle('input.adornmentGap');
   return (
-    <BaseInput
+    <BaseInput<InnerInputProps, HTMLInputElement>
       name="input"
-      width={width || defaultWidth}
       variant={variant}
       adornmentGap={adornmentGap}
       inputComponent={InnerInput}
       {...props}
+      width={width || defaultWidth}
     />
   );
 }

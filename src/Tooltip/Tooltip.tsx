@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { boxInterpolateFn, BoxProps } from '../Box';
+import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { Typography } from '../Typography';
 import { conditionalStyles, getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
@@ -18,15 +18,15 @@ import {
 
 export type TooltipSide = 'top' | 'right' | 'bottom' | 'left';
 
-export interface TooltipProps extends BoxProps {
+export interface TooltipProps extends LayoutBoxProps {
   content: React.ReactNode;
   side?: TooltipSide;
   delay?: number;
   children: React.ReactNode;
 }
 
-const TooltipWrapper = styled.div<BoxProps>`
-  ${boxInterpolateFn}
+const TooltipWrapper = styled.div<LayoutBoxProps>`
+  ${layoutInterpolationFn}
   position: relative;
 `;
 
@@ -68,10 +68,10 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
       left: leftArrowStyles,
     })}
 
-    border-left: ${getSpacing(1.5)} solid transparent;
-    border-right: ${getSpacing(1.5)} solid transparent;
-    border-bottom: calc(2 * ${getSpacing(1.5)} * 0.866) solid black;
-    border-top: ${getSpacing(1.5)} solid transparent;
+    border-left: ${getSpacing(5)} solid transparent;
+    border-right: ${getSpacing(5)} solid transparent;
+    border-bottom: calc(2 * ${getSpacing(5)} * 0.866) solid black;
+    border-top: ${getSpacing(5)} solid transparent;
     display: inline-block;
   }
 `;

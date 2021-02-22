@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { GitPullRequest } from 'react-feather';
-import { Box } from '../Box';
+import { Flex, Box } from '../Box';
 import { Subtitle } from '../Typography';
 import { Button } from './Button';
 
@@ -10,36 +10,36 @@ export default {
 };
 
 const SetOfButtons = (args) => (
-  <Box flex mx={-1} mb={1}>
-    <Button mx={1} {...args} color="brand">
+  <Flex mx={-4} mb={4}>
+    <Button mx={4} {...args} color="brand">
       Brand
     </Button>
-    <Button mx={1} {...args} color="plain">
+    <Button mx={4} {...args} color="plain">
       Plain
     </Button>
-    <Button mx={1} {...args} color="positive">
+    <Button mx={4} {...args} color="positive">
       Positive
     </Button>
-    <Button mx={1} {...args} color="negative">
+    <Button mx={4} {...args} color="negative">
       Negative
     </Button>
-  </Box>
+  </Flex>
 );
 
 const baseStory = (args) => (
   <>
     <Subtitle>Small</Subtitle>
-    <Box mb={2}>
+    <Box mb={5}>
       <SetOfButtons size="small" {...args} />
       <SetOfButtons size="small" disabled {...args} />
     </Box>
     <Subtitle>Medium</Subtitle>
-    <Box mb={2}>
+    <Box mb={5}>
       <SetOfButtons size="medium" {...args} />
       <SetOfButtons size="medium" disabled {...args} />
     </Box>
     <Subtitle>Large</Subtitle>
-    <Box mb={2}>
+    <Box mb={5}>
       <SetOfButtons size="large" {...args} />
       <SetOfButtons size="large" disabled {...args} />
     </Box>

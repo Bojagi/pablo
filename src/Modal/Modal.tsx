@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled, { css } from 'styled-components';
-import { Box } from '../Box';
+import { Flex } from '../Box';
 import { Title } from '../Typography';
 import { getComponentStyle, shadowTransformer, transitionTransformer } from '../utils/styleHelpers';
 
@@ -115,10 +115,10 @@ export function Modal({
           }}
         >
           {(title || TopRightItem) && (
-            <Box data-testid="pbl-modal-title-box" flex justifyContent="space-between">
+            <Flex data-testid="pbl-modal-title-box" justifyContent="space-between">
               {title && <Title>{title}</Title>}
               {TopRightItem && <TopRightItem onClose={onClose} />}
-            </Box>
+            </Flex>
           )}
           {children}
         </ModalBox>

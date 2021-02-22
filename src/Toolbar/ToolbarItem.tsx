@@ -1,10 +1,10 @@
 import React from 'react';
-import { BoxProps } from '../Box';
+import { LayoutBoxProps } from '../Box';
 import { IconButton } from '../IconButton';
 import { useComponentStyle } from '../theme';
 import { Tooltip, TooltipSide } from '../Tooltip/Tooltip';
 
-export interface ToolbarItemProps extends BoxProps {
+export interface ToolbarItemProps extends Omit<LayoutBoxProps, 'size'> {
   active?: boolean;
   icon: React.ReactNode;
   disabled?: boolean;
@@ -28,12 +28,12 @@ export function ToolbarItem({
   return (
     <Tooltip delay={500} side={tooltipSide} content={tooltip}>
       <IconButton
-        size="small"
         mx={gap}
         data-testid="pbl-toolbar-item-button"
         active={active}
         onClick={() => onClick && onClick(name)}
         {...props}
+        size="small"
       >
         {icon}
       </IconButton>

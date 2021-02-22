@@ -1,10 +1,10 @@
-import { spacing } from './spacing';
+import { space } from './spacing';
 import { PabloTheme } from './types';
 import { colors } from './colors';
 import { typography } from './typography';
 
 export const defaultTheme: PabloTheme = {
-  spacing,
+  space,
   colors,
   typography,
 };

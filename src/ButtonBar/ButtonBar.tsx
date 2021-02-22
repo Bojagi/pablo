@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BoxProps } from '../Box';
+import { BoxProps, LayoutBoxProps } from '../Box';
 import { useComponentStyle } from '../theme/context';
 import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../utils/styleHelpers';
 
-export interface ButtonBarProps {
+export interface ButtonBarProps extends LayoutBoxProps {
   children: React.ReactElement<BoxProps> | React.ReactElement<BoxProps>[];
 }
 
@@ -15,10 +15,10 @@ const ButtonBarBox = styled.div`
   margin: 0 -${getComponentStyle('buttonBar.gap')};
 `;
 
-export function ButtonBar({ children }: ButtonBarProps) {
+export function ButtonBar({ children, ...props }: ButtonBarProps) {
   const gap = useComponentStyle('buttonBar.gap');
   return (
-    <ButtonBarBox data-testid="pbl-buttonbar">
+    <ButtonBarBox data-testid="pbl-buttonbar" {...props}>
       {guaranteeArray(children).map((child, i) =>
         React.cloneElement(child, {
           key: i,

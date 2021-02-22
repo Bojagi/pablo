@@ -11,12 +11,12 @@ export interface SwitchStyles extends CheckableBaseStyles {
 export const switchStyles: SwitchStyles = {
   ...checkableBaseStyles,
   innerPadding: {
-    small: getSpacing(0.25),
-    medium: getSpacing(0.25),
+    small: getSpacing(1),
+    medium: getSpacing(1),
   },
   handleSize: {
-    medium: getSpacing(2.25),
-    small: getSpacing(1.5),
+    medium: '18px',
+    small: '12px',
   },
   handleColorChecked: getColor('brand'),
   handleColorUnchecked: getColor('gray', '500'),

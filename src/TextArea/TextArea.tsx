@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BoxProps } from '../Box';
+import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { useComponentStyle } from '../theme';
 import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
 
-export interface TextAreaProps extends BoxProps {
+export interface TextAreaProps extends LayoutBoxProps {
   id?: string;
   value?: string;
   error?: React.ReactNode;
@@ -14,7 +14,6 @@ export interface TextAreaProps extends BoxProps {
   infoText?: React.ReactNode;
   rows?: number;
   fullWidth?: boolean;
-  width?: string | number;
   onChange: (newValue: string, e: React.FormEvent<HTMLTextAreaElement>) => void;
 }
 

@@ -1,14 +1,14 @@
 import React, { ReactElement, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
-import { Box, boxInterpolateFn, BoxProps, ColorPath } from '../Box';
+import { Flex, Box, layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { IconButton } from '../IconButton';
 import { CloseIcon } from '../Icons';
 import { useComponentStyle } from '../theme';
 import { Paragraph, Subtitle } from '../Typography';
-import { getComponentStyle, shadowTransformer } from '../utils/styleHelpers';
+import { getColor, getComponentStyle, shadowTransformer } from '../utils/styleHelpers';
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './Icons';
 
-const CardWrapper = styled.div`
+const CardWrapper = styled.div<LayoutBoxProps>`
   border-radius: ${getComponentStyle('toastCard.borderRadius')};
   max-width: ${getComponentStyle('toastCard.width')};
   box-sizing: border-box;
@@ -16,12 +16,12 @@ const CardWrapper = styled.div`
   color: ${getComponentStyle('toastCard.color')};
   padding: ${getComponentStyle('toastCard.padding')};
   box-shadow: ${getComponentStyle('toastCard.shadow', shadowTransformer)};
-  ${boxInterpolateFn};
+  ${layoutInterpolationFn};
 `;
 
 export type ToastType = 'info' | 'success' | 'warning' | 'error';
 
-export interface ToastCardProps extends BoxProps {
+export interface ToastCardProps extends LayoutBoxProps {
   title: ReactNode;
   description?: ReactNode;
   type?: ToastType;
@@ -46,7 +46,7 @@ const icons: Record<ToastType, ReactElement> = {
   error: <ErrorIcon />,
 };
 
-const displayBlockIconsCss = css<BoxProps>`
+const displayBlockIconsCss = css<LayoutBoxProps>`
   & > * {
     display: block;
   }
@@ -66,42 +66,48 @@ export function ToastCard({
 
   return (
     <CardWrapper data-testid="pbl-toastcard" {...props}>
-      <Box flex alignItems={description ? 'flex-start' : 'center'}>
+      <Flex alignItems={description ? 'flex-start' : 'center'}>
         {(type || icon) && (
           <Box
-            mr={1.5}
-            display="inline-block"
+            mr={5}
             data-testid="pbl-toastcard-iconbox"
-            fillColor={iconColors[type || 'info'] as ColorPath}
+            fillColor={iconColors[type || 'info']}
             css={displayBlockIconsCss}
           >
             {icon || icons[type!]}
           </Box>
         )}
         <Box flexGrow={1}>
-          <Box flex>
+          <Flex>
             <Subtitle data-testid="pbl-toastcard-title" flexGrow={1} inline={!description}>
               {title}
             </Subtitle>
             {closable && (
               <IconButton
                 data-testid="pbl-toastcard-closebtn"
-                mx={-1}
+                mx={-5}
                 onClick={onClose}
                 size="small"
-                fillColor={color}
+                css={
+                  css`
+                    fill: ${color};
+                    &:hover:not(:disabled) {
+                      background-color: ${getColor('blackOpacity', '300')};
+                    }
+                  ` as any
+                }
               >
                 <CloseIcon />
               </IconButton>
             )}
-          </Box>
+          </Flex>
           {description && (
             <Paragraph inline data-testid="pbl-toastcard-description">
               {description}
             </Paragraph>
           )}
         </Box>
-      </Box>
+      </Flex>
     </CardWrapper>
   );
 }

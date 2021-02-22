@@ -12,11 +12,6 @@ exports[`render button with icon 1`] = `
 }
 
 .c0 {
-  color: light:#EBE7FF;
-  main: #6A50F2;
-  dark: #301A9E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,11 +111,6 @@ exports[`render primary brand color button 1`] = `
 }
 
 .c0 {
-  color: light:#EBE7FF;
-  main: #6A50F2;
-  dark: #301A9E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -189,11 +179,6 @@ exports[`render primary negative color button 1`] = `
 }
 
 .c0 {
-  color: light:#FFD3D0;
-  main: #F44336;
-  dark: #C92C21;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,7 +247,6 @@ exports[`render primary plain color button 1`] = `
 }
 
 .c0 {
-  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -331,11 +315,6 @@ exports[`render primary positive color button 1`] = `
 }
 
 .c0 {
-  color: light:#C7F8D6;
-  main: #35D968;
-  dark: #30C35E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -404,11 +383,6 @@ exports[`render secondary brand color button 1`] = `
 }
 
 .c0 {
-  color: light:#EBE7FF;
-  main: #6A50F2;
-  dark: #301A9E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -476,11 +450,6 @@ exports[`render secondary negative color button 1`] = `
 }
 
 .c0 {
-  color: light:#FFD3D0;
-  main: #F44336;
-  dark: #C92C21;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -548,7 +517,6 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .c0 {
-  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -616,11 +584,6 @@ exports[`render secondary positive color button 1`] = `
 }
 
 .c0 {
-  color: light:#C7F8D6;
-  main: #35D968;
-  dark: #30C35E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -688,11 +651,6 @@ exports[`render text brand color button 1`] = `
 }
 
 .c0 {
-  color: light:#EBE7FF;
-  main: #6A50F2;
-  dark: #301A9E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -759,11 +717,6 @@ exports[`render text negative color button 1`] = `
 }
 
 .c0 {
-  color: light:#FFD3D0;
-  main: #F44336;
-  dark: #C92C21;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -830,7 +783,6 @@ exports[`render text plain color button 1`] = `
 }
 
 .c0 {
-  color: plain;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -897,11 +849,6 @@ exports[`render text positive color button 1`] = `
 }
 
 .c0 {
-  color: light:#C7F8D6;
-  main: #35D968;
-  dark: #30C35E;
-  contrast-text: #ffffff;
-  contrast-text-light: #000000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

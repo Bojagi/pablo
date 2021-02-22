@@ -1,15 +1,15 @@
 import { css } from 'styled-components';
-import { boxInterpolateFn, BoxProps } from '../Box';
+import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
 
 export type ButtonSize = 'small' | 'medium' | 'large';
-export interface ButtonBaseProps extends BoxProps {
+export interface ButtonBaseProps extends LayoutBoxProps {
   size?: ButtonSize;
   onClick?: () => void;
 }
 
 export const buttonBaseStyles = css<ButtonBaseProps>`
-  ${boxInterpolateFn}
+  ${({ size, ...props }) => layoutInterpolationFn(props)}
   display: flex;
   flex-direction: row;
   align-items: center;

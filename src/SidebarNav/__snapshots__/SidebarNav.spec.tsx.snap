@@ -2,8 +2,8 @@
 
 exports[`Render multiple nav items 1`] = `
 .c0 {
-  padding-left: 16px;
   border-left: 1px solid #00000020;
+  padding-left: 16px;
 }
 
 .c2 {
@@ -126,8 +126,8 @@ exports[`Render multiple nav items 1`] = `
 
 exports[`Render one nav item 1`] = `
 .c0 {
-  padding-left: 16px;
   border-left: 1px solid #00000020;
+  padding-left: 16px;
 }
 
 .c2 {

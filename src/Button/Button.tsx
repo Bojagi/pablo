@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css, FlattenInterpolation } from 'styled-components';
-import { BoxProps } from '../Box';
-import { ButtonBaseProps, buttonBaseStyles, ButtonSize } from '../ButtonBase';
+import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Style } from '../theme/types';
 import { ButtonTypography } from '../Typography';
@@ -9,7 +8,7 @@ import { ButtonTypography } from '../Typography';
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
 export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 
-export interface ButtonProps extends Omit<ButtonBaseProps, 'color'>, Omit<BoxProps, 'color'> {
+export interface ButtonProps extends ButtonBaseProps {
   children: React.ReactNode;
   variant?: ButtonVariant;
   icon?: React.ReactNode;

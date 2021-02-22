@@ -8,5 +8,5 @@ export interface InputStyles extends InputBaseStyles {
 
 export const inputStyles: InputStyles = {
   ...inputBaseStyles,
-  adornmentGap: getSpacing(1),
+  adornmentGap: getSpacing(4),
 };

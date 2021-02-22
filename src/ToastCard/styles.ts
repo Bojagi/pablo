@@ -13,9 +13,9 @@ export interface ToastCardStyles {
 }
 
 export const toastCardStyles: ToastCardStyles = {
-  width: getSpacing(50),
+  width: '400px',
   padding: css`
-    ${getSpacing(1.5)} ${getSpacing(2.5)} ${getSpacing(1.5)} ${getSpacing(1.5)}
+    ${getSpacing(5)} ${getSpacing(7)} ${getSpacing(5)} ${getSpacing(5)}
   `,
   borderRadius: '6px',
   backgroundColor: getColor('gray', '800'),

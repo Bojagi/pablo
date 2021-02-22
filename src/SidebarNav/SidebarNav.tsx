@@ -1,24 +1,21 @@
 import React from 'react';
-import { Box, BoxProps } from '../Box';
-import { useComponentStyle } from '../theme';
+import styled from 'styled-components';
+import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
+import { getComponentStyle } from '../utils/styleHelpers';
 import { SidebarNavItemProps } from './SidebarNavItem';
 
-export interface SidebarNavProps extends BoxProps {
+export interface SidebarNavProps extends LayoutBoxProps {
   children: React.ReactElement<SidebarNavItemProps>;
 }
 
-export const SidebarNav = ({ children, ...props }) => {
-  const borderLeft = useComponentStyle('sidebarNav.borderLeft') as string;
-  const borderLeftSpacing = useComponentStyle('sidebarNav.borderLeftSpacing') as number;
-  return (
-    <Box
-      borderLeft={borderLeft}
-      data-testid="pbl-sidebarnav"
-      pl={borderLeftSpacing}
-      as="ul"
-      {...props}
-    >
-      {children}
-    </Box>
-  );
-};
+const SidebarNavBox = styled.div<LayoutBoxProps>`
+  border-left: ${getComponentStyle('sidebarNav.borderLeft')};
+  padding-left: ${getComponentStyle('sidebarNav.borderLeftSpacing')};
+  ${layoutInterpolationFn};
+`;
+
+export const SidebarNav = ({ children, ...props }) => (
+  <SidebarNavBox data-testid="pbl-sidebarnav" as="ul" {...props}>
+    {children}
+  </SidebarNavBox>
+);

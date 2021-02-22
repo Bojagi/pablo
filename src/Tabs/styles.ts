@@ -40,7 +40,7 @@ export interface TabsStyles {
 }
 
 export const tabsStyles: TabsStyles = {
-  gap: getSpacing(0.5),
+  gap: getSpacing(2),
   tab: {
     color: getColor('common', 'black'),
     icon: {
@@ -48,23 +48,23 @@ export const tabsStyles: TabsStyles = {
       size: getComponentStyle('button.base.icon.size.medium'),
     },
     padding: css`
-      ${getSpacing(1)} ${getSpacing(1.5)}
+      ${getSpacing(4)} ${getSpacing(5)}
     `,
-    margin: css`0 0 ${getSpacing(0.5)}`,
+    margin: css`0 0 ${getSpacing(2)}`,
     hover: {
       backgroundColor: getComponentStyle('button.text.brand.hover.backgroundColor'),
     },
     active: {
       padding: css`
-        ${getSpacing(1)} ${getSpacing(1.5)} ${getSpacing(1.5)}
+        ${getSpacing(4)} ${getSpacing(5)} ${getSpacing(5)}
       `,
       margin: '0',
       color: getColor('brand'),
       bottomBorder: {
         color: getColor('brand'),
-        thickness: getSpacing(0.5),
-        gap: getSpacing(1),
-        radius: getSpacing(0.5),
+        thickness: getSpacing(2),
+        gap: getSpacing(4),
+        radius: getSpacing(2),
       },
     },
   },

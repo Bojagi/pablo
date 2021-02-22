@@ -1,20 +1,19 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Box, boxInterpolateFn, BoxProps } from '../Box';
+import { Box, LayoutBoxProps, layoutInterpolationFn } from '../Box';
 import { Style } from '../theme/types';
 import { InfoText, ParagraphBold } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
 import { useUniqueId } from '../utils/useUniqueId';
 
-export interface BaseInputProps<E extends HTMLElement> {
+export interface BaseInputProps<E extends HTMLElement> extends LayoutBoxProps {
   id?: string;
   value?: string | number | readonly string[];
   error?: React.ReactNode;
   label?: React.ReactNode;
   infoText?: React.ReactNode;
   fullWidth?: boolean;
-  width?: string | number;
   start?: React.ReactNode;
   end?: React.ReactNode;
   onChange?: (newValue: string, e: React.FormEvent<E>) => void;
@@ -24,14 +23,14 @@ export interface BaseInputProps<E extends HTMLElement> {
 
 export type InputVariant = 'filled' | 'outline';
 
-export type InnerInputProps<P = {}> = P & {
-  error?: React.ReactNode;
-  fullWidth?: boolean;
-  variant: InputVariant;
-  startWidth?: number;
-  endWidth?: number;
-  width?: string | number;
-};
+export type InnerInputProps<P = {}> = LayoutBoxProps &
+  P & {
+    error?: React.ReactNode;
+    fullWidth?: boolean;
+    variant: InputVariant;
+    startWidth?: number;
+    endWidth?: number;
+  };
 
 export type BaseInputOuterProps<P extends Record<string, any>, E extends HTMLElement> = Omit<
   P,
@@ -43,7 +42,7 @@ export type BaseInputOuterProps<P extends Record<string, any>, E extends HTMLEle
     adornmentGap?: Style | number;
   };
 
-interface InputWrapperProps extends BoxProps {
+interface InputWrapperProps extends LayoutBoxProps {
   fullWidth: boolean;
   focus: boolean;
   error: boolean;
@@ -73,7 +72,7 @@ const InputWrapper = styled.div<InputWrapperProps>`
           ${getComponentStyle('{name}.{variant}.error.focus.outlineColor')};
       }
     `}
-  ${boxInterpolateFn}
+  ${layoutInterpolationFn}
   ${(props) =>
     props.fullWidth &&
     css`
@@ -108,7 +107,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
     <Box mt={mt}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
-          <ParagraphBold mb={0.75}>{label}</ParagraphBold>
+          <ParagraphBold mb={3}>{label}</ParagraphBold>
         </label>
       )}
       <InputWrapper
@@ -143,8 +142,8 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
       {actualInfoText && (
         <InfoText
           data-testid={`pbl-${name}-infotext`}
-          mt={0.5}
-          color={props.error ? 'negative.main' : 'text.info'}
+          mt={2}
+          textColor={props.error ? 'negative.main' : 'text.info'}
         >
           {actualInfoText}
         </InfoText>

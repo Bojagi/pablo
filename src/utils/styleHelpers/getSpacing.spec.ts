@@ -1,22 +1,15 @@
 import { getSpacing } from './getSpacing';
 
 const THEME: any = {
-  spacing: {
-    unit: 10,
-  },
+  space: [0, 4, 8, 16],
 };
 
-test('get spacing with "px" suffix when not specifying a suffix', () => {
+test('get spacing with "px" suffix when not specifying the suffix flag', () => {
   const result = getSpacing(1)({ theme: THEME });
-  expect(result).toBe('10px');
-});
-
-test('get spacing with custom suffix when not specifying a string suffix', () => {
-  const result = getSpacing(2, 'rem')({ theme: THEME });
-  expect(result).toBe('20rem');
+  expect(result).toBe('4px');
 });
 
 test('get raw number spacing when  specifying suffix "false"', () => {
   const result = getSpacing(3, false)({ theme: THEME });
-  expect(result).toBe(30);
+  expect(result).toBe(16);
 });

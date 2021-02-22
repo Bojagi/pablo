@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'styled-components';
-import { Box } from '../Box';
+import { Box, Flex } from '../Box';
 import { Card } from '../Card';
 import { Checkbox } from '../Checkbox';
 import { Input } from '../Input';
@@ -16,8 +16,7 @@ const BaseStory = (args) => {
   const [visible, setVisible] = React.useState(false);
 
   return (
-    <Box
-      flex
+    <Flex
       css={css`
         position: absolute;
         top: 0;
@@ -27,7 +26,7 @@ const BaseStory = (args) => {
       `}
       alignItems="stretch"
     >
-      <Box flex justifyContent="center" alignItems="center" flexGrow={1} flexBasis={0}>
+      <Flex justifyContent="center" alignItems="center" flexGrow={1} flexBasis={0}>
         <Box mb={4}>
           <Checkbox
             mb={1}
@@ -43,9 +42,9 @@ const BaseStory = (args) => {
             value={duration}
           />
         </Box>
-      </Box>
+      </Flex>
       <Box
-        flex
+        display="flex"
         justifyContent="center"
         alignItems="center"
         flexGrow={1}
@@ -61,7 +60,7 @@ const BaseStory = (args) => {
           </args.component>
         </Box>
       </Box>
-    </Box>
+    </Flex>
   );
 };
 

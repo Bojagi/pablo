@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { boxInterpolateFn, BoxProps } from '../Box';
+import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
 
 export interface ImageProps
   extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'color'>,
-    BoxProps {
+    LayoutBoxProps {
   className?: string;
   src: string;
   alt?: string;
@@ -12,8 +12,8 @@ export interface ImageProps
   height?: number;
 }
 
-const StyledImg = styled.img<BoxProps>`
-  ${boxInterpolateFn}
+const StyledImg = styled.img<LayoutBoxProps>`
+  ${layoutInterpolationFn}
 `;
 
 export function Image({ ...props }: ImageProps) {
