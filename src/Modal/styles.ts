@@ -1,3 +1,4 @@
+import { css } from 'styled-components';
 import { getSpacing } from '../utils/styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 
@@ -5,7 +6,10 @@ export interface ModalStyles {
   backdropColor: Style;
   padding: Style;
   gap: Style;
+  backdropTransition: string[][];
   box: {
+    closedTransform: Style;
+    transition: string[][];
     shadow: string[];
     borderRadius: number;
     width: Style;
@@ -18,7 +22,10 @@ export const modalStyles: ModalStyles = {
   backdropColor: 'rgba(5, 0, 21, 0.5)',
   padding: getSpacing(3),
   gap: getSpacing(1.5),
+  backdropTransition: [['opacity', '0.3s']],
   box: {
+    closedTransform: css`translateY(60px)`,
+    transition: [['transform', '0.3s']],
     shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
     backgroundColor: '#fafafa',
     padding: getSpacing(1.5),
