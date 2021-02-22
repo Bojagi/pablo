@@ -116,7 +116,7 @@ export const buttonStyles: ButtonStyles = {
     },
     large: {
       padding: css`
-        ${getSpacing(4)} ${getSpacing(5)}
+        ${getSpacing(5)} ${getSpacing(6)}
       `,
     },
   },
