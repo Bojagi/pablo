@@ -16,7 +16,7 @@ test('Render closed modal with just a content element', () => {
   // Backdrop
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('width', '100vw');
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('height', '100vh');
-  expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('background-color', 'rgba(5,0,21,0.5)');
+  expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('background-color', 'rgba(0,0,0,0.6)');
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('display', 'flex');
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('justify-content', 'center');
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('align-items', 'center');

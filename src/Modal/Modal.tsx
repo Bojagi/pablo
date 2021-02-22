@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled, { css } from 'styled-components';
 import { Flex } from '../Box';
 import { Title } from '../Typography';
-import { getComponentStyle, shadowTransformer } from '../utils/styleHelpers';
+import { getComponentStyle, shadowTransformer, transitionTransformer } from '../utils/styleHelpers';
 
 export interface TopRightItemProps {
   onClose?: () => void;
@@ -36,6 +36,7 @@ const Backdrop = styled.div<BackdropProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: ${getComponentStyle('modal.backdropTransition', transitionTransformer)};
   ${(props) =>
     props.open
       ? css`
@@ -47,7 +48,17 @@ const Backdrop = styled.div<BackdropProps>`
         `}
 `;
 
-const ModalArea = styled.div`
+interface ModalAreaProps {
+  open: boolean;
+}
+
+const ModalArea = styled.div<ModalAreaProps>`
+  ${(props) =>
+    !props.open &&
+    css`
+      transform: ${getComponentStyle('modal.box.closedTransform')};
+    `}
+  transition: ${getComponentStyle('modal.box.transition', transitionTransformer)};
   max-width: ${getComponentStyle('modal.box.width')};
   margin: auto;
   min-height: min-content;
@@ -96,7 +107,7 @@ export function Modal({
 
   return ReactDOM.createPortal(
     <Backdrop data-testid="pbl-modal-backdrop" onClick={handleClose} open={open}>
-      <ModalArea data-testid="pbl-modal-area">
+      <ModalArea data-testid="pbl-modal-area" open={open}>
         <ModalBox
           data-testid="pbl-modal-box"
           onMouseDown={(e) => {
