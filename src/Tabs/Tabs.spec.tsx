@@ -133,7 +133,7 @@ function getRenderHtml(props) {
     <PabloThemeProvider>
       <Tabs onSelect={onSelectMock} {...props}>
         <Tab name="hello">Hello</Tab>
-        <Tab name="world" active>
+        <Tab name="world" selected>
           World
         </Tab>
         <Tab name="bye">Bye</Tab>

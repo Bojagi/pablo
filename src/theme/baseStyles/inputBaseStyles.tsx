@@ -31,12 +31,12 @@ const filledVariantStyle = {
   backgroundColor: getColor('common', 'white'),
   focus: {
     outlineSize: '3px',
-    outlineColor: getColor('brand', 'light'),
+    outlineColor: getColor('brand', 'lightest'),
   },
   error: {
     borderColor: getColor('negative'),
     focus: {
-      outlineColor: getColor('negative', 'light'),
+      outlineColor: getColor('negative', 'lightest'),
     },
   },
 };

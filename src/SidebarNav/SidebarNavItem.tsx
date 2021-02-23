@@ -5,21 +5,30 @@ import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
 export interface SidebarNavItemProps extends ButtonBaseProps {
-  active?: boolean;
+  selected?: boolean;
   children: React.ReactNode;
 }
 
-const SidebarNavItemWrapper = styled.li<SidebarNavItemProps>`
+const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' })<SidebarNavItemProps>`
   ${buttonBaseStyles}
   margin: ${getComponentStyle('sidebarNav.item.marginY')} 0;
   ${(props) =>
-    props.active &&
+    props.selected &&
     css`
-      background-color: ${getComponentStyle('sidebarNav.item.active.backgroundColor')};
+      background-color: ${getComponentStyle('sidebarNav.item.selected.backgroundColor')};
     `}
 
   &:hover {
     background-color: ${getComponentStyle('sidebarNav.item.hover.backgroundColor')};
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 ${getComponentStyle('sidebarNav.item.focus.outlineSize')}
+      ${getComponentStyle('sidebarNav.item.focus.outlineColor')};
+  }
+
+  &:active {
+    background-color: ${getComponentStyle('sidebarNav.item.active.backgroundColor')};
   }
 `;
 

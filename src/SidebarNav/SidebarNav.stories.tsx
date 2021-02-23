@@ -17,7 +17,7 @@ export const UnselectedNavigation = () => (
 export const SelectedNavigation = () => (
   <SidebarNav>
     <SidebarNavItem>Hello</SidebarNavItem>
-    <SidebarNavItem active>Goodbye</SidebarNavItem>
+    <SidebarNavItem selected>Goodbye</SidebarNavItem>
     <SidebarNavItem>Ob-La-Di Ob-La-Da</SidebarNavItem>
   </SidebarNav>
 );

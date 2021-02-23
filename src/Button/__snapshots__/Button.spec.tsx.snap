@@ -27,8 +27,9 @@ exports[`render button with icon 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #ffffff;
   background: #6A50F2;
@@ -49,8 +50,14 @@ exports[`render button with icon 1`] = `
 }
 
 .c0:hover:not(:disabled) {
-  background: #301A9E;
-  border-color: #301A9E;
+  background: #4129BD;
+  border-color: #4129BD;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  background: #281683;
+  border-color: #281683;
 }
 
 .c1 {
@@ -126,8 +133,9 @@ exports[`render primary brand color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #ffffff;
   background: #6A50F2;
@@ -148,8 +156,14 @@ exports[`render primary brand color button 1`] = `
 }
 
 .c0:hover:not(:disabled) {
-  background: #301A9E;
-  border-color: #301A9E;
+  background: #4129BD;
+  border-color: #4129BD;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  background: #281683;
+  border-color: #281683;
 }
 
 <div>
@@ -194,12 +208,13 @@ exports[`render primary negative color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #ffffff;
-  background: #F44336;
-  border-color: #F44336;
+  background: #F21D0D;
+  border-color: #F21D0D;
 }
 
 .c0:not(:disabled) {
@@ -212,12 +227,18 @@ exports[`render primary negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFD3D0;
+  box-shadow: 0 0 0 4px #FFE7E5;
 }
 
 .c0:hover:not(:disabled) {
-  background: #C92C21;
-  border-color: #C92C21;
+  background: #CA271B;
+  border-color: #CA271B;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  background: #871A12;
+  border-color: #871A12;
 }
 
 <div>
@@ -262,8 +283,9 @@ exports[`render primary plain color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
   background: #f0f0f0;
@@ -286,6 +308,12 @@ exports[`render primary plain color button 1`] = `
 .c0:hover:not(:disabled) {
   background: #e0e0e0;
   border-color: #d0d0d0;
+}
+
+.c0:active:not(:disabled) {
+  color: #000000;
+  background: #d0d0d0;
+  border-color: #b0b0b0;
 }
 
 <div>
@@ -330,12 +358,13 @@ exports[`render primary positive color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #ffffff;
-  background: #35D968;
-  border-color: #35D968;
+  background: #38C765;
+  border-color: #38C765;
 }
 
 .c0:not(:disabled) {
@@ -348,12 +377,18 @@ exports[`render primary positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #C7F8D6;
+  box-shadow: 0 0 0 4px #DFF6E6;
 }
 
 .c0:hover:not(:disabled) {
-  background: #30C35E;
-  border-color: #30C35E;
+  background: #2FB85A;
+  border-color: #2FB85A;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  background: #108B36;
+  border-color: #108B36;
 }
 
 <div>
@@ -398,11 +433,12 @@ exports[`render secondary brand color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #6A50F2;
-  border-color: #6A50F2;
+  color: #4129BD;
+  border-color: #4129BD;
 }
 
 .c0:not(:disabled) {
@@ -419,8 +455,15 @@ exports[`render secondary brand color button 1`] = `
 }
 
 .c0:hover:not(:disabled) {
-  color: #301A9E;
+  color: #281683;
+  border-color: #281683;
   background: #EBE7FF;
+}
+
+.c0:active:not(:disabled) {
+  color: #281683;
+  border-color: #281683;
+  background: #D6CEFF;
 }
 
 <div>
@@ -465,11 +508,12 @@ exports[`render secondary negative color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #F44336;
-  border-color: #F44336;
+  color: #CA271B;
+  border-color: #CA271B;
 }
 
 .c0:not(:disabled) {
@@ -482,12 +526,19 @@ exports[`render secondary negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFD3D0;
+  box-shadow: 0 0 0 4px #FFE7E5;
 }
 
 .c0:hover:not(:disabled) {
-  color: #C92C21;
-  background: #FFD3D0;
+  color: #871A12;
+  border-color: #871A12;
+  background: #FFE7E5;
+}
+
+.c0:active:not(:disabled) {
+  color: #871A12;
+  border-color: #871A12;
+  background: #FFCFCC;
 }
 
 <div>
@@ -532,8 +583,9 @@ exports[`render secondary plain color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
   border-color: #000000;
@@ -554,7 +606,14 @@ exports[`render secondary plain color button 1`] = `
 
 .c0:hover:not(:disabled) {
   color: #000000;
+  border-color: #000000;
   background: #f0f0f0;
+}
+
+.c0:active:not(:disabled) {
+  color: #000000;
+  border-color: #000000;
+  background: #e0e0e0;
 }
 
 <div>
@@ -599,11 +658,12 @@ exports[`render secondary positive color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #35D968;
-  border-color: #35D968;
+  color: #2FB85A;
+  border-color: #2FB85A;
 }
 
 .c0:not(:disabled) {
@@ -616,12 +676,19 @@ exports[`render secondary positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #C7F8D6;
+  box-shadow: 0 0 0 4px #DFF6E6;
 }
 
 .c0:hover:not(:disabled) {
-  color: #30C35E;
-  background: #C7F8D6;
+  color: #108B36;
+  border-color: #108B36;
+  background: #DFF6E6;
+}
+
+.c0:active:not(:disabled) {
+  color: #108B36;
+  border-color: #108B36;
+  background: #BBECCB;
 }
 
 <div>
@@ -666,10 +733,11 @@ exports[`render text brand color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #6A50F2;
+  color: #4129BD;
 }
 
 .c0:not(:disabled) {
@@ -686,8 +754,14 @@ exports[`render text brand color button 1`] = `
 }
 
 .c0:hover:not(:disabled) {
-  color: #301A9E;
+  color: #281683;
   background: #EBE7FF;
+}
+
+.c0:active:not(:disabled) {
+  color: #281683;
+  border-color: transparent;
+  background: #D6CEFF;
 }
 
 <div>
@@ -732,10 +806,11 @@ exports[`render text negative color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #F44336;
+  color: #CA271B;
 }
 
 .c0:not(:disabled) {
@@ -748,12 +823,18 @@ exports[`render text negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFD3D0;
+  box-shadow: 0 0 0 4px #FFE7E5;
 }
 
 .c0:hover:not(:disabled) {
-  color: #C92C21;
-  background: #FFD3D0;
+  color: #871A12;
+  background: #FFE7E5;
+}
+
+.c0:active:not(:disabled) {
+  color: #871A12;
+  border-color: transparent;
+  background: #FFCFCC;
 }
 
 <div>
@@ -798,8 +879,9 @@ exports[`render text plain color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: #000000;
 }
@@ -820,6 +902,12 @@ exports[`render text plain color button 1`] = `
 .c0:hover:not(:disabled) {
   color: #000000;
   background: #f0f0f0;
+}
+
+.c0:active:not(:disabled) {
+  color: #000000;
+  border-color: transparent;
+  background: #e0e0e0;
 }
 
 <div>
@@ -864,10 +952,11 @@ exports[`render text positive color button 1`] = `
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
-  transition: background-color,0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #35D968;
+  color: #2FB85A;
 }
 
 .c0:not(:disabled) {
@@ -880,12 +969,18 @@ exports[`render text positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #C7F8D6;
+  box-shadow: 0 0 0 4px #DFF6E6;
 }
 
 .c0:hover:not(:disabled) {
-  color: #30C35E;
-  background: #C7F8D6;
+  color: #108B36;
+  background: #DFF6E6;
+}
+
+.c0:active:not(:disabled) {
+  color: #108B36;
+  border-color: transparent;
+  background: #BBECCB;
 }
 
 <div>

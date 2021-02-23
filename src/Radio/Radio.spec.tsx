@@ -137,7 +137,7 @@ test('Forward onFocus and onBlur to input and show focus outline', () => {
 
   expect(getByTestId('pbl-radio')).toHaveStyleRule(
     'box-shadow',
-    `0 0 0 3px ${defaultTheme.colors.brand.light}`
+    `0 0 0 3px ${defaultTheme.colors.brand.lightest}`
   );
 
   expect(onBlurMock).toHaveBeenCalledTimes(0);

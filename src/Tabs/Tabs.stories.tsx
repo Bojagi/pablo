@@ -10,7 +10,7 @@ export default {
 
 export const TabsWithStaticActive = () => (
   <Tabs>
-    <Tab name="first" active>
+    <Tab name="first" selected>
       First tab
     </Tab>
     <Tab name="second">Second tab</Tab>

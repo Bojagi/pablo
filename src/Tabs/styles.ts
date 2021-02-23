@@ -11,7 +11,7 @@ export interface TabActiveBorderBottomStyles {
   radius: Style;
 }
 
-export interface TabActiveStyles {
+export interface TabSelectedStyles {
   padding: Style;
   margin: Style;
   color: Style;
@@ -22,6 +22,14 @@ export interface TabHoverStyles {
   backgroundColor: Style;
 }
 
+export interface TabActiveStyles {
+  backgroundColor: Style;
+}
+
+export interface TabFocusStyles {
+  outlineColor: Style;
+}
+
 export interface TabStyles {
   icon: {
     gap: Style;
@@ -30,8 +38,10 @@ export interface TabStyles {
   color: Style;
   padding: Style;
   margin: Style;
+  focus: TabFocusStyles;
   hover: TabHoverStyles;
   active: TabActiveStyles;
+  selected: TabSelectedStyles;
 }
 
 export interface TabsStyles {
@@ -52,9 +62,15 @@ export const tabsStyles: TabsStyles = {
     `,
     margin: css`0 0 ${getSpacing(2)}`,
     hover: {
-      backgroundColor: getComponentStyle('button.text.brand.hover.backgroundColor'),
+      backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
+    },
+    focus: {
+      outlineColor: getComponentStyle('button.brand.outlineColor'),
     },
     active: {
+      backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
+    },
+    selected: {
       padding: css`
         ${getSpacing(4)} ${getSpacing(5)} ${getSpacing(5)}
       `,

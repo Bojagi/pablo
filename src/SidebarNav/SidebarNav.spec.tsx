@@ -16,7 +16,7 @@ test('Render one nav item', () => {
   const { container } = render(
     <PabloThemeProvider>
       <SidebarNav>
-        <SidebarNavItem active>Hello</SidebarNavItem>
+        <SidebarNavItem selected>Hello</SidebarNavItem>
       </SidebarNav>
     </PabloThemeProvider>
   );
@@ -32,7 +32,7 @@ test('Render multiple nav items', () => {
   expect(allSidebarNav[1]).toHaveTextContent('World');
   expect(allSidebarNav[2]).toHaveTextContent('Bye');
   expect(allSidebarNav[0]).toHaveStyleRule('background-color', undefined);
-  expect(allSidebarNav[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.light);
+  expect(allSidebarNav[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.lightest);
   expect(allSidebarNav[2]).toHaveStyleRule('background-color', undefined);
 });
 
@@ -45,7 +45,7 @@ function getRenderHtml(props) {
     <PabloThemeProvider>
       <SidebarNav onSelect={onSelectMock} {...props}>
         <SidebarNavItem>Hello</SidebarNavItem>
-        <SidebarNavItem active>World</SidebarNavItem>
+        <SidebarNavItem selected>World</SidebarNavItem>
         <SidebarNavItem>Bye</SidebarNavItem>
       </SidebarNav>
     </PabloThemeProvider>

@@ -40,7 +40,7 @@ export const checkableBaseStyles: CheckableBaseStyles = {
   },
   focus: {
     outlineSize: '3px',
-    outlineColor: getColor('brand', 'light'),
+    outlineColor: getColor('brand', 'lightest'),
   },
   boxTransition: [['box-shadow', '0.3s', 'ease-in-out']],
   handleTransition: [['transform', '0.15s', 'cubic-bezier(0.34, 1.56, 0.64, 1)']],

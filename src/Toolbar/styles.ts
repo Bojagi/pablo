@@ -36,7 +36,7 @@ export const toolbarStyles: ToolbarStyles = {
   gap: getSpacing(2),
   divider: {
     width: 1,
-    color: getColor('borders', 'light'),
+    color: getColor('borders', 'lightest'),
   },
   item: {
     buttonTransition: [
@@ -50,11 +50,11 @@ export const toolbarStyles: ToolbarStyles = {
     backgroundColor: 'transparent',
     color: getColor('common', 'black'),
     hover: {
-      backgroundColor: getColor('brand', 'light'),
+      backgroundColor: getColor('brand', 'lightest'),
       color: getColor('common', 'black'),
     },
     focus: {
-      backgroundColor: getColor('brand', 'light'),
+      backgroundColor: getColor('brand', 'lightest'),
       color: getColor('common', 'black'),
     },
     active: {

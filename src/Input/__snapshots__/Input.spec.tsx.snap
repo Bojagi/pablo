@@ -63,7 +63,7 @@ exports[`Show error when an error message is given 1`] = `
   line-height: 1.5em;
   margin-bottom: 0;
   margin-top: 4px;
-  color: #F44336;
+  color: #F21D0D;
 }
 
 .c0 {
@@ -81,12 +81,12 @@ exports[`Show error when an error message is given 1`] = `
   background-color: #ffffff;
   -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  border-color: #F44336;
+  border-color: #F21D0D;
   width: 300px;
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 3px #FFD3D0;
+  box-shadow: 0 0 0 3px #FFE7E5;
 }
 
 .c1 {
