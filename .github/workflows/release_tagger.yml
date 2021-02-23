@@ -19,6 +19,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+    - name: Set git commit author
+      run: |
+        git config --global user.name "Pablo Bot"
+        git config --global user.email bot@bojagi.io
     - name: install
       run: 'yarn'
     - run: |
