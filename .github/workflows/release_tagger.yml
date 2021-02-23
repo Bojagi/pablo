@@ -21,8 +21,8 @@ jobs:
         node-version: '12.x'
     - name: Set git commit author
       run: |
-        git config --global user.name "Pablo Bot"
-        git config --global user.email bot@bojagi.io
+        git config --global user.name "Pablo[bot]"
+        git config --global user.email "14909430+Pablo[bot]@users.noreply.github.com"
     - name: install
       run: 'yarn'
     - run: |
@@ -32,4 +32,4 @@ jobs:
         node ./scripts/publishDraftRelease
       name: 'Publish'
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB\_TOKEN: ${{ secrets.RELEASE_BOT_SECRET }}
