@@ -1,6 +1,6 @@
 {
   "name": "@bojagi/pablo",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "main:next": "es/index.js",
   "module": "esm/index.js",
@@ -110,7 +110,10 @@
       "!**/index.ts",
       "!**/*.stories.tsx"
     ],
-    "testPathIgnorePatterns": ["/node_modules/", "/build/"],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>/jestSetup.ts"
     ]
