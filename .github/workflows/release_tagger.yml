@@ -32,4 +32,4 @@ jobs:
         node ./scripts/publishDraftRelease
       name: 'Publish'
       env:
-        GITHUB\_TOKEN: ${{ secrets.RELEASE_BOT_SECRET }}
+        GITHUB_TOKEN: ${{ secrets.RELEASE_BOT_SECRET }}
