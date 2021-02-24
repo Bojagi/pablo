@@ -221,10 +221,18 @@ test('Render primary brand button when unknown variant is given', () => {
   );
 });
 
-test('render button with icon', () => {
-  const { container, getByTestId } = renderComponent({ icon: <div>myIcon</div> });
+test('render button with start icon', () => {
+  const { container, getByTestId } = renderComponent({ startIcon: <div>myIcon</div> });
   expect(container).toMatchSnapshot();
   expect(getByTestId('pbl-button-icon')).toBeDefined();
+  expect(getByTestId('pbl-button-icon')).toHaveStyleRule('margin-right', '8px');
+});
+
+test('render button with end icon', () => {
+  const { container, getByTestId } = renderComponent({ endIcon: <div>myIcon</div> });
+  expect(container).toMatchSnapshot();
+  expect(getByTestId('pbl-button-icon')).toBeDefined();
+  expect(getByTestId('pbl-button-icon')).toHaveStyleRule('margin-left', '8px');
 });
 
 test('disable button element when disabled prop is true', () => {

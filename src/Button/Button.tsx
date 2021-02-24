@@ -8,21 +8,25 @@ import { ButtonTypography } from '../Typography';
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
 export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 
-export interface ButtonProps extends ButtonBaseProps {
+export interface InnerButtonProps extends ButtonBaseProps {
   children: React.ReactNode;
   variant?: ButtonVariant;
-  icon?: React.ReactNode;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
   color?: ButtonColor;
   disabled?: boolean;
   className?: string;
 }
 
+export type ButtonProps<C extends React.ElementType> = InnerButtonProps &
+  React.ComponentPropsWithRef<C>;
+
 const getButtonFocusOutlineShadow = (color: Style) => css`
   box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')} ${color};
 `;
 
-const ButtonPrimary = styled.button<ButtonProps>`
-  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
+const ButtonPrimary = styled.button<InnerButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
   color: ${getComponentStyle('button.{color}.primary.color')};
   background: ${getComponentStyle('button.{color}.primary.backgroundColor')};
   border-color: ${getComponentStyle('button.{color}.primary.borderColor')};
@@ -43,8 +47,8 @@ const ButtonPrimary = styled.button<ButtonProps>`
   }
 `;
 
-const ButtonSecondary = styled.button<ButtonProps>`
-  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
+const ButtonSecondary = styled.button<InnerButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
   color: ${getComponentStyle('button.{color}.secondary.color')};
   border-color: ${getComponentStyle('button.{color}.secondary.borderColor')};
 
@@ -65,8 +69,8 @@ const ButtonSecondary = styled.button<ButtonProps>`
   }
 `;
 
-const ButtonText = styled.button<ButtonProps>`
-  ${buttonBaseStyles as FlattenInterpolation<ButtonProps>}
+const ButtonText = styled.button<InnerButtonProps>`
+  ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
   color: ${getComponentStyle('button.{color}.text.color')};
 
   &:focus {
@@ -87,13 +91,14 @@ const ButtonText = styled.button<ButtonProps>`
 
 interface IconBoxProps {
   size: ButtonSize;
+  marginSide: 'left' | 'right';
 }
 
 const IconBox = styled.div<IconBoxProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: ${getComponentStyle('button.base.icon.gap')};
+  margin-${(props) => props.marginSide}: ${getComponentStyle('button.base.icon.gap')};
   width: ${getComponentStyle('button.base.icon.size.{size}')};
   height: ${getComponentStyle('button.base.icon.size.{size}')};
 
@@ -109,16 +114,17 @@ const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
   text: ButtonText,
 };
 
-export const Button = ({
+export const Button = <C extends React.ElementType>({
   color = 'brand',
   variant = 'primary',
   size = 'medium',
-  icon,
+  startIcon,
+  endIcon,
   children,
   className,
   disabled,
   ...props
-}: ButtonProps) => {
+}: ButtonProps<C>) => {
   const InnerButton = buttonMap[variant] || ButtonPrimary;
   return (
     <InnerButton
@@ -129,12 +135,17 @@ export const Button = ({
       disabled={disabled}
       color={color}
     >
-      {icon && (
-        <IconBox size={size} data-testid="pbl-button-icon">
-          {icon}
+      {startIcon && (
+        <IconBox marginSide="right" size={size} data-testid="pbl-button-icon">
+          {startIcon}
         </IconBox>
       )}
       <ButtonTypography>{children}</ButtonTypography>
+      {endIcon && (
+        <IconBox marginSide="left" size={size} data-testid="pbl-button-icon">
+          {endIcon}
+        </IconBox>
+      )}
     </InnerButton>
   );
 };

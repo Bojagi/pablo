@@ -9,10 +9,10 @@ export interface ButtonBaseProps extends LayoutBoxProps {
 }
 
 export const buttonBaseStyles = css<ButtonBaseProps>`
-  ${({ size, ...props }) => layoutInterpolationFn(props)}
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
   padding: ${getComponentStyle('button.sizes.{size}.padding')};
   border: ${getComponentStyle('button.base.borderSize')}px solid transparent;
   background: transparent;
@@ -28,4 +28,6 @@ export const buttonBaseStyles = css<ButtonBaseProps>`
     opacity: ${getComponentStyle('button.base.disabled.opacity')};
     cursor: normal;
   }
+
+  ${({ size, ...props }) => layoutInterpolationFn(props)}
 `;

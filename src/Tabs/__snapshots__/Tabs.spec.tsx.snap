@@ -21,12 +21,10 @@ exports[`Render first selected 1`] = `
 }
 
 .c1 {
-  margin-left: 4px;
-  margin-right: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -34,6 +32,8 @@ exports[`Render first selected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -41,6 +41,8 @@ exports[`Render first selected 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
+  margin-left: 4px;
+  margin-right: 4px;
   color: #000000;
   position: relative;
   padding: 8px 12px;
@@ -84,12 +86,10 @@ exports[`Render first selected 1`] = `
 }
 
 .c3 {
-  margin-left: 4px;
-  margin-right: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -97,6 +97,8 @@ exports[`Render first selected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -104,6 +106,8 @@ exports[`Render first selected 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
+  margin-left: 4px;
+  margin-right: 4px;
   color: #000000;
   position: relative;
   padding: 8px 12px;
@@ -193,12 +197,10 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c1 {
-  margin-left: 4px;
-  margin-right: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -206,6 +208,8 @@ exports[`Render tabs with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -213,6 +217,8 @@ exports[`Render tabs with icons 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
+  margin-left: 4px;
+  margin-right: 4px;
   color: #000000;
   position: relative;
   padding: 8px 12px;
@@ -241,12 +247,10 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c4 {
-  margin-left: 4px;
-  margin-right: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -254,6 +258,8 @@ exports[`Render tabs with icons 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -261,6 +267,8 @@ exports[`Render tabs with icons 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
+  margin-left: 4px;
+  margin-right: 4px;
   color: #000000;
   position: relative;
   padding: 8px 12px;
@@ -407,12 +415,10 @@ exports[`Work with one tab 1`] = `
 }
 
 .c1 {
-  margin-left: 4px;
-  margin-right: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -420,6 +426,8 @@ exports[`Work with one tab 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -427,6 +435,8 @@ exports[`Work with one tab 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
+  margin-left: 4px;
+  margin-right: 4px;
   color: #000000;
   position: relative;
   padding: 8px 12px;

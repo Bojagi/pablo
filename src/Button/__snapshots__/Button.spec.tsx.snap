@@ -1,6 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`render button with icon 1`] = `
+exports[`render button with end icon 1`] = `
+.c1 {
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  color: #ffffff;
+  background: #6A50F2;
+  border-color: #6A50F2;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c0:hover:not(:disabled) {
+  background: #4129BD;
+  border-color: #4129BD;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  background: #281683;
+  border-color: #281683;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.c2 > * {
+  width: 20px;
+  height: 20px;
+}
+
+<div>
+  <button
+    class="c0"
+    color="brand"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+    <div
+      class="c2"
+      data-testid="pbl-button-icon"
+    >
+      <div>
+        myIcon
+      </div>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`render button with start icon 1`] = `
 .c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
@@ -12,10 +120,10 @@ exports[`render button with icon 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -23,7 +131,9 @@ exports[`render button with icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -118,10 +228,10 @@ exports[`render primary brand color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -129,7 +239,9 @@ exports[`render primary brand color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -193,10 +305,10 @@ exports[`render primary negative color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -204,7 +316,9 @@ exports[`render primary negative color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -268,10 +382,10 @@ exports[`render primary plain color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -279,7 +393,9 @@ exports[`render primary plain color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -343,10 +459,10 @@ exports[`render primary positive color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -354,7 +470,9 @@ exports[`render primary positive color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -418,10 +536,10 @@ exports[`render secondary brand color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -429,7 +547,9 @@ exports[`render secondary brand color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -493,10 +613,10 @@ exports[`render secondary negative color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -504,7 +624,9 @@ exports[`render secondary negative color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -568,10 +690,10 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -579,7 +701,9 @@ exports[`render secondary plain color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -643,10 +767,10 @@ exports[`render secondary positive color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -654,7 +778,9 @@ exports[`render secondary positive color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -718,10 +844,10 @@ exports[`render text brand color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -729,7 +855,9 @@ exports[`render text brand color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -791,10 +919,10 @@ exports[`render text negative color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -802,7 +930,9 @@ exports[`render text negative color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -864,10 +994,10 @@ exports[`render text plain color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -875,7 +1005,9 @@ exports[`render text plain color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
@@ -937,10 +1069,10 @@ exports[`render text positive color button 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -948,7 +1080,9 @@ exports[`render text positive color button 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 12px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
