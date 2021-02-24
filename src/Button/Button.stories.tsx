@@ -64,14 +64,21 @@ Text.args = {
 export const PrimaryWithIcon = baseStory.bind(null);
 PrimaryWithIcon.args = {
   variant: 'primary',
-  icon: <GitPullRequest size={16} />,
+  startIcon: <GitPullRequest size={16} />,
 };
 
 export const SecondaryWithIcon = baseStory.bind(null);
 SecondaryWithIcon.args = {
   variant: 'secondary',
-  icon: <GitPullRequest size={16} />,
+  endIcon: <GitPullRequest size={16} />,
+};
+
+export const AsLink = baseStory.bind(null);
+AsLink.args = {
+  variant: 'primary',
+  as: 'a',
+  href: '#hello',
 };
 
 export const TextWithIcon = baseStory.bind(null);
-TextWithIcon.args = { variant: 'text', icon: <GitPullRequest size={16} /> };
+TextWithIcon.args = { variant: 'text', startIcon: <GitPullRequest size={16} /> };
