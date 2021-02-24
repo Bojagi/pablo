@@ -45,8 +45,8 @@ exports[`Render first selected 1`] = `
   margin-right: 4px;
   color: #000000;
   position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
+  padding: 8px 12px 12px;
+  margin: 0 0 0px;
   color: #6A50F2;
   padding: 8px 12px 12px;
   margin: 0;
@@ -110,8 +110,8 @@ exports[`Render first selected 1`] = `
   margin-right: 4px;
   color: #000000;
   position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
+  padding: 8px 12px 12px;
+  margin: 0 0 0px;
 }
 
 .c3:not(:disabled) {
@@ -221,8 +221,8 @@ exports[`Render tabs with icons 1`] = `
   margin-right: 4px;
   color: #000000;
   position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
+  padding: 8px 12px 12px;
+  margin: 0 0 0px;
 }
 
 .c1:not(:disabled) {
@@ -271,8 +271,8 @@ exports[`Render tabs with icons 1`] = `
   margin-right: 4px;
   color: #000000;
   position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
+  padding: 8px 12px 12px;
+  margin: 0 0 0px;
   color: #6A50F2;
   padding: 8px 12px 12px;
   margin: 0;
@@ -439,8 +439,8 @@ exports[`Work with one tab 1`] = `
   margin-right: 4px;
   color: #000000;
   position: relative;
-  padding: 8px 12px;
-  margin: 0 0 4px;
+  padding: 8px 12px 12px;
+  margin: 0 0 0px;
   color: #6A50F2;
   padding: 8px 12px 12px;
   margin: 0;

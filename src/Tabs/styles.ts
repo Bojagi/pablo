@@ -58,9 +58,9 @@ export const tabsStyles: TabsStyles = {
       size: getComponentStyle('button.base.icon.size.medium'),
     },
     padding: css`
-      ${getSpacing(4)} ${getSpacing(5)}
+      ${getSpacing(4)} ${getSpacing(5)} ${getSpacing(5)}
     `,
-    margin: css`0 0 ${getSpacing(2)}`,
+    margin: css`0 0 ${getSpacing(0)}`,
     hover: {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
     },
