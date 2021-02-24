@@ -5,7 +5,7 @@ import { buttonBaseStyles } from '../ButtonBase';
 import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
-export interface TabProps extends LayoutBoxProps {
+export interface InnerTabProps extends LayoutBoxProps {
   selected?: boolean;
   icon?: React.ReactNode;
   name: string;
@@ -13,7 +13,12 @@ export interface TabProps extends LayoutBoxProps {
   onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
 }
 
-const TabButton = styled.button<Partial<TabProps>>`
+export type TabProps<C extends React.ElementType = 'button'> = InnerTabProps &
+  React.ComponentPropsWithRef<C> & {
+    as?: C;
+  };
+
+const TabButton = styled.button<Partial<InnerTabProps>>`
   ${buttonBaseStyles}
   color: ${getComponentStyle('tabs.tab.color')};
   position: relative;
@@ -65,7 +70,13 @@ const IconBox = styled.div`
   }
 `;
 
-export const Tab = ({ children, selected, icon, onClick, ...props }: TabProps) => (
+export const Tab = <C extends React.ElementType>({
+  children,
+  selected,
+  icon,
+  onClick,
+  ...props
+}: TabProps<C>) => (
   <TabButton
     data-testid="pbl-tab"
     {...props}
