@@ -70,11 +70,7 @@ const IconBox = styled.div`
   }
 `;
 
-<<<<<<< Updated upstream
 export const Tab = forwardRef<HTMLButtonElement, TabProps<any>>(
-=======
-export const Tab = forwardRef<HTMLButtonElement, TabProps>(
->>>>>>> Stashed changes
   ({ children, selected, icon, onClick, ...props }, ref) => (
     <TabButton
       ref={ref}
