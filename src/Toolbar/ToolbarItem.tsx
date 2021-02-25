@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { LayoutBoxProps } from '../Box';
 import { IconButton } from '../IconButton';
-import { useComponentStyle } from '../theme';
+import { useComponentStyle } from '../theme/useComponentStyle';
 import { Tooltip, TooltipSide } from '../Tooltip/Tooltip';
 
 export interface ToolbarItemProps extends Omit<LayoutBoxProps, 'size'> {
@@ -14,29 +14,24 @@ export interface ToolbarItemProps extends Omit<LayoutBoxProps, 'size'> {
   name: string;
 }
 
-export function ToolbarItem({
-  active,
-  tooltip,
-  tooltipSide,
-  icon,
-  name,
-  onClick,
-  ...props
-}: ToolbarItemProps) {
-  const gap = useComponentStyle('toolbar.gap');
+export const ToolbarItem = forwardRef<HTMLButtonElement, ToolbarItemProps>(
+  ({ active, tooltip, tooltipSide, icon, name, onClick, ...props }, ref) => {
+    const gap = useComponentStyle('toolbar.gap');
 
-  return (
-    <Tooltip delay={500} side={tooltipSide} content={tooltip}>
-      <IconButton
-        mx={gap}
-        data-testid="pbl-toolbar-item-button"
-        active={active}
-        onClick={() => onClick && onClick(name)}
-        {...props}
-        size="small"
-      >
-        {icon}
-      </IconButton>
-    </Tooltip>
-  );
-}
+    return (
+      <Tooltip delay={500} side={tooltipSide} content={tooltip}>
+        <IconButton
+          mx={gap}
+          ref={ref}
+          data-testid="pbl-toolbar-item-button"
+          active={active}
+          onClick={() => onClick && onClick(name)}
+          {...props}
+          size="small"
+        >
+          {icon}
+        </IconButton>
+      </Tooltip>
+    );
+  }
+);

@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import { getComponentStyle } from '../utils/styleHelpers';
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
+import { getComponentStyle } from '../styleHelpers';
+import { getSpacing } from '../styleHelpers/getSpacing';
 
 const transformInterpolateFn = (axis: 'Y' | 'X', directionMultiplier: -1 | 1) => (props) =>
   props.isVisible ? `translate${axis}(0)` : `translate${axis}(${directionMultiplier * 25}%)`;

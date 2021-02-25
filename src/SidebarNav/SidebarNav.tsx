@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
-import { getComponentStyle } from '../utils/styleHelpers';
+import { getComponentStyle } from '../styleHelpers';
 import { SidebarNavItemProps } from './SidebarNavItem';
 
 export interface SidebarNavProps extends LayoutBoxProps {
-  children: React.ReactElement<SidebarNavItemProps>;
+  children: React.ReactElement<SidebarNavItemProps> | React.ReactElement<SidebarNavItemProps>[];
 }
 
-const SidebarNavBox = styled.div<LayoutBoxProps>`
+const SidebarNavBox = styled.ul<LayoutBoxProps>`
   border-left: ${getComponentStyle('sidebarNav.borderLeft')};
   padding-left: ${getComponentStyle('sidebarNav.borderLeftSpacing')};
   ${layoutInterpolationFn};
 `;
 
-export const SidebarNav = ({ children, ...props }) => (
-  <SidebarNavBox data-testid="pbl-sidebarnav" as="ul" {...props}>
-    {children}
-  </SidebarNavBox>
+export const SidebarNav = forwardRef<HTMLUListElement, SidebarNavProps>(
+  ({ children, ...props }: SidebarNavProps, ref) => (
+    <SidebarNavBox ref={ref} data-testid="pbl-sidebarnav" {...props}>
+      {children}
+    </SidebarNavBox>
+  )
 );

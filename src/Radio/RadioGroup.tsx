@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { CheckableSize } from '../BaseCheckable/BaseCheckable';
 import { Box, BoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { RadioProps } from './Radio';
 
 const RadioGroupItem = styled.div<{ size: CheckableSize }>`
@@ -18,16 +18,9 @@ export interface RadioGroupProps extends BoxProps {
   name?: string;
 }
 
-export function RadioGroup({
-  value,
-  onChange,
-  name,
-  children,
-  size = 'medium',
-  ...props
-}: RadioGroupProps) {
-  return (
-    <Box role="radiogroup" {...props}>
+export const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(
+  ({ value, onChange, name, children, size = 'medium', ...props }: RadioGroupProps, ref) => (
+    <Box ref={ref} role="radiogroup" {...props}>
       {guaranteeArray(children).map((child) => (
         <RadioGroupItem key={child.props.value} size={size}>
           {React.cloneElement(child, {
@@ -41,5 +34,5 @@ export function RadioGroup({
         </RadioGroupItem>
       ))}
     </Box>
-  );
-}
+  )
+);

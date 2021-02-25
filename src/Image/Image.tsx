@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
 
@@ -16,6 +16,6 @@ const StyledImg = styled.img<LayoutBoxProps>`
   ${layoutInterpolationFn}
 `;
 
-export function Image({ ...props }: ImageProps) {
-  return <StyledImg {...props} />;
-}
+export const Image = forwardRef<HTMLImageElement, ImageProps>((props, ref) => (
+  <StyledImg ref={ref} {...props} />
+));

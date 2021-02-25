@@ -1,6 +1,6 @@
 import { inputBaseStyles, InputBaseStyles } from '../theme/baseStyles/inputBaseStyles';
 import { Style } from '../theme/types';
-import { getSpacing } from '../utils/styleHelpers';
+import { getSpacing } from '../styleHelpers';
 
 export interface InputStyles extends InputBaseStyles {
   adornmentGap: Style;

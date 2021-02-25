@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { getColor, getSpacing } from '../../utils/styleHelpers';
+import { getColor, getSpacing } from '../../styleHelpers';
 import { Style } from '../types';
 
 export interface InputBaseVariantStyles {

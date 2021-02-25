@@ -21,4 +21,4 @@ export * from './ToastProvider';
 export * from './Toolbar';
 export * from './Tooltip';
 export * from './Typography';
-export * from './utils/styleHelpers';
+export * from './styleHelpers';

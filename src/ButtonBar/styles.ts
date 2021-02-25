@@ -1,4 +1,4 @@
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
+import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 
 export interface ButtonBarStyles {

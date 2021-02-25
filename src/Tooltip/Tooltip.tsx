@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { Typography } from '../Typography';
-import { conditionalStyles, getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
+import { conditionalStyles, getComponentStyle, transitionTransformer } from '../styleHelpers';
+import { getSpacing } from '../styleHelpers/getSpacing';
 import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 import {
   topStyles,

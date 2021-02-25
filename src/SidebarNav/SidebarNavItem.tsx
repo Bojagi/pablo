@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { buttonBaseStyles, ButtonBaseProps } from '../ButtonBase';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
 export interface SidebarNavItemProps extends ButtonBaseProps {
@@ -33,8 +33,10 @@ const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' })<SidebarNavItemP
   }
 `;
 
-export const SidebarNavItem = ({ children, ...props }: SidebarNavItemProps) => (
-  <SidebarNavItemWrapper data-testid="pbl-sidebarnav-item" {...props}>
-    <Typography variant="button">{children}</Typography>
-  </SidebarNavItemWrapper>
+export const SidebarNavItem = forwardRef<HTMLLIElement, SidebarNavItemProps>(
+  ({ children, ...props }, ref) => (
+    <SidebarNavItemWrapper ref={ref} data-testid="pbl-sidebarnav-item" {...props}>
+      <Typography variant="button">{children}</Typography>
+    </SidebarNavItemWrapper>
+  )
 );

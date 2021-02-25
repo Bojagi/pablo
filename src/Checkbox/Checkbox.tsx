@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
-import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 import {
   BaseCheckable,
   BaseCheckableProps,
@@ -41,12 +41,13 @@ const CheckboxHandle = styled.div<CheckableHandleProps>`
 
 export interface CheckboxProps extends BaseCheckableProps {}
 
-export const Checkbox = (props: CheckboxProps) => (
+export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((props, ref) => (
   <BaseCheckable
+    ref={ref}
     componentName="checkbox"
     componentType="checkbox"
     componentBox={CheckboxBox}
     componentHandle={CheckboxHandle}
     {...props}
   />
-);
+));

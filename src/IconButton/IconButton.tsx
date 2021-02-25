@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
-import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
+import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 
 export type IconButtonSize = 'small' | 'medium' | 'large';
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
-import { getComponentStyle, shadowTransformer } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, shadowTransformer } from '../styleHelpers/getComponentStyle';
 
 export const Card = styled.div<LayoutBoxProps>`
   padding: ${getComponentStyle('card.padding')};

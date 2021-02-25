@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css, FlattenInterpolation } from 'styled-components';
 import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { Style } from '../theme/types';
 import { ButtonTypography } from '../Typography';
 
@@ -11,6 +11,7 @@ export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 export interface InnerButtonProps extends ButtonBaseProps {
   children: React.ReactNode;
   variant?: ButtonVariant;
+  innerRef?: React.Ref<HTMLButtonElement>;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
   color?: ButtonColor;

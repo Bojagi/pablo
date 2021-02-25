@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Flex, LayoutBoxProps } from '../Box';
-import { useComponentStyle } from '../theme';
+import { useComponentStyle } from '../theme/useComponentStyle';
 import { guaranteeArray } from '../utils/guaranteeArray';
 import { TabProps } from './Tab';
 
@@ -10,19 +10,21 @@ export interface TabsProps extends LayoutBoxProps {
   onSelect?: (selectedName: string) => void;
 }
 
-export const Tabs = ({ children, selected, onSelect, ...props }: TabsProps) => {
-  const gap = useComponentStyle('tabs.gap');
+export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
+  ({ children, selected, onSelect, ...props }: TabsProps, ref) => {
+    const gap = useComponentStyle('tabs.gap');
 
-  return (
-    <Flex mx={`-${gap}`} {...props}>
-      {guaranteeArray(children).map((child) =>
-        React.cloneElement(child, {
-          key: child.props.name,
-          mx: gap,
-          onClick: child.props.onClick || (() => onSelect && onSelect(child.props.name)),
-          selected: selected ? selected === child.props.name : child.props.selected,
-        })
-      )}
-    </Flex>
-  );
-};
+    return (
+      <Flex ref={ref} mx={`-${gap}`} {...props}>
+        {guaranteeArray(children).map((child) =>
+          React.cloneElement(child, {
+            key: child.props.name,
+            mx: gap,
+            onClick: child.props.onClick || (() => onSelect && onSelect(child.props.name)),
+            selected: selected ? selected === child.props.name : child.props.selected,
+          })
+        )}
+      </Flex>
+    );
+  }
+);
