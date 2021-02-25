@@ -1,5 +1,5 @@
 import { get } from '@styled-system/core';
-import { PabloThemeableProps } from '../../theme/types';
+import { PabloThemeableProps } from '../theme/types';
 import { InterpolateFn } from './index';
 
 /* eslint-disable no-redeclare */

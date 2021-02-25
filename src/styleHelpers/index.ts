@@ -1,4 +1,4 @@
-import { PabloThemeableProps } from '../../theme/types';
+import { PabloThemeableProps } from '../theme/types';
 
 export type InterpolateFn<T> = (props: PabloThemeableProps) => T;
 

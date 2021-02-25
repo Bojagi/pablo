@@ -4,7 +4,7 @@ import { Box, LayoutBoxProps, layoutInterpolationFn } from '../Box';
 import { Style } from '../theme/types';
 import { InfoText, ParagraphBold } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
-import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers';
+import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { useUniqueId } from '../utils/useUniqueId';
 
 export interface BaseInputProps<E extends HTMLElement> extends LayoutBoxProps {
@@ -14,6 +14,8 @@ export interface BaseInputProps<E extends HTMLElement> extends LayoutBoxProps {
   label?: React.ReactNode;
   infoText?: React.ReactNode;
   fullWidth?: boolean;
+  innerRef?: React.ForwardedRef<HTMLDivElement>;
+  inputRef?: React.Ref<E>;
   start?: React.ReactNode;
   end?: React.ReactNode;
   onChange?: (newValue: string, e: React.FormEvent<E>) => void;
@@ -87,6 +89,8 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   label,
   id: idProp,
   width,
+  innerRef,
+  inputRef,
   fullWidth = false,
   adornmentGap = 0,
   value,
@@ -104,7 +108,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const actualInfoText = props.error || props.infoText;
 
   return (
-    <Box mt={mt}>
+    <Box ref={innerRef} mt={mt}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
           <ParagraphBold mb={3}>{label}</ParagraphBold>
@@ -128,6 +132,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           {...props}
           data-testid={`pbl-${name}`}
           id={id}
+          ref={inputRef}
           value={value}
           onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
           onBlur={hijackCbBefore(onBlur, () => setFocus(false))}

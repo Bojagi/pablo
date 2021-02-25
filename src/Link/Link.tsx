@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getComponentStyle } from '../utils/styleHelpers';
+import { getComponentStyle } from '../styleHelpers';
 
 export const Link = styled.a`
   color: ${getComponentStyle('link.color')};

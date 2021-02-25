@@ -1,4 +1,4 @@
-import { getColor } from '../utils/styleHelpers/getColor';
+import { getColor } from '../styleHelpers/getColor';
 import { Style } from '../theme/types';
 import { checkableBaseStyles, CheckableBaseStyles } from '../theme/baseStyles/checkableBaseStyles';
 

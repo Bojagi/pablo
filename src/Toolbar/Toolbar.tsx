@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';
-import { getComponentStyle } from '../utils/styleHelpers';
+import { getComponentStyle } from '../styleHelpers';
 import { ToolbarItem, ToolbarItemProps } from './ToolbarItem';
 
 const ToolbarBox = styled.div<LayoutBoxProps>`
@@ -18,17 +18,23 @@ export interface ToolbarProps extends LayoutBoxProps {
   selected?: string;
 }
 
-export function Toolbar({ children, selected, ...props }: ToolbarProps) {
-  const interpolatedChildren = guaranteeArray(children).map((child, index) => {
-    if (child.type === ToolbarItem) {
-      const childProps = child.props as ToolbarItemProps;
-      return React.cloneElement(child, {
-        key: childProps.name,
-        active: selected ? childProps.name === selected : childProps.active,
-      });
-    }
+export const Toolbar = forwardRef<HTMLDivElement, ToolbarProps>(
+  ({ children, selected, ...props }: ToolbarProps, ref) => {
+    const interpolatedChildren = guaranteeArray(children).map((child, index) => {
+      if (child.type === ToolbarItem) {
+        const childProps = child.props as ToolbarItemProps;
+        return React.cloneElement(child, {
+          key: childProps.name,
+          active: selected ? childProps.name === selected : childProps.active,
+        });
+      }
 
-    return React.cloneElement(child, { key: index });
-  });
-  return <ToolbarBox {...props}>{interpolatedChildren}</ToolbarBox>;
-}
+      return React.cloneElement(child, { key: index });
+    });
+    return (
+      <ToolbarBox ref={ref} {...props}>
+        {interpolatedChildren}
+      </ToolbarBox>
+    );
+  }
+);

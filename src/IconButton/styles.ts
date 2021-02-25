@@ -1,5 +1,5 @@
 import { Style } from '../theme/types';
-import { getColor } from '../utils/styleHelpers';
+import { getColor } from '../styleHelpers';
 
 export interface IconButtonStyles {
   size: {

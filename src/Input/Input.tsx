@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { LayoutBoxProps } from '../Box';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
-import { useComponentStyle } from '../theme';
+import { useComponentStyle } from '../theme/useComponentStyle';
 
 export interface InputProps extends LayoutBoxProps {
   id?: string;
   value?: string | number;
+  inputRef?: React.Ref<HTMLInputElement>;
   error?: React.ReactNode;
   label?: React.ReactNode;
   variant?: InputVariant;
@@ -27,17 +28,20 @@ const InnerInput = styled.input<InnerInputProps>`
   outline: none;
 `;
 
-export function Input({ width, variant = 'filled', ...props }: InputProps) {
-  const defaultWidth = useComponentStyle('input.defaultWidth') as any;
-  const adornmentGap = useComponentStyle('input.adornmentGap');
-  return (
-    <BaseInput<InnerInputProps, HTMLInputElement>
-      name="input"
-      variant={variant}
-      adornmentGap={adornmentGap}
-      inputComponent={InnerInput}
-      {...props}
-      width={width || defaultWidth}
-    />
-  );
-}
+export const Input = forwardRef<HTMLDivElement, InputProps>(
+  ({ width, variant = 'filled', ...props }, ref) => {
+    const defaultWidth = useComponentStyle('input.defaultWidth') as any;
+    const adornmentGap = useComponentStyle('input.adornmentGap');
+    return (
+      <BaseInput<InnerInputProps, HTMLInputElement>
+        name="input"
+        innerRef={ref}
+        variant={variant}
+        adornmentGap={adornmentGap}
+        inputComponent={InnerInput}
+        {...props}
+        width={width || defaultWidth}
+      />
+    );
+  }
+);

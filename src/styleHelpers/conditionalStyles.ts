@@ -1,5 +1,5 @@
 import { FlattenInterpolation, ThemedStyledProps } from 'styled-components';
-import { PabloThemeableProps, PabloTheme } from '../../theme/types';
+import { PabloThemeableProps, PabloTheme } from '../theme/types';
 
 export function conditionalStyles<P extends Record<string, any>, PK extends keyof P = keyof P>(
   propKey: PK,

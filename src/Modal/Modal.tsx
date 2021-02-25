@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import styled, { css } from 'styled-components';
 import { Flex } from '../Box';
 import { Title } from '../Typography';
-import { getComponentStyle, shadowTransformer, transitionTransformer } from '../utils/styleHelpers';
+import { getComponentStyle, shadowTransformer, transitionTransformer } from '../styleHelpers';
 
 export interface TopRightItemProps {
   onClose?: () => void;

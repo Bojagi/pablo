@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import { getColor } from '../utils/styleHelpers/getColor';
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
+import { getColor } from '../styleHelpers/getColor';
+import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 
 export interface TooltipStyles {

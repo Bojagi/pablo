@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { boxInterpolateFn, BoxProps } from '../Box';
 
@@ -94,24 +94,58 @@ export const InfoTextBold = styled.p<BaseTypographyProps>`
   ${boxInterpolateFn}
 `;
 
-export const Typography = ({ variant = 'paragraph', children, ...props }: TypographyProps) => {
-  switch (variant) {
-    case 'headline':
-      return <Headline {...props}>{children}</Headline>;
-    case 'title':
-      return <Title {...props}>{children}</Title>;
-    case 'subtitle':
-      return <Subtitle {...props}>{children}</Subtitle>;
-    case 'paragraphBold':
-      return <ParagraphBold {...props}>{children}</ParagraphBold>;
-    case 'info':
-      return <InfoText {...props}>{children}</InfoText>;
-    case 'infoBold':
-      return <InfoTextBold {...props}>{children}</InfoTextBold>;
-    case 'button':
-      return <ButtonTypography {...props}>{children}</ButtonTypography>;
-    case 'paragraph':
-    default:
-      return <Paragraph {...props}>{children}</Paragraph>;
+export const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
+  ({ variant = 'paragraph', children, ...props }, ref) => {
+    switch (variant) {
+      case 'headline':
+        return (
+          <Headline ref={ref} {...props}>
+            {children}
+          </Headline>
+        );
+      case 'title':
+        return (
+          <Title ref={ref} {...props}>
+            {children}
+          </Title>
+        );
+      case 'subtitle':
+        return (
+          <Subtitle ref={ref} {...props}>
+            {children}
+          </Subtitle>
+        );
+      case 'paragraphBold':
+        return (
+          <ParagraphBold ref={ref} {...props}>
+            {children}
+          </ParagraphBold>
+        );
+      case 'info':
+        return (
+          <InfoText ref={ref} {...props}>
+            {children}
+          </InfoText>
+        );
+      case 'infoBold':
+        return (
+          <InfoTextBold ref={ref} {...props}>
+            {children}
+          </InfoTextBold>
+        );
+      case 'button':
+        return (
+          <ButtonTypography ref={ref} {...props}>
+            {children}
+          </ButtonTypography>
+        );
+      case 'paragraph':
+      default:
+        return (
+          <Paragraph ref={ref} {...props}>
+            {children}
+          </Paragraph>
+        );
+    }
   }
-};
+);

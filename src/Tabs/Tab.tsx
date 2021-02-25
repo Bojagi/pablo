@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { buttonBaseStyles } from '../ButtonBase';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
 
 export interface InnerTabProps extends LayoutBoxProps {
@@ -70,27 +70,28 @@ const IconBox = styled.div`
   }
 `;
 
-export const Tab = <C extends React.ElementType>({
-  children,
-  selected,
-  icon,
-  onClick,
-  ...props
-}: TabProps<C>) => (
-  <TabButton
-    data-testid="pbl-tab"
-    {...props}
-    selected={selected}
-    onClick={(e) => {
-      e.stopPropagation();
-      if (onClick) {
-        onClick(e);
-      }
+<<<<<<< Updated upstream
+export const Tab = forwardRef<HTMLButtonElement, TabProps<any>>(
+=======
+export const Tab = forwardRef<HTMLButtonElement, TabProps>(
+>>>>>>> Stashed changes
+  ({ children, selected, icon, onClick, ...props }, ref) => (
+    <TabButton
+      ref={ref}
+      data-testid="pbl-tab"
+      {...props}
+      selected={selected}
+      onClick={(e) => {
+        e.stopPropagation();
+        if (onClick) {
+          onClick(e);
+        }
 
-      e.currentTarget.blur();
-    }}
-  >
-    {icon && <IconBox>{icon}</IconBox>}
-    <Typography variant="button">{children}</Typography>
-  </TabButton>
+        e.currentTarget.blur();
+      }}
+    >
+      {icon && <IconBox>{icon}</IconBox>}
+      <Typography variant="button">{children}</Typography>
+    </TabButton>
+  )
 );

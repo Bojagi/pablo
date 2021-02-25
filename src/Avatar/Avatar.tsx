@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { Image, ImageProps } from '../Image';
-import { useComponentStyle } from '../theme';
-import { conditionalStyles, getComponentStyle } from '../utils/styleHelpers';
+import { useComponentStyle } from '../theme/useComponentStyle';
+import { conditionalStyles, getComponentStyle } from '../styleHelpers';
 
 export type AvatarSize = 'tiny' | 'small' | 'medium' | 'large';
 export type AvatarVariant = 'square' | 'circle';
@@ -20,7 +20,9 @@ interface AvatarImageProps extends ImageProps {
   variant: AvatarVariant;
 }
 
-const AvatarImage = styled<React.FC<AvatarImageProps>>(Image)`
+const AvatarImage = styled<
+  React.ForwardRefExoticComponent<AvatarImageProps & React.RefAttributes<HTMLImageElement>>
+>(Image as any)`
   ${conditionalStyles('variant', {
     square: css`
       border-radius: ${getComponentStyle('avatar.square.borderRadius')}px;
@@ -31,23 +33,20 @@ const AvatarImage = styled<React.FC<AvatarImageProps>>(Image)`
   })}
 `;
 
-export function Avatar({
-  className,
-  src,
-  size = 'medium',
-  variant = 'square',
-  ...props
-}: AvatarProps) {
-  const dimension = useComponentStyle('avatar.size.{size}', { size }) as number;
-  return (
-    <AvatarImage
-      {...props}
-      variant={variant}
-      size={size}
-      width={dimension}
-      height={dimension}
-      className={className}
-      src={src}
-    />
-  );
-}
+export const Avatar = forwardRef<HTMLImageElement, AvatarProps>(
+  ({ className, src, size = 'medium', variant = 'square', ...props }, ref) => {
+    const dimension = useComponentStyle('avatar.size.{size}', { size }) as number;
+    return (
+      <AvatarImage
+        ref={ref}
+        {...props}
+        variant={variant}
+        size={size}
+        width={dimension}
+        height={dimension}
+        className={className}
+        src={src}
+      />
+    );
+  }
+);

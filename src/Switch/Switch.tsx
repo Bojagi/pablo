@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
-import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 import {
   BaseCheckable,
   BaseCheckableProps,
@@ -52,12 +52,13 @@ const SwitchHandle = styled.div<CheckableHandleProps>`
 
 export interface SwitchProps extends BaseCheckableProps {}
 
-export const Switch = (props: SwitchProps) => (
+export const Switch = forwardRef<HTMLDivElement, SwitchProps>((props, ref) => (
   <BaseCheckable
+    ref={ref}
     componentName="switch"
     componentType="checkbox"
     componentBox={SwitchBox}
     componentHandle={SwitchHandle}
     {...props}
   />
-);
+));

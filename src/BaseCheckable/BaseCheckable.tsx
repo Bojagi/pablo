@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, LayoutBoxProps } from '../Box';
-import { useComponentStyleContext } from '../theme/context';
-import { Typography } from '../Typography';
+import { useComponentStyle } from '../theme/useComponentStyle';
+import { Typography, TypographyVariant } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { useUniqueId } from '../utils/useUniqueId';
 
@@ -10,6 +10,7 @@ export type CheckableSize = 'small' | 'medium';
 
 export interface BaseCheckableProps extends LayoutBoxProps {
   id?: string;
+  inputRef?: React.Ref<HTMLInputElement>;
   className?: string;
   disabled?: boolean;
   name?: string;
@@ -60,72 +61,80 @@ const HiddenInput = styled.input`
     `}
 `;
 
-export function BaseCheckable({
-  componentName,
-  componentType,
-  componentBox: ComponentBox,
-  componentHandle: ComponentHandle,
-  className,
-  id: idProp,
-  size = 'medium',
-  name,
-  disabled,
-  checked,
-  label,
-  value,
-  onChange,
-  onClick,
-  onFocus,
-  onBlur,
-  ...props
-}: OuterBaseCheckableProps) {
-  const generatedId = useUniqueId(componentName);
-  const id = idProp || generatedId;
-  const componentStyles = useComponentStyleContext();
-  const typographyVariant = componentStyles[componentName].typographyVariant[size];
-  const [focus, setFocus] = React.useState(false);
+export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>(
+  (
+    {
+      componentName,
+      componentType,
+      componentBox: ComponentBox,
+      componentHandle: ComponentHandle,
+      className,
+      id: idProp,
+      size = 'medium',
+      name,
+      disabled,
+      checked,
+      label,
+      value,
+      onChange,
+      onClick,
+      onFocus,
+      onBlur,
+      inputRef,
+      ...props
+    }: OuterBaseCheckableProps,
+    ref
+  ) => {
+    const generatedId = useUniqueId(componentName);
+    const id = idProp || generatedId;
+    const typographyVariant = useComponentStyle(
+      `${componentName}.typographyVariant.${size}`
+    ) as TypographyVariant;
+    const [focus, setFocus] = React.useState(false);
 
-  return (
-    <Flex alignItems="center" {...props}>
-      <ComponentBox
-        className={className}
-        data-testid={`pbl-${componentName}`}
-        disabled={disabled}
-        size={size}
-        focus={focus}
-      >
-        <ComponentHandle
-          data-testid={`pbl-${componentName}-handle`}
-          checked={checked || false}
-          size={size}
-        />
-        <HiddenInput
-          id={id}
-          data-testid={`pbl-${componentName}-input`}
-          name={name}
-          checked={checked}
+    return (
+      <Flex ref={ref} alignItems="center" {...props}>
+        <ComponentBox
+          className={className}
+          data-testid={`pbl-${componentName}`}
           disabled={disabled}
-          type={componentType}
-          value={value}
-          onClick={onClick}
-          onChange={
-            onChange
-              ? (e) => {
-                  onChange(e.target.value, e);
-                }
-              : undefined
-          }
-          onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
-          onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
-        />
-      </ComponentBox>
-      {label && (
-        <label data-testid={`pbl-${componentName}-label`} htmlFor={id}>
-          <Typography ml={4} mb={0} variant={typographyVariant}>
-            {label}
-          </Typography>
-        </label>
-      )}
-    </Flex>
-  );
-}
+          size={size}
+          focus={focus}
+        >
+          <ComponentHandle
+            data-testid={`pbl-${componentName}-handle`}
+            checked={checked || false}
+            size={size}
+          />
+          <HiddenInput
+            id={id}
+            data-testid={`pbl-${componentName}-input`}
+            name={name}
+            checked={checked}
+            disabled={disabled}
+            type={componentType}
+            value={value}
+            ref={inputRef}
+            onClick={onClick}
+            onChange={
+              onChange
+                ? (e) => {
+                    onChange(e.target.value, e);
+                  }
+                : undefined
+            }
+            onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
+            onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
+          />
+        </ComponentBox>
+        {label && (
+          <label data-testid={`pbl-${componentName}-label`} htmlFor={id}>
+            <Typography ml={4} mb={0} variant={typographyVariant}>
+              {label}
+            </Typography>
+          </label>
+        )}
+      </Flex>
+    );
+  }
+);

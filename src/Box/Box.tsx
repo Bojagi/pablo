@@ -4,8 +4,6 @@ import { layout } from '@styled-system/layout';
 import { flexbox } from '@styled-system/flexbox';
 import { position } from '@styled-system/position';
 import { border } from '@styled-system/border';
-import { system } from '@styled-system/core';
-
 import {
   SpaceProps,
   LayoutProps,
@@ -15,6 +13,8 @@ import {
   // Just the types, so exclude from eslint
   // eslint-disable-next-line import/no-extraneous-dependencies
 } from 'styled-system';
+import { system } from '@styled-system/core';
+
 import { color, ColorProps } from './color';
 
 export interface BoxCssProps<T> {

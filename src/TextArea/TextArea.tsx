@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { LayoutBoxProps } from '../Box';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
-import { useComponentStyle } from '../theme';
+import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
+import { useComponentStyle } from '../theme/useComponentStyle';
 
 export interface TextAreaProps extends LayoutBoxProps {
   id?: string;
   value?: string;
+  inputRef?: React.Ref<HTMLTextAreaElement>;
   error?: React.ReactNode;
   label?: React.ReactNode;
   variant?: InputVariant;
@@ -33,19 +34,22 @@ const InnerTextArea = styled.textarea<InnerTextAreaProps>`
   outline: none;
 `;
 
-export function TextArea({ rows, variant = 'filled', width, ...props }: TextAreaProps) {
-  const rowsFallback = useComponentStyle('textarea.defaultRows') as number;
-  const rowsWithFallback = rows || rowsFallback;
-  const defaultWidth = useComponentStyle('textarea.defaultWidth');
+export const TextArea = forwardRef<HTMLDivElement, TextAreaProps>(
+  ({ rows, variant = 'filled', width, ...props }, ref) => {
+    const rowsFallback = useComponentStyle('textarea.defaultRows') as number;
+    const rowsWithFallback = rows || rowsFallback;
+    const defaultWidth = useComponentStyle('textarea.defaultWidth');
 
-  return (
-    <BaseInput
-      variant={variant}
-      name="textarea"
-      {...props}
-      width={width || defaultWidth}
-      rows={rowsWithFallback}
-      inputComponent={InnerTextArea}
-    />
-  );
-}
+    return (
+      <BaseInput
+        variant={variant}
+        name="textarea"
+        innerRef={ref}
+        {...props}
+        width={width || defaultWidth}
+        rows={rowsWithFallback}
+        inputComponent={InnerTextArea}
+      />
+    );
+  }
+);

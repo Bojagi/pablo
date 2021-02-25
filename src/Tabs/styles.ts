@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
-import { getColor } from '../utils/styleHelpers/getColor';
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
+import { getColor } from '../styleHelpers/getColor';
+import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
-import { getComponentStyle } from '../utils/styleHelpers';
+import { getComponentStyle } from '../styleHelpers';
 
 export interface TabActiveBorderBottomStyles {
   color: Style;

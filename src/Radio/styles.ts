@@ -1,5 +1,5 @@
-import { getColor } from '../utils/styleHelpers/getColor';
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
+import { getColor } from '../styleHelpers/getColor';
+import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { checkableBaseStyles, CheckableBaseStyles } from '../theme/baseStyles/checkableBaseStyles';
 

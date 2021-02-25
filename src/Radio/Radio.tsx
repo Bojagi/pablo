@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
-import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 
 import {
   BaseCheckable,
@@ -43,12 +43,13 @@ export interface RadioProps extends BaseCheckableProps {
   value: string;
 }
 
-export const Radio = (props: RadioProps) => (
+export const Radio = forwardRef<HTMLDivElement, RadioProps>((props: RadioProps, ref) => (
   <BaseCheckable
+    ref={ref}
     componentName="radio"
     componentType="radio"
     componentBox={RadioBox}
     componentHandle={RadioHandle}
     {...props}
   />
-);
+));

@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
-import { getSpacing } from '../utils/styleHelpers/getSpacing';
+import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
-import { getBackgroundColor, getColor } from '../utils/styleHelpers';
+import { getBackgroundColor, getColor } from '../styleHelpers';
 
 export interface ModalStyles {
   backdropColor: Style;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getComponentStyle } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 
 export const ToolbarDivider = styled.div`
   margin: 0 ${getComponentStyle('toolbar.gap')};

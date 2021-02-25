@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
-import { getComponentStyle, transitionTransformer } from '../utils/styleHelpers/getComponentStyle';
+import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 
 export type ButtonSize = 'small' | 'medium' | 'large';
 export interface ButtonBaseProps extends LayoutBoxProps {

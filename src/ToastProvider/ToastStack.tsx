@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
-import { getComponentStyle, getSpacing } from '../utils/styleHelpers';
+import { getComponentStyle, getSpacing } from '../styleHelpers';
 import { ToastStackSide } from './types';
 
 export interface ToastStackProps {
