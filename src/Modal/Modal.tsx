@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import styled, { css } from 'styled-components';
 import { Flex } from '../Box';
 import { Title } from '../Typography';
 import { getComponentStyle, shadowTransformer, transitionTransformer } from '../styleHelpers';
+import { Portal } from '../Portal/Portal';
 
 export interface TopRightItemProps {
   onClose?: () => void;
@@ -84,15 +84,6 @@ export function Modal({
   title,
   open = false,
 }: ModalProps) {
-  const mountPoint = React.useMemo(() => document.createElement('div'), []);
-  React.useEffect(() => {
-    mountPoint.setAttribute('data-testid', 'pbl-modal-mountpoint');
-    document.body.appendChild(mountPoint);
-    return () => {
-      document.body.removeChild(mountPoint);
-    };
-  }, [mountPoint]);
-
   const mouseDownRef = React.useRef<HTMLElement>(null);
   const handleClose = React.useCallback(
     (e: React.PointerEvent<HTMLDivElement>) => {
@@ -105,31 +96,32 @@ export function Modal({
     [onClose]
   );
 
-  return ReactDOM.createPortal(
-    <Backdrop data-testid="pbl-modal-backdrop" onClick={handleClose} open={open}>
-      <ModalArea data-testid="pbl-modal-area" open={open}>
-        <ModalBox
-          data-testid="pbl-modal-box"
-          onMouseDown={(e) => {
-            (mouseDownRef.current as any) = e.currentTarget;
-          }}
-        >
-          {(title || TopRightItem) && (
-            <Flex data-testid="pbl-modal-title-box" justifyContent="space-between">
-              {title && <Title>{title}</Title>}
-              {TopRightItem && <TopRightItem onClose={onClose} />}
-            </Flex>
-          )}
-          {children}
-        </ModalBox>
-        {additionalPanes &&
-          additionalPanes.map((pane, i) => (
-            <PaneBox key={i} data-testid="pbl-modal-pane">
-              <ModalBox data-testid="pbl-modal-pane-box">{pane}</ModalBox>
-            </PaneBox>
-          ))}
-      </ModalArea>
-    </Backdrop>,
-    mountPoint
+  return (
+    <Portal name="modal">
+      <Backdrop data-testid="pbl-modal-backdrop" onClick={handleClose} open={open}>
+        <ModalArea data-testid="pbl-modal-area" open={open}>
+          <ModalBox
+            data-testid="pbl-modal-box"
+            onMouseDown={(e) => {
+              (mouseDownRef.current as any) = e.currentTarget;
+            }}
+          >
+            {(title || TopRightItem) && (
+              <Flex data-testid="pbl-modal-title-box" justifyContent="space-between">
+                {title && <Title>{title}</Title>}
+                {TopRightItem && <TopRightItem onClose={onClose} />}
+              </Flex>
+            )}
+            {children}
+          </ModalBox>
+          {additionalPanes &&
+            additionalPanes.map((pane, i) => (
+              <PaneBox key={i} data-testid="pbl-modal-pane">
+                <ModalBox data-testid="pbl-modal-pane-box">{pane}</ModalBox>
+              </PaneBox>
+            ))}
+        </ModalArea>
+      </Backdrop>
+    </Portal>
   );
 }

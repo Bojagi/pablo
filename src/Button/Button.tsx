@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css, FlattenInterpolation } from 'styled-components';
 import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
@@ -115,38 +115,44 @@ const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
   text: ButtonText,
 };
 
-export const Button = <C extends React.ElementType>({
-  color = 'brand',
-  variant = 'primary',
-  size = 'medium',
-  startIcon,
-  endIcon,
-  children,
-  className,
-  disabled,
-  ...props
-}: ButtonProps<C>) => {
-  const InnerButton = buttonMap[variant] || ButtonPrimary;
-  return (
-    <InnerButton
-      data-testid="pbl-button"
-      {...props}
-      size={size}
-      className={className}
-      disabled={disabled}
-      color={color}
-    >
-      {startIcon && (
-        <IconBox marginSide="right" size={size} data-testid="pbl-button-icon">
-          {startIcon}
-        </IconBox>
-      )}
-      <ButtonTypography>{children}</ButtonTypography>
-      {endIcon && (
-        <IconBox marginSide="left" size={size} data-testid="pbl-button-icon">
-          {endIcon}
-        </IconBox>
-      )}
-    </InnerButton>
-  );
-};
+export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
+  (
+    {
+      color = 'brand',
+      variant = 'primary',
+      size = 'medium',
+      startIcon,
+      endIcon,
+      children,
+      className,
+      disabled,
+      ...props
+    },
+    ref
+  ) => {
+    const InnerButton = buttonMap[variant] || ButtonPrimary;
+    return (
+      <InnerButton
+        data-testid="pbl-button"
+        {...props}
+        ref={ref}
+        size={size}
+        className={className}
+        disabled={disabled}
+        color={color}
+      >
+        {startIcon && (
+          <IconBox marginSide="right" size={size} data-testid="pbl-button-icon">
+            {startIcon}
+          </IconBox>
+        )}
+        <ButtonTypography>{children}</ButtonTypography>
+        {endIcon && (
+          <IconBox marginSide="left" size={size} data-testid="pbl-button-icon">
+            {endIcon}
+          </IconBox>
+        )}
+      </InnerButton>
+    );
+  }
+);

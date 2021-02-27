@@ -93,6 +93,7 @@
     "yargs": "^16.2.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.8.4",
     "@styled-system/border": "^5.1.5",
     "@styled-system/core": "^5.1.2",
     "@styled-system/flexbox": "^5.1.2",
@@ -100,6 +101,7 @@
     "@styled-system/position": "^5.1.2",
     "@styled-system/space": "^5.1.2",
     "deepmerge": "^4.2.2",
+    "react-popper": "^2.2.4",
     "react-transition-group": "^4.4.1",
     "use-resize-observer": "^7.0.0"
   },
