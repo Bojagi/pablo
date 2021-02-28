@@ -5,28 +5,28 @@ import { getSpacing } from '../styleHelpers/getSpacing';
 const transformInterpolateFn = (axis: 'Y' | 'X', directionMultiplier: -1 | 1) => (props) =>
   props.isVisible ? `translate${axis}(0)` : `translate${axis}(${directionMultiplier * 25}%)`;
 
+const gapStyle = css`
+  ${getComponentStyle('tooltip.gap')}
+`;
+
 export const topStyles = css`
-  left: 50%;
-  bottom: calc(${getComponentStyle('tooltip.gap')} + ${(props: any) => props.contentHeight}px);
-  transform: ${transformInterpolateFn('Y', 1)} translateX(-50%);
+  bottom: ${gapStyle};
+  transform: ${transformInterpolateFn('Y', 1)};
 `;
 
 export const bottomStyles = css`
-  left: 50%;
-  top: calc(${getComponentStyle('tooltip.gap')} + ${(props: any) => props.contentHeight}px);
-  transform: ${transformInterpolateFn('Y', -1)} translateX(-50%);
+  top: ${gapStyle};
+  transform: ${transformInterpolateFn('Y', -1)};
 `;
 
 export const rightStyles = css`
-  top: 50%;
-  left: calc(${getComponentStyle('tooltip.gap')} + ${(props: any) => props.contentWidth}px);
-  transform: ${transformInterpolateFn('X', 1)} translateY(-50%);
+  left: ${gapStyle};
+  transform: ${transformInterpolateFn('X', 1)};
 `;
 
 export const leftStyles = css`
-  top: 50%;
-  right: calc(${getComponentStyle('tooltip.gap')} + ${(props: any) => props.contentWidth}px);
-  transform: ${transformInterpolateFn('X', -1)} translateY(-50%);
+  right: ${gapStyle};
+  transform: ${transformInterpolateFn('X', -1)};
 `;
 
 export const topArrowStyles = css`

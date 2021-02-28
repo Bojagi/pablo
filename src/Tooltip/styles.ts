@@ -14,7 +14,7 @@ export interface TooltipStyles {
 }
 
 export const tooltipStyles: TooltipStyles = {
-  gap: getSpacing(4),
+  gap: getSpacing(2),
   padding: css`
     ${getSpacing(2)} ${getSpacing(4)}
   `,

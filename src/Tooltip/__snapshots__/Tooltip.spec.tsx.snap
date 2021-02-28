@@ -1,13 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Do not show tooltip if there is no content prop 1`] = `
-<div>
-  content
-</div>
+<body>
+  <div>
+    <div
+      data-testid="pbl-tooltip-wrapper"
+    >
+      content
+    </div>
+  </div>
+</body>
 `;
 
 exports[`side "bottom" render and update size 1`] = `
-.c2 {
+<body>
+  <div>
+    <div
+      data-testid="pbl-tooltip-wrapper"
+    >
+      content
+    </div>
+  </div>
+  .c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -18,19 +32,18 @@ exports[`side "bottom" render and update size 1`] = `
 }
 
 .c0 {
-  position: relative;
+  z-index: 1100;
 }
 
 .c1 {
   z-index: 100;
   pointer-events: none;
   opacity: 0;
-  position: absolute;
-  left: 50%;
-  top: calc(8px + 0px);
-  -webkit-transform: translateY(-25%) translateX(-50%);
-  -ms-transform: translateY(-25%) translateX(-50%);
-  transform: translateY(-25%) translateX(-50%);
+  position: relative;
+  top: 4px;
+  -webkit-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  transform: translateY(-25%);
   border-radius: 4px;
   padding: 4px 8px;
   background-color: #000000;
@@ -56,28 +69,46 @@ exports[`side "bottom" render and update size 1`] = `
   display: inline-block;
 }
 
-<div>
-  <div
-    class="c0"
-    data-testid="pbl-tooltip-wrapper"
+<div
+    data-testid="pbl-popover-mountpoint"
   >
     <div
-      class="c1"
-      data-testid="pbl-tooltip-popover"
+      class="c0"
+      data-popper-escaped="true"
+      data-popper-placement="bottom"
+      data-popper-reference-hidden="true"
+      style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
     >
-      <p
-        class="c2"
-      >
-        This is a tooltip on the bottom side
-      </p>
+      <div>
+        <div
+          class="c1"
+          data-testid="pbl-tooltip-popover"
+        >
+          <p
+            class="c2"
+          >
+            This is a tooltip on the bottom side
+          </p>
+        </div>
+      </div>
+      <div
+        style="position: absolute; left: 0px; transform: translate(10px, 0px);"
+      />
     </div>
-    content
   </div>
-</div>
+</body>
 `;
 
 exports[`side "left" render and update size 1`] = `
-.c2 {
+<body>
+  <div>
+    <div
+      data-testid="pbl-tooltip-wrapper"
+    >
+      content
+    </div>
+  </div>
+  .c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -88,19 +119,18 @@ exports[`side "left" render and update size 1`] = `
 }
 
 .c0 {
-  position: relative;
+  z-index: 1100;
 }
 
 .c1 {
   z-index: 100;
   pointer-events: none;
   opacity: 0;
-  position: absolute;
-  top: 50%;
-  right: calc(8px + 0px);
-  -webkit-transform: translateX(-25%) translateY(-50%);
-  -ms-transform: translateX(-25%) translateY(-50%);
-  transform: translateX(-25%) translateY(-50%);
+  position: relative;
+  right: 4px;
+  -webkit-transform: translateX(-25%);
+  -ms-transform: translateX(-25%);
+  transform: translateX(-25%);
   border-radius: 4px;
   padding: 4px 8px;
   background-color: #000000;
@@ -126,28 +156,46 @@ exports[`side "left" render and update size 1`] = `
   display: inline-block;
 }
 
-<div>
-  <div
-    class="c0"
-    data-testid="pbl-tooltip-wrapper"
+<div
+    data-testid="pbl-popover-mountpoint"
   >
     <div
-      class="c1"
-      data-testid="pbl-tooltip-popover"
+      class="c0"
+      data-popper-escaped="true"
+      data-popper-placement="left"
+      data-popper-reference-hidden="true"
+      style="position: fixed; left: 0px; top: 0px; right: 0px; transform: translate(-10px, 0px);"
     >
-      <p
-        class="c2"
-      >
-        This is a tooltip on the left side
-      </p>
+      <div>
+        <div
+          class="c1"
+          data-testid="pbl-tooltip-popover"
+        >
+          <p
+            class="c2"
+          >
+            This is a tooltip on the left side
+          </p>
+        </div>
+      </div>
+      <div
+        style="position: absolute; top: 0px; transform: translate(0px, 10px);"
+      />
     </div>
-    content
   </div>
-</div>
+</body>
 `;
 
 exports[`side "right" render and update size 1`] = `
-.c2 {
+<body>
+  <div>
+    <div
+      data-testid="pbl-tooltip-wrapper"
+    >
+      content
+    </div>
+  </div>
+  .c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -158,19 +206,18 @@ exports[`side "right" render and update size 1`] = `
 }
 
 .c0 {
-  position: relative;
+  z-index: 1100;
 }
 
 .c1 {
   z-index: 100;
   pointer-events: none;
   opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: calc(8px + 0px);
-  -webkit-transform: translateX(25%) translateY(-50%);
-  -ms-transform: translateX(25%) translateY(-50%);
-  transform: translateX(25%) translateY(-50%);
+  position: relative;
+  left: 4px;
+  -webkit-transform: translateX(25%);
+  -ms-transform: translateX(25%);
+  transform: translateX(25%);
   border-radius: 4px;
   padding: 4px 8px;
   background-color: #000000;
@@ -196,28 +243,46 @@ exports[`side "right" render and update size 1`] = `
   display: inline-block;
 }
 
-<div>
-  <div
-    class="c0"
-    data-testid="pbl-tooltip-wrapper"
+<div
+    data-testid="pbl-popover-mountpoint"
   >
     <div
-      class="c1"
-      data-testid="pbl-tooltip-popover"
+      class="c0"
+      data-popper-escaped="true"
+      data-popper-placement="right"
+      data-popper-reference-hidden="true"
+      style="position: fixed; left: 0px; top: 0px; transform: translate(10px, 0px);"
     >
-      <p
-        class="c2"
-      >
-        This is a tooltip on the right side
-      </p>
+      <div>
+        <div
+          class="c1"
+          data-testid="pbl-tooltip-popover"
+        >
+          <p
+            class="c2"
+          >
+            This is a tooltip on the right side
+          </p>
+        </div>
+      </div>
+      <div
+        style="position: absolute; top: 0px; transform: translate(0px, 10px);"
+      />
     </div>
-    content
   </div>
-</div>
+</body>
 `;
 
 exports[`side "top" render and update size 1`] = `
-.c2 {
+<body>
+  <div>
+    <div
+      data-testid="pbl-tooltip-wrapper"
+    >
+      content
+    </div>
+  </div>
+  .c2 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -228,19 +293,18 @@ exports[`side "top" render and update size 1`] = `
 }
 
 .c0 {
-  position: relative;
+  z-index: 1100;
 }
 
 .c1 {
   z-index: 100;
   pointer-events: none;
   opacity: 0;
-  position: absolute;
-  left: 50%;
-  bottom: calc(8px + 0px);
-  -webkit-transform: translateY(25%) translateX(-50%);
-  -ms-transform: translateY(25%) translateX(-50%);
-  transform: translateY(25%) translateX(-50%);
+  position: relative;
+  bottom: 4px;
+  -webkit-transform: translateY(25%);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
   border-radius: 4px;
   padding: 4px 8px;
   background-color: #000000;
@@ -265,22 +329,32 @@ exports[`side "top" render and update size 1`] = `
   display: inline-block;
 }
 
-<div>
-  <div
-    class="c0"
-    data-testid="pbl-tooltip-wrapper"
+<div
+    data-testid="pbl-popover-mountpoint"
   >
     <div
-      class="c1"
-      data-testid="pbl-tooltip-popover"
+      class="c0"
+      data-popper-escaped="true"
+      data-popper-placement="top"
+      data-popper-reference-hidden="true"
+      style="position: fixed; left: 0px; top: 0px; bottom: 0px; transform: translate(0px, -10px);"
     >
-      <p
-        class="c2"
-      >
-        This is a tooltip on the top side
-      </p>
+      <div>
+        <div
+          class="c1"
+          data-testid="pbl-tooltip-popover"
+        >
+          <p
+            class="c2"
+          >
+            This is a tooltip on the top side
+          </p>
+        </div>
+      </div>
+      <div
+        style="position: absolute; left: 0px; transform: translate(10px, 0px);"
+      />
     </div>
-    content
   </div>
-</div>
+</body>
 `;

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es2019",
     "noEmit": true,
     "lib": ["es6", "es2017", "dom", "esnext.asynciterable"],

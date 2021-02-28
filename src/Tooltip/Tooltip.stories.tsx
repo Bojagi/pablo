@@ -10,17 +10,26 @@ export default {
 
 const BaseStory = (args) => (
   <Flex height="100vh" width="100vw" alignItems="center" justifyContent="center">
-    <Tooltip mx={5} content="Top tooltip" side="left" {...args}>
-      <Button color="plain">left</Button>
+    <Tooltip content="Top tooltip" side="left" {...args}>
+      <Button mx={5} color="plain">
+        left
+      </Button>
     </Tooltip>
-    <Tooltip mx={5} content="Top tooltip" side="top" {...args}>
-      <Button color="plain"> top</Button>
+    <Tooltip content="Top tooltip" side="top" {...args}>
+      <Button mx={5} color="plain">
+        {' '}
+        top
+      </Button>
     </Tooltip>
-    <Tooltip mx={5} content="Top tooltip" side="bottom" {...args}>
-      <Button color="plain">bottom</Button>
+    <Tooltip content="Top tooltip" side="bottom" {...args}>
+      <Button mx={5} color="plain">
+        bottom
+      </Button>
     </Tooltip>
-    <Tooltip mx={5} content="Top tooltip" side="right" {...args}>
-      <Button color="plain">right</Button>
+    <Tooltip content="Top tooltip" side="right" {...args}>
+      <Button mx={5} color="plain">
+        right
+      </Button>
     </Tooltip>
   </Flex>
 );

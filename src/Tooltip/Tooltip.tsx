@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
-import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
+import { BasePlacement } from '@popperjs/core';
+import { LayoutBoxProps } from '../Box';
 import { Typography } from '../Typography';
 import { conditionalStyles, getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { getSpacing } from '../styleHelpers/getSpacing';
@@ -15,24 +16,18 @@ import {
   rightArrowStyles,
   leftArrowStyles,
 } from './tooltipSideStyles';
+import { Popover } from '../Popover/Popover';
 
-export type TooltipSide = 'top' | 'right' | 'bottom' | 'left';
+export type TooltipSide = BasePlacement;
 
 export interface TooltipProps extends LayoutBoxProps {
   content: React.ReactNode;
   side?: TooltipSide;
   delay?: number;
-  children: React.ReactNode;
+  children: ReactElement;
 }
 
-const TooltipWrapper = styled.div<LayoutBoxProps>`
-  ${layoutInterpolationFn}
-  position: relative;
-`;
-
 interface TooltipPopoverProps {
-  contentHeight: number;
-  contentWidth: number;
   isVisible: boolean;
   side: TooltipSide;
 }
@@ -41,7 +36,7 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
   z-index: ${getComponentStyle('tooltip.zIndex')};
   pointer-events: none;
   opacity: ${(props) => (props.isVisible ? 1 : 0)};
-  position: absolute;
+  position: relative;
   ${conditionalStyles('side', {
     top: topStyles,
     bottom: bottomStyles,
@@ -76,48 +71,26 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
   }
 `;
 
-export function Tooltip({ content, children, side = 'top', delay = 0, ...props }: TooltipProps) {
-  const [elem, setElem] = React.useState<HTMLDivElement | null>(null);
+export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipProps) {
   const [isHovered, setIsHovered] = useDelayedBooleanState(false, delay);
-  const [contentHeight, setContentHeight] = React.useState(0);
-  const [contentWidth, setContentWidth] = React.useState(0);
-
-  React.useEffect(() => {
-    if (elem) {
-      const resizeHandler = () => {
-        setContentHeight(elem.offsetHeight);
-        setContentWidth(elem.offsetWidth);
-      };
-      elem.addEventListener('resize', resizeHandler);
-      resizeHandler();
-      return () => elem && elem.removeEventListener('resize', resizeHandler);
-    }
-
-    return () => {};
-  }, [elem]);
 
   if (!content) {
     return <>{children}</>;
   }
 
   return (
-    <TooltipWrapper
-      ref={setElem}
-      data-testid="pbl-tooltip-wrapper"
+    <Popover
+      open={true}
+      placement={side}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      {...props}
+      content={
+        <TooltipPopover data-testid="pbl-tooltip-popover" isVisible={isHovered} side={side}>
+          <Typography variant="info">{content}</Typography>
+        </TooltipPopover>
+      }
     >
-      <TooltipPopover
-        data-testid="pbl-tooltip-popover"
-        isVisible={isHovered}
-        side={side}
-        contentWidth={contentWidth}
-        contentHeight={contentHeight}
-      >
-        <Typography variant="info">{content}</Typography>
-      </TooltipPopover>
       {children}
-    </TooltipWrapper>
+    </Popover>
   );
 }

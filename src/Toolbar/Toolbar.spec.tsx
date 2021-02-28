@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { defaultTheme, PabloThemeProvider } from '../theme';
 import { Toolbar } from './Toolbar';
@@ -10,7 +10,7 @@ test('Render toolbar', () => {
   expect(container).toMatchSnapshot();
 });
 
-test('Render toolbar with one item active', () => {
+test('Render toolbar with one item active', async () => {
   const { getAllByTestId } = render(
     <PabloThemeProvider>
       <Toolbar>
@@ -23,6 +23,9 @@ test('Render toolbar with one item active', () => {
       </Toolbar>
     </PabloThemeProvider>
   );
+  // This is because of passing ref on effect, which happens on next tick
+  await act(() => Promise.resolve());
+
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
   expect(allButtons).toBeArrayOfSize(5);
   expect(allButtons[0]).toHaveStyleRule('background-color', 'transparent');
@@ -32,8 +35,11 @@ test('Render toolbar with one item active', () => {
   expect(allButtons[4]).toHaveStyleRule('background-color', 'transparent');
 });
 
-test('Render toolbar with all items active', () => {
+test('Render toolbar with all items active', async () => {
   const { getAllByTestId } = renderComponent({}, { active: true });
+  // This is because of passing ref on effect, which happens on next tick
+  await act(() => Promise.resolve());
+
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
   expect(allButtons).toBeArrayOfSize(5);
   expect(allButtons[0]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
@@ -43,8 +49,11 @@ test('Render toolbar with all items active', () => {
   expect(allButtons[4]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
 });
 
-test('Render toolbar items selected by "selected" Toolbar prop', () => {
+test('Render toolbar items selected by "selected" Toolbar prop', async () => {
   const { getAllByTestId } = renderComponent({ selected: 'italic' }, { active: true });
+  // This is because of passing ref on effect, which happens on next tick
+  await act(() => Promise.resolve());
+
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
   expect(allButtons).toBeArrayOfSize(5);
   expect(allButtons[0]).toHaveStyleRule('background-color', 'transparent');
@@ -54,9 +63,12 @@ test('Render toolbar items selected by "selected" Toolbar prop', () => {
   expect(allButtons[4]).toHaveStyleRule('background-color', 'transparent');
 });
 
-test('Trigger onClick on all items and call function with item name as argument', () => {
+test('Trigger onClick on all items and call function with item name as argument', async () => {
   const onClickMock = jest.fn();
   const { getAllByTestId } = renderComponent({}, { onClick: onClickMock });
+  // This is because of passing ref on effect, which happens on next tick
+  await act(() => Promise.resolve());
+
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
   expect(onClickMock).toHaveBeenCalledTimes(0);
 
@@ -86,8 +98,11 @@ test('Trigger onClick on all items and call function with item name as argument'
   expect(onClickMock).toHaveBeenCalledWith('crop');
 });
 
-test('Render toolbar items with tooltip', () => {
+test('Render toolbar items with tooltip', async () => {
   const { getAllByTestId } = renderComponent({}, { tooltip: 'i am a tooltip' });
+  // This is because of passing ref on effect, which happens on next tick
+  await act(() => Promise.resolve());
+
   const allTooltop = getAllByTestId('pbl-tooltip-popover');
   expect(allTooltop).toBeArrayOfSize(5);
   expect(allTooltop[0]).toHaveTextContent('i am a tooltip');
