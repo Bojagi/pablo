@@ -78,6 +78,7 @@ exports[`Render toolbar 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  background-color: #00000020;
 }
 
 <div>
