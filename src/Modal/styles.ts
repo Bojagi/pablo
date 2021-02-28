@@ -13,7 +13,12 @@ export interface ModalStyles {
     transition: string[][];
     shadow: string[];
     borderRadius: number;
-    width: Style;
+    maxWidth: {
+      small: Style;
+      medium: Style;
+      large: Style;
+      full: Style;
+    };
     backgroundColor: Style;
     padding: Style;
   };
@@ -30,7 +35,12 @@ export const modalStyles: ModalStyles = {
     shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
     backgroundColor: getBackgroundColor(),
     padding: getSpacing(5),
-    width: '780px',
+    maxWidth: {
+      small: '520px',
+      medium: '780px',
+      large: '1000px',
+      full: '100%',
+    },
     borderRadius: 12,
   },
 };
