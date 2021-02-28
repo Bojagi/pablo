@@ -9,10 +9,14 @@ export interface TopRightItemProps {
   onClose?: () => void;
 }
 
+export type ModalMaxWidth = 'small' | 'medium' | 'large' | 'full';
+
 export interface ModalProps {
   children: React.ReactNode;
   title?: React.ReactNode;
   onClose?: () => void;
+  animate?: boolean;
+  maxWidth?: ModalMaxWidth;
   additionalPanes?: React.ReactNode[];
   topRightItem?: React.FC<TopRightItemProps>;
   open?: boolean;
@@ -50,6 +54,8 @@ const Backdrop = styled.div<BackdropProps>`
 
 interface ModalAreaProps {
   open: boolean;
+  animate: boolean;
+  maxWidth: ModalMaxWidth;
 }
 
 const ModalArea = styled.div<ModalAreaProps>`
@@ -58,8 +64,12 @@ const ModalArea = styled.div<ModalAreaProps>`
     css`
       transform: ${getComponentStyle('modal.box.closedTransform')};
     `}
-  transition: ${getComponentStyle('modal.box.transition', transitionTransformer)};
-  max-width: ${getComponentStyle('modal.box.width')};
+  ${(props) =>
+    props.animate &&
+    css`
+      transition: ${getComponentStyle('modal.box.transition', transitionTransformer)};
+    `}
+  max-width: ${getComponentStyle('modal.box.maxWidth.{maxWidth}')};
   margin: auto;
   min-height: min-content;
   padding: ${getComponentStyle('modal.padding')};
@@ -82,6 +92,8 @@ export function Modal({
   topRightItem: TopRightItem,
   onClose,
   title,
+  maxWidth = 'medium',
+  animate = true,
   open = false,
 }: ModalProps) {
   const mouseDownRef = React.useRef<HTMLElement>(null);
@@ -99,7 +111,7 @@ export function Modal({
   return (
     <Portal name="modal">
       <Backdrop data-testid="pbl-modal-backdrop" onClick={handleClose} open={open}>
-        <ModalArea data-testid="pbl-modal-area" open={open}>
+        <ModalArea data-testid="pbl-modal-area" maxWidth={maxWidth} open={open} animate={animate}>
           <ModalBox
             data-testid="pbl-modal-box"
             onMouseDown={(e) => {

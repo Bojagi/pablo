@@ -43,6 +43,42 @@ test('Render open modal', () => {
   expect(getByTestId('pbl-modal-backdrop')).not.toHaveStyleRule('pointer-events');
 });
 
+test('Render with maxWidth "small"', () => {
+  const { getByTestId } = renderComponent({
+    open: true,
+    maxWidth: 'small',
+    children: <div>Hello World</div>,
+  });
+  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('max-width', '520px');
+});
+
+test('Render with maxWidth "medium"', () => {
+  const { getByTestId } = renderComponent({
+    open: true,
+    maxWidth: 'medium',
+    children: <div>Hello World</div>,
+  });
+  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('max-width', '780px');
+});
+
+test('Render with maxWidth "large"', () => {
+  const { getByTestId } = renderComponent({
+    open: true,
+    maxWidth: 'large',
+    children: <div>Hello World</div>,
+  });
+  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('max-width', '1000px');
+});
+
+test('Render with maxWidth "full"', () => {
+  const { getByTestId } = renderComponent({
+    open: true,
+    maxWidth: 'full',
+    children: <div>Hello World</div>,
+  });
+  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('max-width', '100%');
+});
+
 test('Render with title', () => {
   const { getByTestId } = renderComponent({
     open: true,
