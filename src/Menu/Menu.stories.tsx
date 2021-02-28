@@ -21,13 +21,19 @@ const BaseStory = (args) => {
       offset={-5}
       onClose={handleClose}
       items={[
-        <MenuItem onClick={handleClose}>User Profile</MenuItem>,
-        <MenuItem onClick={handleClose}>Settings</MenuItem>,
-        <MenuItem onClick={handleClose}>Logout</MenuItem>,
+        <MenuItem key="1" onClick={handleClose}>
+          User Profile
+        </MenuItem>,
+        <MenuItem key="2" onClick={handleClose}>
+          Settings
+        </MenuItem>,
+        <MenuItem key="3" onClick={handleClose}>
+          Logout
+        </MenuItem>,
       ]}
       {...args}
     >
-      <Button onClick={() => setOpen(!open)}>Hello</Button>
+      <Button onClick={() => setOpen(!open)}>Click me</Button>
     </Menu>
   );
 };

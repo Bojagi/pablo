@@ -36,7 +36,7 @@ export const toolbarStyles: ToolbarStyles = {
   gap: getSpacing(2),
   divider: {
     width: 1,
-    color: getColor('borders', 'lightest'),
+    color: getColor('borders', 'light'),
   },
   item: {
     buttonTransition: [
