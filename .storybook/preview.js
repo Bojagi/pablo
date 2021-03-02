@@ -6,6 +6,7 @@ import { getColor } from '../src/styleHelpers/getColor';
 import { css } from 'styled-components';
 
 export const parameters = {
+  layout: 'centered',
   backgrounds: {
     default: 'bojagi',
     values: [

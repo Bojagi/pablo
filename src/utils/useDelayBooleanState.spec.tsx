@@ -45,8 +45,28 @@ test('Update state from true to false and set it directly (no delay)', () => {
   act(() => {
     result.current[1](false);
   });
+
+  expect(setTimeout).toHaveBeenCalledTimes(1);
+  expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 0);
+
+  act(() => {
+    jest.runTimersToTime(0);
+  });
   expect(result.current[0]).toBeFalse();
-  expect(setTimeout).toHaveBeenCalledTimes(0);
+});
+
+test('Update state from true to false and set it with delay when set', () => {
+  const { result } = renderHook(() => useDelayedBooleanState(true, 100, 200));
+  act(() => {
+    result.current[1](false);
+  });
+  expect(result.current[0]).toBeTrue();
+  expect(setTimeout).toHaveBeenCalledTimes(1);
+  expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 200);
+  act(() => {
+    jest.runTimersToTime(200);
+  });
+  expect(result.current[0]).toBeFalse();
 });
 
 test('Update state from false to true and within delay time back to false ... and cancel timer', () => {

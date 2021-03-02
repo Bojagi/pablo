@@ -54,7 +54,7 @@ function renderComponent(props) {
           </MenuItem>,
         ]}
       >
-        Content
+        <div>Content</div>
       </Menu>
     </PabloThemeProvider>
   );

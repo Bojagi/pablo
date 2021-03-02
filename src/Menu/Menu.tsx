@@ -1,15 +1,14 @@
 import { Placement } from '@popperjs/core';
-import React, { forwardRef, ReactElement, ReactNode } from 'react';
+import React, { forwardRef, ReactComponentElement, ReactElement } from 'react';
 
 import styled from 'styled-components';
-import { Box } from '../Box';
 import { Popover } from '../Popover/Popover';
 import { PopoverArrow } from '../PopoverArrow/PopoverArrow';
 import { getColor } from '../styleHelpers';
 import { MenuItemProps } from './MenuItem';
 
 export interface MenuProps {
-  children: ReactNode;
+  children: ReactComponentElement<any>;
   open: boolean;
   placement: Placement;
   offset?: number;
@@ -37,7 +36,7 @@ export const Menu = forwardRef(
       placement={placement}
       content={<MenuBox>{items}</MenuBox>}
     >
-      <Box my={-1}>{children}</Box>
+      {children}
     </Popover>
   )
 );

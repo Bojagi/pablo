@@ -1,13 +1,22 @@
-import React, { forwardRef, ReactElement, ReactNode, useEffect, useState } from 'react';
+import React, {
+  ComponentElement,
+  forwardRef,
+  ReactElement,
+  ReactNode,
+  Ref,
+  useEffect,
+  useState,
+} from 'react';
 import { usePopper } from 'react-popper';
 import { Placement } from '@popperjs/core';
 import styled from 'styled-components';
 import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
 import { setRef } from '../utils/setRef';
+import { useForwardRef } from '../utils/useForwardRef';
 
 export interface PopoverProps {
-  children: ReactElement;
+  children: ComponentElement<any, any>;
   content: ReactNode;
   placement: Placement;
   offset?: number;
@@ -37,7 +46,9 @@ export const Popover = forwardRef(
     }: PopoverProps,
     ref
   ) => {
-    const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
+    const [referenceElement, setReferenceElement] = useForwardRef<HTMLElement | null>(
+      children.ref as Ref<HTMLElement>
+    );
     const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
     const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
 
@@ -88,7 +99,7 @@ export const Popover = forwardRef(
         React.cloneElement(children, {
           ref: setReferenceElement,
         }),
-      [children]
+      [children, setReferenceElement]
     );
 
     const clonedArrow = React.useMemo(

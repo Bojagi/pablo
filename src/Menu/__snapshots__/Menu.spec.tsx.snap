@@ -2,15 +2,8 @@
 
 exports[`Click on menu item 1`] = `
 <body>
-  .c0 {
-  margin-top: -2px;
-  margin-bottom: -2px;
-}
-
-<div>
-    <div
-      class="c0"
-    >
+  <div>
+    <div>
       Content
     </div>
   </div>
@@ -181,16 +174,9 @@ exports[`Click on menu item 1`] = `
 `;
 
 exports[`Render closed Menu 1`] = `
-.c0 {
-  margin-top: -2px;
-  margin-bottom: -2px;
-}
-
 <body>
   <div>
-    <div
-      class="c0"
-    >
+    <div>
       Content
     </div>
   </div>
@@ -202,15 +188,8 @@ exports[`Render closed Menu 1`] = `
 
 exports[`Render open Menu 1`] = `
 <body>
-  .c0 {
-  margin-top: -2px;
-  margin-bottom: -2px;
-}
-
-<div>
-    <div
-      class="c0"
-    >
+  <div>
+    <div>
       Content
     </div>
   </div>

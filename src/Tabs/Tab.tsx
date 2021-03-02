@@ -9,7 +9,7 @@ export interface InnerTabProps extends LayoutBoxProps {
   selected?: boolean;
   icon?: React.ReactNode;
   name: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
 }
 
@@ -24,6 +24,7 @@ const TabButton = styled.button<Partial<InnerTabProps>>`
   position: relative;
   padding: ${getComponentStyle('tabs.tab.padding')};
   margin: ${getComponentStyle('tabs.tab.margin')};
+  white-space: nowrap;
 
   &:hover {
     background-color: ${getComponentStyle('tabs.tab.hover.backgroundColor')};
@@ -58,9 +59,17 @@ const TabButton = styled.button<Partial<InnerTabProps>>`
     `}
 `;
 
-const IconBox = styled.div`
+interface IconBoxProps {
+  hasText: boolean;
+}
+
+const IconBox = styled.div<IconBoxProps>`
   display: flex;
-  margin-right: ${getComponentStyle('tabs.tab.icon.gap')};
+  ${(props) =>
+    props.hasText &&
+    css`
+      margin-right: ${getComponentStyle('tabs.tab.icon.gap')};
+    `}
   width: ${getComponentStyle('tabs.tab.icon.size')};
   height: ${getComponentStyle('tabs.tab.icon.size')};
 
@@ -86,8 +95,8 @@ export const Tab = forwardRef<HTMLButtonElement, TabProps<any>>(
         e.currentTarget.blur();
       }}
     >
-      {icon && <IconBox>{icon}</IconBox>}
-      <Typography variant="button">{children}</Typography>
+      {icon && <IconBox hasText={!!children}>{icon}</IconBox>}
+      {children && <Typography variant="button">{children}</Typography>}
     </TabButton>
   )
 );

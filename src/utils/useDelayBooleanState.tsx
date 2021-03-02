@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 /**
  * Boolean state with delayed applied "true" value.
@@ -9,7 +9,8 @@ import React from 'react';
  */
 export function useDelayedBooleanState(
   initialValue: boolean,
-  delay: number
+  delayIn: number,
+  delayOut: number = 0
 ): [boolean, (newValue: boolean) => void] {
   const [outputState, setOutputState] = React.useState<boolean>(initialValue);
   const [inputState, setInputState] = React.useState<boolean>(initialValue);
@@ -21,17 +22,21 @@ export function useDelayedBooleanState(
     }
 
     if (!inputState) {
-      setOutputState(inputState);
-      return () => {};
+      const delayTimeout = setTimeout(() => {
+        setOutputState(inputState);
+      }, delayOut);
+      return () => {
+        clearTimeout(delayTimeout);
+      };
     }
 
     const delayTimeout = setTimeout(() => {
       setOutputState(inputState);
-    }, delay);
+    }, delayIn);
     return () => {
       clearTimeout(delayTimeout);
     };
-  }, [delay, outputState, inputState]);
+  }, [delayIn, delayOut, outputState, inputState]);
 
-  return [outputState, setInputState];
+  return useMemo(() => [outputState, setInputState], [outputState]);
 }
