@@ -3,21 +3,13 @@ import { act, cleanup, fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { ToastProvider, useToast } from './ToastProvider';
-
-class ResizeObserver {
-  observe() {}
-
-  unobserve() {}
-}
+import '../../testUtils/mockResizeObserver';
 
 beforeEach(() => {
   jest.useFakeTimers();
 });
 
 afterEach(cleanup);
-
-(window as any).ResizeObserver = ResizeObserver;
-export default ResizeObserver;
 
 test('Render toast stack on the bottom-right by default', () => {
   const { getByTestId } = renderComponent({

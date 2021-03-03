@@ -23,13 +23,17 @@ export const ClickOutside = ({ children, onClickOutside }: ClickOutsideProps) =>
         targetEl = targetEl.parentNode;
       } while (targetEl);
       // This is a click outside.
+
       onClickOutside();
     };
 
     // Wait a tick, otherwise an opening click event will be directly triggering outside click as well
     setTimeout(() => document.addEventListener('click', listener));
 
-    return () => document.removeEventListener('click', listener);
+    return () => {
+      // Wait a tick here as well because adding the listener also waits a tick
+      setTimeout(() => document.removeEventListener('click', listener));
+    };
   }, [elem, onClickOutside]);
 
   const clonedChild = useMemo(

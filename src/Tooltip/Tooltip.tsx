@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactComponentElement } from 'react';
 import styled from 'styled-components';
 import { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
@@ -24,7 +24,7 @@ export interface TooltipProps extends LayoutBoxProps {
   content: React.ReactNode;
   side?: TooltipSide;
   delay?: number;
-  children: ReactElement;
+  children: ReactComponentElement<any>;
 }
 
 interface TooltipPopoverProps {

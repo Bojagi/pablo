@@ -92,6 +92,8 @@ describe.each([
       jest.advanceTimersByTime(0);
     });
 
+    await act(() => Promise.resolve());
+
     expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '1');
     expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(
       'transform',
@@ -100,6 +102,8 @@ describe.each([
 
     act(() => {
       fireEvent.mouseLeave(getByTestId('pbl-tooltip-wrapper'));
+      // wait for the tick to finish
+      jest.advanceTimersByTime(0);
     });
 
     expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '0');
