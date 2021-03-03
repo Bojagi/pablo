@@ -8,6 +8,9 @@ exports[`Render first selected 1`] = `
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .c2 {
@@ -425,6 +428,9 @@ exports[`Render tabs with icons 1`] = `
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .c3 {
@@ -847,6 +853,9 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .c2 {
@@ -1145,6 +1154,9 @@ exports[`Work with one tab 1`] = `
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .c2 {

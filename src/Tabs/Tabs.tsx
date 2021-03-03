@@ -78,6 +78,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
                 `
               : undefined
           }
+          flexWrap="wrap"
           data-testid="pbl-tabs"
           ref={setInnerRef}
           mx={`-${gap}`}
