@@ -60,13 +60,13 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     useEffect(() => {
       const childrenArray = guaranteeArray(children);
 
-      if (innerRef && width && iconButtonRef) {
+      if (width && iconButtonRef) {
         const fittingNodeCount = getFittingChildNodeCount(shadowRef.current!, width, iconButtonRef);
         setDisplayableItems(childrenArray.slice(0, fittingNodeCount));
         setAdditionalItems(childrenArray.slice(fittingNodeCount, childrenArray.length));
         setFirstWidthCalculated(true);
       }
-    }, [children, width, innerRef, iconButtonRef]);
+    }, [children, width, iconButtonRef]);
 
     return (
       <>

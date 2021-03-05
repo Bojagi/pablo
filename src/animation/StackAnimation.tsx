@@ -1,6 +1,9 @@
-import { ReactNode } from 'react';
 import { css, FlattenInterpolation } from 'styled-components';
-import { createInOutAnimation, InnerInOutAnimationProps } from './InOutAnimation';
+import {
+  createInOutAnimation,
+  InnerInOutAnimationProps,
+  InOutAnimationProps,
+} from './InOutAnimation';
 
 const getMarginTop = (props) => (props.selfHeight ? -props.selfHeight : 0);
 
@@ -24,14 +27,9 @@ const stackAnimationExit = css`
   transform: translateY(-50%);
 ` as FlattenInterpolation<any>;
 
-export interface StackAnimationProps {
-  duration: number;
-  children: ReactNode;
-  visible: boolean;
-  onExited?: () => void;
-}
+export interface StackAnimationProps extends InOutAnimationProps {}
 
-export const StackAnimation = createInOutAnimation({
+export const StackAnimation = createInOutAnimation<StackAnimationProps>({
   baseStyles: stackAnimationBase,
   enterStyles: stackAnimationEnter,
   exitStyles: stackAnimationExit,

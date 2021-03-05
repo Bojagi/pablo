@@ -9,6 +9,7 @@ import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { Menu } from './Menu';
 import { MenuItem } from './MenuItem';
+import '../../testUtils/mockResizeObserver';
 
 let menuItemClickHandler;
 

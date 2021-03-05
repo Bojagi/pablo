@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { Flex } from '../Box';
 import { Title } from '../Typography';
@@ -97,6 +97,15 @@ export function Modal({
   open = false,
 }: ModalProps) {
   const mouseDownRef = React.useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
+
   const handleClose = React.useCallback(
     (e: React.PointerEvent<HTMLDivElement>) => {
       // Only close if the mouse down before the click happened directly over the backdrop

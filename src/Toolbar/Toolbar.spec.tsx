@@ -1,9 +1,15 @@
 import { act, fireEvent, render } from '@testing-library/react';
 import React from 'react';
+import { waitOneTick } from '../../testUtils/waitOneTick';
 import { defaultTheme, PabloThemeProvider } from '../theme';
 import { Toolbar } from './Toolbar';
 import { ToolbarDivider } from './ToolbarDivider';
 import { ToolbarItem } from './ToolbarItem';
+import '../../testUtils/mockResizeObserver';
+
+beforeEach(() => {
+  jest.useFakeTimers();
+});
 
 test('Render toolbar', () => {
   const { container } = renderComponent({}, {});
@@ -103,13 +109,27 @@ test('Render toolbar items with tooltip', async () => {
   // This is because of passing ref on effect, which happens on next tick
   await act(() => Promise.resolve());
 
-  const allTooltop = getAllByTestId('pbl-tooltip-popover');
-  expect(allTooltop).toBeArrayOfSize(5);
-  expect(allTooltop[0]).toHaveTextContent('i am a tooltip');
-  expect(allTooltop[1]).toHaveTextContent('i am a tooltip');
-  expect(allTooltop[2]).toHaveTextContent('i am a tooltip');
-  expect(allTooltop[3]).toHaveTextContent('i am a tooltip');
-  expect(allTooltop[4]).toHaveTextContent('i am a tooltip');
+  const allButtons = getAllByTestId('pbl-toolbar-item-button');
+
+  act(() => {
+    allButtons.forEach((btn) => {
+      fireEvent.mouseEnter(btn);
+    });
+  });
+
+  act(() => {
+    jest.advanceTimersByTime(500);
+  });
+
+  await waitOneTick(0, true);
+
+  const allTooltips = getAllByTestId('pbl-tooltip-popover');
+  expect(allTooltips).toBeArrayOfSize(5);
+  expect(allTooltips[0]).toHaveTextContent('i am a tooltip');
+  expect(allTooltips[1]).toHaveTextContent('i am a tooltip');
+  expect(allTooltips[2]).toHaveTextContent('i am a tooltip');
+  expect(allTooltips[3]).toHaveTextContent('i am a tooltip');
+  expect(allTooltips[4]).toHaveTextContent('i am a tooltip');
 });
 
 function renderComponent(toolbarProps, toolbarItemProps) {

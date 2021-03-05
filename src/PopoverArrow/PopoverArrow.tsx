@@ -18,25 +18,25 @@ export const PopoverArrow = styled.div<ArrowProps>`
     border-bottom: ${(props) => props.size}px solid ${(props) => props.color};
   }
 
-  *[data-popper-placement^='top'] > & {
+  *[data-popper-placement^='top'] & {
     bottom: -${(props) => props.size}px;
     &:after {
       transform: rotate(180deg);
     }
   }
 
-  *[data-popper-placement^='bottom'] > & {
+  *[data-popper-placement^='bottom'] & {
     top: -${(props) => props.size}px;
   }
 
-  *[data-popper-placement^='left'] > & {
+  *[data-popper-placement^='left'] & {
     right: -${(props) => props.size}px;
     &:after {
       transform: rotate(90deg) scaleX(0.75);
     }
   }
 
-  *[data-popper-placement^='right'] > & {
+  *[data-popper-placement^='right'] & {
     left: -${(props) => props.size}px;
     &:after {
       transform: rotate(-90deg) scaleX(0.75);

@@ -2,7 +2,7 @@ import { Placement } from '@popperjs/core';
 import React, { forwardRef, ReactComponentElement, ReactElement } from 'react';
 
 import styled from 'styled-components';
-import { Popover } from '../Popover/Popover';
+import { Popover, PopoverProps } from '../Popover/Popover';
 import { PopoverArrow } from '../PopoverArrow/PopoverArrow';
 import { getColor } from '../styleHelpers';
 import { MenuItemProps } from './MenuItem';
@@ -14,6 +14,8 @@ export interface MenuProps {
   offset?: number;
   onClose?: () => void;
   items: ReactElement<MenuItemProps>[];
+  animation?: PopoverProps['animation'];
+  animationProps?: PopoverProps['animationProps'];
 }
 
 const MenuBox = styled.div`
@@ -26,7 +28,10 @@ const MenuBox = styled.div`
 `;
 
 export const Menu = forwardRef(
-  ({ children, items, open, offset, onClose, placement }: MenuProps, ref) => (
+  (
+    { children, items, open, offset, onClose, placement, animation, animationProps }: MenuProps,
+    ref
+  ) => (
     <Popover
       ref={ref}
       open={open}
@@ -35,6 +40,8 @@ export const Menu = forwardRef(
       arrow={<PopoverArrow size={10} color="white" />}
       placement={placement}
       content={<MenuBox>{items}</MenuBox>}
+      animation={animation}
+      animationProps={animationProps}
     >
       {children}
     </Popover>

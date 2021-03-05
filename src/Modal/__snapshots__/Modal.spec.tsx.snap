@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Remove mount point on unmount 1`] = `
-<body>
+<body
+  style="overflow: hidden;"
+>
   <div />
 </body>
 `;
@@ -57,7 +59,9 @@ exports[`Render closed modal with just a content element 1`] = `
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
-<body>
+<body
+  style="overflow: auto;"
+>
   <div />
   <div
     data-testid="pbl-modal-mountpoint"

@@ -17,6 +17,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
-  "include": ["src", "./jestSetup.ts", "testUtils/renderStyledComponent.tsx"],
+  "include": ["src", "./jestSetup.ts", "testUtils/renderStyledComponent.tsx", "testUtils/waitOneTick.tsx"],
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest"]
 }
