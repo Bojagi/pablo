@@ -26,35 +26,35 @@ exports[`Click on menu item 1`] = `
   border-bottom: 10px solid white;
 }
 
-*[data-popper-placement^='top'] > .c4 {
+*[data-popper-placement^='top'] .c4 {
   bottom: -10px;
 }
 
-*[data-popper-placement^='top'] > .c4:after {
+*[data-popper-placement^='top'] .c4:after {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-*[data-popper-placement^='bottom'] > .c4 {
+*[data-popper-placement^='bottom'] .c4 {
   top: -10px;
 }
 
-*[data-popper-placement^='left'] > .c4 {
+*[data-popper-placement^='left'] .c4 {
   right: -10px;
 }
 
-*[data-popper-placement^='left'] > .c4:after {
+*[data-popper-placement^='left'] .c4:after {
   -webkit-transform: rotate(90deg) scaleX(0.75);
   -ms-transform: rotate(90deg) scaleX(0.75);
   transform: rotate(90deg) scaleX(0.75);
 }
 
-*[data-popper-placement^='right'] > .c4 {
+*[data-popper-placement^='right'] .c4 {
   left: -10px;
 }
 
-*[data-popper-placement^='right'] > .c4:after {
+*[data-popper-placement^='right'] .c4:after {
   -webkit-transform: rotate(-90deg) scaleX(0.75);
   -ms-transform: rotate(-90deg) scaleX(0.75);
   transform: rotate(-90deg) scaleX(0.75);
@@ -136,38 +136,43 @@ exports[`Click on menu item 1`] = `
       data-popper-reference-hidden="true"
       style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
     >
-      <div>
-        <div
-          class="c1"
-        >
+      <div
+        class=""
+        data-testid="pbl-animation-inner"
+      >
+        <div>
           <div
-            class="c2"
-            data-testid="pbl-menu-item"
+            class="c1"
           >
-            <span
-              class="c3"
+            <div
+              class="c2"
+              data-testid="pbl-menu-item"
             >
-              Hello
-            </span>
-          </div>
-          <div
-            class="c2"
-            data-testid="pbl-menu-item"
-          >
-            <span
-              class="c3"
+              <span
+                class="c3"
+              >
+                Hello
+              </span>
+            </div>
+            <div
+              class="c2"
+              data-testid="pbl-menu-item"
             >
-              World
-            </span>
+              <span
+                class="c3"
+              >
+                World
+              </span>
+            </div>
           </div>
         </div>
+        <div
+          class="c4 c5"
+          color="white"
+          size="10"
+          style="position: absolute; left: 0px; transform: translate(10px, 0px);"
+        />
       </div>
-      <div
-        class="c4 c5"
-        color="white"
-        size="10"
-        style="position: absolute; left: 0px; transform: translate(10px, 0px);"
-      />
     </div>
   </div>
 </body>
@@ -212,35 +217,35 @@ exports[`Render open Menu 1`] = `
   border-bottom: 10px solid white;
 }
 
-*[data-popper-placement^='top'] > .c4 {
+*[data-popper-placement^='top'] .c4 {
   bottom: -10px;
 }
 
-*[data-popper-placement^='top'] > .c4:after {
+*[data-popper-placement^='top'] .c4:after {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-*[data-popper-placement^='bottom'] > .c4 {
+*[data-popper-placement^='bottom'] .c4 {
   top: -10px;
 }
 
-*[data-popper-placement^='left'] > .c4 {
+*[data-popper-placement^='left'] .c4 {
   right: -10px;
 }
 
-*[data-popper-placement^='left'] > .c4:after {
+*[data-popper-placement^='left'] .c4:after {
   -webkit-transform: rotate(90deg) scaleX(0.75);
   -ms-transform: rotate(90deg) scaleX(0.75);
   transform: rotate(90deg) scaleX(0.75);
 }
 
-*[data-popper-placement^='right'] > .c4 {
+*[data-popper-placement^='right'] .c4 {
   left: -10px;
 }
 
-*[data-popper-placement^='right'] > .c4:after {
+*[data-popper-placement^='right'] .c4:after {
   -webkit-transform: rotate(-90deg) scaleX(0.75);
   -ms-transform: rotate(-90deg) scaleX(0.75);
   transform: rotate(-90deg) scaleX(0.75);
@@ -322,38 +327,43 @@ exports[`Render open Menu 1`] = `
       data-popper-reference-hidden="true"
       style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
     >
-      <div>
-        <div
-          class="c1"
-        >
+      <div
+        class=""
+        data-testid="pbl-animation-inner"
+      >
+        <div>
           <div
-            class="c2"
-            data-testid="pbl-menu-item"
+            class="c1"
           >
-            <span
-              class="c3"
+            <div
+              class="c2"
+              data-testid="pbl-menu-item"
             >
-              Hello
-            </span>
-          </div>
-          <div
-            class="c2"
-            data-testid="pbl-menu-item"
-          >
-            <span
-              class="c3"
+              <span
+                class="c3"
+              >
+                Hello
+              </span>
+            </div>
+            <div
+              class="c2"
+              data-testid="pbl-menu-item"
             >
-              World
-            </span>
+              <span
+                class="c3"
+              >
+                World
+              </span>
+            </div>
           </div>
         </div>
+        <div
+          class="c4 c5"
+          color="white"
+          size="10"
+          style="position: absolute; left: 0px; transform: translate(10px, 0px);"
+        />
       </div>
-      <div
-        class="c4 c5"
-        color="white"
-        size="10"
-        style="position: absolute; left: 0px; transform: translate(10px, 0px);"
-      />
     </div>
   </div>
 </body>

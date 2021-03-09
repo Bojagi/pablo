@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { SlideAnimation } from '../animation/SlideAnimation';
 import { Button } from '../Button';
 import { Menu } from './Menu';
 import { MenuItem } from './MenuItem';
@@ -96,4 +97,14 @@ LeftStart.args = {
 export const LeftEnd = BaseStory.bind(null);
 LeftEnd.args = {
   placement: 'left-end',
+};
+
+export const WithAnimation = BaseStory.bind(null);
+WithAnimation.args = {
+  placement: 'bottom-end',
+  animation: SlideAnimation,
+  animationProps: {
+    duration: 150,
+    side: 'bottom',
+  },
 };

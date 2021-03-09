@@ -9,6 +9,7 @@ import {
   resizeObserverElements,
 } from '../../testUtils/mockResizeObserver';
 import { setFakeWidth } from '../../testUtils/setFakeDimensions';
+import { waitOneTick } from '../../testUtils/waitOneTick';
 
 let onSelectMock;
 
@@ -110,6 +111,8 @@ test('Show "more" tab when there are too many tabs to fit the content', async ()
     return Promise.resolve();
   });
 
+  await waitOneTick();
+
   const allMenuItems = baseElement.querySelectorAll('[data-testid="pbl-menu-item"]');
   expect(allMenuItems).toHaveLength(3);
   expect(allMenuItems[0]).toHaveTextContent('World');
@@ -137,12 +140,16 @@ test('Select "more" tab', async () => {
     resizeObserverCallbacks[0]([resizeObserverElements[0]]);
   });
 
+  await waitOneTick();
+
   await act(async () => {
     const allTabs = getAllByTestId('pbl-tab');
     expect(allTabs).toHaveLength(6);
     fireEvent.click(allTabs[1]);
     await Promise.resolve();
   });
+
+  await waitOneTick();
 
   expect(onSelectMock).toHaveBeenCalledTimes(0);
 
@@ -152,6 +159,8 @@ test('Select "more" tab', async () => {
       bubbles: true,
     });
   });
+
+  await waitOneTick();
 
   expect(onSelectMock).toHaveBeenCalledTimes(1);
   expect(onSelectMock).toHaveBeenCalledWith('hi');
@@ -180,12 +189,16 @@ test('Select "more" tab with custom click handler', async () => {
     resizeObserverCallbacks[0]([resizeObserverElements[0]]);
   });
 
+  await waitOneTick();
+
   await act(async () => {
     const allTabs = getAllByTestId('pbl-tab');
     expect(allTabs).toHaveLength(6);
     fireEvent.click(allTabs[1]);
     await Promise.resolve();
   });
+
+  await waitOneTick();
 
   expect(onClickMock).toHaveBeenCalledTimes(0);
 
@@ -195,6 +208,8 @@ test('Select "more" tab with custom click handler', async () => {
       bubbles: true,
     });
   });
+
+  await waitOneTick();
 
   expect(onClickMock).toHaveBeenCalledTimes(1);
 });
@@ -220,6 +235,8 @@ test('Close "more" menu when clicking outside', async () => {
     resizeObserverCallbacks[0]([resizeObserverElements[0]]);
   });
 
+  await waitOneTick();
+
   await act(async () => {
     const allTabs = getAllByTestId('pbl-tab');
     expect(allTabs).toHaveLength(6);
@@ -227,11 +244,16 @@ test('Close "more" menu when clicking outside', async () => {
     await Promise.resolve();
   });
 
+  await waitOneTick();
+
   expect(baseElement.querySelectorAll('[data-testid="pbl-menu-item"]')).toHaveLength(3);
 
-  act(() => {
+  await act(async () => {
+    await waitOneTick();
     fireEvent.click(getByTestId('outside-elem'));
   });
+
+  await waitOneTick();
 
   expect(baseElement.querySelectorAll('[data-testid="pbl-menu-item"]')).toHaveLength(0);
 });

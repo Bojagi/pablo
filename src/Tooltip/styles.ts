@@ -6,7 +6,6 @@ import { Style } from '../theme/types';
 export interface TooltipStyles {
   gap: Style;
   padding: Style;
-  transition: string[][];
   borderRadius: number;
   backgroundColor: Style;
   color: Style;
@@ -21,9 +20,5 @@ export const tooltipStyles: TooltipStyles = {
   zIndex: 100,
   backgroundColor: getColor('common', 'black'),
   color: getColor('common', 'white'),
-  transition: [
-    ['transform', '0.3s'],
-    ['opacity', '0.3s'],
-  ],
   borderRadius: 4,
 };

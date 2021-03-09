@@ -5,13 +5,16 @@ import { Card } from '../Card';
 import { Checkbox } from '../Checkbox';
 import { Input } from '../Input';
 import { Title } from '../Typography';
+import { SlideAnimation } from './SlideAnimation';
+import { NoAnimation as NoAnimationComponent } from './NoAnimation';
 import { StackAnimation } from './StackAnimation';
+import { FadeAnimation } from './FadeAnimation';
 
 export default {
   title: 'Animation',
 };
 
-const BaseStory = (args) => {
+const BaseStory = ({ component: Component, ...args }) => {
   const [duration, setDuration] = React.useState(300);
   const [visible, setVisible] = React.useState(false);
 
@@ -53,11 +56,11 @@ const BaseStory = (args) => {
         bgColor="gray.50"
       >
         <Box maxWidth={400} height={200}>
-          <args.component duration={duration} visible={visible}>
+          <Component duration={duration} visible={visible} {...args}>
             <Card>
               <Title>I am animated</Title>
             </Card>
-          </args.component>
+          </Component>
         </Box>
       </Box>
     </Flex>
@@ -67,4 +70,21 @@ const BaseStory = (args) => {
 export const Stack = BaseStory.bind(null);
 Stack.args = {
   component: StackAnimation,
+};
+
+export const Fade = BaseStory.bind(null);
+Fade.args = {
+  component: FadeAnimation,
+};
+
+export const Slide = BaseStory.bind(null);
+Slide.args = {
+  component: SlideAnimation,
+  side: 'left',
+  reverse: false,
+};
+
+export const NoAnimation = BaseStory.bind(null);
+NoAnimation.args = {
+  component: NoAnimationComponent,
 };

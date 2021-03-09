@@ -1,17 +1,22 @@
 import {
   render,
   getByTestId as globalGetByTestId,
+  queryByTestId as globalQueryByTestId,
   getAllByTestId as globalGetAllByTestId,
   act,
   fireEvent,
+  cleanup,
 } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
+import '../../testUtils/mockResizeObserver';
 import { Tooltip } from './Tooltip';
 
 beforeEach(() => {
   jest.useFakeTimers();
 });
+
+afterEach(cleanup);
 
 Object.defineProperties(window.HTMLElement.prototype, {
   offsetHeight: {
@@ -38,11 +43,11 @@ test('Do not show tooltip if there is no content prop', async () => {
 });
 
 describe.each([
-  ['top', 'bottom', 'translateY(25%)', 'translateY(0)'],
-  ['right', 'left', 'translateX(25%)', 'translateX(0)'],
-  ['bottom', 'top', 'translateY(-25%)', 'translateY(0)'],
-  ['left', 'right', 'translateX(-25%)', 'translateX(0)'],
-])('side "%s"', (side, oppositeSite, expectedHiddenTransform, expectedVisibleTransform) => {
+  ['top', 'translateY(25%)'],
+  ['right', 'translateX(-12.5%)'],
+  ['bottom', 'translateY(-25%)'],
+  ['left', 'translateX(12.5%)'],
+])('side "%s"', (side, expectedHiddenTransform) => {
   test('render and update size', async () => {
     const { container, getByTestId } = renderComponent({
       content: `This is a tooltip on the ${side} side`,
@@ -52,8 +57,6 @@ describe.each([
     await act(() => Promise.resolve());
 
     expect(container).toMatchSnapshot();
-    // JSDOM can't calculate offsetHeight/offsetWidth, so it's always 0 (we can't test resize the update to happen)
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(oppositeSite, '4px');
 
     // Trigger resize update and update the size
     act(() => {
@@ -61,8 +64,6 @@ describe.each([
       getByTestId('pbl-tooltip-wrapper').setAttribute('fake-width', '20');
       fireEvent(getByTestId('pbl-tooltip-wrapper'), new Event('resize'));
     });
-
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(oppositeSite, '4px');
   });
 
   test('show tooltip on hover', async () => {
@@ -80,12 +81,6 @@ describe.each([
       fireEvent(getByTestId('pbl-tooltip-wrapper'), new Event('resize'));
     });
 
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '0');
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(
-      'transform',
-      expectedHiddenTransform
-    );
-
     act(() => {
       fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
       // wait for the tick to finish
@@ -94,10 +89,10 @@ describe.each([
 
     await act(() => Promise.resolve());
 
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '1');
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(
+    expect(getByTestId('pbl-animation-inner')).toHaveStyleRule('opacity', '1');
+    expect(getByTestId('pbl-animation-inner')).toHaveStyleRule(
       'transform',
-      expectedVisibleTransform
+      'translateY(0) translateX(0)'
     );
 
     act(() => {
@@ -106,15 +101,17 @@ describe.each([
       jest.advanceTimersByTime(0);
     });
 
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '0');
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(
+    await act(() => Promise.resolve());
+
+    expect(getByTestId('pbl-animation-inner')).toHaveStyleRule('opacity', '0');
+    expect(getByTestId('pbl-animation-inner')).toHaveStyleRule(
       'transform',
       expectedHiddenTransform
     );
   });
 
   test('show tooltip on hover with delay', async () => {
-    const { getByTestId } = renderComponent({
+    const { getByTestId, queryByTestId } = renderComponent({
       content: `This is a tooltip on the ${side} side`,
       delay: 100,
       side,
@@ -129,11 +126,7 @@ describe.each([
       fireEvent(getByTestId('pbl-tooltip-wrapper'), new Event('resize'));
     });
 
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '0');
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(
-      'transform',
-      expectedHiddenTransform
-    );
+    expect(queryByTestId('pbl-animation-inner')).not.toBeInTheDocument();
 
     // Do mouse enter and trigger 99ms, should not make tooltip visible
     act(() => {
@@ -141,21 +134,21 @@ describe.each([
       jest.advanceTimersByTime(99);
     });
 
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '0');
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(
-      'transform',
-      expectedHiddenTransform
-    );
+    await act(() => Promise.resolve());
+
+    expect(queryByTestId('pbl-animation-inner')).not.toBeInTheDocument();
 
     // Wait remaining 1ms should make it visible
     act(() => {
       jest.advanceTimersByTime(1);
     });
 
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule('opacity', '1');
-    expect(getByTestId('pbl-tooltip-popover')).toHaveStyleRule(
+    await act(() => Promise.resolve());
+
+    expect(getByTestId('pbl-animation-inner')).toHaveStyleRule('opacity', '1');
+    expect(getByTestId('pbl-animation-inner')).toHaveStyleRule(
       'transform',
-      expectedVisibleTransform
+      'translateY(0) translateX(0)'
     );
   });
 });
@@ -172,6 +165,7 @@ function renderComponent(props) {
   return {
     getByTestId: globalGetByTestId.bind(null, baseElement),
     getAllByTestId: globalGetAllByTestId.bind(null, baseElement),
+    queryByTestId: globalQueryByTestId.bind(null, baseElement),
     unmount,
     container: baseElement,
   };

@@ -1,22 +1,19 @@
-import React, { ReactComponentElement } from 'react';
+import React, { ReactComponentElement, useState } from 'react';
 import styled from 'styled-components';
 import { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
 import { Typography } from '../Typography';
-import { conditionalStyles, getComponentStyle, transitionTransformer } from '../styleHelpers';
+import { conditionalStyles, getComponentStyle } from '../styleHelpers';
 import { getSpacing } from '../styleHelpers/getSpacing';
-import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 import {
-  topStyles,
-  bottomStyles,
-  rightStyles,
-  leftStyles,
   topArrowStyles,
   bottomArrowStyles,
   rightArrowStyles,
   leftArrowStyles,
 } from './tooltipSideStyles';
 import { Popover } from '../Popover/Popover';
+import { useComponentStyle } from '../theme/useComponentStyle';
+import { SlideAnimation } from '../animation/SlideAnimation';
 
 export type TooltipSide = BasePlacement;
 
@@ -28,28 +25,18 @@ export interface TooltipProps extends LayoutBoxProps {
 }
 
 interface TooltipPopoverProps {
-  isVisible: boolean;
   side: TooltipSide;
 }
 
 const TooltipPopover = styled.div<TooltipPopoverProps>`
   z-index: ${getComponentStyle('tooltip.zIndex')};
   pointer-events: none;
-  opacity: ${(props) => (props.isVisible ? 1 : 0)};
   position: relative;
-  ${conditionalStyles('side', {
-    top: topStyles,
-    bottom: bottomStyles,
-    right: rightStyles,
-    left: leftStyles,
-  })}
-
   border-radius: ${getComponentStyle('tooltip.borderRadius')}px;
   padding: ${getComponentStyle('tooltip.padding')};
   background-color: ${getComponentStyle('tooltip.backgroundColor')};
   color: ${getComponentStyle('tooltip.color')};
   white-space: nowrap;
-  transition: ${getComponentStyle('tooltip.transition', transitionTransformer)};
 
   /* Bottom Arrow */
   &:after {
@@ -72,7 +59,8 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
 `;
 
 export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipProps) {
-  const [isHovered, setIsHovered] = useDelayedBooleanState(false, delay);
+  const [isHovered, setIsHovered] = useState(false);
+  const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
 
   if (!content) {
     return <>{children}</>;
@@ -80,12 +68,20 @@ export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipP
 
   return (
     <Popover
-      open={true}
+      open={isHovered}
       placement={side}
+      offset={gap}
+      delay={delay}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      animation={SlideAnimation}
+      animationProps={{
+        side,
+        reverse: true,
+        duration: 400,
+      }}
       content={
-        <TooltipPopover data-testid="pbl-tooltip-popover" isVisible={isHovered} side={side}>
+        <TooltipPopover data-testid="pbl-tooltip-popover" side={side}>
           <Typography variant="info">{content}</Typography>
         </TooltipPopover>
       }

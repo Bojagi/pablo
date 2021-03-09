@@ -34,6 +34,7 @@ test('Render closed modal with just a content element', () => {
   expect(getByTestId('pbl-modal-box')).toHaveStyleRule('border-radius', '12px');
   expect(getByTestId('pbl-modal-box')).toHaveStyleRule('background-color', '#fafafa');
   expect(getByTestId('pbl-modal-box')).toHaveStyleRule('padding', '12px');
+  expect(document.body).toHaveStyle('overflow: auto');
 });
 
 test('Render open modal', () => {
@@ -41,6 +42,7 @@ test('Render open modal', () => {
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('opacity', '1');
   // Not click though
   expect(getByTestId('pbl-modal-backdrop')).not.toHaveStyleRule('pointer-events');
+  expect(document.body).toHaveStyle('overflow: hidden');
 });
 
 test('Render with maxWidth "small"', () => {

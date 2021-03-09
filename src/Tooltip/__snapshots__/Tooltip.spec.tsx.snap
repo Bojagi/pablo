@@ -21,81 +21,9 @@ exports[`side "bottom" render and update size 1`] = `
       content
     </div>
   </div>
-  .c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  margin-bottom: 0;
-}
-
-.c0 {
-  z-index: 1100;
-}
-
-.c1 {
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0;
-  position: relative;
-  top: 4px;
-  -webkit-transform: translateY(-25%);
-  -ms-transform: translateY(-25%);
-  transform: translateY(-25%);
-  border-radius: 4px;
-  padding: 4px 8px;
-  background-color: #000000;
-  color: #ffffff;
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.3s,opacity 0.3s;
-  -webkit-transition: transform 0.3s,opacity 0.3s;
-  transition: transform 0.3s,opacity 0.3s;
-}
-
-.c1:after {
-  content: '';
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  -webkit-transform: scaleY(0.5) translateY(-50%) translateX(-50%) rotateZ(0deg);
-  -ms-transform: scaleY(0.5) translateY(-50%) translateX(-50%) rotateZ(0deg);
-  transform: scaleY(0.5) translateY(-50%) translateX(-50%) rotateZ(0deg);
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: calc(2 * 12px * 0.866) solid black;
-  border-top: 12px solid transparent;
-  display: inline-block;
-}
-
-<div
+  <div
     data-testid="pbl-popover-mountpoint"
-  >
-    <div
-      class="c0"
-      data-popper-escaped="true"
-      data-popper-placement="bottom"
-      data-popper-reference-hidden="true"
-      style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
-    >
-      <div>
-        <div
-          class="c1"
-          data-testid="pbl-tooltip-popover"
-        >
-          <p
-            class="c2"
-          >
-            This is a tooltip on the bottom side
-          </p>
-        </div>
-      </div>
-      <div
-        style="position: absolute; left: 0px; transform: translate(10px, 0px);"
-      />
-    </div>
-  </div>
+  />
 </body>
 `;
 
@@ -108,81 +36,9 @@ exports[`side "left" render and update size 1`] = `
       content
     </div>
   </div>
-  .c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  margin-bottom: 0;
-}
-
-.c0 {
-  z-index: 1100;
-}
-
-.c1 {
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0;
-  position: relative;
-  right: 4px;
-  -webkit-transform: translateX(-25%);
-  -ms-transform: translateX(-25%);
-  transform: translateX(-25%);
-  border-radius: 4px;
-  padding: 4px 8px;
-  background-color: #000000;
-  color: #ffffff;
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.3s,opacity 0.3s;
-  -webkit-transition: transform 0.3s,opacity 0.3s;
-  transition: transform 0.3s,opacity 0.3s;
-}
-
-.c1:after {
-  content: '';
-  position: absolute;
-  right: -12px;
-  top: 50%;
-  -webkit-transform: scale(0.5) translateX(50%) translateY(-100%) rotateZ(90deg);
-  -ms-transform: scale(0.5) translateX(50%) translateY(-100%) rotateZ(90deg);
-  transform: scale(0.5) translateX(50%) translateY(-100%) rotateZ(90deg);
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: calc(2 * 12px * 0.866) solid black;
-  border-top: 12px solid transparent;
-  display: inline-block;
-}
-
-<div
+  <div
     data-testid="pbl-popover-mountpoint"
-  >
-    <div
-      class="c0"
-      data-popper-escaped="true"
-      data-popper-placement="left"
-      data-popper-reference-hidden="true"
-      style="position: fixed; left: 0px; top: 0px; right: 0px; transform: translate(-10px, 0px);"
-    >
-      <div>
-        <div
-          class="c1"
-          data-testid="pbl-tooltip-popover"
-        >
-          <p
-            class="c2"
-          >
-            This is a tooltip on the left side
-          </p>
-        </div>
-      </div>
-      <div
-        style="position: absolute; top: 0px; transform: translate(0px, 10px);"
-      />
-    </div>
-  </div>
+  />
 </body>
 `;
 
@@ -195,81 +51,9 @@ exports[`side "right" render and update size 1`] = `
       content
     </div>
   </div>
-  .c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  margin-bottom: 0;
-}
-
-.c0 {
-  z-index: 1100;
-}
-
-.c1 {
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0;
-  position: relative;
-  left: 4px;
-  -webkit-transform: translateX(25%);
-  -ms-transform: translateX(25%);
-  transform: translateX(25%);
-  border-radius: 4px;
-  padding: 4px 8px;
-  background-color: #000000;
-  color: #ffffff;
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.3s,opacity 0.3s;
-  -webkit-transition: transform 0.3s,opacity 0.3s;
-  transition: transform 0.3s,opacity 0.3s;
-}
-
-.c1:after {
-  content: '';
-  position: absolute;
-  left: -12px;
-  top: 50%;
-  -webkit-transform: scale(0.5) translateX(-50%) translateY(-100%) rotateZ(270deg);
-  -ms-transform: scale(0.5) translateX(-50%) translateY(-100%) rotateZ(270deg);
-  transform: scale(0.5) translateX(-50%) translateY(-100%) rotateZ(270deg);
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: calc(2 * 12px * 0.866) solid black;
-  border-top: 12px solid transparent;
-  display: inline-block;
-}
-
-<div
+  <div
     data-testid="pbl-popover-mountpoint"
-  >
-    <div
-      class="c0"
-      data-popper-escaped="true"
-      data-popper-placement="right"
-      data-popper-reference-hidden="true"
-      style="position: fixed; left: 0px; top: 0px; transform: translate(10px, 0px);"
-    >
-      <div>
-        <div
-          class="c1"
-          data-testid="pbl-tooltip-popover"
-        >
-          <p
-            class="c2"
-          >
-            This is a tooltip on the right side
-          </p>
-        </div>
-      </div>
-      <div
-        style="position: absolute; top: 0px; transform: translate(0px, 10px);"
-      />
-    </div>
-  </div>
+  />
 </body>
 `;
 
@@ -282,79 +66,8 @@ exports[`side "top" render and update size 1`] = `
       content
     </div>
   </div>
-  .c2 {
-  font-family: "IBM Plex Sans",sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  margin-bottom: 0;
-}
-
-.c0 {
-  z-index: 1100;
-}
-
-.c1 {
-  z-index: 100;
-  pointer-events: none;
-  opacity: 0;
-  position: relative;
-  bottom: 4px;
-  -webkit-transform: translateY(25%);
-  -ms-transform: translateY(25%);
-  transform: translateY(25%);
-  border-radius: 4px;
-  padding: 4px 8px;
-  background-color: #000000;
-  color: #ffffff;
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.3s,opacity 0.3s;
-  -webkit-transition: transform 0.3s,opacity 0.3s;
-  transition: transform 0.3s,opacity 0.3s;
-}
-
-.c1:after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  -webkit-transform: scaleY(0.5) translateY(-50%) translateX(-50%) rotateZ(180deg);
-  -ms-transform: scaleY(0.5) translateY(-50%) translateX(-50%) rotateZ(180deg);
-  transform: scaleY(0.5) translateY(-50%) translateX(-50%) rotateZ(180deg);
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: calc(2 * 12px * 0.866) solid black;
-  border-top: 12px solid transparent;
-  display: inline-block;
-}
-
-<div
+  <div
     data-testid="pbl-popover-mountpoint"
-  >
-    <div
-      class="c0"
-      data-popper-escaped="true"
-      data-popper-placement="top"
-      data-popper-reference-hidden="true"
-      style="position: fixed; left: 0px; top: 0px; bottom: 0px; transform: translate(0px, -10px);"
-    >
-      <div>
-        <div
-          class="c1"
-          data-testid="pbl-tooltip-popover"
-        >
-          <p
-            class="c2"
-          >
-            This is a tooltip on the top side
-          </p>
-        </div>
-      </div>
-      <div
-        style="position: absolute; left: 0px; transform: translate(10px, 0px);"
-      />
-    </div>
-  </div>
+  />
 </body>
 `;

@@ -1,5 +1,6 @@
 import React, {
   ComponentElement,
+  ComponentType,
   forwardRef,
   ReactElement,
   ReactNode,
@@ -13,18 +14,23 @@ import styled from 'styled-components';
 import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
 import { setRef } from '../utils/setRef';
-import { useForwardRef } from '../utils/useForwardRef';
+import { useReRenderForwardRef } from '../utils/useForwardRef';
+import { InOutAnimationProps, NoAnimation } from '../animation';
+import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 
 export interface PopoverProps {
   children: ComponentElement<any, any>;
   content: ReactNode;
   placement: Placement;
   offset?: number;
+  delay?: number;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   onClickOutside?: () => void;
   arrow?: ReactElement;
   open: boolean;
+  animation?: ComponentType<InOutAnimationProps>;
+  animationProps?: Omit<InOutAnimationProps, 'visible' | 'children'> & Record<string, any>;
 }
 
 const PopoverWrapper = styled.div`
@@ -38,19 +44,28 @@ export const Popover = forwardRef(
       content,
       placement,
       open,
+      delay = 0,
       offset = 0,
       onMouseEnter = () => {},
       onMouseLeave = () => {},
       onClickOutside = () => {},
       arrow = <div />,
+      animation: Animation = NoAnimation,
+      animationProps = { duration: 0 },
     }: PopoverProps,
     ref
   ) => {
-    const [referenceElement, setReferenceElement] = useForwardRef<HTMLElement | null>(
+    const [innerOpen, setInnerOpen] = useDelayedBooleanState(open, delay, animationProps.duration);
+    const [referenceElement, setReferenceElement] = useReRenderForwardRef<HTMLElement | null>(
       children.ref as Ref<HTMLElement>
     );
+
     const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
     const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+      setInnerOpen(open);
+    }, [open, setInnerOpen]);
 
     useEffect(() => {
       if (referenceElement) {
@@ -115,12 +130,14 @@ export const Popover = forwardRef(
       <>
         {clonedElement}
         <Portal name="popover">
-          {open && (
+          {innerOpen && (
             <PopoverWrapper ref={setPopperElement} style={styles.popper} {...attributes.popper}>
               <ClickOutside onClickOutside={handleClickOutside}>
-                <div>{content}</div>
+                <Animation {...animationProps} visible={open}>
+                  <div>{content}</div>
+                  {clonedArrow}
+                </Animation>
               </ClickOutside>
-              {clonedArrow}
             </PopoverWrapper>
           )}
         </Portal>
