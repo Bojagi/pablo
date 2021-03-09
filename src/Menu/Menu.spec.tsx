@@ -10,6 +10,7 @@ import { PabloThemeProvider } from '../theme';
 import { Menu } from './Menu';
 import { MenuItem } from './MenuItem';
 import '../../testUtils/mockResizeObserver';
+import { waitOneTick } from '../../testUtils/waitOneTick';
 
 let menuItemClickHandler;
 
@@ -25,18 +26,19 @@ test('Render closed Menu', () => {
 
 test('Render open Menu', async () => {
   const { container, getByTestId } = renderComponent({ open: true });
-  await act(() => Promise.resolve());
+  await waitOneTick();
   expect(container).toMatchSnapshot();
   expect(getByTestId('pbl-popover-mountpoint')).not.toBeEmptyDOMElement();
 });
 
 test('Click on menu item', async () => {
   const { container, getAllByTestId } = renderComponent({ open: true });
-  await act(() => Promise.resolve());
+  await waitOneTick();
   expect(container).toMatchSnapshot();
   act(() => {
     fireEvent.click(getAllByTestId('pbl-menu-item')[0]);
   });
+  await waitOneTick();
   expect(menuItemClickHandler).toHaveBeenCalledTimes(1);
   expect(menuItemClickHandler).toHaveBeenCalledWith('hi');
 });

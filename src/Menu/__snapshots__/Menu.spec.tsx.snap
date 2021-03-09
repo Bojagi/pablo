@@ -198,20 +198,16 @@ exports[`Render open Menu 1`] = `
       Content
     </div>
   </div>
-  .c1 {
-  visibility: hidden;
-}
-
-.c0 {
+  .c0 {
   z-index: 1100;
 }
 
-.c6 {
+.c5 {
   width: 10px;
   height: 10px;
 }
 
-.c6:after {
+.c5:after {
   content: '';
   position: absolute;
   top: -10;
@@ -221,41 +217,41 @@ exports[`Render open Menu 1`] = `
   border-bottom: 10px solid white;
 }
 
-*[data-popper-placement^='top'] .c5 {
+*[data-popper-placement^='top'] .c4 {
   bottom: -10px;
 }
 
-*[data-popper-placement^='top'] .c5:after {
+*[data-popper-placement^='top'] .c4:after {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-*[data-popper-placement^='bottom'] .c5 {
+*[data-popper-placement^='bottom'] .c4 {
   top: -10px;
 }
 
-*[data-popper-placement^='left'] .c5 {
+*[data-popper-placement^='left'] .c4 {
   right: -10px;
 }
 
-*[data-popper-placement^='left'] .c5:after {
+*[data-popper-placement^='left'] .c4:after {
   -webkit-transform: rotate(90deg) scaleX(0.75);
   -ms-transform: rotate(90deg) scaleX(0.75);
   transform: rotate(90deg) scaleX(0.75);
 }
 
-*[data-popper-placement^='right'] .c5 {
+*[data-popper-placement^='right'] .c4 {
   left: -10px;
 }
 
-*[data-popper-placement^='right'] .c5:after {
+*[data-popper-placement^='right'] .c4:after {
   -webkit-transform: rotate(-90deg) scaleX(0.75);
   -ms-transform: rotate(-90deg) scaleX(0.75);
   transform: rotate(-90deg) scaleX(0.75);
 }
 
-.c2 {
+.c1 {
   background-color: #ffffff;
   border-radius: 4px;
   max-width: 400px;
@@ -264,7 +260,7 @@ exports[`Render open Menu 1`] = `
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
-.c4 {
+.c3 {
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -274,7 +270,7 @@ exports[`Render open Menu 1`] = `
   margin-bottom: 0;
 }
 
-.c3 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -304,20 +300,20 @@ exports[`Render open Menu 1`] = `
   padding: 4px;
 }
 
-.c3:not(:disabled) {
+.c2:not(:disabled) {
   cursor: pointer;
 }
 
-.c3:disabled {
+.c2:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c3:hover {
+.c2:hover {
   background-color: #f0f0f0;
 }
 
-.c3:active {
+.c2:active {
   background-color: #e0e0e0;
 }
 
@@ -332,29 +328,29 @@ exports[`Render open Menu 1`] = `
       style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
     >
       <div
-        class="c1"
+        class=""
         data-testid="pbl-animation-inner"
       >
         <div>
           <div
-            class="c2"
+            class="c1"
           >
             <div
-              class="c3"
+              class="c2"
               data-testid="pbl-menu-item"
             >
               <span
-                class="c4"
+                class="c3"
               >
                 Hello
               </span>
             </div>
             <div
-              class="c3"
+              class="c2"
               data-testid="pbl-menu-item"
             >
               <span
-                class="c4"
+                class="c3"
               >
                 World
               </span>
@@ -362,7 +358,7 @@ exports[`Render open Menu 1`] = `
           </div>
         </div>
         <div
-          class="c5 c6"
+          class="c4 c5"
           color="white"
           size="10"
           style="position: absolute; left: 0px; transform: translate(10px, 0px);"
