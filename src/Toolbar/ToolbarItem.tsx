@@ -19,7 +19,7 @@ export const ToolbarItem = forwardRef<HTMLButtonElement, ToolbarItemProps>(
     const gap = useComponentStyle('toolbar.gap');
 
     return (
-      <Tooltip delay={500} side={tooltipSide} content={tooltip}>
+      <Tooltip delay={500} side={tooltipSide} content={tooltip} disabled={props.disabled}>
         <IconButton
           mx={gap}
           ref={ref}

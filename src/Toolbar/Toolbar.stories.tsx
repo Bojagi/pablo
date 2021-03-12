@@ -1,6 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Bold, Italic, Crop, Edit, Underline } from 'react-feather';
+import { Bold, Italic, Crop, Edit, Underline, ArrowLeft } from 'react-feather';
 import { Toolbar } from './Toolbar';
 import { ToolbarDivider } from './ToolbarDivider';
 import { ToolbarItem } from './ToolbarItem';
@@ -11,6 +11,7 @@ export default {
 
 export const SimpleToolbar = () => {
   const [selectedTool, setSelectedTool] = React.useState('bold');
+  const [undoDisabled, setUndoDisabled] = React.useState(false);
   return (
     <Toolbar my={9} mx={10} selected={selectedTool}>
       <ToolbarItem
@@ -46,6 +47,14 @@ export const SimpleToolbar = () => {
         tooltipSide="right"
         onClick={setSelectedTool}
         icon={<Crop size={20} />}
+      />
+      <ToolbarItem
+        name="undo"
+        tooltip="Undo"
+        tooltipSide="right"
+        disabled={undoDisabled}
+        onClick={() => setUndoDisabled(true)}
+        icon={<ArrowLeft size={20} />}
       />
     </Toolbar>
   );

@@ -21,6 +21,7 @@ export interface TooltipProps extends LayoutBoxProps {
   content: React.ReactNode;
   side?: TooltipSide;
   delay?: number;
+  disabled?: boolean;
   children: ReactComponentElement<any>;
 }
 
@@ -58,7 +59,13 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
   }
 `;
 
-export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipProps) {
+export function Tooltip({
+  content,
+  children,
+  disabled = false,
+  side = 'top',
+  delay = 0,
+}: TooltipProps) {
   const [isHovered, setIsHovered] = useState(false);
   const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
 
@@ -68,7 +75,7 @@ export function Tooltip({ content, children, side = 'top', delay = 0 }: TooltipP
 
   return (
     <Popover
-      open={isHovered}
+      open={isHovered && !disabled}
       placement={side}
       offset={gap}
       delay={delay}

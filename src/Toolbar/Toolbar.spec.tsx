@@ -47,12 +47,27 @@ test('Render toolbar with all items active', async () => {
   await act(() => Promise.resolve());
 
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
-  expect(allButtons).toBeArrayOfSize(5);
+  expect(allButtons).toBeArrayOfSize(6);
   expect(allButtons[0]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
   expect(allButtons[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
   expect(allButtons[2]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
   expect(allButtons[3]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
   expect(allButtons[4]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
+  expect(allButtons[5]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
+});
+
+test('Render toolbar with disabled button disabled', async () => {
+  const { getAllByTestId } = renderComponent({}, {});
+  // This is because of passing ref on effect, which happens on next tick
+  await act(() => Promise.resolve());
+
+  const allButtons = getAllByTestId('pbl-toolbar-item-button');
+  expect(allButtons[0]).not.toHaveAttribute('disabled');
+  expect(allButtons[1]).not.toHaveAttribute('disabled');
+  expect(allButtons[2]).not.toHaveAttribute('disabled');
+  expect(allButtons[3]).not.toHaveAttribute('disabled');
+  expect(allButtons[4]).not.toHaveAttribute('disabled');
+  expect(allButtons[5]).toHaveAttribute('disabled');
 });
 
 test('Render toolbar items selected by "selected" Toolbar prop', async () => {
@@ -61,7 +76,7 @@ test('Render toolbar items selected by "selected" Toolbar prop', async () => {
   await act(() => Promise.resolve());
 
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
-  expect(allButtons).toBeArrayOfSize(5);
+  expect(allButtons).toBeArrayOfSize(6);
   expect(allButtons[0]).toHaveStyleRule('background-color', 'transparent');
   expect(allButtons[1]).toHaveStyleRule('background-color', 'transparent');
   expect(allButtons[2]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
@@ -142,6 +157,12 @@ function renderComponent(toolbarProps, toolbarItemProps) {
         <ToolbarDivider />
         <ToolbarItem name="edit" {...toolbarItemProps} icon={<div>edit-icon</div>} />
         <ToolbarItem name="crop" {...toolbarItemProps} icon={<div>crop-icon</div>} />
+        <ToolbarItem
+          name="disabled"
+          disabled
+          {...toolbarItemProps}
+          icon={<div>disabled-icon</div>}
+        />
       </Toolbar>
     </PabloThemeProvider>
   );
