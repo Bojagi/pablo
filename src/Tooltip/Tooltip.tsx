@@ -1,4 +1,4 @@
-import React, { ReactComponentElement, useState } from 'react';
+import React, { ReactComponentElement, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
@@ -68,6 +68,12 @@ export function Tooltip({
 }: TooltipProps) {
   const [isHovered, setIsHovered] = useState(false);
   const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
+
+  useEffect(() => {
+    if (disabled) {
+      setIsHovered(false);
+    }
+  }, [disabled]);
 
   if (!content) {
     return <>{children}</>;
