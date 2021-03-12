@@ -128,6 +128,15 @@ exports[`Render toolbar 1`] = `
         crop-icon
       </div>
     </button>
+    <button
+      class="c1"
+      data-testid="pbl-toolbar-item-button"
+      disabled=""
+    >
+      <div>
+        disabled-icon
+      </div>
+    </button>
   </div>
 </div>
 `;

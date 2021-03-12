@@ -67,7 +67,7 @@ describe.each([
   });
 
   test('show tooltip on hover', async () => {
-    const { getByTestId } = renderComponent({
+    const { getByTestId, queryByTestId } = renderComponent({
       content: `This is a tooltip on the ${side} side`,
       side,
     });
@@ -103,11 +103,89 @@ describe.each([
 
     await act(() => Promise.resolve());
 
+    expect(queryByTestId('pbl-tooltip-popover')).not.toBeNull();
     expect(getByTestId('pbl-animation-inner')).toHaveStyleRule('opacity', '0');
     expect(getByTestId('pbl-animation-inner')).toHaveStyleRule(
       'transform',
       expectedHiddenTransform
     );
+  });
+
+  test('Do not show tooltip on hover when disabled', async () => {
+    const { getByTestId, queryByTestId } = renderComponent({
+      content: `This is a tooltip on the ${side} side`,
+      side,
+      disabled: true,
+    });
+    // This is because of passing ref on effect, which happens on next tick
+    await act(() => Promise.resolve());
+
+    // Trigger resize update and update the size
+    act(() => {
+      getByTestId('pbl-tooltip-wrapper').setAttribute('fake-height', '10');
+      getByTestId('pbl-tooltip-wrapper').setAttribute('fake-width', '20');
+      fireEvent(getByTestId('pbl-tooltip-wrapper'), new Event('resize'));
+    });
+
+    act(() => {
+      fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
+      // wait for the tick to finish
+      jest.advanceTimersByTime(0);
+    });
+
+    await act(() => Promise.resolve());
+
+    expect(queryByTestId('pbl-tooltip-popover')).toBeNull();
+  });
+
+  test('Hide tooltip if button is disabled after click', async () => {
+    const { getByTestId, queryByTestId, rerender } = renderComponent({
+      content: `This is a tooltip on the ${side} side`,
+      side,
+    });
+    // This is because of passing ref on effect, which happens on next tick
+    await act(() => Promise.resolve());
+
+    // Trigger resize update and update the size
+    act(() => {
+      getByTestId('pbl-tooltip-wrapper').setAttribute('fake-height', '10');
+      getByTestId('pbl-tooltip-wrapper').setAttribute('fake-width', '20');
+      fireEvent(getByTestId('pbl-tooltip-wrapper'), new Event('resize'));
+    });
+
+    act(() => {
+      fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
+      // wait for the tick to finish
+      jest.advanceTimersByTime(0);
+    });
+
+    await act(() => Promise.resolve());
+
+    expect(queryByTestId('pbl-tooltip-popover')).not.toBeNull();
+
+    rerender({
+      content: `This is a tooltip on the ${side} side`,
+      side,
+      disabled: true,
+    });
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    expect(queryByTestId('pbl-tooltip-popover')).toBeNull();
+
+    // Take the tooltip back in
+    rerender({
+      content: `This is a tooltip on the ${side} side`,
+      side,
+    });
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    expect(queryByTestId('pbl-tooltip-popover')).toBeNull();
   });
 
   test('show tooltip on hover with delay', async () => {
@@ -154,19 +232,22 @@ describe.each([
 });
 
 function renderComponent(props) {
-  const { baseElement, unmount } = render(
+  const renderFn = (innerProps) => (
     <PabloThemeProvider>
-      <Tooltip {...props}>
+      <Tooltip {...innerProps}>
         <div data-testid="pbl-tooltip-wrapper">content</div>
       </Tooltip>
     </PabloThemeProvider>
   );
 
+  const { baseElement, unmount, rerender } = render(renderFn(props));
+  const doReRender = (innerProps) => rerender(renderFn(innerProps));
   return {
     getByTestId: globalGetByTestId.bind(null, baseElement),
     getAllByTestId: globalGetAllByTestId.bind(null, baseElement),
     queryByTestId: globalQueryByTestId.bind(null, baseElement),
     unmount,
+    rerender: doReRender,
     container: baseElement,
   };
 }
