@@ -4,6 +4,9 @@ import { Flex } from '../Box';
 import { Title } from '../Typography';
 import { getComponentStyle, shadowTransformer, transitionTransformer } from '../styleHelpers';
 import { Portal } from '../Portal/Portal';
+import { BaseProps, CssFunctionReturn } from '../types';
+import { ModalStyleProperties } from './styles';
+import { useCustomStyles } from '../utils/useCustomStyles';
 
 export interface TopRightItemProps {
   onClose?: () => void;
@@ -11,7 +14,7 @@ export interface TopRightItemProps {
 
 export type ModalMaxWidth = 'small' | 'medium' | 'large' | 'full';
 
-export interface ModalProps {
+export interface ModalProps extends BaseProps<ModalStyleProperties> {
   children: React.ReactNode;
   title?: React.ReactNode;
   onClose?: () => void;
@@ -25,6 +28,7 @@ export interface ModalProps {
 interface BackdropProps {
   open: boolean;
   onClick: (e: React.PointerEvent<HTMLDivElement>) => void;
+  css?: CssFunctionReturn;
 }
 
 const Backdrop = styled.div<BackdropProps>`
@@ -41,6 +45,7 @@ const Backdrop = styled.div<BackdropProps>`
   justify-content: center;
   align-items: center;
   transition: ${getComponentStyle('modal.backdropTransition', transitionTransformer)};
+  ${(props) => props.css}
   ${(props) =>
     props.open
       ? css`
@@ -56,6 +61,7 @@ interface ModalAreaProps {
   open: boolean;
   animate: boolean;
   maxWidth: ModalMaxWidth;
+  css?: CssFunctionReturn;
 }
 
 const ModalArea = styled.div<ModalAreaProps>`
@@ -73,17 +79,24 @@ const ModalArea = styled.div<ModalAreaProps>`
   margin: auto;
   min-height: min-content;
   padding: ${getComponentStyle('modal.padding')};
+  ${(props) => props.css}
 `;
 
-const ModalBox = styled.div`
+interface ModalBoxProps {
+  css?: CssFunctionReturn;
+}
+
+const ModalBox = styled.div<ModalBoxProps>`
   border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
   background-color: ${getComponentStyle('modal.box.backgroundColor')};
   padding: ${getComponentStyle('modal.box.padding')};
   box-shadow: ${getComponentStyle('modal.box.shadow', shadowTransformer)};
+  ${(props) => props.css}
 `;
 
-const PaneBox = styled.div`
+const PaneBox = styled.div<ModalBoxProps>`
   margin-top: ${getComponentStyle('modal.gap')};
+  ${(props) => props.css}
 `;
 
 export function Modal({
@@ -95,8 +108,10 @@ export function Modal({
   maxWidth = 'medium',
   animate = true,
   open = false,
+  customStyles = {},
 }: ModalProps) {
   const mouseDownRef = React.useRef<HTMLElement>(null);
+  const getCustomStyles = useCustomStyles(customStyles);
 
   useEffect(() => {
     if (open) {
@@ -119,13 +134,25 @@ export function Modal({
 
   return (
     <Portal name="modal">
-      <Backdrop data-testid="pbl-modal-backdrop" onClick={handleClose} open={open}>
-        <ModalArea data-testid="pbl-modal-area" maxWidth={maxWidth} open={open} animate={animate}>
+      <Backdrop
+        data-testid="pbl-modal-backdrop"
+        onClick={handleClose}
+        open={open}
+        css={getCustomStyles('backdrop')}
+      >
+        <ModalArea
+          data-testid="pbl-modal-area"
+          maxWidth={maxWidth}
+          open={open}
+          animate={animate}
+          css={getCustomStyles('area')}
+        >
           <ModalBox
             data-testid="pbl-modal-box"
             onMouseDown={(e) => {
               (mouseDownRef.current as any) = e.currentTarget;
             }}
+            css={getCustomStyles('box')}
           >
             {(title || TopRightItem) && (
               <Flex data-testid="pbl-modal-title-box" justifyContent="space-between">
@@ -137,8 +164,10 @@ export function Modal({
           </ModalBox>
           {additionalPanes &&
             additionalPanes.map((pane, i) => (
-              <PaneBox key={i} data-testid="pbl-modal-pane">
-                <ModalBox data-testid="pbl-modal-pane-box">{pane}</ModalBox>
+              <PaneBox key={i} data-testid="pbl-modal-pane" css={getCustomStyles('paneBox')}>
+                <ModalBox data-testid="pbl-modal-pane-box" css={getCustomStyles('box')}>
+                  {pane}
+                </ModalBox>
               </PaneBox>
             ))}
         </ModalArea>

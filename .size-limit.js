@@ -18,28 +18,28 @@ module.exports = [
     path: 'build/esm/index.js',
     name: 'Button Treeshaking',
     import: '{ Button }',
-    limit: '24.5 kb',
+    limit: '25 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'Input Treeshaking',
     import: '{ Input }',
-    limit: '24.5 kb',
+    limit: '25 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'Avatar Treeshaking',
     import: '{ Avatar }',
-    limit: '24.5 kb',
+    limit: '25 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'ES Module',
-    limit: '30 kb',
+    limit: '32 kb',
   },
   {
     path: 'build/pablo.min.js',
     name: 'UMD Bundle',
-    limit: '28 kb',
+    limit: '30 kb',
   },
 ]

@@ -1,9 +1,12 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { MoreHorizontal, X } from 'react-feather';
+import { css } from 'styled-components';
 import { Button } from '../Button';
 import { ButtonBar } from '../ButtonBar/ButtonBar';
 import { IconButton } from '../IconButton';
+import { getComponentStyle, getSpacing } from '../styleHelpers';
+import { PabloThemeProvider } from '../theme';
 import { Paragraph } from '../Typography';
 import { Modal } from './Modal';
 
@@ -106,4 +109,98 @@ WithAdditionalPanes.args = {
     <Paragraph mb={0}>I am the Walrus</Paragraph>,
   ],
   additionalBody: ModalButtonBar,
+};
+
+export const WithCustomStyles = BaseStory.bind(null);
+WithCustomStyles.args = {
+  title: 'Hallo',
+  topRightItem: ({ onClose }) => (
+    <IconButton size="medium">
+      <X onClick={onClose} />
+    </IconButton>
+  ),
+  additionalPanes: [
+    <>
+      <TextContent />
+      <TextContent />
+      <TextContent />
+    </>,
+    <Paragraph mb={0}>Goodbye</Paragraph>,
+    <Paragraph mb={0}>I am the Walrus</Paragraph>,
+  ],
+  additionalBody: ModalButtonBar,
+  customStyles: {
+    backdrop: css`
+      background-color: rgba(0, 0, 255, 0.2);
+    `,
+    box: css`
+      border: 5px solid red;
+    `,
+    area: css`
+      background-color: rgba(0, 0, 255, 0.2);
+      border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
+    `,
+    paneBox: css`
+      border: 5px solid blue;
+      border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
+      padding: ${getSpacing(4)};
+    `,
+  },
+};
+
+export const WithCustomStylesFromTheme = () => {
+  const [open, setOpen] = React.useState(false);
+  const args = {
+    title: 'Hallo',
+    topRightItem: ({ onClose }) => (
+      <IconButton size="medium">
+        <X onClick={onClose} />
+      </IconButton>
+    ),
+    additionalPanes: [
+      <>
+        <TextContent />
+        <TextContent />
+        <TextContent />
+      </>,
+      <Paragraph mb={0}>Goodbye</Paragraph>,
+      <Paragraph mb={0}>I am the Walrus</Paragraph>,
+    ],
+    customStyles: {
+      backdrop: css`
+        background-color: rgba(0, 0, 255, 0.2);
+      `,
+      box: css`
+        border: 5px solid red;
+      `,
+      area: css`
+        background-color: rgba(0, 0, 255, 0.2);
+        border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
+      `,
+      paneBox: css`
+        border: 5px solid blue;
+        border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
+        padding: ${getSpacing(4)};
+      `,
+    },
+  };
+
+  return (
+    <PabloThemeProvider
+      componentStyles={{
+        modal: {
+          styles: {
+            box: css`
+              padding: 200px;
+            `,
+          },
+        },
+      }}
+    >
+      <Button onClick={() => setOpen(true)}>open modal</Button>
+      <Modal onClose={() => setOpen(false)} open={open} {...args}>
+        <TextContent />
+      </Modal>
+    </PabloThemeProvider>
+  );
 };

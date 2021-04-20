@@ -6,6 +6,7 @@ import {
   act,
 } from '@testing-library/react';
 import React from 'react';
+import { css } from 'styled-components';
 import { PabloThemeProvider } from '../theme';
 import { Modal } from './Modal';
 
@@ -193,9 +194,61 @@ test('Remove mount point on unmount', () => {
   expect(container.querySelector('div[data-testid="pbl-modal-mountpoint"')).toBeNull();
 });
 
-function renderComponent(props) {
+test('Render with custom styles', () => {
+  const { getByTestId } = renderComponent(
+    {
+      open: true,
+      maxWidth: 'medium',
+      customStyles: {
+        box: css`
+          border: 5px solid blue;
+        `,
+        paneBox: css`
+          background-color: green;
+        `,
+        area: css`
+          background-color: orange;
+        `,
+        backdrop: css`
+          color: tomato;
+        `,
+      },
+      additionalPanes: [<div>Pane 1</div>],
+      children: <div>Hello World</div>,
+    },
+    {
+      modal: {
+        styles: {
+          box: css`
+            background-color: red;
+          `,
+          paneBox: css`
+            padding: 200px;
+          `,
+          area: css`
+            color: blue;
+          `,
+          backdrop: css`
+            background-color: yellow;
+          `,
+        },
+      },
+    }
+  );
+
+  expect(getByTestId('pbl-modal-box')).toHaveStyleRule('border', '5px solid blue');
+  expect(getByTestId('pbl-modal-box')).toHaveStyleRule('background-color', 'red');
+  expect(getByTestId('pbl-modal-pane')).toHaveStyleRule('padding', '200px');
+  expect(getByTestId('pbl-modal-pane')).toHaveStyleRule('background-color', 'green');
+  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('color', 'blue');
+  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('background-color', 'orange');
+  expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('color', 'tomato');
+  expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('background-color', 'yellow');
+});
+
+function renderComponent(props, componentStyles?: any) {
   const { baseElement, unmount } = render(
-    <PabloThemeProvider>
+    <PabloThemeProvider componentStyles={componentStyles}>
       <Modal {...props} />
     </PabloThemeProvider>
   );
