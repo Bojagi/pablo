@@ -2,8 +2,11 @@ import { css } from 'styled-components';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { getBackgroundColor, getColor } from '../styleHelpers';
+import { BaseStyles } from '../types';
 
-export interface ModalStyles {
+export type ModalStyleProperties = 'box' | 'backdrop' | 'area' | 'paneBox';
+
+export interface ModalStyles extends BaseStyles<ModalStyleProperties> {
   backdropColor: Style;
   padding: Style;
   gap: Style;
