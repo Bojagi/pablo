@@ -45,6 +45,7 @@ const Backdrop = styled.div<BackdropProps>`
   justify-content: center;
   align-items: center;
   transition: ${getComponentStyle('modal.backdropTransition', transitionTransformer)};
+  ${(props) => props.css}
   ${(props) =>
     props.open
       ? css`
@@ -78,6 +79,7 @@ const ModalArea = styled.div<ModalAreaProps>`
   margin: auto;
   min-height: min-content;
   padding: ${getComponentStyle('modal.padding')};
+  ${(props) => props.css}
 `;
 
 interface ModalBoxProps {
@@ -89,10 +91,12 @@ const ModalBox = styled.div<ModalBoxProps>`
   background-color: ${getComponentStyle('modal.box.backgroundColor')};
   padding: ${getComponentStyle('modal.box.padding')};
   box-shadow: ${getComponentStyle('modal.box.shadow', shadowTransformer)};
+  ${(props) => props.css}
 `;
 
 const PaneBox = styled.div<ModalBoxProps>`
   margin-top: ${getComponentStyle('modal.gap')};
+  ${(props) => props.css}
 `;
 
 export function Modal({
