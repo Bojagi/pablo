@@ -165,16 +165,13 @@ exports[`Render radio with label 1`] = `
 }
 
 <label
+  class="c0"
   data-testid="pbl-radio-label"
   for="custom-id"
 >
-  <h4
-    class="c0"
-  >
-    I am a 
-    <strong>
-      label
-    </strong>
-  </h4>
+  I am a 
+  <strong>
+    label
+  </strong>
 </label>
 `;

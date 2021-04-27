@@ -96,14 +96,11 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
+          class="c5"
           data-testid="pbl-radio-label"
           for="custom-id-1"
         >
-          <h4
-            class="c5"
-          >
-            Hello
-          </h4>
+          Hello
         </label>
       </div>
     </div>
@@ -131,14 +128,11 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
+          class="c5"
           data-testid="pbl-radio-label"
           for="custom-id-2"
         >
-          <h4
-            class="c5"
-          >
-            World
-          </h4>
+          World
         </label>
       </div>
     </div>
@@ -166,14 +160,11 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
+          class="c5"
           data-testid="pbl-radio-label"
           for="custom-id-3"
         >
-          <h4
-            class="c5"
-          >
-            Bye
-          </h4>
+          Bye
         </label>
       </div>
     </div>
@@ -277,14 +268,11 @@ exports[`Work with one radio button 1`] = `
           />
         </div>
         <label
+          class="c5"
           data-testid="pbl-radio-label"
           for="custom-id"
         >
-          <h4
-            class="c5"
-          >
-            Hello
-          </h4>
+          Hello
         </label>
       </div>
     </div>

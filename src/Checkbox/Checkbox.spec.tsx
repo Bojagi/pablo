@@ -77,7 +77,7 @@ test('Render medium checkbox', () => {
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('width', '12px');
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('height', '12px');
   // Uses subtitle typography
-  expect(getByTestId('pbl-checkbox-label').childNodes[0]).toHaveStyleRule(
+  expect(getByTestId('pbl-checkbox-label')).toHaveStyleRule(
     'font-size',
     defaultTheme.typography.subtitle.fontSize
   );
@@ -94,7 +94,7 @@ test('Render small checkbox', () => {
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('width', '8px');
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('height', '8px');
   // Uses paragraph typography
-  expect(getByTestId('pbl-checkbox-label').childNodes[0]).toHaveStyleRule(
+  expect(getByTestId('pbl-checkbox-label')).toHaveStyleRule(
     'font-size',
     defaultTheme.typography.paragraph.fontSize
   );

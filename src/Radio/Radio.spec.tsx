@@ -78,7 +78,7 @@ test('Render medium radio', () => {
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '12px');
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '12px');
   // Uses subtitle typography
-  expect(getByTestId('pbl-radio-label').childNodes[0]).toHaveStyleRule(
+  expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',
     defaultTheme.typography.subtitle.fontSize
   );
@@ -95,7 +95,7 @@ test('Render small radio', () => {
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '8px');
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '8px');
   // Uses paragraph typography
-  expect(getByTestId('pbl-radio-label').childNodes[0]).toHaveStyleRule(
+  expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',
     defaultTheme.typography.paragraph.fontSize
   );

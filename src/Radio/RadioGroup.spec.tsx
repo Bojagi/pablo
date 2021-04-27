@@ -52,7 +52,7 @@ test('Click on "bye" and trigger "bye" being selected', () => {
   // Click on label to trigger 'bye' being checked
   expect(onChangeMock).toHaveBeenCalledTimes(0);
   act(() => {
-    fireEvent.click(byeLabel.parentNode as any);
+    fireEvent.click(byeLabel as any);
   });
   expect(onChangeMock).toHaveBeenCalledTimes(1);
   expect(onChangeMock).toHaveBeenCalledWith('bye');
