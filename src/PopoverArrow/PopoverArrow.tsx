@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { CssFunctionReturn } from '../types';
 
 export interface ArrowProps {
   size: number;
   color: string;
+  customCss?: CssFunctionReturn;
 }
 
 export const PopoverArrow = styled.div<ArrowProps>`
@@ -16,6 +18,7 @@ export const PopoverArrow = styled.div<ArrowProps>`
     border-left: ${(props) => props.size}px solid transparent;
     border-right: ${(props) => props.size}px solid transparent;
     border-bottom: ${(props) => props.size}px solid ${(props) => props.color};
+    ${(props) => props.customCss}
   }
 
   *[data-popper-placement^='top'] & {

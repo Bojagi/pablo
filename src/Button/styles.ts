@@ -2,8 +2,17 @@ import { css } from 'styled-components';
 import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
+import { BaseStyles } from '../types';
 
-export interface ButtonBaseStyles {
+export type ButtonStyleProperties =
+  | 'icon'
+  | 'startIcon'
+  | 'endIcon'
+  | 'primary'
+  | 'secondary'
+  | 'text';
+
+export interface ButtonBaseStyles extends BaseStyles<ButtonStyleProperties> {
   icon: {
     gap: Style;
     size: {

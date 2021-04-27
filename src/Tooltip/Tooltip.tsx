@@ -14,10 +14,13 @@ import {
 import { Popover } from '../Popover/Popover';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { SlideAnimation } from '../animation/SlideAnimation';
+import { BaseProps } from '../types';
+import { TooltipStyleProperties } from './styles';
+import { getCustomStyles } from '../utils/useCustomStyles';
 
 export type TooltipSide = BasePlacement;
 
-export interface TooltipProps extends LayoutBoxProps {
+export interface TooltipProps extends LayoutBoxProps, BaseProps<TooltipStyleProperties> {
   content: React.ReactNode;
   side?: TooltipSide;
   delay?: number;
@@ -25,7 +28,7 @@ export interface TooltipProps extends LayoutBoxProps {
   children: ReactComponentElement<any>;
 }
 
-interface TooltipPopoverProps {
+interface TooltipPopoverProps extends BaseProps<TooltipStyleProperties> {
   side: TooltipSide;
 }
 
@@ -56,7 +59,11 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
     border-bottom: calc(2 * ${getSpacing(5)} * 0.866) solid black;
     border-top: ${getSpacing(5)} solid transparent;
     display: inline-block;
+
+    ${getCustomStyles('tooltip.styles', 'arrow')}
   }
+
+  ${getCustomStyles('tooltip.styles', 'box')}
 `;
 
 export function Tooltip({
@@ -65,6 +72,7 @@ export function Tooltip({
   disabled = false,
   side = 'top',
   delay = 0,
+  customStyles,
 }: TooltipProps) {
   const [isHovered, setIsHovered] = useState(false);
   const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
@@ -94,7 +102,7 @@ export function Tooltip({
         duration: 400,
       }}
       content={
-        <TooltipPopover data-testid="pbl-tooltip-popover" side={side}>
+        <TooltipPopover data-testid="pbl-tooltip-popover" side={side} customStyles={customStyles}>
           <Typography variant="info">{content}</Typography>
         </TooltipPopover>
       }

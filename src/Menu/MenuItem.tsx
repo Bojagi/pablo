@@ -2,9 +2,12 @@ import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 import { buttonBaseStyles } from '../ButtonBase';
 import { getSpacing, getColor } from '../styleHelpers';
+import { BaseProps } from '../types';
 import { ButtonTypography } from '../Typography';
+import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
+import { MenuItemStyleProperties } from './styles';
 
-export interface MenuItemProps {
+export interface MenuItemProps extends BaseProps<MenuItemStyleProperties> {
   children: ReactNode;
   onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
   selected?: boolean;
@@ -34,10 +37,23 @@ const MenuItemBox = styled.div<MenuItemProps>`
             background-color: ${getColor('gray', '100')};
           }
         `}
+  ${getCustomStyles('menu.styles', 'item')}
 `;
 
-export const MenuItem = ({ children, onClick, as, ...props }: MenuItemProps) => (
-  <MenuItemBox data-testid="pbl-menu-item" as={as} onClick={onClick} {...props}>
-    <ButtonTypography>{children}</ButtonTypography>
+export const MenuItem = ({ children, onClick, as, customStyles, ...props }: MenuItemProps) => (
+  <MenuItemBox
+    data-testid="pbl-menu-item"
+    as={as}
+    onClick={onClick}
+    customStyles={customStyles}
+    {...props}
+  >
+    <ButtonTypography
+      customStyles={{
+        button: useCustomStyles('menu.styles', customStyles)('itemText'),
+      }}
+    >
+      {children}
+    </ButtonTypography>
   </MenuItemBox>
 );

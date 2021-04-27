@@ -1,14 +1,19 @@
 import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
+import { BaseStyles } from '../types';
 
-export interface ToolbarStyles {
+export type ToolbarStyleProperties = 'root';
+export type ToolbarDividerStyleProperties = 'root';
+export type ToolbarItemStyleProperties = 'root' | 'hover' | 'focus' | 'active';
+
+export interface ToolbarStyles extends BaseStyles<ToolbarStyleProperties> {
   gap: Style;
-  divider: {
+  divider: BaseStyles<ToolbarDividerStyleProperties> & {
     width: number;
     color: Style;
   };
-  item: {
+  item: BaseStyles<ToolbarItemStyleProperties> & {
     size: Style;
     borderRadius: number;
     backgroundColor: Style;

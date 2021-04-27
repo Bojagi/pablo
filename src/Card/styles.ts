@@ -1,8 +1,11 @@
 import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
+import { BaseStyles } from '../types';
 
-export interface CardStyles {
+export type CardStyleProperties = 'root';
+
+export interface CardStyles extends BaseStyles<CardStyleProperties> {
   padding: Style;
   borderRadius: Style;
   backgroundColor: Style;

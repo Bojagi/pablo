@@ -4,6 +4,7 @@ import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
 import { useComponentStyle } from '../theme/useComponentStyle';
+import { getCustomStyles } from '../utils/useCustomStyles';
 
 export interface TextAreaProps extends LayoutBoxProps {
   id?: string;
@@ -32,6 +33,7 @@ const InnerTextArea = styled.textarea<InnerTextAreaProps>`
   background-color: transparent;
   font-family: ${getComponentStyle('textarea.fontFamily')};
   outline: none;
+  ${getCustomStyles('textarea.styles', 'field')}
 `;
 
 export const TextArea = forwardRef<HTMLDivElement, TextAreaProps>(

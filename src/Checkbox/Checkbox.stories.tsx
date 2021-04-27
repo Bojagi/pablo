@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'styled-components';
 import { Flex, Box } from '../Box';
 import { Checkbox, CheckboxProps } from './Checkbox';
 
@@ -41,6 +42,43 @@ export const WithLabels = () => (
     <Box mb={4}>
       <ControlledCheckbox mb={4} checked={true} size="small" label="Hans" />
       <ControlledCheckbox mb={4} checked={false} size="small" label="Wurst" />
+    </Box>
+  </>
+);
+
+const customStyles = {
+  box: css`
+    background-color: blue;
+  `,
+  handle: css`
+    background-color: red;
+  `,
+  label: css`
+    text-decoration: underline;
+  `,
+};
+
+export const WithCustomStyles = () => (
+  <>
+    <Box mb={4}>
+      <ControlledCheckbox mb={4} checked={true} label="Hans" customStyles={customStyles} />
+      <ControlledCheckbox mb={4} checked={false} label="Wurst" customStyles={customStyles} />
+    </Box>
+    <Box mb={4}>
+      <ControlledCheckbox
+        mb={4}
+        checked={true}
+        size="small"
+        label="Hans"
+        customStyles={customStyles}
+      />
+      <ControlledCheckbox
+        mb={4}
+        checked={false}
+        size="small"
+        label="Wurst"
+        customStyles={customStyles}
+      />
     </Box>
   </>
 );

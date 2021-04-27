@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { css } from 'styled-components';
 import { SlideAnimation } from '../animation/SlideAnimation';
 import { Button } from '../Button';
 import { Menu } from './Menu';
@@ -11,7 +12,7 @@ export default {
   },
 };
 
-const BaseStory = (args) => {
+const BaseStory = ({ menuItemProps, ...args }) => {
   const [open, setOpen] = useState(false);
 
   const handleClose = useCallback(() => setOpen(false), []);
@@ -22,13 +23,13 @@ const BaseStory = (args) => {
       offset={-5}
       onClose={handleClose}
       items={[
-        <MenuItem key="1" onClick={handleClose}>
+        <MenuItem key="1" onClick={handleClose} {...menuItemProps}>
           User Profile
         </MenuItem>,
-        <MenuItem key="2" onClick={handleClose}>
+        <MenuItem key="2" onClick={handleClose} {...menuItemProps}>
           Settings
         </MenuItem>,
-        <MenuItem key="3" onClick={handleClose}>
+        <MenuItem key="3" onClick={handleClose} {...menuItemProps}>
           Logout
         </MenuItem>,
       ]}
@@ -106,5 +107,33 @@ WithAnimation.args = {
   animationProps: {
     duration: 150,
     side: 'bottom',
+  },
+};
+
+export const WithCustomStyles = BaseStory.bind(null);
+WithCustomStyles.args = {
+  placement: 'bottom-end',
+  animation: SlideAnimation,
+  animationProps: {
+    duration: 150,
+    side: 'bottom',
+  },
+  menuItemProps: {
+    customStyles: {
+      item: css`
+        background-color: blue;
+      `,
+      itemText: css`
+        color: yellow;
+      `,
+    },
+  },
+  customStyles: {
+    box: css`
+      background-color: red;
+    `,
+    arrow: css`
+      border-bottom-color: red;
+    `,
   },
 };

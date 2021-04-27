@@ -7,6 +7,9 @@ import { useComponentStyle } from '../theme/useComponentStyle';
 import { Paragraph, Subtitle } from '../Typography';
 import { getColor, getComponentStyle, shadowTransformer } from '../styleHelpers';
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './Icons';
+import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
+import { BaseProps } from '../types';
+import { ToastCardStyleProperties } from './styles';
 
 const CardWrapper = styled.div<LayoutBoxProps>`
   border-radius: ${getComponentStyle('toastCard.borderRadius')};
@@ -16,12 +19,13 @@ const CardWrapper = styled.div<LayoutBoxProps>`
   color: ${getComponentStyle('toastCard.color')};
   padding: ${getComponentStyle('toastCard.padding')};
   box-shadow: ${getComponentStyle('toastCard.shadow', shadowTransformer)};
-  ${layoutInterpolationFn};
+  ${layoutInterpolationFn}
+  ${getCustomStyles('toastCard.styles', 'card')}
 `;
 
 export type ToastType = 'info' | 'success' | 'warning' | 'error';
 
-export interface ToastCardProps extends LayoutBoxProps {
+export interface ToastCardProps extends LayoutBoxProps, BaseProps<ToastCardStyleProperties> {
   title: ReactNode;
   description?: ReactNode;
   type?: ToastType;
@@ -59,6 +63,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
   ) => {
     const type = typeProp === undefined || ALLOWED_TYPES.includes(typeProp) ? typeProp : 'info';
     const color = useComponentStyle('toastCard.color') as string;
+    const getStyles = useCustomStyles('avatar.styles', props.customStyles);
 
     return (
       <CardWrapper ref={ref} data-testid="pbl-toastcard" {...props}>
@@ -68,14 +73,21 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
               mr={5}
               data-testid="pbl-toastcard-iconbox"
               fillColor={iconColors[type || 'info']}
-              css={displayBlockIconsCss}
+              css={[displayBlockIconsCss, getStyles('iconBox')]}
             >
               {icon || icons[type!]}
             </Box>
           )}
           <Box flexGrow={1}>
             <Flex>
-              <Subtitle data-testid="pbl-toastcard-title" flexGrow={1} inline={!description}>
+              <Subtitle
+                data-testid="pbl-toastcard-title"
+                flexGrow={1}
+                inline={!description}
+                customStyles={{
+                  subtitle: getStyles('title'),
+                }}
+              >
                 {title}
               </Subtitle>
               {closable && (
@@ -90,6 +102,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
                       &:hover:not(:disabled) {
                         background-color: ${getColor('blackOpacity', '300')};
                       }
+                      ${getStyles('closeButton')}
                     ` as any
                   }
                 >
@@ -98,7 +111,13 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
               )}
             </Flex>
             {description && (
-              <Paragraph inline data-testid="pbl-toastcard-description">
+              <Paragraph
+                inline
+                data-testid="pbl-toastcard-description"
+                customStyles={{
+                  paragraph: getStyles('description'),
+                }}
+              >
                 {description}
               </Paragraph>
             )}

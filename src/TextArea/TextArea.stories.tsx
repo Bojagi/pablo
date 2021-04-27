@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'styled-components';
 import { Box } from '../Box';
 import { TextArea, TextAreaProps } from './TextArea';
 
@@ -72,3 +73,31 @@ export const MultipleTextAreas = () => (
 
 export const Outline = baseStory.bind(null);
 Outline.args = { variant: 'outline' };
+
+export const WithCustomStyles = baseStory.bind(null);
+WithCustomStyles.args = {
+  label: <>name</>,
+  infoText: (
+    <>
+      This is something <strong>important!</strong>
+    </>
+  ),
+  customStyles: {
+    label: css`
+      transform: rotate(6deg);
+      transform-origin: 0 0;
+    `,
+    infoText: css`
+      transform: rotate(-3deg);
+      transform-origin: 0 0;
+    `,
+    wrapper: css`
+      transform: rotate(-5deg);
+      transform-origin: 0 0;
+      background-color: blue;
+    `,
+    field: css`
+      color: red;
+    `,
+  },
+};

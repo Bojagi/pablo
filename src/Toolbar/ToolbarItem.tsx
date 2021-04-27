@@ -3,8 +3,12 @@ import { LayoutBoxProps } from '../Box';
 import { IconButton } from '../IconButton';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { Tooltip, TooltipSide } from '../Tooltip/Tooltip';
+import { BaseProps } from '../types';
+import { ToolbarItemStyleProperties } from './styles';
 
-export interface ToolbarItemProps extends Omit<LayoutBoxProps, 'size'> {
+export interface ToolbarItemProps
+  extends Omit<LayoutBoxProps, 'size'>,
+    BaseProps<ToolbarItemStyleProperties> {
   active?: boolean;
   icon: React.ReactNode;
   disabled?: boolean;
@@ -15,8 +19,13 @@ export interface ToolbarItemProps extends Omit<LayoutBoxProps, 'size'> {
 }
 
 export const ToolbarItem = forwardRef<HTMLButtonElement, ToolbarItemProps>(
-  ({ active, tooltip, tooltipSide, icon, name, onClick, ...props }, ref) => {
+  ({ active, tooltip, tooltipSide, icon, name, onClick, customStyles, ...props }, ref) => {
     const gap = useComponentStyle('toolbar.gap');
+    const themeCustomStyles: any = useComponentStyle('toolbar.item.styles');
+    const combinedCustomStyles: any = {
+      ...themeCustomStyles,
+      ...customStyles,
+    };
 
     return (
       <Tooltip delay={500} side={tooltipSide} content={tooltip} disabled={props.disabled}>
@@ -26,6 +35,7 @@ export const ToolbarItem = forwardRef<HTMLButtonElement, ToolbarItemProps>(
           data-testid="pbl-toolbar-item-button"
           active={active}
           onClick={() => onClick && onClick(name)}
+          customStyles={combinedCustomStyles}
           {...props}
           size="small"
         >

@@ -14,18 +14,21 @@ import { Flex, LayoutBoxProps } from '../Box';
 import { MoreIcon } from '../Icons';
 import { Menu, MenuItem } from '../Menu';
 import { useComponentStyle } from '../theme/useComponentStyle';
+import { BaseProps } from '../types';
 import { guaranteeArray } from '../utils/guaranteeArray';
+import { useCustomStyles } from '../utils/useCustomStyles';
 import { useForwardRef } from '../utils/useForwardRef';
+import { TabsStyleProperties } from './styles';
 import { Tab, TabProps } from './Tab';
 
-export interface TabsProps extends LayoutBoxProps {
+export interface TabsProps extends LayoutBoxProps, BaseProps<TabsStyleProperties> {
   children: React.ReactElement<TabProps> | React.ReactElement<TabProps>[];
   selected?: string;
   onSelect?: (selectedName: string) => void;
 }
 
 export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
-  ({ children, selected, onSelect, ...props }: TabsProps, outsideRef) => {
+  ({ children, selected, onSelect, customStyles, ...props }: TabsProps, outsideRef) => {
     const gap = useComponentStyle('tabs.gap');
     const shadowRef = useRef<HTMLDivElement>(null);
     const [iconButtonRef, setIconButtonRef] = useState<HTMLButtonElement | null>(null);
@@ -67,6 +70,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
         setFirstWidthCalculated(true);
       }
     }, [children, width, iconButtonRef]);
+    const getCustomStyles = useCustomStyles('tabs.styles', customStyles);
 
     return (
       <>
@@ -76,7 +80,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
               ? css`
                   opacity: 0;
                 `
-              : undefined
+              : getCustomStyles('root')
           }
           flexWrap="wrap"
           data-testid="pbl-tabs"

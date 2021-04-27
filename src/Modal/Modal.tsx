@@ -108,10 +108,10 @@ export function Modal({
   maxWidth = 'medium',
   animate = true,
   open = false,
-  customStyles = {},
+  customStyles,
 }: ModalProps) {
   const mouseDownRef = React.useRef<HTMLElement>(null);
-  const getCustomStyles = useCustomStyles(customStyles);
+  const getCustomStyles = useCustomStyles('modal.styles', customStyles);
 
   useEffect(() => {
     if (open) {

@@ -7,6 +7,7 @@ import {
   CheckableBoxProps,
   CheckableHandleProps,
 } from '../BaseCheckable/BaseCheckable';
+import { getCustomStyles } from '../utils/useCustomStyles';
 
 const CheckboxBox = styled.div<CheckableBoxProps>`
   position: relative;
@@ -28,6 +29,7 @@ const CheckboxBox = styled.div<CheckableBoxProps>`
         ${getComponentStyle('checkbox.focus.outlineColor')};
     `};
   }
+  ${getCustomStyles('checkbox.styles', 'box')}
 `;
 
 const CheckboxHandle = styled.div<CheckableHandleProps>`
@@ -37,6 +39,7 @@ const CheckboxHandle = styled.div<CheckableHandleProps>`
   border-radius: ${getComponentStyle('checkbox.innerBorderRadius')};
   transition: ${getComponentStyle('checkbox.handleTransition')};
   background-color: ${getComponentStyle('checkbox.handleColor')};
+  ${getCustomStyles('checkbox.styles', 'handle')}
 `;
 
 export interface CheckboxProps extends BaseCheckableProps {}

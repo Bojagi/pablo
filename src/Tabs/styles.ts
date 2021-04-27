@@ -3,6 +3,10 @@ import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { getComponentStyle } from '../styleHelpers';
+import { BaseStyles } from '../types';
+
+export type TabsStyleProperties = 'root';
+export type TabStyleProperties = 'root' | 'hover' | 'active' | 'focus' | 'selected' | 'indicator';
 
 export interface TabActiveBorderBottomStyles {
   color: Style;
@@ -30,7 +34,7 @@ export interface TabFocusStyles {
   outlineColor: Style;
 }
 
-export interface TabStyles {
+export interface TabStyles extends BaseStyles<TabStyleProperties> {
   icon: {
     gap: Style;
     size: Style;
@@ -44,7 +48,7 @@ export interface TabStyles {
   selected: TabSelectedStyles;
 }
 
-export interface TabsStyles {
+export interface TabsStyles extends BaseStyles<TabsStyleProperties> {
   gap: Style;
   tab: TabStyles;
 }

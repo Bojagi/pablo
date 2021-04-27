@@ -6,8 +6,21 @@ import { InfoText, ParagraphBold } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { useUniqueId } from '../utils/useUniqueId';
+import { BaseProps, CssFunctionReturn } from '../types';
+import { useCustomStyles } from '../utils/useCustomStyles';
 
-export interface BaseInputProps<E extends HTMLElement> extends LayoutBoxProps {
+export type BaseInputStyleProperties =
+  | 'root'
+  | 'label'
+  | 'infoText'
+  | 'startAdornment'
+  | 'endAdornment'
+  | 'field'
+  | 'wrapper';
+
+export interface BaseInputProps<E extends HTMLElement>
+  extends BaseProps<BaseInputStyleProperties>,
+    LayoutBoxProps {
   id?: string;
   value?: string | number | readonly string[];
   error?: React.ReactNode;
@@ -48,6 +61,7 @@ interface InputWrapperProps extends LayoutBoxProps {
   fullWidth: boolean;
   focus: boolean;
   error: boolean;
+  cssStyles: CssFunctionReturn;
 }
 
 const InputWrapper = styled.div<InputWrapperProps>`
@@ -80,6 +94,7 @@ const InputWrapper = styled.div<InputWrapperProps>`
     css`
       width: 100%;
     `}
+  ${(props) => props.cssStyles}
 `;
 
 export function BaseInput<P extends Record<string, any>, E extends HTMLElement>({
@@ -99,6 +114,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   end,
   onFocus,
   onBlur,
+  customStyles,
   ...props
 }: BaseInputOuterProps<P, E>) {
   const [focus, setFocus] = React.useState(false);
@@ -106,12 +122,14 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const generatedId = useUniqueId(name);
   const id = idProp || generatedId;
   const actualInfoText = props.error || props.infoText;
-
+  const getCustomStyles = useCustomStyles(`${name}.styles`, customStyles);
   return (
-    <Box ref={innerRef} mt={mt}>
+    <Box ref={innerRef} mt={mt} css={getCustomStyles('root')}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
-          <ParagraphBold mb={3}>{label}</ParagraphBold>
+          <ParagraphBold mb={3} customStyles={{ paragraphBold: getCustomStyles('label') }}>
+            {label}
+          </ParagraphBold>
         </label>
       )}
       <InputWrapper
@@ -121,10 +139,11 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
         width={width}
         error={!!props.error}
         focus={focus}
+        cssStyles={getCustomStyles('wrapper')}
         {...props}
       >
         {start && (
-          <Box flexShrink={0} ml={adornmentGap as any}>
+          <Box flexShrink={0} ml={adornmentGap as any} css={getCustomStyles('startAdornment')}>
             {start}
           </Box>
         )}
@@ -137,9 +156,10 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
           onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
           onChange={(e) => onChange && onChange(e.target.value, e)}
+          customStyles={customStyles}
         />
         {end && (
-          <Box flexShrink={0} mr={adornmentGap as any}>
+          <Box flexShrink={0} mr={adornmentGap as any} css={getCustomStyles('endAdornment')}>
             {end}
           </Box>
         )}
@@ -149,6 +169,9 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           data-testid={`pbl-${name}-infotext`}
           mt={2}
           textColor={props.error ? 'negative.main' : 'text.info'}
+          customStyles={{
+            info: getCustomStyles('infoText'),
+          }}
         >
           {actualInfoText}
         </InfoText>

@@ -1,4 +1,4 @@
-import styled, { FlattenInterpolation, FlattenSimpleInterpolation } from 'styled-components';
+import styled from 'styled-components';
 import { space } from '@styled-system/space';
 import { layout } from '@styled-system/layout';
 import { flexbox } from '@styled-system/flexbox';
@@ -16,9 +16,10 @@ import {
 import { system } from '@styled-system/core';
 
 import { color, ColorProps } from './color';
+import { CssFunctionReturn } from '../types';
 
 export interface BoxCssProps<T> {
-  css?: FlattenInterpolation<T> | FlattenSimpleInterpolation;
+  css?: CssFunctionReturn;
 }
 
 export interface BoxFillableProps {

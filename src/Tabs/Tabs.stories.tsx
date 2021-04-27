@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BookOpen, GitPullRequest, Settings } from 'react-feather';
+import { css } from 'styled-components';
 import { Box } from '../Box';
 import { Input } from '../Input';
 import { Tab } from './Tab';
@@ -79,5 +80,43 @@ export const TabsWithOverflow = () => {
         </Tabs>
       </Box>
     </Box>
+  );
+};
+
+const CustomTab = (props) => (
+  <Tab
+    {...props}
+    customStyles={{
+      root: css`
+        color: red;
+      `,
+      indicator: css`
+        background-color: red;
+        border-radius: 0;
+        transform: rotate(10deg);
+      `,
+      hover: css`
+        background-color: blue;
+      `,
+    }}
+  />
+);
+
+export const TabsWithCustomStyles = () => {
+  const [selected, setSelected] = React.useState('second');
+  return (
+    <Tabs
+      selected={selected}
+      onSelect={setSelected}
+      customStyles={{
+        root: css`
+          background-color: orange;
+        `,
+      }}
+    >
+      <CustomTab name="first">First tab</CustomTab>
+      <CustomTab name="second">Second tab</CustomTab>
+      <CustomTab name="third">Third tab</CustomTab>
+    </Tabs>
   );
 };

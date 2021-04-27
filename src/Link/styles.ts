@@ -1,5 +1,8 @@
 import { getColor } from '../styleHelpers/getColor';
 import { Style } from '../theme/types';
+import { BaseStyles } from '../types';
+
+export type LinkStyleProperties = 'root' | 'hover' | 'focus' | 'visited';
 
 export type FontStyleValues =
   | 'normal'
@@ -17,7 +20,7 @@ export interface BaseLinkStyle {
   fontWeight: string | number;
 }
 
-export interface LinkStyles extends BaseLinkStyle {
+export interface LinkStyles extends BaseLinkStyle, BaseStyles<LinkStyleProperties> {
   hover: BaseLinkStyle;
   focus: BaseLinkStyle;
   visited: BaseLinkStyle;

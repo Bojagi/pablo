@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Search } from 'react-feather';
+import { css } from 'styled-components';
 import { Box } from '../Box';
 import { IconButton } from '../IconButton';
 import { Typography } from '../Typography';
@@ -99,3 +100,32 @@ WithStartComponent.args = {
 
 export const Outline = baseStory.bind(null);
 Outline.args = { variant: 'outline' };
+
+export const WithCustomStyles = baseStory.bind(null);
+WithCustomStyles.args = {
+  label: <>Some longer name</>,
+  infoText: (
+    <>
+      This is something <strong>important!</strong>
+    </>
+  ),
+  customStyles: {
+    label: css`
+      transform: translateY(-36px) rotate(6deg);
+      /* transform-origin: 0 0; */
+      text-align: right;
+    `,
+    infoText: css`
+      transform: rotate(-3deg);
+      transform-origin: 0 0;
+    `,
+    wrapper: css`
+      transform: rotate(-5deg);
+      transform-origin: 0 0;
+      background-color: blue;
+    `,
+    field: css`
+      color: red;
+    `,
+  },
+};

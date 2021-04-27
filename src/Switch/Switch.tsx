@@ -7,6 +7,7 @@ import {
   CheckableBoxProps,
   CheckableHandleProps,
 } from '../BaseCheckable/BaseCheckable';
+import { getCustomStyles } from '../utils/useCustomStyles';
 
 const SwitchBox = styled.div<CheckableBoxProps>`
   position: relative;
@@ -34,6 +35,7 @@ const SwitchBox = styled.div<CheckableBoxProps>`
         ${getComponentStyle('switch.focus.outlineColor')};
     `};
   }
+  ${getCustomStyles('switch.styles', 'box')}
 `;
 
 const SwitchHandle = styled.div<CheckableHandleProps>`
@@ -48,6 +50,7 @@ const SwitchHandle = styled.div<CheckableHandleProps>`
     props.checked
       ? getComponentStyle('switch.handleColorChecked')(props)
       : getComponentStyle('switch.handleColorUnchecked')(props)};
+  ${getCustomStyles('switch.styles', 'handle')}
 `;
 
 export interface SwitchProps extends BaseCheckableProps {}

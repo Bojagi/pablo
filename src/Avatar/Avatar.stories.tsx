@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'styled-components';
 import { Flex } from '../Box';
 import { Avatar } from './Avatar';
 
@@ -43,4 +44,15 @@ Square.args = {
 export const Circle = BaseStory.bind(null);
 Circle.args = {
   variant: 'circle',
+};
+
+export const CustomStyleCircle = BaseStory.bind(null);
+CustomStyleCircle.args = {
+  variant: 'circle',
+  customStyles: {
+    circle: css`
+      border: 4px solid white;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    `,
+  },
 };
