@@ -60,15 +60,8 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
           background-color: ${getComponentStyle('toolbar.item.active.backgroundColor')};
           color: ${getComponentStyle('toolbar.item.active.color')};
           ${getCustomStyles('iconButton.styles', 'active')}
-          ${(propz) => {
-            console.log('aaa', getCustomStyles('iconButton.styles', 'active')(propz));
-            return null;
-          }}
         `
       : css`
-          ${(props) => {
-            console.log('non active');
-          }}
           &:hover:not(:disabled) {
             background-color: ${getComponentStyle('iconButton.hover.backgroundColor')};
             color: ${getComponentStyle('iconButton.hover.color')};

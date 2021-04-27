@@ -27,7 +27,6 @@ export const Toolbar = forwardRef<HTMLDivElement, ToolbarProps>(
     const interpolatedChildren = guaranteeArray(children).map((child, index) => {
       if (child.type === ToolbarItem) {
         const childProps = child.props as ToolbarItemProps;
-        console.log('selected', childProps.name, childProps.name === selected);
 
         return React.cloneElement(child, {
           key: childProps.name,

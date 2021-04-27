@@ -33,6 +33,7 @@ const BaseStory = ({ menuItemProps, ...args }) => {
           Logout
         </MenuItem>,
       ]}
+      placement="top"
       {...args}
     >
       <Button onClick={() => setOpen(!open)}>Click me</Button>

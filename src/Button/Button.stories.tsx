@@ -10,8 +10,6 @@ export default {
   title: 'Button',
 };
 
-console.log('Button', Button);
-
 const SetOfButtons = (args) => (
   <Flex mx={-4} mb={4}>
     <Button mx={4} {...args} color="brand">
