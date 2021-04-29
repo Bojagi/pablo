@@ -4,8 +4,11 @@ import { BoxProps, LayoutBoxProps } from '../Box';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../styleHelpers';
+import { getCustomStyles } from '../utils/useCustomStyles';
+import { ButtonBarStyleProperties } from './styles';
+import { BaseProps } from '../types';
 
-export interface ButtonBarProps extends LayoutBoxProps {
+export interface ButtonBarProps extends BaseProps<ButtonBarStyleProperties>, LayoutBoxProps {
   children: React.ReactElement<BoxProps> | React.ReactElement<BoxProps>[];
 }
 
@@ -13,6 +16,7 @@ const ButtonBarBox = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: 0 -${getComponentStyle('buttonBar.gap')};
+  ${getCustomStyles('buttonBar.styles', 'root')}
 `;
 
 export const ButtonBar = forwardRef<HTMLDivElement, ButtonBarProps>(

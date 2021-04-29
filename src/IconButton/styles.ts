@@ -1,7 +1,10 @@
 import { Style } from '../theme/types';
 import { getColor } from '../styleHelpers';
+import { BaseStyles } from '../types';
 
-export interface IconButtonStyles {
+export type IconButtonStyleProperties = 'root' | 'hover' | 'active' | 'focus';
+
+export interface IconButtonStyles extends BaseStyles<IconButtonStyleProperties> {
   size: {
     small: Style;
     medium: Style;

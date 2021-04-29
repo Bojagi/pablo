@@ -1,4 +1,8 @@
-export interface AvatarStyles {
+import { BaseStyles } from '../types';
+
+export type AvatarStyleProperties = 'circle' | 'square';
+
+export interface AvatarStyles extends BaseStyles<AvatarStyleProperties> {
   square: {
     borderRadius: number;
   };

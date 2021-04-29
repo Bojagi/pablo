@@ -2,13 +2,16 @@ import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, LayoutBoxProps } from '../Box';
 import { useComponentStyle } from '../theme/useComponentStyle';
+import { BaseProps, CssFunctionReturn } from '../types';
 import { Typography, TypographyVariant } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
+import { useCustomStyles } from '../utils/useCustomStyles';
 import { useUniqueId } from '../utils/useUniqueId';
 
 export type CheckableSize = 'small' | 'medium';
+export type CheckableStyleProperties = 'box' | 'handle' | 'label';
 
-export interface BaseCheckableProps extends LayoutBoxProps {
+export interface BaseCheckableProps extends LayoutBoxProps, BaseProps<CheckableStyleProperties> {
   id?: string;
   inputRef?: React.Ref<HTMLInputElement>;
   className?: string;
@@ -22,16 +25,17 @@ export interface BaseCheckableProps extends LayoutBoxProps {
   onClick?: (e: React.FormEvent<HTMLInputElement>) => void;
   onFocus?: () => void;
   onBlur?: () => void;
+  customStyles?: Record<string, CssFunctionReturn>;
 }
 
-export interface CheckableBoxProps {
+export interface CheckableBoxProps extends BaseProps<CheckableStyleProperties> {
   className?: string;
   disabled?: boolean;
   size?: CheckableSize;
   focus: boolean;
 }
 
-export interface CheckableHandleProps {
+export interface CheckableHandleProps extends BaseProps<CheckableStyleProperties> {
   disabled?: boolean;
   checked: boolean;
   size?: CheckableSize;
@@ -81,6 +85,7 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
       onFocus,
       onBlur,
       inputRef,
+      customStyles,
       ...props
     }: OuterBaseCheckableProps,
     ref
@@ -91,6 +96,7 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
       `${componentName}.typographyVariant.${size}`
     ) as TypographyVariant;
     const [focus, setFocus] = React.useState(false);
+    const getCustomStyles = useCustomStyles(`${componentName}.styles`, customStyles);
 
     return (
       <Flex ref={ref} alignItems="center" {...props}>
@@ -100,11 +106,13 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
           disabled={disabled}
           size={size}
           focus={focus}
+          customStyles={customStyles}
         >
           <ComponentHandle
             data-testid={`pbl-${componentName}-handle`}
             checked={checked || false}
             size={size}
+            customStyles={customStyles}
           />
           <HiddenInput
             id={id}
@@ -128,11 +136,19 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
           />
         </ComponentBox>
         {label && (
-          <label data-testid={`pbl-${componentName}-label`} htmlFor={id}>
-            <Typography ml={4} mb={0} variant={typographyVariant}>
-              {label}
-            </Typography>
-          </label>
+          <Typography
+            data-testid={`pbl-${componentName}-label`}
+            ml={4}
+            mb={0}
+            variant={typographyVariant}
+            as="label"
+            htmlFor={id}
+            customStyles={{
+              [typographyVariant]: getCustomStyles('label'),
+            }}
+          >
+            {label}
+          </Typography>
         )}
       </Flex>
     );

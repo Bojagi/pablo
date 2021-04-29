@@ -1,9 +1,13 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
+import { BaseProps } from '../types';
+import { getCustomStyles } from '../utils/useCustomStyles';
+import { ImageStyleProperties } from './styles';
 
 export interface ImageProps
-  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'color'>,
+  extends BaseProps<ImageStyleProperties>,
+    Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'color' | 'css'>,
     LayoutBoxProps {
   className?: string;
   src: string;
@@ -12,10 +16,7 @@ export interface ImageProps
   height?: number;
 }
 
-const StyledImg = styled.img<LayoutBoxProps>`
+export const Image = styled.img<ImageProps>`
   ${layoutInterpolationFn}
+  ${getCustomStyles('image.styles', 'root')}
 `;
-
-export const Image = forwardRef<HTMLImageElement, ImageProps>((props, ref) => (
-  <StyledImg ref={ref} {...props} />
-));

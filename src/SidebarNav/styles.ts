@@ -2,8 +2,12 @@ import { css } from 'styled-components';
 import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
+import { BaseStyles } from '../types';
 
-export interface SidebarNavItemStyles {
+export type SidebarNavItemStyleProperties = 'root' | 'active' | 'focus' | 'selected' | 'hover';
+export type SidebarNavStyleProperties = 'root';
+
+export interface SidebarNavItemStyles extends BaseStyles<SidebarNavItemStyleProperties> {
   marginY: Style;
   active: {
     backgroundColor: Style;
@@ -21,7 +25,7 @@ export interface SidebarNavItemStyles {
   };
 }
 
-export interface SidebarNavStyles {
+export interface SidebarNavStyles extends BaseStyles<SidebarNavStyleProperties> {
   borderLeft: Style;
   borderLeftSpacing: Style;
   item: SidebarNavItemStyles;

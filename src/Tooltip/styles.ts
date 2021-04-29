@@ -2,8 +2,11 @@ import { css } from 'styled-components';
 import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
+import { BaseStyles } from '../types';
 
-export interface TooltipStyles {
+export type TooltipStyleProperties = 'box' | 'arrow';
+
+export interface TooltipStyles extends BaseStyles<TooltipStyleProperties> {
   gap: Style;
   padding: Style;
   borderRadius: number;

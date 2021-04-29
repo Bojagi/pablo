@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'styled-components';
 import { Box, Flex } from '../Box';
 import { Switch, SwitchProps } from './Switch';
 
@@ -36,6 +37,34 @@ export const WithLabel = () => (
     </Box>
     <Box mb={6}>
       <ControlledSwitch size="small" checked={true} label="Hans Wurst" />
+    </Box>
+  </>
+);
+
+const customStyles = {
+  box: css`
+    background-color: blue;
+  `,
+  handle: css`
+    background-color: red;
+  `,
+  label: css`
+    text-decoration: underline;
+  `,
+};
+
+export const WithCustomStyles = () => (
+  <>
+    <Box mb={6}>
+      <ControlledSwitch checked={true} label="Hans Wurst" customStyles={customStyles} />
+    </Box>
+    <Box mb={6}>
+      <ControlledSwitch
+        size="small"
+        checked={true}
+        label="Hans Wurst"
+        customStyles={customStyles}
+      />
     </Box>
   </>
 );

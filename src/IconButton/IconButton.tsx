@@ -1,10 +1,13 @@
 import styled, { css } from 'styled-components';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
+import { BaseProps } from '../types';
+import { getCustomStyles } from '../utils/useCustomStyles';
+import { IconButtonStyleProperties } from './styles';
 
 export type IconButtonSize = 'small' | 'medium' | 'large';
 
-export interface IconButtonProps extends LayoutBoxProps {
+export interface IconButtonProps extends LayoutBoxProps, BaseProps<IconButtonStyleProperties> {
   size?: IconButtonSize;
   active?: boolean;
 }
@@ -49,21 +52,26 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
     cursor: normal;
   }
 
+  ${getCustomStyles('iconButton.styles', 'root')}
+
   ${(props) =>
     props.active
       ? css`
           background-color: ${getComponentStyle('toolbar.item.active.backgroundColor')};
           color: ${getComponentStyle('toolbar.item.active.color')};
+          ${getCustomStyles('iconButton.styles', 'active')}
         `
       : css`
           &:hover:not(:disabled) {
             background-color: ${getComponentStyle('iconButton.hover.backgroundColor')};
             color: ${getComponentStyle('iconButton.hover.color')};
+            ${getCustomStyles('iconButton.styles', 'hover')}
           }
 
           &:focus:not(:disabled) {
             background-color: ${getComponentStyle('iconButton.focus.backgroundColor')};
             color: ${getComponentStyle('iconButton.focus.color')};
+            ${getCustomStyles('iconButton.styles', 'focus')}
           }
         `}
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'styled-components';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Flex } from '../Box';
 import { Button } from '../Button';
@@ -52,4 +53,17 @@ export const WithDisabledButton = ({ disabled, ...args }) => (
 );
 WithDisabledButton.args = {
   disabled: true,
+};
+
+export const WithCustomStyles = BaseStory.bind(null);
+WithCustomStyles.args = {
+  customStyles: {
+    box: css`
+      background-color: red;
+      border-radius: 100px;
+    `,
+    arrow: css`
+      border-bottom-color: red;
+    `,
+  },
 };

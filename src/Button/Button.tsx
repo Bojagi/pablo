@@ -3,12 +3,15 @@ import styled, { css, FlattenInterpolation } from 'styled-components';
 import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { Style } from '../theme/types';
+import { BaseProps, CssFunctionReturn } from '../types';
 import { ButtonTypography } from '../Typography';
+import { useCustomStyles } from '../utils/useCustomStyles';
+import { ButtonStyleProperties } from './styles';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
 export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 
-export interface InnerButtonProps extends ButtonBaseProps {
+export interface InnerButtonProps extends ButtonBaseProps, BaseProps<ButtonStyleProperties> {
   children: React.ReactNode;
   variant?: ButtonVariant;
   innerRef?: React.Ref<HTMLButtonElement>;
@@ -17,6 +20,7 @@ export interface InnerButtonProps extends ButtonBaseProps {
   color?: ButtonColor;
   disabled?: boolean;
   className?: string;
+  cssStyles?: CssFunctionReturn;
 }
 
 export type ButtonProps<C extends React.ElementType> = InnerButtonProps &
@@ -46,6 +50,8 @@ const ButtonPrimary = styled.button<InnerButtonProps>`
     background: ${getComponentStyle('button.{color}.primary.active.backgroundColor')};
     border-color: ${getComponentStyle('button.{color}.primary.active.borderColor')};
   }
+
+  ${(props) => props.cssStyles}
 `;
 
 const ButtonSecondary = styled.button<InnerButtonProps>`
@@ -68,6 +74,8 @@ const ButtonSecondary = styled.button<InnerButtonProps>`
     border-color: ${getComponentStyle('button.{color}.secondary.active.borderColor')};
     background: ${getComponentStyle('button.{color}.secondary.active.backgroundColor')};
   }
+
+  ${(props) => props.cssStyles}
 `;
 
 const ButtonText = styled.button<InnerButtonProps>`
@@ -88,11 +96,13 @@ const ButtonText = styled.button<InnerButtonProps>`
     border-color: ${getComponentStyle('button.{color}.text.active.borderColor')};
     background: ${getComponentStyle('button.{color}.text.active.backgroundColor')};
   }
+  ${(props) => props.cssStyles}
 `;
 
 interface IconBoxProps {
   size: ButtonSize;
   marginSide: 'left' | 'right';
+  cssStyles?: CssFunctionReturn;
 }
 
 const IconBox = styled.div<IconBoxProps>`
@@ -107,6 +117,8 @@ const IconBox = styled.div<IconBoxProps>`
     width: ${getComponentStyle('button.base.icon.size.{size}')};
     height: ${getComponentStyle('button.base.icon.size.{size}')};
   }
+
+  ${(props) => props.cssStyles}
 `;
 
 const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
@@ -126,11 +138,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
       children,
       className,
       disabled,
+      customStyles,
       ...props
     },
     ref
   ) => {
     const InnerButton = buttonMap[variant] || ButtonPrimary;
+    const getCustomStyles = useCustomStyles('button.styles', customStyles);
     return (
       <InnerButton
         data-testid="pbl-button"
@@ -140,15 +154,26 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
         className={className}
         disabled={disabled}
         color={color}
+        cssStyles={getCustomStyles(variant)}
       >
         {startIcon && (
-          <IconBox marginSide="right" size={size} data-testid="pbl-button-icon">
+          <IconBox
+            cssStyles={[getCustomStyles('icon'), getCustomStyles('startIcon')]}
+            marginSide="right"
+            size={size}
+            data-testid="pbl-button-icon"
+          >
             {startIcon}
           </IconBox>
         )}
         <ButtonTypography>{children}</ButtonTypography>
         {endIcon && (
-          <IconBox marginSide="left" size={size} data-testid="pbl-button-icon">
+          <IconBox
+            cssStyles={[getCustomStyles('icon'), getCustomStyles('endIcon')]}
+            marginSide="left"
+            size={size}
+            data-testid="pbl-button-icon"
+          >
             {endIcon}
           </IconBox>
         )}

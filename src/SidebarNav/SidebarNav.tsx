@@ -2,16 +2,20 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers';
+import { BaseProps } from '../types';
+import { getCustomStyles } from '../utils/useCustomStyles';
 import { SidebarNavItemProps } from './SidebarNavItem';
+import { SidebarNavStyleProperties } from './styles';
 
-export interface SidebarNavProps extends LayoutBoxProps {
+export interface SidebarNavProps extends LayoutBoxProps, BaseProps<SidebarNavStyleProperties> {
   children: React.ReactElement<SidebarNavItemProps> | React.ReactElement<SidebarNavItemProps>[];
 }
 
 const SidebarNavBox = styled.ul<LayoutBoxProps>`
   border-left: ${getComponentStyle('sidebarNav.borderLeft')};
   padding-left: ${getComponentStyle('sidebarNav.borderLeftSpacing')};
-  ${layoutInterpolationFn};
+  ${layoutInterpolationFn}
+  ${getCustomStyles('sidebar.styles', 'root')}
 `;
 
 export const SidebarNav = forwardRef<HTMLUListElement, SidebarNavProps>(

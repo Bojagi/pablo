@@ -16,6 +16,7 @@ import { modalStyles } from '../Modal/styles';
 import { buttonBarStyles } from '../ButtonBar/styles';
 import { linkStyles } from '../Link/styles';
 import { toastCardStyles } from '../ToastCard/styles';
+import { imageStyles } from '../Image/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -25,6 +26,7 @@ export const defaultComponentStyles: ComponentStyles = {
   checkbox: checkboxStyles,
   switch: switchStyles,
   radio: radioStyles,
+  image: imageStyles,
   input: inputStyles,
   textarea: textareaStyles,
   avatar: avatarStyles,

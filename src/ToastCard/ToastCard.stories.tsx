@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'styled-components';
 import { Box } from '../Box';
 import { ToastCard } from './ToastCard';
 
@@ -43,4 +44,30 @@ export const Success = BaseStory.bind(null);
 Success.args = {
   type: 'success',
   title: 'You made it!',
+};
+
+export const WithCustomStyles = BaseStory.bind(null);
+WithCustomStyles.args = {
+  type: 'success',
+  title: 'You made it!',
+  customStyles: {
+    card: css`
+      background-color: yellow;
+      color: black;
+    `,
+    title: css`
+      transform: rotate(-4deg);
+    `,
+    description: css`
+      transform: rotate(-2deg);
+    `,
+    closeButton: css`
+      fill: red;
+    `,
+    iconBox: css`
+      transform: rotate(45deg);
+      background-color: orange;
+      border-radius: 50%;
+    `,
+  },
 };

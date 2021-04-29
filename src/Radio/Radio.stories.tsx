@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'styled-components';
 import { Flex } from '../Box';
 import { Radio, RadioProps } from './Radio';
 import { RadioGroup } from './RadioGroup';
@@ -32,12 +33,12 @@ Small.args = {
   size: 'small',
 };
 
-const BaseRadioGroupStory = (args) => {
+const BaseRadioGroupStory = ({ customStyles, ...args }) => {
   const [value, setValue] = React.useState<string>();
   return (
     <RadioGroup value={value} onChange={setValue} {...args}>
-      <Radio value="hans" label="hans" />
-      <Radio value="wurst" label="wurst" />
+      <Radio value="hans" label="hans" customStyles={customStyles} />
+      <Radio value="wurst" label="wurst" customStyles={customStyles} />
     </RadioGroup>
   );
 };
@@ -50,4 +51,20 @@ RadioGroupMedium.args = {
 export const RadioGroupSmall = BaseRadioGroupStory.bind(null);
 RadioGroupSmall.args = {
   size: 'small',
+};
+
+export const RadioGroupCustomStyles = BaseRadioGroupStory.bind(null);
+RadioGroupCustomStyles.args = {
+  size: 'medium',
+  customStyles: {
+    box: css`
+      background-color: blue;
+    `,
+    handle: css`
+      background-color: red;
+    `,
+    label: css`
+      text-decoration: underline;
+    `,
+  },
 };

@@ -84,7 +84,7 @@ test('Render medium switch', () => {
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('width', '18px');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('height', '18px');
   // Uses subtitle typography
-  expect(getByTestId('pbl-switch-label').childNodes[0]).toHaveStyleRule(
+  expect(getByTestId('pbl-switch-label')).toHaveStyleRule(
     'font-size',
     defaultTheme.typography.subtitle.fontSize
   );
@@ -101,7 +101,7 @@ test('Render small switch', () => {
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('width', '12px');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('height', '12px');
   // Uses paragraph typography
-  expect(getByTestId('pbl-switch-label').childNodes[0]).toHaveStyleRule(
+  expect(getByTestId('pbl-switch-label')).toHaveStyleRule(
     'font-size',
     defaultTheme.typography.paragraph.fontSize
   );

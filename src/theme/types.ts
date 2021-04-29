@@ -26,6 +26,7 @@ import { ModalStyles } from '../Modal/styles';
 import { ButtonBarStyles } from '../ButtonBar/styles';
 import { LinkStyles } from '../Link/styles';
 import { ToastCardStyles } from '../ToastCard/styles';
+import { ImageStyles } from '../Image/styles';
 
 export type Style =
   | string
@@ -55,6 +56,7 @@ export interface ComponentStyles {
   checkbox: CheckboxStyles;
   switch: SwitchStyles;
   radio: RadioStyles;
+  image: ImageStyles;
   input: InputStyles;
   textarea: TextAreaStyles;
   avatar: AvatarStyles;

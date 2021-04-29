@@ -4,6 +4,7 @@ import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
 import { useComponentStyle } from '../theme/useComponentStyle';
+import { getCustomStyles } from '../utils/useCustomStyles';
 
 export interface InputProps extends LayoutBoxProps {
   id?: string;
@@ -26,6 +27,7 @@ const InnerInput = styled.input<InnerInputProps>`
   background-color: transparent;
   font-family: ${getComponentStyle('input.fontFamily')};
   outline: none;
+  ${getCustomStyles('input.styles', 'field')}
 `;
 
 export const Input = forwardRef<HTMLDivElement, InputProps>(

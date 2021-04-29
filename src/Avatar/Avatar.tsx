@@ -4,11 +4,14 @@ import { LayoutBoxProps } from '../Box';
 import { Image, ImageProps } from '../Image';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { conditionalStyles, getComponentStyle } from '../styleHelpers';
+import { BaseProps } from '../types';
+import { AvatarStyleProperties } from './styles';
+import { useCustomStyles } from '../utils/useCustomStyles';
 
 export type AvatarSize = 'tiny' | 'small' | 'medium' | 'large';
 export type AvatarVariant = 'square' | 'circle';
 
-export interface AvatarProps extends LayoutBoxProps {
+export interface AvatarProps extends LayoutBoxProps, BaseProps<AvatarStyleProperties> {
   className?: string;
   src: string;
   size?: AvatarSize;
@@ -34,8 +37,9 @@ const AvatarImage = styled<
 `;
 
 export const Avatar = forwardRef<HTMLImageElement, AvatarProps>(
-  ({ className, src, size = 'medium', variant = 'square', ...props }, ref) => {
+  ({ className, src, size = 'medium', variant = 'square', customStyles, ...props }, ref) => {
     const dimension = useComponentStyle('avatar.size.{size}', { size }) as number;
+    const getCustomStyles = useCustomStyles('avatar.styles', customStyles);
     return (
       <AvatarImage
         ref={ref}
@@ -44,6 +48,7 @@ export const Avatar = forwardRef<HTMLImageElement, AvatarProps>(
         size={size}
         width={dimension}
         height={dimension}
+        css={getCustomStyles(variant)}
         className={className}
         src={src}
       />

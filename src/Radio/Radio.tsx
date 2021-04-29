@@ -8,6 +8,7 @@ import {
   CheckableBoxProps,
   CheckableHandleProps,
 } from '../BaseCheckable/BaseCheckable';
+import { getCustomStyles } from '../utils/useCustomStyles';
 
 const RadioBox = styled.div<CheckableBoxProps>`
   position: relative;
@@ -28,6 +29,7 @@ const RadioBox = styled.div<CheckableBoxProps>`
         ${getComponentStyle('radio.focus.outlineColor')};
     `};
   }
+  ${getCustomStyles('radio.styles', 'box')}
 `;
 
 const RadioHandle = styled.div<CheckableHandleProps>`
@@ -37,6 +39,7 @@ const RadioHandle = styled.div<CheckableHandleProps>`
   border-radius: 50%;
   transition: ${getComponentStyle('radio.handleTransition', transitionTransformer)};
   background-color: ${getComponentStyle('radio.handleColor')};
+  ${getCustomStyles('radio.styles', 'handle')}
 `;
 
 export interface RadioProps extends BaseCheckableProps {

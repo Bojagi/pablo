@@ -3,9 +3,12 @@ import styled, { css } from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { buttonBaseStyles } from '../ButtonBase';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
+import { BaseProps } from '../types';
 import { Typography } from '../Typography';
+import { getCustomStyles } from '../utils/useCustomStyles';
+import { TabStyleProperties } from './styles';
 
-export interface InnerTabProps extends LayoutBoxProps {
+export interface InnerTabProps extends LayoutBoxProps, BaseProps<TabStyleProperties> {
   selected?: boolean;
   icon?: React.ReactNode;
   name: string;
@@ -26,17 +29,22 @@ const TabButton = styled.button<Partial<InnerTabProps>>`
   margin: ${getComponentStyle('tabs.tab.margin')};
   white-space: nowrap;
 
+  ${getCustomStyles('tabs.tab.styles', 'root')}
+
   &:hover {
     background-color: ${getComponentStyle('tabs.tab.hover.backgroundColor')};
+    ${getCustomStyles('tabs.tab.styles', 'hover')}
   }
 
   &:focus {
     box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')}
       ${getComponentStyle('tabs.tab.focus.outlineColor')};
+    ${getCustomStyles('tabs.tab.styles', 'focus')}
   }
 
   &:active {
     background-color: ${getComponentStyle('tabs.tab.active.backgroundColor')};
+    ${getCustomStyles('tabs.tab.styles', 'active')}
   }
 
   ${(props) =>
@@ -55,7 +63,9 @@ const TabButton = styled.button<Partial<InnerTabProps>>`
         border-top-left-radius: ${getComponentStyle('tabs.tab.selected.bottomBorder.radius')};
         border-top-right-radius: ${getComponentStyle('tabs.tab.selected.bottomBorder.radius')};
         background-color: ${getComponentStyle('tabs.tab.selected.bottomBorder.color')};
+        ${getCustomStyles('tabs.tab.styles', 'indicator')}
       }
+      ${getCustomStyles('tabs.tab.styles', 'selected')}
     `}
 `;
 

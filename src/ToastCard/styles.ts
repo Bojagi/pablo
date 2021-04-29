@@ -3,6 +3,8 @@ import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 
+export type ToastCardStyleProperties = 'card' | 'title' | 'description' | 'closeButton' | 'iconBox';
+
 export interface ToastCardStyles {
   width: Style;
   padding: Style;
