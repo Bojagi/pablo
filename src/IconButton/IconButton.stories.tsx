@@ -50,6 +50,21 @@ const baseStory = (args) => (
 export const Normal = baseStory.bind(null);
 Normal.args = {};
 
+export const BrandColor = baseStory.bind(null);
+BrandColor.args = {
+  color: 'brand',
+};
+
+export const PositiveColor = baseStory.bind(null);
+PositiveColor.args = {
+  color: 'positive',
+};
+
+export const NegativeColor = baseStory.bind(null);
+NegativeColor.args = {
+  color: 'negative',
+};
+
 export const Active = baseStory.bind(null);
 Active.args = {
   active: true,
