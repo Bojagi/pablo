@@ -22,6 +22,7 @@ export interface InputBaseStyles {
   borderWidth: number;
   fontFamily: Style;
   transitions: string[][];
+  borderRadius: Style;
   outline: InputBaseVariantStyles;
   filled: InputBaseVariantStyles;
 }
@@ -46,6 +47,7 @@ export const inputBaseStyles: InputBaseStyles = {
   padding: css`
     ${getSpacing(3)} ${getSpacing(4)}
   `,
+  borderRadius: '8px',
   fontFamily: (props) => props.theme.typography.base.fontFamily,
   borderWidth: 1,
   filled: filledVariantStyle,

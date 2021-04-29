@@ -70,7 +70,7 @@ const InputWrapper = styled.div<InputWrapperProps>`
   box-sizing: border-box;
   border: ${getComponentStyle('{name}.borderWidth')}px solid
     ${getComponentStyle('{name}.{variant}.borderColor')};
-  border-radius: 8px;
+  border-radius: ${getComponentStyle('{name}.borderRadius')};
   background-color: ${getComponentStyle('{name}.{variant}.backgroundColor')};
   transition: ${getComponentStyle('{name}.transitions', transitionTransformer)};
   ${(props) =>

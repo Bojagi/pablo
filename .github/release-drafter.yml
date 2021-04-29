@@ -1,4 +1,4 @@
-name-template: 'v$RESOLVED_VERSION 👩‍🚀'
+name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION' 
 
 category-template: '### $TITLE'
@@ -78,7 +78,7 @@ autolabeler:
       - '/^chore/i'
 
 template: |
-  We are very prod to release version **$RESOLVED_VERSION** 🌈
+  We are very prod to release version **$RESOLVED_VERSION** 👩‍🚀
 
   <!-- Optional: add a release summary here -->
 
