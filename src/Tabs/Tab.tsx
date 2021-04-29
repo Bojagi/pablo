@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { buttonBaseStyles } from '../ButtonBase';
+import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseProps } from '../types';
 import { Typography } from '../Typography';
@@ -74,6 +75,7 @@ interface IconBoxProps {
 }
 
 const IconBox = styled.div<IconBoxProps>`
+  ${baseStyle}
   display: flex;
   ${(props) =>
     props.hasText &&

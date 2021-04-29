@@ -2,9 +2,10 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
-import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
+import { BaseInput, InnerInputProps, InputVariant } from '../shared/BaseInput';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { getCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
 
 export interface TextAreaProps extends LayoutBoxProps {
   id?: string;
@@ -25,10 +26,10 @@ interface InnerTextAreaProps
   }> {}
 
 const InnerTextArea = styled.textarea<InnerTextAreaProps>`
+  ${baseStyle}
   resize: none;
   border: 0;
   flex-grow: 1;
-  box-sizing: border-box;
   padding: ${getComponentStyle('textarea.padding')};
   background-color: transparent;
   font-family: ${getComponentStyle('textarea.fontFamily')};

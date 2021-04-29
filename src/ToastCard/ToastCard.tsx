@@ -10,11 +10,12 @@ import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './Icons';
 import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
 import { BaseProps } from '../types';
 import { ToastCardStyleProperties } from './styles';
+import { baseStyle } from '../shared/baseStyle';
 
 const CardWrapper = styled.div<LayoutBoxProps>`
+  ${baseStyle}
   border-radius: ${getComponentStyle('toastCard.borderRadius')};
   max-width: ${getComponentStyle('toastCard.width')};
-  box-sizing: border-box;
   background-color: ${getComponentStyle('toastCard.backgroundColor')};
   color: ${getComponentStyle('toastCard.color')};
   padding: ${getComponentStyle('toastCard.padding')};

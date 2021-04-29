@@ -8,6 +8,7 @@ import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { useUniqueId } from '../utils/useUniqueId';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { useCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from './baseStyle';
 
 export type BaseInputStyleProperties =
   | 'root'
@@ -65,9 +66,9 @@ interface InputWrapperProps extends LayoutBoxProps {
 }
 
 const InputWrapper = styled.div<InputWrapperProps>`
+  ${baseStyle}
   display: flex;
   align-items: center;
-  box-sizing: border-box;
   border: ${getComponentStyle('{name}.borderWidth')}px solid
     ${getComponentStyle('{name}.{variant}.borderColor')};
   border-radius: ${getComponentStyle('{name}.borderRadius')};

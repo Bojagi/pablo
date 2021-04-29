@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
+import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, getSpacing } from '../styleHelpers';
 import { ToastStackSide } from './types';
 
@@ -9,6 +10,7 @@ export interface ToastStackProps {
 }
 
 const ToastStackBox = styled.div<ToastStackProps>`
+  ${baseStyle}
   padding: ${getSpacing(5)};
   width: ${getComponentStyle('toastCard.width')};
   position: fixed;

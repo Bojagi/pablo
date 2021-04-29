@@ -2,11 +2,13 @@
 
 exports[`circle variant Render size large 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 64px;
   height: 64px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 50%;
 }
 
@@ -22,11 +24,13 @@ exports[`circle variant Render size large 1`] = `
 
 exports[`circle variant Render size medium 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 50%;
 }
 
@@ -42,11 +46,13 @@ exports[`circle variant Render size medium 1`] = `
 
 exports[`circle variant Render size small 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 32px;
   height: 32px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 50%;
 }
 
@@ -62,11 +68,13 @@ exports[`circle variant Render size small 1`] = `
 
 exports[`circle variant Render size tiny 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 24px;
   height: 24px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 50%;
 }
 
@@ -82,11 +90,13 @@ exports[`circle variant Render size tiny 1`] = `
 
 exports[`circle variant Render size undefined 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 50%;
 }
 
@@ -102,11 +112,13 @@ exports[`circle variant Render size undefined 1`] = `
 
 exports[`square variant Render size large 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 64px;
   height: 64px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -122,11 +134,13 @@ exports[`square variant Render size large 1`] = `
 
 exports[`square variant Render size medium 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -142,11 +156,13 @@ exports[`square variant Render size medium 1`] = `
 
 exports[`square variant Render size small 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 32px;
   height: 32px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -162,11 +178,13 @@ exports[`square variant Render size small 1`] = `
 
 exports[`square variant Render size tiny 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 24px;
   height: 24px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -182,11 +200,13 @@ exports[`square variant Render size tiny 1`] = `
 
 exports[`square variant Render size undefined 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -202,11 +222,13 @@ exports[`square variant Render size undefined 1`] = `
 
 exports[`undefined variant Render size large 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 64px;
   height: 64px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -222,11 +244,13 @@ exports[`undefined variant Render size large 1`] = `
 
 exports[`undefined variant Render size medium 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -242,11 +266,13 @@ exports[`undefined variant Render size medium 1`] = `
 
 exports[`undefined variant Render size small 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 32px;
   height: 32px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -262,11 +288,13 @@ exports[`undefined variant Render size small 1`] = `
 
 exports[`undefined variant Render size tiny 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 24px;
   height: 24px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 
@@ -282,11 +310,13 @@ exports[`undefined variant Render size tiny 1`] = `
 
 exports[`undefined variant Render size undefined 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 6px;
 }
 

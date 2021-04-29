@@ -7,6 +7,7 @@ import { conditionalStyles, getComponentStyle } from '../styleHelpers';
 import { BaseProps } from '../types';
 import { AvatarStyleProperties } from './styles';
 import { useCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
 
 export type AvatarSize = 'tiny' | 'small' | 'medium' | 'large';
 export type AvatarVariant = 'square' | 'circle';
@@ -26,6 +27,7 @@ interface AvatarImageProps extends ImageProps {
 const AvatarImage = styled<
   React.ForwardRefExoticComponent<AvatarImageProps & React.RefAttributes<HTMLImageElement>>
 >(Image as any)`
+  ${baseStyle}
   ${conditionalStyles('variant', {
     square: css`
       border-radius: ${getComponentStyle('avatar.square.borderRadius')}px;

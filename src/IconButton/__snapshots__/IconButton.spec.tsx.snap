@@ -2,6 +2,7 @@
 
 exports[`Render large icon button with correct styles 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -72,6 +73,7 @@ exports[`Render large icon button with correct styles 1`] = `
 
 exports[`Render medium icon button with correct styles 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 32px;
   height: 32px;
   background-color: transparent;
@@ -142,6 +144,7 @@ exports[`Render medium icon button with correct styles 1`] = `
 
 exports[`Render small icon button with correct styles 1`] = `
 .c0 {
+  box-sizing: border-box;
   width: 24px;
   height: 24px;
   background-color: transparent;

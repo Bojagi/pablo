@@ -17,6 +17,7 @@ import { system } from '@styled-system/core';
 
 import { color, ColorProps } from './color';
 import { CssFunctionReturn } from '../types';
+import { baseStyle } from '../shared/baseStyle';
 
 export interface BoxCssProps<T> {
   css?: CssFunctionReturn;
@@ -39,6 +40,7 @@ export const boxInterpolateFn = (props) =>
   [space, color, layout, border, flexbox, position].map((fn) => fn(props));
 
 export const Box = styled.div<BoxProps>`
+  ${baseStyle}
   ${(props: BoxProps) => props.css}
   ${system({
     fillColor: {
@@ -59,12 +61,14 @@ export const layoutInterpolationFn = (props) =>
   [space, layout, flexbox, position].map((fn) => fn(props));
 
 export const LayoutBox = styled.div<LayoutBoxProps>`
+  ${baseStyle}
   ${layoutInterpolationFn}
 `;
 
 export type FlexProps = LayoutBoxProps;
 
 export const Flex = styled.div<FlexProps>`
+  ${baseStyle}
   display: flex;
   ${layoutInterpolationFn}
 `;

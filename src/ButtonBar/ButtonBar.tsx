@@ -7,12 +7,14 @@ import { getComponentStyle } from '../styleHelpers';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { ButtonBarStyleProperties } from './styles';
 import { BaseProps } from '../types';
+import { baseStyle } from '../shared/baseStyle';
 
 export interface ButtonBarProps extends BaseProps<ButtonBarStyleProperties>, LayoutBoxProps {
   children: React.ReactElement<BoxProps> | React.ReactElement<BoxProps>[];
 }
 
 const ButtonBarBox = styled.div`
+  ${baseStyle}
   display: flex;
   justify-content: flex-end;
   margin: 0 -${getComponentStyle('buttonBar.gap')};

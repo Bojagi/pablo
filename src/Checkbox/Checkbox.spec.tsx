@@ -71,8 +71,8 @@ test('Render medium checkbox', () => {
     size: 'medium',
     label: 'medium label',
   });
-  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('width', '12px');
-  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('height', '12px');
+  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('width', 'calc(12px + 2 * (6px + 1px))');
+  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('height', 'calc(12px + 2 * (6px + 1px))');
   expect(getByTestId('pbl-checkbox')).toHaveStyleRule('padding', '6px');
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('width', '12px');
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('height', '12px');
@@ -88,8 +88,8 @@ test('Render small checkbox', () => {
     size: 'small',
     label: 'small label',
   });
-  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('width', '8px');
-  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('height', '8px');
+  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('width', 'calc(8px + 2 * (4px + 1px))');
+  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('height', 'calc(8px + 2 * (4px + 1px))');
   expect(getByTestId('pbl-checkbox')).toHaveStyleRule('padding', '4px');
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('width', '8px');
   expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('height', '8px');

@@ -17,6 +17,7 @@ import { SlideAnimation } from '../animation/SlideAnimation';
 import { BaseProps } from '../types';
 import { TooltipStyleProperties } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
 
 export type TooltipSide = BasePlacement;
 
@@ -33,6 +34,7 @@ interface TooltipPopoverProps extends BaseProps<TooltipStyleProperties> {
 }
 
 const TooltipPopover = styled.div<TooltipPopoverProps>`
+  ${baseStyle}
   z-index: ${getComponentStyle('tooltip.zIndex')};
   pointer-events: none;
   position: relative;
@@ -44,6 +46,7 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
 
   /* Bottom Arrow */
   &:after {
+    ${baseStyle}
     content: '';
     position: absolute;
 

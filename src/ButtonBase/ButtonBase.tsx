@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
+import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 
 export type ButtonSize = 'small' | 'medium' | 'large';
@@ -9,6 +10,7 @@ export interface ButtonBaseProps extends LayoutBoxProps {
 }
 
 export const buttonBaseStyles = css<ButtonBaseProps>`
+  ${baseStyle}
   display: inline-flex;
   flex-direction: row;
   align-items: center;

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
+import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { BaseProps } from '../types';
 import { getCustomStyles } from '../utils/useCustomStyles';
@@ -19,6 +20,7 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
   color: props.color || 'plain',
   active: props.active || false,
 }))<IconButtonProps>`
+  ${baseStyle}
   width: ${getComponentStyle('iconButton.size.{size}')};
   height: ${getComponentStyle('iconButton.size.{size}')};
   background-color: ${getComponentStyle('iconButton.{color}.backgroundColor')};

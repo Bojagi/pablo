@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle } from '../styleHelpers';
 import { BaseProps } from '../types';
 import { getCustomStyles } from '../utils/useCustomStyles';
@@ -7,6 +8,7 @@ import { LinkStyleProperties } from './styles';
 export interface LinkProps extends BaseProps<LinkStyleProperties> {}
 
 export const Link = styled.a<LinkProps>`
+  ${baseStyle}
   color: ${getComponentStyle('link.color')};
   text-decoration: ${getComponentStyle('link.textDecoration')};
   font-style: ${getComponentStyle('link.fontStyle')};

@@ -1,7 +1,7 @@
 import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
-import { checkableBaseStyles, CheckableBaseStyles } from '../theme/baseStyles/checkableBaseStyles';
+import { checkableBaseStyles, CheckableBaseStyles } from '../shared/checkableBaseStyles';
 
 export interface RadioStyles extends CheckableBaseStyles {
   handleColor: Style;

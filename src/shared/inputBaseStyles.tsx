@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import { getColor, getSpacing } from '../../styleHelpers';
-import { Style } from '../types';
+import { getColor, getSpacing } from '../styleHelpers';
+import { Style } from '../theme/types';
 
 export interface InputBaseVariantStyles {
   borderColor: Style;

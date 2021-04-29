@@ -2,6 +2,7 @@
 
 exports[`Render toast card with no type and with only title 1`] = `
 .c2 {
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -9,6 +10,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,6 +22,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,6 +30,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -41,9 +45,9 @@ exports[`Render toast card with no type and with only title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
   padding: 12px 24px 12px 12px;
@@ -77,6 +81,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 
 exports[`type error Render toast card with custom icon 1`] = `
 .c0 {
+  box-sizing: border-box;
   fill: #F21D0D;
   margin-right: 12px;
 }
@@ -97,6 +102,7 @@ exports[`type error Render toast card with custom icon 1`] = `
 
 exports[`type error Render toast card with only title 1`] = `
 .c2 {
+  box-sizing: border-box;
   fill: #F21D0D;
   margin-right: 12px;
 }
@@ -106,6 +112,7 @@ exports[`type error Render toast card with only title 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -113,6 +120,7 @@ exports[`type error Render toast card with only title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,6 +132,7 @@ exports[`type error Render toast card with only title 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -131,6 +140,7 @@ exports[`type error Render toast card with only title 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -145,9 +155,9 @@ exports[`type error Render toast card with only title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
   padding: 12px 24px 12px 12px;
@@ -200,6 +210,7 @@ exports[`type error Render toast card with only title 1`] = `
 
 exports[`type info Render toast card with custom icon 1`] = `
 .c0 {
+  box-sizing: border-box;
   fill: #ffffff;
   margin-right: 12px;
 }
@@ -220,6 +231,7 @@ exports[`type info Render toast card with custom icon 1`] = `
 
 exports[`type info Render toast card with only title 1`] = `
 .c2 {
+  box-sizing: border-box;
   fill: #ffffff;
   margin-right: 12px;
 }
@@ -229,6 +241,7 @@ exports[`type info Render toast card with only title 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -236,6 +249,7 @@ exports[`type info Render toast card with only title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -247,6 +261,7 @@ exports[`type info Render toast card with only title 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -254,6 +269,7 @@ exports[`type info Render toast card with only title 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -268,9 +284,9 @@ exports[`type info Render toast card with only title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
   padding: 12px 24px 12px 12px;
@@ -323,6 +339,7 @@ exports[`type info Render toast card with only title 1`] = `
 
 exports[`type success Render toast card with custom icon 1`] = `
 .c0 {
+  box-sizing: border-box;
   fill: #38C765;
   margin-right: 12px;
 }
@@ -343,6 +360,7 @@ exports[`type success Render toast card with custom icon 1`] = `
 
 exports[`type success Render toast card with only title 1`] = `
 .c2 {
+  box-sizing: border-box;
   fill: #38C765;
   margin-right: 12px;
 }
@@ -352,6 +370,7 @@ exports[`type success Render toast card with only title 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -359,6 +378,7 @@ exports[`type success Render toast card with only title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -370,6 +390,7 @@ exports[`type success Render toast card with only title 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -377,6 +398,7 @@ exports[`type success Render toast card with only title 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -391,9 +413,9 @@ exports[`type success Render toast card with only title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
   padding: 12px 24px 12px 12px;
@@ -446,6 +468,7 @@ exports[`type success Render toast card with only title 1`] = `
 
 exports[`type undefined Render toast card with custom icon 1`] = `
 .c0 {
+  box-sizing: border-box;
   fill: #ffffff;
   margin-right: 12px;
 }
@@ -466,6 +489,7 @@ exports[`type undefined Render toast card with custom icon 1`] = `
 
 exports[`type undefined Render toast card with only title 1`] = `
 .c2 {
+  box-sizing: border-box;
   fill: #ffffff;
   margin-right: 12px;
 }
@@ -475,6 +499,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -482,6 +507,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -493,6 +519,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -500,6 +527,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -514,9 +542,9 @@ exports[`type undefined Render toast card with only title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
   padding: 12px 24px 12px 12px;
@@ -558,6 +586,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 
 exports[`type unknown Render toast card with custom icon 1`] = `
 .c0 {
+  box-sizing: border-box;
   fill: #ffffff;
   margin-right: 12px;
 }
@@ -578,6 +607,7 @@ exports[`type unknown Render toast card with custom icon 1`] = `
 
 exports[`type unknown Render toast card with only title 1`] = `
 .c2 {
+  box-sizing: border-box;
   fill: #ffffff;
   margin-right: 12px;
 }
@@ -587,6 +617,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -594,6 +625,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -605,6 +637,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -612,6 +645,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -626,9 +660,9 @@ exports[`type unknown Render toast card with only title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
   padding: 12px 24px 12px 12px;
@@ -670,6 +704,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 
 exports[`type warning Render toast card with custom icon 1`] = `
 .c0 {
+  box-sizing: border-box;
   fill: #FFDD5B;
   margin-right: 12px;
 }
@@ -690,6 +725,7 @@ exports[`type warning Render toast card with custom icon 1`] = `
 
 exports[`type warning Render toast card with only title 1`] = `
 .c2 {
+  box-sizing: border-box;
   fill: #FFDD5B;
   margin-right: 12px;
 }
@@ -699,6 +735,7 @@ exports[`type warning Render toast card with only title 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -706,6 +743,7 @@ exports[`type warning Render toast card with only title 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -717,6 +755,7 @@ exports[`type warning Render toast card with only title 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -724,6 +763,7 @@ exports[`type warning Render toast card with only title 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -738,9 +778,9 @@ exports[`type warning Render toast card with only title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  box-sizing: border-box;
   background-color: #303030;
   color: #ffffff;
   padding: 12px 24px 12px 12px;

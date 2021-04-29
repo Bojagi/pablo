@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { baseStyle } from '../shared/baseStyle';
 import { CssFunctionReturn } from '../types';
 
 export interface ArrowProps {
@@ -8,9 +9,11 @@ export interface ArrowProps {
 }
 
 export const PopoverArrow = styled.div<ArrowProps>`
+  ${baseStyle}
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   &:after {
+    ${baseStyle}
     content: '';
     position: absolute;
     top: -${(props) => props.size};

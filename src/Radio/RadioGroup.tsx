@@ -1,12 +1,14 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { CheckableSize } from '../BaseCheckable/BaseCheckable';
+import { CheckableSize } from '../shared/BaseCheckable';
 import { Box, BoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { RadioProps } from './Radio';
+import { baseStyle } from '../shared/baseStyle';
 
 const RadioGroupItem = styled.div<{ size: CheckableSize }>`
+  ${baseStyle}
   margin-bottom: ${getComponentStyle('radio.groupItemGap.{size}')};
 `;
 

@@ -2,6 +2,7 @@
 
 exports[`Render button bar 1`] = `
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -12,6 +13,7 @@ exports[`Render button bar 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -69,6 +71,7 @@ exports[`Render button bar 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
