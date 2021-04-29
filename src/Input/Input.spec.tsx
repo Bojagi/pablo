@@ -86,13 +86,13 @@ test('Render with custom px width when number "width" prop is set', () => {
   expect(getByTestId('pbl-input-wrapper')).toHaveStyleRule('width', '600px');
 });
 
-test('Render with width 100% when "fullWidth" prop is set', () => {
+test('Render with width auto when "fullWidth" prop is set', () => {
   const { getByTestId } = renderComponent({
     width: 600,
     fullWidth: true,
   });
 
-  expect(getByTestId('pbl-input-wrapper')).toHaveStyleRule('width', '100%');
+  expect(getByTestId('pbl-input-wrapper')).toHaveStyleRule('width', 'auto');
 });
 
 test('Trigger onChange event when the content of the inner input changed', () => {

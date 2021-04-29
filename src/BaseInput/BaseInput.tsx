@@ -92,7 +92,7 @@ const InputWrapper = styled.div<InputWrapperProps>`
   ${(props) =>
     props.fullWidth &&
     css`
-      width: 100%;
+      width: auto;
     `}
   ${(props) => props.cssStyles}
 `;
