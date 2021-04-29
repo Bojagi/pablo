@@ -14,6 +14,7 @@ export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 export interface InnerButtonProps extends ButtonBaseProps, BaseProps<ButtonStyleProperties> {
   children: React.ReactNode;
   variant?: ButtonVariant;
+  fullWidth?: boolean;
   innerRef?: React.Ref<HTMLButtonElement>;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
@@ -32,6 +33,12 @@ const getButtonFocusOutlineShadow = (color: Style) => css`
 
 const ButtonPrimary = styled.button<InnerButtonProps>`
   ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
+  justify-content: center;
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+    `}
   color: ${getComponentStyle('button.{color}.primary.color')};
   background: ${getComponentStyle('button.{color}.primary.backgroundColor')};
   border-color: ${getComponentStyle('button.{color}.primary.borderColor')};
@@ -56,6 +63,12 @@ const ButtonPrimary = styled.button<InnerButtonProps>`
 
 const ButtonSecondary = styled.button<InnerButtonProps>`
   ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
+  justify-content: center;
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+    `}
   color: ${getComponentStyle('button.{color}.secondary.color')};
   border-color: ${getComponentStyle('button.{color}.secondary.borderColor')};
 
@@ -80,6 +93,12 @@ const ButtonSecondary = styled.button<InnerButtonProps>`
 
 const ButtonText = styled.button<InnerButtonProps>`
   ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
+  justify-content: center;
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+    `}
   color: ${getComponentStyle('button.{color}.text.color')};
 
   &:focus {
@@ -139,6 +158,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
       className,
       disabled,
       customStyles,
+      fullWidth = false,
       ...props
     },
     ref
@@ -154,6 +174,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
         className={className}
         disabled={disabled}
         color={color}
+        fullWidth={fullWidth}
         cssStyles={getCustomStyles(variant)}
       >
         {startIcon && (

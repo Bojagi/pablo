@@ -221,6 +221,11 @@ test('Render primary brand button when unknown variant is given', () => {
   );
 });
 
+test('render button with full width', () => {
+  const { getByTestId } = renderComponent({ fullWidth: true });
+  expect(getByTestId('pbl-button')).toHaveStyleRule('width', '100%');
+});
+
 test('render button with start icon', () => {
   const { container, getByTestId } = renderComponent({ startIcon: <div>myIcon</div> });
   expect(container).toMatchSnapshot();
