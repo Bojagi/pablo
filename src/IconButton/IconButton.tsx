@@ -6,30 +6,34 @@ import { getCustomStyles } from '../utils/useCustomStyles';
 import { IconButtonStyleProperties } from './styles';
 
 export type IconButtonSize = 'small' | 'medium' | 'large';
+export type IconButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 
 export interface IconButtonProps extends LayoutBoxProps, BaseProps<IconButtonStyleProperties> {
   size?: IconButtonSize;
+  color?: IconButtonColor;
   active?: boolean;
 }
 
 export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
   size: props.size || 'medium',
+  color: props.color || 'plain',
   active: props.active || false,
 }))<IconButtonProps>`
   width: ${getComponentStyle('iconButton.size.{size}')};
   height: ${getComponentStyle('iconButton.size.{size}')};
-  background-color: ${getComponentStyle('iconButton.backgroundColor')};
-  color: ${getComponentStyle('iconButton.color')};
+  background-color: ${getComponentStyle('iconButton.{color}.backgroundColor')};
+  color: ${getComponentStyle('iconButton.{color}.color')};
 
   border: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
   transition: ${getComponentStyle('iconButton.transition', transitionTransformer)};
-  border-radius: ${getComponentStyle('iconButton.borderRadius')}px;
+  border-radius: ${getComponentStyle('iconButton.borderRadius')};
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 
   & > * {
     width: ${getComponentStyle('iconButton.icon.size.{size}')};
@@ -57,20 +61,20 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
   ${(props) =>
     props.active
       ? css`
-          background-color: ${getComponentStyle('toolbar.item.active.backgroundColor')};
-          color: ${getComponentStyle('toolbar.item.active.color')};
+          background-color: ${getComponentStyle('iconButton.{color}.active.backgroundColor')};
+          color: ${getComponentStyle('iconButton.{color}.active.color')};
           ${getCustomStyles('iconButton.styles', 'active')}
         `
       : css`
           &:hover:not(:disabled) {
-            background-color: ${getComponentStyle('iconButton.hover.backgroundColor')};
-            color: ${getComponentStyle('iconButton.hover.color')};
+            background-color: ${getComponentStyle('iconButton.{color}.hover.backgroundColor')};
+            color: ${getComponentStyle('iconButton.{color}.hover.color')};
             ${getCustomStyles('iconButton.styles', 'hover')}
           }
 
           &:focus:not(:disabled) {
-            background-color: ${getComponentStyle('iconButton.focus.backgroundColor')};
-            color: ${getComponentStyle('iconButton.focus.color')};
+            background-color: ${getComponentStyle('iconButton.{color}.focus.backgroundColor')};
+            color: ${getComponentStyle('iconButton.{color}.focus.color')};
             ${getCustomStyles('iconButton.styles', 'focus')}
           }
         `}

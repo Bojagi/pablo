@@ -1,8 +1,26 @@
 import { Style } from '../theme/types';
 import { getColor } from '../styleHelpers';
 import { BaseStyles } from '../types';
+import { Colors } from '../theme/colors';
 
 export type IconButtonStyleProperties = 'root' | 'hover' | 'active' | 'focus';
+
+export interface IconButtonColorStyles {
+  backgroundColor: Style;
+  color: Style;
+  active: {
+    backgroundColor: Style;
+    color: Style;
+  };
+  hover: {
+    backgroundColor: Style;
+    color: Style;
+  };
+  focus: {
+    backgroundColor: Style;
+    color: Style;
+  };
+}
 
 export interface IconButtonStyles extends BaseStyles<IconButtonStyleProperties> {
   size: {
@@ -22,24 +40,14 @@ export interface IconButtonStyles extends BaseStyles<IconButtonStyleProperties> 
       large: Style;
     };
   };
-  borderRadius: number;
-  backgroundColor: Style;
-  color: Style;
+  borderRadius: Style;
   transition: string[][];
-  active: {
-    backgroundColor: Style;
-    color: Style;
-  };
+  plain: IconButtonColorStyles;
+  brand: IconButtonColorStyles;
+  positive: IconButtonColorStyles;
+  negative: IconButtonColorStyles;
   disabled: {
     opacity: number;
-  };
-  hover: {
-    backgroundColor: Style;
-    color: Style;
-  };
-  focus: {
-    backgroundColor: Style;
-    color: Style;
   };
 }
 
@@ -61,26 +69,50 @@ export const iconButtonStyles: IconButtonStyles = {
       large: '36px',
     },
   },
-  borderRadius: 6,
-  backgroundColor: 'transparent',
-  color: getColor('common', 'black'),
+  borderRadius: '6px',
+  plain: {
+    backgroundColor: 'transparent',
+    color: getColor('common', 'black'),
+    active: {
+      backgroundColor: getColor('brand'),
+      color: getColor('common', 'white'),
+    },
+    hover: {
+      backgroundColor: getColor('blackOpacity', '50'),
+      color: getColor('common', 'black'),
+    },
+    focus: {
+      backgroundColor: getColor('blackOpacity', '100'),
+      color: getColor('common', 'black'),
+    },
+  },
+  brand: getIconButtonColorConfig('brand', getColor('common', 'white')),
+  positive: getIconButtonColorConfig('positive', getColor('common', 'white')),
+  negative: getIconButtonColorConfig('negative', getColor('common', 'white')),
   transition: [
     ['background-color', '0.2s'],
     ['color', '0.2s'],
   ],
-  active: {
-    backgroundColor: getColor('brand'),
-    color: getColor('common', 'white'),
-  },
   disabled: {
     opacity: 0.3,
   },
-  hover: {
-    backgroundColor: getColor('blackOpacity', '50'),
-    color: getColor('common', 'black'),
-  },
-  focus: {
-    backgroundColor: getColor('blackOpacity', '100'),
-    color: getColor('common', 'black'),
-  },
 };
+
+function getIconButtonColorConfig(colorName: keyof Colors, contrastColor: Style) {
+  return {
+    backgroundColor: 'transparent',
+    color: getColor(colorName),
+    active: {
+      backgroundColor: getColor(colorName),
+      color: contrastColor,
+    },
+    hover: {
+      backgroundColor: getColor(colorName, 'lightest'),
+      color: getColor(colorName, 'dark'),
+    },
+    focus: {
+      backgroundColor: getColor(colorName, 'light'),
+      color: getColor(colorName, 'dark'),
+    },
+  };
+}

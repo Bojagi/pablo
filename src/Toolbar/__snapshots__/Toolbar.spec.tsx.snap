@@ -25,6 +25,9 @@ exports[`Render toolbar 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   margin-left: 4px;
   margin-right: 4px;
 }
@@ -87,6 +90,7 @@ exports[`Render toolbar 1`] = `
   >
     <button
       class="c1"
+      color="plain"
       data-testid="pbl-toolbar-item-button"
     >
       <div>
@@ -95,6 +99,7 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       class="c1"
+      color="plain"
       data-testid="pbl-toolbar-item-button"
     >
       <div>
@@ -103,6 +108,7 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       class="c1"
+      color="plain"
       data-testid="pbl-toolbar-item-button"
     >
       <div>
@@ -114,6 +120,7 @@ exports[`Render toolbar 1`] = `
     />
     <button
       class="c1"
+      color="plain"
       data-testid="pbl-toolbar-item-button"
     >
       <div>
@@ -122,6 +129,7 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       class="c1"
+      color="plain"
       data-testid="pbl-toolbar-item-button"
     >
       <div>
@@ -130,6 +138,7 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       class="c1"
+      color="plain"
       data-testid="pbl-toolbar-item-button"
       disabled=""
     >
