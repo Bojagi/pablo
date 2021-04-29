@@ -35,6 +35,10 @@ exports[`Render button bar 1`] = `
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   color: #ffffff;
   background: #6A50F2;
   border-color: #6A50F2;

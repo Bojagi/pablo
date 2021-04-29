@@ -11,17 +11,22 @@ export default {
 };
 
 const SetOfButtons = (args) => (
-  <Flex mx={-4} mb={4}>
-    <Button mx={4} {...args} color="brand">
+  <Flex
+    mx={-4}
+    mb={4}
+    width={args.fullWidth ? 400 : 0}
+    flexDirection={args.fullWidth ? 'column' : 'row'}
+  >
+    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="brand">
       Brand
     </Button>
-    <Button mx={4} {...args} color="plain">
+    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="plain">
       Plain
     </Button>
-    <Button mx={4} {...args} color="positive">
+    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="positive">
       Positive
     </Button>
-    <Button mx={4} {...args} color="negative">
+    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="negative">
       Negative
     </Button>
   </Flex>
@@ -101,6 +106,9 @@ const shakeAnimation = keyframes`
     transform: rotate(0deg);
   }
 `;
+
+export const FullWidth = baseStory.bind(null);
+FullWidth.args = { fullWidth: true, startIcon: <GitPullRequest size={16} /> };
 
 export const WithCustomStyles = baseStory.bind(null);
 WithCustomStyles.args = {
