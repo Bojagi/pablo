@@ -101,7 +101,7 @@ describe.each([
       jest.advanceTimersByTime(0);
     });
 
-    await act(() => Promise.resolve());
+    await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
 
     expect(queryByTestId('pbl-tooltip-popover')).not.toBeNull();
     expect(getByTestId('pbl-animation-inner')).toHaveStyleRule('opacity', '0');
@@ -118,7 +118,7 @@ describe.each([
       disabled: true,
     });
     // This is because of passing ref on effect, which happens on next tick
-    await act(() => Promise.resolve());
+    await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
 
     // Trigger resize update and update the size
     act(() => {
