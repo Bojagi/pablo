@@ -54,7 +54,8 @@ const InOutAnimation = forwardRef<HTMLDivElement, InOutAnimationProps>(
     const { width, height } = useResizeObserver<HTMLDivElement>({ ref: innerRef });
 
     React.useEffect(() => {
-      const requestCallback = window.requestIdleCallback || requestAnimationFrame || setTimeout;
+      const requestCallback =
+        (window as any).requestIdleCallback || requestAnimationFrame || setTimeout;
       requestCallback(() => mountedRef.current && setAnimationIn(visible));
     }, [visible, mountedRef]);
 
