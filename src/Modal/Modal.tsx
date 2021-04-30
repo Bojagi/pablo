@@ -7,6 +7,7 @@ import { Portal } from '../Portal/Portal';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { ModalStyleProperties } from './styles';
 import { useCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
 
 export interface TopRightItemProps {
   onClose?: () => void;
@@ -32,13 +33,13 @@ interface BackdropProps {
 }
 
 const Backdrop = styled.div<BackdropProps>`
+  ${baseStyle}
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
   left: 0;
   top: 0;
-  box-sizing: border-box;
   overflow: scroll;
   background-color: ${getComponentStyle('modal.backdropColor')};
   display: flex;
@@ -65,6 +66,7 @@ interface ModalAreaProps {
 }
 
 const ModalArea = styled.div<ModalAreaProps>`
+  ${baseStyle}
   ${(props) =>
     !props.open &&
     css`
@@ -87,6 +89,7 @@ interface ModalBoxProps {
 }
 
 const ModalBox = styled.div<ModalBoxProps>`
+  ${baseStyle}
   border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
   background-color: ${getComponentStyle('modal.box.backgroundColor')};
   padding: ${getComponentStyle('modal.box.padding')};
@@ -95,6 +98,7 @@ const ModalBox = styled.div<ModalBoxProps>`
 `;
 
 const PaneBox = styled.div<ModalBoxProps>`
+  ${baseStyle}
   margin-top: ${getComponentStyle('modal.gap')};
   ${(props) => props.css}
 `;

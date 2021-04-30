@@ -2,6 +2,7 @@
 
 exports[`Render first selected 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,6 +15,7 @@ exports[`Render first selected 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -24,6 +26,7 @@ exports[`Render first selected 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -90,6 +93,7 @@ exports[`Render first selected 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -141,6 +145,7 @@ exports[`Render first selected 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -191,6 +196,7 @@ exports[`Render first selected 1`] = `
 }
 
 .c6 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -240,6 +246,7 @@ exports[`Render first selected 1`] = `
 }
 
 .c7 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -304,6 +311,7 @@ exports[`Render first selected 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -422,6 +430,7 @@ exports[`Render first selected 1`] = `
 
 exports[`Render tabs with icons 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -434,6 +443,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -444,6 +454,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -495,6 +506,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -561,6 +573,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -611,6 +624,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c7 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -660,6 +674,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -675,6 +690,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c6 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -847,6 +863,7 @@ exports[`Render tabs with icons 1`] = `
 
 exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,6 +876,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -869,6 +887,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -935,6 +954,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -985,6 +1005,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1034,6 +1055,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1148,6 +1170,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 
 exports[`Work with one tab 1`] = `
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1160,6 +1183,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1170,6 +1194,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1236,6 +1261,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1286,6 +1312,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .c5 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1335,6 +1362,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .c4 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

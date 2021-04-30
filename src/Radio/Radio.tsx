@@ -7,13 +7,21 @@ import {
   BaseCheckableProps,
   CheckableBoxProps,
   CheckableHandleProps,
-} from '../BaseCheckable/BaseCheckable';
+} from '../shared/BaseCheckable';
 import { getCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
+
+const radioBoxSize = css`
+  calc(${getComponentStyle('radio.handleSize.{size}')} + 2 * (${getComponentStyle(
+  'radio.innerPadding.{size}'
+)} + ${getComponentStyle('radio.borderWidth')}px))
+`;
 
 const RadioBox = styled.div<CheckableBoxProps>`
+  ${baseStyle}
   position: relative;
-  width: ${getComponentStyle('radio.handleSize.{size}')};
-  height: ${getComponentStyle('radio.handleSize.{size}')};
+  width: ${radioBoxSize};
+  height: ${radioBoxSize};
   border-radius: 50%;
   padding: ${getComponentStyle('radio.innerPadding.{size}')};
   background-color: ${getComponentStyle('radio.backgroundColor')};
@@ -33,6 +41,7 @@ const RadioBox = styled.div<CheckableBoxProps>`
 `;
 
 const RadioHandle = styled.div<CheckableHandleProps>`
+  ${baseStyle}
   width: ${getComponentStyle('radio.handleSize.{size}')};
   height: ${getComponentStyle('radio.handleSize.{size}')};
   transform: scale(${(props: any) => (props.checked ? 1 : 0)});

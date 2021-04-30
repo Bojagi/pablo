@@ -2,6 +2,7 @@
 
 exports[`ButtonTypography component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -22,6 +23,7 @@ exports[`ButtonTypography component  Render component 1`] = `
 
 exports[`Headline component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -42,6 +44,7 @@ exports[`Headline component  Render component 1`] = `
 
 exports[`InfoBold component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -63,6 +66,7 @@ exports[`InfoBold component  Render component 1`] = `
 
 exports[`InfoText component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -83,6 +87,7 @@ exports[`InfoText component  Render component 1`] = `
 
 exports[`Paragraph component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -103,6 +108,7 @@ exports[`Paragraph component  Render component 1`] = `
 
 exports[`ParagraphBold component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -124,6 +130,7 @@ exports[`ParagraphBold component  Render component 1`] = `
 
 exports[`Subtitle component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -144,6 +151,7 @@ exports[`Subtitle component  Render component 1`] = `
 
 exports[`Title component  Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -164,6 +172,7 @@ exports[`Title component  Render component 1`] = `
 
 exports[`Typography component with variant button Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -184,6 +193,7 @@ exports[`Typography component with variant button Render component 1`] = `
 
 exports[`Typography component with variant button Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -204,6 +214,7 @@ exports[`Typography component with variant button Render inline component 1`] = 
 
 exports[`Typography component with variant headline Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -224,6 +235,7 @@ exports[`Typography component with variant headline Render component 1`] = `
 
 exports[`Typography component with variant headline Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -244,6 +256,7 @@ exports[`Typography component with variant headline Render inline component 1`] 
 
 exports[`Typography component with variant info Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -264,6 +277,7 @@ exports[`Typography component with variant info Render component 1`] = `
 
 exports[`Typography component with variant info Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -284,6 +298,7 @@ exports[`Typography component with variant info Render inline component 1`] = `
 
 exports[`Typography component with variant infoBold Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -305,6 +320,7 @@ exports[`Typography component with variant infoBold Render component 1`] = `
 
 exports[`Typography component with variant infoBold Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -326,6 +342,7 @@ exports[`Typography component with variant infoBold Render inline component 1`] 
 
 exports[`Typography component with variant paragraph Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -346,6 +363,7 @@ exports[`Typography component with variant paragraph Render component 1`] = `
 
 exports[`Typography component with variant paragraph Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -366,6 +384,7 @@ exports[`Typography component with variant paragraph Render inline component 1`]
 
 exports[`Typography component with variant paragraphBold Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -387,6 +406,7 @@ exports[`Typography component with variant paragraphBold Render component 1`] = 
 
 exports[`Typography component with variant paragraphBold Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -408,6 +428,7 @@ exports[`Typography component with variant paragraphBold Render inline component
 
 exports[`Typography component with variant subtitle Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -428,6 +449,7 @@ exports[`Typography component with variant subtitle Render component 1`] = `
 
 exports[`Typography component with variant subtitle Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -448,6 +470,7 @@ exports[`Typography component with variant subtitle Render inline component 1`] 
 
 exports[`Typography component with variant title Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -468,6 +491,7 @@ exports[`Typography component with variant title Render component 1`] = `
 
 exports[`Typography component with variant title Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -488,6 +512,7 @@ exports[`Typography component with variant title Render inline component 1`] = `
 
 exports[`Typography component with variant undefined Render component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -508,6 +533,7 @@ exports[`Typography component with variant undefined Render component 1`] = `
 
 exports[`Typography component with variant undefined Render inline component 1`] = `
 .c0 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;

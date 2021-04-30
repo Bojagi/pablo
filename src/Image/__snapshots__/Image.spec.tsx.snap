@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render image 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
 <div>
   <img
     alt="Social media preview"
-    class=""
+    class="c0"
     src="https://bojagi.io/images/bojagi-social-preview.jpg"
   />
 </div>

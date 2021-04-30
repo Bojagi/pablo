@@ -72,8 +72,8 @@ test('Render medium radio', () => {
     size: 'medium',
     label: 'medium label',
   });
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', '12px');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', '12px');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(12px + 2 * (6px + 1px))');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', 'calc(12px + 2 * (6px + 1px))');
   expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '6px');
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '12px');
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '12px');
@@ -89,8 +89,8 @@ test('Render small radio', () => {
     size: 'small',
     label: 'small label',
   });
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', '8px');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', '8px');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(8px + 2 * (4px + 1px))');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', 'calc(8px + 2 * (4px + 1px))');
   expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '4px');
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '8px');
   expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '8px');

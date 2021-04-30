@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render with nothing selected 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,11 +17,13 @@ exports[`Render with nothing selected 1`] = `
   align-items: center;
 }
 
-.c0 {
+.c1 {
+  box-sizing: border-box;
   margin-bottom: 12px;
 }
 
-.c5 {
+.c6 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -28,7 +35,8 @@ exports[`Render with nothing selected 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c5 {
+  box-sizing: border-box;
   position: absolute;
   display: block;
   top: 0;
@@ -41,10 +49,11 @@ exports[`Render with nothing selected 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
+  box-sizing: border-box;
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: calc(12px + 2 * (6px + 1px));
+  height: calc(12px + 2 * (6px + 1px));
   border-radius: 50%;
   padding: 6px;
   background-color: #ffffff;
@@ -54,7 +63,8 @@ exports[`Render with nothing selected 1`] = `
   transition: box-shadow 0.3s ease-in-out;
 }
 
-.c3 {
+.c4 {
+  box-sizing: border-box;
   width: 12px;
   height: 12px;
   -webkit-transform: scale(0);
@@ -69,25 +79,25 @@ exports[`Render with nothing selected 1`] = `
 
 <div>
   <div
-    class=""
+    class="c0"
     role="radiogroup"
   >
     <div
-      class="c0"
+      class="c1"
     >
       <div
-        class="c1"
+        class="c2"
       >
         <div
-          class="c2"
+          class="c3"
           data-testid="pbl-radio"
         >
           <div
-            class="c3"
+            class="c4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c4"
+            class="c5"
             data-testid="pbl-radio-input"
             id="custom-id-1"
             name="greeting"
@@ -96,7 +106,7 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
-          class="c5"
+          class="c6"
           data-testid="pbl-radio-label"
           for="custom-id-1"
         >
@@ -105,21 +115,21 @@ exports[`Render with nothing selected 1`] = `
       </div>
     </div>
     <div
-      class="c0"
+      class="c1"
     >
       <div
-        class="c1"
+        class="c2"
       >
         <div
-          class="c2"
+          class="c3"
           data-testid="pbl-radio"
         >
           <div
-            class="c3"
+            class="c4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c4"
+            class="c5"
             data-testid="pbl-radio-input"
             id="custom-id-2"
             name="greeting"
@@ -128,7 +138,7 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
-          class="c5"
+          class="c6"
           data-testid="pbl-radio-label"
           for="custom-id-2"
         >
@@ -137,21 +147,21 @@ exports[`Render with nothing selected 1`] = `
       </div>
     </div>
     <div
-      class="c0"
+      class="c1"
     >
       <div
-        class="c1"
+        class="c2"
       >
         <div
-          class="c2"
+          class="c3"
           data-testid="pbl-radio"
         >
           <div
-            class="c3"
+            class="c4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c4"
+            class="c5"
             data-testid="pbl-radio-input"
             id="custom-id-3"
             name="greeting"
@@ -160,7 +170,7 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
-          class="c5"
+          class="c6"
           data-testid="pbl-radio-label"
           for="custom-id-3"
         >
@@ -173,7 +183,12 @@ exports[`Render with nothing selected 1`] = `
 `;
 
 exports[`Work with one radio button 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -184,11 +199,13 @@ exports[`Work with one radio button 1`] = `
   align-items: center;
 }
 
-.c0 {
+.c1 {
+  box-sizing: border-box;
   margin-bottom: 12px;
 }
 
-.c5 {
+.c6 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -200,7 +217,8 @@ exports[`Work with one radio button 1`] = `
   margin-bottom: 0;
 }
 
-.c4 {
+.c5 {
+  box-sizing: border-box;
   position: absolute;
   display: block;
   top: 0;
@@ -213,10 +231,11 @@ exports[`Work with one radio button 1`] = `
   cursor: pointer;
 }
 
-.c2 {
+.c3 {
+  box-sizing: border-box;
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: calc(12px + 2 * (6px + 1px));
+  height: calc(12px + 2 * (6px + 1px));
   border-radius: 50%;
   padding: 6px;
   background-color: #ffffff;
@@ -226,7 +245,8 @@ exports[`Work with one radio button 1`] = `
   transition: box-shadow 0.3s ease-in-out;
 }
 
-.c3 {
+.c4 {
+  box-sizing: border-box;
   width: 12px;
   height: 12px;
   -webkit-transform: scale(0);
@@ -241,25 +261,25 @@ exports[`Work with one radio button 1`] = `
 
 <div>
   <div
-    class=""
+    class="c0"
     role="radiogroup"
   >
     <div
-      class="c0"
+      class="c1"
     >
       <div
-        class="c1"
+        class="c2"
       >
         <div
-          class="c2"
+          class="c3"
           data-testid="pbl-radio"
         >
           <div
-            class="c3"
+            class="c4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c4"
+            class="c5"
             data-testid="pbl-radio-input"
             id="custom-id"
             name="greeting"
@@ -268,7 +288,7 @@ exports[`Work with one radio button 1`] = `
           />
         </div>
         <label
-          class="c5"
+          class="c6"
           data-testid="pbl-radio-label"
           for="custom-id"
         >

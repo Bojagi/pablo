@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { boxInterpolateFn, BoxProps } from '../Box';
+import { baseStyle } from '../shared/baseStyle';
 import { BaseProps } from '../types';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { TypographyStyleProperties } from './styles';
@@ -15,6 +16,7 @@ export interface TypographyProps extends BaseTypographyProps {
 }
 
 const baseTypographyStyle = css<BaseTypographyProps>`
+  ${baseStyle}
   font-family: ${(props) => props.theme.typography.base.fontFamily};
   font-style: normal;
   font-weight: ${(props) => props.theme.typography.base.fontWeight};

@@ -2,6 +2,7 @@
 
 exports[`render button with end icon 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -12,6 +13,7 @@ exports[`render button with end icon 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -114,6 +116,7 @@ exports[`render button with end icon 1`] = `
 
 exports[`render button with start icon 1`] = `
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -124,6 +127,7 @@ exports[`render button with start icon 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -226,6 +230,7 @@ exports[`render button with start icon 1`] = `
 
 exports[`render primary brand color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -236,6 +241,7 @@ exports[`render primary brand color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -307,6 +313,7 @@ exports[`render primary brand color button 1`] = `
 
 exports[`render primary negative color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -317,6 +324,7 @@ exports[`render primary negative color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -388,6 +396,7 @@ exports[`render primary negative color button 1`] = `
 
 exports[`render primary plain color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -398,6 +407,7 @@ exports[`render primary plain color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -469,6 +479,7 @@ exports[`render primary plain color button 1`] = `
 
 exports[`render primary positive color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -479,6 +490,7 @@ exports[`render primary positive color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -550,6 +562,7 @@ exports[`render primary positive color button 1`] = `
 
 exports[`render secondary brand color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -560,6 +573,7 @@ exports[`render secondary brand color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -631,6 +645,7 @@ exports[`render secondary brand color button 1`] = `
 
 exports[`render secondary negative color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -641,6 +656,7 @@ exports[`render secondary negative color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -712,6 +728,7 @@ exports[`render secondary negative color button 1`] = `
 
 exports[`render secondary plain color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -722,6 +739,7 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -793,6 +811,7 @@ exports[`render secondary plain color button 1`] = `
 
 exports[`render secondary positive color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -803,6 +822,7 @@ exports[`render secondary positive color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -874,6 +894,7 @@ exports[`render secondary positive color button 1`] = `
 
 exports[`render text brand color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -884,6 +905,7 @@ exports[`render text brand color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -953,6 +975,7 @@ exports[`render text brand color button 1`] = `
 
 exports[`render text negative color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -963,6 +986,7 @@ exports[`render text negative color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1032,6 +1056,7 @@ exports[`render text negative color button 1`] = `
 
 exports[`render text plain color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1042,6 +1067,7 @@ exports[`render text plain color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1111,6 +1137,7 @@ exports[`render text plain color button 1`] = `
 
 exports[`render text positive color button 1`] = `
 .c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1121,6 +1148,7 @@ exports[`render text positive color button 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

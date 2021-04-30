@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, LayoutBoxProps } from '../Box';
+import { baseStyle } from '../shared/baseStyle';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { Typography, TypographyVariant } from '../Typography';
@@ -49,6 +50,7 @@ export interface OuterBaseCheckableProps extends BaseCheckableProps {
 }
 
 const HiddenInput = styled.input`
+  ${baseStyle}
   position: absolute;
   display: block;
   top: 0;

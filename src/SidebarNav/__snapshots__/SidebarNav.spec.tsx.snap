@@ -2,11 +2,13 @@
 
 exports[`Render multiple nav items 1`] = `
 .c0 {
+  box-sizing: border-box;
   border-left: 1px solid #00000020;
   padding-left: 16px;
 }
 
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -17,6 +19,7 @@ exports[`Render multiple nav items 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -67,6 +70,7 @@ exports[`Render multiple nav items 1`] = `
 }
 
 .c3 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -158,11 +162,13 @@ exports[`Render multiple nav items 1`] = `
 
 exports[`Render one nav item 1`] = `
 .c0 {
+  box-sizing: border-box;
   border-left: 1px solid #00000020;
   padding-left: 16px;
 }
 
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -173,6 +179,7 @@ exports[`Render one nav item 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

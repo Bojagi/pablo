@@ -2,6 +2,11 @@
 
 exports[`Render without value 1`] = `
 .c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,7 +15,6 @@ exports[`Render without value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-sizing: border-box;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
@@ -19,7 +23,7 @@ exports[`Render without value 1`] = `
   width: 300px;
 }
 
-.c1 {
+.c2 {
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -34,16 +38,16 @@ exports[`Render without value 1`] = `
 
 <div>
   <div
-    class=""
+    class="c0"
   >
     <div
-      class="c0"
+      class="c1"
       data-testid="pbl-input-wrapper"
       name="input"
       width="300"
     >
       <input
-        class="c1"
+        class="c2"
         data-testid="pbl-input"
         id="custom-id"
         value=""
@@ -54,7 +58,12 @@ exports[`Render without value 1`] = `
 `;
 
 exports[`Show error when an error message is given 1`] = `
-.c2 {
+.c0 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -66,7 +75,8 @@ exports[`Show error when an error message is given 1`] = `
   color: #F21D0D;
 }
 
-.c0 {
+.c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,7 +85,6 @@ exports[`Show error when an error message is given 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-sizing: border-box;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
@@ -85,11 +94,11 @@ exports[`Show error when an error message is given 1`] = `
   width: 300px;
 }
 
-.c0:focus {
+.c1:focus {
   box-shadow: 0 0 0 3px #FFE7E5;
 }
 
-.c1 {
+.c2 {
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -104,23 +113,23 @@ exports[`Show error when an error message is given 1`] = `
 
 <div>
   <div
-    class=""
+    class="c0"
   >
     <div
-      class="c0"
+      class="c1"
       data-testid="pbl-input-wrapper"
       name="input"
       width="300"
     >
       <input
-        class="c1"
+        class="c2"
         data-testid="pbl-input"
         id="custom-id"
         value="some"
       />
     </div>
     <p
-      class="c2"
+      class="c3"
       data-testid="pbl-input-infotext"
     >
       Something 
@@ -134,7 +143,12 @@ exports[`Show error when an error message is given 1`] = `
 `;
 
 exports[`Show infotext when available 1`] = `
-.c2 {
+.c0 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -146,7 +160,8 @@ exports[`Show infotext when available 1`] = `
   color: #00000080;
 }
 
-.c0 {
+.c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +170,6 @@ exports[`Show infotext when available 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-sizing: border-box;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
@@ -164,7 +178,7 @@ exports[`Show infotext when available 1`] = `
   width: 300px;
 }
 
-.c1 {
+.c2 {
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -179,23 +193,23 @@ exports[`Show infotext when available 1`] = `
 
 <div>
   <div
-    class=""
+    class="c0"
   >
     <div
-      class="c0"
+      class="c1"
       data-testid="pbl-input-wrapper"
       name="input"
       width="300"
     >
       <input
-        class="c1"
+        class="c2"
         data-testid="pbl-input"
         id="custom-id"
         value="some"
       />
     </div>
     <p
-      class="c2"
+      class="c3"
       data-testid="pbl-input-infotext"
     >
       Something that 
@@ -209,6 +223,11 @@ exports[`Show infotext when available 1`] = `
 
 exports[`Show label when available 1`] = `
 .c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -220,7 +239,8 @@ exports[`Show label when available 1`] = `
   margin-bottom: 6px;
 }
 
-.c1 {
+.c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +249,6 @@ exports[`Show label when available 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-sizing: border-box;
   border: 1px solid #00000040;
   border-radius: 8px;
   background-color: #ffffff;
@@ -238,7 +257,7 @@ exports[`Show label when available 1`] = `
   width: 300px;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -253,14 +272,14 @@ exports[`Show label when available 1`] = `
 
 <div>
   <div
-    class=""
+    class="c0"
   >
     <label
       data-testid="pbl-input-label"
       for="custom-id"
     >
       <p
-        class="c0"
+        class="c1"
       >
         Your 
         <strong>
@@ -269,13 +288,13 @@ exports[`Show label when available 1`] = `
       </p>
     </label>
     <div
-      class="c1"
+      class="c2"
       data-testid="pbl-input-wrapper"
       name="input"
       width="300"
     >
       <input
-        class="c2"
+        class="c3"
         data-testid="pbl-input"
         id="custom-id"
         value="some"

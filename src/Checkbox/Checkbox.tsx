@@ -6,13 +6,21 @@ import {
   BaseCheckableProps,
   CheckableBoxProps,
   CheckableHandleProps,
-} from '../BaseCheckable/BaseCheckable';
+} from '../shared/BaseCheckable';
 import { getCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
+
+const checkboxSize = css`
+  calc(${getComponentStyle('checkbox.handleSize.{size}')} + 2 * (${getComponentStyle(
+  'checkbox.innerPadding.{size}'
+)} + ${getComponentStyle('checkbox.borderWidth')}px))
+`;
 
 const CheckboxBox = styled.div<CheckableBoxProps>`
+  ${baseStyle}
   position: relative;
-  width: ${getComponentStyle('checkbox.handleSize.{size}')};
-  height: ${getComponentStyle('checkbox.handleSize.{size}')};
+  width: ${checkboxSize};
+  height: ${checkboxSize};
   border-radius: ${getComponentStyle('checkbox.outerBorderRadius')};
   padding: ${getComponentStyle('checkbox.innerPadding.{size}')};
   background-color: ${getComponentStyle('checkbox.backgroundColor')};
@@ -33,6 +41,7 @@ const CheckboxBox = styled.div<CheckableBoxProps>`
 `;
 
 const CheckboxHandle = styled.div<CheckableHandleProps>`
+  ${baseStyle}
   width: ${getComponentStyle('checkbox.handleSize.{size}')};
   height: ${getComponentStyle('checkbox.handleSize.{size}')};
   transform: scale(${(props: any) => (props.checked ? 1 : 0)});

@@ -1,6 +1,6 @@
-import { TypographyVariant } from '../../Typography';
-import { getColor, getSpacing } from '../../styleHelpers';
-import { Style } from '../types';
+import { TypographyVariant } from '../Typography';
+import { getColor, getSpacing } from '../styleHelpers';
+import { Style } from '../theme/types';
 
 export interface CheckableBaseStyles {
   innerPadding: {

@@ -1,4 +1,4 @@
-import { inputBaseStyles, InputBaseStyles } from '../theme/baseStyles/inputBaseStyles';
+import { inputBaseStyles, InputBaseStyles } from '../shared/inputBaseStyles';
 import { Style } from '../theme/types';
 import { getSpacing } from '../styleHelpers';
 

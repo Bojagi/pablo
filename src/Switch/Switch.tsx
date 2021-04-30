@@ -6,13 +6,21 @@ import {
   BaseCheckableProps,
   CheckableBoxProps,
   CheckableHandleProps,
-} from '../BaseCheckable/BaseCheckable';
+} from '../shared/BaseCheckable';
 import { getCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
+
+const switchBoxSize = (multiplier) => css`
+  calc(${multiplier} * ${getComponentStyle('switch.handleSize.{size}')} + 2 * (${getComponentStyle(
+  'switch.innerPadding.{size}'
+)} + ${getComponentStyle('switch.borderWidth')}px))
+`;
 
 const SwitchBox = styled.div<CheckableBoxProps>`
+  ${baseStyle}
   position: relative;
-  width: calc(2 * ${(props) => getComponentStyle('switch.handleSize.{size}')(props)});
-  height: ${(props) => getComponentStyle('switch.handleSize.{size}')(props)};
+  width: ${switchBoxSize(2)};
+  height: ${switchBoxSize(1)};
   border-radius: calc(
     (
         ${(props) => getComponentStyle('switch.handleSize.{size}')(props)} + 2 *
@@ -39,6 +47,7 @@ const SwitchBox = styled.div<CheckableBoxProps>`
 `;
 
 const SwitchHandle = styled.div<CheckableHandleProps>`
+  ${baseStyle}
   width: ${getComponentStyle('switch.handleSize.{size}')};
   height: ${getComponentStyle('switch.handleSize.{size}')};
   transform: translateX(

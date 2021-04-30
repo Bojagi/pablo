@@ -1,6 +1,6 @@
 import { getColor } from '../styleHelpers/getColor';
 import { Style } from '../theme/types';
-import { checkableBaseStyles, CheckableBaseStyles } from '../theme/baseStyles/checkableBaseStyles';
+import { checkableBaseStyles, CheckableBaseStyles } from '../shared/checkableBaseStyles';
 
 export interface CheckboxStyles extends CheckableBaseStyles {
   handleColor: Style;

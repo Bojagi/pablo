@@ -10,13 +10,13 @@ exports[`Remove mount point on unmount 1`] = `
 
 exports[`Render closed modal with just a content element 1`] = `
 .c0 {
+  box-sizing: border-box;
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: 1000;
   left: 0;
   top: 0;
-  box-sizing: border-box;
   overflow: scroll;
   background-color: rgba(0,0,0,0.6);
   display: -webkit-box;
@@ -38,6 +38,7 @@ exports[`Render closed modal with just a content element 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   -webkit-transform: translateY(60px);
   -ms-transform: translateY(60px);
   transform: translateY(60px);
@@ -53,6 +54,7 @@ exports[`Render closed modal with just a content element 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
@@ -90,6 +92,7 @@ exports[`Render closed modal with just a content element 1`] = `
 
 exports[`Render with additional panes 1`] = `
 .c0 {
+  box-sizing: border-box;
   -webkit-transition: -webkit-transform 0.3s;
   -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
@@ -102,6 +105,7 @@ exports[`Render with additional panes 1`] = `
 }
 
 .c1 {
+  box-sizing: border-box;
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
@@ -109,6 +113,7 @@ exports[`Render with additional panes 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   margin-top: 12px;
 }
 
@@ -169,6 +174,7 @@ exports[`Render with additional panes 1`] = `
 
 exports[`Render with title 1`] = `
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,6 +186,7 @@ exports[`Render with title 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -190,6 +197,7 @@ exports[`Render with title 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
@@ -221,6 +229,7 @@ exports[`Render with title 1`] = `
 
 exports[`Render with title and topRightItem 1`] = `
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -232,6 +241,7 @@ exports[`Render with title and topRightItem 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -242,6 +252,7 @@ exports[`Render with title and topRightItem 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;
@@ -276,6 +287,7 @@ exports[`Render with title and topRightItem 1`] = `
 
 exports[`Render with topRightItem 1`] = `
 .c1 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -287,6 +299,7 @@ exports[`Render with topRightItem 1`] = `
 }
 
 .c0 {
+  box-sizing: border-box;
   border-radius: 12px;
   background-color: #fafafa;
   padding: 12px;

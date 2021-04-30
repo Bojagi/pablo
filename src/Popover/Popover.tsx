@@ -17,6 +17,7 @@ import { setRef } from '../utils/setRef';
 import { useReRenderForwardRef } from '../utils/useForwardRef';
 import { InOutAnimationProps, NoAnimation } from '../animation';
 import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
+import { baseStyle } from '../shared/baseStyle';
 
 export interface PopoverProps {
   children: ComponentElement<any, any>;
@@ -34,6 +35,7 @@ export interface PopoverProps {
 }
 
 const PopoverWrapper = styled.div`
+  ${baseStyle}
   z-index: 1100;
 `;
 

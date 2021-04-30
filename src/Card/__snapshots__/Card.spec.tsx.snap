@@ -2,6 +2,7 @@
 
 exports[`Render card 1`] = `
 .c0 {
+  box-sizing: border-box;
   padding: 16px;
   background-color: #ffffff;
   color: #000000;

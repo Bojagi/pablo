@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { Box } from '../Box';
 import { Popover, PopoverProps } from '../Popover/Popover';
 import { PopoverArrow } from '../PopoverArrow/PopoverArrow';
+import { baseStyle } from '../shared/baseStyle';
 import { getColor } from '../styleHelpers';
 import { BaseProps } from '../types';
 import { useCustomStyles } from '../utils/useCustomStyles';
@@ -23,6 +24,7 @@ export interface MenuProps extends BaseProps<MenuStyleProperties> {
 }
 
 const MenuBox = styled(Box)`
+  ${baseStyle}
   background-color: ${getColor('common', 'white')};
   border-radius: 4px;
   max-width: 400px;

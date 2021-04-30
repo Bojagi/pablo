@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
+import { baseStyle } from '../shared/baseStyle';
 import { BaseProps } from '../types';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { ImageStyleProperties } from './styles';
@@ -17,6 +18,7 @@ export interface ImageProps
 }
 
 export const Image = styled.img<ImageProps>`
+  ${baseStyle}
   ${layoutInterpolationFn}
   ${getCustomStyles('image.styles', 'root')}
 `;

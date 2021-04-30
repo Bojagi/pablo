@@ -2,9 +2,10 @@ import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
-import { BaseInput, InnerInputProps, InputVariant } from '../BaseInput/BaseInput';
+import { BaseInput, InnerInputProps, InputVariant } from '../shared/BaseInput';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { getCustomStyles } from '../utils/useCustomStyles';
+import { baseStyle } from '../shared/baseStyle';
 
 export interface InputProps extends LayoutBoxProps {
   id?: string;
@@ -20,7 +21,7 @@ export interface InputProps extends LayoutBoxProps {
 }
 
 const InnerInput = styled.input<InnerInputProps>`
-  box-sizing: border-box;
+  ${baseStyle}
   flex-grow: 1;
   border: 0;
   padding: ${getComponentStyle('input.padding')};

@@ -7,16 +7,23 @@ exports[`Click on menu item 1`] = `
       Content
     </div>
   </div>
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+}
+
+.c0 {
+  box-sizing: border-box;
   z-index: 1100;
 }
 
-.c5 {
+.c6 {
+  box-sizing: border-box;
   width: 10px;
   height: 10px;
 }
 
-.c5:after {
+.c6:after {
+  box-sizing: border-box;
   content: '';
   position: absolute;
   top: -10;
@@ -26,41 +33,42 @@ exports[`Click on menu item 1`] = `
   border-bottom: 10px solid white;
 }
 
-*[data-popper-placement^='top'] .c4 {
+*[data-popper-placement^='top'] .c5 {
   bottom: -10px;
 }
 
-*[data-popper-placement^='top'] .c4:after {
+*[data-popper-placement^='top'] .c5:after {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-*[data-popper-placement^='bottom'] .c4 {
+*[data-popper-placement^='bottom'] .c5 {
   top: -10px;
 }
 
-*[data-popper-placement^='left'] .c4 {
+*[data-popper-placement^='left'] .c5 {
   right: -10px;
 }
 
-*[data-popper-placement^='left'] .c4:after {
+*[data-popper-placement^='left'] .c5:after {
   -webkit-transform: rotate(90deg) scaleX(0.75);
   -ms-transform: rotate(90deg) scaleX(0.75);
   transform: rotate(90deg) scaleX(0.75);
 }
 
-*[data-popper-placement^='right'] .c4 {
+*[data-popper-placement^='right'] .c5 {
   left: -10px;
 }
 
-*[data-popper-placement^='right'] .c4:after {
+*[data-popper-placement^='right'] .c5:after {
   -webkit-transform: rotate(-90deg) scaleX(0.75);
   -ms-transform: rotate(-90deg) scaleX(0.75);
   transform: rotate(-90deg) scaleX(0.75);
 }
 
-.c1 {
+.c2 {
+  box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 4px;
   max-width: 400px;
@@ -69,7 +77,8 @@ exports[`Click on menu item 1`] = `
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
-.c3 {
+.c4 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -79,7 +88,8 @@ exports[`Click on menu item 1`] = `
   margin-bottom: 0;
 }
 
-.c2 {
+.c3 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -109,20 +119,20 @@ exports[`Click on menu item 1`] = `
   padding: 4px;
 }
 
-.c2:not(:disabled) {
+.c3:not(:disabled) {
   cursor: pointer;
 }
 
-.c2:disabled {
+.c3:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c2:hover {
+.c3:hover {
   background-color: #f0f0f0;
 }
 
-.c2:active {
+.c3:active {
   background-color: #e0e0e0;
 }
 
@@ -142,24 +152,24 @@ exports[`Click on menu item 1`] = `
       >
         <div>
           <div
-            class="c1"
+            class="c1 c2"
           >
             <div
-              class="c2"
+              class="c3"
               data-testid="pbl-menu-item"
             >
               <span
-                class="c3"
+                class="c4"
               >
                 Hello
               </span>
             </div>
             <div
-              class="c2"
+              class="c3"
               data-testid="pbl-menu-item"
             >
               <span
-                class="c3"
+                class="c4"
               >
                 World
               </span>
@@ -167,7 +177,7 @@ exports[`Click on menu item 1`] = `
           </div>
         </div>
         <div
-          class="c4 c5"
+          class="c5 c6"
           color="white"
           size="10"
           style="position: absolute; left: 0px; transform: translate(10px, 0px);"
@@ -198,16 +208,23 @@ exports[`Render open Menu 1`] = `
       Content
     </div>
   </div>
-  .c0 {
+  .c1 {
+  box-sizing: border-box;
+}
+
+.c0 {
+  box-sizing: border-box;
   z-index: 1100;
 }
 
-.c5 {
+.c6 {
+  box-sizing: border-box;
   width: 10px;
   height: 10px;
 }
 
-.c5:after {
+.c6:after {
+  box-sizing: border-box;
   content: '';
   position: absolute;
   top: -10;
@@ -217,41 +234,42 @@ exports[`Render open Menu 1`] = `
   border-bottom: 10px solid white;
 }
 
-*[data-popper-placement^='top'] .c4 {
+*[data-popper-placement^='top'] .c5 {
   bottom: -10px;
 }
 
-*[data-popper-placement^='top'] .c4:after {
+*[data-popper-placement^='top'] .c5:after {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-*[data-popper-placement^='bottom'] .c4 {
+*[data-popper-placement^='bottom'] .c5 {
   top: -10px;
 }
 
-*[data-popper-placement^='left'] .c4 {
+*[data-popper-placement^='left'] .c5 {
   right: -10px;
 }
 
-*[data-popper-placement^='left'] .c4:after {
+*[data-popper-placement^='left'] .c5:after {
   -webkit-transform: rotate(90deg) scaleX(0.75);
   -ms-transform: rotate(90deg) scaleX(0.75);
   transform: rotate(90deg) scaleX(0.75);
 }
 
-*[data-popper-placement^='right'] .c4 {
+*[data-popper-placement^='right'] .c5 {
   left: -10px;
 }
 
-*[data-popper-placement^='right'] .c4:after {
+*[data-popper-placement^='right'] .c5:after {
   -webkit-transform: rotate(-90deg) scaleX(0.75);
   -ms-transform: rotate(-90deg) scaleX(0.75);
   transform: rotate(-90deg) scaleX(0.75);
 }
 
-.c1 {
+.c2 {
+  box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 4px;
   max-width: 400px;
@@ -260,7 +278,8 @@ exports[`Render open Menu 1`] = `
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
 
-.c3 {
+.c4 {
+  box-sizing: border-box;
   font-family: "IBM Plex Sans",sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -270,7 +289,8 @@ exports[`Render open Menu 1`] = `
   margin-bottom: 0;
 }
 
-.c2 {
+.c3 {
+  box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -300,20 +320,20 @@ exports[`Render open Menu 1`] = `
   padding: 4px;
 }
 
-.c2:not(:disabled) {
+.c3:not(:disabled) {
   cursor: pointer;
 }
 
-.c2:disabled {
+.c3:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c2:hover {
+.c3:hover {
   background-color: #f0f0f0;
 }
 
-.c2:active {
+.c3:active {
   background-color: #e0e0e0;
 }
 
@@ -333,24 +353,24 @@ exports[`Render open Menu 1`] = `
       >
         <div>
           <div
-            class="c1"
+            class="c1 c2"
           >
             <div
-              class="c2"
+              class="c3"
               data-testid="pbl-menu-item"
             >
               <span
-                class="c3"
+                class="c4"
               >
                 Hello
               </span>
             </div>
             <div
-              class="c2"
+              class="c3"
               data-testid="pbl-menu-item"
             >
               <span
-                class="c3"
+                class="c4"
               >
                 World
               </span>
@@ -358,7 +378,7 @@ exports[`Render open Menu 1`] = `
           </div>
         </div>
         <div
-          class="c4 c5"
+          class="c5 c6"
           color="white"
           size="10"
           style="position: absolute; left: 0px; transform: translate(10px, 0px);"

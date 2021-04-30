@@ -2,6 +2,7 @@
 
 exports[`Render Link with the right styles 1`] = `
 .c0 {
+  box-sizing: border-box;
   color: #6A50F2;
   -webkit-text-decoration: none;
   text-decoration: none;
