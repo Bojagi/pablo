@@ -116,7 +116,7 @@ test('Add multiple message to toast stack', () => {
   expect(getAllByTestId('pbl-toastcard-description')[1]).toHaveTextContent('Something happened!');
 });
 
-test('Hide message after duration and animation', () => {
+test('Hide message after duration and animation', async () => {
   const { getByTestId } = renderComponent({
     duration: 100,
     type: 'success',
@@ -126,7 +126,14 @@ test('Hide message after duration and animation', () => {
 
   act(() => {
     fireEvent.click(getByTestId('add-toast'));
-    jest.advanceTimersByTime(399);
+    // introduction animation (300ms) plus 100ms visibility
+    jest.advanceTimersByTime(400);
+  });
+
+  // Trigger leaving animation by waiting for RAF
+  await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
+  act(() => {
+    jest.advanceTimersByTime(299);
   });
 
   // Should still be there as the animation takes 300ms
@@ -140,7 +147,7 @@ test('Hide message after duration and animation', () => {
   expect(getByTestId('pbl-toaststack').childNodes).toHaveLength(0);
 });
 
-test('Hide message after default duration and animation', () => {
+test('Hide message after default duration and animation', async () => {
   const { getByTestId } = renderComponent({
     type: 'success',
     closable: true,
@@ -150,6 +157,12 @@ test('Hide message after default duration and animation', () => {
   act(() => {
     fireEvent.click(getByTestId('add-toast'));
     jest.advanceTimersByTime(3300);
+  });
+
+  // Trigger leaving animation by waiting for RAF
+  await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
+  act(() => {
+    jest.advanceTimersByTime(300);
   });
 
   expect(getByTestId('pbl-toaststack').childNodes).toHaveLength(0);
@@ -175,7 +188,7 @@ test('Hide message after duration and animation with component being unmounted i
   });
 });
 
-test('Should not hide message after time when duration is 0', () => {
+test('Should not hide message after time when duration is 0', async () => {
   const { getByTestId } = renderComponent({
     duration: 0,
     type: 'success',
@@ -191,8 +204,12 @@ test('Should not hide message after time when duration is 0', () => {
   expect(getByTestId('pbl-toastcard-title')).toHaveTextContent('Hello there');
   expect(getByTestId('pbl-toastcard-description')).toHaveTextContent('Something happened!');
 
+  // Trigger leaving animation by clicking and waiting for RAF
   act(() => {
     fireEvent.click(getByTestId('pbl-toastcard-closebtn'));
+  });
+  await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
+  act(() => {
     jest.advanceTimersByTime(299);
   });
 

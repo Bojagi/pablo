@@ -5,6 +5,8 @@ import useResizeObserver from 'use-resize-observer';
 import { useForwardRef } from '../utils/useForwardRef';
 import { useMountedRef } from '../utils/useMountedRef';
 
+const requestCallback = window.requestIdleCallback || requestAnimationFrame || setTimeout;
+
 export interface InnerInOutAnimationProps {
   state: TransitionStatus;
   duration: number;
@@ -54,7 +56,7 @@ const InOutAnimation = forwardRef<HTMLDivElement, InOutAnimationProps>(
     const { width, height } = useResizeObserver<HTMLDivElement>({ ref: innerRef });
 
     React.useEffect(() => {
-      setTimeout(() => mountedRef.current && setAnimationIn(visible));
+      requestCallback(() => mountedRef.current && setAnimationIn(visible));
     }, [visible, mountedRef]);
 
     return (
