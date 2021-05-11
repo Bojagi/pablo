@@ -18,6 +18,17 @@ test.each([
     },
   ],
   [
+    'primaryInverted',
+    'brand',
+    {
+      color: defaultTheme.colors.brand.main,
+      backgroundColor: defaultTheme.colors.common.white,
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.brand.lightest,
+      hoverBorderColor: defaultTheme.colors.brand.lightest,
+    },
+  ],
+  [
     'secondary',
     'brand',
     {
@@ -29,6 +40,17 @@ test.each([
     },
   ],
   [
+    'secondaryInverted',
+    'brand',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.brand.dark,
+      hoverBorderColor: defaultTheme.colors.common.white,
+    },
+  ],
+  [
     'text',
     'brand',
     {
@@ -36,6 +58,17 @@ test.each([
       backgroundColor: 'transparent',
       borderColor: undefined,
       hoverBackgroundColor: defaultTheme.colors.brand.lightest,
+      hoverBorderColor: undefined,
+    },
+  ],
+  [
+    'textInverted',
+    'brand',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: undefined,
+      hoverBackgroundColor: defaultTheme.colors.brand.dark,
       hoverBorderColor: undefined,
     },
   ],
@@ -51,6 +84,17 @@ test.each([
     },
   ],
   [
+    'primaryInverted',
+    'plain',
+    {
+      color: defaultTheme.colors.common.black,
+      backgroundColor: defaultTheme.colors.common.white,
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.gray['50'],
+      hoverBorderColor: defaultTheme.colors.gray['50'],
+    },
+  ],
+  [
     'secondary',
     'plain',
     {
@@ -62,6 +106,17 @@ test.each([
     },
   ],
   [
+    'secondaryInverted',
+    'plain',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.gray['800'],
+      hoverBorderColor: defaultTheme.colors.common.white,
+    },
+  ],
+  [
     'text',
     'plain',
     {
@@ -69,6 +124,17 @@ test.each([
       backgroundColor: 'transparent',
       borderColor: undefined,
       hoverBackgroundColor: defaultTheme.colors.gray['50'],
+      hoverBorderColor: undefined,
+    },
+  ],
+  [
+    'textInverted',
+    'plain',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: undefined,
+      hoverBackgroundColor: defaultTheme.colors.gray['800'],
       hoverBorderColor: undefined,
     },
   ],
@@ -84,6 +150,17 @@ test.each([
     },
   ],
   [
+    'primaryInverted',
+    'negative',
+    {
+      color: defaultTheme.colors.negative.main,
+      backgroundColor: defaultTheme.colors.common.white,
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.negative.lightest,
+      hoverBorderColor: defaultTheme.colors.negative.lightest,
+    },
+  ],
+  [
     'secondary',
     'negative',
     {
@@ -95,6 +172,17 @@ test.each([
     },
   ],
   [
+    'secondaryInverted',
+    'negative',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.negative.dark,
+      hoverBorderColor: defaultTheme.colors.common.white,
+    },
+  ],
+  [
     'text',
     'negative',
     {
@@ -102,6 +190,17 @@ test.each([
       backgroundColor: 'transparent',
       borderColor: undefined,
       hoverBackgroundColor: defaultTheme.colors.negative.lightest,
+      hoverBorderColor: undefined,
+    },
+  ],
+  [
+    'textInverted',
+    'negative',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: undefined,
+      hoverBackgroundColor: defaultTheme.colors.negative.dark,
       hoverBorderColor: undefined,
     },
   ],
@@ -117,6 +216,17 @@ test.each([
     },
   ],
   [
+    'primaryInverted',
+    'positive',
+    {
+      color: defaultTheme.colors.positive.main,
+      backgroundColor: defaultTheme.colors.common.white,
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.positive.lightest,
+      hoverBorderColor: defaultTheme.colors.positive.lightest,
+    },
+  ],
+  [
     'secondary',
     'positive',
     {
@@ -128,6 +238,17 @@ test.each([
     },
   ],
   [
+    'secondaryInverted',
+    'positive',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: defaultTheme.colors.common.white,
+      hoverBackgroundColor: defaultTheme.colors.positive.dark,
+      hoverBorderColor: defaultTheme.colors.common.white,
+    },
+  ],
+  [
     'text',
     'positive',
     {
@@ -135,6 +256,17 @@ test.each([
       backgroundColor: 'transparent',
       borderColor: undefined,
       hoverBackgroundColor: defaultTheme.colors.positive.lightest,
+      hoverBorderColor: undefined,
+    },
+  ],
+  [
+    'textInverted',
+    'positive',
+    {
+      color: defaultTheme.colors.common.white,
+      backgroundColor: 'transparent',
+      borderColor: undefined,
+      hoverBackgroundColor: defaultTheme.colors.positive.dark,
       hoverBorderColor: undefined,
     },
   ],

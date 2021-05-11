@@ -3,6 +3,7 @@ export const getComponentStyle = (
   transformFn: (value: unknown) => string | number = (v) => v as string
 ) => ({ theme, ...props }) => {
   const interpolatedPath = path.replace(/\{(.*?)\}/g, (_, val) => props[val] || val);
+
   const value = interpolatedPath
     .split('.')
     .reduce((acc, key) => (acc && acc[key]) || undefined, theme.componentStyles || {});
