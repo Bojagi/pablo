@@ -10,15 +10,11 @@ export default {
   title: 'Button',
 };
 
-const ButtonBox = ({ inverted, invertedBgColor, children }) => {
-  console.log('invertedBgColor', invertedBgColor);
-
-  return (
-    <Box bgColor={inverted ? invertedBgColor : undefined} p={inverted ? 5 : 0}>
-      {children}
-    </Box>
-  );
-};
+const ButtonBox = ({ inverted, invertedBgColor, children }) => (
+  <Box bgColor={inverted ? invertedBgColor : undefined} p={inverted ? 5 : 0}>
+    {children}
+  </Box>
+);
 
 const SetOfButtons = ({ inverted, ...args }) => (
   <Flex
