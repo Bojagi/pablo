@@ -560,6 +560,338 @@ exports[`render primary positive color button 1`] = `
 </div>
 `;
 
+exports[`render primaryInverted brand color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #6A50F2;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c0:hover:not(:disabled) {
+  background: #EBE7FF;
+  border-color: #EBE7FF;
+}
+
+.c0:active:not(:disabled) {
+  color: #6A50F2;
+  background: #D6CEFF;
+  border-color: #D6CEFF;
+}
+
+<div>
+  <button
+    class="c0"
+    color="brand"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render primaryInverted negative color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #F21D0D;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #FFE7E5;
+}
+
+.c0:hover:not(:disabled) {
+  background: #FFE7E5;
+  border-color: #FFE7E5;
+}
+
+.c0:active:not(:disabled) {
+  color: #F21D0D;
+  background: #FFCFCC;
+  border-color: #FFCFCC;
+}
+
+<div>
+  <button
+    class="c0"
+    color="negative"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render primaryInverted plain color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000000;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #f0f0f0;
+}
+
+.c0:hover:not(:disabled) {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+.c0:active:not(:disabled) {
+  color: #000000;
+  background: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+<div>
+  <button
+    class="c0"
+    color="plain"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render primaryInverted positive color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #38C765;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #DFF6E6;
+}
+
+.c0:hover:not(:disabled) {
+  background: #DFF6E6;
+  border-color: #DFF6E6;
+}
+
+.c0:active:not(:disabled) {
+  color: #38C765;
+  background: #BBECCB;
+  border-color: #BBECCB;
+}
+
+<div>
+  <button
+    class="c0"
+    color="positive"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
 exports[`render secondary brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
@@ -892,6 +1224,338 @@ exports[`render secondary positive color button 1`] = `
 </div>
 `;
 
+exports[`render secondaryInverted brand color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #4129BD;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #281683;
+}
+
+<div>
+  <button
+    class="c0"
+    color="brand"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render secondaryInverted negative color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #FFE7E5;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #CA271B;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #871A12;
+}
+
+<div>
+  <button
+    class="c0"
+    color="negative"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render secondaryInverted plain color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #f0f0f0;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #303030;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #606060;
+}
+
+<div>
+  <button
+    class="c0"
+    color="plain"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render secondaryInverted positive color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #DFF6E6;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #2FB85A;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #108B36;
+}
+
+<div>
+  <button
+    class="c0"
+    color="positive"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
 exports[`render text brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
@@ -1199,6 +1863,330 @@ exports[`render text positive color button 1`] = `
   color: #108B36;
   border-color: transparent;
   background: #BBECCB;
+}
+
+<div>
+  <button
+    class="c0"
+    color="positive"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render textInverted brand color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #EBE7FF;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  background: #4129BD;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: transparent;
+  background: #281683;
+}
+
+<div>
+  <button
+    class="c0"
+    color="brand"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render textInverted negative color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #FFE7E5;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  background: #CA271B;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: transparent;
+  background: #871A12;
+}
+
+<div>
+  <button
+    class="c0"
+    color="negative"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render textInverted plain color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #f0f0f0;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  background: #303030;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: transparent;
+  background: #606060;
+}
+
+<div>
+  <button
+    class="c0"
+    color="plain"
+    data-testid="pbl-button"
+  >
+    <span
+      class="c1"
+    >
+      Hello
+    </span>
+  </button>
+</div>
+`;
+
+exports[`render textInverted positive color button 1`] = `
+.c1 {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.29em;
+  margin-bottom: 0;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.c0:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px #DFF6E6;
+}
+
+.c0:hover:not(:disabled) {
+  color: #ffffff;
+  background: #2FB85A;
+}
+
+.c0:active:not(:disabled) {
+  color: #ffffff;
+  border-color: transparent;
+  background: #108B36;
 }
 
 <div>

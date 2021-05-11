@@ -8,7 +8,13 @@ import { ButtonTypography } from '../Typography';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { ButtonStyleProperties } from './styles';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'text';
+export type ButtonVariant =
+  | 'primary'
+  | 'primaryInverted'
+  | 'secondary'
+  | 'secondaryInverted'
+  | 'text'
+  | 'textInverted';
 export type ButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
 
 export interface InnerButtonProps extends ButtonBaseProps, BaseProps<ButtonStyleProperties> {
@@ -39,23 +45,23 @@ const ButtonPrimary = styled.button<InnerButtonProps>`
     css`
       width: 100%;
     `}
-  color: ${getComponentStyle('button.{color}.primary.color')};
-  background: ${getComponentStyle('button.{color}.primary.backgroundColor')};
-  border-color: ${getComponentStyle('button.{color}.primary.borderColor')};
+  color: ${getComponentStyle('button.{color}.{variant}.color')};
+  background: ${getComponentStyle('button.{color}.{variant}.backgroundColor')};
+  border-color: ${getComponentStyle('button.{color}.{variant}.borderColor')};
 
   &:focus {
     ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
   &:hover:not(:disabled) {
-    background: ${getComponentStyle('button.{color}.primary.hover.backgroundColor')};
-    border-color: ${getComponentStyle('button.{color}.primary.hover.borderColor')};
+    background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
+    border-color: ${getComponentStyle('button.{color}.{variant}.hover.borderColor')};
   }
 
   &:active:not(:disabled) {
-    color: ${getComponentStyle('button.{color}.primary.active.color')};
-    background: ${getComponentStyle('button.{color}.primary.active.backgroundColor')};
-    border-color: ${getComponentStyle('button.{color}.primary.active.borderColor')};
+    color: ${getComponentStyle('button.{color}.{variant}.active.color')};
+    background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
+    border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
   }
 
   ${(props) => props.cssStyles}
@@ -69,23 +75,23 @@ const ButtonSecondary = styled.button<InnerButtonProps>`
     css`
       width: 100%;
     `}
-  color: ${getComponentStyle('button.{color}.secondary.color')};
-  border-color: ${getComponentStyle('button.{color}.secondary.borderColor')};
+  color: ${getComponentStyle('button.{color}.{variant}.color')};
+  border-color: ${getComponentStyle('button.{color}.{variant}.borderColor')};
 
   &:focus {
     ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
   &:hover:not(:disabled) {
-    color: ${getComponentStyle('button.{color}.secondary.hover.color')};
-    border-color: ${getComponentStyle('button.{color}.secondary.hover.borderColor')};
-    background: ${getComponentStyle('button.{color}.secondary.hover.backgroundColor')};
+    color: ${getComponentStyle('button.{color}.{variant}.hover.color')};
+    border-color: ${getComponentStyle('button.{color}.{variant}.hover.borderColor')};
+    background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
   }
 
   &:active:not(:disabled) {
-    color: ${getComponentStyle('button.{color}.secondary.active.color')};
-    border-color: ${getComponentStyle('button.{color}.secondary.active.borderColor')};
-    background: ${getComponentStyle('button.{color}.secondary.active.backgroundColor')};
+    color: ${getComponentStyle('button.{color}.{variant}.active.color')};
+    border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
+    background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
   }
 
   ${(props) => props.cssStyles}
@@ -99,21 +105,21 @@ const ButtonText = styled.button<InnerButtonProps>`
     css`
       width: 100%;
     `}
-  color: ${getComponentStyle('button.{color}.text.color')};
+  color: ${getComponentStyle('button.{color}.{variant}.color')};
 
   &:focus {
     ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
   &:hover:not(:disabled) {
-    color: ${getComponentStyle('button.{color}.text.hover.color')};
-    background: ${getComponentStyle('button.{color}.text.hover.backgroundColor')};
+    color: ${getComponentStyle('button.{color}.{variant}.hover.color')};
+    background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
   }
 
   &:active:not(:disabled) {
-    color: ${getComponentStyle('button.{color}.text.active.color')};
-    border-color: ${getComponentStyle('button.{color}.text.active.borderColor')};
-    background: ${getComponentStyle('button.{color}.text.active.backgroundColor')};
+    color: ${getComponentStyle('button.{color}.{variant}.active.color')};
+    border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
+    background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
   }
   ${(props) => props.cssStyles}
 `;
@@ -142,8 +148,11 @@ const IconBox = styled.div<IconBoxProps>`
 
 const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
   primary: ButtonPrimary,
+  primaryInverted: ButtonPrimary,
   secondary: ButtonSecondary,
+  secondaryInverted: ButtonSecondary,
   text: ButtonText,
+  textInverted: ButtonText,
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
@@ -164,10 +173,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
     ref
   ) => {
     const InnerButton = buttonMap[variant] || ButtonPrimary;
+    const isKnownVariant = Object.keys(buttonMap).indexOf(variant) > -1;
     const getCustomStyles = useCustomStyles('button.styles', customStyles);
     return (
       <InnerButton
         data-testid="pbl-button"
+        variant={isKnownVariant ? variant : 'primary'}
         {...props}
         ref={ref}
         size={size}

@@ -10,44 +10,58 @@ export default {
   title: 'Button',
 };
 
-const SetOfButtons = (args) => (
+const ButtonBox = ({ inverted, invertedBgColor, children }) => (
+  <Box bgColor={inverted ? invertedBgColor : undefined} p={inverted ? 5 : 0}>
+    {children}
+  </Box>
+);
+
+const SetOfButtons = ({ inverted, ...args }) => (
   <Flex
     mx={-4}
     mb={4}
     width={args.fullWidth ? 400 : 0}
     flexDirection={args.fullWidth ? 'column' : 'row'}
   >
-    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="brand">
-      Brand
-    </Button>
-    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="plain">
-      Plain
-    </Button>
-    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="positive">
-      Positive
-    </Button>
-    <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="negative">
-      Negative
-    </Button>
+    <ButtonBox inverted={inverted} invertedBgColor="brand.main">
+      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="brand">
+        Brand
+      </Button>
+    </ButtonBox>
+    <ButtonBox inverted={inverted} invertedBgColor="common.black">
+      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="plain">
+        Plain
+      </Button>
+    </ButtonBox>
+    <ButtonBox inverted={inverted} invertedBgColor="positive.main">
+      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="positive">
+        Positive
+      </Button>
+    </ButtonBox>
+    <ButtonBox inverted={inverted} invertedBgColor="negative.main">
+      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="negative">
+        Negative
+      </Button>
+    </ButtonBox>
   </Flex>
 );
 
-const baseStory = (args) => (
+const baseStory = ({ inverted, ...args }) => (
   <>
     <Subtitle>Small</Subtitle>
     <Box mb={5}>
-      <SetOfButtons size="small" {...args} />
-      <SetOfButtons size="small" disabled {...args} />
+      <SetOfButtons inverted={inverted} size="small" {...args} />
+      <SetOfButtons inverted={inverted} size="small" disabled {...args} />
     </Box>
     <Subtitle>Medium</Subtitle>
     <Box mb={5}>
-      <SetOfButtons size="medium" {...args} />
-      <SetOfButtons size="medium" disabled {...args} />
+      <SetOfButtons inverted={inverted} size="medium" {...args} />
+      <SetOfButtons inverted={inverted} size="medium" disabled {...args} />
     </Box>
     <Subtitle>Large</Subtitle>
     <Box mb={5}>
-      <SetOfButtons size="large" {...args} />
-      <SetOfButtons size="large" disabled {...args} />
+      <SetOfButtons inverted={inverted} size="large" {...args} />
+      <SetOfButtons inverted={inverted} size="large" disabled {...args} />
     </Box>
   </>
 );
@@ -57,14 +71,32 @@ Primary.args = {
   variant: 'primary',
 };
 
+export const PrimaryInverted = baseStory.bind(null);
+PrimaryInverted.args = {
+  variant: 'primaryInverted',
+  inverted: true,
+};
+
 export const Secondary = baseStory.bind(null);
 Secondary.args = {
   variant: 'secondary',
 };
 
+export const SecondaryInverted = baseStory.bind(null);
+SecondaryInverted.args = {
+  variant: 'secondaryInverted',
+  inverted: true,
+};
+
 export const Text = baseStory.bind(null);
 Text.args = {
   variant: 'text',
+};
+
+export const TextInverted = baseStory.bind(null);
+TextInverted.args = {
+  variant: 'textInverted',
+  inverted: true,
 };
 
 export const PrimaryWithIcon = baseStory.bind(null);
