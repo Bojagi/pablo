@@ -95,6 +95,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.8.4",
+    "@react-hook/media-query": "^1.1.1",
     "@styled-system/border": "^5.1.5",
     "@styled-system/core": "^5.1.2",
     "@styled-system/flexbox": "^5.1.2",

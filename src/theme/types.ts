@@ -17,6 +17,7 @@ import { InputStyles } from '../Input/styles';
 import { Colors } from './colors';
 import { Spacing } from './spacing';
 import { Typography } from './typography';
+import { Breakpoints } from './breakpoints';
 import { TextAreaStyles } from '../TextArea/styles';
 import { AvatarStyles } from '../Avatar/styles';
 import { ToolbarStyles } from '../Toolbar/styles';
@@ -38,6 +39,7 @@ export interface PabloTheme {
   space: Spacing;
   colors: Colors;
   typography: Typography;
+  breakpoints: Breakpoints;
 }
 
 type RecursivePartial<T> = {

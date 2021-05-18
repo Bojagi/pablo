@@ -6,13 +6,15 @@ import { defaultTheme } from './defaultTheme';
 import { PabloTheme, ComponentStyles, PabloThemeProviderProps } from './types';
 import { pabloThemeContext, pabloComponentStylesContext } from './context';
 
+const overwriteMerge = (_, sourceArray) => sourceArray;
+
 export const PabloThemeProvider = ({
   theme = {},
   componentStyles = {},
   children,
 }: PabloThemeProviderProps) => {
   const scTheme = useTheme() || {};
-  const mergedTheme = merge(defaultTheme, theme) as PabloTheme;
+  const mergedTheme = merge(defaultTheme, theme, { arrayMerge: overwriteMerge }) as PabloTheme;
   const mergedComponentStyles = merge(defaultComponentStyles, componentStyles) as ComponentStyles;
 
   return (
