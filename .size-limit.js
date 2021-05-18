@@ -2,7 +2,7 @@ module.exports = [
   {
     path: 'build/index.js',
     name: 'Common JS',
-    limit: '36 kb',
+    limit: '38 kb',
   },
   { 
     path: 'build/Button/index.js',
@@ -12,7 +12,7 @@ module.exports = [
   {
     path: 'build/es/index.js',
     name: 'ES Next',
-    limit: '37 kb',
+    limit: '38 kb',
   },
   {
     path: 'build/esm/index.js',
@@ -35,11 +35,11 @@ module.exports = [
   {
     path: 'build/esm/index.js',
     name: 'ES Module',
-    limit : '32 kb',
+    limit : '34 kb',
   },
   {
     path: 'build/pablo.min.js',
     name: 'UMD Bundle',
-    limit: '30 kb',
+    limit: '32 kb',
   },
 ]
