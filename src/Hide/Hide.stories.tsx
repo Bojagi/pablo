@@ -17,7 +17,7 @@ const BreakpointSelector = ({ selected, onSelect }) => (
   </Tabs>
 );
 
-export const HideBelowViewport = () => {
+export const HideBelowBreakpoint = () => {
   const [breakpoint, setBreakpoint] = useState<Breakpoint>('md');
   return (
     <>
@@ -29,7 +29,7 @@ export const HideBelowViewport = () => {
   );
 };
 
-export const HideAboveViewport = () => {
+export const HideAboveBreakpoint = () => {
   const [breakpoint, setBreakpoint] = useState<Breakpoint>('md');
   return (
     <>
@@ -41,7 +41,7 @@ export const HideAboveViewport = () => {
   );
 };
 
-export const HideOnlyOnViewport = () => {
+export const HideOnlyOnBreakpoint = () => {
   const [breakpoint, setBreakpoint] = useState<Breakpoint>('md');
   return (
     <>
