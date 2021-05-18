@@ -23,7 +23,7 @@ export const HideBelowViewport = () => {
     <>
       <BreakpointSelector onSelect={setBreakpoint} selected={breakpoint} />
       <HideBelow breakpoint={breakpoint}>
-        <Paragraph bgColor="red">Change breakpoint to hide me</Paragraph>
+        <Paragraph bgColor="red">Change screen size to hide me</Paragraph>
       </HideBelow>
     </>
   );
@@ -35,7 +35,7 @@ export const HideAboveViewport = () => {
     <>
       <BreakpointSelector onSelect={setBreakpoint} selected={breakpoint} />
       <HideAbove breakpoint={breakpoint}>
-        <Paragraph bgColor="red">Change breakpoint to hide me</Paragraph>
+        <Paragraph bgColor="red">Change screen size to hide me</Paragraph>
       </HideAbove>
     </>
   );
@@ -47,7 +47,7 @@ export const HideOnlyOnViewport = () => {
     <>
       <BreakpointSelector onSelect={setBreakpoint} selected={breakpoint} />
       <HideOnlyOn breakpoint={breakpoint}>
-        <Paragraph bgColor="red">Change breakpoint to hide me</Paragraph>
+        <Paragraph bgColor="red">Change screen size to hide me</Paragraph>
       </HideOnlyOn>
     </>
   );
