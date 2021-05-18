@@ -6,3 +6,4 @@ export * from './getColor';
 export * from './getSpacing';
 export * from './getComponentStyle';
 export * from './conditionalStyles';
+export * from './breakpoint';
