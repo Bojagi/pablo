@@ -11,10 +11,10 @@ test('Get media query with styles when media query was found', () => {
   )({
     theme: {
       breakpoints: {
-        0: 100,
-        1: 200,
-        2: 300,
-        3: 400,
+        0: '100px',
+        1: '200px',
+        2: '300px',
+        3: '400px',
         breakpointNames: ['sm', 'md', 'lg', 'xl'],
       },
     },
@@ -34,16 +34,16 @@ test('Get media below query with styles when media query was found', () => {
   )({
     theme: {
       breakpoints: {
-        0: 100,
-        1: 200,
-        2: 300,
-        3: 400,
+        0: '100px',
+        1: '200px',
+        2: '300px',
+        3: '400px',
         breakpointNames: ['sm', 'md', 'lg', 'xl'],
       },
     },
   } as any) as any;
   expect(output.map((s) => s.trim()).join(' ')).toEqual(
-    '@media only screen and (max-width: 199px) { background-color: red; }'
+    '@media only screen and (max-width: calc(200px - 1px)) { background-color: red; }'
   );
 });
 
@@ -56,10 +56,10 @@ test('Get no media query and no responsive styles when media query was NOT found
   )({
     theme: {
       breakpoints: {
-        0: 100,
-        1: 200,
-        2: 300,
-        3: 400,
+        0: '100px',
+        1: '200px',
+        2: '300px',
+        3: '400px',
         breakpointNames: ['sm', 'md', 'lg', 'xl'],
       },
     },
