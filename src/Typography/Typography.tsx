@@ -1,5 +1,11 @@
 import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
+import { typography } from '@styled-system/typography';
+import {
+  TypographyProps as StyledSystemTypographyProps,
+  // Just the types, so exclude from eslint
+  // eslint-disable-next-line import/no-extraneous-dependencies
+} from 'styled-system';
 import { boxInterpolateFn, BoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { BaseProps } from '../types';
@@ -7,7 +13,10 @@ import { getCustomStyles } from '../utils/useCustomStyles';
 import { TypographyStyleProperties } from './styles';
 import { TypographyVariant } from './types';
 
-export interface BaseTypographyProps extends BoxProps, BaseProps<TypographyStyleProperties> {
+export interface BaseTypographyProps
+  extends BoxProps,
+    BaseProps<TypographyStyleProperties>,
+    StyledSystemTypographyProps {
   inline?: boolean;
 }
 export interface TypographyProps extends BaseTypographyProps {
@@ -31,6 +40,7 @@ export const Paragraph = styled.p<BaseTypographyProps>`
   margin-bottom: ${(props) => (props.inline ? 0 : props.theme.typography.paragraph.marginBottom)};
   ${getCustomStyles('typography.styles', 'paragraph')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const ParagraphBold = styled.p<BaseTypographyProps>`
@@ -42,6 +52,7 @@ export const ParagraphBold = styled.p<BaseTypographyProps>`
     props.inline ? 0 : props.theme.typography.paragraphBold.marginBottom};
   ${getCustomStyles('typography.styles', 'paragraphBold')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const ButtonTypography = styled.span<BaseTypographyProps>`
@@ -51,6 +62,7 @@ export const ButtonTypography = styled.span<BaseTypographyProps>`
   margin-bottom: ${(props) => (props.inline ? 0 : props.theme.typography.button.marginBottom)};
   ${getCustomStyles('typography.styles', 'button')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const Headline = styled.h2<BaseTypographyProps>`
@@ -60,6 +72,7 @@ export const Headline = styled.h2<BaseTypographyProps>`
   margin-bottom: ${(props) => (props.inline ? 0 : props.theme.typography.headline.marginBottom)};
   ${getCustomStyles('typography.styles', 'headline')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const Title = styled.h3<BaseTypographyProps>`
@@ -69,6 +82,7 @@ export const Title = styled.h3<BaseTypographyProps>`
   margin-bottom: ${(props) => (props.inline ? 0 : props.theme.typography.title.marginBottom)};
   ${getCustomStyles('typography.styles', 'title')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const Subtitle = styled.h4<BaseTypographyProps>`
@@ -78,6 +92,7 @@ export const Subtitle = styled.h4<BaseTypographyProps>`
   margin-bottom: ${(props) => (props.inline ? 0 : props.theme.typography.subtitle.marginBottom)};
   ${getCustomStyles('typography.styles', 'subtitle')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const InfoText = styled.p<BaseTypographyProps>`
@@ -87,6 +102,7 @@ export const InfoText = styled.p<BaseTypographyProps>`
   margin-bottom: ${(props) => (props.inline ? 0 : props.theme.typography.info.marginBottom)};
   ${getCustomStyles('typography.styles', 'info')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const InfoTextBold = styled.p<BaseTypographyProps>`
@@ -97,6 +113,7 @@ export const InfoTextBold = styled.p<BaseTypographyProps>`
   margin-bottom: ${(props) => (props.inline ? 0 : props.theme.typography.infoBold.marginBottom)};
   ${getCustomStyles('typography.styles', 'infoBold')}
   ${boxInterpolateFn}
+  ${typography}
 `;
 
 export const Typography = forwardRef<

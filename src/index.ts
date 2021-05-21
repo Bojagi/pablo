@@ -1,6 +1,6 @@
 export * from './Avatar';
 export * from './Box';
-export * from './Button';
+export * from './breakpoints';
 export * from './Button';
 export * from './ButtonBar';
 export * from './ButtonBase';

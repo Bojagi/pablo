@@ -1,6 +1,7 @@
-import React, { ReactNode } from 'react';
-import { mediaQueryBelow, mediaQueryOnly } from '../breakpoints/mediaQueryFns';
-import { useBreakpoint } from '../breakpoints/useBreakpoint';
+import { ReactNode } from 'react';
+import styled, { css } from 'styled-components';
+import { mediaQueryBelow, MediaQueryFn, mediaQueryOnly } from '../breakpoints/mediaQueryFns';
+import { breakpoint as breakpointFn } from '../styleHelpers';
 import { Breakpoint } from '../theme/breakpoints';
 
 export interface HideProps {
@@ -8,30 +9,17 @@ export interface HideProps {
   breakpoint: Breakpoint;
 }
 
-export function HideAbove({ breakpoint, children }: HideProps) {
-  const isAbove = useBreakpoint(breakpoint);
-  if (isAbove) {
-    return null;
-  }
+const createHideBox = (fn?: MediaQueryFn) => styled.div<HideProps>`
+  ${(props) =>
+    breakpointFn(
+      props.breakpoint,
+      css`
+        display: none;
+      `,
+      fn
+    )(props)}
+`;
 
-  return <>{children}</>;
-}
-
-export function HideBelow({ breakpoint, children }: HideProps) {
-  const isBelow = useBreakpoint(breakpoint, mediaQueryBelow);
-  if (isBelow) {
-    return null;
-  }
-
-  return <>{children}</>;
-}
-
-export function HideOnlyOn({ breakpoint, children }: HideProps) {
-  const isOnBreakpoint = useBreakpoint(breakpoint, mediaQueryOnly);
-
-  if (isOnBreakpoint) {
-    return null;
-  }
-
-  return <>{children}</>;
-}
+export const HideAbove = createHideBox();
+export const HideBelow = createHideBox(mediaQueryBelow);
+export const HideOnlyOn = createHideBox(mediaQueryOnly);

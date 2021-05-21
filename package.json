@@ -102,6 +102,7 @@
     "@styled-system/layout": "^5.1.2",
     "@styled-system/position": "^5.1.2",
     "@styled-system/space": "^5.1.2",
+    "@styled-system/typography": "^5.1.2",
     "deepmerge": "^4.2.2",
     "react-popper": "^2.2.4",
     "react-transition-group": "^4.4.1",

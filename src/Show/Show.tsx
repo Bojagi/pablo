@@ -1,17 +1,20 @@
-import React from 'react';
+import styled, { css } from 'styled-components';
 import { mediaQueryOnly } from '../breakpoints/mediaQueryFns';
-import { useBreakpoint } from '../breakpoints/useBreakpoint';
+import { breakpoint as breakpointFn } from '../styleHelpers';
 import { HideAbove, HideBelow, HideProps } from '../Hide';
 
 export const ShowAbove = HideBelow;
 
 export const ShowBelow = HideAbove;
 
-export function ShowOnlyOn({ breakpoint, children }: HideProps) {
-  const isOnBreakpoint = useBreakpoint(breakpoint, mediaQueryOnly);
-  if (isOnBreakpoint) {
-    return <>{children}</>;
-  }
-
-  return null;
-}
+export const ShowOnlyOn = styled.div<HideProps>`
+  display: none;
+  ${(props) =>
+    breakpointFn(
+      props.breakpoint,
+      css`
+        display: block;
+      `,
+      mediaQueryOnly
+    )(props)}
+`;
