@@ -1,0 +1,34 @@
+---
+name: Card
+route: /card
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Card } from './Card.tsx'
+import { PlainCard, CustomStyles } from './Card.stories.tsx'
+
+# Card
+
+Renders a plain card with content inside.
+
+## Import
+
+```js
+import { Card } from '@bojagi/pablo/Card';
+```
+
+## Examples
+
+### Square
+<Playground>
+<PlainCard />
+</Playground>
+
+### Custom styles
+<Playground>
+<CustomStyles />
+</Playground>
+
+## Props
+<Props of={Card} />

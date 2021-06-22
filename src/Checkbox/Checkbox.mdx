@@ -1,0 +1,70 @@
+---
+name: Checkbox
+route: /checkbox
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { Checkbox } from './Checkbox.tsx'
+
+# Checkbox
+
+Form element that allows users to select multiple items from a set of options. 
+The checkbox shares an interface with the `Radio` and `Switch` components.
+
+## Examples
+
+### Single checkbox
+
+<Playground>
+  {() => {
+    const [checked, setChecked] = React.useState(false);
+    return (
+      <Checkbox checked={checked} onChange={() => setChecked(!checked)} />
+    );
+  }}
+</Playground>
+
+### Checkboxes with labels
+
+You can pass an optional `label` prop with a `ReactNode` value to show a label next to the checkbox.
+
+<Playground>
+  {() => {
+    const [checked, setChecked] = React.useState(false);
+    const [checkedTwo, setCheckedTwo] = React.useState(true);
+    return (
+      <Box display="flex" mx={-2}>
+        <Checkbox mx={2} label="Spaghetti" checked={checked} onChange={() => setChecked(!checked)} />
+        <Checkbox mx={2} label="Pizza" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+      </Box>
+    );
+  }}
+</Playground>
+
+### Small checkboxes
+
+You can pass the `size` prop with the `small` value which renders a smaller version.
+
+<Playground>
+  {() => {
+    const [checked, setChecked] = React.useState(false);
+    const [checkedTwo, setCheckedTwo] = React.useState(true);
+    return (
+      <Box display="flex" mx={-2}>
+        <Checkbox mx={2} size="small" checked={checked} onChange={() => setChecked(!checked)} />
+        <Checkbox mx={2} size="small" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+      </Box>
+    );
+  }}
+</Playground>
+
+## Import
+
+```js
+import { Checkbox } from '@bojagi/pablo/Checkbox';
+```
+
+## Props
+<Props of={Checkbox} />

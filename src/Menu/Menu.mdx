@@ -1,0 +1,157 @@
+---
+name: Menu
+route: /menu
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { Button } from '../Button/Button.tsx'
+import { Menu } from './Menu.tsx'
+import { MenuItem } from './MenuItem.tsx'
+import { FadeAnimation, SlideAnimation } from '../animation/index.tsx'
+import { Radio, RadioGroup } from '../Radio/index.ts'
+import { Home, ShoppingCart, BookOpen } from 'react-feather';
+import { css } from 'styled-components';
+
+# Menu
+
+Menus are used for adding a list of choices to an element that is visible on click.  It should be used for
+context specific actions.
+
+## Examples
+
+### Simple Menu
+
+A menu needs to be attached to an element. This is done by placing the element as a child, 
+it will automatically take the ref. This will change in the future though in favor of passing a ref
+and using the items as children. For now `MenuItem` elements are passed as an array in the `items` prop.
+
+<Playground>
+  {() => {
+    const [open, setOpen] = React.useState(false);
+    const handleClose = () => setOpen(false);
+    return (
+      <Menu
+      open={open}
+      offset={-5}
+      onClose={handleClose}
+      items={[
+        <MenuItem key="1" onClick={handleClose}>
+          User Profile
+        </MenuItem>,
+        <MenuItem key="2" onClick={handleClose}>
+          Settings
+        </MenuItem>,
+        <MenuItem key="3" onClick={handleClose}>
+          Logout
+        </MenuItem>,
+      ]}
+    >
+      <Button onClick={() => setOpen(!open)}>Click me</Button>
+    </Menu>
+    );
+  }}
+</Playground>
+
+### Menu placement
+
+Like every Popover style overlay, a `Menu` can be placed on different sides of it's attached element.
+For this you use the `placement` prop.
+
+<Playground>
+  {() => {
+    const [open, setOpen] = React.useState(false);
+    const [placement, setPlacement] = React.useState('top');
+    const handleClose = () => setOpen(false);
+    return (
+      <>
+        <Menu
+          open={open}
+          offset={-5}
+          onClose={handleClose}
+          items={[
+            <MenuItem key="1" onClick={handleClose}>
+              User Profile
+            </MenuItem>,
+            <MenuItem key="2" onClick={handleClose}>
+              Settings
+            </MenuItem>,
+            <MenuItem key="3" onClick={handleClose}>
+              Logout
+            </MenuItem>,
+          ]}
+          placement={placement}
+        >
+          <Button onClick={() => setOpen(!open)}>Please click on me</Button>
+        </Menu>
+        <RadioGroup my={4} value={placement} onChange={setPlacement}>
+          <Radio size="small" value="top" label="top" />
+          <Radio size="small" value="top-start" label="top-start" />
+          <Radio size="small" value="top-end" label="top-end" />
+          <Radio size="small" value="right" label="right" />
+          <Radio size="small" value="right-start" label="right-start" />
+          <Radio size="small" value="right-end" label="right-end" />
+          <Radio size="small" value="bottom" label="bottom" />
+          <Radio size="small" value="bottom-start" label="bottom-start" />
+          <Radio size="small" value="bottom-end" label="bottom-end" />
+          <Radio size="small" value="left" label="left" />
+          <Radio size="small" value="left-start" label="left-start" />
+          <Radio size="small" value="left-end" label="left-end" />
+        </RadioGroup>
+      </>
+    );
+  }}
+</Playground>
+
+### Menu with animation
+
+You can easily add animations to your menu with the Pablo animation components. Pass a Pablo animation
+component like `SlideAnimation` or `FadeAnimation` to the `animation` prop and with the `animationProps`
+prop you configure animation properties such as `duration` and `side` of the animation.
+
+<Playground>
+  {() => {
+    const [open, setOpen] = React.useState(false);
+    const handleClose = () => setOpen(false);
+    return (
+      <Menu
+      open={open}
+      offset={-5}
+      animation={SlideAnimation}
+      animationProps={{
+        duration: 150,
+        side: 'bottom',
+      }}
+      onClose={handleClose}
+      items={[
+        <MenuItem key="1" onClick={handleClose}>
+          User Profile
+        </MenuItem>,
+        <MenuItem key="2" onClick={handleClose}>
+          Settings
+        </MenuItem>,
+        <MenuItem key="3" onClick={handleClose}>
+          Logout
+        </MenuItem>,
+      ]}
+    >
+      <Button onClick={() => setOpen(!open)}>Click me</Button>
+    </Menu>
+    );
+  }}
+</Playground>
+
+## Import
+
+```js
+import { Menu, MenuItem } from '@bojagi/pablo/Menu';
+```
+
+## Props
+
+### Menu
+<Props of={Menu} />
+
+### MenuItem
+<Props of={MenuItem} />

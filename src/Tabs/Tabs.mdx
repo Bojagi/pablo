@@ -1,0 +1,150 @@
+---
+name: Tabs
+route: /tabs
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { Tabs } from './Tabs.tsx'
+import { Tab } from './Tab.tsx'
+import { Home, ShoppingCart, BookOpen } from 'react-feather';
+import { css } from 'styled-components';
+
+# Tabs
+
+Tabs are great to navigate between content. The active tab is highlighted, so the user always knows where they are.
+
+## Examples
+
+### Simple Tabs
+
+The simplest version of tabs you can find below. The `Tabs` component takes the `selected` value and `onSelect` callback.
+The `useState` setter function can be passed directly. It's important to set the `name` on the `Tab` components because
+they define the value that is passed to the `onSelect` callback function.
+
+<Playground>
+  {() => {
+    const [selectedPage, setSelectedPage] = React.useState('home');
+    return (
+      <Tabs selected={selectedPage} onSelect={setSelectedPage}>
+        <Tab name="home">Home</Tab>
+        <Tab name="news">News</Tab>
+        <Tab name="shop">Shop</Tab>
+      </Tabs>
+    );
+  }}
+</Playground>
+
+If you want to go more barebone and take over the selection logic yourself, go with this example:
+
+<Playground>
+  {() => {
+    const [selectedPage, setSelectedPage] = React.useState('home');
+    return (
+      <Tabs>
+        <Tab name="home" selected={selectedPage==='home'} onClick={() => setSelectedPage('home')}>Home</Tab>
+        <Tab name="news" selected={selectedPage==='news'} onClick={() => setSelectedPage('news')}>News</Tab>
+        <Tab name="shop" selected={selectedPage==='shop'} onClick={() => setSelectedPage('shop')}>Shop</Tab>
+      </Tabs>
+    );
+  }}
+</Playground>
+
+### Tabs with icons
+
+To make navigation and discoverability of tabs easier you can use icons. 
+In this example we are using icons from `react-feather`, but you can use any svg based iconset you want 
+(including your own ones).
+
+<Playground>
+  {() => {
+    const [selectedPage, setSelectedPage] = React.useState('home');
+    return (
+      <Tabs selected={selectedPage} onSelect={setSelectedPage}>
+        <Tab name="home" icon={<Home size={16} />}>Home</Tab>
+        <Tab name="news" icon={<BookOpen size={16} />}>News</Tab>
+        <Tab name="shop" icon={<ShoppingCart size={16} />}>Shop</Tab>
+      </Tabs>
+    );
+  }}
+</Playground>
+
+### Overflowing Tabs
+
+Often you will find yourself in the situations where the tabs don't fit the parent (this can happen really quickly on mobile).
+Tabs in Pablo handle overflowing automatically, so you don't need to worry about this. Additional content is shows within a `Menu` component.
+
+Play around with resizing the below playground (grab the right border) and see how the tabs update as the screenspace gets smaller.
+
+<Playground>
+  {() => {
+    const [selectedPage, setSelectedPage] = React.useState('a');
+    return (
+      <Tabs selected={selectedPage} onSelect={setSelectedPage}>
+        <Tab name="a">AAAAAAAAAAAAAAAAA</Tab>
+        <Tab name="b">BBBBBBBBBBBBBBBBB</Tab>
+        <Tab name="c">CCCCCCCCCCCCCCCCC</Tab>
+        <Tab name="d">DDDDDDDDDDDDDDDDD</Tab>
+        <Tab name="e">EEEEEEEEEEEEEEEEE</Tab>
+        <Tab name="f">FFFFFFFFFFFFFFFFF</Tab>
+        <Tab name="g">GGGGGGGGGGGGGGGGG</Tab>
+        <Tab name="h">HHHHHHHHHHHHHHHHH</Tab>
+        <Tab name="i">IIIIIIIIIIIIIIIII</Tab>
+      </Tabs>
+    );
+  }}
+</Playground>
+
+### Custom styling
+
+Like every other Pablo component you can customize the single parts of tabs.
+
+<Playground>
+  {() => {
+    const [selectedPage, setSelectedPage] = React.useState('first');
+    const customstyles = {
+          root: css`
+            color: red;
+          `,
+          indicator: css`
+            background-color: red;
+            border-radius: 0;
+            transform: rotate(10deg);
+          `,
+          hover: css`
+            background-color: blue;
+          `,
+        };
+    
+    return (
+      <Tabs
+        selected={selectedPage}
+        onSelect={setSelectedPage}
+        customStyles={{
+          root: css`
+            background-color: orange;
+          `,
+        }}
+      >
+      <Tab name="first" customStyles={customstyles}>First tab</Tab>
+      <Tab name="second" customStyles={customstyles}>Second tab</Tab>
+      <Tab name="third" customStyles={customstyles}>Third tab</Tab>
+    </Tabs>
+    );
+  }}
+</Playground>
+
+## Import
+
+```js
+import { Tabs, Tab } from '@bojagi/pablo/Tab';
+```
+
+## Props
+
+### Tabs
+<Props of={Tabs} />
+
+### Tab
+<Props of={Tab} />
