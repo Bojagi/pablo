@@ -36,6 +36,7 @@ Currently Pablo supports the following components:
 * Typography
 
 And following utility components
+
 * animations (collections of different animations)
 * ClickOutside
 * Popover

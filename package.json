@@ -6,7 +6,6 @@
   "module": "esm/index.js",
   "browser": "pablo.min.js",
   "typings": "./index.d.ts",
-  "repository": "git@github.com:Bojagi/pablo.git",
   "contributors": [
     "Simon Jentsch <simon@bojagi.io>"
   ],
@@ -66,6 +65,7 @@
     "babel-loader": "^8.2.2",
     "babel-node": "^0.0.1-security",
     "cross-env": "^7.0.3",
+    "docz": "^2.3.1",
     "eslint": "7.16.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "7.1.0",
@@ -107,6 +107,9 @@
     "react-popper": "^2.2.4",
     "react-transition-group": "^4.4.1",
     "use-resize-observer": "^7.0.0"
+  },
+  "resolutions": {
+    "react-docgen": "4.1.1"
   },
   "jest": {
     "preset": "ts-jest",

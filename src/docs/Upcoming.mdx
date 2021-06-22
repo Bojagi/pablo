@@ -1,0 +1,62 @@
+---
+name: Upcoming
+route: /upcoming
+---
+
+# Upcoming
+
+The Pablo design system is just at the beginning. We used it internally on some projects already and
+are dogfooding it, so we find out painpoints in how to customize it.
+
+There are still some really commonly used components missing:
+
+* Select
+* Table
+* Breadcrumb
+* Tags
+* Autocompletion
+* Badges
+* Spinner
+* Icon wrapping component (to help with injecting custom icons into components)
+
+and more (have a look at [this GitHub issue](https://github.com/Bojagi/pablo/issues/26) for that.
+
+## Long term plans
+
+Right now Pablo is a single library and although customizable it has still some drawbacks:
+
+* Adding new components is easy, but only from within the library itself, external additions of custom components to the design system do not feel integrated.
+* There is a set over overwrites needed for complete customizability and these overwrites can break when the base style changes.
+
+### Splitting Pablo into different libraries
+
+Because of this we are planing to separate the design-system into three separate libraries:
+
+#### Pablo System
+
+Underlying library making it easy to create new components that utilize the theme and `componentStyle` configurations.
+This library will also be used by all core Pablo components. 
+
+#### Pablo Core
+
+Plain and (almost) completely unstyled components. Pablo Core provides component specific logic and
+a plain canvas in terms of styling. You don't need to create a `Select` element from scratch. Just add
+styles without the need of resetting and overwriting existing base styling.
+
+#### Picasso (aka more opinionated design library)
+
+The outer styled layer on top of the core library. It's basically what Pablo is now but using
+the other two library layers as the basis. 
+
+### Why different libraries?
+
+There always has been the pain of customizing existing design libraries, be it Bootstrap, Material UI or Ant design.
+Style updates may break the view and you end up with a lot of overhead. 
+The original styles are still shipped with your code, although overwitten.
+
+We believe that a you should focus on your designs and not on replicating common functionality like
+buttons, input fields, checkboxes or select fields.
+
+And if you like how Pablo looks now, you can use the opinonated library and just adjust it to your liking 
+(like it already works now).
+

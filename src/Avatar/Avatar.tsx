@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, FC } from 'react';
 import styled, { css } from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { Image, ImageProps } from '../Image';
@@ -14,8 +14,17 @@ export type AvatarVariant = 'square' | 'circle';
 
 export interface AvatarProps extends LayoutBoxProps, BaseProps<AvatarStyleProperties> {
   className?: string;
+  /**
+   * URL to the image you want to use as an avatar
+   */
   src: string;
+  /**
+   * Size of the avatar
+   */
   size?: AvatarSize;
+  /**
+   * Define if you want the avatar to be circle or square shaped
+   */
   variant?: AvatarVariant;
 }
 
@@ -38,7 +47,10 @@ const AvatarImage = styled<
   })}
 `;
 
-export const Avatar = forwardRef<HTMLImageElement, AvatarProps>(
+/**
+ * @react
+ */
+export const Avatar: FC<AvatarProps> = forwardRef<HTMLImageElement, AvatarProps>(
   ({ className, src, size = 'medium', variant = 'square', customStyles, ...props }, ref) => {
     const dimension = useComponentStyle('avatar.size.{size}', { size }) as number;
     const getCustomStyles = useCustomStyles('avatar.styles', customStyles);
