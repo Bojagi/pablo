@@ -47,9 +47,6 @@ const AvatarImage = styled<
   })}
 `;
 
-/**
- * @react
- */
 export const Avatar: FC<AvatarProps> = forwardRef<HTMLImageElement, AvatarProps>(
   ({ className, src, size = 'medium', variant = 'square', customStyles, ...props }, ref) => {
     const dimension = useComponentStyle('avatar.size.{size}', { size }) as number;
