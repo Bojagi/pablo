@@ -147,8 +147,6 @@ export const colors: Colors = {
   },
 };
 
-console.log('colors', colors.gray);
-
 /**
  * Get hex color byte (e.g. to get transparency)
  * @param value Percentage value (between 0.0 and 1.0)

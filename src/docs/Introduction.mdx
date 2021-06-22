@@ -19,7 +19,7 @@ It's build on these three core principles:
 
 Pablo is built with hooks in mind and therefore it's really easy to use `useState` by just passing
 it to event callback props like `onChange` or `onSelect`. We want Bojagi to produce less boilerplate
-and clean readable code.
+and clean readable code. You can still access the original event object (it's passed as another argument).
 
 ```jsx
 const [name, setName] = useState('');

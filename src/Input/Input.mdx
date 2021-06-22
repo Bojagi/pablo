@@ -18,7 +18,7 @@ Form element that allows users to type in single line text. For multi-line text 
 
 ### Simple Input
 
-The simples form of an `Input` is just the field itself. You can just pass a `useState` setter function to update state
+The simplest form of an `Input` is just the field itself. You can pass a `useState` setter function to update state
 as the first argument of `onChange` is the value itself. 
 The second argument is the full `onChange` event of the native `input` element.
 
@@ -33,8 +33,8 @@ The second argument is the full `onChange` event of the native `input` element.
 
 ### Input with label
 
-A simple input field doesn't really make sense as the context is missing. You can pass the `label` prop with the
-content for the label (can be string or JSX).
+You should always add context to an input field so users know what to put into the field. For this you can pass the 
+`label` prop with the content for the `<label>` element (can be string or JSX).
 
 <Playground>
   {() => {
