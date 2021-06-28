@@ -1,0 +1,85 @@
+---
+name: IconButton
+route: /iconbutton
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { IconButton } from './IconButton.tsx'
+import { Trash2, Italic, CheckCircle, Crop } from 'react-feather';
+
+# IconButton
+
+IconButtons are buttons that only consists of an icon. They are useful for actions on places where space is rare
+and an icon on it's own is really descriptive.
+
+## Examples
+
+### Sized IconButton
+
+You can display `IconButton`s in different sizes. By default they have the size `medium`. 
+They can also be `small` and `large`. 
+
+<Playground>
+  <Box display="flex" mx={-4}>
+    <IconButton mx={4} onClick="You clicked me!">
+      <Trash2 />
+    </IconButton>
+    <IconButton size="small" mx={4} onClick="You clicked me!">
+      <Trash2 />
+    </IconButton>
+    <IconButton size="large" mx={4} onClick="You clicked me!">
+      <Trash2 />
+    </IconButton>
+  </Box>
+</Playground>
+
+### Active Icon buttons
+IconButtons can also be used to toggle certain functionality (e.g. bold text mode in rich text inputs). For this
+you can use the boolean `active` prop.
+
+<Playground>
+  {() => {
+    const [active, setActive] = React.useState(props.active);
+    return (
+      <IconButton active={active} onClick={() => setActive(!active)}>
+        <Italic />
+      </IconButton>
+    );;
+  }}
+</Playground>
+
+### Colored IconButton
+
+To give IconButtons a different color, just use the `color` prop. Colors can be `brand`, `plain`, `negative` or `positive`.
+The default color is `plain`. 
+
+<Playground>
+  {() => {
+    const [active, setActive] = React.useState(props.active);
+    return (
+      <Box display="flex" mx={-4}>
+        <IconButton mx={4} color="brand" active={active} onClick={() => setActive(!active)}>
+          <Crop />
+        </IconButton>
+        <IconButton mx={4} color="positive" active={active} onClick={() => setActive(!active)}>
+          <CheckCircle />
+        </IconButton>
+        <IconButton mx={4} color="negative" active={active} onClick={() => setActive(!active)}>
+          <Trash2 />
+        </IconButton>
+      </Box>
+    );
+  }}
+</Playground>
+
+## Import
+
+```js
+import { IconButton } from '@bojagi/pablo/IconButton';
+```
+
+## Props
+
+<Props of={IconButton} />

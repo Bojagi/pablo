@@ -1,0 +1,116 @@
+---
+name: Tooltip
+route: /tooltip
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { Tooltip } from './Tooltip.tsx'
+import { Button } from '../Button/index.ts'
+import { css } from 'styled-components'
+
+# Tooltip
+
+A component that decorates it's child with a tooltip that shows hints/information text on hovering over the child.
+
+## Examples
+
+### Plain tooltip
+
+<Playground>
+  <Tooltip content="A tooltip shows on hovering (you just witnessed)">
+    <Button color="plain">
+      Hover over me
+    </Button>
+  </Tooltip>
+</Playground>
+
+### Tooltip positioning
+
+A tooltip can be positioned on each of the for sides of it's child. 
+
+<Playground>
+  <Box display="flex" mx={-4}>
+    <Tooltip side="left" content="Left tooltip">
+      <Button mx={4} color="plain">
+        Left
+      </Button>
+    </Tooltip>
+    <Tooltip side="top" content="Top tooltip">
+      <Button mx={4} color="plain">
+        top
+      </Button>
+    </Tooltip>
+    <Tooltip side="bottom" content="Bottom tooltip">
+      <Button mx={4} color="plain">
+        bottom
+      </Button>
+    </Tooltip>
+    <Tooltip side="right" content="Right tooltip">
+      <Button mx={4} color="plain">
+        right
+      </Button>
+    </Tooltip>
+  </Box>
+</Playground>
+
+### Tooltips with a delay
+
+If you want to only show a tooltip after hovering over it for a certain time, you can use the `delay` prop and pass
+a number that represents a millisecond time. This is useful for tooltips for more obvious actions.
+
+<Playground>
+  <Tooltip content="Sorry for being late" delay={500}>
+      <Button color="plain">
+        Quickly, hover over me!
+      </Button>
+    </Tooltip>
+</Playground>
+
+### Usage on disabled children
+
+When a child has the `disabled` prop set to true, the tooltip doesn't show as well. If you want to get around this
+behavior you need to wrap the child in a `div`, `span` or any other element. 
+
+<Playground>
+  <Tooltip content="I'm not there!">
+    <Button mx={5} color="plain" disabled={true}>
+      I am not clickable
+    </Button>
+  </Tooltip>
+</Playground>
+
+### Customizing the tooltip
+
+Additionally to the component configuration, you can overwrite styles freely (like with every other Pablo component).
+
+<Playground>
+  <Tooltip
+    content="I am very special"
+    customStyles={{
+      box: css`
+        background-color: red;
+        border-radius: 100px;
+      `,
+      arrow: css`
+        border-bottom-color: red;
+      `,
+    }}
+  >
+    <Button color="plain">
+      Hover over me 🌈
+    </Button>
+  </Tooltip>
+</Playground>
+  
+
+## Import
+
+```js
+import { Tooltip } from '@bojagi/pablo/Tooltip';
+```
+
+## Props
+
+<Props of={Tooltip} />

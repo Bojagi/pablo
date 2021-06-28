@@ -1,0 +1,53 @@
+---
+name: Image
+route: /image
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { Image } from './Image.tsx'
+
+# Image
+
+The `Image` component is a plain proxy of the normal HTML `img` element but it adds support for the
+styled-system layouting props (like margins, paddings, positioning, etc.).
+
+## Examples
+
+### Plain Image
+
+You can display `IconButton`s in different sizes. By default they have the size `medium`. 
+They can also be `small` and `large`. 
+
+<Playground>
+  <Image src="https://bojagi.io/images/bojagi-social-preview.jpg" width={500} />
+</Playground>
+
+### Layouting an image
+
+You can use margin to give images a bit of space around them
+
+<Playground>
+  <Box bgColor="papayaWhip">
+  <Image mx={6} my={4} src="https://bojagi.io/images/bojagi-social-preview.jpg" width={500} />
+  </Box>
+</Playground>
+
+Or you can use positioning
+
+<Playground>
+  <Box position="relative" m={20} height={600} width={600} bgColor="papayaWhip">
+  <Image position="absolute" top={50} left={200} src="https://bojagi.io/images/bojagi-social-preview.jpg" width={500} />
+  </Box>
+</Playground>
+
+## Import
+
+```js
+import { Image } from '@bojagi/pablo/Image';
+```
+
+## Props
+
+<Props of={Image} />

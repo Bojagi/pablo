@@ -85,19 +85,19 @@ For this you use the `placement` prop.
         >
           <Button onClick={() => setOpen(!open)}>Please click on me</Button>
         </Menu>
-        <RadioGroup my={4} value={placement} onChange={setPlacement}>
-          <Radio size="small" value="top" label="top" />
-          <Radio size="small" value="top-start" label="top-start" />
-          <Radio size="small" value="top-end" label="top-end" />
-          <Radio size="small" value="right" label="right" />
-          <Radio size="small" value="right-start" label="right-start" />
-          <Radio size="small" value="right-end" label="right-end" />
-          <Radio size="small" value="bottom" label="bottom" />
-          <Radio size="small" value="bottom-start" label="bottom-start" />
-          <Radio size="small" value="bottom-end" label="bottom-end" />
-          <Radio size="small" value="left" label="left" />
-          <Radio size="small" value="left-start" label="left-start" />
-          <Radio size="small" value="left-end" label="left-end" />
+        <RadioGroup size="small" my={4} value={placement} onChange={setPlacement}>
+          <Radio value="top" label="top" />
+          <Radio value="top-start" label="top-start" />
+          <Radio value="top-end" label="top-end" />
+          <Radio value="right" label="right" />
+          <Radio value="right-start" label="right-start" />
+          <Radio value="right-end" label="right-end" />
+          <Radio value="bottom" label="bottom" />
+          <Radio value="bottom-start" label="bottom-start" />
+          <Radio value="bottom-end" label="bottom-end" />
+          <Radio value="left" label="left" />
+          <Radio value="left-start" label="left-start" />
+          <Radio value="left-end" label="left-end" />
         </RadioGroup>
       </>
     );
