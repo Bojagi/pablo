@@ -44,15 +44,15 @@ The `addToast` function takes an object with the following properties:
     const [closable, setClosable] = React.useState(true);
     const [duration, setDuration] = React.useState(3000);
     const handleAddToast = React.useCallback(() => {
-    addToast({
-      duration,
-      title: `Hello there #${counter}`,
-      description: 'Something happened!',
-      type: 'success',
-      closable,
-    });
-    setCounter(counter + 1);
-  }, [addToast, duration, closable, counter]);
+      addToast({
+        duration,
+        title: `Hello there #${counter}`,
+        description: 'Something happened!',
+        type: 'success',
+        closable,
+      });
+      setCounter(counter + 1);
+    }, [addToast, duration, closable, counter]);
     return (
       <Box>
         <Checkbox
