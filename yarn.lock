@@ -2056,7 +2056,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bojagi/cli@^0.18.0-next.3":
+"@bojagi/cli@0.18.0-next.3":
   version "0.18.0-next.3"
   resolved "https://registry.yarnpkg.com/@bojagi/cli/-/cli-0.18.0-next.3.tgz#b2a6499a19a9d3e0f6ded955d642242c85034ade"
   integrity sha512-QBmyTkA8Aqg4WhZjhryreUCRBS9tl/CKv/4BDjQ2R5mc3huSH5Lm0i6zz6fQFy55kNlxV8VAcQlWViTbjx9/Jw==
