@@ -76,6 +76,20 @@ You can pass the `size` prop with the `small` value which renders a smaller vers
   }}
 </Playground>
 
+When you want to set the size on a `RadioGroup` you have to set it in the `RadioGroup` component
+
+<Playground>
+  {() => {
+    const [selectedDish, setDish] = React.useState(undefined);
+    return (
+      <RadioGroup size="small" value={selectedDish} onChange={setDish}>
+        <Radio mx={2} label="Spaghetti" value="spaghetti" />
+        <Radio mx={2} label="Pizza" value="pizza" />
+      </RadioGroup>
+    );
+  }}
+</Playground>
+
 ### Custom styling
 
 You can overwrite the styles of parts of this component as well. 

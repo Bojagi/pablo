@@ -1,0 +1,43 @@
+---
+name: SidebarNav
+route: /sidebarnav
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { SidebarNav } from './SidebarNav.tsx'
+import { SidebarNavItem } from './SidebarNavItem.tsx'
+
+# SidebarNav
+
+The `SidebarNav` component is a navigation that supposed to be placed on the right of the main content.
+
+This component is subject to change and be split up in a `SideBar` component that can host
+multiple different components and a vertical navigation.
+
+## Example
+
+<Playground>
+  <SidebarNav>
+    <SidebarNavItem>Hello</SidebarNavItem>
+    <SidebarNavItem selected>Goodbye</SidebarNavItem>
+    <SidebarNavItem>Ob1-La-Di Ob-La-Da</SidebarNavItem>
+  </SidebarNav>
+</Playground>
+
+## Import
+
+```js
+import { SidebarNav, SidebarNavItem } from '@bojagi/pablo/SidebarNav';
+```
+
+## Props
+
+### SidebarNav
+
+<Props of={SidebarNav} />
+
+### SidebarNavItem
+
+<Props of={SidebarNavItem} />

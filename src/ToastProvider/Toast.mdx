@@ -1,0 +1,87 @@
+---
+name: Toasts
+route: /toasts
+menu: Components
+---
+
+import { Props, Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { ToastProvider, useToast } from './ToastProvider.tsx'
+import { Checkbox } from '../Checkbox/index.ts'
+import { Input } from '../Input/index.ts'
+import { Button } from '../Button/index.ts'
+
+# Toasts
+
+Toasts can be used to give feedback to an action the user just did. This can be a success message or an error
+that happend. Toasts should be used as often as possible after actions that take some time (like API calls).
+This can also be used as a notification if something happened without user interaction (like a new message
+a user received from another user or something that happened some time ago but is now ready).
+
+## Using ToastProvider
+
+You need to wrap the `ToastProvider` within your app or section where you want to use toasts. In this provider
+you can configure the side in where your toasts will appear.
+
+## Add a new toast message
+
+To show a toast with a specific message you need to use the `useToast` hook. It's returning an object
+with an `addToast` function. This one can be used to push a new toast message.
+
+The `addToast` function takes an object with the following properties:
+
+* `duration` describes the time the toast is shown, if it's `0` it shows until closed manually
+* `title` is the main text that is displayed in the toast
+* `description` is an optional text that shows below the title
+* `type` can be either `info`, `success`, `warning` or `error` 
+* `closable` defining if a toast can be closed manually
+* `icon` is an optional custom icon that is shown on the left side of the toast text, needs to be a `ReactNode`
+
+<Playground>
+  {() => {
+    const { addToast } = useToast();
+    const [counter, setCounter] = React.useState(1);
+    const [closable, setClosable] = React.useState(true);
+    const [duration, setDuration] = React.useState(3000);
+    const handleAddToast = React.useCallback(() => {
+      addToast({
+        duration,
+        title: `Hello there #${counter}`,
+        description: 'Something happened!',
+        type: 'success',
+        closable,
+      });
+      setCounter(counter + 1);
+    }, [addToast, duration, closable, counter]);
+    return (
+      <Box>
+        <Checkbox
+          mb={4}
+          label="closable"
+          checked={closable}
+          onChange={() => setClosable((val) => !val)}
+        />
+        <Input
+          label="Duration (0 for forever)"
+          mb={4}
+          onChange={(v) => setDuration(parseInt(v, 10) || 0)}
+          value={duration}
+        />
+      <Button onClick={handleAddToast}>Add toast</Button>
+    </Box>
+    );
+  }}
+</Playground>
+
+## Import
+
+```js
+// In your App.js or somewhere global
+import { ToastProvider } from '@bojagi/pablo/ToastProvider';
+// In places where you want to add toast messages
+import { useToast } from '@bojagi/pablo/ToastProvider';
+```
+
+## Props
+
+<Props of={ToastProvider} />

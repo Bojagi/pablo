@@ -1,0 +1,103 @@
+---
+name: Box
+route: /box
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Box } from '../Box/Box.tsx'
+import { css } from 'styled-components'
+
+# Box
+
+The `Box` component is one of the fundamentals of Pablo. It exposes the style props from `styled-system`
+and we also partially use it within our components. 
+
+The main purpose of the `Box` component is to build layouts without the need to create separate
+component for each layout `div`, so you don't need to use general names such as `Wrapper`, `InnerWrapper`,
+`OuterWrapper` or `Container`.
+
+## Examples
+
+### Adding spacing
+
+You can add margins and paddings with the spacing props:
+
+* `m` (setting margin on all sides)
+* `mx` (setting margin-left and margin-right)
+* `my` (setting margin-top and margin-bottom)
+* `mt` (setting margin-top)
+* `mr` (setting margin-right)
+* `mb` (setting margin-bottom)
+* `ml` (setting margin-left)
+
+The same works also for padding when replacing `m` with `p`.
+
+<Playground>
+  <Box
+    m={8}
+    px={6}
+    py={4}
+    bgColor="red"
+    >
+      <Box pt={6} pr={2} pl={8} pb={10} bgColor="blue">
+        <Box bgColor="yellow">
+        Hi
+        </Box>
+      </Box>
+    </Box>
+</Playground>
+
+### Changing color
+
+You can use a `Box` component also to give it's content a specific text or background color.
+To set text color you use the `textColor` prop and for background color `bgColor`.
+
+You either can use colors from the Pablo theme (e.g. `brand.main`) or css hex or named color (e.g. `#ffffff` or `tomato`).
+
+<Playground>
+  <Box
+    p={4}
+    bgColor="brand.dark"
+    textColor="papayawhip"
+  >I'm a Tomato
+  </Box>
+</Playground>
+
+### Simple horizontal layouting with flexbox
+
+You can put multiple components next to each other adding a gap using the `mx` prop (this also works on
+any other Pablo component). By adding a negative margin with the same size on the outer `Box` you can
+align the left and right edges back to the content outside.
+
+<Playground>
+  <>
+    <Box height={100} mb={4} bgColor="green"/>
+    <Box display="flex" mx={-4}>
+      <Box mx={4} width={200} height={150} bgColor="red" />
+      <Box mx={4} width={200} height={150} bgColor="red" />
+      <Box mx={4} width={200} height={150} bgColor="red" />
+    </Box>
+  </>
+</Playground>
+
+We are planning to make a shortcut component that does this for you automatically as this setup is quite common.
+
+### Custom CSS
+
+You can use the `css` prop to pass custom CSS code using the `css` tag literal from `styled-components`.
+
+<Playground>
+  <Box
+    height={100}
+    width={300}
+    bgColor="papayawhip"
+    css={css`transform: rotate(10deg);`}
+  />
+</Playground>
+
+## Import
+
+```js
+import { Box } from '@bojagi/pablo/Box';
+```
