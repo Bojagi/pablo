@@ -52,11 +52,13 @@ const SelectWrapper = styled.div`
   }
 `;
 
-const InnerSelect = forwardRef<HTMLSelectElement, typeof StyledSelect>((props, ref) => (
-  <SelectWrapper>
-    <StyledSelect ref={ref} {...props} />
-  </SelectWrapper>
-));
+const InnerSelect = forwardRef<HTMLSelectElement, React.ComponentProps<typeof StyledSelect>>(
+  (props, ref) => (
+    <SelectWrapper>
+      <StyledSelect ref={ref} {...props} />
+    </SelectWrapper>
+  )
+) as typeof StyledSelect;
 
 export const NativeSelect = forwardRef<HTMLDivElement, NativeSelectProps>(
   ({ width, variant = 'filled', ...props }, ref) => {
