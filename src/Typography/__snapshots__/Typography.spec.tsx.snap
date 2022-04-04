@@ -3,13 +3,13 @@
 exports[`ButtonTypography component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 <div>
@@ -24,13 +24,13 @@ exports[`ButtonTypography component  Render component 1`] = `
 exports[`Headline component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.75rem;
-  line-height: 1.29em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-headline-fontSize);
+  line-height: var(--pbl-theme-typography-headline-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-headline-marginBottom);
 }
 
 <div>
@@ -45,14 +45,14 @@ exports[`Headline component  Render component 1`] = `
 exports[`InfoBold component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  font-weight: 500;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-infoBold-fontSize);
+  line-height: var(--pbl-theme-typography-infoBold-lineHeight);
+  font-weight: var(--pbl-theme-typography-infoBold-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-infoBold-marginBottom);
 }
 
 <div>
@@ -67,13 +67,13 @@ exports[`InfoBold component  Render component 1`] = `
 exports[`InfoText component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-info-fontSize);
+  line-height: var(--pbl-theme-typography-info-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-info-marginBottom);
 }
 
 <div>
@@ -88,13 +88,13 @@ exports[`InfoText component  Render component 1`] = `
 exports[`Paragraph component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
 }
 
 <div>
@@ -109,14 +109,14 @@ exports[`Paragraph component  Render component 1`] = `
 exports[`ParagraphBold component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
-  font-weight: 500;
-  margin-bottom: 0.75em;
+  font-size: var(--pbl-theme-typography-paragraphBold-fontSize);
+  line-height: var(--pbl-theme-typography-paragraphBold-lineHeight);
+  font-weight: var(--pbl-theme-typography-paragraphBold-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-paragraphBold-marginBottom);
 }
 
 <div>
@@ -131,13 +131,13 @@ exports[`ParagraphBold component  Render component 1`] = `
 exports[`Subtitle component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
 }
 
 <div>
@@ -152,13 +152,13 @@ exports[`Subtitle component  Render component 1`] = `
 exports[`Title component  Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.3333333em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-title-fontSize);
+  line-height: var(--pbl-theme-typography-title-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-title-marginBottom);
 }
 
 <div>
@@ -173,13 +173,13 @@ exports[`Title component  Render component 1`] = `
 exports[`Typography component with variant button Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 <div>
@@ -194,12 +194,12 @@ exports[`Typography component with variant button Render component 1`] = `
 exports[`Typography component with variant button Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
   margin-bottom: 0;
 }
 
@@ -215,13 +215,13 @@ exports[`Typography component with variant button Render inline component 1`] = 
 exports[`Typography component with variant headline Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.75rem;
-  line-height: 1.29em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-headline-fontSize);
+  line-height: var(--pbl-theme-typography-headline-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-headline-marginBottom);
 }
 
 <div>
@@ -236,12 +236,12 @@ exports[`Typography component with variant headline Render component 1`] = `
 exports[`Typography component with variant headline Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.75rem;
-  line-height: 1.29em;
+  font-size: var(--pbl-theme-typography-headline-fontSize);
+  line-height: var(--pbl-theme-typography-headline-lineHeight);
   margin-bottom: 0;
 }
 
@@ -257,13 +257,13 @@ exports[`Typography component with variant headline Render inline component 1`] 
 exports[`Typography component with variant info Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-info-fontSize);
+  line-height: var(--pbl-theme-typography-info-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-info-marginBottom);
 }
 
 <div>
@@ -278,12 +278,12 @@ exports[`Typography component with variant info Render component 1`] = `
 exports[`Typography component with variant info Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
+  font-size: var(--pbl-theme-typography-info-fontSize);
+  line-height: var(--pbl-theme-typography-info-lineHeight);
   margin-bottom: 0;
 }
 
@@ -299,14 +299,14 @@ exports[`Typography component with variant info Render inline component 1`] = `
 exports[`Typography component with variant infoBold Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  font-weight: 500;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-infoBold-fontSize);
+  line-height: var(--pbl-theme-typography-infoBold-lineHeight);
+  font-weight: var(--pbl-theme-typography-infoBold-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-infoBold-marginBottom);
 }
 
 <div>
@@ -321,13 +321,13 @@ exports[`Typography component with variant infoBold Render component 1`] = `
 exports[`Typography component with variant infoBold Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.5em;
-  font-weight: 500;
+  font-size: var(--pbl-theme-typography-infoBold-fontSize);
+  line-height: var(--pbl-theme-typography-infoBold-lineHeight);
+  font-weight: var(--pbl-theme-typography-infoBold-fontWeight);
   margin-bottom: 0;
 }
 
@@ -343,13 +343,13 @@ exports[`Typography component with variant infoBold Render inline component 1`] 
 exports[`Typography component with variant paragraph Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
 }
 
 <div>
@@ -364,12 +364,12 @@ exports[`Typography component with variant paragraph Render component 1`] = `
 exports[`Typography component with variant paragraph Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
   margin-bottom: 0;
 }
 
@@ -385,14 +385,14 @@ exports[`Typography component with variant paragraph Render inline component 1`]
 exports[`Typography component with variant paragraphBold Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
-  font-weight: 500;
-  margin-bottom: 0.75em;
+  font-size: var(--pbl-theme-typography-paragraphBold-fontSize);
+  line-height: var(--pbl-theme-typography-paragraphBold-lineHeight);
+  font-weight: var(--pbl-theme-typography-paragraphBold-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-paragraphBold-marginBottom);
 }
 
 <div>
@@ -407,13 +407,13 @@ exports[`Typography component with variant paragraphBold Render component 1`] = 
 exports[`Typography component with variant paragraphBold Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
-  font-weight: 500;
+  font-size: var(--pbl-theme-typography-paragraphBold-fontSize);
+  line-height: var(--pbl-theme-typography-paragraphBold-lineHeight);
+  font-weight: var(--pbl-theme-typography-paragraphBold-fontWeight);
   margin-bottom: 0;
 }
 
@@ -429,13 +429,13 @@ exports[`Typography component with variant paragraphBold Render inline component
 exports[`Typography component with variant subtitle Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
 }
 
 <div>
@@ -450,12 +450,12 @@ exports[`Typography component with variant subtitle Render component 1`] = `
 exports[`Typography component with variant subtitle Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
 }
 
@@ -471,13 +471,13 @@ exports[`Typography component with variant subtitle Render inline component 1`] 
 exports[`Typography component with variant title Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.3333333em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-title-fontSize);
+  line-height: var(--pbl-theme-typography-title-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-title-marginBottom);
 }
 
 <div>
@@ -492,12 +492,12 @@ exports[`Typography component with variant title Render component 1`] = `
 exports[`Typography component with variant title Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.3333333em;
+  font-size: var(--pbl-theme-typography-title-fontSize);
+  line-height: var(--pbl-theme-typography-title-lineHeight);
   margin-bottom: 0;
 }
 
@@ -513,13 +513,13 @@ exports[`Typography component with variant title Render inline component 1`] = `
 exports[`Typography component with variant undefined Render component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
-  margin-bottom: 0.75em;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
 }
 
 <div>
@@ -534,12 +534,12 @@ exports[`Typography component with variant undefined Render component 1`] = `
 exports[`Typography component with variant undefined Render inline component 1`] = `
 .c0 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.4em;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
   margin-bottom: 0;
 }
 

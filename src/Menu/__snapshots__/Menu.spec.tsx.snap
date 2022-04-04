@@ -69,7 +69,7 @@ exports[`Click on menu item 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: var(--pbl-theme-colors-common-white);
   border-radius: 4px;
   max-width: 400px;
   min-width: 120px;
@@ -79,13 +79,13 @@ exports[`Click on menu item 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c3 {
@@ -111,7 +111,7 @@ exports[`Click on menu item 1`] = `
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   display: block;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-top: 2px;
@@ -129,11 +129,11 @@ exports[`Click on menu item 1`] = `
 }
 
 .c3:hover {
-  background-color: #f0f0f0;
+  background-color: var(--pbl-theme-colors-gray-50);
 }
 
 .c3:active {
-  background-color: #e0e0e0;
+  background-color: var(--pbl-theme-colors-gray-100);
 }
 
 <div
@@ -270,7 +270,7 @@ exports[`Render open Menu 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: var(--pbl-theme-colors-common-white);
   border-radius: 4px;
   max-width: 400px;
   min-width: 120px;
@@ -280,13 +280,13 @@ exports[`Render open Menu 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c3 {
@@ -312,7 +312,7 @@ exports[`Render open Menu 1`] = `
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   display: block;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-top: 2px;
@@ -330,11 +330,11 @@ exports[`Render open Menu 1`] = `
 }
 
 .c3:hover {
-  background-color: #f0f0f0;
+  background-color: var(--pbl-theme-colors-gray-50);
 }
 
 .c3:active {
-  background-color: #e0e0e0;
+  background-color: var(--pbl-theme-colors-gray-100);
 }
 
 <div

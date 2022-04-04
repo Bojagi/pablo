@@ -1,11 +1,12 @@
 import { act, fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { waitOneTick } from '../../testUtils/waitOneTick';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
 import { Toolbar } from './Toolbar';
 import { ToolbarDivider } from './ToolbarDivider';
 import { ToolbarItem } from './ToolbarItem';
 import '../../testUtils/mockResizeObserver';
+import { themeVars } from '../theme/themeVars';
 
 beforeEach(() => {
   jest.useFakeTimers();
@@ -35,7 +36,7 @@ test('Render toolbar with one item active', async () => {
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
   expect(allButtons).toBeArrayOfSize(5);
   expect(allButtons[0]).toHaveStyleRule('background-color', 'transparent');
-  expect(allButtons[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
+  expect(allButtons[1]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
   expect(allButtons[2]).toHaveStyleRule('background-color', 'transparent');
   expect(allButtons[3]).toHaveStyleRule('background-color', 'transparent');
   expect(allButtons[4]).toHaveStyleRule('background-color', 'transparent');
@@ -48,12 +49,12 @@ test('Render toolbar with all items active', async () => {
 
   const allButtons = getAllByTestId('pbl-toolbar-item-button');
   expect(allButtons).toBeArrayOfSize(6);
-  expect(allButtons[0]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
-  expect(allButtons[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
-  expect(allButtons[2]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
-  expect(allButtons[3]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
-  expect(allButtons[4]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
-  expect(allButtons[5]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
+  expect(allButtons[0]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
+  expect(allButtons[1]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
+  expect(allButtons[2]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
+  expect(allButtons[3]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
+  expect(allButtons[4]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
+  expect(allButtons[5]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
 });
 
 test('Render toolbar with disabled button disabled', async () => {
@@ -79,7 +80,7 @@ test('Render toolbar items selected by "selected" Toolbar prop', async () => {
   expect(allButtons).toBeArrayOfSize(6);
   expect(allButtons[0]).toHaveStyleRule('background-color', 'transparent');
   expect(allButtons[1]).toHaveStyleRule('background-color', 'transparent');
-  expect(allButtons[2]).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
+  expect(allButtons[2]).toHaveStyleRule('background-color', themeVars.colors.brand.main);
   expect(allButtons[3]).toHaveStyleRule('background-color', 'transparent');
   expect(allButtons[4]).toHaveStyleRule('background-color', 'transparent');
 });

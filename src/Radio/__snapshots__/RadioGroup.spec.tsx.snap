@@ -24,13 +24,13 @@ exports[`Render with nothing selected 1`] = `
 
 .c6 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
   margin-left: 8px;
   margin-bottom: 0;
 }
@@ -56,8 +56,8 @@ exports[`Render with nothing selected 1`] = `
   height: calc(12px + 2 * (6px + 1px));
   border-radius: 50%;
   padding: 6px;
-  background-color: #ffffff;
-  border: 1px solid #00000040;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
   -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
@@ -74,7 +74,7 @@ exports[`Render with nothing selected 1`] = `
   -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
   -webkit-transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
   transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
-  background-color: #6A50F2;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 <div>
@@ -206,13 +206,13 @@ exports[`Work with one radio button 1`] = `
 
 .c6 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
   margin-left: 8px;
   margin-bottom: 0;
 }
@@ -238,8 +238,8 @@ exports[`Work with one radio button 1`] = `
   height: calc(12px + 2 * (6px + 1px));
   border-radius: 50%;
   padding: 6px;
-  background-color: #ffffff;
-  border: 1px solid #00000040;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
   -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
@@ -256,7 +256,7 @@ exports[`Work with one radio button 1`] = `
   -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
   -webkit-transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
   transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
-  background-color: #6A50F2;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 <div>

@@ -8,6 +8,7 @@ import {
 import React from 'react';
 import { css } from 'styled-components';
 import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 import { Modal } from './Modal';
 
 test('Render closed modal with just a content element', () => {
@@ -17,7 +18,10 @@ test('Render closed modal with just a content element', () => {
   // Backdrop
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('width', '100vw');
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('height', '100vh');
-  expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('background-color', 'rgba(0,0,0,0.6)');
+  expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule(
+    'background-color',
+    themeVars.colors.blackOpacity[600]
+  );
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('display', 'flex');
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('justify-content', 'center');
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('align-items', 'center');
@@ -33,7 +37,10 @@ test('Render closed modal with just a content element', () => {
 
   // ModalBox
   expect(getByTestId('pbl-modal-box')).toHaveStyleRule('border-radius', '12px');
-  expect(getByTestId('pbl-modal-box')).toHaveStyleRule('background-color', '#fafafa');
+  expect(getByTestId('pbl-modal-box')).toHaveStyleRule(
+    'background-color',
+    themeVars.colors.background
+  );
   expect(getByTestId('pbl-modal-box')).toHaveStyleRule('padding', '12px');
   expect(document.body).toHaveStyle('overflow: auto');
 });

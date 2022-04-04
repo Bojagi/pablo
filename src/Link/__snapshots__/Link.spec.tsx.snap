@@ -3,7 +3,7 @@
 exports[`Render Link with the right styles 1`] = `
 .c0 {
   box-sizing: border-box;
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
@@ -12,7 +12,7 @@ exports[`Render Link with the right styles 1`] = `
 }
 
 .c0:hover {
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-style: normal;
@@ -20,7 +20,7 @@ exports[`Render Link with the right styles 1`] = `
 }
 
 .c0:visited {
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
@@ -28,7 +28,7 @@ exports[`Render Link with the right styles 1`] = `
 }
 
 .c0:focus {
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   -webkit-text-decoration: underline;
   text-decoration: underline;
   font-style: normal;

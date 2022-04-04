@@ -3,13 +3,13 @@
 exports[`Render button bar 1`] = `
 .c2 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c1 {
@@ -41,9 +41,9 @@ exports[`Render button bar 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  background: #6A50F2;
-  border-color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-main);
+  border-color: var(--pbl-theme-colors-brand-main);
 }
 
 .c1:enabled {
@@ -56,18 +56,18 @@ exports[`Render button bar 1`] = `
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:hover:enabled {
-  background: #4129BD;
-  border-color: #4129BD;
+  background: var(--pbl-theme-colors-brand-dark);
+  border-color: var(--pbl-theme-colors-brand-dark);
 }
 
 .c1:active:enabled {
-  color: #ffffff;
-  background: #281683;
-  border-color: #281683;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
 }
 
 .c0 {
