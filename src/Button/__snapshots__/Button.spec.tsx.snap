@@ -44,7 +44,7 @@ exports[`render button with end icon 1`] = `
   border-color: #6A50F2;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -57,12 +57,12 @@ exports[`render button with end icon 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #4129BD;
   border-color: #4129BD;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   background: #281683;
   border-color: #281683;
@@ -158,7 +158,7 @@ exports[`render button with start icon 1`] = `
   border-color: #6A50F2;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -171,12 +171,12 @@ exports[`render button with start icon 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #4129BD;
   border-color: #4129BD;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   background: #281683;
   border-color: #281683;
@@ -272,7 +272,7 @@ exports[`render primary brand color button 1`] = `
   border-color: #6A50F2;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -285,12 +285,12 @@ exports[`render primary brand color button 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #4129BD;
   border-color: #4129BD;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   background: #281683;
   border-color: #281683;
@@ -355,7 +355,7 @@ exports[`render primary negative color button 1`] = `
   border-color: #F21D0D;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -368,12 +368,12 @@ exports[`render primary negative color button 1`] = `
   box-shadow: 0 0 0 4px #FFE7E5;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #CA271B;
   border-color: #CA271B;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   background: #871A12;
   border-color: #871A12;
@@ -438,7 +438,7 @@ exports[`render primary plain color button 1`] = `
   border-color: #e0e0e0;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -451,12 +451,12 @@ exports[`render primary plain color button 1`] = `
   box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #e0e0e0;
   border-color: #d0d0d0;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #000000;
   background: #d0d0d0;
   border-color: #b0b0b0;
@@ -521,7 +521,7 @@ exports[`render primary positive color button 1`] = `
   border-color: #38C765;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -534,12 +534,12 @@ exports[`render primary positive color button 1`] = `
   box-shadow: 0 0 0 4px #DFF6E6;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #2FB85A;
   border-color: #2FB85A;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   background: #108B36;
   border-color: #108B36;
@@ -604,7 +604,7 @@ exports[`render primaryInverted brand color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -617,12 +617,12 @@ exports[`render primaryInverted brand color button 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #EBE7FF;
   border-color: #EBE7FF;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #6A50F2;
   background: #D6CEFF;
   border-color: #D6CEFF;
@@ -687,7 +687,7 @@ exports[`render primaryInverted negative color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -700,12 +700,12 @@ exports[`render primaryInverted negative color button 1`] = `
   box-shadow: 0 0 0 4px #FFE7E5;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #FFE7E5;
   border-color: #FFE7E5;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #F21D0D;
   background: #FFCFCC;
   border-color: #FFCFCC;
@@ -770,7 +770,7 @@ exports[`render primaryInverted plain color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -783,12 +783,12 @@ exports[`render primaryInverted plain color button 1`] = `
   box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #f0f0f0;
   border-color: #f0f0f0;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #000000;
   background: #e0e0e0;
   border-color: #e0e0e0;
@@ -853,7 +853,7 @@ exports[`render primaryInverted positive color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -866,12 +866,12 @@ exports[`render primaryInverted positive color button 1`] = `
   box-shadow: 0 0 0 4px #DFF6E6;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background: #DFF6E6;
   border-color: #DFF6E6;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #38C765;
   background: #BBECCB;
   border-color: #BBECCB;
@@ -935,7 +935,7 @@ exports[`render secondary brand color button 1`] = `
   border-color: #4129BD;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -948,13 +948,13 @@ exports[`render secondary brand color button 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #281683;
   border-color: #281683;
   background: #EBE7FF;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #281683;
   border-color: #281683;
   background: #D6CEFF;
@@ -1018,7 +1018,7 @@ exports[`render secondary negative color button 1`] = `
   border-color: #CA271B;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1031,13 +1031,13 @@ exports[`render secondary negative color button 1`] = `
   box-shadow: 0 0 0 4px #FFE7E5;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #871A12;
   border-color: #871A12;
   background: #FFE7E5;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #871A12;
   border-color: #871A12;
   background: #FFCFCC;
@@ -1101,7 +1101,7 @@ exports[`render secondary plain color button 1`] = `
   border-color: #000000;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1114,13 +1114,13 @@ exports[`render secondary plain color button 1`] = `
   box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #000000;
   border-color: #000000;
   background: #f0f0f0;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #000000;
   border-color: #000000;
   background: #e0e0e0;
@@ -1184,7 +1184,7 @@ exports[`render secondary positive color button 1`] = `
   border-color: #2FB85A;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1197,13 +1197,13 @@ exports[`render secondary positive color button 1`] = `
   box-shadow: 0 0 0 4px #DFF6E6;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #108B36;
   border-color: #108B36;
   background: #DFF6E6;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #108B36;
   border-color: #108B36;
   background: #BBECCB;
@@ -1267,7 +1267,7 @@ exports[`render secondaryInverted brand color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1280,13 +1280,13 @@ exports[`render secondaryInverted brand color button 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #4129BD;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #281683;
@@ -1350,7 +1350,7 @@ exports[`render secondaryInverted negative color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1363,13 +1363,13 @@ exports[`render secondaryInverted negative color button 1`] = `
   box-shadow: 0 0 0 4px #FFE7E5;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #CA271B;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #871A12;
@@ -1433,7 +1433,7 @@ exports[`render secondaryInverted plain color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1446,13 +1446,13 @@ exports[`render secondaryInverted plain color button 1`] = `
   box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #303030;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #606060;
@@ -1516,7 +1516,7 @@ exports[`render secondaryInverted positive color button 1`] = `
   border-color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1529,13 +1529,13 @@ exports[`render secondaryInverted positive color button 1`] = `
   box-shadow: 0 0 0 4px #DFF6E6;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #2FB85A;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: #ffffff;
   background: #108B36;
@@ -1598,7 +1598,7 @@ exports[`render text brand color button 1`] = `
   color: #4129BD;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1611,12 +1611,12 @@ exports[`render text brand color button 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #281683;
   background: #EBE7FF;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #281683;
   border-color: transparent;
   background: #D6CEFF;
@@ -1679,7 +1679,7 @@ exports[`render text negative color button 1`] = `
   color: #CA271B;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1692,12 +1692,12 @@ exports[`render text negative color button 1`] = `
   box-shadow: 0 0 0 4px #FFE7E5;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #871A12;
   background: #FFE7E5;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #871A12;
   border-color: transparent;
   background: #FFCFCC;
@@ -1760,7 +1760,7 @@ exports[`render text plain color button 1`] = `
   color: #000000;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1773,12 +1773,12 @@ exports[`render text plain color button 1`] = `
   box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #000000;
   background: #f0f0f0;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #000000;
   border-color: transparent;
   background: #e0e0e0;
@@ -1841,7 +1841,7 @@ exports[`render text positive color button 1`] = `
   color: #2FB85A;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1854,12 +1854,12 @@ exports[`render text positive color button 1`] = `
   box-shadow: 0 0 0 4px #DFF6E6;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #108B36;
   background: #DFF6E6;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #108B36;
   border-color: transparent;
   background: #BBECCB;
@@ -1922,7 +1922,7 @@ exports[`render textInverted brand color button 1`] = `
   color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1935,12 +1935,12 @@ exports[`render textInverted brand color button 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   background: #4129BD;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: transparent;
   background: #281683;
@@ -2003,7 +2003,7 @@ exports[`render textInverted negative color button 1`] = `
   color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -2016,12 +2016,12 @@ exports[`render textInverted negative color button 1`] = `
   box-shadow: 0 0 0 4px #FFE7E5;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   background: #CA271B;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: transparent;
   background: #871A12;
@@ -2084,7 +2084,7 @@ exports[`render textInverted plain color button 1`] = `
   color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -2097,12 +2097,12 @@ exports[`render textInverted plain color button 1`] = `
   box-shadow: 0 0 0 4px #f0f0f0;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   background: #303030;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: transparent;
   background: #606060;
@@ -2165,7 +2165,7 @@ exports[`render textInverted positive color button 1`] = `
   color: #ffffff;
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -2178,12 +2178,12 @@ exports[`render textInverted positive color button 1`] = `
   box-shadow: 0 0 0 4px #DFF6E6;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   color: #ffffff;
   background: #2FB85A;
 }
 
-.c0:active:not(:disabled) {
+.c0:active:enabled {
   color: #ffffff;
   border-color: transparent;
   background: #108B36;

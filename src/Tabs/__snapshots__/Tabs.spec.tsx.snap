@@ -59,7 +59,7 @@ exports[`Render first selected 1`] = `
   margin: 0;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -123,7 +123,7 @@ exports[`Render first selected 1`] = `
   white-space: nowrap;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -174,7 +174,7 @@ exports[`Render first selected 1`] = `
   white-space: nowrap;
 }
 
-.c4:not(:disabled) {
+.c4:enabled {
   cursor: pointer;
 }
 
@@ -224,7 +224,7 @@ exports[`Render first selected 1`] = `
   white-space: nowrap;
 }
 
-.c6:not(:disabled) {
+.c6:enabled {
   cursor: pointer;
 }
 
@@ -277,7 +277,7 @@ exports[`Render first selected 1`] = `
   margin: 0;
 }
 
-.c7:not(:disabled) {
+.c7:enabled {
   cursor: pointer;
 }
 
@@ -484,7 +484,7 @@ exports[`Render tabs with icons 1`] = `
   white-space: nowrap;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -539,7 +539,7 @@ exports[`Render tabs with icons 1`] = `
   margin: 0;
 }
 
-.c4:not(:disabled) {
+.c4:enabled {
   cursor: pointer;
 }
 
@@ -602,7 +602,7 @@ exports[`Render tabs with icons 1`] = `
   white-space: nowrap;
 }
 
-.c5:not(:disabled) {
+.c5:enabled {
   cursor: pointer;
 }
 
@@ -652,7 +652,7 @@ exports[`Render tabs with icons 1`] = `
   white-space: nowrap;
 }
 
-.c7:not(:disabled) {
+.c7:enabled {
   cursor: pointer;
 }
 
@@ -920,7 +920,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   margin: 0;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -983,7 +983,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   white-space: nowrap;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -1033,7 +1033,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   white-space: nowrap;
 }
 
-.c5:not(:disabled) {
+.c5:enabled {
   cursor: pointer;
 }
 
@@ -1227,7 +1227,7 @@ exports[`Work with one tab 1`] = `
   margin: 0;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -1290,7 +1290,7 @@ exports[`Work with one tab 1`] = `
   white-space: nowrap;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -1340,7 +1340,7 @@ exports[`Work with one tab 1`] = `
   white-space: nowrap;
 }
 
-.c5:not(:disabled) {
+.c5:enabled {
   cursor: pointer;
 }
 

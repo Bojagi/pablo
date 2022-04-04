@@ -1,3 +1,5 @@
+import { createThemeVars } from './createThemeVars';
+
 export interface TypographyBase {
   fontFamily: string;
   fontWeight: string | number;
@@ -71,3 +73,5 @@ export const typography: Typography = {
     fontWeight: 500,
   },
 };
+
+export const typographyVars = createThemeVars('typography', typography);

@@ -19,7 +19,7 @@ const PabloButton = styled.button`
     ${getButtonOutlineShadow(getComponentStyle('button.primary.{color}.focus.outlineColor'))}
   }
 
-  &:hover:not(:disabled) {
+  &:hover:enabled {
     background: ${getComponentStyle('button.primary.{color}.hover.backgroundColor')};
     border-color: ${getComponentStyle('button.primary.{color}.hover.borderColor')};
   }

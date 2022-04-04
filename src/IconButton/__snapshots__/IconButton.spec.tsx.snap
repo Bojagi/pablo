@@ -42,7 +42,7 @@ exports[`Render large icon button with correct styles 1`] = `
   transform: scale( 1 );
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -51,12 +51,12 @@ exports[`Render large icon button with correct styles 1`] = `
   cursor: normal;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: rgba(0,0,0,0.05);
   color: #000000;
 }
 
-.c0:focus:not(:disabled) {
+.c0:focus:enabled {
   background-color: rgba(0,0,0,0.1);
   color: #000000;
 }
@@ -113,7 +113,7 @@ exports[`Render medium icon button with correct styles 1`] = `
   transform: scale( 1 );
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -122,12 +122,12 @@ exports[`Render medium icon button with correct styles 1`] = `
   cursor: normal;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: rgba(0,0,0,0.05);
   color: #000000;
 }
 
-.c0:focus:not(:disabled) {
+.c0:focus:enabled {
   background-color: rgba(0,0,0,0.1);
   color: #000000;
 }
@@ -184,7 +184,7 @@ exports[`Render small icon button with correct styles 1`] = `
   transform: scale( 1 );
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -193,12 +193,12 @@ exports[`Render small icon button with correct styles 1`] = `
   cursor: normal;
 }
 
-.c0:hover:not(:disabled) {
+.c0:hover:enabled {
   background-color: rgba(0,0,0,0.05);
   color: #000000;
 }
 
-.c0:focus:not(:disabled) {
+.c0:focus:enabled {
   background-color: rgba(0,0,0,0.1);
   color: #000000;
 }

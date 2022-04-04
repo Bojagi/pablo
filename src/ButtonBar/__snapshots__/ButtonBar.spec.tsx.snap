@@ -46,7 +46,7 @@ exports[`Render button bar 1`] = `
   border-color: #6A50F2;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -59,12 +59,12 @@ exports[`Render button bar 1`] = `
   box-shadow: 0 0 0 4px #EBE7FF;
 }
 
-.c1:hover:not(:disabled) {
+.c1:hover:enabled {
   background: #4129BD;
   border-color: #4129BD;
 }
 
-.c1:active:not(:disabled) {
+.c1:active:enabled {
   color: #ffffff;
   background: #281683;
   border-color: #281683;

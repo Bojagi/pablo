@@ -1,5 +1,5 @@
-import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
+import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
 
@@ -41,7 +41,7 @@ export const toolbarStyles: ToolbarStyles = {
   gap: getSpacing(2),
   divider: {
     width: 1,
-    color: getColor('borders', 'light'),
+    color: themeVars.colors.borders.light,
   },
   item: {
     buttonTransition: [
@@ -53,19 +53,19 @@ export const toolbarStyles: ToolbarStyles = {
     size: '24px',
     borderRadius: 6,
     backgroundColor: 'transparent',
-    color: getColor('common', 'black'),
+    color: themeVars.colors.common.black,
     hover: {
-      backgroundColor: getColor('brand', 'lightest'),
-      color: getColor('common', 'black'),
+      backgroundColor: themeVars.colors.brand.lightest,
+      color: themeVars.colors.common.black,
     },
     focus: {
-      backgroundColor: getColor('brand', 'lightest'),
-      color: getColor('common', 'black'),
+      backgroundColor: themeVars.colors.brand.lightest,
+      color: themeVars.colors.common.black,
     },
     active: {
       iconScale: 0.833333333,
-      backgroundColor: getColor('brand'),
-      color: getColor('common', 'white'),
+      backgroundColor: themeVars.colors.brand.main,
+      color: themeVars.colors.common.white,
     },
   },
 };

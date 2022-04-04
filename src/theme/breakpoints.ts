@@ -1,3 +1,5 @@
+import { createThemeVarArray } from './createThemeVars';
+
 export type Breakpoint = 'sm' | 'md' | 'lg' | 'xl';
 
 export const breakpointNames: Breakpoint[] = ['sm', 'md', 'lg', 'xl'];
@@ -25,3 +27,5 @@ export function createBreakpoints(
 export const defaultBreakpoints: BreakpointsArray = ['700px', '1000px', '1200px', '1920px'];
 
 export const breakpoints = createBreakpoints(defaultBreakpoints, breakpointNames);
+
+export const breakpointVars = createThemeVarArray('breakpoints', breakpointNames);

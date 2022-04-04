@@ -1,17 +1,34 @@
+import { createThemeVars } from './createThemeVars';
+
 export type ShadedColor = {
+  /**
+   * Main shade of this color.
+   */
   main: string;
   dark: string;
   darkest: string;
   light: string;
   lightest: string;
+  /**
+   * Color for text that is rendered in a box with a shade as dark or darker as the "main" shade of this color.
+   */
   contrastText: string;
+  /**
+   * Color for text that is rendered in a box with shades this color that are lighter than "main".
+   */
   contrastTextLight: string;
 };
 
 export type CommonColors = {
   white: string;
   black: string;
+  /**
+   * Color for text that is rendered in a white background box.
+   */
   whiteContrastText: string;
+  /**
+   * Color for text that is rendered in a black background box.
+   */
   blackContrastText: string;
 };
 
@@ -24,7 +41,6 @@ export type BorderColors = {
   main: string;
   light: string;
 };
-
 export interface ColorShades {
   '50': string;
   '100': string;
@@ -43,8 +59,17 @@ export type AllColors = ShadedColor & TextColors & BorderColors & CommonColors;
 export interface Colors {
   background: string;
   common: CommonColors;
+  /**
+   * Shades of gray between 50 and 900.
+   */
   gray: ColorShades;
+  /**
+   * Transparent shades of black between 50 and 900. Similar to gray, but it's done by using opacity.
+   */
   blackOpacity: ColorShades;
+  /**
+   * Transparent shades of white between 50 and 900.
+   */
   whiteOpacity: ColorShades;
   borders: BorderColors;
   brand: ShadedColor;
@@ -146,6 +171,8 @@ export const colors: Colors = {
     contrastTextLight: BLACK,
   },
 };
+
+export const colorVars = createThemeVars('colors', colors);
 
 /**
  * Get hex color byte (e.g. to get transparency)

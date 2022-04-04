@@ -48,7 +48,7 @@ exports[`Render multiple nav items 1`] = `
   margin: 8px 0;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -100,7 +100,7 @@ exports[`Render multiple nav items 1`] = `
   background-color: #EBE7FF;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -209,7 +209,7 @@ exports[`Render one nav item 1`] = `
   background-color: #EBE7FF;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 

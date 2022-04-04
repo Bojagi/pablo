@@ -20,21 +20,21 @@ test.each([
     expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black);
 
     expect(buttonNode).toHaveStyleRule('background-color', defaultTheme.colors.blackOpacity['50'], {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     });
     expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black, {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     });
 
     expect(buttonNode).toHaveStyleRule(
       'background-color',
       defaultTheme.colors.blackOpacity['100'],
       {
-        modifier: ':focus:not(:disabled)',
+        modifier: ':focus:enabled',
       }
     );
     expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black, {
-      modifier: ':focus:not(:disabled)',
+      modifier: ':focus:enabled',
     });
 
     // Icon

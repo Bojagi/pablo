@@ -1,6 +1,5 @@
-import { css } from 'styled-components';
-import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
+import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
 
@@ -32,23 +31,23 @@ export interface SidebarNavStyles extends BaseStyles<SidebarNavStyleProperties> 
 }
 
 export const sidebarNavStyles: SidebarNavStyles = {
-  borderLeft: css`1px solid ${getColor('borders', 'light')}`,
+  borderLeft: `1px solid ${themeVars.colors.borders.light}`,
   borderLeftSpacing: getSpacing(6),
   item: {
     marginY: getSpacing(4),
     focus: {
-      outlineColor: getColor('brand', 'lightest'),
+      outlineColor: themeVars.colors.brand.lightest,
       outlineSize: getSpacing(2),
     },
     active: {
-      backgroundColor: getColor('brand', 'light'),
+      backgroundColor: themeVars.colors.brand.light,
       outlineSize: getSpacing(2),
     },
     selected: {
-      backgroundColor: getColor('brand', 'lightest'),
+      backgroundColor: themeVars.colors.brand.lightest,
     },
     hover: {
-      backgroundColor: getColor('brand', 'lightest'),
+      backgroundColor: themeVars.colors.brand.lightest,
     },
   },
 };

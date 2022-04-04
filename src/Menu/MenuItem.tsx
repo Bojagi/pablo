@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 import { buttonBaseStyles } from '../ButtonBase';
-import { getSpacing, getColor } from '../styleHelpers';
+import { getSpacing } from '../styleHelpers';
+import { themeVars } from '../theme/themeVars';
 import { BaseProps } from '../types';
 import { ButtonTypography } from '../Typography';
 import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
@@ -17,7 +18,7 @@ export interface MenuItemProps extends BaseProps<MenuItemStyleProperties> {
 const MenuItemBox = styled.div<MenuItemProps>`
   ${buttonBaseStyles as any}
   display: block;
-  color: ${getColor('common', 'black')};
+  color: ${themeVars.colors.common.black};
   text-decoration: none;
   margin-top: ${getSpacing(1)};
   margin-bottom: ${getSpacing(1)};
@@ -26,15 +27,15 @@ const MenuItemBox = styled.div<MenuItemProps>`
   ${(props: MenuItemProps) =>
     props.selected
       ? css`
-          background-color: ${getColor('brand', 'lightest')};
+          background-color: ${themeVars.colors.brand.lightest};
         `
       : css`
           &:hover {
-            background-color: ${getColor('gray', '50')};
+            background-color: ${themeVars.colors.gray['50']};
           }
 
           &:active {
-            background-color: ${getColor('gray', '100')};
+            background-color: ${themeVars.colors.gray[100]};
           }
         `}
   ${getCustomStyles('menu.styles', 'item')}

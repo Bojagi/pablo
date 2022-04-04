@@ -119,7 +119,7 @@ exports[`Click on menu item 1`] = `
   padding: 4px;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -320,7 +320,7 @@ exports[`Render open Menu 1`] = `
   padding: 4px;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 

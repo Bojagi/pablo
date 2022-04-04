@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
-import { getColor, getSpacing } from '../styleHelpers';
+import { getSpacing } from '../styleHelpers';
+import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 
 export interface InputBaseVariantStyles {
@@ -28,16 +29,16 @@ export interface InputBaseStyles {
 }
 
 const filledVariantStyle = {
-  borderColor: getColor('borders'),
-  backgroundColor: getColor('common', 'white'),
+  borderColor: themeVars.colors.borders.main,
+  backgroundColor: themeVars.colors.common.white,
   focus: {
     outlineSize: '3px',
-    outlineColor: getColor('brand', 'lightest'),
+    outlineColor: themeVars.colors.brand.lightest,
   },
   error: {
-    borderColor: getColor('negative'),
+    borderColor: themeVars.colors.negative.main,
     focus: {
-      outlineColor: getColor('negative', 'lightest'),
+      outlineColor: themeVars.colors.negative.lightest,
     },
   },
 };
@@ -48,7 +49,7 @@ export const inputBaseStyles: InputBaseStyles = {
     ${getSpacing(3)} ${getSpacing(4)}
   `,
   borderRadius: '8px',
-  fontFamily: (props) => props.theme.typography.base.fontFamily,
+  fontFamily: themeVars.typography.base.fontFamily,
   borderWidth: 1,
   filled: filledVariantStyle,
   outline: {

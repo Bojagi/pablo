@@ -2,7 +2,6 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { PabloThemeProvider } from '../src/theme';
 import { getSpacing } from '../src/styleHelpers/getSpacing';
-import { getColor } from '../src/styleHelpers/getColor';
 import { css } from 'styled-components';
 
 export const parameters = {
@@ -40,7 +39,7 @@ export const decorators = [(Story) => (
         //   borderLeftSpacing: 5,
         //   item: {
         //     hover: {
-        //       backgroundColor: getColor('positive', 'main'),
+        //       backgroundColor: themeVars.colors.positive.main,
         //     },
         //   },
         //   borderLeft: css`2px dotted red`,

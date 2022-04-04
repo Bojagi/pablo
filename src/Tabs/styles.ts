@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
-import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { getComponentStyle } from '../styleHelpers';
 import { BaseStyles } from '../types';
+import { themeVars } from '../theme/themeVars';
 
 export type TabsStyleProperties = 'root';
 export type TabStyleProperties = 'root' | 'hover' | 'active' | 'focus' | 'selected' | 'indicator';
@@ -56,7 +56,7 @@ export interface TabsStyles extends BaseStyles<TabsStyleProperties> {
 export const tabsStyles: TabsStyles = {
   gap: getSpacing(2),
   tab: {
-    color: getColor('common', 'black'),
+    color: themeVars.colors.common.black,
     icon: {
       gap: getComponentStyle('button.base.icon.gap'),
       size: getComponentStyle('button.base.icon.size.medium'),
@@ -79,9 +79,9 @@ export const tabsStyles: TabsStyles = {
         ${getSpacing(4)} ${getSpacing(5)} ${getSpacing(5)}
       `,
       margin: '0',
-      color: getColor('brand'),
+      color: themeVars.colors.brand.main,
       bottomBorder: {
-        color: getColor('brand'),
+        color: themeVars.colors.brand.main,
         thickness: getSpacing(2),
         gap: getSpacing(4),
         radius: getSpacing(2),

@@ -281,14 +281,14 @@ test.each([
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
 });
@@ -311,14 +311,14 @@ test('Render primary brand button when no variant or color is given', () => {
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
 });
@@ -341,14 +341,14 @@ test('Render primary brand button when unknown variant is given', () => {
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
 });
