@@ -12,11 +12,12 @@ const overwriteMerge = (_, sourceArray) => sourceArray;
 
 function createThemeVarDefinitions(theme: any, keyNameObject: any) {
   return Array.from(Object.entries(keyNameObject))
-    .flatMap(([key, varName]) =>
+    .map(([key, varName]) =>
       isObject(varName)
         ? createThemeVarDefinitions(theme[key], keyNameObject[key])
         : `--${varName}: ${theme[key]};`
     )
+    .flat()
     .join(' ');
 }
 
