@@ -72,7 +72,7 @@ exports[`Show error when an error message is given 1`] = `
   line-height: var(--pbl-theme-typography-info-lineHeight);
   margin-bottom: var(--pbl-theme-typography-info-marginBottom);
   margin-top: 4px;
-  color: #F21D0D;
+  color: var(--pbl-theme-colors-negative-main);
 }
 
 .c1 {
@@ -157,7 +157,7 @@ exports[`Show infotext when available 1`] = `
   line-height: var(--pbl-theme-typography-info-lineHeight);
   margin-bottom: var(--pbl-theme-typography-info-marginBottom);
   margin-top: 4px;
-  color: #00000080;
+  color: var(--pbl-theme-colors-text-info);
 }
 
 .c1 {

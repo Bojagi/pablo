@@ -42,7 +42,11 @@ export const PabloThemeProvider = ({
       <pabloThemeContext.Provider value={mergedTheme}>
         <pabloComponentStylesContext.Provider value={mergedComponentStyles}>
           <ThemeProvider
-            theme={{ ...scTheme, ...mergedTheme, componentStyles: mergedComponentStyles }}
+            theme={{
+              ...scTheme,
+              ...mergedTheme,
+              componentStyles: mergedComponentStyles,
+            }}
           >
             {children}
           </ThemeProvider>
