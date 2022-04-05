@@ -2,6 +2,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { TextColorProps, BackgroundColorProps } from 'styled-system';
 import { system } from '@styled-system/core';
+import { themeVars } from '../theme/themeVars';
+import { getByPath } from '../utils/getByPath';
 
 export interface ColorProps {
   bgColor?: BackgroundColorProps['backgroundColor'];
@@ -12,11 +14,11 @@ export interface ColorProps {
 export const color = system({
   textColor: {
     property: 'color',
-    scale: 'colors',
+    transform: (value: string) => getByPath(themeVars.colors, value),
   },
   bgColor: {
     property: 'backgroundColor',
-    scale: 'colors',
+    transform: (value: string) => getByPath(themeVars.colors, value),
   },
   opacity: true,
 });

@@ -13,7 +13,7 @@ const DirectButton = styled.button`
   transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s ease-in-out;
   outline: none;
 
-  &:not(:disabled) {
+  &:enabled {
     cursor: pointer;
   }
 
@@ -30,7 +30,7 @@ const DirectButton = styled.button`
     box-shadow: 0 0 0 4px $EBE7FF;
   }
 
-  &:hover:not(:disabled) {
+  &:hover:enabled {
     color: #ffffff;
     background: #301a9e;
     border-color: #301a9e;

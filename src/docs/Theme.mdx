@@ -157,26 +157,18 @@ const MyComponent = styled.div`
 
 As you can see this is quite long and a pain to write, therefore Pablo offers a set of helper functions.
 
-### `getColor`
+### Color
 
 ```js
-import { getColor } from '@bojagi/pablo/styleHelpers';
+import { theme } from '@bojagi/pablo/theme';
 const MyComponent = styled.div`
-  background-color: ${getColor('brand')};
+  background-color: ${theme.colors.brand.main};
 `;
 ```
 
-The `getColor` function returns you the theme colors you specify in the arguments. It takes two
-arguments, the first being the color and the second the variant. By default the second variant is `main`.
-
-Below you find a full path example:
-
-```js
-import { getColor } from '@bojagi/pablo/styleHelpers';
-const MyComponent = styled.div`
-  background-color: ${getColor('positive', 'dark')};
-`;
-```
+You can access theme colors by just referencing them specific theme color from the `theme` object.
+This theme object contains nested objects that hold the CSS variable name to the color, so you don't
+need to reference the whole variable and get type safety through TypeScript.
 
 ### `getSpacing`
 

@@ -1,6 +1,6 @@
 import { render, cleanup, act, fireEvent } from '@testing-library/react';
 import React from 'react';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
 import { Tabs } from './Tabs';
 import { Tab } from './Tab';
 import {
@@ -10,6 +10,7 @@ import {
 } from '../../testUtils/mockResizeObserver';
 import { setFakeWidth } from '../../testUtils/setFakeDimensions';
 import { waitOneTick } from '../../testUtils/waitOneTick';
+import { themeVars } from '../theme/themeVars';
 
 let onSelectMock;
 
@@ -40,9 +41,9 @@ test('Render first selected', () => {
   expect(allTabs[0]).toHaveTextContent('Hello');
   expect(allTabs[1]).toHaveTextContent('World');
   expect(allTabs[2]).toHaveTextContent('Bye');
-  expect(allTabs[0]).toHaveStyleRule('color', defaultTheme.colors.brand.main);
-  expect(allTabs[1]).toHaveStyleRule('color', defaultTheme.colors.common.black);
-  expect(allTabs[2]).toHaveStyleRule('color', defaultTheme.colors.common.black);
+  expect(allTabs[0]).toHaveStyleRule('color', themeVars.colors.brand.main);
+  expect(allTabs[1]).toHaveStyleRule('color', themeVars.colors.common.black);
+  expect(allTabs[2]).toHaveStyleRule('color', themeVars.colors.common.black);
 });
 
 test('Use Tab "active" prop when "selected" prop of Tabs is not set', () => {
@@ -50,9 +51,9 @@ test('Use Tab "active" prop when "selected" prop of Tabs is not set', () => {
   const allTabs = getAllByTestId('pbl-tab');
   // 3 + 3 shadowed + "more" tab
   expect(allTabs).toHaveLength(7);
-  expect(allTabs[0]).toHaveStyleRule('color', defaultTheme.colors.common.black);
-  expect(allTabs[1]).toHaveStyleRule('color', defaultTheme.colors.brand.main);
-  expect(allTabs[2]).toHaveStyleRule('color', defaultTheme.colors.common.black);
+  expect(allTabs[0]).toHaveStyleRule('color', themeVars.colors.common.black);
+  expect(allTabs[1]).toHaveStyleRule('color', themeVars.colors.brand.main);
+  expect(allTabs[2]).toHaveStyleRule('color', themeVars.colors.common.black);
 });
 
 test('Trigger onSelect when clicked on a tab', () => {
@@ -71,15 +72,15 @@ test('Update tabs when tabs have been updated', () => {
   const { getAllByTestId, rerender } = renderComponent({ selected: 'bye' });
   const allTabs = getAllByTestId('pbl-tab');
 
-  expect(allTabs[0]).toHaveStyleRule('color', defaultTheme.colors.common.black);
-  expect(allTabs[1]).toHaveStyleRule('color', defaultTheme.colors.common.black);
-  expect(allTabs[2]).toHaveStyleRule('color', defaultTheme.colors.brand.main);
+  expect(allTabs[0]).toHaveStyleRule('color', themeVars.colors.common.black);
+  expect(allTabs[1]).toHaveStyleRule('color', themeVars.colors.common.black);
+  expect(allTabs[2]).toHaveStyleRule('color', themeVars.colors.brand.main);
 
   rerender(getRenderHtml({ selected: 'world' }));
 
-  expect(allTabs[0]).toHaveStyleRule('color', defaultTheme.colors.common.black);
-  expect(allTabs[1]).toHaveStyleRule('color', defaultTheme.colors.brand.main);
-  expect(allTabs[2]).toHaveStyleRule('color', defaultTheme.colors.common.black);
+  expect(allTabs[0]).toHaveStyleRule('color', themeVars.colors.common.black);
+  expect(allTabs[1]).toHaveStyleRule('color', themeVars.colors.brand.main);
+  expect(allTabs[2]).toHaveStyleRule('color', themeVars.colors.common.black);
 });
 
 test('Show "more" tab when there are too many tabs to fit the content', async () => {

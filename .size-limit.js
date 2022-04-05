@@ -2,35 +2,35 @@ module.exports = [
   {
     path: 'build/index.js',
     name: 'Common JS',
-    limit: '38 kb',
+    limit: '40 kb',
   },
   { 
     path: 'build/Button/index.js',
     name: 'Button direct import (Common JS)',
-    limit: '5.75 kb',
+    limit: '8 kb',
   },
   {
     path: 'build/es/index.js',
     name: 'ES Next',
-    limit: '38 kb',
+    limit: '40 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'Button Treeshaking',
     import: '{ Button }',
-    limit: '28 kb',
+    limit: '29 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'Input Treeshaking',
     import: '{ Input }',
-    limit: '28 kb',
+    limit: '29 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'Avatar Treeshaking',
     import: '{ Avatar }',
-    limit: '28 kb',
+    limit: '29 kb',
   },
   {
     path: 'build/esm/index.js',

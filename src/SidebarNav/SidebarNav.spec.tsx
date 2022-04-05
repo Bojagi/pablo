@@ -1,6 +1,7 @@
 import { render, cleanup } from '@testing-library/react';
 import React from 'react';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 import { SidebarNav } from './SidebarNav';
 import { SidebarNavItem } from './SidebarNavItem';
 
@@ -32,7 +33,7 @@ test('Render multiple nav items', () => {
   expect(allSidebarNav[1]).toHaveTextContent('World');
   expect(allSidebarNav[2]).toHaveTextContent('Bye');
   expect(allSidebarNav[0]).toHaveStyleRule('background-color', undefined);
-  expect(allSidebarNav[1]).toHaveStyleRule('background-color', defaultTheme.colors.brand.lightest);
+  expect(allSidebarNav[1]).toHaveStyleRule('background-color', themeVars.colors.brand.lightest);
   expect(allSidebarNav[2]).toHaveStyleRule('background-color', undefined);
 });
 

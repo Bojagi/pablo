@@ -18,7 +18,7 @@ exports[`Render closed modal with just a content element 1`] = `
   left: 0;
   top: 0;
   overflow: scroll;
-  background-color: rgba(0,0,0,0.6);
+  background-color: var(--pbl-theme-colors-blackOpacity-600);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,7 +56,7 @@ exports[`Render closed modal with just a content element 1`] = `
 .c2 {
   box-sizing: border-box;
   border-radius: 12px;
-  background-color: #fafafa;
+  background-color: var(--pbl-theme-colors-background);
   padding: 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -107,7 +107,7 @@ exports[`Render with additional panes 1`] = `
 .c1 {
   box-sizing: border-box;
   border-radius: 12px;
-  background-color: #fafafa;
+  background-color: var(--pbl-theme-colors-background);
   padding: 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -187,19 +187,19 @@ exports[`Render with title 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.3333333em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-title-fontSize);
+  line-height: var(--pbl-theme-typography-title-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-title-marginBottom);
 }
 
 .c0 {
   box-sizing: border-box;
   border-radius: 12px;
-  background-color: #fafafa;
+  background-color: var(--pbl-theme-colors-background);
   padding: 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -242,19 +242,19 @@ exports[`Render with title and topRightItem 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1.5rem;
-  line-height: 1.3333333em;
-  margin-bottom: 0.5em;
+  font-size: var(--pbl-theme-typography-title-fontSize);
+  line-height: var(--pbl-theme-typography-title-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-title-marginBottom);
 }
 
 .c0 {
   box-sizing: border-box;
   border-radius: 12px;
-  background-color: #fafafa;
+  background-color: var(--pbl-theme-colors-background);
   padding: 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -301,7 +301,7 @@ exports[`Render with topRightItem 1`] = `
 .c0 {
   box-sizing: border-box;
   border-radius: 12px;
-  background-color: #fafafa;
+  background-color: var(--pbl-theme-colors-background);
   padding: 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }

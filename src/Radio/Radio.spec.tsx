@@ -1,6 +1,7 @@
 import { act, cleanup, fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 import { Radio } from './Radio';
 
 let onChangeMock;
@@ -80,7 +81,7 @@ test('Render medium radio', () => {
   // Uses subtitle typography
   expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',
-    defaultTheme.typography.subtitle.fontSize
+    themeVars.typography.subtitle.fontSize
   );
 });
 
@@ -97,7 +98,7 @@ test('Render small radio', () => {
   // Uses paragraph typography
   expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',
-    defaultTheme.typography.paragraph.fontSize
+    themeVars.typography.paragraph.fontSize
   );
 });
 
@@ -137,7 +138,7 @@ test('Forward onFocus and onBlur to input and show focus outline', () => {
 
   expect(getByTestId('pbl-radio')).toHaveStyleRule(
     'box-shadow',
-    `0 0 0 3px ${defaultTheme.colors.brand.lightest}`
+    `0 0 0 3px ${themeVars.colors.brand.lightest}`
   );
 
   expect(onBlurMock).toHaveBeenCalledTimes(0);

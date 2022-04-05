@@ -1,7 +1,8 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { IconButton } from './IconButton';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 
 test.each([
   ['small', '24px', '20px'],
@@ -17,24 +18,20 @@ test.each([
     expect(buttonNode).toHaveStyleRule('width', expectedButtonSize);
     expect(buttonNode).toHaveStyleRule('height', expectedButtonSize);
     expect(buttonNode).toHaveStyleRule('background-color', 'transparent');
-    expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black);
+    expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.black);
 
-    expect(buttonNode).toHaveStyleRule('background-color', defaultTheme.colors.blackOpacity['50'], {
-      modifier: ':hover:not(:disabled)',
+    expect(buttonNode).toHaveStyleRule('background-color', themeVars.colors.blackOpacity['50'], {
+      modifier: ':hover:enabled',
     });
-    expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black, {
-      modifier: ':hover:not(:disabled)',
+    expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.black, {
+      modifier: ':hover:enabled',
     });
 
-    expect(buttonNode).toHaveStyleRule(
-      'background-color',
-      defaultTheme.colors.blackOpacity['100'],
-      {
-        modifier: ':focus:not(:disabled)',
-      }
-    );
-    expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.black, {
-      modifier: ':focus:not(:disabled)',
+    expect(buttonNode).toHaveStyleRule('background-color', themeVars.colors.blackOpacity['100'], {
+      modifier: ':focus:enabled',
+    });
+    expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.black, {
+      modifier: ':focus:enabled',
     });
 
     // Icon
@@ -54,8 +51,8 @@ test('Render active with correct styles', () => {
   const { container } = renderComponent({ active: true });
   const buttonNode = container.firstChild;
   // Button
-  expect(buttonNode).toHaveStyleRule('background-color', defaultTheme.colors.brand.main);
-  expect(buttonNode).toHaveStyleRule('color', defaultTheme.colors.common.white);
+  expect(buttonNode).toHaveStyleRule('background-color', themeVars.colors.brand.main);
+  expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.white);
 
   // Icon
   expect(buttonNode).toHaveStyleRule('transform', 'scale( 0.833333333 )', {

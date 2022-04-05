@@ -16,13 +16,13 @@ exports[`Render first selected 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c1 {
@@ -49,17 +49,17 @@ exports[`Render first selected 1`] = `
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   padding: 8px 12px 12px;
   margin: 0;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -69,15 +69,15 @@ exports[`Render first selected 1`] = `
 }
 
 .c1:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:after {
@@ -89,7 +89,7 @@ exports[`Render first selected 1`] = `
   height: 4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background-color: #6A50F2;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .c3 {
@@ -116,14 +116,14 @@ exports[`Render first selected 1`] = `
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -133,15 +133,15 @@ exports[`Render first selected 1`] = `
 }
 
 .c3:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c3:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4 {
@@ -167,14 +167,14 @@ exports[`Render first selected 1`] = `
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c4:not(:disabled) {
+.c4:enabled {
   cursor: pointer;
 }
 
@@ -184,15 +184,15 @@ exports[`Render first selected 1`] = `
 }
 
 .c4:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c6 {
@@ -217,14 +217,14 @@ exports[`Render first selected 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c6:not(:disabled) {
+.c6:enabled {
   cursor: pointer;
 }
 
@@ -234,15 +234,15 @@ exports[`Render first selected 1`] = `
 }
 
 .c6:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c6:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c6:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c7 {
@@ -267,17 +267,17 @@ exports[`Render first selected 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   padding: 8px 12px 12px;
   margin: 0;
 }
 
-.c7:not(:disabled) {
+.c7:enabled {
   cursor: pointer;
 }
 
@@ -287,15 +287,15 @@ exports[`Render first selected 1`] = `
 }
 
 .c7:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c7:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c7:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c7:after {
@@ -307,7 +307,7 @@ exports[`Render first selected 1`] = `
   height: 4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background-color: #6A50F2;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .c5 {
@@ -444,13 +444,13 @@ exports[`Render tabs with icons 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c1 {
@@ -477,14 +477,14 @@ exports[`Render tabs with icons 1`] = `
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -494,15 +494,15 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c1:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4 {
@@ -529,17 +529,17 @@ exports[`Render tabs with icons 1`] = `
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   padding: 8px 12px 12px;
   margin: 0;
 }
 
-.c4:not(:disabled) {
+.c4:enabled {
   cursor: pointer;
 }
 
@@ -549,15 +549,15 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c4:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4:after {
@@ -569,7 +569,7 @@ exports[`Render tabs with icons 1`] = `
   height: 4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background-color: #6A50F2;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .c5 {
@@ -595,14 +595,14 @@ exports[`Render tabs with icons 1`] = `
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c5:not(:disabled) {
+.c5:enabled {
   cursor: pointer;
 }
 
@@ -612,15 +612,15 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c5:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c7 {
@@ -645,14 +645,14 @@ exports[`Render tabs with icons 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c7:not(:disabled) {
+.c7:enabled {
   cursor: pointer;
 }
 
@@ -662,15 +662,15 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .c7:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c7:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c7:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c2 {
@@ -877,13 +877,13 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c1 {
@@ -910,17 +910,17 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   padding: 8px 12px 12px;
   margin: 0;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -930,15 +930,15 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c1:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:after {
@@ -950,7 +950,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   height: 4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background-color: #6A50F2;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .c3 {
@@ -976,14 +976,14 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -993,15 +993,15 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c3:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c3:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5 {
@@ -1026,14 +1026,14 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c5:not(:disabled) {
+.c5:enabled {
   cursor: pointer;
 }
 
@@ -1043,15 +1043,15 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .c5:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4 {
@@ -1184,13 +1184,13 @@ exports[`Work with one tab 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c1 {
@@ -1217,17 +1217,17 @@ exports[`Work with one tab 1`] = `
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
-  color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-main);
   padding: 8px 12px 12px;
   margin: 0;
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -1237,15 +1237,15 @@ exports[`Work with one tab 1`] = `
 }
 
 .c1:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c1:after {
@@ -1257,7 +1257,7 @@ exports[`Work with one tab 1`] = `
   height: 4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background-color: #6A50F2;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .c3 {
@@ -1283,14 +1283,14 @@ exports[`Work with one tab 1`] = `
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c3:not(:disabled) {
+.c3:enabled {
   cursor: pointer;
 }
 
@@ -1300,15 +1300,15 @@ exports[`Work with one tab 1`] = `
 }
 
 .c3:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c3:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5 {
@@ -1333,14 +1333,14 @@ exports[`Work with one tab 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   position: relative;
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
 }
 
-.c5:not(:disabled) {
+.c5:enabled {
   cursor: pointer;
 }
 
@@ -1350,15 +1350,15 @@ exports[`Work with one tab 1`] = `
 }
 
 .c5:hover {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
 .c5:active {
-  background-color: #EBE7FF;
+  background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c4 {

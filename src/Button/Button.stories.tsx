@@ -150,7 +150,7 @@ WithCustomStyles.args = {
     primary: css`
       animation: ${shakeAnimation} 0.5s linear infinite;
       background-color: tomato;
-      &:hover:not(:disabled) {
+      &:hover:enabled {
         background-color: red;
       }
     `,

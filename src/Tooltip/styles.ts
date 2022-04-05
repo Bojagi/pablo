@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
+import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
 
@@ -21,7 +21,7 @@ export const tooltipStyles: TooltipStyles = {
     ${getSpacing(2)} ${getSpacing(4)}
   `,
   zIndex: 100,
-  backgroundColor: getColor('common', 'black'),
-  color: getColor('common', 'white'),
+  backgroundColor: themeVars.colors.common.black,
+  color: themeVars.colors.common.white,
   borderRadius: 4,
 };

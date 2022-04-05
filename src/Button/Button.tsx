@@ -53,12 +53,12 @@ const ButtonPrimary = styled.button<InnerButtonProps>`
     ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
-  &:hover:not(:disabled) {
+  &:hover:enabled {
     background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
     border-color: ${getComponentStyle('button.{color}.{variant}.hover.borderColor')};
   }
 
-  &:active:not(:disabled) {
+  &:active:enabled {
     color: ${getComponentStyle('button.{color}.{variant}.active.color')};
     background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
     border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
@@ -82,13 +82,13 @@ const ButtonSecondary = styled.button<InnerButtonProps>`
     ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
-  &:hover:not(:disabled) {
+  &:hover:enabled {
     color: ${getComponentStyle('button.{color}.{variant}.hover.color')};
     border-color: ${getComponentStyle('button.{color}.{variant}.hover.borderColor')};
     background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
   }
 
-  &:active:not(:disabled) {
+  &:active:enabled {
     color: ${getComponentStyle('button.{color}.{variant}.active.color')};
     border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
     background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
@@ -111,12 +111,12 @@ const ButtonText = styled.button<InnerButtonProps>`
     ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
   }
 
-  &:hover:not(:disabled) {
+  &:hover:enabled {
     color: ${getComponentStyle('button.{color}.{variant}.hover.color')};
     background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
   }
 
-  &:active:not(:disabled) {
+  &:active:enabled {
     color: ${getComponentStyle('button.{color}.{variant}.active.color')};
     border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
     background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};

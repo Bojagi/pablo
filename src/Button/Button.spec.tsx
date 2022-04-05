@@ -1,6 +1,7 @@
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 import { Button } from './Button';
 
 afterEach(cleanup);
@@ -10,54 +11,54 @@ test.each([
     'primary',
     'brand',
     {
-      color: defaultTheme.colors.common.white,
-      backgroundColor: defaultTheme.colors.brand.main,
-      borderColor: defaultTheme.colors.brand.main,
-      hoverBackgroundColor: defaultTheme.colors.brand.dark,
-      hoverBorderColor: defaultTheme.colors.brand.dark,
+      color: themeVars.colors.brand.contrastText,
+      backgroundColor: themeVars.colors.brand.main,
+      borderColor: themeVars.colors.brand.main,
+      hoverBackgroundColor: themeVars.colors.brand.dark,
+      hoverBorderColor: themeVars.colors.brand.dark,
     },
   ],
   [
     'primaryInverted',
     'brand',
     {
-      color: defaultTheme.colors.brand.main,
-      backgroundColor: defaultTheme.colors.common.white,
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.brand.lightest,
-      hoverBorderColor: defaultTheme.colors.brand.lightest,
+      color: themeVars.colors.brand.main,
+      backgroundColor: themeVars.colors.brand.contrastText,
+      borderColor: themeVars.colors.brand.contrastText,
+      hoverBackgroundColor: themeVars.colors.brand.lightest,
+      hoverBorderColor: themeVars.colors.brand.lightest,
     },
   ],
   [
     'secondary',
     'brand',
     {
-      color: defaultTheme.colors.brand.dark,
+      color: themeVars.colors.brand.dark,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.brand.dark,
-      hoverBackgroundColor: defaultTheme.colors.brand.lightest,
-      hoverBorderColor: defaultTheme.colors.brand.darkest,
+      borderColor: themeVars.colors.brand.dark,
+      hoverBackgroundColor: themeVars.colors.brand.lightest,
+      hoverBorderColor: themeVars.colors.brand.darkest,
     },
   ],
   [
     'secondaryInverted',
     'brand',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.brand.contrastText,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.brand.dark,
-      hoverBorderColor: defaultTheme.colors.common.white,
+      borderColor: themeVars.colors.brand.contrastText,
+      hoverBackgroundColor: themeVars.colors.brand.dark,
+      hoverBorderColor: themeVars.colors.brand.contrastText,
     },
   ],
   [
     'text',
     'brand',
     {
-      color: defaultTheme.colors.brand.dark,
+      color: themeVars.colors.brand.dark,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.brand.lightest,
+      hoverBackgroundColor: themeVars.colors.brand.lightest,
       hoverBorderColor: undefined,
     },
   ],
@@ -65,10 +66,10 @@ test.each([
     'textInverted',
     'brand',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.brand.contrastText,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.brand.dark,
+      hoverBackgroundColor: themeVars.colors.brand.dark,
       hoverBorderColor: undefined,
     },
   ],
@@ -76,54 +77,54 @@ test.each([
     'primary',
     'plain',
     {
-      color: defaultTheme.colors.common.black,
-      backgroundColor: defaultTheme.colors.gray['50'],
-      borderColor: defaultTheme.colors.gray['100'],
-      hoverBackgroundColor: defaultTheme.colors.gray['100'],
-      hoverBorderColor: defaultTheme.colors.gray['200'],
+      color: themeVars.colors.common.black,
+      backgroundColor: themeVars.colors.gray['50'],
+      borderColor: themeVars.colors.gray['100'],
+      hoverBackgroundColor: themeVars.colors.gray['100'],
+      hoverBorderColor: themeVars.colors.gray['200'],
     },
   ],
   [
     'primaryInverted',
     'plain',
     {
-      color: defaultTheme.colors.common.black,
-      backgroundColor: defaultTheme.colors.common.white,
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.gray['50'],
-      hoverBorderColor: defaultTheme.colors.gray['50'],
+      color: themeVars.colors.common.black,
+      backgroundColor: themeVars.colors.common.white,
+      borderColor: themeVars.colors.common.white,
+      hoverBackgroundColor: themeVars.colors.gray['50'],
+      hoverBorderColor: themeVars.colors.gray['50'],
     },
   ],
   [
     'secondary',
     'plain',
     {
-      color: defaultTheme.colors.common.black,
+      color: themeVars.colors.common.black,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.common.black,
-      hoverBackgroundColor: defaultTheme.colors.gray['50'],
-      hoverBorderColor: defaultTheme.colors.common.black,
+      borderColor: themeVars.colors.common.black,
+      hoverBackgroundColor: themeVars.colors.gray['50'],
+      hoverBorderColor: themeVars.colors.common.black,
     },
   ],
   [
     'secondaryInverted',
     'plain',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.common.white,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.gray['800'],
-      hoverBorderColor: defaultTheme.colors.common.white,
+      borderColor: themeVars.colors.common.white,
+      hoverBackgroundColor: themeVars.colors.gray['800'],
+      hoverBorderColor: themeVars.colors.common.white,
     },
   ],
   [
     'text',
     'plain',
     {
-      color: defaultTheme.colors.common.black,
+      color: themeVars.colors.common.black,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.gray['50'],
+      hoverBackgroundColor: themeVars.colors.gray['50'],
       hoverBorderColor: undefined,
     },
   ],
@@ -131,10 +132,10 @@ test.each([
     'textInverted',
     'plain',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.common.white,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.gray['800'],
+      hoverBackgroundColor: themeVars.colors.gray['800'],
       hoverBorderColor: undefined,
     },
   ],
@@ -142,54 +143,54 @@ test.each([
     'primary',
     'negative',
     {
-      color: defaultTheme.colors.common.white,
-      backgroundColor: defaultTheme.colors.negative.main,
-      borderColor: defaultTheme.colors.negative.main,
-      hoverBackgroundColor: defaultTheme.colors.negative.dark,
-      hoverBorderColor: defaultTheme.colors.negative.dark,
+      color: themeVars.colors.negative.contrastText,
+      backgroundColor: themeVars.colors.negative.main,
+      borderColor: themeVars.colors.negative.main,
+      hoverBackgroundColor: themeVars.colors.negative.dark,
+      hoverBorderColor: themeVars.colors.negative.dark,
     },
   ],
   [
     'primaryInverted',
     'negative',
     {
-      color: defaultTheme.colors.negative.main,
-      backgroundColor: defaultTheme.colors.common.white,
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.negative.lightest,
-      hoverBorderColor: defaultTheme.colors.negative.lightest,
+      color: themeVars.colors.negative.main,
+      backgroundColor: themeVars.colors.negative.contrastText,
+      borderColor: themeVars.colors.negative.contrastText,
+      hoverBackgroundColor: themeVars.colors.negative.lightest,
+      hoverBorderColor: themeVars.colors.negative.lightest,
     },
   ],
   [
     'secondary',
     'negative',
     {
-      color: defaultTheme.colors.negative.dark,
+      color: themeVars.colors.negative.dark,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.negative.dark,
-      hoverBackgroundColor: defaultTheme.colors.negative.lightest,
-      hoverBorderColor: defaultTheme.colors.negative.darkest,
+      borderColor: themeVars.colors.negative.dark,
+      hoverBackgroundColor: themeVars.colors.negative.lightest,
+      hoverBorderColor: themeVars.colors.negative.darkest,
     },
   ],
   [
     'secondaryInverted',
     'negative',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.negative.contrastText,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.negative.dark,
-      hoverBorderColor: defaultTheme.colors.common.white,
+      borderColor: themeVars.colors.negative.contrastText,
+      hoverBackgroundColor: themeVars.colors.negative.dark,
+      hoverBorderColor: themeVars.colors.negative.contrastText,
     },
   ],
   [
     'text',
     'negative',
     {
-      color: defaultTheme.colors.negative.dark,
+      color: themeVars.colors.negative.dark,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.negative.lightest,
+      hoverBackgroundColor: themeVars.colors.negative.lightest,
       hoverBorderColor: undefined,
     },
   ],
@@ -197,10 +198,10 @@ test.each([
     'textInverted',
     'negative',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.negative.contrastText,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.negative.dark,
+      hoverBackgroundColor: themeVars.colors.negative.dark,
       hoverBorderColor: undefined,
     },
   ],
@@ -208,54 +209,54 @@ test.each([
     'primary',
     'positive',
     {
-      color: defaultTheme.colors.common.white,
-      backgroundColor: defaultTheme.colors.positive.main,
-      borderColor: defaultTheme.colors.positive.main,
-      hoverBackgroundColor: defaultTheme.colors.positive.dark,
-      hoverBorderColor: defaultTheme.colors.positive.dark,
+      color: themeVars.colors.positive.contrastText,
+      backgroundColor: themeVars.colors.positive.main,
+      borderColor: themeVars.colors.positive.main,
+      hoverBackgroundColor: themeVars.colors.positive.dark,
+      hoverBorderColor: themeVars.colors.positive.dark,
     },
   ],
   [
     'primaryInverted',
     'positive',
     {
-      color: defaultTheme.colors.positive.main,
-      backgroundColor: defaultTheme.colors.common.white,
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.positive.lightest,
-      hoverBorderColor: defaultTheme.colors.positive.lightest,
+      color: themeVars.colors.positive.main,
+      backgroundColor: themeVars.colors.positive.contrastText,
+      borderColor: themeVars.colors.positive.contrastText,
+      hoverBackgroundColor: themeVars.colors.positive.lightest,
+      hoverBorderColor: themeVars.colors.positive.lightest,
     },
   ],
   [
     'secondary',
     'positive',
     {
-      color: defaultTheme.colors.positive.dark,
+      color: themeVars.colors.positive.dark,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.positive.dark,
-      hoverBackgroundColor: defaultTheme.colors.positive.lightest,
-      hoverBorderColor: defaultTheme.colors.positive.darkest,
+      borderColor: themeVars.colors.positive.dark,
+      hoverBackgroundColor: themeVars.colors.positive.lightest,
+      hoverBorderColor: themeVars.colors.positive.darkest,
     },
   ],
   [
     'secondaryInverted',
     'positive',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.positive.contrastText,
       backgroundColor: 'transparent',
-      borderColor: defaultTheme.colors.common.white,
-      hoverBackgroundColor: defaultTheme.colors.positive.dark,
-      hoverBorderColor: defaultTheme.colors.common.white,
+      borderColor: themeVars.colors.positive.contrastText,
+      hoverBackgroundColor: themeVars.colors.positive.dark,
+      hoverBorderColor: themeVars.colors.positive.contrastText,
     },
   ],
   [
     'text',
     'positive',
     {
-      color: defaultTheme.colors.positive.dark,
+      color: themeVars.colors.positive.dark,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.positive.lightest,
+      hoverBackgroundColor: themeVars.colors.positive.lightest,
       hoverBorderColor: undefined,
     },
   ],
@@ -263,10 +264,10 @@ test.each([
     'textInverted',
     'positive',
     {
-      color: defaultTheme.colors.common.white,
+      color: themeVars.colors.positive.contrastText,
       backgroundColor: 'transparent',
       borderColor: undefined,
-      hoverBackgroundColor: defaultTheme.colors.positive.dark,
+      hoverBackgroundColor: themeVars.colors.positive.dark,
       hoverBorderColor: undefined,
     },
   ],
@@ -281,25 +282,25 @@ test.each([
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
 });
 
 test('Render primary brand button when no variant or color is given', () => {
   const expectedStyles = {
-    color: defaultTheme.colors.common.white,
-    backgroundColor: defaultTheme.colors.brand.main,
-    borderColor: defaultTheme.colors.brand.main,
-    hoverBackgroundColor: defaultTheme.colors.brand.dark,
-    hoverBorderColor: defaultTheme.colors.brand.dark,
+    color: themeVars.colors.brand.contrastText,
+    backgroundColor: themeVars.colors.brand.main,
+    borderColor: themeVars.colors.brand.main,
+    hoverBackgroundColor: themeVars.colors.brand.dark,
+    hoverBorderColor: themeVars.colors.brand.dark,
   };
 
   const { getByTestId } = renderComponent({});
@@ -311,25 +312,25 @@ test('Render primary brand button when no variant or color is given', () => {
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
 });
 
 test('Render primary brand button when unknown variant is given', () => {
   const expectedStyles = {
-    color: defaultTheme.colors.common.white,
-    backgroundColor: defaultTheme.colors.brand.main,
-    borderColor: defaultTheme.colors.brand.main,
-    hoverBackgroundColor: defaultTheme.colors.brand.dark,
-    hoverBorderColor: defaultTheme.colors.brand.dark,
+    color: themeVars.colors.brand.contrastText,
+    backgroundColor: themeVars.colors.brand.main,
+    borderColor: themeVars.colors.brand.main,
+    hoverBackgroundColor: themeVars.colors.brand.dark,
+    hoverBorderColor: themeVars.colors.brand.dark,
   };
 
   const { getByTestId } = renderComponent({ variant: 'unknown' });
@@ -341,14 +342,14 @@ test('Render primary brand button when unknown variant is given', () => {
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:not(:disabled)',
+      modifier: ':hover:enabled',
     }
   );
 });

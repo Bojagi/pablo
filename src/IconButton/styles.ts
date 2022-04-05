@@ -1,7 +1,6 @@
 import { Style } from '../theme/types';
-import { getColor } from '../styleHelpers';
 import { BaseStyles } from '../types';
-import { Colors } from '../theme/colors';
+import { themeVars } from '../theme/themeVars';
 
 export type IconButtonStyleProperties = 'root' | 'hover' | 'active' | 'focus';
 
@@ -72,23 +71,23 @@ export const iconButtonStyles: IconButtonStyles = {
   borderRadius: '6px',
   plain: {
     backgroundColor: 'transparent',
-    color: getColor('common', 'black'),
+    color: themeVars.colors.common.black,
     active: {
-      backgroundColor: getColor('brand'),
-      color: getColor('common', 'white'),
+      backgroundColor: themeVars.colors.brand.main,
+      color: themeVars.colors.common.white,
     },
     hover: {
-      backgroundColor: getColor('blackOpacity', '50'),
-      color: getColor('common', 'black'),
+      backgroundColor: themeVars.colors.blackOpacity[50],
+      color: themeVars.colors.common.black,
     },
     focus: {
-      backgroundColor: getColor('blackOpacity', '100'),
-      color: getColor('common', 'black'),
+      backgroundColor: themeVars.colors.blackOpacity[100],
+      color: themeVars.colors.common.black,
     },
   },
-  brand: getIconButtonColorConfig('brand', getColor('common', 'white')),
-  positive: getIconButtonColorConfig('positive', getColor('common', 'white')),
-  negative: getIconButtonColorConfig('negative', getColor('common', 'white')),
+  brand: getIconButtonColorConfig('brand', themeVars.colors.common.white),
+  positive: getIconButtonColorConfig('positive', themeVars.colors.common.white),
+  negative: getIconButtonColorConfig('negative', themeVars.colors.common.white),
   transition: [
     ['background-color', '0.2s'],
     ['color', '0.2s'],
@@ -98,21 +97,21 @@ export const iconButtonStyles: IconButtonStyles = {
   },
 };
 
-function getIconButtonColorConfig(colorName: keyof Colors, contrastColor: Style) {
+function getIconButtonColorConfig(colorName: string, contrastColor: Style) {
   return {
     backgroundColor: 'transparent',
-    color: getColor(colorName),
+    color: themeVars.colors[colorName].main,
     active: {
-      backgroundColor: getColor(colorName),
+      backgroundColor: themeVars.colors[colorName].main,
       color: contrastColor,
     },
     hover: {
-      backgroundColor: getColor(colorName, 'lightest'),
-      color: getColor(colorName, 'dark'),
+      backgroundColor: themeVars.colors[colorName].lightest,
+      color: themeVars.colors[colorName].dark,
     },
     focus: {
-      backgroundColor: getColor(colorName, 'light'),
-      color: getColor(colorName, 'dark'),
+      backgroundColor: themeVars.colors[colorName].light,
+      color: themeVars.colors[colorName].dark,
     },
   };
 }

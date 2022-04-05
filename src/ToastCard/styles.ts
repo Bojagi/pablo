@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
+import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 
 export type ToastCardStyleProperties = 'card' | 'title' | 'description' | 'closeButton' | 'iconBox';
@@ -20,7 +20,7 @@ export const toastCardStyles: ToastCardStyles = {
     ${getSpacing(5)} ${getSpacing(7)} ${getSpacing(5)} ${getSpacing(5)}
   `,
   borderRadius: '6px',
-  backgroundColor: getColor('gray', '800'),
-  color: getColor('common', 'blackContrastText'),
+  backgroundColor: themeVars.colors.gray[800],
+  color: themeVars.colors.common.blackContrastText,
   shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
 };

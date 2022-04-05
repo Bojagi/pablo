@@ -1,8 +1,7 @@
-import { css } from 'styled-components';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
-import { getBackgroundColor, getColor } from '../styleHelpers';
 import { BaseStyles } from '../types';
+import { themeVars } from '../theme/themeVars';
 
 export type ModalStyleProperties = 'box' | 'backdrop' | 'area' | 'paneBox';
 
@@ -28,15 +27,15 @@ export interface ModalStyles extends BaseStyles<ModalStyleProperties> {
 }
 
 export const modalStyles: ModalStyles = {
-  backdropColor: getColor('blackOpacity', '600'),
+  backdropColor: themeVars.colors.blackOpacity[600],
   padding: getSpacing(7),
   gap: getSpacing(5),
   backdropTransition: [['opacity', '0.3s']],
   box: {
-    closedTransform: css`translateY(60px)`,
+    closedTransform: 'translateY(60px)',
     transition: [['transform', '0.3s']],
     shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
-    backgroundColor: getBackgroundColor(),
+    backgroundColor: themeVars.colors.background,
     padding: getSpacing(5),
     maxWidth: {
       small: '520px',

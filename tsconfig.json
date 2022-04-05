@@ -3,7 +3,7 @@
     "module": "esnext",
     "target": "es2019",
     "noEmit": true,
-    "lib": ["es6", "es2017", "dom", "esnext.asynciterable"],
+    "lib": ["es6", "es2017", "es2019", "dom", "esnext.asynciterable"],
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",

@@ -31,12 +31,12 @@ exports[`Render toast card with no type and with only title 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -48,8 +48,8 @@ exports[`Render toast card with no type and with only title 1`] = `
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  background-color: #303030;
-  color: #ffffff;
+  background-color: var(--pbl-theme-colors-gray-800);
+  color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -82,7 +82,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 exports[`type error Render toast card with custom icon 1`] = `
 .c0 {
   box-sizing: border-box;
-  fill: #F21D0D;
+  fill: var(--pbl-theme-colors-negative-main);
   margin-right: 12px;
 }
 
@@ -103,7 +103,7 @@ exports[`type error Render toast card with custom icon 1`] = `
 exports[`type error Render toast card with only title 1`] = `
 .c2 {
   box-sizing: border-box;
-  fill: #F21D0D;
+  fill: var(--pbl-theme-colors-negative-main);
   margin-right: 12px;
 }
 
@@ -141,12 +141,12 @@ exports[`type error Render toast card with only title 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -158,8 +158,8 @@ exports[`type error Render toast card with only title 1`] = `
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  background-color: #303030;
-  color: #ffffff;
+  background-color: var(--pbl-theme-colors-gray-800);
+  color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -211,7 +211,7 @@ exports[`type error Render toast card with only title 1`] = `
 exports[`type info Render toast card with custom icon 1`] = `
 .c0 {
   box-sizing: border-box;
-  fill: #ffffff;
+  fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
 }
 
@@ -232,7 +232,7 @@ exports[`type info Render toast card with custom icon 1`] = `
 exports[`type info Render toast card with only title 1`] = `
 .c2 {
   box-sizing: border-box;
-  fill: #ffffff;
+  fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
 }
 
@@ -270,12 +270,12 @@ exports[`type info Render toast card with only title 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -287,8 +287,8 @@ exports[`type info Render toast card with only title 1`] = `
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  background-color: #303030;
-  color: #ffffff;
+  background-color: var(--pbl-theme-colors-gray-800);
+  color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -340,7 +340,7 @@ exports[`type info Render toast card with only title 1`] = `
 exports[`type success Render toast card with custom icon 1`] = `
 .c0 {
   box-sizing: border-box;
-  fill: #38C765;
+  fill: var(--pbl-theme-colors-positive-main);
   margin-right: 12px;
 }
 
@@ -361,7 +361,7 @@ exports[`type success Render toast card with custom icon 1`] = `
 exports[`type success Render toast card with only title 1`] = `
 .c2 {
   box-sizing: border-box;
-  fill: #38C765;
+  fill: var(--pbl-theme-colors-positive-main);
   margin-right: 12px;
 }
 
@@ -399,12 +399,12 @@ exports[`type success Render toast card with only title 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -416,8 +416,8 @@ exports[`type success Render toast card with only title 1`] = `
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  background-color: #303030;
-  color: #ffffff;
+  background-color: var(--pbl-theme-colors-gray-800);
+  color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -469,7 +469,7 @@ exports[`type success Render toast card with only title 1`] = `
 exports[`type undefined Render toast card with custom icon 1`] = `
 .c0 {
   box-sizing: border-box;
-  fill: #ffffff;
+  fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
 }
 
@@ -490,7 +490,7 @@ exports[`type undefined Render toast card with custom icon 1`] = `
 exports[`type undefined Render toast card with only title 1`] = `
 .c2 {
   box-sizing: border-box;
-  fill: #ffffff;
+  fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
 }
 
@@ -528,12 +528,12 @@ exports[`type undefined Render toast card with only title 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -545,8 +545,8 @@ exports[`type undefined Render toast card with only title 1`] = `
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  background-color: #303030;
-  color: #ffffff;
+  background-color: var(--pbl-theme-colors-gray-800);
+  color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -587,7 +587,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 exports[`type unknown Render toast card with custom icon 1`] = `
 .c0 {
   box-sizing: border-box;
-  fill: #ffffff;
+  fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
 }
 
@@ -608,7 +608,7 @@ exports[`type unknown Render toast card with custom icon 1`] = `
 exports[`type unknown Render toast card with only title 1`] = `
 .c2 {
   box-sizing: border-box;
-  fill: #ffffff;
+  fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
 }
 
@@ -646,12 +646,12 @@ exports[`type unknown Render toast card with only title 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -663,8 +663,8 @@ exports[`type unknown Render toast card with only title 1`] = `
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  background-color: #303030;
-  color: #ffffff;
+  background-color: var(--pbl-theme-colors-gray-800);
+  color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }
@@ -705,7 +705,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 exports[`type warning Render toast card with custom icon 1`] = `
 .c0 {
   box-sizing: border-box;
-  fill: #FFDD5B;
+  fill: var(--pbl-theme-colors-neutral-main);
   margin-right: 12px;
 }
 
@@ -726,7 +726,7 @@ exports[`type warning Render toast card with custom icon 1`] = `
 exports[`type warning Render toast card with only title 1`] = `
 .c2 {
   box-sizing: border-box;
-  fill: #FFDD5B;
+  fill: var(--pbl-theme-colors-neutral-main);
   margin-right: 12px;
 }
 
@@ -764,12 +764,12 @@ exports[`type warning Render toast card with only title 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.375em;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -781,8 +781,8 @@ exports[`type warning Render toast card with only title 1`] = `
   box-sizing: border-box;
   border-radius: 6px;
   max-width: 400px;
-  background-color: #303030;
-  color: #ffffff;
+  background-color: var(--pbl-theme-colors-gray-800);
+  color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
 }

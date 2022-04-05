@@ -6,7 +6,7 @@ exports[`Render toolbar 1`] = `
   width: 24px;
   height: 24px;
   background-color: transparent;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
   border: 0;
   padding: 0;
   outline: 0;
@@ -44,7 +44,7 @@ exports[`Render toolbar 1`] = `
   transform: scale( 1 );
 }
 
-.c1:not(:disabled) {
+.c1:enabled {
   cursor: pointer;
 }
 
@@ -53,14 +53,14 @@ exports[`Render toolbar 1`] = `
   cursor: normal;
 }
 
-.c1:hover:not(:disabled) {
-  background-color: rgba(0,0,0,0.05);
-  color: #000000;
+.c1:hover:enabled {
+  background-color: var(--pbl-theme-colors-blackOpacity-50);
+  color: var(--pbl-theme-colors-common-black);
 }
 
-.c1:focus:not(:disabled) {
-  background-color: rgba(0,0,0,0.1);
-  color: #000000;
+.c1:focus:enabled {
+  background-color: var(--pbl-theme-colors-blackOpacity-100);
+  color: var(--pbl-theme-colors-common-black);
 }
 
 .c0 {
@@ -84,7 +84,7 @@ exports[`Render toolbar 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  background-color: #00000020;
+  background-color: var(--pbl-theme-colors-borders-light);
 }
 
 <div>

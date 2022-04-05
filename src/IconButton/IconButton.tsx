@@ -49,7 +49,7 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
     );
   }
 
-  &:not(:disabled) {
+  &:enabled {
     cursor: pointer;
   }
 
@@ -68,13 +68,13 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
           ${getCustomStyles('iconButton.styles', 'active')}
         `
       : css`
-          &:hover:not(:disabled) {
+          &:hover:enabled {
             background-color: ${getComponentStyle('iconButton.{color}.hover.backgroundColor')};
             color: ${getComponentStyle('iconButton.{color}.hover.color')};
             ${getCustomStyles('iconButton.styles', 'hover')}
           }
 
-          &:focus:not(:disabled) {
+          &:focus:enabled {
             background-color: ${getComponentStyle('iconButton.{color}.focus.backgroundColor')};
             color: ${getComponentStyle('iconButton.{color}.focus.color')};
             ${getCustomStyles('iconButton.styles', 'focus')}

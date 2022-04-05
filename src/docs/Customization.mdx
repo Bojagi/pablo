@@ -10,7 +10,8 @@ import { Avatar } from '../Avatar/index.ts'
 import { Headline, Paragraph } from '../Typography/index.ts'
 import { Checkbox } from '../Checkbox/index.ts';
 import { Button } from '../Button/index.ts';
-import { getColor, getSpacing } from '../styleHelpers/index.ts';
+import { getSpacing } from '../styleHelpers/index.ts';
+import { theme } from '../theme';
 
 # Customization
 
@@ -95,14 +96,14 @@ const App = () => (
 Like the theme the component styles are passed to the pablo theme provider and you can just overwrite
 them partially as they are merged with the default styles.
 
-You can use theme values by using functions like you would in `styled-components`. For easier access
-Pablo provides helper functions like `getColor` or `getSpacing`. For usage of those take a look at the
-example below.
+You can use theme values by accessing them through CSS variables. For easier access Pablo provides a nested object 
+that contains the CSS variables. For usage of those take a look at the example below.
 
 Here is an example of some component configurations overwritten:
 
 ```js
-import { getColor, getSpacing } from '@bojagi/pablo/styleHelpers';
+import { getSpacing } from '@bojagi/pablo/styleHelpers';
+import { theme } from '@bojagi/pablo/theme';
 
 const customComponentStyles = { 
   checkbox: {
@@ -110,7 +111,7 @@ const customComponentStyles = {
       medium: getSpacing(3),
       small: getSpacing(2),
     },
-    handleColor: getColor('brand', 'light'),
+    handleColor: theme.colors.brand.light,
   },
   button: {
     base: {
@@ -123,7 +124,7 @@ const customComponentStyles = {
       },
     },
     brand: {
-      outlineColor: getColor('brand', 'darkest'),
+      outlineColor: theme.colors.brand.darkest,
     },
     sizes: {
       small: {
@@ -149,7 +150,8 @@ the different component parts completely with the `customStyles` property. To do
 Each component has a set of parts where you can overwrite styles. You can find an example below:
 
 ```js
-import { getColor, getSpacing } from '@bojagi/pablo/styleHelpers';
+import { getSpacing } from '@bojagi/pablo/styleHelpers';
+import { theme } from '@bojagi/pablo/theme';
 import { css } from 'styled-components';
 
 const customComponentStyles = { 
@@ -158,7 +160,7 @@ const customComponentStyles = {
       primary: css`
         transform: rotate(15deg);
         // You can use style helpers
-        color: ${getColor('brand', 'main')};
+        color: ${theme.colors.brand.main};
         // And you can also access the props of the respective component parts
         ${props => props.color === 'brand' && css`
           color: orange;
@@ -227,7 +229,7 @@ The below examples do the same customizations as the global styling example abov
         primary: css`
           transform: rotate(15deg);
           // You can use style helpers
-          color: ${getColor('brand', 'main')};
+          color: ${theme.colors.brand.main};
           // And you can also access the props of the respective component parts
           ${props => props.color === 'brand' && css`
             color: orange;

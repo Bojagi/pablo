@@ -22,7 +22,7 @@ export const buttonBaseStyles = css<ButtonBaseProps>`
   transition: ${getComponentStyle('button.base.transitions', transitionTransformer)};
   outline: none;
 
-  &:not(:disabled) {
+  &:enabled {
     cursor: pointer;
   }
 
