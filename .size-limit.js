@@ -18,19 +18,19 @@ module.exports = [
     path: 'build/esm/index.js',
     name: 'Button Treeshaking',
     import: '{ Button }',
-    limit: '28 kb',
+    limit: '29 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'Input Treeshaking',
     import: '{ Input }',
-    limit: '28 kb',
+    limit: '29 kb',
   },
   {
     path: 'build/esm/index.js',
     name: 'Avatar Treeshaking',
     import: '{ Avatar }',
-    limit: '28 kb',
+    limit: '29 kb',
   },
   {
     path: 'build/esm/index.js',
