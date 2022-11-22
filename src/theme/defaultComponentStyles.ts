@@ -17,6 +17,7 @@ import { buttonBarStyles } from '../ButtonBar/styles';
 import { linkStyles } from '../Link/styles';
 import { toastCardStyles } from '../ToastCard/styles';
 import { imageStyles } from '../Image/styles';
+import { nativeSelectStyles } from '../NativeSelect/styles';
 
 export const defaultComponentStyles: ComponentStyles = {
   card: cardStyles,
@@ -29,6 +30,7 @@ export const defaultComponentStyles: ComponentStyles = {
   image: imageStyles,
   input: inputStyles,
   textarea: textareaStyles,
+  nativeSelect: nativeSelectStyles,
   avatar: avatarStyles,
   toolbar: toolbarStyles,
   tooltip: tooltipStyles,

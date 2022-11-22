@@ -28,6 +28,7 @@ import { ButtonBarStyles } from '../ButtonBar/styles';
 import { LinkStyles } from '../Link/styles';
 import { ToastCardStyles } from '../ToastCard/styles';
 import { ImageStyles } from '../Image/styles';
+import { NativeSelectStyles } from '../NativeSelect/styles';
 
 export type Style =
   | string
@@ -61,6 +62,7 @@ export interface ComponentStyles {
   image: ImageStyles;
   input: InputStyles;
   textarea: TextAreaStyles;
+  nativeSelect: NativeSelectStyles;
   avatar: AvatarStyles;
   toolbar: ToolbarStyles;
   tooltip: TooltipStyles;
