@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 import { Link } from './Link';
 
 test('Render Link with the right styles', () => {
@@ -9,13 +10,13 @@ test('Render Link with the right styles', () => {
   expect(linkElem).toMatchSnapshot();
 
   // Normal state
-  expect(linkElem).toHaveStyleRule('color', defaultTheme.colors.brand.main);
+  expect(linkElem).toHaveStyleRule('color', themeVars.colors.brand.main);
   expect(linkElem).toHaveStyleRule('text-decoration', 'none');
   expect(linkElem).toHaveStyleRule('font-style', 'normal');
   expect(linkElem).toHaveStyleRule('font-weight', 'inherit');
 
   // Hover state
-  expect(linkElem).toHaveStyleRule('color', defaultTheme.colors.brand.main, {
+  expect(linkElem).toHaveStyleRule('color', themeVars.colors.brand.main, {
     modifier: ':hover',
   });
   expect(linkElem).toHaveStyleRule('text-decoration', 'underline', {
@@ -29,7 +30,7 @@ test('Render Link with the right styles', () => {
   });
 
   // Focus state
-  expect(linkElem).toHaveStyleRule('color', defaultTheme.colors.brand.main, {
+  expect(linkElem).toHaveStyleRule('color', themeVars.colors.brand.main, {
     modifier: ':focus',
   });
   expect(linkElem).toHaveStyleRule('text-decoration', 'underline', {
@@ -43,7 +44,7 @@ test('Render Link with the right styles', () => {
   });
 
   // Visited state
-  expect(linkElem).toHaveStyleRule('color', defaultTheme.colors.brand.main, {
+  expect(linkElem).toHaveStyleRule('color', themeVars.colors.brand.main, {
     modifier: ':visited',
   });
   expect(linkElem).toHaveStyleRule('text-decoration', 'none', {

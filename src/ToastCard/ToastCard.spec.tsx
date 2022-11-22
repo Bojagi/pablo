@@ -1,6 +1,7 @@
 import { act, fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 import { ToastCard } from './ToastCard';
 
 test('Render toast card with no type and with only title', () => {
@@ -34,12 +35,12 @@ test('Render closable toast card', () => {
 });
 
 describe.each([
-  [undefined, defaultTheme.colors.common.white, { icon: <div>hi</div> }],
-  ['info', defaultTheme.colors.common.white, {}],
-  ['success', defaultTheme.colors.positive.main, {}],
-  ['warning', defaultTheme.colors.neutral.main, {}],
-  ['error', defaultTheme.colors.negative.main, {}],
-  ['unknown', defaultTheme.colors.common.white, { icon: <div>hi</div> }],
+  [undefined, themeVars.colors.common.white, { icon: <div>hi</div> }],
+  ['info', themeVars.colors.common.white, {}],
+  ['success', themeVars.colors.positive.main, {}],
+  ['warning', themeVars.colors.neutral.main, {}],
+  ['error', themeVars.colors.negative.main, {}],
+  ['unknown', themeVars.colors.common.white, { icon: <div>hi</div> }],
 ])('type %s', (type, expectedIconColor, additionalProps) => {
   test('Render toast card with only title', () => {
     const { container, getByTestId } = renderComponent({ type, title: 'Hi', ...additionalProps });

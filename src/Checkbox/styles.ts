@@ -1,6 +1,6 @@
-import { getColor } from '../styleHelpers/getColor';
 import { Style } from '../theme/types';
 import { checkableBaseStyles, CheckableBaseStyles } from '../shared/checkableBaseStyles';
+import { themeVars } from '../theme/themeVars';
 
 export interface CheckboxStyles extends CheckableBaseStyles {
   handleColor: Style;
@@ -10,7 +10,7 @@ export interface CheckboxStyles extends CheckableBaseStyles {
 
 export const checkboxStyles: CheckboxStyles = {
   ...checkableBaseStyles,
-  handleColor: getColor('brand'),
+  handleColor: themeVars.colors.brand.main,
   innerBorderRadius: '3px',
   outerBorderRadius: '4px',
 };

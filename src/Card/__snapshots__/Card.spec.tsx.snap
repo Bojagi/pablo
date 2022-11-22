@@ -4,8 +4,8 @@ exports[`Render card 1`] = `
 .c0 {
   box-sizing: border-box;
   padding: 16px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--pbl-theme-colors-common-white);
+  color: var(--pbl-theme-colors-common-whiteContrastText);
   box-shadow: 0px 1px 2px rgba(0,0,0,0.1),0px 4px 10px rgba(0,0,0,0.05);
   border-radius: 8px;
 }

@@ -1,22 +1,23 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { PabloThemeProvider } from '../../src/theme';
-import { getColor, getSpacing } from '../../src/utils/styleHelpers';
+import { themeVars } from '../../src/theme/themeVars';
+import { getSpacing } from '../../src/utils/styleHelpers';
 
 const color = 'brand';
 const SimpleThemedButton = styled.button`
-  color: ${getColor(color, 'contrastText')};
-  background: ${getColor(color)};
-  border-color: ${getColor(color)};
+  color: ${themeVars.colors[color].contrastText};
+  background: ${themeVars.colors[color].main};
+  border-color: ${themeVars.colors[color].main};
 
   &:focus {
-    box-shadow: 0 0 0 ${getSpacing(0.5)} ${getColor(color, 'light')};
+    box-shadow: 0 0 0 ${getSpacing(0.5)} ${themeVars.colors[color].light};
   }
 
-  &:hover:not(:disabled) {
-    color: ${getColor(color, 'contrastText')};
-    background: ${getColor(color, 'dark')};
-    border-color: ${getColor(color, 'dark')};
+  &:hover:enabled {
+    color: ${themeVars.colors[color].contrastText};
+    background: ${themeVars.colors[color].dark};
+    border-color: ${themeVars.colors[color].dark};
   }
 `;
 

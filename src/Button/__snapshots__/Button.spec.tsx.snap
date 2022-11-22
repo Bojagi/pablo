@@ -3,13 +3,13 @@
 exports[`render button with end icon 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -39,12 +39,12 @@ exports[`render button with end icon 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  background: #6A50F2;
-  border-color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-main);
+  border-color: var(--pbl-theme-colors-brand-main);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -54,18 +54,18 @@ exports[`render button with end icon 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #4129BD;
-  border-color: #4129BD;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-brand-dark);
+  border-color: var(--pbl-theme-colors-brand-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  background: #281683;
-  border-color: #281683;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
 }
 
 .c2 {
@@ -117,13 +117,13 @@ exports[`render button with end icon 1`] = `
 exports[`render button with start icon 1`] = `
 .c2 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -153,12 +153,12 @@ exports[`render button with start icon 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  background: #6A50F2;
-  border-color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-main);
+  border-color: var(--pbl-theme-colors-brand-main);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -168,18 +168,18 @@ exports[`render button with start icon 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #4129BD;
-  border-color: #4129BD;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-brand-dark);
+  border-color: var(--pbl-theme-colors-brand-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  background: #281683;
-  border-color: #281683;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
 }
 
 .c1 {
@@ -231,13 +231,13 @@ exports[`render button with start icon 1`] = `
 exports[`render primary brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -267,12 +267,12 @@ exports[`render primary brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  background: #6A50F2;
-  border-color: #6A50F2;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-main);
+  border-color: var(--pbl-theme-colors-brand-main);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -282,18 +282,18 @@ exports[`render primary brand color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #4129BD;
-  border-color: #4129BD;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-brand-dark);
+  border-color: var(--pbl-theme-colors-brand-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  background: #281683;
-  border-color: #281683;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
 }
 
 <div>
@@ -314,13 +314,13 @@ exports[`render primary brand color button 1`] = `
 exports[`render primary negative color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -350,12 +350,12 @@ exports[`render primary negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  background: #F21D0D;
-  border-color: #F21D0D;
+  color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-main);
+  border-color: var(--pbl-theme-colors-negative-main);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -365,18 +365,18 @@ exports[`render primary negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFE7E5;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #CA271B;
-  border-color: #CA271B;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-negative-dark);
+  border-color: var(--pbl-theme-colors-negative-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  background: #871A12;
-  border-color: #871A12;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-darkest);
+  border-color: var(--pbl-theme-colors-negative-darkest);
 }
 
 <div>
@@ -397,13 +397,13 @@ exports[`render primary negative color button 1`] = `
 exports[`render primary plain color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -433,12 +433,12 @@ exports[`render primary plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #000000;
-  background: #f0f0f0;
-  border-color: #e0e0e0;
+  color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-50);
+  border-color: var(--pbl-theme-colors-gray-100);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -448,18 +448,18 @@ exports[`render primary plain color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
 }
 
-.c0:hover:not(:disabled) {
-  background: #e0e0e0;
-  border-color: #d0d0d0;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-gray-100);
+  border-color: var(--pbl-theme-colors-gray-200);
 }
 
-.c0:active:not(:disabled) {
-  color: #000000;
-  background: #d0d0d0;
-  border-color: #b0b0b0;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-200);
+  border-color: var(--pbl-theme-colors-gray-300);
 }
 
 <div>
@@ -480,13 +480,13 @@ exports[`render primary plain color button 1`] = `
 exports[`render primary positive color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -516,12 +516,12 @@ exports[`render primary positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  background: #38C765;
-  border-color: #38C765;
+  color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-main);
+  border-color: var(--pbl-theme-colors-positive-main);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -531,18 +531,18 @@ exports[`render primary positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #DFF6E6;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #2FB85A;
-  border-color: #2FB85A;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-positive-dark);
+  border-color: var(--pbl-theme-colors-positive-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  background: #108B36;
-  border-color: #108B36;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-darkest);
+  border-color: var(--pbl-theme-colors-positive-darkest);
 }
 
 <div>
@@ -563,13 +563,13 @@ exports[`render primary positive color button 1`] = `
 exports[`render primaryInverted brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -599,12 +599,12 @@ exports[`render primaryInverted brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #6A50F2;
-  background: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -614,18 +614,18 @@ exports[`render primaryInverted brand color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #EBE7FF;
-  border-color: #EBE7FF;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-brand-lightest);
+  border-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #6A50F2;
-  background: #D6CEFF;
-  border-color: #D6CEFF;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-light);
+  border-color: var(--pbl-theme-colors-brand-light);
 }
 
 <div>
@@ -646,13 +646,13 @@ exports[`render primaryInverted brand color button 1`] = `
 exports[`render primaryInverted negative color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -682,12 +682,12 @@ exports[`render primaryInverted negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #F21D0D;
-  background: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-negative-main);
+  background: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -697,18 +697,18 @@ exports[`render primaryInverted negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFE7E5;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #FFE7E5;
-  border-color: #FFE7E5;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-negative-lightest);
+  border-color: var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #F21D0D;
-  background: #FFCFCC;
-  border-color: #FFCFCC;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-negative-main);
+  background: var(--pbl-theme-colors-negative-light);
+  border-color: var(--pbl-theme-colors-negative-light);
 }
 
 <div>
@@ -729,13 +729,13 @@ exports[`render primaryInverted negative color button 1`] = `
 exports[`render primaryInverted plain color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -765,12 +765,12 @@ exports[`render primaryInverted plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #000000;
-  background: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-common-white);
+  border-color: var(--pbl-theme-colors-common-white);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -780,18 +780,18 @@ exports[`render primaryInverted plain color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
 }
 
-.c0:hover:not(:disabled) {
-  background: #f0f0f0;
-  border-color: #f0f0f0;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-gray-50);
+  border-color: var(--pbl-theme-colors-gray-50);
 }
 
-.c0:active:not(:disabled) {
-  color: #000000;
-  background: #e0e0e0;
-  border-color: #e0e0e0;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-100);
+  border-color: var(--pbl-theme-colors-gray-100);
 }
 
 <div>
@@ -812,13 +812,13 @@ exports[`render primaryInverted plain color button 1`] = `
 exports[`render primaryInverted positive color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -848,12 +848,12 @@ exports[`render primaryInverted positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #38C765;
-  background: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-positive-main);
+  background: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -863,18 +863,18 @@ exports[`render primaryInverted positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #DFF6E6;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  background: #DFF6E6;
-  border-color: #DFF6E6;
+.c0:hover:enabled {
+  background: var(--pbl-theme-colors-positive-lightest);
+  border-color: var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #38C765;
-  background: #BBECCB;
-  border-color: #BBECCB;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-positive-main);
+  background: var(--pbl-theme-colors-positive-light);
+  border-color: var(--pbl-theme-colors-positive-light);
 }
 
 <div>
@@ -895,13 +895,13 @@ exports[`render primaryInverted positive color button 1`] = `
 exports[`render secondary brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -931,11 +931,11 @@ exports[`render secondary brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #4129BD;
-  border-color: #4129BD;
+  color: var(--pbl-theme-colors-brand-dark);
+  border-color: var(--pbl-theme-colors-brand-dark);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -945,19 +945,19 @@ exports[`render secondary brand color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #281683;
-  border-color: #281683;
-  background: #EBE7FF;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #281683;
-  border-color: #281683;
-  background: #D6CEFF;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-light);
 }
 
 <div>
@@ -978,13 +978,13 @@ exports[`render secondary brand color button 1`] = `
 exports[`render secondary negative color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1014,11 +1014,11 @@ exports[`render secondary negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #CA271B;
-  border-color: #CA271B;
+  color: var(--pbl-theme-colors-negative-dark);
+  border-color: var(--pbl-theme-colors-negative-dark);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1028,19 +1028,19 @@ exports[`render secondary negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFE7E5;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #871A12;
-  border-color: #871A12;
-  background: #FFE7E5;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
+  border-color: var(--pbl-theme-colors-negative-darkest);
+  background: var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #871A12;
-  border-color: #871A12;
-  background: #FFCFCC;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
+  border-color: var(--pbl-theme-colors-negative-darkest);
+  background: var(--pbl-theme-colors-negative-light);
 }
 
 <div>
@@ -1061,13 +1061,13 @@ exports[`render secondary negative color button 1`] = `
 exports[`render secondary plain color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1097,11 +1097,11 @@ exports[`render secondary plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #000000;
-  border-color: #000000;
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-common-black);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1111,19 +1111,19 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
 }
 
-.c0:hover:not(:disabled) {
-  color: #000000;
-  border-color: #000000;
-  background: #f0f0f0;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-50);
 }
 
-.c0:active:not(:disabled) {
-  color: #000000;
-  border-color: #000000;
-  background: #e0e0e0;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-100);
 }
 
 <div>
@@ -1144,13 +1144,13 @@ exports[`render secondary plain color button 1`] = `
 exports[`render secondary positive color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1180,11 +1180,11 @@ exports[`render secondary positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #2FB85A;
-  border-color: #2FB85A;
+  color: var(--pbl-theme-colors-positive-dark);
+  border-color: var(--pbl-theme-colors-positive-dark);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1194,19 +1194,19 @@ exports[`render secondary positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #DFF6E6;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #108B36;
-  border-color: #108B36;
-  background: #DFF6E6;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
+  border-color: var(--pbl-theme-colors-positive-darkest);
+  background: var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #108B36;
-  border-color: #108B36;
-  background: #BBECCB;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
+  border-color: var(--pbl-theme-colors-positive-darkest);
+  background: var(--pbl-theme-colors-positive-light);
 }
 
 <div>
@@ -1227,13 +1227,13 @@ exports[`render secondary positive color button 1`] = `
 exports[`render secondaryInverted brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1263,11 +1263,11 @@ exports[`render secondaryInverted brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1277,19 +1277,19 @@ exports[`render secondaryInverted brand color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #4129BD;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #281683;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-darkest);
 }
 
 <div>
@@ -1310,13 +1310,13 @@ exports[`render secondaryInverted brand color button 1`] = `
 exports[`render secondaryInverted negative color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1346,11 +1346,11 @@ exports[`render secondaryInverted negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1360,19 +1360,19 @@ exports[`render secondaryInverted negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFE7E5;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #CA271B;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #871A12;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-darkest);
 }
 
 <div>
@@ -1393,13 +1393,13 @@ exports[`render secondaryInverted negative color button 1`] = `
 exports[`render secondaryInverted plain color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1429,11 +1429,11 @@ exports[`render secondaryInverted plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-common-white);
+  border-color: var(--pbl-theme-colors-common-white);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1443,19 +1443,19 @@ exports[`render secondaryInverted plain color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #303030;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-common-white);
+  border-color: var(--pbl-theme-colors-common-white);
+  background: var(--pbl-theme-colors-gray-800);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #606060;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-common-white);
+  border-color: var(--pbl-theme-colors-common-white);
+  background: var(--pbl-theme-colors-gray-600);
 }
 
 <div>
@@ -1476,13 +1476,13 @@ exports[`render secondaryInverted plain color button 1`] = `
 exports[`render secondaryInverted positive color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1512,11 +1512,11 @@ exports[`render secondaryInverted positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
-  border-color: #ffffff;
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1526,19 +1526,19 @@ exports[`render secondaryInverted positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #DFF6E6;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #2FB85A;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
-  border-color: #ffffff;
-  background: #108B36;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-darkest);
 }
 
 <div>
@@ -1559,13 +1559,13 @@ exports[`render secondaryInverted positive color button 1`] = `
 exports[`render text brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1595,10 +1595,10 @@ exports[`render text brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #4129BD;
+  color: var(--pbl-theme-colors-brand-dark);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1608,18 +1608,18 @@ exports[`render text brand color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #281683;
-  background: #EBE7FF;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #281683;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
   border-color: transparent;
-  background: #D6CEFF;
+  background: var(--pbl-theme-colors-brand-light);
 }
 
 <div>
@@ -1640,13 +1640,13 @@ exports[`render text brand color button 1`] = `
 exports[`render text negative color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1676,10 +1676,10 @@ exports[`render text negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #CA271B;
+  color: var(--pbl-theme-colors-negative-dark);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1689,18 +1689,18 @@ exports[`render text negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFE7E5;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #871A12;
-  background: #FFE7E5;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
+  background: var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #871A12;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
   border-color: transparent;
-  background: #FFCFCC;
+  background: var(--pbl-theme-colors-negative-light);
 }
 
 <div>
@@ -1721,13 +1721,13 @@ exports[`render text negative color button 1`] = `
 exports[`render text plain color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1757,10 +1757,10 @@ exports[`render text plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #000000;
+  color: var(--pbl-theme-colors-common-black);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1770,18 +1770,18 @@ exports[`render text plain color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
 }
 
-.c0:hover:not(:disabled) {
-  color: #000000;
-  background: #f0f0f0;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-50);
 }
 
-.c0:active:not(:disabled) {
-  color: #000000;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
   border-color: transparent;
-  background: #e0e0e0;
+  background: var(--pbl-theme-colors-gray-100);
 }
 
 <div>
@@ -1802,13 +1802,13 @@ exports[`render text plain color button 1`] = `
 exports[`render text positive color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1838,10 +1838,10 @@ exports[`render text positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #2FB85A;
+  color: var(--pbl-theme-colors-positive-dark);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1851,18 +1851,18 @@ exports[`render text positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #DFF6E6;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #108B36;
-  background: #DFF6E6;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
+  background: var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:active:not(:disabled) {
-  color: #108B36;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
   border-color: transparent;
-  background: #BBECCB;
+  background: var(--pbl-theme-colors-positive-light);
 }
 
 <div>
@@ -1883,13 +1883,13 @@ exports[`render text positive color button 1`] = `
 exports[`render textInverted brand color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -1919,10 +1919,10 @@ exports[`render textInverted brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--pbl-theme-colors-brand-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -1932,18 +1932,18 @@ exports[`render textInverted brand color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #EBE7FF;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  background: #4129BD;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
   border-color: transparent;
-  background: #281683;
+  background: var(--pbl-theme-colors-brand-darkest);
 }
 
 <div>
@@ -1964,13 +1964,13 @@ exports[`render textInverted brand color button 1`] = `
 exports[`render textInverted negative color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -2000,10 +2000,10 @@ exports[`render textInverted negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--pbl-theme-colors-negative-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -2013,18 +2013,18 @@ exports[`render textInverted negative color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #FFE7E5;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  background: #CA271B;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
   border-color: transparent;
-  background: #871A12;
+  background: var(--pbl-theme-colors-negative-darkest);
 }
 
 <div>
@@ -2045,13 +2045,13 @@ exports[`render textInverted negative color button 1`] = `
 exports[`render textInverted plain color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -2081,10 +2081,10 @@ exports[`render textInverted plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--pbl-theme-colors-common-white);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -2094,18 +2094,18 @@ exports[`render textInverted plain color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #f0f0f0;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  background: #303030;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-common-white);
+  background: var(--pbl-theme-colors-gray-800);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-common-white);
   border-color: transparent;
-  background: #606060;
+  background: var(--pbl-theme-colors-gray-600);
 }
 
 <div>
@@ -2126,13 +2126,13 @@ exports[`render textInverted plain color button 1`] = `
 exports[`render textInverted positive color button 1`] = `
 .c1 {
   box-sizing: border-box;
-  font-family: "IBM Plex Sans",sans-serif;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 1.29em;
-  margin-bottom: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
 .c0 {
@@ -2162,10 +2162,10 @@ exports[`render textInverted positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--pbl-theme-colors-positive-contrastText);
 }
 
-.c0:not(:disabled) {
+.c0:enabled {
   cursor: pointer;
 }
 
@@ -2175,18 +2175,18 @@ exports[`render textInverted positive color button 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px #DFF6E6;
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
 }
 
-.c0:hover:not(:disabled) {
-  color: #ffffff;
-  background: #2FB85A;
+.c0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-dark);
 }
 
-.c0:active:not(:disabled) {
-  color: #ffffff;
+.c0:active:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
   border-color: transparent;
-  background: #108B36;
+  background: var(--pbl-theme-colors-positive-darkest);
 }
 
 <div>

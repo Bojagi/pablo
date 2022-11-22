@@ -1,6 +1,7 @@
 import { TypographyVariant } from '../Typography';
-import { getColor, getSpacing } from '../styleHelpers';
+import { getSpacing } from '../styleHelpers';
 import { Style } from '../theme/types';
+import { themeVars } from '../theme/themeVars';
 
 export interface CheckableBaseStyles {
   innerPadding: {
@@ -32,15 +33,15 @@ export const checkableBaseStyles: CheckableBaseStyles = {
     small: getSpacing(2),
   },
   borderWidth: 1,
-  borderColor: getColor('borders'),
-  backgroundColor: getColor('common', 'white'),
+  borderColor: themeVars.colors.borders.main,
+  backgroundColor: themeVars.colors.common.white,
   handleSize: {
     medium: getSpacing(5),
     small: getSpacing(4),
   },
   focus: {
     outlineSize: '3px',
-    outlineColor: getColor('brand', 'lightest'),
+    outlineColor: themeVars.colors.brand.lightest,
   },
   boxTransition: [['box-shadow', '0.3s', 'ease-in-out']],
   handleTransition: [['transform', '0.15s', 'cubic-bezier(0.34, 1.56, 0.64, 1)']],

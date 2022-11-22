@@ -5,12 +5,13 @@ import { IconButton } from '../IconButton';
 import { CloseIcon } from '../Icons';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { Paragraph, Subtitle } from '../Typography';
-import { getColor, getComponentStyle, shadowTransformer } from '../styleHelpers';
+import { getComponentStyle, shadowTransformer } from '../styleHelpers';
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './Icons';
 import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
 import { BaseProps } from '../types';
 import { ToastCardStyleProperties } from './styles';
 import { baseStyle } from '../shared/baseStyle';
+import { themeVars } from '../theme/themeVars';
 
 const CardWrapper = styled.div<LayoutBoxProps>`
   ${baseStyle}
@@ -100,8 +101,8 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
                   css={
                     css`
                       fill: ${color};
-                      &:hover:not(:disabled) {
-                        background-color: ${getColor('blackOpacity', '300')};
+                      &:hover:enabled {
+                        background-color: ${themeVars.colors.blackOpacity[300]};
                       }
                       ${getStyles('closeButton')}
                     ` as any

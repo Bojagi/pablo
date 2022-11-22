@@ -1,6 +1,7 @@
 import { render, cleanup, act, fireEvent } from '@testing-library/react';
 import React from 'react';
-import { defaultTheme, PabloThemeProvider } from '../theme';
+import { PabloThemeProvider } from '../theme';
+import { themeVars } from '../theme/themeVars';
 import { Switch } from './Switch';
 
 let onChangeMock;
@@ -17,7 +18,7 @@ test('Render switch unchecked', () => {
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('transform', 'translateX( 0 )');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule(
     'background-color',
-    defaultTheme.colors.gray['500']
+    themeVars.colors.gray['500']
   );
   expect(getByTestId('pbl-switch-input')).not.toBeChecked();
 });
@@ -28,7 +29,7 @@ test('Render switch checked', () => {
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('transform', 'translateX( 18px )');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule(
     'background-color',
-    defaultTheme.colors.brand.main
+    themeVars.colors.brand.main
   );
   expect(getByTestId('pbl-switch-input')).toBeChecked();
 });
@@ -86,7 +87,7 @@ test('Render medium switch', () => {
   // Uses subtitle typography
   expect(getByTestId('pbl-switch-label')).toHaveStyleRule(
     'font-size',
-    defaultTheme.typography.subtitle.fontSize
+    themeVars.typography.subtitle.fontSize
   );
 });
 
@@ -103,7 +104,7 @@ test('Render small switch', () => {
   // Uses paragraph typography
   expect(getByTestId('pbl-switch-label')).toHaveStyleRule(
     'font-size',
-    defaultTheme.typography.paragraph.fontSize
+    themeVars.typography.paragraph.fontSize
   );
 });
 
@@ -142,7 +143,7 @@ test('Forward onFocus and onBlur to input and show focus outline', () => {
 
   expect(getByTestId('pbl-switch')).toHaveStyleRule(
     'box-shadow',
-    `0 0 0 3px ${defaultTheme.colors.brand.lightest}`
+    `0 0 0 3px ${themeVars.colors.brand.lightest}`
   );
 
   expect(onBlurMock).toHaveBeenCalledTimes(0);

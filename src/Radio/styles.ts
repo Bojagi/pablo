@@ -1,7 +1,7 @@
-import { getColor } from '../styleHelpers/getColor';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { checkableBaseStyles, CheckableBaseStyles } from '../shared/checkableBaseStyles';
+import { themeVars } from '../theme/themeVars';
 
 export interface RadioStyles extends CheckableBaseStyles {
   handleColor: Style;
@@ -13,7 +13,7 @@ export interface RadioStyles extends CheckableBaseStyles {
 
 export const radioStyles: RadioStyles = {
   ...checkableBaseStyles,
-  handleColor: getColor('brand'),
+  handleColor: themeVars.colors.brand.main,
   groupItemGap: {
     medium: getSpacing(5),
     small: getSpacing(4),

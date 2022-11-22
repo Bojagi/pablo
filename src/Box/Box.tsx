@@ -18,6 +18,8 @@ import { system } from '@styled-system/core';
 import { color, ColorProps } from './color';
 import { CssFunctionReturn } from '../types';
 import { baseStyle } from '../shared/baseStyle';
+import { getByPath } from '../utils/getByPath';
+import { themeVars } from '../theme/themeVars';
 
 export interface BoxCssProps<T> {
   css?: CssFunctionReturn;
@@ -45,7 +47,7 @@ export const Box = styled.div<BoxProps>`
   ${system({
     fillColor: {
       property: 'fill',
-      scale: 'colors',
+      transform: (value: string) => getByPath(themeVars.colors, value),
     },
   })}
   ${boxInterpolateFn}

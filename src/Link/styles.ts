@@ -1,4 +1,4 @@
-import { getColor } from '../styleHelpers/getColor';
+import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
 
@@ -27,7 +27,7 @@ export interface LinkStyles extends BaseLinkStyle, BaseStyles<LinkStylePropertie
 }
 
 const BASE_LINK_STYLES: BaseLinkStyle = {
-  color: getColor('brand', 'main'),
+  color: themeVars.colors.brand.main,
   textDecoration: 'none',
   fontStyle: 'normal',
   fontWeight: 'inherit',
