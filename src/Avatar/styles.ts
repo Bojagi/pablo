@@ -1,3 +1,4 @@
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 import { BaseStyles } from '../types';
 
 export type AvatarStyleProperties = 'circle' | 'square';
@@ -13,7 +14,6 @@ export interface AvatarStyles extends BaseStyles<AvatarStyleProperties> {
     large: number;
   };
 }
-
 export const avatarStyles: AvatarStyles = {
   square: {
     borderRadius: 6,
@@ -25,3 +25,5 @@ export const avatarStyles: AvatarStyles = {
     large: 64,
   },
 };
+
+registerComponentStyles('avatar', avatarStyles);

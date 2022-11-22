@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'styled-components';
 import { Flex } from '../Box';
-import { Avatar } from './Avatar';
+import { Avatar } from './index';
 
 export default {
   title: 'Avatar',
