@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
@@ -116,19 +115,13 @@ export const buttonStyles: ButtonStyles = {
   },
   sizes: {
     small: {
-      padding: css`
-        5px 8px
-      `,
+      padding: '5px 8px',
     },
     medium: {
-      padding: css`
-        10px 14px
-      `,
+      padding: '10px 14px',
     },
     large: {
-      padding: css`
-        14px 22px
-      `,
+      padding: '14px 22px',
     },
   },
   plain: {

@@ -1,5 +1,3 @@
-import { css } from 'styled-components';
-
-export const baseStyle = css`
-  box-sizing: border-box;
-`;
+export const baseStyle = {
+  boxSizing: 'border-box',
+};
