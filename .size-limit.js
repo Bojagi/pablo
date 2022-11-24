@@ -7,7 +7,7 @@ module.exports = [
   { 
     path: 'build/Button/index.js',
     name: 'Button direct import (Common JS)',
-    limit: '8 kb',
+    limit: '10 kb',
   },
   {
     path: 'build/es/index.js',

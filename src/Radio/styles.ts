@@ -2,6 +2,7 @@ import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { checkableBaseStyles, CheckableBaseStyles } from '../shared/checkableBaseStyles';
 import { themeVars } from '../theme/themeVars';
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 
 export interface RadioStyles extends CheckableBaseStyles {
   handleColor: Style;
@@ -19,3 +20,5 @@ export const radioStyles: RadioStyles = {
     small: getSpacing(4),
   },
 };
+
+registerComponentStyles('radio', radioStyles);

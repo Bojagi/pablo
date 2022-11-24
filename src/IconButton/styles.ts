@@ -1,6 +1,7 @@
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
 import { themeVars } from '../theme/themeVars';
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 
 export type IconButtonStyleProperties = 'root' | 'hover' | 'active' | 'focus';
 
@@ -115,3 +116,5 @@ function getIconButtonColorConfig(colorName: string, contrastColor: Style) {
     },
   };
 }
+
+registerComponentStyles('iconButton', iconButtonStyles);

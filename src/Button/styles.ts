@@ -1,4 +1,5 @@
 import { getSpacing } from '../styleHelpers/getSpacing';
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
@@ -361,3 +362,5 @@ function createShadedButtonTextInvertedStyles(
     },
   };
 }
+
+registerComponentStyles('button', buttonStyles);

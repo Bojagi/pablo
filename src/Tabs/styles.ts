@@ -4,6 +4,7 @@ import { Style } from '../theme/types';
 import { getComponentStyle } from '../styleHelpers';
 import { BaseStyles } from '../types';
 import { themeVars } from '../theme/themeVars';
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 
 export type TabsStyleProperties = 'root';
 export type TabStyleProperties = 'root' | 'hover' | 'active' | 'focus' | 'selected' | 'indicator';
@@ -89,3 +90,5 @@ export const tabsStyles: TabsStyles = {
     },
   },
 };
+
+registerComponentStyles('tabs', tabsStyles);

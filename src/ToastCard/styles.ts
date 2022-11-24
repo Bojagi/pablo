@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 import { getSpacing } from '../styleHelpers/getSpacing';
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 
@@ -24,3 +25,5 @@ export const toastCardStyles: ToastCardStyles = {
   color: themeVars.colors.common.blackContrastText,
   shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
 };
+
+registerComponentStyles('toastCard', toastCardStyles);

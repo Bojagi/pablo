@@ -1,3 +1,4 @@
+import { registerComponentStyles } from '../theme';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
@@ -47,3 +48,5 @@ export const linkStyles: LinkStyles = {
     textDecoration: 'underline',
   },
 };
+
+registerComponentStyles('link', linkStyles);

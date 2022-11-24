@@ -9,6 +9,8 @@ import {
 } from '../shared/BaseCheckable';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
+import { switchStyles } from './styles';
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 
 const switchBoxSize = (multiplier) => css`
   calc(${multiplier} * ${getComponentStyle('switch.handleSize.{size}')} + 2 * (${getComponentStyle(
@@ -75,3 +77,5 @@ export const Switch = forwardRef<HTMLDivElement, SwitchProps>((props, ref) => (
     {...props}
   />
 ));
+
+registerComponentStyles('switch', switchStyles);
