@@ -36,20 +36,21 @@ export const PabloThemeProvider = ({
   const mergedTheme = merge(defaultTheme, theme, { arrayMerge: overwriteMerge }) as PabloTheme;
   const mergedComponentStyles = merge(defaultComponentStyles, componentStyles) as ComponentStyles;
 
+  const styledTheme = React.useMemo(
+    () => ({
+      ...scTheme,
+      ...mergedTheme,
+      componentStyles: mergedComponentStyles,
+    }),
+    [mergedComponentStyles, mergedTheme, scTheme]
+  );
+
   return (
     <>
       <GlobalStyle theme={mergedTheme} />
       <pabloThemeContext.Provider value={mergedTheme}>
         <pabloComponentStylesContext.Provider value={mergedComponentStyles}>
-          <ThemeProvider
-            theme={{
-              ...scTheme,
-              ...mergedTheme,
-              componentStyles: mergedComponentStyles,
-            }}
-          >
-            {children}
-          </ThemeProvider>
+          <ThemeProvider theme={styledTheme}>{children}</ThemeProvider>
         </pabloComponentStylesContext.Provider>
       </pabloThemeContext.Provider>
     </>
