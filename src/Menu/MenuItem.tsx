@@ -45,6 +45,7 @@ export const MenuItem = ({ children, onClick, as, customStyles, ...props }: Menu
   <MenuItemBox
     data-testid="pbl-menu-item"
     as={as}
+    role="menuitem"
     onClick={onClick}
     customStyles={customStyles}
     {...props}

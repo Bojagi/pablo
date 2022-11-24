@@ -58,6 +58,7 @@ export interface RadioProps extends BaseCheckableProps {
 export const Radio = forwardRef<HTMLDivElement, RadioProps>((props: RadioProps, ref) => (
   <BaseCheckable
     ref={ref}
+    role="radio"
     componentName="radio"
     componentType="radio"
     componentBox={RadioBox}

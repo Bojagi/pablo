@@ -56,6 +56,7 @@ export interface CheckboxProps extends BaseCheckableProps {}
 export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((props, ref) => (
   <BaseCheckable
     ref={ref}
+    role="checkbox"
     componentName="checkbox"
     componentType="checkbox"
     componentBox={CheckboxBox}

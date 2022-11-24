@@ -86,6 +86,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
           data-testid="pbl-tabs"
           ref={setInnerRef}
           mx={`-${gap}`}
+          role="tablist"
           {...props}
         >
           {displayableItems.map((child) =>

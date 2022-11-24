@@ -158,6 +158,7 @@ export function Modal({
               (mouseDownRef.current as any) = e.currentTarget;
             }}
             css={getCustomStyles('box')}
+            aria-modal="true"
           >
             {(title || TopRightItem) && (
               <Flex data-testid="pbl-modal-title-box" justifyContent="space-between">

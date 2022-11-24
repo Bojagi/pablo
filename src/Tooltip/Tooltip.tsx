@@ -106,7 +106,12 @@ export function Tooltip({
         duration: 400,
       }}
       content={
-        <TooltipPopover data-testid="pbl-tooltip-popover" side={side} customStyles={customStyles}>
+        <TooltipPopover
+          role="tooltip"
+          data-testid="pbl-tooltip-popover"
+          side={side}
+          customStyles={customStyles}
+        >
           <Typography variant="info">{content}</Typography>
         </TooltipPopover>
       }

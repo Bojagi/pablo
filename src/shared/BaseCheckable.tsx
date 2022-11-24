@@ -45,6 +45,7 @@ export interface CheckableHandleProps extends BaseProps<CheckableStyleProperties
 export interface OuterBaseCheckableProps extends BaseCheckableProps {
   componentName: 'radio' | 'switch' | 'checkbox';
   componentType: 'radio' | 'checkbox';
+  role: 'switch' | 'radio' | 'checkbox';
   componentBox: React.FC<CheckableBoxProps>;
   componentHandle: React.FC<CheckableHandleProps>;
 }
