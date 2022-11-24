@@ -32,6 +32,7 @@ export interface PopoverProps {
   open: boolean;
   animation?: ComponentType<InOutAnimationProps>;
   animationProps?: Omit<InOutAnimationProps, 'visible' | 'children'> & Record<string, any>;
+  'aria-haspopup'?: string;
 }
 
 const PopoverWrapper = styled.div`
@@ -54,6 +55,7 @@ export const Popover = forwardRef(
       arrow = <div />,
       animation: Animation = NoAnimation,
       animationProps = { duration: 0 },
+      'aria-haspopup': ariaHasPopup,
     }: PopoverProps,
     ref
   ) => {
@@ -115,6 +117,7 @@ export const Popover = forwardRef(
       () =>
         React.cloneElement(children, {
           ref: setReferenceElement,
+          'aria-haspopup': ariaHasPopup,
         }),
       [children, setReferenceElement]
     );

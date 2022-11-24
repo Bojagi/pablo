@@ -32,6 +32,7 @@ export const ToolbarItem = forwardRef<HTMLButtonElement, ToolbarItemProps>(
         <IconButton
           mx={gap}
           ref={ref}
+          role="toolbar"
           data-testid="pbl-toolbar-item-button"
           active={active}
           onClick={() => onClick && onClick(name)}

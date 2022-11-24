@@ -19,6 +19,7 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
   size: props.size || 'medium',
   color: props.color || 'plain',
   active: props.active || false,
+  'aria-pressed': props.active ? 'true' : 'false',
 }))<IconButtonProps>`
   ${baseStyle}
   width: ${getComponentStyle('iconButton.size.{size}')};

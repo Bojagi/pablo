@@ -56,9 +56,14 @@ export const Menu = forwardRef(
         open={open}
         offset={offset}
         onClickOutside={onClose}
+        aria-haspopup="menu"
         arrow={<PopoverArrow size={10} color="white" customCss={getCustomStyles('arrow')} />}
         placement={placement}
-        content={<MenuBox css={getCustomStyles('box')}>{items}</MenuBox>}
+        content={
+          <MenuBox role="menu" css={getCustomStyles('box')}>
+            {items}
+          </MenuBox>
+        }
         animation={animation}
         animationProps={animationProps}
       >

@@ -67,6 +67,7 @@ export interface SwitchProps extends BaseCheckableProps {}
 export const Switch = forwardRef<HTMLDivElement, SwitchProps>((props, ref) => (
   <BaseCheckable
     ref={ref}
+    role="switch"
     componentName="switch"
     componentType="checkbox"
     componentBox={SwitchBox}

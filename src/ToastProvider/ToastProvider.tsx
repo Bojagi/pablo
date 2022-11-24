@@ -83,17 +83,27 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
     <>
       <addMessageContext.Provider value={handleAddMessage}>{children}</addMessageContext.Provider>
       <ToastStack side={side}>
-        {messages.map(({ hidden, ...message }, i, arr) => (
-          <Box key={message.id} zIndex={100 + arr.length - i}>
-            <StackAnimation
-              duration={FADE_DURATION}
-              visible={!hidden}
-              onExited={() => removeMessage(message.id!)}
-            >
-              <ToastCard {...message} mb={4} onClose={() => hideMessage(message.id!)} />
-            </StackAnimation>
-          </Box>
-        ))}
+        {messages.map(({ hidden, ...message }, i, arr) => {
+          const isAlert = message.type === 'warning' || message.type === 'error';
+          return (
+            <Box key={message.id} zIndex={100 + arr.length - i}>
+              <StackAnimation
+                duration={FADE_DURATION}
+                visible={!hidden}
+                onExited={() => removeMessage(message.id!)}
+              >
+                <ToastCard
+                  aria-live={isAlert ? 'assertive' : 'polite'}
+                  role={isAlert ? 'alert' : 'status'}
+                  aria-atomic="true"
+                  {...message}
+                  mb={4}
+                  onClose={() => hideMessage(message.id!)}
+                />
+              </StackAnimation>
+            </Box>
+          );
+        })}
       </ToastStack>
     </>
   );

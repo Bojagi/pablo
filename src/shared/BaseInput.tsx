@@ -122,6 +122,8 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const InputComponent = inputComponent as any;
   const generatedId = useUniqueId(name);
   const id = idProp || generatedId;
+  const infoId = `${id}-info`;
+  const errorId = `${id}-error`;
   const actualInfoText = props.error || props.infoText;
   const getCustomStyles = useCustomStyles(`${name}.styles`, customStyles);
   return (
@@ -154,6 +156,9 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           id={id}
           ref={inputRef}
           value={value}
+          aria-invalid={props.error ? 'true' : 'false'}
+          aria-errormessage={props.error ? errorId : undefined}
+          aria-describedBy={actualInfoText && !props.error ? infoId : undefined}
           onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
           onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
           onChange={(e) => onChange && onChange(e.target.value, e)}
@@ -167,8 +172,10 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
       </InputWrapper>
       {actualInfoText && (
         <InfoText
+          aria-live="polite"
           data-testid={`pbl-${name}-infotext`}
           mt={2}
+          id={props.error ? errorId : infoId}
           textColor={props.error ? 'negative.main' : 'text.info'}
           customStyles={{
             info: getCustomStyles('infoText'),

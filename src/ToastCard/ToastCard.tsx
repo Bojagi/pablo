@@ -12,6 +12,7 @@ import { BaseProps } from '../types';
 import { ToastCardStyleProperties } from './styles';
 import { baseStyle } from '../shared/baseStyle';
 import { themeVars } from '../theme/themeVars';
+import { useUniqueId } from '../utils/useUniqueId';
 
 const CardWrapper = styled.div<LayoutBoxProps>`
   ${baseStyle}
@@ -34,6 +35,7 @@ export interface ToastCardProps extends LayoutBoxProps, BaseProps<ToastCardStyle
   icon?: ReactNode;
   closable?: boolean;
   onClose?: () => void;
+  role?: 'alert' | 'status';
 }
 
 const ALLOWED_TYPES: ToastType[] = ['info', 'success', 'warning', 'error'];
@@ -66,9 +68,19 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
     const type = typeProp === undefined || ALLOWED_TYPES.includes(typeProp) ? typeProp : 'info';
     const color = useComponentStyle('toastCard.color') as string;
     const getStyles = useCustomStyles('avatar.styles', props.customStyles);
+    const generatedId = useUniqueId('toast');
+    const titleId = `${generatedId}-title`;
+    const descriptionId = `${generatedId}-title`;
 
     return (
-      <CardWrapper ref={ref} data-testid="pbl-toastcard" {...props}>
+      <CardWrapper
+        ref={ref}
+        id={generatedId}
+        data-testid="pbl-toastcard"
+        aria-aria-labelledby={titleId}
+        aria-aria-describedBy={descriptionId}
+        {...props}
+      >
         <Flex alignItems={description ? 'flex-start' : 'center'}>
           {(type || icon) && (
             <Box
@@ -84,6 +96,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
             <Flex>
               <Subtitle
                 data-testid="pbl-toastcard-title"
+                id={titleId}
                 flexGrow={1}
                 inline={!description}
                 customStyles={{
@@ -115,6 +128,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
             {description && (
               <Paragraph
                 inline
+                id={descriptionId}
                 data-testid="pbl-toastcard-description"
                 customStyles={{
                   paragraph: getStyles('description'),

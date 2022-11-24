@@ -96,8 +96,10 @@ export const Tab = forwardRef<HTMLButtonElement, TabProps<any>>(
     <TabButton
       ref={ref}
       data-testid="pbl-tab"
+      role="tab"
       {...props}
       selected={selected}
+      aria-selected={selected ? 'true' : 'false'}
       onClick={(e) => {
         e.stopPropagation();
         if (onClick) {

@@ -39,7 +39,7 @@ export const Toolbar = forwardRef<HTMLDivElement, ToolbarProps>(
       return React.cloneElement(child, { key: index });
     });
     return (
-      <ToolbarBox ref={ref} {...props}>
+      <ToolbarBox role="toolbar" aria-orientation="horizontal" ref={ref} {...props}>
         {interpolatedChildren}
       </ToolbarBox>
     );
