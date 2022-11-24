@@ -15,9 +15,10 @@ import { Popover } from '../Popover/Popover';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { SlideAnimation } from '../animation/SlideAnimation';
 import { BaseProps } from '../types';
-import { TooltipStyleProperties } from './styles';
+import { TooltipStyleProperties, tooltipStyles } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
+import { registerComponentStyles } from '../theme';
 
 export type TooltipSide = BasePlacement;
 
@@ -114,3 +115,5 @@ export function Tooltip({
     </Popover>
   );
 }
+
+registerComponentStyles('tooltip', tooltipStyles);

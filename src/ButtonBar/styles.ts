@@ -1,4 +1,5 @@
 import { getSpacing } from '../styleHelpers/getSpacing';
+import { registerComponentStyles } from '../theme/defaultComponentStyles';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
 
@@ -11,3 +12,5 @@ export interface ButtonBarStyles extends BaseStyles<ButtonBarStyleProperties> {
 export const buttonBarStyles: ButtonBarStyles = {
   gap: getSpacing(2),
 };
+
+registerComponentStyles('buttonBar', buttonBarStyles);
