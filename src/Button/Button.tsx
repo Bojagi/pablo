@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
-import styled, { css, FlattenInterpolation } from 'styled-components';
 import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
+import { styled } from '../styled';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
-import { Style } from '../theme/types';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { ButtonTypography } from '../Typography';
 import { useCustomStyles } from '../utils/useCustomStyles';
@@ -33,96 +32,32 @@ export interface InnerButtonProps extends ButtonBaseProps, BaseProps<ButtonStyle
 export type ButtonProps<C extends React.ElementType> = InnerButtonProps &
   React.ComponentPropsWithRef<C>;
 
-const getButtonFocusOutlineShadow = (color: Style) => css`
-  box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')} ${color};
-`;
+const getColorStyles = (props, suffix?: string) => {
+  const basePath = 'button.{color}.{variant}';
+  const suffixedPath = [basePath, suffix].filter((x) => x).join('.');
 
-const ButtonPrimary = styled.button<InnerButtonProps>`
-  ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
-  justify-content: center;
-  ${(props) =>
-    props.fullWidth &&
-    css`
-      width: 100%;
-    `}
-  color: ${getComponentStyle('button.{color}.{variant}.color')};
-  background: ${getComponentStyle('button.{color}.{variant}.backgroundColor')};
-  border-color: ${getComponentStyle('button.{color}.{variant}.borderColor')};
+  return {
+    color: getComponentStyle(`${suffixedPath}.color`)(props),
+    borderColor: getComponentStyle(`${suffixedPath}.borderColor`)(props),
+    background: getComponentStyle(`${suffixedPath}.backgroundColor`)(props),
+  };
+};
 
-  &:focus {
-    ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
-  }
-
-  &:hover:enabled {
-    background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
-    border-color: ${getComponentStyle('button.{color}.{variant}.hover.borderColor')};
-  }
-
-  &:active:enabled {
-    color: ${getComponentStyle('button.{color}.{variant}.active.color')};
-    background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
-    border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
-  }
-
-  ${(props) => props.cssStyles}
-`;
-
-const ButtonSecondary = styled.button<InnerButtonProps>`
-  ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
-  justify-content: center;
-  ${(props) =>
-    props.fullWidth &&
-    css`
-      width: 100%;
-    `}
-  color: ${getComponentStyle('button.{color}.{variant}.color')};
-  border-color: ${getComponentStyle('button.{color}.{variant}.borderColor')};
-
-  &:focus {
-    ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
-  }
-
-  &:hover:enabled {
-    color: ${getComponentStyle('button.{color}.{variant}.hover.color')};
-    border-color: ${getComponentStyle('button.{color}.{variant}.hover.borderColor')};
-    background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
-  }
-
-  &:active:enabled {
-    color: ${getComponentStyle('button.{color}.{variant}.active.color')};
-    border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
-    background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
-  }
-
-  ${(props) => props.cssStyles}
-`;
-
-const ButtonText = styled.button<InnerButtonProps>`
-  ${buttonBaseStyles as FlattenInterpolation<InnerButtonProps>}
-  justify-content: center;
-  ${(props) =>
-    props.fullWidth &&
-    css`
-      width: 100%;
-    `}
-  color: ${getComponentStyle('button.{color}.{variant}.color')};
-
-  &:focus {
-    ${getButtonFocusOutlineShadow(getComponentStyle('button.{color}.outlineColor'))}
-  }
-
-  &:hover:enabled {
-    color: ${getComponentStyle('button.{color}.{variant}.hover.color')};
-    background: ${getComponentStyle('button.{color}.{variant}.hover.backgroundColor')};
-  }
-
-  &:active:enabled {
-    color: ${getComponentStyle('button.{color}.{variant}.active.color')};
-    border-color: ${getComponentStyle('button.{color}.{variant}.active.borderColor')};
-    background: ${getComponentStyle('button.{color}.{variant}.active.backgroundColor')};
-  }
-  ${(props) => props.cssStyles}
-`;
+const InnerButton = styled<InnerButtonProps>('button')([
+  buttonBaseStyles,
+  (props) => ({
+    justifyContent: 'center',
+    width: props.fullWidth ? '100%' : 'inherit',
+    ...getColorStyles(props),
+    '&:focus': {
+      boxShadow: `0 0 0 ${getComponentStyle('button.base.focus.outlineSize')(
+        props
+      )} ${getComponentStyle('button.{color}.outlineColor')(props)}`,
+    },
+    '&:hover:enabled': getColorStyles(props, 'hover'),
+    '&:active:enabled': getColorStyles(props, 'active'),
+  }),
+]);
 
 interface IconBoxProps {
   size: ButtonSize;
@@ -130,30 +65,26 @@ interface IconBoxProps {
   cssStyles?: CssFunctionReturn;
 }
 
-const IconBox = styled.div<IconBoxProps>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-${(props) => props.marginSide}: ${getComponentStyle('button.base.icon.gap')};
-  width: ${getComponentStyle('button.base.icon.size.{size}')};
-  height: ${getComponentStyle('button.base.icon.size.{size}')};
+const IconBox = styled<IconBoxProps>('div')((props) => ({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  [`margin-${props.marginSide}`]: getComponentStyle('button.base.icon.gap')(props),
 
-  & > * {
-    width: ${getComponentStyle('button.base.icon.size.{size}')};
-    height: ${getComponentStyle('button.base.icon.size.{size}')};
-  }
+  '&, & > *': {
+    width: getComponentStyle('button.base.icon.size.{size}')(props),
+    height: getComponentStyle('button.base.icon.size.{size}')(props),
+  },
+}));
 
-  ${(props) => props.cssStyles}
-`;
-
-const buttonMap: Record<ButtonVariant, React.ComponentType<any>> = {
-  primary: ButtonPrimary,
-  primaryInverted: ButtonPrimary,
-  secondary: ButtonSecondary,
-  secondaryInverted: ButtonSecondary,
-  text: ButtonText,
-  textInverted: ButtonText,
-};
+const knownVariants = [
+  'primary',
+  'primaryInverted',
+  'secondary',
+  'secondaryInverted',
+  'text',
+  'textInverted',
+];
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
   (
@@ -172,9 +103,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
     },
     ref
   ) => {
-    const InnerButton = buttonMap[variant] || ButtonPrimary;
-    const isKnownVariant = Object.keys(buttonMap).indexOf(variant) > -1;
+    const isKnownVariant = knownVariants.indexOf(variant) > -1;
     const getCustomStyles = useCustomStyles('button.styles', customStyles);
+
     return (
       <InnerButton
         data-testid="pbl-button"

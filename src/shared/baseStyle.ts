@@ -1,5 +1,5 @@
-import { css } from 'styled-components';
+import { CSSObject } from 'styled-components';
 
-export const baseStyle = css`
-  box-sizing: border-box;
-`;
+export const baseStyle: CSSObject = {
+  boxSizing: 'border-box',
+};

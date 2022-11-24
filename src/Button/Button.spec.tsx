@@ -57,9 +57,9 @@ test.each([
     {
       color: themeVars.colors.brand.dark,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.brand.lightest,
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
   [
@@ -68,9 +68,9 @@ test.each([
     {
       color: themeVars.colors.brand.contrastText,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.brand.dark,
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
   [
@@ -123,9 +123,9 @@ test.each([
     {
       color: themeVars.colors.common.black,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.gray['50'],
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
   [
@@ -134,9 +134,9 @@ test.each([
     {
       color: themeVars.colors.common.white,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.gray['800'],
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
   [
@@ -189,9 +189,9 @@ test.each([
     {
       color: themeVars.colors.negative.dark,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.negative.lightest,
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
   [
@@ -200,9 +200,9 @@ test.each([
     {
       color: themeVars.colors.negative.contrastText,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.negative.dark,
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
   [
@@ -255,9 +255,9 @@ test.each([
     {
       color: themeVars.colors.positive.dark,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.positive.lightest,
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
   [
@@ -266,9 +266,9 @@ test.each([
     {
       color: themeVars.colors.positive.contrastText,
       backgroundColor: 'transparent',
-      borderColor: undefined,
+      borderColor: 'transparent',
       hoverBackgroundColor: themeVars.colors.positive.dark,
-      hoverBorderColor: undefined,
+      hoverBorderColor: 'transparent',
     },
   ],
 ])('render %s %s color button', (variant, color, expectedStyles) => {

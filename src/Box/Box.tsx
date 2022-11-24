@@ -60,7 +60,9 @@ export type LayoutBoxProps = SpaceProps &
   BoxCssProps<LayoutBoxProps>;
 
 export const layoutInterpolationFn = (props) =>
-  [space, layout, flexbox, position].map((fn) => fn(props));
+  [space, layout, flexbox, position]
+    .map((fn) => fn(props))
+    .reduce((acc, styles) => ({ ...acc, ...styles }), {});
 
 export const LayoutBox = styled.div<LayoutBoxProps>`
   ${baseStyle}

@@ -41,9 +41,10 @@ exports[`Render button bar 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-main);
   border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
 }
 
 .c1:enabled {
@@ -60,14 +61,15 @@ exports[`Render button bar 1`] = `
 }
 
 .c1:hover:enabled {
-  background: var(--pbl-theme-colors-brand-dark);
+  color: var(--pbl-theme-colors-brand-contrastText);
   border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
 }
 
 .c1:active:enabled {
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-darkest);
   border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
 }
 
 .c0 {

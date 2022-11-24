@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
@@ -9,27 +8,28 @@ export interface ButtonBaseProps extends LayoutBoxProps {
   onClick?: () => void;
 }
 
-export const buttonBaseStyles = css<ButtonBaseProps>`
-  ${baseStyle}
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: ${getComponentStyle('button.sizes.{size}.padding')};
-  border: ${getComponentStyle('button.base.borderSize')}px solid transparent;
-  background: transparent;
-  border-radius: ${getComponentStyle('button.base.borderRadius')};
-  transition: ${getComponentStyle('button.base.transitions', transitionTransformer)};
-  outline: none;
+export const buttonBaseStyles: any = [
+  (props) => ({
+    ...baseStyle,
+    display: 'inline-flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    textDecoration: 'none',
+    padding: getComponentStyle('button.sizes.{size}.padding')(props),
+    border: `${getComponentStyle('button.base.borderSize')(props)}px solid transparent`,
+    background: 'transparent',
+    borderRadius: getComponentStyle('button.base.borderRadius')(props),
+    transition: getComponentStyle('button.base.transitions', transitionTransformer)(props),
+    outline: 'none',
 
-  &:enabled {
-    cursor: pointer;
-  }
+    '&:enabled': {
+      cursor: 'pointer',
+    },
 
-  &:disabled {
-    opacity: ${getComponentStyle('button.base.disabled.opacity')};
-    cursor: normal;
-  }
-
-  ${({ size, ...props }) => layoutInterpolationFn(props)}
-`;
+    '&:disabled': {
+      opacity: getComponentStyle('button.base.disabled.opacity')(props),
+      cursor: 'normal',
+    },
+  }),
+  ({ size, ...props }) => layoutInterpolationFn(props),
+];
