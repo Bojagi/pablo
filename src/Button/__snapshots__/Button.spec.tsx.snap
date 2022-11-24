@@ -39,9 +39,10 @@ exports[`render button with end icon 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-main);
   border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
 }
 
 .c0:enabled {
@@ -58,14 +59,15 @@ exports[`render button with end icon 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-brand-dark);
+  color: var(--pbl-theme-colors-brand-contrastText);
   border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-darkest);
   border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
 }
 
 .c2 {
@@ -82,10 +84,9 @@ exports[`render button with end icon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin-left: 8px;
-  width: 20px;
-  height: 20px;
 }
 
+.c2,
 .c2 > * {
   width: 20px;
   height: 20px;
@@ -153,9 +154,10 @@ exports[`render button with start icon 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-main);
   border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
 }
 
 .c0:enabled {
@@ -172,14 +174,15 @@ exports[`render button with start icon 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-brand-dark);
+  color: var(--pbl-theme-colors-brand-contrastText);
   border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-darkest);
   border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
 }
 
 .c1 {
@@ -196,10 +199,9 @@ exports[`render button with start icon 1`] = `
   -ms-flex-align: center;
   align-items: center;
   margin-right: 8px;
-  width: 20px;
-  height: 20px;
 }
 
+.c1,
 .c1 > * {
   width: 20px;
   height: 20px;
@@ -267,9 +269,10 @@ exports[`render primary brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-main);
   border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
 }
 
 .c0:enabled {
@@ -286,14 +289,15 @@ exports[`render primary brand color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-brand-dark);
+  color: var(--pbl-theme-colors-brand-contrastText);
   border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-darkest);
   border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
 }
 
 <div>
@@ -350,9 +354,10 @@ exports[`render primary negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-negative-contrastText);
-  background: var(--pbl-theme-colors-negative-main);
   border-color: var(--pbl-theme-colors-negative-main);
+  background: var(--pbl-theme-colors-negative-main);
 }
 
 .c0:enabled {
@@ -369,14 +374,15 @@ exports[`render primary negative color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-negative-dark);
+  color: var(--pbl-theme-colors-negative-contrastText);
   border-color: var(--pbl-theme-colors-negative-dark);
+  background: var(--pbl-theme-colors-negative-dark);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-negative-contrastText);
-  background: var(--pbl-theme-colors-negative-darkest);
   border-color: var(--pbl-theme-colors-negative-darkest);
+  background: var(--pbl-theme-colors-negative-darkest);
 }
 
 <div>
@@ -433,9 +439,10 @@ exports[`render primary plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-common-black);
-  background: var(--pbl-theme-colors-gray-50);
   border-color: var(--pbl-theme-colors-gray-100);
+  background: var(--pbl-theme-colors-gray-50);
 }
 
 .c0:enabled {
@@ -452,14 +459,15 @@ exports[`render primary plain color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-gray-100);
+  color: var(--pbl-theme-colors-common-black);
   border-color: var(--pbl-theme-colors-gray-200);
+  background: var(--pbl-theme-colors-gray-100);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-common-black);
-  background: var(--pbl-theme-colors-gray-200);
   border-color: var(--pbl-theme-colors-gray-300);
+  background: var(--pbl-theme-colors-gray-200);
 }
 
 <div>
@@ -516,9 +524,10 @@ exports[`render primary positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-positive-contrastText);
-  background: var(--pbl-theme-colors-positive-main);
   border-color: var(--pbl-theme-colors-positive-main);
+  background: var(--pbl-theme-colors-positive-main);
 }
 
 .c0:enabled {
@@ -535,14 +544,15 @@ exports[`render primary positive color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-positive-dark);
+  color: var(--pbl-theme-colors-positive-contrastText);
   border-color: var(--pbl-theme-colors-positive-dark);
+  background: var(--pbl-theme-colors-positive-dark);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-positive-contrastText);
-  background: var(--pbl-theme-colors-positive-darkest);
   border-color: var(--pbl-theme-colors-positive-darkest);
+  background: var(--pbl-theme-colors-positive-darkest);
 }
 
 <div>
@@ -599,9 +609,10 @@ exports[`render primaryInverted brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-main);
-  background: var(--pbl-theme-colors-brand-contrastText);
   border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-contrastText);
 }
 
 .c0:enabled {
@@ -618,14 +629,15 @@ exports[`render primaryInverted brand color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-brand-lightest);
+  color: var(--pbl-theme-colors-brand-main);
   border-color: var(--pbl-theme-colors-brand-lightest);
+  background: var(--pbl-theme-colors-brand-lightest);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-brand-main);
-  background: var(--pbl-theme-colors-brand-light);
   border-color: var(--pbl-theme-colors-brand-light);
+  background: var(--pbl-theme-colors-brand-light);
 }
 
 <div>
@@ -682,9 +694,10 @@ exports[`render primaryInverted negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-negative-main);
-  background: var(--pbl-theme-colors-negative-contrastText);
   border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-contrastText);
 }
 
 .c0:enabled {
@@ -701,14 +714,15 @@ exports[`render primaryInverted negative color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-negative-lightest);
+  color: var(--pbl-theme-colors-negative-main);
   border-color: var(--pbl-theme-colors-negative-lightest);
+  background: var(--pbl-theme-colors-negative-lightest);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-negative-main);
-  background: var(--pbl-theme-colors-negative-light);
   border-color: var(--pbl-theme-colors-negative-light);
+  background: var(--pbl-theme-colors-negative-light);
 }
 
 <div>
@@ -765,9 +779,10 @@ exports[`render primaryInverted plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-common-black);
-  background: var(--pbl-theme-colors-common-white);
   border-color: var(--pbl-theme-colors-common-white);
+  background: var(--pbl-theme-colors-common-white);
 }
 
 .c0:enabled {
@@ -784,14 +799,15 @@ exports[`render primaryInverted plain color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-gray-50);
+  color: var(--pbl-theme-colors-common-black);
   border-color: var(--pbl-theme-colors-gray-50);
+  background: var(--pbl-theme-colors-gray-50);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-common-black);
-  background: var(--pbl-theme-colors-gray-100);
   border-color: var(--pbl-theme-colors-gray-100);
+  background: var(--pbl-theme-colors-gray-100);
 }
 
 <div>
@@ -848,9 +864,10 @@ exports[`render primaryInverted positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-positive-main);
-  background: var(--pbl-theme-colors-positive-contrastText);
   border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-contrastText);
 }
 
 .c0:enabled {
@@ -867,14 +884,15 @@ exports[`render primaryInverted positive color button 1`] = `
 }
 
 .c0:hover:enabled {
-  background: var(--pbl-theme-colors-positive-lightest);
+  color: var(--pbl-theme-colors-positive-main);
   border-color: var(--pbl-theme-colors-positive-lightest);
+  background: var(--pbl-theme-colors-positive-lightest);
 }
 
 .c0:active:enabled {
   color: var(--pbl-theme-colors-positive-main);
-  background: var(--pbl-theme-colors-positive-light);
   border-color: var(--pbl-theme-colors-positive-light);
+  background: var(--pbl-theme-colors-positive-light);
 }
 
 <div>
@@ -931,8 +949,10 @@ exports[`render secondary brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-dark);
   border-color: var(--pbl-theme-colors-brand-dark);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1014,8 +1034,10 @@ exports[`render secondary negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-negative-dark);
   border-color: var(--pbl-theme-colors-negative-dark);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1097,8 +1119,10 @@ exports[`render secondary plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-common-black);
   border-color: var(--pbl-theme-colors-common-black);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1180,8 +1204,10 @@ exports[`render secondary positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-positive-dark);
   border-color: var(--pbl-theme-colors-positive-dark);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1263,8 +1289,10 @@ exports[`render secondaryInverted brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
   border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1346,8 +1374,10 @@ exports[`render secondaryInverted negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-negative-contrastText);
   border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1429,8 +1459,10 @@ exports[`render secondaryInverted plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-common-white);
   border-color: var(--pbl-theme-colors-common-white);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1512,8 +1544,10 @@ exports[`render secondaryInverted positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-positive-contrastText);
   border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1595,7 +1629,10 @@ exports[`render text brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-dark);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1613,6 +1650,7 @@ exports[`render text brand color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-brand-darkest);
+  border-color: transparent;
   background: var(--pbl-theme-colors-brand-lightest);
 }
 
@@ -1676,7 +1714,10 @@ exports[`render text negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-negative-dark);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1694,6 +1735,7 @@ exports[`render text negative color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-negative-darkest);
+  border-color: transparent;
   background: var(--pbl-theme-colors-negative-lightest);
 }
 
@@ -1757,7 +1799,10 @@ exports[`render text plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-common-black);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1775,6 +1820,7 @@ exports[`render text plain color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-common-black);
+  border-color: transparent;
   background: var(--pbl-theme-colors-gray-50);
 }
 
@@ -1838,7 +1884,10 @@ exports[`render text positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-positive-dark);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1856,6 +1905,7 @@ exports[`render text positive color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-positive-darkest);
+  border-color: transparent;
   background: var(--pbl-theme-colors-positive-lightest);
 }
 
@@ -1919,7 +1969,10 @@ exports[`render textInverted brand color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -1937,6 +1990,7 @@ exports[`render textInverted brand color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: transparent;
   background: var(--pbl-theme-colors-brand-dark);
 }
 
@@ -2000,7 +2054,10 @@ exports[`render textInverted negative color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -2018,6 +2075,7 @@ exports[`render textInverted negative color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: transparent;
   background: var(--pbl-theme-colors-negative-dark);
 }
 
@@ -2081,7 +2139,10 @@ exports[`render textInverted plain color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-common-white);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -2099,6 +2160,7 @@ exports[`render textInverted plain color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-common-white);
+  border-color: transparent;
   background: var(--pbl-theme-colors-gray-800);
 }
 
@@ -2162,7 +2224,10 @@ exports[`render textInverted positive color button 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: inherit;
   color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: transparent;
+  background: transparent;
 }
 
 .c0:enabled {
@@ -2180,6 +2245,7 @@ exports[`render textInverted positive color button 1`] = `
 
 .c0:hover:enabled {
   color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: transparent;
   background: var(--pbl-theme-colors-positive-dark);
 }
 

@@ -8,7 +8,7 @@ export interface ButtonBaseProps extends LayoutBoxProps {
   onClick?: () => void;
 }
 
-export const buttonBaseStyles = [
+export const buttonBaseStyles: any = [
   (props) => ({
     ...baseStyle,
     display: 'inline-flex',
@@ -31,5 +31,5 @@ export const buttonBaseStyles = [
       cursor: 'normal',
     },
   }),
-  layoutInterpolationFn,
+  ({ size, ...props }) => layoutInterpolationFn(props),
 ];
