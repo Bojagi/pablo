@@ -28,7 +28,7 @@ jobs:
     - run: |
         export VERSION_SHOULD_MATCH=${{ github.event.inputs.version_should_match }}
         export RELEASE_VERSION=$(node ./scripts/getDraftReleaseVersion)
-        yarn run publish
+        yarn run publish-script
         node ./scripts/publishDraftRelease
       name: 'Publish'
       env:

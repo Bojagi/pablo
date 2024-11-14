@@ -20,7 +20,7 @@
     "build:esm": "BABEL_ENV=esm node $PWD/scripts/build.js esm",
     "build:types": "tsc -p tsconfig.build.json",
     "build:copy-files": "cp package.json build/package.json && cp README.md build/README.md",
-    "publish": "$PWD/scripts/publish.sh",
+    "publish-script": "$PWD/scripts/publish.sh",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:size": "size-limit",
