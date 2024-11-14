@@ -10,7 +10,7 @@ export interface SidebarNavItemProps extends ButtonBaseProps {
   children: React.ReactNode;
 }
 
-const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' })<SidebarNavItemProps>`
+const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' } as any)<SidebarNavItemProps>`
   ${buttonBaseStyles}
   display: flex;
   margin: ${getComponentStyle('sidebarNav.item.marginY')} 0;

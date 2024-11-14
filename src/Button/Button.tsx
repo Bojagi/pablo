@@ -27,6 +27,7 @@ export interface InnerButtonProps extends ButtonBaseProps, BaseProps<ButtonStyle
   disabled?: boolean;
   className?: string;
   cssStyles?: CssFunctionReturn;
+  ref?: React.Ref<any>;
 }
 
 export type ButtonProps<C extends React.ElementType> = InnerButtonProps &
@@ -63,6 +64,7 @@ interface IconBoxProps {
   size: ButtonSize;
   marginSide: 'left' | 'right';
   cssStyles?: CssFunctionReturn;
+  children?: React.ReactNode;
 }
 
 const IconBox = styled<IconBoxProps>('div')((props) => ({

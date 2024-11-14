@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  CSSObject,
-  FlattenInterpolation,
-  FlattenSimpleInterpolation,
-  InterpolationFunction,
-} from 'styled-components';
+import { CSSObject, Interpolation } from 'styled-components';
 import { ButtonStyles } from '../Button/styles';
 import { CardStyles } from '../Card/styles';
 import { SidebarNavStyles } from '../SidebarNav/styles';
@@ -30,12 +25,7 @@ import { ToastCardStyles } from '../ToastCard/styles';
 import { ImageStyles } from '../Image/styles';
 import { NativeSelectStyles } from '../NativeSelect/styles';
 
-export type Style =
-  | string
-  | CSSObject
-  | FlattenInterpolation<any>
-  | FlattenSimpleInterpolation
-  | InterpolationFunction<any>;
+export type Style = string | CSSObject | Interpolation<any>;
 export interface PabloTheme {
   space: Spacing;
   colors: Colors;

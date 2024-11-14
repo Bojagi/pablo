@@ -6,7 +6,7 @@ import { useForwardRef } from '../utils/useForwardRef';
 import { useMountedRef } from '../utils/useMountedRef';
 
 export interface InnerInOutAnimationProps {
-  state: TransitionStatus;
+  state?: TransitionStatus;
   duration: number;
   selfWidth?: number;
   selfHeight?: number;

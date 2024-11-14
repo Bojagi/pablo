@@ -1,4 +1,4 @@
-import { css, FlattenInterpolation } from 'styled-components';
+import { css, Interpolation } from 'styled-components';
 import {
   createInOutAnimation,
   InnerInOutAnimationProps,
@@ -25,7 +25,7 @@ const stackAnimationExit = css`
   opacity: 0;
   margin-top: ${getMarginTop}px;
   transform: translateY(-50%);
-` as FlattenInterpolation<any>;
+` as Interpolation<any>;
 
 export interface StackAnimationProps extends InOutAnimationProps {}
 

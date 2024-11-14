@@ -1,4 +1,4 @@
-import { css, FlattenInterpolation } from 'styled-components';
+import { css, Interpolation } from 'styled-components';
 import { createInOutAnimation, InnerInOutAnimationProps } from './InOutAnimation';
 
 const noAnimationBase = css<InnerInOutAnimationProps>``;
@@ -7,7 +7,7 @@ const noAnimationEnter = css``;
 
 const noAnimationExit = css`
   visibility: hidden;
-` as FlattenInterpolation<any>;
+` as Interpolation<any>;
 
 export const NoAnimation = createInOutAnimation({
   baseStyles: noAnimationBase,
