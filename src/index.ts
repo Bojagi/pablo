@@ -13,6 +13,7 @@ export * from './ClickOutside';
 export * from './Hide';
 export * from './Menu';
 export * from './Modal';
+export * from './NativeSelect';
 export * from './Popover';
 export * from './PopoverArrow';
 export * from './Portal';
