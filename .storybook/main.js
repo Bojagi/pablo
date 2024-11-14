@@ -1,4 +1,5 @@
 module.exports = {
+  framework: '@storybook/react-vite',
   "stories": [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"

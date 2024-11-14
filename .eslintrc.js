@@ -3,7 +3,7 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['airbnb-base', 'prettier', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: 'packages/*/tsconfig.json',
