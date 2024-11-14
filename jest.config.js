@@ -16,7 +16,7 @@ const styleFiles = fs
   .map((file) => path.join(__dirname, 'src', file, 'styles.ts'));
 
 const config = {
-  preset: 'ts-jest',
+  // preset: 'ts-jest',
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/index.ts', '!**/*.stories.tsx'],
   testPathIgnorePatterns: ['/node_modules/', '/build/'],
   setupFilesAfterEnv: ['<rootDir>/jestSetup.ts', ...styleFiles],

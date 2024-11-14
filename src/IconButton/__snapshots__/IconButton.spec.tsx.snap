@@ -23,7 +23,7 @@ exports[`Render large icon button with correct styles 1`] = `
   width: 36px;
   height: 36px;
   transition: transform 0.2s;
-  transform: scale(       1     );
+  transform: scale( 1 );
 }
 
 .c0:enabled {
@@ -79,7 +79,7 @@ exports[`Render medium icon button with correct styles 1`] = `
   width: 28px;
   height: 28px;
   transition: transform 0.2s;
-  transform: scale(       1     );
+  transform: scale( 1 );
 }
 
 .c0:enabled {
@@ -135,7 +135,7 @@ exports[`Render small icon button with correct styles 1`] = `
   width: 20px;
   height: 20px;
   transition: transform 0.2s;
-  transform: scale(       1     );
+  transform: scale( 1 );
 }
 
 .c0:enabled {

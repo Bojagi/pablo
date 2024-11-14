@@ -54,19 +54,16 @@ exports[`Render closed modal with just a content element 1`] = `
   >
     <div
       class="c0"
-      css=","
       data-testid="pbl-modal-backdrop"
     >
       <div
         class="c1"
-        css=","
         data-testid="pbl-modal-area"
         maxwidth="medium"
       >
         <div
           aria-modal="true"
           class="c2"
-          css=","
           data-testid="pbl-modal-box"
         >
           <div>
@@ -104,7 +101,6 @@ exports[`Render with additional panes 1`] = `
 
 <div
   class="c0"
-  css=","
   data-testid="pbl-modal-area"
   maxwidth="medium"
   open=""
@@ -112,7 +108,6 @@ exports[`Render with additional panes 1`] = `
   <div
     aria-modal="true"
     class="c1"
-    css=","
     data-testid="pbl-modal-box"
   >
     <div>
@@ -121,12 +116,10 @@ exports[`Render with additional panes 1`] = `
   </div>
   <div
     class="c2"
-    css=","
     data-testid="pbl-modal-pane"
   >
     <div
       class="c1"
-      css=","
       data-testid="pbl-modal-pane-box"
     >
       <div>
@@ -136,12 +129,10 @@ exports[`Render with additional panes 1`] = `
   </div>
   <div
     class="c2"
-    css=","
     data-testid="pbl-modal-pane"
   >
     <div
       class="c1"
-      css=","
       data-testid="pbl-modal-pane-box"
     >
       <div>
@@ -151,12 +142,10 @@ exports[`Render with additional panes 1`] = `
   </div>
   <div
     class="c2"
-    css=","
     data-testid="pbl-modal-pane"
   >
     <div
       class="c1"
-      css=","
       data-testid="pbl-modal-pane-box"
     >
       <div>
@@ -196,7 +185,6 @@ exports[`Render with title 1`] = `
 <div
   aria-modal="true"
   class="c0"
-  css=","
   data-testid="pbl-modal-box"
 >
   <div
@@ -248,7 +236,6 @@ exports[`Render with title and topRightItem 1`] = `
 <div
   aria-modal="true"
   class="c0"
-  css=","
   data-testid="pbl-modal-box"
 >
   <div
@@ -292,7 +279,6 @@ exports[`Render with topRightItem 1`] = `
 <div
   aria-modal="true"
   class="c0"
-  css=","
   data-testid="pbl-modal-box"
 >
   <div

@@ -30,7 +30,6 @@ exports[`Render without value 1`] = `
 <div>
   <div
     class="c0"
-    css=","
   >
     <div
       class="c1"
@@ -102,7 +101,6 @@ exports[`Show error when an error message is given 1`] = `
 <div>
   <div
     class="c0"
-    css=","
   >
     <div
       class="c1"
@@ -189,7 +187,6 @@ exports[`Show infotext when available 1`] = `
 <div>
   <div
     class="c0"
-    css=","
   >
     <div
       class="c1"
@@ -275,7 +272,6 @@ exports[`Show label when available 1`] = `
 <div>
   <div
     class="c0"
-    css=","
   >
     <label
       data-testid="pbl-textArea-label"

@@ -79,17 +79,12 @@ exports[`type error Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0>* {
+.c1>* {
   display: block;
 }
 
 <div
-  class="c0"
-  css="
-  & > * {
-    display: block;
-  }
-,,"
+  class="c0 c1"
   data-testid="pbl-toastcard-iconbox"
   fillcolor="negative.main"
   mr="5"
@@ -107,11 +102,7 @@ exports[`type error Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2>* {
-  display: block;
-}
-
-.c3 {
+.c4 {
   box-sizing: border-box;
   flex-grow: 1;
 }
@@ -122,12 +113,12 @@ exports[`type error Render toast card with only title 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: flex;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -149,6 +140,10 @@ exports[`type error Render toast card with only title 1`] = `
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.c3>* {
+  display: block;
+}
+
 <div
   aria-aria-describedby=":rb:-title"
   aria-aria-labelledby=":rb:-title"
@@ -161,12 +156,7 @@ exports[`type error Render toast card with only title 1`] = `
     class="c1"
   >
     <div
-      class="c2"
-      css="
-  & > * {
-    display: block;
-  }
-,,"
+      class="c2 c3"
       data-testid="pbl-toastcard-iconbox"
       fillcolor="negative.main"
       mr="5"
@@ -187,14 +177,14 @@ exports[`type error Render toast card with only title 1`] = `
       </svg>
     </div>
     <div
-      class="c3"
+      class="c4"
       flexgrow="1"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <h4
-          class="c5"
+          class="c6"
           customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
           flexgrow="1"
@@ -215,17 +205,12 @@ exports[`type info Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0>* {
+.c1>* {
   display: block;
 }
 
 <div
-  class="c0"
-  css="
-  & > * {
-    display: block;
-  }
-,,"
+  class="c0 c1"
   data-testid="pbl-toastcard-iconbox"
   fillcolor="common.white"
   mr="5"
@@ -243,11 +228,7 @@ exports[`type info Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2>* {
-  display: block;
-}
-
-.c3 {
+.c4 {
   box-sizing: border-box;
   flex-grow: 1;
 }
@@ -258,12 +239,12 @@ exports[`type info Render toast card with only title 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: flex;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -285,6 +266,10 @@ exports[`type info Render toast card with only title 1`] = `
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.c3>* {
+  display: block;
+}
+
 <div
   aria-aria-describedby=":r5:-title"
   aria-aria-labelledby=":r5:-title"
@@ -297,12 +282,7 @@ exports[`type info Render toast card with only title 1`] = `
     class="c1"
   >
     <div
-      class="c2"
-      css="
-  & > * {
-    display: block;
-  }
-,,"
+      class="c2 c3"
       data-testid="pbl-toastcard-iconbox"
       fillcolor="common.white"
       mr="5"
@@ -323,14 +303,14 @@ exports[`type info Render toast card with only title 1`] = `
       </svg>
     </div>
     <div
-      class="c3"
+      class="c4"
       flexgrow="1"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <h4
-          class="c5"
+          class="c6"
           customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
           flexgrow="1"
@@ -351,17 +331,12 @@ exports[`type success Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0>* {
+.c1>* {
   display: block;
 }
 
 <div
-  class="c0"
-  css="
-  & > * {
-    display: block;
-  }
-,,"
+  class="c0 c1"
   data-testid="pbl-toastcard-iconbox"
   fillcolor="positive.main"
   mr="5"
@@ -379,11 +354,7 @@ exports[`type success Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2>* {
-  display: block;
-}
-
-.c3 {
+.c4 {
   box-sizing: border-box;
   flex-grow: 1;
 }
@@ -394,12 +365,12 @@ exports[`type success Render toast card with only title 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: flex;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -421,6 +392,10 @@ exports[`type success Render toast card with only title 1`] = `
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.c3>* {
+  display: block;
+}
+
 <div
   aria-aria-describedby=":r7:-title"
   aria-aria-labelledby=":r7:-title"
@@ -433,12 +408,7 @@ exports[`type success Render toast card with only title 1`] = `
     class="c1"
   >
     <div
-      class="c2"
-      css="
-  & > * {
-    display: block;
-  }
-,,"
+      class="c2 c3"
       data-testid="pbl-toastcard-iconbox"
       fillcolor="positive.main"
       mr="5"
@@ -459,14 +429,14 @@ exports[`type success Render toast card with only title 1`] = `
       </svg>
     </div>
     <div
-      class="c3"
+      class="c4"
       flexgrow="1"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <h4
-          class="c5"
+          class="c6"
           customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
           flexgrow="1"
@@ -487,17 +457,12 @@ exports[`type undefined Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0>* {
+.c1>* {
   display: block;
 }
 
 <div
-  class="c0"
-  css="
-  & > * {
-    display: block;
-  }
-,,"
+  class="c0 c1"
   data-testid="pbl-toastcard-iconbox"
   fillcolor="common.white"
   mr="5"
@@ -515,11 +480,7 @@ exports[`type undefined Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2>* {
-  display: block;
-}
-
-.c3 {
+.c4 {
   box-sizing: border-box;
   flex-grow: 1;
 }
@@ -530,12 +491,12 @@ exports[`type undefined Render toast card with only title 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: flex;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -557,6 +518,10 @@ exports[`type undefined Render toast card with only title 1`] = `
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.c3>* {
+  display: block;
+}
+
 <div
   aria-aria-describedby=":r3:-title"
   aria-aria-labelledby=":r3:-title"
@@ -569,12 +534,7 @@ exports[`type undefined Render toast card with only title 1`] = `
     class="c1"
   >
     <div
-      class="c2"
-      css="
-  & > * {
-    display: block;
-  }
-,,"
+      class="c2 c3"
       data-testid="pbl-toastcard-iconbox"
       fillcolor="common.white"
       mr="5"
@@ -584,14 +544,14 @@ exports[`type undefined Render toast card with only title 1`] = `
       </div>
     </div>
     <div
-      class="c3"
+      class="c4"
       flexgrow="1"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <h4
-          class="c5"
+          class="c6"
           customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
           flexgrow="1"
@@ -612,17 +572,12 @@ exports[`type unknown Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0>* {
+.c1>* {
   display: block;
 }
 
 <div
-  class="c0"
-  css="
-  & > * {
-    display: block;
-  }
-,,"
+  class="c0 c1"
   data-testid="pbl-toastcard-iconbox"
   fillcolor="common.white"
   mr="5"
@@ -640,11 +595,7 @@ exports[`type unknown Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2>* {
-  display: block;
-}
-
-.c3 {
+.c4 {
   box-sizing: border-box;
   flex-grow: 1;
 }
@@ -655,12 +606,12 @@ exports[`type unknown Render toast card with only title 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: flex;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -682,6 +633,10 @@ exports[`type unknown Render toast card with only title 1`] = `
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.c3>* {
+  display: block;
+}
+
 <div
   aria-aria-describedby=":rd:-title"
   aria-aria-labelledby=":rd:-title"
@@ -694,12 +649,7 @@ exports[`type unknown Render toast card with only title 1`] = `
     class="c1"
   >
     <div
-      class="c2"
-      css="
-  & > * {
-    display: block;
-  }
-,,"
+      class="c2 c3"
       data-testid="pbl-toastcard-iconbox"
       fillcolor="common.white"
       mr="5"
@@ -709,14 +659,14 @@ exports[`type unknown Render toast card with only title 1`] = `
       </div>
     </div>
     <div
-      class="c3"
+      class="c4"
       flexgrow="1"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <h4
-          class="c5"
+          class="c6"
           customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
           flexgrow="1"
@@ -737,17 +687,12 @@ exports[`type warning Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0>* {
+.c1>* {
   display: block;
 }
 
 <div
-  class="c0"
-  css="
-  & > * {
-    display: block;
-  }
-,,"
+  class="c0 c1"
   data-testid="pbl-toastcard-iconbox"
   fillcolor="neutral.main"
   mr="5"
@@ -765,11 +710,7 @@ exports[`type warning Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2>* {
-  display: block;
-}
-
-.c3 {
+.c4 {
   box-sizing: border-box;
   flex-grow: 1;
 }
@@ -780,12 +721,12 @@ exports[`type warning Render toast card with only title 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: flex;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -807,6 +748,10 @@ exports[`type warning Render toast card with only title 1`] = `
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.c3>* {
+  display: block;
+}
+
 <div
   aria-aria-describedby=":r9:-title"
   aria-aria-labelledby=":r9:-title"
@@ -819,12 +764,7 @@ exports[`type warning Render toast card with only title 1`] = `
     class="c1"
   >
     <div
-      class="c2"
-      css="
-  & > * {
-    display: block;
-  }
-,,"
+      class="c2 c3"
       data-testid="pbl-toastcard-iconbox"
       fillcolor="neutral.main"
       mr="5"
@@ -845,14 +785,14 @@ exports[`type warning Render toast card with only title 1`] = `
       </svg>
     </div>
     <div
-      class="c3"
+      class="c4"
       flexgrow="1"
     >
       <div
-        class="c4"
+        class="c5"
       >
         <h4
-          class="c5"
+          class="c6"
           customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
           flexgrow="1"
