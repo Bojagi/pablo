@@ -58,10 +58,10 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
       left: leftArrowStyles,
     })}
 
-    border-left: ${getSpacing(5)} solid transparent;
-    border-right: ${getSpacing(5)} solid transparent;
-    border-bottom: calc(2 * ${getSpacing(5)} * 0.866) solid black;
-    border-top: ${getSpacing(5)} solid transparent;
+    border-left: ${getSpacing(5) as any} solid transparent;
+    border-right: ${getSpacing(5) as any} solid transparent;
+    border-bottom: calc(2 * ${getSpacing(5) as any} * 0.866) solid black;
+    border-top: ${getSpacing(5) as any} solid transparent;
     display: inline-block;
 
     ${getCustomStyles('tooltip.styles', 'arrow')}
@@ -103,7 +103,7 @@ export function Tooltip({
       animationProps={{
         side,
         reverse: true,
-        duration: 400,
+        duration: 0,
       }}
       content={
         <TooltipPopover

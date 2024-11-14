@@ -3,13 +3,7 @@
 exports[`Render switch checked 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -37,7 +31,6 @@ exports[`Render switch checked 1`] = `
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -45,19 +38,17 @@ exports[`Render switch checked 1`] = `
   box-sizing: border-box;
   width: 18px;
   height: 18px;
-  -webkit-transform: translateX( 18px );
-  -ms-transform: translateX( 18px );
   transform: translateX( 18px );
   border-radius: 50%;
-  -webkit-transition: background-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out;
-  -webkit-transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
 <div>
   <div
+    alignitems="center"
     class="c0"
+    role="switch"
   >
     <div
       class="c1"
@@ -73,7 +64,6 @@ exports[`Render switch checked 1`] = `
         data-testid="pbl-switch-input"
         id="custom-id"
         type="checkbox"
-        value=""
       />
     </div>
   </div>
@@ -83,13 +73,7 @@ exports[`Render switch checked 1`] = `
 exports[`Render switch unchecked 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -117,7 +101,6 @@ exports[`Render switch unchecked 1`] = `
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -125,19 +108,17 @@ exports[`Render switch unchecked 1`] = `
   box-sizing: border-box;
   width: 18px;
   height: 18px;
-  -webkit-transform: translateX( 0 );
-  -ms-transform: translateX( 0 );
   transform: translateX( 0 );
   border-radius: 50%;
-  -webkit-transition: background-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out;
-  -webkit-transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
   background-color: var(--pbl-theme-colors-gray-500);
 }
 
 <div>
   <div
+    alignitems="center"
     class="c0"
+    role="switch"
   >
     <div
       class="c1"
@@ -152,7 +133,6 @@ exports[`Render switch unchecked 1`] = `
         data-testid="pbl-switch-input"
         id="custom-id"
         type="checkbox"
-        value=""
       />
     </div>
   </div>
@@ -175,8 +155,11 @@ exports[`Render switch with label 1`] = `
 
 <label
   class="c0"
+  customstyles="[object Object]"
   data-testid="pbl-switch-label"
   for="custom-id"
+  mb="0"
+  ml="4"
 >
   I am a 
   <strong>

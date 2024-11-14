@@ -35,14 +35,14 @@ test.each([
     });
 
     // Icon
-    expect(buttonNode).toHaveStyleRule('transform', 'scale( 1 )', {
-      modifier: '> *',
+    expect(buttonNode).toHaveStyleRule('transform', /scale\(\s*1\s*\)/, {
+      modifier: '&>*',
     });
     expect(buttonNode).toHaveStyleRule('width', expectedIconSize, {
-      modifier: '> *',
+      modifier: '&>*',
     });
     expect(buttonNode).toHaveStyleRule('height', expectedIconSize, {
-      modifier: '> *',
+      modifier: '&>*',
     });
   }
 );
@@ -55,8 +55,8 @@ test('Render active with correct styles', () => {
   expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.white);
 
   // Icon
-  expect(buttonNode).toHaveStyleRule('transform', 'scale( 0.833333333 )', {
-    modifier: '> *',
+  expect(buttonNode).toHaveStyleRule('transform', /scale\(\s*0.833333333\s*\)/, {
+    modifier: '&>*',
   });
 });
 

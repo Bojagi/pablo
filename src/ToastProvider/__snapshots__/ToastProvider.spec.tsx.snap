@@ -6,14 +6,9 @@ exports[`Render toast stack on the bottom-right by default 1`] = `
   padding: 12px;
   width: 400px;
   position: fixed;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   z-index: 1100;
   bottom: 0;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
   right: 0;
 }
@@ -21,5 +16,6 @@ exports[`Render toast stack on the bottom-right by default 1`] = `
 <div
   class="c0"
   data-testid="pbl-toaststack"
+  side="bottom-right"
 />
 `;

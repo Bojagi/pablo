@@ -7,27 +7,17 @@ exports[`Render without value 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 300px;
 }
 
 .c2 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
   padding: 6px 8px;
@@ -42,15 +32,18 @@ exports[`Render without value 1`] = `
   >
     <div
       class="c1"
+      cssstyles=","
       data-testid="pbl-input-wrapper"
       name="input"
+      variant="filled"
       width="300"
     >
       <input
+        aria-invalid="false"
         class="c2"
         data-testid="pbl-input"
         id="custom-id"
-        value=""
+        variant="filled"
       />
     </div>
   </div>
@@ -77,18 +70,11 @@ exports[`Show error when an error message is given 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   border-color: var(--pbl-theme-colors-negative-main);
   width: 300px;
@@ -100,9 +86,6 @@ exports[`Show error when an error message is given 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
   padding: 6px 8px;
@@ -117,20 +100,32 @@ exports[`Show error when an error message is given 1`] = `
   >
     <div
       class="c1"
+      cssstyles=","
       data-testid="pbl-input-wrapper"
+      error="[object Object]"
       name="input"
+      variant="filled"
       width="300"
     >
       <input
+        aria-errormessage="custom-id-error"
+        aria-invalid="true"
         class="c2"
         data-testid="pbl-input"
+        error="[object Object]"
         id="custom-id"
         value="some"
+        variant="filled"
       />
     </div>
     <p
+      aria-live="polite"
       class="c3"
+      customstyles="[object Object]"
       data-testid="pbl-input-infotext"
+      id="custom-id-error"
+      mt="2"
+      textcolor="negative.main"
     >
       Something 
       <strong>
@@ -162,27 +157,17 @@ exports[`Show infotext when available 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 300px;
 }
 
 .c2 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
   padding: 6px 8px;
@@ -197,20 +182,32 @@ exports[`Show infotext when available 1`] = `
   >
     <div
       class="c1"
+      cssstyles=","
       data-testid="pbl-input-wrapper"
+      infotext="[object Object]"
       name="input"
+      variant="filled"
       width="300"
     >
       <input
+        aria-describedby="custom-id-info"
+        aria-invalid="false"
         class="c2"
         data-testid="pbl-input"
         id="custom-id"
+        infotext="[object Object]"
         value="some"
+        variant="filled"
       />
     </div>
     <p
+      aria-live="polite"
       class="c3"
+      customstyles="[object Object]"
       data-testid="pbl-input-infotext"
+      id="custom-id-info"
+      mt="2"
+      textcolor="text.info"
     >
       Something that 
       <strong>
@@ -241,27 +238,17 @@ exports[`Show label when available 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 300px;
 }
 
 .c3 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
   padding: 6px 8px;
@@ -280,6 +267,8 @@ exports[`Show label when available 1`] = `
     >
       <p
         class="c1"
+        customstyles="[object Object]"
+        mb="3"
       >
         Your 
         <strong>
@@ -289,15 +278,19 @@ exports[`Show label when available 1`] = `
     </label>
     <div
       class="c2"
+      cssstyles=","
       data-testid="pbl-input-wrapper"
       name="input"
+      variant="filled"
       width="300"
     >
       <input
+        aria-invalid="false"
         class="c3"
         data-testid="pbl-input"
         id="custom-id"
         value="some"
+        variant="filled"
       />
     </div>
   </div>

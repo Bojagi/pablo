@@ -11,36 +11,20 @@ exports[`Render toolbar 1`] = `
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-  -webkit-transition: background-color 0.2s,color 0.2s;
   transition: background-color 0.2s,color 0.2s;
   border-radius: 6px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: 4px;
   margin-right: 4px;
 }
 
-.c1 > * {
+.c1>* {
   width: 20px;
   height: 20px;
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
   transition: transform 0.2s;
-  -webkit-transform: scale( 1 );
-  -ms-transform: scale( 1 );
   transform: scale( 1 );
 }
 
@@ -65,15 +49,9 @@ exports[`Render toolbar 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 -4px;
   height: calc(24px + 2 * 4px);
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -81,69 +59,95 @@ exports[`Render toolbar 1`] = `
   box-sizing: border-box;
   margin: 0 4px;
   width: 1px;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
   align-self: stretch;
   background-color: var(--pbl-theme-colors-borders-light);
 }
 
 <div>
   <div
+    aria-orientation="horizontal"
     class="c0"
+    role="toolbar"
   >
     <button
+      aria-pressed="false"
       class="c1"
       color="plain"
+      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
+      mx="4px"
+      role="toolbar"
     >
       <div>
         bold-icon
       </div>
     </button>
     <button
+      aria-pressed="false"
       class="c1"
       color="plain"
+      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
+      mx="4px"
+      role="toolbar"
     >
       <div>
         underline-icon
       </div>
     </button>
     <button
+      aria-pressed="false"
       class="c1"
       color="plain"
+      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
+      mx="4px"
+      role="toolbar"
     >
       <div>
         italic-icon
       </div>
     </button>
     <div
+      aria-orientation="vertical"
       class="c2"
+      role="separator"
     />
     <button
+      aria-pressed="false"
       class="c1"
       color="plain"
+      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
+      mx="4px"
+      role="toolbar"
     >
       <div>
         edit-icon
       </div>
     </button>
     <button
+      aria-pressed="false"
       class="c1"
       color="plain"
+      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
+      mx="4px"
+      role="toolbar"
     >
       <div>
         crop-icon
       </div>
     </button>
     <button
+      aria-pressed="false"
       class="c1"
       color="plain"
+      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
       disabled=""
+      mx="4px"
+      role="toolbar"
     >
       <div>
         disabled-icon

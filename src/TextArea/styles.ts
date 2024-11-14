@@ -9,5 +9,3 @@ export const textareaStyles: TextAreaStyles = {
   defaultWidth: 500,
   defaultRows: 3,
 };
-
-console.log('textareaStyles', textareaStyles);

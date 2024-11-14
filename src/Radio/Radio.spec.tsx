@@ -107,10 +107,7 @@ test('Use generated id when no "id" prop is set', () => {
     id: undefined,
   });
 
-  expect(getByTestId('pbl-radio-input')).toHaveAttribute(
-    'id',
-    expect.stringContaining('pbl-radio-')
-  );
+  expect(getByTestId('pbl-radio-input')).toHaveAttribute('id', expect.stringMatching(/:.*?:/));
 });
 
 test('Render without onChange function ', () => {

@@ -20,7 +20,7 @@ test('Get media query with styles when media query was found', () => {
     },
   } as any) as any;
   expect(output.map((s) => s.trim()).join(' ')).toEqual(
-    '@media only screen and (min-width: var(--pbl-theme-breakpoints-md)) { background-color: red; }'
+    '@media only screen and (min-width: var(--pbl-theme-breakpoints-md)) { background-color:red; }'
   );
 });
 
@@ -43,7 +43,7 @@ test('Get media below query with styles when media query was found', () => {
     },
   } as any) as any;
   expect(output.map((s) => s.trim()).join(' ')).toEqual(
-    '@media only screen and (max-width: calc(var(--pbl-theme-breakpoints-md) - 1px)) { background-color: red; }'
+    '@media only screen and (max-width: calc(var(--pbl-theme-breakpoints-md) - 1px)) { background-color:red; }'
   );
 });
 

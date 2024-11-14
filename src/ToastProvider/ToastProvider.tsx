@@ -38,6 +38,8 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
 
   const removeMessage = React.useCallback(
     (id: string) => {
+      console.log('xxxxxx');
+
       if (mountedRef.current) {
         dispatchMessage({
           type: 'remove',

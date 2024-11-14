@@ -14,30 +14,16 @@ exports[`render button with end icon 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
@@ -71,23 +57,14 @@ exports[`render button with end icon 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-left: 8px;
 }
 
 .c2,
-.c2 > * {
+.c2>* {
   width: 20px;
   height: 20px;
 }
@@ -96,7 +73,9 @@ exports[`render button with end icon 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primary"
   >
     <span
       class="c1"
@@ -105,7 +84,9 @@ exports[`render button with end icon 1`] = `
     </span>
     <div
       class="c2"
+      cssstyles=",,,"
       data-testid="pbl-button-icon"
+      marginside="left"
     >
       <div>
         myIcon
@@ -129,30 +110,16 @@ exports[`render button with start icon 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
@@ -186,23 +153,14 @@ exports[`render button with start icon 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-right: 8px;
 }
 
 .c1,
-.c1 > * {
+.c1>* {
   width: 20px;
   height: 20px;
 }
@@ -211,11 +169,15 @@ exports[`render button with start icon 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primary"
   >
     <div
       class="c1"
+      cssstyles=",,,"
       data-testid="pbl-button-icon"
+      marginside="right"
     >
       <div>
         myIcon
@@ -244,30 +206,16 @@ exports[`render primary brand color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
@@ -304,7 +252,9 @@ exports[`render primary brand color button 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primary"
   >
     <span
       class="c1"
@@ -329,30 +279,16 @@ exports[`render primary negative color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-negative-contrastText);
@@ -389,7 +325,9 @@ exports[`render primary negative color button 1`] = `
   <button
     class="c0"
     color="negative"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primary"
   >
     <span
       class="c1"
@@ -414,30 +352,16 @@ exports[`render primary plain color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-common-black);
@@ -474,7 +398,9 @@ exports[`render primary plain color button 1`] = `
   <button
     class="c0"
     color="plain"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primary"
   >
     <span
       class="c1"
@@ -499,30 +425,16 @@ exports[`render primary positive color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-positive-contrastText);
@@ -559,7 +471,9 @@ exports[`render primary positive color button 1`] = `
   <button
     class="c0"
     color="positive"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primary"
   >
     <span
       class="c1"
@@ -584,30 +498,16 @@ exports[`render primaryInverted brand color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-main);
@@ -644,7 +544,9 @@ exports[`render primaryInverted brand color button 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primaryInverted"
   >
     <span
       class="c1"
@@ -669,30 +571,16 @@ exports[`render primaryInverted negative color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-negative-main);
@@ -729,7 +617,9 @@ exports[`render primaryInverted negative color button 1`] = `
   <button
     class="c0"
     color="negative"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primaryInverted"
   >
     <span
       class="c1"
@@ -754,30 +644,16 @@ exports[`render primaryInverted plain color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-common-black);
@@ -814,7 +690,9 @@ exports[`render primaryInverted plain color button 1`] = `
   <button
     class="c0"
     color="plain"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primaryInverted"
   >
     <span
       class="c1"
@@ -839,30 +717,16 @@ exports[`render primaryInverted positive color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-positive-main);
@@ -899,7 +763,9 @@ exports[`render primaryInverted positive color button 1`] = `
   <button
     class="c0"
     color="positive"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="primaryInverted"
   >
     <span
       class="c1"
@@ -924,30 +790,16 @@ exports[`render secondary brand color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-dark);
@@ -984,7 +836,9 @@ exports[`render secondary brand color button 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondary"
   >
     <span
       class="c1"
@@ -1009,30 +863,16 @@ exports[`render secondary negative color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-negative-dark);
@@ -1069,7 +909,9 @@ exports[`render secondary negative color button 1`] = `
   <button
     class="c0"
     color="negative"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondary"
   >
     <span
       class="c1"
@@ -1094,30 +936,16 @@ exports[`render secondary plain color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-common-black);
@@ -1154,7 +982,9 @@ exports[`render secondary plain color button 1`] = `
   <button
     class="c0"
     color="plain"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondary"
   >
     <span
       class="c1"
@@ -1179,30 +1009,16 @@ exports[`render secondary positive color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-positive-dark);
@@ -1239,7 +1055,9 @@ exports[`render secondary positive color button 1`] = `
   <button
     class="c0"
     color="positive"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondary"
   >
     <span
       class="c1"
@@ -1264,30 +1082,16 @@ exports[`render secondaryInverted brand color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
@@ -1324,7 +1128,9 @@ exports[`render secondaryInverted brand color button 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondaryInverted"
   >
     <span
       class="c1"
@@ -1349,30 +1155,16 @@ exports[`render secondaryInverted negative color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-negative-contrastText);
@@ -1409,7 +1201,9 @@ exports[`render secondaryInverted negative color button 1`] = `
   <button
     class="c0"
     color="negative"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondaryInverted"
   >
     <span
       class="c1"
@@ -1434,30 +1228,16 @@ exports[`render secondaryInverted plain color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-common-white);
@@ -1494,7 +1274,9 @@ exports[`render secondaryInverted plain color button 1`] = `
   <button
     class="c0"
     color="plain"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondaryInverted"
   >
     <span
       class="c1"
@@ -1519,30 +1301,16 @@ exports[`render secondaryInverted positive color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-positive-contrastText);
@@ -1579,7 +1347,9 @@ exports[`render secondaryInverted positive color button 1`] = `
   <button
     class="c0"
     color="positive"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="secondaryInverted"
   >
     <span
       class="c1"
@@ -1604,30 +1374,16 @@ exports[`render text brand color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-dark);
@@ -1664,7 +1420,9 @@ exports[`render text brand color button 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="text"
   >
     <span
       class="c1"
@@ -1689,30 +1447,16 @@ exports[`render text negative color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-negative-dark);
@@ -1749,7 +1493,9 @@ exports[`render text negative color button 1`] = `
   <button
     class="c0"
     color="negative"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="text"
   >
     <span
       class="c1"
@@ -1774,30 +1520,16 @@ exports[`render text plain color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-common-black);
@@ -1834,7 +1566,9 @@ exports[`render text plain color button 1`] = `
   <button
     class="c0"
     color="plain"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="text"
   >
     <span
       class="c1"
@@ -1859,30 +1593,16 @@ exports[`render text positive color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-positive-dark);
@@ -1919,7 +1639,9 @@ exports[`render text positive color button 1`] = `
   <button
     class="c0"
     color="positive"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="text"
   >
     <span
       class="c1"
@@ -1944,30 +1666,16 @@ exports[`render textInverted brand color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
@@ -2004,7 +1712,9 @@ exports[`render textInverted brand color button 1`] = `
   <button
     class="c0"
     color="brand"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="textInverted"
   >
     <span
       class="c1"
@@ -2029,30 +1739,16 @@ exports[`render textInverted negative color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-negative-contrastText);
@@ -2089,7 +1785,9 @@ exports[`render textInverted negative color button 1`] = `
   <button
     class="c0"
     color="negative"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="textInverted"
   >
     <span
       class="c1"
@@ -2114,30 +1812,16 @@ exports[`render textInverted plain color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-common-white);
@@ -2174,7 +1858,9 @@ exports[`render textInverted plain color button 1`] = `
   <button
     class="c0"
     color="plain"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="textInverted"
   >
     <span
       class="c1"
@@ -2199,30 +1885,16 @@ exports[`render textInverted positive color button 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-positive-contrastText);
@@ -2259,7 +1931,9 @@ exports[`render textInverted positive color button 1`] = `
   <button
     class="c0"
     color="positive"
+    cssstyles=","
     data-testid="pbl-button"
+    variant="textInverted"
   >
     <span
       class="c1"

@@ -19,19 +19,9 @@ exports[`Render closed modal with just a content element 1`] = `
   top: 0;
   overflow: scroll;
   background-color: var(--pbl-theme-colors-blackOpacity-600);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   pointer-events: none;
   opacity: 0;
@@ -39,16 +29,10 @@ exports[`Render closed modal with just a content element 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  -webkit-transform: translateY(60px);
-  -ms-transform: translateY(60px);
   transform: translateY(60px);
-  -webkit-transition: -webkit-transform 0.3s;
-  -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
   max-width: 780px;
   margin: auto;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
   padding: 24px;
 }
@@ -58,7 +42,7 @@ exports[`Render closed modal with just a content element 1`] = `
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
   padding: 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <body
@@ -75,8 +59,10 @@ exports[`Render closed modal with just a content element 1`] = `
       <div
         class="c1"
         data-testid="pbl-modal-area"
+        maxwidth="medium"
       >
         <div
+          aria-modal="true"
           class="c2"
           data-testid="pbl-modal-box"
         >
@@ -93,13 +79,9 @@ exports[`Render closed modal with just a content element 1`] = `
 exports[`Render with additional panes 1`] = `
 .c0 {
   box-sizing: border-box;
-  -webkit-transition: -webkit-transform 0.3s;
-  -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
   max-width: 780px;
   margin: auto;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
   min-height: min-content;
   padding: 24px;
 }
@@ -109,7 +91,7 @@ exports[`Render with additional panes 1`] = `
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
   padding: 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .c2 {
@@ -120,9 +102,11 @@ exports[`Render with additional panes 1`] = `
 <div
   class="c0"
   data-testid="pbl-modal-area"
+  maxwidth="medium"
   open=""
 >
   <div
+    aria-modal="true"
     class="c1"
     data-testid="pbl-modal-box"
   >
@@ -175,13 +159,7 @@ exports[`Render with additional panes 1`] = `
 exports[`Render with title 1`] = `
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -201,16 +179,18 @@ exports[`Render with title 1`] = `
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
   padding: 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-modal="true"
   class="c0"
   data-testid="pbl-modal-box"
 >
   <div
     class="c1"
     data-testid="pbl-modal-title-box"
+    justifycontent="space-between"
   >
     <h3
       class="c2"
@@ -230,13 +210,7 @@ exports[`Render with title 1`] = `
 exports[`Render with title and topRightItem 1`] = `
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -256,16 +230,18 @@ exports[`Render with title and topRightItem 1`] = `
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
   padding: 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-modal="true"
   class="c0"
   data-testid="pbl-modal-box"
 >
   <div
     class="c1"
     data-testid="pbl-modal-title-box"
+    justifycontent="space-between"
   >
     <h3
       class="c2"
@@ -288,13 +264,7 @@ exports[`Render with title and topRightItem 1`] = `
 exports[`Render with topRightItem 1`] = `
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -303,16 +273,18 @@ exports[`Render with topRightItem 1`] = `
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
   padding: 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-modal="true"
   class="c0"
   data-testid="pbl-modal-box"
 >
   <div
     class="c1"
     data-testid="pbl-modal-title-box"
+    justifycontent="space-between"
   >
     <div>
       something

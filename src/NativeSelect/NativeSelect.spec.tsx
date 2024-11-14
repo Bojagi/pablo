@@ -125,10 +125,7 @@ test('Use generated id when no "id" prop is set', () => {
     onChange: onChangeMock,
   });
 
-  expect(getByTestId('pbl-nativeSelect')).toHaveAttribute(
-    'id',
-    expect.stringContaining('pbl-nativeSelect-')
-  );
+  expect(getByTestId('pbl-nativeSelect')).toHaveAttribute('id', expect.stringMatching(/:.*?:/));
 });
 
 function renderComponent(props) {
