@@ -44,7 +44,7 @@ const AvatarImage = styled<
     circle: css`
       border-radius: 50%;
     `,
-  })}
+  }) as any}
 `;
 
 export const Avatar: FC<AvatarProps> = forwardRef<HTMLImageElement, AvatarProps>(

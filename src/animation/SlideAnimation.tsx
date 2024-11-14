@@ -1,5 +1,5 @@
 import { BasePlacement } from '@popperjs/core';
-import { css, FlattenInterpolation } from 'styled-components';
+import { css } from 'styled-components';
 import { conditionalStyles } from '../styleHelpers';
 import { createInOutAnimation, InOutAnimationProps } from './InOutAnimation';
 
@@ -15,26 +15,26 @@ const transformInterpolateFn = (axis: 'Y' | 'X', directionMultiplier: -1 | 1) =>
     : `translate${axis}(${reverseMultiplier * directionMultiplier * axisMultiplier * 25}%)`;
 };
 
-const topStyles = css`
+const topStyles = css<SlideAnimationProps>`
   transform: ${transformInterpolateFn('Y', -1)};
 `;
 
-const bottomStyles = css`
+const bottomStyles = css<SlideAnimationProps>`
   transform: ${transformInterpolateFn('Y', 1)};
 `;
 
-const rightStyles = css`
+const rightStyles = css<SlideAnimationProps>`
   transform: ${transformInterpolateFn('X', 1)};
 `;
 
-const leftStyles = css`
+const leftStyles = css<SlideAnimationProps>`
   transform: ${transformInterpolateFn('X', -1)};
 `;
 
 const stackAnimationBase: any = css<SlideAnimationProps>`
   transition: ${(props) => css`opacity ${props.duration}ms, transform ${props.duration}ms`};
   opacity: 0;
-  ${conditionalStyles('side', {
+  ${conditionalStyles('side' as any, {
     top: topStyles,
     bottom: bottomStyles,
     right: rightStyles,
@@ -47,7 +47,7 @@ const stackAnimationEnter = css`
   transform: translateY(0) translateX(0);
 `;
 
-const stackAnimationExit = css`
+const stackAnimationExit = css<SlideAnimationProps>`
   opacity: 0;
   ${conditionalStyles('side', {
     top: topStyles,
@@ -55,7 +55,7 @@ const stackAnimationExit = css`
     right: rightStyles,
     left: leftStyles,
   })}
-` as FlattenInterpolation<any>;
+`;
 
 export interface SlideAnimationProps extends InOutAnimationProps {
   side: TooltipSide;
