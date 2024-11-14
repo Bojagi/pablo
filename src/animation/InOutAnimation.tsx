@@ -1,6 +1,6 @@
 import React, { forwardRef, ReactNode, useState } from 'react';
-import Transition, { TransitionStatus } from 'react-transition-group/Transition';
-import styled, { FlattenInterpolation, FlattenSimpleInterpolation } from 'styled-components';
+import { Transition, TransitionStatus } from 'react-transition-group';
+import styled, { Interpolation } from 'styled-components';
 import useResizeObserver from 'use-resize-observer';
 import { useForwardRef } from '../utils/useForwardRef';
 import { useMountedRef } from '../utils/useMountedRef';
@@ -10,9 +10,9 @@ export interface InnerInOutAnimationProps {
   duration: number;
   selfWidth?: number;
   selfHeight?: number;
-  baseStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  enterStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  exitStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  baseStyles?: Interpolation<InnerInOutAnimationProps>;
+  enterStyles?: Interpolation<InnerInOutAnimationProps>;
+  exitStyles?: Interpolation<InnerInOutAnimationProps>;
 }
 
 export const InnerInOutAnimation = styled.div<InnerInOutAnimationProps>`
@@ -34,16 +34,16 @@ export interface InOutAnimationProps {
   visible: boolean;
   duration: number;
   onExited?: () => void;
-  baseStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  enterStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  exitStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  baseStyles?: Interpolation<InnerInOutAnimationProps>;
+  enterStyles?: Interpolation<InnerInOutAnimationProps>;
+  exitStyles?: Interpolation<InnerInOutAnimationProps>;
   children: ReactNode;
 }
 
 export interface CreateInOutAnimationOptions {
-  baseStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  enterStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
-  exitStyles?: FlattenInterpolation<InnerInOutAnimationProps> | FlattenSimpleInterpolation;
+  baseStyles?: Interpolation<InnerInOutAnimationProps>;
+  enterStyles?: Interpolation<InnerInOutAnimationProps>;
+  exitStyles?: Interpolation<InnerInOutAnimationProps>;
 }
 
 const InOutAnimation = forwardRef<HTMLDivElement, InOutAnimationProps>(

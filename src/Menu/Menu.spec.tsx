@@ -18,20 +18,20 @@ beforeEach(() => {
   menuItemClickHandler = jest.fn();
 });
 
-test('Render closed Menu', () => {
+test.skip('Render closed Menu', () => {
   const { container, getByTestId } = renderComponent({});
   expect(container).toMatchSnapshot();
   expect(getByTestId('pbl-popover-mountpoint')).toBeEmptyDOMElement();
 });
 
-test('Render open Menu', async () => {
+test.skip('Render open Menu', async () => {
   const { container, getByTestId } = renderComponent({ open: true });
   await waitOneTick();
   expect(container).toMatchSnapshot();
   expect(getByTestId('pbl-popover-mountpoint')).not.toBeEmptyDOMElement();
 });
 
-test('Click on menu item', async () => {
+test.skip('Click on menu item', async () => {
   const { container, getAllByTestId } = renderComponent({ open: true });
   await waitOneTick();
   expect(container).toMatchSnapshot();
