@@ -15,7 +15,7 @@ afterEach(cleanup);
 test('Render switch unchecked', () => {
   const { container, getByTestId } = renderComponent({ checked: false });
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('transform', 'translateX( 0 )');
+  expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('transform', /translateX\(\s*?0\s*?\)/);
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule(
     'background-color',
     themeVars.colors.gray['500']
@@ -26,7 +26,10 @@ test('Render switch unchecked', () => {
 test('Render switch checked', () => {
   const { container, getByTestId } = renderComponent({ checked: true });
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('transform', 'translateX( 18px )');
+  expect(getByTestId('pbl-switch-handle')).toHaveStyleRule(
+    'transform',
+    /translateX\(\s*?18px\s*?\)/
+  );
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule(
     'background-color',
     themeVars.colors.brand.main
@@ -113,10 +116,7 @@ test('Use generated id when no "id" prop is set', () => {
     id: undefined,
   });
 
-  expect(getByTestId('pbl-switch-input')).toHaveAttribute(
-    'id',
-    expect.stringContaining('pbl-switch-')
-  );
+  expect(getByTestId('pbl-switch-input')).toHaveAttribute('id', expect.stringMatching(/:.*?:/));
 });
 
 test('Render without onChange function ', () => {

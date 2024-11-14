@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createGlobalStyle, ThemeProvider, useTheme } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import merge from 'deepmerge';
 import isObject from 'isobject';
 import { getDefaultComponentStyles } from './defaultComponentStyles';
@@ -32,30 +32,29 @@ export const PabloThemeProvider = ({
   componentStyles = {},
   children,
 }: PabloThemeProviderProps) => {
-  const scTheme = useTheme() || {};
   const mergedTheme = merge(defaultTheme, theme, { arrayMerge: overwriteMerge }) as PabloTheme;
   const defaultComponentStyles = getDefaultComponentStyles();
-  console.log('defaultComponentStyles', defaultComponentStyles);
 
   const mergedComponentStyles = merge(defaultComponentStyles, componentStyles) as ComponentStyles;
 
   const styledTheme = React.useMemo(
     () => ({
-      ...scTheme,
       ...mergedTheme,
       componentStyles: mergedComponentStyles,
     }),
-    [mergedComponentStyles, mergedTheme, scTheme]
+    [mergedComponentStyles, mergedTheme]
   );
 
   return (
     <>
-      <GlobalStyle theme={mergedTheme} />
-      <pabloThemeContext.Provider value={mergedTheme}>
-        <pabloComponentStylesContext.Provider value={mergedComponentStyles}>
-          <ThemeProvider theme={styledTheme}>{children}</ThemeProvider>
-        </pabloComponentStylesContext.Provider>
-      </pabloThemeContext.Provider>
+      <ThemeProvider theme={styledTheme}>
+        <GlobalStyle theme={mergedTheme} />
+        <pabloThemeContext.Provider value={mergedTheme}>
+          <pabloComponentStylesContext.Provider value={mergedComponentStyles}>
+            {children}
+          </pabloComponentStylesContext.Provider>
+        </pabloThemeContext.Provider>
+      </ThemeProvider>
     </>
   );
 };

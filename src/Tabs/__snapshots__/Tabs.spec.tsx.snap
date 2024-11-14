@@ -3,14 +3,9 @@
 exports[`Render first selected 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -27,24 +22,13 @@ exports[`Render first selected 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -94,24 +78,13 @@ exports[`Render first selected 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -146,24 +119,13 @@ exports[`Render first selected 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -197,24 +159,13 @@ exports[`Render first selected 1`] = `
 
 .c6 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -247,24 +198,13 @@ exports[`Render first selected 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -312,15 +252,12 @@ exports[`Render first selected 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 20px;
   height: 20px;
 }
 
-.c5 > * {
+.c5>* {
   width: 20px;
   height: 20px;
 }
@@ -328,12 +265,21 @@ exports[`Render first selected 1`] = `
 <div>
   <div
     class="c0"
+    css="
+                  opacity: 0;
+                "
     data-testid="pbl-tabs"
+    flexwrap="wrap"
+    mx="-4px"
+    role="tablist"
   >
     <button
+      aria-selected="true"
       class="c1"
       data-testid="pbl-tab"
+      mx="4px"
       name="hello"
+      role="tab"
     >
       <span
         class="c2"
@@ -342,9 +288,12 @@ exports[`Render first selected 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c3"
       data-testid="pbl-tab"
+      mx="4px"
       name="world"
+      role="tab"
     >
       <span
         class="c2"
@@ -353,9 +302,12 @@ exports[`Render first selected 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c3"
       data-testid="pbl-tab"
+      mx="4px"
       name="bye"
+      role="tab"
     >
       <span
         class="c2"
@@ -364,8 +316,16 @@ exports[`Render first selected 1`] = `
       </span>
     </button>
     <button
+      aria-haspopup="menu"
+      aria-selected="false"
       class="c4"
+      css="
+                      opacity: 0;
+                      pointer-events: none;
+                    "
       data-testid="pbl-tab"
+      ml="4"
+      role="tab"
     >
       <div
         class="c5"
@@ -392,9 +352,11 @@ exports[`Render first selected 1`] = `
     style="visibility: hidden; position: absolute;"
   >
     <button
+      aria-selected="false"
       class="c6"
       data-testid="pbl-tab"
       name="hello"
+      role="tab"
     >
       <span
         class="c2"
@@ -403,9 +365,11 @@ exports[`Render first selected 1`] = `
       </span>
     </button>
     <button
+      aria-selected="true"
       class="c7"
       data-testid="pbl-tab"
       name="world"
+      role="tab"
     >
       <span
         class="c2"
@@ -414,9 +378,11 @@ exports[`Render first selected 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c6"
       data-testid="pbl-tab"
       name="bye"
+      role="tab"
     >
       <span
         class="c2"
@@ -431,14 +397,9 @@ exports[`Render first selected 1`] = `
 exports[`Render tabs with icons 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -455,24 +416,13 @@ exports[`Render tabs with icons 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -507,24 +457,13 @@ exports[`Render tabs with icons 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -574,24 +513,13 @@ exports[`Render tabs with icons 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -625,24 +553,13 @@ exports[`Render tabs with icons 1`] = `
 
 .c7 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -675,31 +592,25 @@ exports[`Render tabs with icons 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin-right: 8px;
   width: 20px;
   height: 20px;
 }
 
-.c2 > * {
+.c2>* {
   width: 20px;
   height: 20px;
 }
 
 .c6 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 20px;
   height: 20px;
 }
 
-.c6 > * {
+.c6>* {
   width: 20px;
   height: 20px;
 }
@@ -707,12 +618,21 @@ exports[`Render tabs with icons 1`] = `
 <div>
   <div
     class="c0"
+    css="
+                  opacity: 0;
+                "
     data-testid="pbl-tabs"
+    flexwrap="wrap"
+    mx="-4px"
+    role="tablist"
   >
     <button
+      aria-selected="false"
       class="c1"
       data-testid="pbl-tab"
+      mx="4px"
       name="first"
+      role="tab"
     >
       <div
         class="c2"
@@ -730,9 +650,12 @@ exports[`Render tabs with icons 1`] = `
       </span>
     </button>
     <button
+      aria-selected="true"
       class="c4"
       data-testid="pbl-tab"
+      mx="4px"
       name="second"
+      role="tab"
     >
       <div
         class="c2"
@@ -750,9 +673,12 @@ exports[`Render tabs with icons 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c1"
       data-testid="pbl-tab"
+      mx="4px"
       name="third"
+      role="tab"
     >
       <div
         class="c2"
@@ -770,8 +696,16 @@ exports[`Render tabs with icons 1`] = `
       </span>
     </button>
     <button
+      aria-haspopup="menu"
+      aria-selected="false"
       class="c5"
+      css="
+                      opacity: 0;
+                      pointer-events: none;
+                    "
       data-testid="pbl-tab"
+      ml="4"
+      role="tab"
     >
       <div
         class="c6"
@@ -798,9 +732,11 @@ exports[`Render tabs with icons 1`] = `
     style="visibility: hidden; position: absolute;"
   >
     <button
+      aria-selected="false"
       class="c7"
       data-testid="pbl-tab"
       name="first"
+      role="tab"
     >
       <div
         class="c2"
@@ -818,9 +754,11 @@ exports[`Render tabs with icons 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c7"
       data-testid="pbl-tab"
       name="second"
+      role="tab"
     >
       <div
         class="c2"
@@ -838,9 +776,11 @@ exports[`Render tabs with icons 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c7"
       data-testid="pbl-tab"
       name="third"
+      role="tab"
     >
       <div
         class="c2"
@@ -864,14 +804,9 @@ exports[`Render tabs with icons 1`] = `
 exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -888,24 +823,13 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -955,24 +879,13 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -1006,24 +919,13 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -1056,15 +958,12 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 20px;
   height: 20px;
 }
 
-.c4 > * {
+.c4>* {
   width: 20px;
   height: 20px;
 }
@@ -1072,14 +971,21 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 <div>
   <div
     class="c0"
+    css=","
     data-testid="pbl-tabs"
     fake-width="100"
+    flexwrap="wrap"
+    mx="-4px"
+    role="tablist"
   >
     <button
+      aria-selected="true"
       class="c1"
       data-testid="pbl-tab"
       fake-width="50"
+      mx="4px"
       name="hello"
+      role="tab"
     >
       <span
         class="c2"
@@ -1088,9 +994,13 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
       </span>
     </button>
     <button
+      aria-haspopup="menu"
+      aria-selected="false"
       class="c3"
       data-testid="pbl-tab"
       fake-width="50"
+      ml="4"
+      role="tab"
     >
       <div
         class="c4"
@@ -1117,10 +1027,12 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
     style="visibility: hidden; position: absolute;"
   >
     <button
+      aria-selected="false"
       class="c5"
       data-testid="pbl-tab"
       fake-width="50"
       name="hello"
+      role="tab"
     >
       <span
         class="c2"
@@ -1129,10 +1041,12 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c5"
       data-testid="pbl-tab"
       fake-width="50"
       name="world"
+      role="tab"
     >
       <span
         class="c2"
@@ -1141,10 +1055,12 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c5"
       data-testid="pbl-tab"
       fake-width="50"
       name="hi"
+      role="tab"
     >
       <span
         class="c2"
@@ -1153,10 +1069,12 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
       </span>
     </button>
     <button
+      aria-selected="false"
       class="c5"
       data-testid="pbl-tab"
       fake-width="50"
       name="earth"
+      role="tab"
     >
       <span
         class="c2"
@@ -1171,14 +1089,9 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 exports[`Work with one tab 1`] = `
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -1195,24 +1108,13 @@ exports[`Work with one tab 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -1262,24 +1164,13 @@ exports[`Work with one tab 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -1313,24 +1204,13 @@ exports[`Work with one tab 1`] = `
 
 .c5 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -1363,15 +1243,12 @@ exports[`Work with one tab 1`] = `
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 20px;
   height: 20px;
 }
 
-.c4 > * {
+.c4>* {
   width: 20px;
   height: 20px;
 }
@@ -1379,12 +1256,21 @@ exports[`Work with one tab 1`] = `
 <div>
   <div
     class="c0"
+    css="
+                  opacity: 0;
+                "
     data-testid="pbl-tabs"
+    flexwrap="wrap"
+    mx="-4px"
+    role="tablist"
   >
     <button
+      aria-selected="true"
       class="c1"
       data-testid="pbl-tab"
+      mx="4px"
       name="hello"
+      role="tab"
     >
       <span
         class="c2"
@@ -1393,8 +1279,16 @@ exports[`Work with one tab 1`] = `
       </span>
     </button>
     <button
+      aria-haspopup="menu"
+      aria-selected="false"
       class="c3"
+      css="
+                      opacity: 0;
+                      pointer-events: none;
+                    "
       data-testid="pbl-tab"
+      ml="4"
+      role="tab"
     >
       <div
         class="c4"
@@ -1421,9 +1315,11 @@ exports[`Work with one tab 1`] = `
     style="visibility: hidden; position: absolute;"
   >
     <button
+      aria-selected="false"
       class="c5"
       data-testid="pbl-tab"
       name="hello"
+      role="tab"
     >
       <span
         class="c2"

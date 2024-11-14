@@ -121,7 +121,7 @@ test('Use generated id when no "id" prop is set', () => {
     onChange: onChangeMock,
   });
 
-  expect(getByTestId('pbl-input')).toHaveAttribute('id', expect.stringContaining('pbl-input-'));
+  expect(getByTestId('pbl-input')).toHaveAttribute('id', expect.stringMatching(/:.*?:/));
 });
 
 function renderComponent(props) {

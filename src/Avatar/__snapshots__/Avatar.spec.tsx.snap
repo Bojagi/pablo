@@ -15,8 +15,10 @@ exports[`circle variant Render size large 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="64"
+    variant="circle"
     width="64"
   />
 </div>
@@ -37,8 +39,10 @@ exports[`circle variant Render size medium 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="40"
+    variant="circle"
     width="40"
   />
 </div>
@@ -59,8 +63,10 @@ exports[`circle variant Render size small 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="32"
+    variant="circle"
     width="32"
   />
 </div>
@@ -81,8 +87,10 @@ exports[`circle variant Render size tiny 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="24"
+    variant="circle"
     width="24"
   />
 </div>
@@ -103,8 +111,10 @@ exports[`circle variant Render size undefined 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="40"
+    variant="circle"
     width="40"
   />
 </div>
@@ -125,8 +135,10 @@ exports[`square variant Render size large 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="64"
+    variant="square"
     width="64"
   />
 </div>
@@ -147,8 +159,10 @@ exports[`square variant Render size medium 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="40"
+    variant="square"
     width="40"
   />
 </div>
@@ -169,8 +183,10 @@ exports[`square variant Render size small 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="32"
+    variant="square"
     width="32"
   />
 </div>
@@ -191,8 +207,10 @@ exports[`square variant Render size tiny 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="24"
+    variant="square"
     width="24"
   />
 </div>
@@ -213,8 +231,10 @@ exports[`square variant Render size undefined 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="40"
+    variant="square"
     width="40"
   />
 </div>
@@ -235,8 +255,10 @@ exports[`undefined variant Render size large 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="64"
+    variant="square"
     width="64"
   />
 </div>
@@ -257,8 +279,10 @@ exports[`undefined variant Render size medium 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="40"
+    variant="square"
     width="40"
   />
 </div>
@@ -279,8 +303,10 @@ exports[`undefined variant Render size small 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="32"
+    variant="square"
     width="32"
   />
 </div>
@@ -301,8 +327,10 @@ exports[`undefined variant Render size tiny 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="24"
+    variant="square"
     width="24"
   />
 </div>
@@ -323,8 +351,10 @@ exports[`undefined variant Render size undefined 1`] = `
 <div>
   <img
     class="c0 c1"
+    css=","
     data-testid="pbl-avatar"
     height="40"
+    variant="square"
     width="40"
   />
 </div>

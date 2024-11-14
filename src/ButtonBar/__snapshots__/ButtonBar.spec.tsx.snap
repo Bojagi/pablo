@@ -14,32 +14,18 @@ exports[`Render button bar 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
   margin-right: 4px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: inherit;
   color: var(--pbl-theme-colors-brand-contrastText);
@@ -74,13 +60,7 @@ exports[`Render button bar 1`] = `
 
 .c0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
   margin: 0 -4px;
 }
@@ -93,7 +73,10 @@ exports[`Render button bar 1`] = `
     <button
       class="c1"
       color="brand"
+      cssstyles=","
       data-testid="pbl-button"
+      mx="4px"
+      variant="primary"
     >
       <span
         class="c2"
@@ -104,7 +87,10 @@ exports[`Render button bar 1`] = `
     <button
       class="c1"
       color="brand"
+      cssstyles=","
       data-testid="pbl-button"
+      mx="4px"
+      variant="primary"
     >
       <span
         class="c2"

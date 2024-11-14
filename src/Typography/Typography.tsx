@@ -22,6 +22,8 @@ export interface BaseTypographyProps
 }
 export interface TypographyProps extends BaseTypographyProps {
   variant: TypographyVariant;
+  as?: string | React.ComponentType<any>;
+  htmlFor?: string;
   children: React.ReactNode;
 }
 
@@ -116,59 +118,58 @@ export const InfoTextBold = styled.p<BaseTypographyProps>`
   ${typography}
 `;
 
-export const Typography = forwardRef<
-  HTMLParagraphElement,
-  React.ComponentPropsWithoutRef<typeof Paragraph>
->(({ variant = 'paragraph', children, ...props }, ref) => {
-  switch (variant) {
-    case 'headline':
-      return (
-        <Headline ref={ref} {...props}>
-          {children}
-        </Headline>
-      );
-    case 'title':
-      return (
-        <Title ref={ref} {...props}>
-          {children}
-        </Title>
-      );
-    case 'subtitle':
-      return (
-        <Subtitle ref={ref} {...props}>
-          {children}
-        </Subtitle>
-      );
-    case 'paragraphBold':
-      return (
-        <ParagraphBold ref={ref} {...props}>
-          {children}
-        </ParagraphBold>
-      );
-    case 'info':
-      return (
-        <InfoText ref={ref} {...props}>
-          {children}
-        </InfoText>
-      );
-    case 'infoBold':
-      return (
-        <InfoTextBold ref={ref} {...props}>
-          {children}
-        </InfoTextBold>
-      );
-    case 'button':
-      return (
-        <ButtonTypography ref={ref} {...props}>
-          {children}
-        </ButtonTypography>
-      );
-    case 'paragraph':
-    default:
-      return (
-        <Paragraph ref={ref} {...props}>
-          {children}
-        </Paragraph>
-      );
+export const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
+  ({ variant = 'paragraph', children, ...props }, ref) => {
+    switch (variant) {
+      case 'headline':
+        return (
+          <Headline ref={ref} {...props}>
+            {children}
+          </Headline>
+        );
+      case 'title':
+        return (
+          <Title ref={ref} {...props}>
+            {children}
+          </Title>
+        );
+      case 'subtitle':
+        return (
+          <Subtitle ref={ref} {...props}>
+            {children}
+          </Subtitle>
+        );
+      case 'paragraphBold':
+        return (
+          <ParagraphBold ref={ref} {...props}>
+            {children}
+          </ParagraphBold>
+        );
+      case 'info':
+        return (
+          <InfoText ref={ref} {...props}>
+            {children}
+          </InfoText>
+        );
+      case 'infoBold':
+        return (
+          <InfoTextBold ref={ref} {...props}>
+            {children}
+          </InfoTextBold>
+        );
+      case 'button':
+        return (
+          <ButtonTypography ref={ref} {...props}>
+            {children}
+          </ButtonTypography>
+        );
+      case 'paragraph':
+      default:
+        return (
+          <Paragraph ref={ref} {...props}>
+            {children}
+          </Paragraph>
+        );
+    }
   }
-});
+);

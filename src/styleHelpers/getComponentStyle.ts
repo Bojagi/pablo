@@ -7,7 +7,6 @@ export const getComponentStyle = (
   const value = interpolatedPath
     .split('.')
     .reduce((acc, key) => (acc && acc[key]) || undefined, theme.componentStyles || {});
-  console.log('value', path, value);
 
   if (typeof value === 'function') {
     return transformFn(value({ theme }));
@@ -16,10 +15,7 @@ export const getComponentStyle = (
   return transformFn(value);
 };
 
-export const transitionTransformer = (transitions: string[][] = []) => {
-  console.log('transitions', transitions);
-
-  return transitions.map((param) => param.join(' ')).join(', ');
-};
+export const transitionTransformer = (transitions: string[][] = []) =>
+  transitions.map((param) => param.join(' ')).join(', ');
 
 export const shadowTransformer = (shadows: string[] = []) => shadows.join(', ');

@@ -6,6 +6,7 @@ import {
   act,
   fireEvent,
   cleanup,
+  waitFor,
 } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
@@ -145,6 +146,7 @@ describe.each([
       side,
     });
     // This is because of passing ref on effect, which happens on next tick
+
     await act(() => Promise.resolve());
 
     // Trigger resize update and update the size
@@ -157,12 +159,12 @@ describe.each([
     act(() => {
       fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
       // wait for the tick to finish
-      jest.advanceTimersByTime(0);
+      jest.advanceTimersByTime(500);
     });
 
-    await act(() => Promise.resolve());
-
-    expect(queryByTestId('pbl-tooltip-popover')).not.toBeNull();
+    await waitFor(() => {
+      expect(queryByTestId('pbl-tooltip-popover')).not.toBeNull();
+    });
 
     rerender({
       content: `This is a tooltip on the ${side} side`,

@@ -120,7 +120,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
 }: BaseInputOuterProps<P, E>) {
   const [focus, setFocus] = React.useState(false);
   const InputComponent = inputComponent as any;
-  const generatedId = useUniqueId(name);
+  const generatedId = useUniqueId();
   const id = idProp || generatedId;
   const infoId = `${id}-info`;
   const errorId = `${id}-error`;
@@ -158,7 +158,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           value={value}
           aria-invalid={props.error ? 'true' : 'false'}
           aria-errormessage={props.error ? errorId : undefined}
-          aria-describedBy={actualInfoText && !props.error ? infoId : undefined}
+          aria-describedby={actualInfoText && !props.error ? infoId : undefined}
           onFocus={hijackCbBefore(onFocus, () => setFocus(true))}
           onBlur={hijackCbBefore(onBlur, () => setFocus(false))}
           onChange={(e) => onChange && onChange(e.target.value, e)}

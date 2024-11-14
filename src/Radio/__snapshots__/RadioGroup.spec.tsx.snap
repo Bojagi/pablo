@@ -7,13 +7,7 @@ exports[`Render with nothing selected 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -59,7 +53,6 @@ exports[`Render with nothing selected 1`] = `
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -67,13 +60,9 @@ exports[`Render with nothing selected 1`] = `
   box-sizing: border-box;
   width: 12px;
   height: 12px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
   transform: scale(0);
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
-  -webkit-transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
-  transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
@@ -86,7 +75,9 @@ exports[`Render with nothing selected 1`] = `
       class="c1"
     >
       <div
+        alignitems="center"
         class="c2"
+        role="radio"
       >
         <div
           class="c3"
@@ -107,8 +98,11 @@ exports[`Render with nothing selected 1`] = `
         </div>
         <label
           class="c6"
+          customstyles="[object Object]"
           data-testid="pbl-radio-label"
           for="custom-id-1"
+          mb="0"
+          ml="4"
         >
           Hello
         </label>
@@ -118,7 +112,9 @@ exports[`Render with nothing selected 1`] = `
       class="c1"
     >
       <div
+        alignitems="center"
         class="c2"
+        role="radio"
       >
         <div
           class="c3"
@@ -139,8 +135,11 @@ exports[`Render with nothing selected 1`] = `
         </div>
         <label
           class="c6"
+          customstyles="[object Object]"
           data-testid="pbl-radio-label"
           for="custom-id-2"
+          mb="0"
+          ml="4"
         >
           World
         </label>
@@ -150,7 +149,9 @@ exports[`Render with nothing selected 1`] = `
       class="c1"
     >
       <div
+        alignitems="center"
         class="c2"
+        role="radio"
       >
         <div
           class="c3"
@@ -171,8 +172,11 @@ exports[`Render with nothing selected 1`] = `
         </div>
         <label
           class="c6"
+          customstyles="[object Object]"
           data-testid="pbl-radio-label"
           for="custom-id-3"
+          mb="0"
+          ml="4"
         >
           Bye
         </label>
@@ -189,13 +193,7 @@ exports[`Work with one radio button 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -241,7 +239,6 @@ exports[`Work with one radio button 1`] = `
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -249,13 +246,9 @@ exports[`Work with one radio button 1`] = `
   box-sizing: border-box;
   width: 12px;
   height: 12px;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
   transform: scale(0);
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
-  -webkit-transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
-  transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
@@ -268,7 +261,9 @@ exports[`Work with one radio button 1`] = `
       class="c1"
     >
       <div
+        alignitems="center"
         class="c2"
+        role="radio"
       >
         <div
           class="c3"
@@ -289,8 +284,11 @@ exports[`Work with one radio button 1`] = `
         </div>
         <label
           class="c6"
+          customstyles="[object Object]"
           data-testid="pbl-radio-label"
           for="custom-id"
+          mb="0"
+          ml="4"
         >
           Hello
         </label>

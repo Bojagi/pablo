@@ -34,6 +34,7 @@ export interface CheckableBoxProps extends BaseProps<CheckableStyleProperties> {
   disabled?: boolean;
   size?: CheckableSize;
   focus: boolean;
+  children?: React.ReactNode;
 }
 
 export interface CheckableHandleProps extends BaseProps<CheckableStyleProperties> {
@@ -93,7 +94,7 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
     }: OuterBaseCheckableProps,
     ref
   ) => {
-    const generatedId = useUniqueId(componentName);
+    const generatedId = useUniqueId();
     const id = idProp || generatedId;
     const typographyVariant = useComponentStyle(
       `${componentName}.typographyVariant.${size}`

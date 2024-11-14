@@ -68,7 +68,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
     const type = typeProp === undefined || ALLOWED_TYPES.includes(typeProp) ? typeProp : 'info';
     const color = useComponentStyle('toastCard.color') as string;
     const getStyles = useCustomStyles('avatar.styles', props.customStyles);
-    const generatedId = useUniqueId('toast');
+    const generatedId = useUniqueId();
     const titleId = `${generatedId}-title`;
     const descriptionId = `${generatedId}-title`;
 
@@ -78,7 +78,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
         id={generatedId}
         data-testid="pbl-toastcard"
         aria-aria-labelledby={titleId}
-        aria-aria-describedBy={descriptionId}
+        aria-aria-describedby={descriptionId}
         {...props}
       >
         <Flex alignItems={description ? 'flex-start' : 'center'}>

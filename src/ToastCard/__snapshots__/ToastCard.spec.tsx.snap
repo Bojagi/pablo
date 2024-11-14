@@ -3,29 +3,17 @@
 exports[`Render toast card with no type and with only title 1`] = `
 .c2 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -38,9 +26,6 @@ exports[`Render toast card with no type and with only title 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -51,25 +36,33 @@ exports[`Render toast card with no type and with only title 1`] = `
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-aria-describedby=":r0:-title"
+  aria-aria-labelledby=":r0:-title"
   class="c0"
   data-testid="pbl-toastcard"
+  id=":r0:"
 >
   <div
+    alignitems="center"
     class="c1"
   >
     <div
       class="c2"
+      flexgrow="1"
     >
       <div
         class="c3"
       >
         <h4
           class="c4"
+          customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
+          flexgrow="1"
+          id=":r0:-title"
         >
           Hi
         </h4>
@@ -86,13 +79,20 @@ exports[`type error Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0 > * {
+.c0>* {
   display: block;
 }
 
 <div
   class="c0"
+  css="
+  & > * {
+    display: block;
+  }
+,,"
   data-testid="pbl-toastcard-iconbox"
+  fillcolor="negative.main"
+  mr="5"
 >
   <div>
     hello
@@ -107,35 +107,23 @@ exports[`type error Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2 > * {
+.c2>* {
   display: block;
 }
 
 .c3 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -148,9 +136,6 @@ exports[`type error Render toast card with only title 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -161,19 +146,30 @@ exports[`type error Render toast card with only title 1`] = `
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-aria-describedby=":rb:-title"
+  aria-aria-labelledby=":rb:-title"
   class="c0"
   data-testid="pbl-toastcard"
+  id=":rb:"
 >
   <div
+    alignitems="center"
     class="c1"
   >
     <div
       class="c2"
+      css="
+  & > * {
+    display: block;
+  }
+,,"
       data-testid="pbl-toastcard-iconbox"
+      fillcolor="negative.main"
+      mr="5"
     >
       <svg
         height="24"
@@ -192,13 +188,17 @@ exports[`type error Render toast card with only title 1`] = `
     </div>
     <div
       class="c3"
+      flexgrow="1"
     >
       <div
         class="c4"
       >
         <h4
           class="c5"
+          customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
+          flexgrow="1"
+          id=":rb:-title"
         >
           Hi
         </h4>
@@ -215,13 +215,20 @@ exports[`type info Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0 > * {
+.c0>* {
   display: block;
 }
 
 <div
   class="c0"
+  css="
+  & > * {
+    display: block;
+  }
+,,"
   data-testid="pbl-toastcard-iconbox"
+  fillcolor="common.white"
+  mr="5"
 >
   <div>
     hello
@@ -236,35 +243,23 @@ exports[`type info Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2 > * {
+.c2>* {
   display: block;
 }
 
 .c3 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -277,9 +272,6 @@ exports[`type info Render toast card with only title 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -290,19 +282,30 @@ exports[`type info Render toast card with only title 1`] = `
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-aria-describedby=":r5:-title"
+  aria-aria-labelledby=":r5:-title"
   class="c0"
   data-testid="pbl-toastcard"
+  id=":r5:"
 >
   <div
+    alignitems="center"
     class="c1"
   >
     <div
       class="c2"
+      css="
+  & > * {
+    display: block;
+  }
+,,"
       data-testid="pbl-toastcard-iconbox"
+      fillcolor="common.white"
+      mr="5"
     >
       <svg
         height="24"
@@ -321,13 +324,17 @@ exports[`type info Render toast card with only title 1`] = `
     </div>
     <div
       class="c3"
+      flexgrow="1"
     >
       <div
         class="c4"
       >
         <h4
           class="c5"
+          customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
+          flexgrow="1"
+          id=":r5:-title"
         >
           Hi
         </h4>
@@ -344,13 +351,20 @@ exports[`type success Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0 > * {
+.c0>* {
   display: block;
 }
 
 <div
   class="c0"
+  css="
+  & > * {
+    display: block;
+  }
+,,"
   data-testid="pbl-toastcard-iconbox"
+  fillcolor="positive.main"
+  mr="5"
 >
   <div>
     hello
@@ -365,35 +379,23 @@ exports[`type success Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2 > * {
+.c2>* {
   display: block;
 }
 
 .c3 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -406,9 +408,6 @@ exports[`type success Render toast card with only title 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -419,19 +418,30 @@ exports[`type success Render toast card with only title 1`] = `
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-aria-describedby=":r7:-title"
+  aria-aria-labelledby=":r7:-title"
   class="c0"
   data-testid="pbl-toastcard"
+  id=":r7:"
 >
   <div
+    alignitems="center"
     class="c1"
   >
     <div
       class="c2"
+      css="
+  & > * {
+    display: block;
+  }
+,,"
       data-testid="pbl-toastcard-iconbox"
+      fillcolor="positive.main"
+      mr="5"
     >
       <svg
         height="24"
@@ -450,13 +460,17 @@ exports[`type success Render toast card with only title 1`] = `
     </div>
     <div
       class="c3"
+      flexgrow="1"
     >
       <div
         class="c4"
       >
         <h4
           class="c5"
+          customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
+          flexgrow="1"
+          id=":r7:-title"
         >
           Hi
         </h4>
@@ -473,13 +487,20 @@ exports[`type undefined Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0 > * {
+.c0>* {
   display: block;
 }
 
 <div
   class="c0"
+  css="
+  & > * {
+    display: block;
+  }
+,,"
   data-testid="pbl-toastcard-iconbox"
+  fillcolor="common.white"
+  mr="5"
 >
   <div>
     hello
@@ -494,35 +515,23 @@ exports[`type undefined Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2 > * {
+.c2>* {
   display: block;
 }
 
 .c3 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -535,9 +544,6 @@ exports[`type undefined Render toast card with only title 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -548,19 +554,30 @@ exports[`type undefined Render toast card with only title 1`] = `
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-aria-describedby=":r3:-title"
+  aria-aria-labelledby=":r3:-title"
   class="c0"
   data-testid="pbl-toastcard"
+  id=":r3:"
 >
   <div
+    alignitems="center"
     class="c1"
   >
     <div
       class="c2"
+      css="
+  & > * {
+    display: block;
+  }
+,,"
       data-testid="pbl-toastcard-iconbox"
+      fillcolor="common.white"
+      mr="5"
     >
       <div>
         hi
@@ -568,13 +585,17 @@ exports[`type undefined Render toast card with only title 1`] = `
     </div>
     <div
       class="c3"
+      flexgrow="1"
     >
       <div
         class="c4"
       >
         <h4
           class="c5"
+          customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
+          flexgrow="1"
+          id=":r3:-title"
         >
           Hi
         </h4>
@@ -591,13 +612,20 @@ exports[`type unknown Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0 > * {
+.c0>* {
   display: block;
 }
 
 <div
   class="c0"
+  css="
+  & > * {
+    display: block;
+  }
+,,"
   data-testid="pbl-toastcard-iconbox"
+  fillcolor="common.white"
+  mr="5"
 >
   <div>
     hello
@@ -612,35 +640,23 @@ exports[`type unknown Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2 > * {
+.c2>* {
   display: block;
 }
 
 .c3 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -653,9 +669,6 @@ exports[`type unknown Render toast card with only title 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -666,19 +679,30 @@ exports[`type unknown Render toast card with only title 1`] = `
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-aria-describedby=":rd:-title"
+  aria-aria-labelledby=":rd:-title"
   class="c0"
   data-testid="pbl-toastcard"
+  id=":rd:"
 >
   <div
+    alignitems="center"
     class="c1"
   >
     <div
       class="c2"
+      css="
+  & > * {
+    display: block;
+  }
+,,"
       data-testid="pbl-toastcard-iconbox"
+      fillcolor="common.white"
+      mr="5"
     >
       <div>
         hi
@@ -686,13 +710,17 @@ exports[`type unknown Render toast card with only title 1`] = `
     </div>
     <div
       class="c3"
+      flexgrow="1"
     >
       <div
         class="c4"
       >
         <h4
           class="c5"
+          customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
+          flexgrow="1"
+          id=":rd:-title"
         >
           Hi
         </h4>
@@ -709,13 +737,20 @@ exports[`type warning Render toast card with custom icon 1`] = `
   margin-right: 12px;
 }
 
-.c0 > * {
+.c0>* {
   display: block;
 }
 
 <div
   class="c0"
+  css="
+  & > * {
+    display: block;
+  }
+,,"
   data-testid="pbl-toastcard-iconbox"
+  fillcolor="neutral.main"
+  mr="5"
 >
   <div>
     hello
@@ -730,35 +765,23 @@ exports[`type warning Render toast card with only title 1`] = `
   margin-right: 12px;
 }
 
-.c2 > * {
+.c2>* {
   display: block;
 }
 
 .c3 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c4 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -771,9 +794,6 @@ exports[`type warning Render toast card with only title 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -784,19 +804,30 @@ exports[`type warning Render toast card with only title 1`] = `
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
   padding: 12px 24px 12px 12px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 <div
+  aria-aria-describedby=":r9:-title"
+  aria-aria-labelledby=":r9:-title"
   class="c0"
   data-testid="pbl-toastcard"
+  id=":r9:"
 >
   <div
+    alignitems="center"
     class="c1"
   >
     <div
       class="c2"
+      css="
+  & > * {
+    display: block;
+  }
+,,"
       data-testid="pbl-toastcard-iconbox"
+      fillcolor="neutral.main"
+      mr="5"
     >
       <svg
         height="24"
@@ -815,13 +846,17 @@ exports[`type warning Render toast card with only title 1`] = `
     </div>
     <div
       class="c3"
+      flexgrow="1"
     >
       <div
         class="c4"
       >
         <h4
           class="c5"
+          customstyles="[object Object]"
           data-testid="pbl-toastcard-title"
+          flexgrow="1"
+          id=":r9:-title"
         >
           Hi
         </h4>

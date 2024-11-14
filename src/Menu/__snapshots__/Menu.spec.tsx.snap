@@ -1,219 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Click on menu item 1`] = `
-<body>
-  <div>
-    <div>
-      Content
-    </div>
-  </div>
-  .c2 {
+.c2 {
   box-sizing: border-box;
 }
 
 .c1 {
   visibility: hidden;
-}
-
-.c0 {
-  box-sizing: border-box;
-  z-index: 1100;
-}
-
-.c7 {
-  box-sizing: border-box;
-  width: 10px;
-  height: 10px;
-}
-
-.c7:after {
-  box-sizing: border-box;
-  content: '';
-  position: absolute;
-  top: -10;
-  left: -5px;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid white;
-}
-
-*[data-popper-placement^='top'] .c6 {
-  bottom: -10px;
-}
-
-*[data-popper-placement^='top'] .c6:after {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-*[data-popper-placement^='bottom'] .c6 {
-  top: -10px;
-}
-
-*[data-popper-placement^='left'] .c6 {
-  right: -10px;
-}
-
-*[data-popper-placement^='left'] .c6:after {
-  -webkit-transform: rotate(90deg) scaleX(0.75);
-  -ms-transform: rotate(90deg) scaleX(0.75);
-  transform: rotate(90deg) scaleX(0.75);
-}
-
-*[data-popper-placement^='right'] .c6 {
-  left: -10px;
-}
-
-*[data-popper-placement^='right'] .c6:after {
-  -webkit-transform: rotate(-90deg) scaleX(0.75);
-  -ms-transform: rotate(-90deg) scaleX(0.75);
-  transform: rotate(-90deg) scaleX(0.75);
-}
-
-.c3 {
-  box-sizing: border-box;
-  background-color: var(--pbl-theme-colors-common-white);
-  border-radius: 4px;
-  max-width: 400px;
-  min-width: 120px;
-  padding: 8px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
-}
-
-.c5 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
-  line-height: var(--pbl-theme-typography-button-lineHeight);
-  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  display: block;
-  color: var(--pbl-theme-colors-common-black);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  padding: 4px;
-}
-
-.c4:enabled {
-  cursor: pointer;
-}
-
-.c4:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c4:hover {
-  background-color: var(--pbl-theme-colors-gray-50);
-}
-
-.c4:active {
-  background-color: var(--pbl-theme-colors-gray-100);
-}
-
-<div
-    data-testid="pbl-popover-mountpoint"
-  >
-    <div
-      class="c0"
-      data-popper-escaped="true"
-      data-popper-placement="bottom"
-      data-popper-reference-hidden="true"
-      style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
-    >
-      <div
-        class="c1"
-        data-testid="pbl-animation-inner"
-      >
-        <div>
-          <div
-            class="c2 c3"
-          >
-            <div
-              class="c4"
-              data-testid="pbl-menu-item"
-            >
-              <span
-                class="c5"
-              >
-                Hello
-              </span>
-            </div>
-            <div
-              class="c4"
-              data-testid="pbl-menu-item"
-            >
-              <span
-                class="c5"
-              >
-                World
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="c6 c7"
-          color="white"
-          size="10"
-          style="position: absolute; left: 0px; transform: translate(10px, 0px);"
-        />
-      </div>
-    </div>
-  </div>
-</body>
-`;
-
-exports[`Render closed Menu 1`] = `
-<body>
-  <div>
-    <div>
-      Content
-    </div>
-  </div>
-  <div
-    data-testid="pbl-popover-mountpoint"
-  />
-</body>
-`;
-
-exports[`Render open Menu 1`] = `
-<body>
-  <div>
-    <div>
-      Content
-    </div>
-  </div>
-  .c1 {
-  box-sizing: border-box;
 }
 
 .c0 {
@@ -238,13 +31,212 @@ exports[`Render open Menu 1`] = `
   border-bottom: 10px solid white;
 }
 
+*[data-popper-placement^='top'] .c6 {
+  bottom: -10px;
+}
+
+*[data-popper-placement^='top'] .c6:after {
+  transform: rotate(180deg);
+}
+
+*[data-popper-placement^='bottom'] .c6 {
+  top: -10px;
+}
+
+*[data-popper-placement^='left'] .c6 {
+  right: -10px;
+}
+
+*[data-popper-placement^='left'] .c6:after {
+  transform: rotate(90deg) scaleX(0.75);
+}
+
+*[data-popper-placement^='right'] .c6 {
+  left: -10px;
+}
+
+*[data-popper-placement^='right'] .c6:after {
+  transform: rotate(-90deg) scaleX(0.75);
+}
+
+.c3 {
+  box-sizing: border-box;
+  background-color: var(--pbl-theme-colors-common-white);
+  border-radius: 4px;
+  max-width: 400px;
+  min-width: 120px;
+  padding: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.c5 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
+.c4 {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  display: block;
+  color: var(--pbl-theme-colors-common-black);
+  text-decoration: none;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 4px;
+}
+
+.c4:enabled {
+  cursor: pointer;
+}
+
+.c4:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.c4:hover {
+  background-color: var(--pbl-theme-colors-gray-50);
+}
+
+.c4:active {
+  background-color: var(--pbl-theme-colors-gray-100);
+}
+
+<body>
+  <div>
+    <div
+      aria-haspopup="menu"
+    >
+      Content
+    </div>
+  </div>
+  <div
+    data-testid="pbl-popover-mountpoint"
+  >
+    <div
+      class="c0"
+      data-popper-escaped="true"
+      data-popper-placement="bottom"
+      data-popper-reference-hidden="true"
+      style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
+    >
+      <div
+        basestyles=""
+        class="c1"
+        data-testid="pbl-animation-inner"
+        duration="0"
+        enterstyles=""
+        exitstyles="
+  visibility: hidden;
+"
+        state="exited"
+      >
+        <div>
+          <div
+            class="c2 c3"
+            css=","
+            role="menu"
+          >
+            <div
+              class="c4"
+              data-testid="pbl-menu-item"
+              role="menuitem"
+            >
+              <span
+                class="c5"
+                customstyles="[object Object]"
+              >
+                Hello
+              </span>
+            </div>
+            <div
+              class="c4"
+              data-testid="pbl-menu-item"
+              role="menuitem"
+            >
+              <span
+                class="c5"
+                customstyles="[object Object]"
+              >
+                World
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="c6"
+          color="white"
+          customcss=","
+          size="10"
+          style="position: absolute; left: 0px; transform: translate(10px, 0px);"
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Render closed Menu 1`] = `
+<body>
+  <div>
+    <div
+      aria-haspopup="menu"
+    >
+      Content
+    </div>
+  </div>
+  <div
+    data-testid="pbl-popover-mountpoint"
+  />
+</body>
+`;
+
+exports[`Render open Menu 1`] = `
+.c1 {
+  box-sizing: border-box;
+}
+
+.c0 {
+  box-sizing: border-box;
+  z-index: 1100;
+}
+
+.c5 {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+}
+
+.c5:after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: -10;
+  left: -5px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
 *[data-popper-placement^='top'] .c5 {
   bottom: -10px;
 }
 
 *[data-popper-placement^='top'] .c5:after {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -257,8 +249,6 @@ exports[`Render open Menu 1`] = `
 }
 
 *[data-popper-placement^='left'] .c5:after {
-  -webkit-transform: rotate(90deg) scaleX(0.75);
-  -ms-transform: rotate(90deg) scaleX(0.75);
   transform: rotate(90deg) scaleX(0.75);
 }
 
@@ -267,8 +257,6 @@ exports[`Render open Menu 1`] = `
 }
 
 *[data-popper-placement^='right'] .c5:after {
-  -webkit-transform: rotate(-90deg) scaleX(0.75);
-  -ms-transform: rotate(-90deg) scaleX(0.75);
   transform: rotate(-90deg) scaleX(0.75);
 }
 
@@ -279,7 +267,7 @@ exports[`Render open Menu 1`] = `
   max-width: 400px;
   min-width: 120px;
   padding: 8px;
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .c4 {
@@ -295,29 +283,17 @@ exports[`Render open Menu 1`] = `
 
 .c3 {
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
-  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   display: block;
   color: var(--pbl-theme-colors-common-black);
-  -webkit-text-decoration: none;
   text-decoration: none;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -341,7 +317,15 @@ exports[`Render open Menu 1`] = `
   background-color: var(--pbl-theme-colors-gray-100);
 }
 
-<div
+<body>
+  <div>
+    <div
+      aria-haspopup="menu"
+    >
+      Content
+    </div>
+  </div>
+  <div
     data-testid="pbl-popover-mountpoint"
   >
     <div
@@ -352,19 +336,30 @@ exports[`Render open Menu 1`] = `
       style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 10px);"
     >
       <div
+        basestyles=""
         class=""
         data-testid="pbl-animation-inner"
+        duration="0"
+        enterstyles=""
+        exitstyles="
+  visibility: hidden;
+"
+        state="entering"
       >
         <div>
           <div
             class="c1 c2"
+            css=","
+            role="menu"
           >
             <div
               class="c3"
               data-testid="pbl-menu-item"
+              role="menuitem"
             >
               <span
                 class="c4"
+                customstyles="[object Object]"
               >
                 Hello
               </span>
@@ -372,9 +367,11 @@ exports[`Render open Menu 1`] = `
             <div
               class="c3"
               data-testid="pbl-menu-item"
+              role="menuitem"
             >
               <span
                 class="c4"
+                customstyles="[object Object]"
               >
                 World
               </span>
@@ -382,8 +379,9 @@ exports[`Render open Menu 1`] = `
           </div>
         </div>
         <div
-          class="c5 c6"
+          class="c5"
           color="white"
+          customcss=","
           size="10"
           style="position: absolute; left: 0px; transform: translate(10px, 0px);"
         />

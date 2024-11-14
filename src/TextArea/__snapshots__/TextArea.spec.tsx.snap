@@ -7,18 +7,11 @@ exports[`Render without value 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 500px;
 }
@@ -27,9 +20,6 @@ exports[`Render without value 1`] = `
   box-sizing: border-box;
   resize: none;
   border: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 6px 8px;
   background-color: transparent;
@@ -40,19 +30,24 @@ exports[`Render without value 1`] = `
 <div>
   <div
     class="c0"
+    css=","
   >
     <div
       class="c1"
-      data-testid="pbl-textarea-wrapper"
-      name="textarea"
+      cssstyles=","
+      data-testid="pbl-textArea-wrapper"
+      name="textArea"
       rows="3"
+      variant="filled"
       width="500"
     >
       <textarea
+        aria-invalid="false"
         class="c2"
-        data-testid="pbl-textarea"
+        data-testid="pbl-textArea"
         id="custom-id"
         rows="3"
+        variant="filled"
       />
     </div>
   </div>
@@ -79,18 +74,11 @@ exports[`Show error when an error message is given 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   border-color: var(--pbl-theme-colors-negative-main);
   width: 500px;
@@ -104,9 +92,6 @@ exports[`Show error when an error message is given 1`] = `
   box-sizing: border-box;
   resize: none;
   border: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 6px 8px;
   background-color: transparent;
@@ -117,26 +102,39 @@ exports[`Show error when an error message is given 1`] = `
 <div>
   <div
     class="c0"
+    css=","
   >
     <div
       class="c1"
-      data-testid="pbl-textarea-wrapper"
-      name="textarea"
+      cssstyles=","
+      data-testid="pbl-textArea-wrapper"
+      error="[object Object]"
+      name="textArea"
       rows="3"
+      variant="filled"
       width="500"
     >
       <textarea
+        aria-errormessage="custom-id-error"
+        aria-invalid="true"
         class="c2"
-        data-testid="pbl-textarea"
+        data-testid="pbl-textArea"
+        error="[object Object]"
         id="custom-id"
         rows="3"
+        variant="filled"
       >
         some
       </textarea>
     </div>
     <p
+      aria-live="polite"
       class="c3"
-      data-testid="pbl-textarea-infotext"
+      customstyles="[object Object]"
+      data-testid="pbl-textArea-infotext"
+      id="custom-id-error"
+      mt="2"
+      textcolor="negative.main"
     >
       Something 
       <strong>
@@ -168,18 +166,11 @@ exports[`Show infotext when available 1`] = `
 
 .c1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 500px;
 }
@@ -188,9 +179,6 @@ exports[`Show infotext when available 1`] = `
   box-sizing: border-box;
   resize: none;
   border: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 6px 8px;
   background-color: transparent;
@@ -201,26 +189,39 @@ exports[`Show infotext when available 1`] = `
 <div>
   <div
     class="c0"
+    css=","
   >
     <div
       class="c1"
-      data-testid="pbl-textarea-wrapper"
-      name="textarea"
+      cssstyles=","
+      data-testid="pbl-textArea-wrapper"
+      infotext="[object Object]"
+      name="textArea"
       rows="3"
+      variant="filled"
       width="500"
     >
       <textarea
+        aria-describedby="custom-id-info"
+        aria-invalid="false"
         class="c2"
-        data-testid="pbl-textarea"
+        data-testid="pbl-textArea"
         id="custom-id"
+        infotext="[object Object]"
         rows="3"
+        variant="filled"
       >
         some
       </textarea>
     </div>
     <p
+      aria-live="polite"
       class="c3"
-      data-testid="pbl-textarea-infotext"
+      customstyles="[object Object]"
+      data-testid="pbl-textArea-infotext"
+      id="custom-id-info"
+      mt="2"
+      textcolor="text.info"
     >
       Something that 
       <strong>
@@ -251,18 +252,11 @@ exports[`Show label when available 1`] = `
 
 .c2 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
-  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 500px;
 }
@@ -271,9 +265,6 @@ exports[`Show label when available 1`] = `
   box-sizing: border-box;
   resize: none;
   border: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 6px 8px;
   background-color: transparent;
@@ -284,13 +275,16 @@ exports[`Show label when available 1`] = `
 <div>
   <div
     class="c0"
+    css=","
   >
     <label
-      data-testid="pbl-textarea-label"
+      data-testid="pbl-textArea-label"
       for="custom-id"
     >
       <p
         class="c1"
+        customstyles="[object Object]"
+        mb="3"
       >
         Your 
         <strong>
@@ -300,16 +294,20 @@ exports[`Show label when available 1`] = `
     </label>
     <div
       class="c2"
-      data-testid="pbl-textarea-wrapper"
-      name="textarea"
+      cssstyles=","
+      data-testid="pbl-textArea-wrapper"
+      name="textArea"
       rows="3"
+      variant="filled"
       width="500"
     >
       <textarea
+        aria-invalid="false"
         class="c3"
-        data-testid="pbl-textarea"
+        data-testid="pbl-textArea"
         id="custom-id"
         rows="3"
+        variant="filled"
       >
         some
       </textarea>
