@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';
 import { getComponentStyle } from '../styleHelpers';
@@ -20,7 +20,9 @@ const ToolbarBox = styled.div<LayoutBoxProps>`
 `;
 
 export interface ToolbarProps extends LayoutBoxProps, BaseProps<ToolbarStyleProperties> {
-  children: React.ReactElement<ToolbarItemProps | {}> | React.ReactElement<ToolbarItemProps | {}>[];
+  children:
+    | React.ReactElement<ToolbarItemProps | object>
+    | React.ReactElement<ToolbarItemProps | object>[];
   selected?: string;
 }
 

@@ -1,5 +1,4 @@
 import { getSpacing } from '../styleHelpers/getSpacing';
-import { registerComponentStyles } from '../theme/defaultComponentStyles';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
@@ -11,6 +10,8 @@ export type ButtonStyleProperties =
   | 'primary'
   | 'secondary'
   | 'text';
+
+export type ButtonColor = 'brand' | 'plain' | 'positive' | 'negative';
 
 export interface ButtonBaseStyles extends BaseStyles<ButtonStyleProperties> {
   icon: {
@@ -84,6 +85,11 @@ export interface ButtonStyles {
   negative: ButtonPositiveColorStyles;
 }
 
+const black = themeVars.colors.common.black;
+const white = themeVars.colors.common.white;
+const transparent = 'transparent';
+const gray = themeVars.colors.gray;
+
 export const buttonStyles: ButtonStyles = {
   base: {
     borderRadius: getSpacing(2),
@@ -126,170 +132,74 @@ export const buttonStyles: ButtonStyles = {
     },
   },
   plain: {
-    outlineColor: themeVars.colors.gray[50],
+    outlineColor: gray[50],
     primary: {
-      color: themeVars.colors.common.black,
-      backgroundColor: themeVars.colors.gray[50],
-      borderColor: themeVars.colors.gray[100],
-      hover: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[100],
-        borderColor: themeVars.colors.gray[200],
-      },
-      active: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[200],
-        borderColor: themeVars.colors.gray[300],
-      },
+      ...getColorTriple(black, gray[50], gray[100]),
+      hover: getColorTriple(black, gray[100], gray[200]),
+      active: getColorTriple(black, gray[200], gray[300]),
     },
     primaryInverted: {
-      color: themeVars.colors.common.black,
-      backgroundColor: themeVars.colors.common.white,
-      borderColor: themeVars.colors.common.white,
-      hover: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[50],
-        borderColor: themeVars.colors.gray[50],
-      },
-      active: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[100],
-        borderColor: themeVars.colors.gray[100],
-      },
+      ...getColorTriple(black, white, white),
+      hover: getColorTriple(black, gray[50], gray[50]),
+      active: getColorTriple(black, gray[100], gray[100]),
     },
     secondary: {
-      color: themeVars.colors.common.black,
-      backgroundColor: 'transparent',
-      borderColor: themeVars.colors.common.black,
-      hover: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[50],
-        borderColor: themeVars.colors.common.black,
-      },
-      active: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[100],
-        borderColor: themeVars.colors.common.black,
-      },
+      ...getColorTriple(black, transparent, black),
+      hover: getColorTriple(black, gray[50], black),
+      active: getColorTriple(black, gray[100], black),
     },
     secondaryInverted: {
-      color: themeVars.colors.common.white,
-      backgroundColor: 'transparent',
-      borderColor: themeVars.colors.common.white,
-      hover: {
-        color: themeVars.colors.common.white,
-        backgroundColor: themeVars.colors.gray[800],
-        borderColor: themeVars.colors.common.white,
-      },
-      active: {
-        color: themeVars.colors.common.white,
-        backgroundColor: themeVars.colors.gray[600],
-        borderColor: themeVars.colors.common.white,
-      },
+      ...getColorTriple(white, transparent, white),
+      hover: getColorTriple(white, gray[800], white),
+      active: getColorTriple(white, gray[600], white),
     },
     text: {
-      color: themeVars.colors.common.black,
-      backgroundColor: 'transparent',
-      borderColor: 'transparent',
-      hover: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[50],
-        borderColor: 'transparent',
-      },
-      active: {
-        color: themeVars.colors.common.black,
-        backgroundColor: themeVars.colors.gray[100],
-        borderColor: 'transparent',
-      },
+      ...getColorTriple(black, transparent, transparent),
+      hover: getColorTriple(black, gray[50], transparent),
+      active: getColorTriple(black, gray[100], transparent),
     },
     textInverted: {
-      color: themeVars.colors.common.white,
-      backgroundColor: 'transparent',
-      borderColor: 'transparent',
-      hover: {
-        color: themeVars.colors.common.white,
-        backgroundColor: themeVars.colors.gray[800],
-        borderColor: 'transparent',
-      },
-      active: {
-        color: themeVars.colors.common.white,
-        backgroundColor: themeVars.colors.gray[600],
-        borderColor: 'transparent',
-      },
+      ...getColorTriple(white, transparent, transparent),
+      hover: getColorTriple(white, gray[800], transparent),
+      active: getColorTriple(white, gray[600], transparent),
     },
   },
-  brand: {
-    outlineColor: themeVars.colors.brand.lightest,
-    primary: createShadedButtonPrimaryStyles('brand'),
-    primaryInverted: createShadedButtonPrimaryInvertedStyles('brand'),
-    secondary: createShadedButtonSecondaryStyles('brand'),
-    secondaryInverted: createShadedButtonSecondaryInvertedStyles('brand'),
-    text: createShadedButtonTextStyles('brand'),
-    textInverted: createShadedButtonTextInvertedStyles('brand'),
-  },
-  positive: {
-    outlineColor: themeVars.colors.positive.lightest,
-    primary: createShadedButtonPrimaryStyles('positive'),
-    primaryInverted: createShadedButtonPrimaryInvertedStyles('positive'),
-    secondary: createShadedButtonSecondaryStyles('positive'),
-    secondaryInverted: createShadedButtonSecondaryInvertedStyles('positive'),
-    text: createShadedButtonTextStyles('positive'),
-    textInverted: createShadedButtonTextInvertedStyles('positive'),
-  },
-  negative: {
-    outlineColor: themeVars.colors.negative.lightest,
-    primary: createShadedButtonPrimaryStyles('negative'),
-    primaryInverted: createShadedButtonPrimaryInvertedStyles('negative'),
-    secondary: createShadedButtonSecondaryStyles('negative'),
-    secondaryInverted: createShadedButtonSecondaryInvertedStyles('negative'),
-    text: createShadedButtonTextStyles('negative'),
-    textInverted: createShadedButtonTextInvertedStyles('negative'),
-  },
+  brand: createButtonColorStyles('brand'),
+  positive: createButtonColorStyles('positive'),
+  negative: createButtonColorStyles('negative'),
 };
 
-function createShadedButtonPrimaryStyles(
-  color: 'brand' | 'negative' | 'positive'
-): ButtonShadedVariantStyles {
+function createButtonColorStyles(color: ButtonColor): ButtonColorStyles {
   return {
-    color: themeVars.colors[color].contrastText,
-    backgroundColor: themeVars.colors[color].main,
-    borderColor: themeVars.colors[color].main,
-    hover: {
-      color: themeVars.colors[color].contrastText,
-      backgroundColor: themeVars.colors[color].dark,
-      borderColor: themeVars.colors[color].dark,
-    },
-    active: {
-      color: themeVars.colors[color].contrastText,
-      backgroundColor: themeVars.colors[color].darkest,
-      borderColor: themeVars.colors[color].darkest,
-    },
+    outlineColor: themeVars.colors[color].lightest,
+    primary: createShadedButtonPrimaryStyles(color),
+    primaryInverted: createShadedButtonPrimaryInvertedStyles(color),
+    secondary: createShadedButtonSecondaryStyles(color),
+    secondaryInverted: createShadedButtonSecondaryInvertedStyles(color),
+    text: createShadedButtonTextStyles(color),
+    textInverted: createShadedButtonTextInvertedStyles(color),
   };
 }
 
-function createShadedButtonPrimaryInvertedStyles(
-  color: 'brand' | 'negative' | 'positive'
-): ButtonShadedVariantStyles {
+function createShadedButtonPrimaryStyles(color: ButtonColor): ButtonShadedVariantStyles {
+  const colors = themeVars.colors[color];
   return {
-    color: themeVars.colors[color].main,
-    backgroundColor: themeVars.colors[color].contrastText,
-    borderColor: themeVars.colors[color].contrastText,
-    hover: {
-      color: themeVars.colors[color].main,
-      backgroundColor: themeVars.colors[color].lightest,
-      borderColor: themeVars.colors[color].lightest,
-    },
-    active: {
-      color: themeVars.colors[color].main,
-      backgroundColor: themeVars.colors[color].light,
-      borderColor: themeVars.colors[color].light,
-    },
+    ...getColorTriple(colors.contrastText, colors.main, colors.main),
+    hover: getColorTriple(colors.contrastText, colors.dark, colors.dark),
+    active: getColorTriple(colors.contrastText, colors.darkest, colors.darkest),
   };
 }
 
-function createShadedButtonSecondaryStyles(
-  color: 'brand' | 'negative' | 'positive'
-): ButtonShadedVariantStyles {
+function createShadedButtonPrimaryInvertedStyles(color: ButtonColor): ButtonShadedVariantStyles {
+  const colors = themeVars.colors[color];
+  return {
+    ...getColorTriple(colors.main, colors.contrastText, colors.contrastText),
+    hover: getColorTriple(colors.main, colors.lightest, colors.lightest),
+    active: getColorTriple(colors.main, colors.light, colors.light),
+  };
+}
+
+function createShadedButtonSecondaryStyles(color: ButtonColor): ButtonShadedVariantStyles {
   const textStyles = createShadedButtonTextStyles(color);
   return {
     ...textStyles,
@@ -305,9 +215,7 @@ function createShadedButtonSecondaryStyles(
   };
 }
 
-function createShadedButtonSecondaryInvertedStyles(
-  color: 'brand' | 'negative' | 'positive'
-): ButtonShadedVariantStyles {
+function createShadedButtonSecondaryInvertedStyles(color: ButtonColor): ButtonShadedVariantStyles {
   const textStyles = createShadedButtonTextInvertedStyles(color);
   return {
     ...textStyles,
@@ -323,44 +231,28 @@ function createShadedButtonSecondaryInvertedStyles(
   };
 }
 
-function createShadedButtonTextStyles(
-  color: 'brand' | 'negative' | 'positive'
-): ButtonShadedVariantStyles {
+function createShadedButtonTextStyles(color: ButtonColor): ButtonShadedVariantStyles {
+  const colors = themeVars.colors[color];
   return {
-    color: themeVars.colors[color].dark,
-    backgroundColor: 'transparent',
-    borderColor: 'transparent',
-    hover: {
-      color: themeVars.colors[color].darkest,
-      backgroundColor: themeVars.colors[color].lightest,
-      borderColor: 'transparent',
-    },
-    active: {
-      color: themeVars.colors[color].darkest,
-      backgroundColor: themeVars.colors[color].light,
-      borderColor: 'transparent',
-    },
+    ...getColorTriple(colors.dark, transparent, transparent),
+    hover: getColorTriple(colors.darkest, colors.lightest, transparent),
+    active: getColorTriple(colors.darkest, colors.light, transparent),
   };
 }
 
-function createShadedButtonTextInvertedStyles(
-  color: 'brand' | 'negative' | 'positive'
-): ButtonShadedVariantStyles {
+function createShadedButtonTextInvertedStyles(color: ButtonColor): ButtonShadedVariantStyles {
+  const colors = themeVars.colors[color];
   return {
-    color: themeVars.colors[color].contrastText,
-    backgroundColor: 'transparent',
-    borderColor: 'transparent',
-    hover: {
-      color: themeVars.colors[color].contrastText,
-      backgroundColor: themeVars.colors[color].dark,
-      borderColor: 'transparent',
-    },
-    active: {
-      color: themeVars.colors[color].contrastText,
-      backgroundColor: themeVars.colors[color].darkest,
-      borderColor: 'transparent',
-    },
+    ...getColorTriple(colors.contrastText, transparent, transparent),
+    hover: getColorTriple(colors.contrastText, colors.dark, transparent),
+    active: getColorTriple(colors.contrastText, colors.darkest, transparent),
   };
 }
 
-registerComponentStyles('button', buttonStyles);
+function getColorTriple(color: string, backgroundColor: string, borderColor: string) {
+  return {
+    color,
+    backgroundColor,
+    borderColor,
+  };
+}

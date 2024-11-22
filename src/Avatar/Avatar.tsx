@@ -1,13 +1,15 @@
-import React, { forwardRef, FC } from 'react';
-import styled, { css } from 'styled-components';
-import { LayoutBoxProps } from '../Box';
-import { Image, ImageProps } from '../Image';
+import React, { forwardRef } from 'react';
+import { styled, css } from 'styled-components';
+import { Image } from '../Image';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { conditionalStyles, getComponentStyle } from '../styleHelpers';
-import { BaseProps } from '../types';
-import { AvatarStyleProperties } from './styles';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
+import type { FC, RefAttributes, ForwardRefExoticComponent } from 'react';
+import type { LayoutBoxProps } from '../Box';
+import type { ImageProps } from '../Image';
+import type { BaseProps } from '../types';
+import type { AvatarStyleProperties } from './styles';
 
 export type AvatarSize = 'tiny' | 'small' | 'medium' | 'large';
 export type AvatarVariant = 'square' | 'circle';
@@ -34,7 +36,7 @@ interface AvatarImageProps extends ImageProps {
 }
 
 const AvatarImage = styled<
-  React.ForwardRefExoticComponent<AvatarImageProps & React.RefAttributes<HTMLImageElement>>
+  ForwardRefExoticComponent<AvatarImageProps & RefAttributes<HTMLImageElement>>
 >(Image as any)`
   ${baseStyle}
   ${conditionalStyles('variant', {

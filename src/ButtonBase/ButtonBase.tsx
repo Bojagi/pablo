@@ -1,6 +1,7 @@
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
+import { omit } from '../utils/omit';
 
 export type ButtonSize = 'small' | 'medium' | 'large';
 export interface ButtonBaseProps extends LayoutBoxProps {
@@ -31,5 +32,5 @@ export const buttonBaseStyles: any = [
       cursor: 'normal',
     },
   }),
-  ({ size, ...props }) => layoutInterpolationFn(props),
+  (props: any) => layoutInterpolationFn(omit(props, ['size'])),
 ];

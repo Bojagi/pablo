@@ -1,7 +1,8 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { Box, LayoutBoxProps, layoutInterpolationFn } from '../Box';
-import { Style } from '../theme/types';
+import { styled, css } from 'styled-components';
+import { Box, layoutInterpolationFn } from '../Box';
+import type { LayoutBoxProps } from '../Box';
+import type { Style } from '../theme/types';
 import { InfoText, ParagraphBold } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
@@ -39,7 +40,7 @@ export interface BaseInputProps<E extends HTMLElement>
 
 export type InputVariant = 'filled' | 'outline';
 
-export type InnerInputProps<P = {}> = LayoutBoxProps &
+export type InnerInputProps<P = object> = LayoutBoxProps &
   P & {
     error?: React.ReactNode;
     fullWidth?: boolean;

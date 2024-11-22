@@ -6,8 +6,6 @@ import { BaseInput, InnerInputProps, InputVariant } from '../shared/BaseInput';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
-import { registerComponentStyles } from '../theme/defaultComponentStyles';
-import { nativeSelectStyles } from './styles';
 
 export interface NativeSelectProps extends LayoutBoxProps {
   id?: string;
@@ -79,5 +77,3 @@ export const NativeSelect = forwardRef<HTMLDivElement, NativeSelectProps>(
     );
   }
 );
-
-registerComponentStyles('nativeSelect', nativeSelectStyles);

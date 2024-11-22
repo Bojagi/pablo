@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import f from 'fs';
+import path from 'path';
 
 const styleFiles = fs
   .readdirSync(path.join(__dirname, 'src'))
@@ -22,4 +22,4 @@ const config = {
   setupFilesAfterEnv: ['<rootDir>/jestSetup.ts', ...styleFiles],
 };
 
-module.exports = config;
+export default config;

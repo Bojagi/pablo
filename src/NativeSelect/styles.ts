@@ -2,7 +2,6 @@ import { css } from 'styled-components';
 import { inputBaseStyles, InputBaseStyles } from '../shared/inputBaseStyles';
 import { Style } from '../theme/types';
 import { getSpacing } from '../styleHelpers';
-import { registerComponentStyles } from '../theme';
 
 export interface NativeSelectStyles extends InputBaseStyles {
   adornmentGap: Style;
@@ -16,5 +15,3 @@ export const nativeSelectStyles: NativeSelectStyles = {
   arrowGap: getSpacing(4),
   reservedArrowSpace: css`calc(${getSpacing(4)} * 2 + 8px)`,
 };
-
-registerComponentStyles('nativeSelect', nativeSelectStyles);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'styled-components';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 import { Flex } from '../Box';
 import { Button } from '../Button';
 import { Tooltip } from './Tooltip';

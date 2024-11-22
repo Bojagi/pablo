@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 import { GitPullRequest } from 'react-feather';
 import { css, keyframes } from 'styled-components';
 import { Flex, Box } from '../Box';

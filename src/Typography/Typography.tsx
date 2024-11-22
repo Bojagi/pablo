@@ -1,11 +1,7 @@
 import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
+import { styled, css } from 'styled-components';
 import { typography } from '@styled-system/typography';
-import {
-  TypographyProps as StyledSystemTypographyProps,
-  // Just the types, so exclude from eslint
-  // eslint-disable-next-line import/no-extraneous-dependencies
-} from 'styled-system';
+import type { TypographyProps as StyledSystemTypographyProps } from 'styled-system';
 import { boxInterpolateFn, BoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { BaseProps } from '../types';

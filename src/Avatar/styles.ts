@@ -1,4 +1,3 @@
-import { registerComponentStyles } from '../theme/defaultComponentStyles';
 import { BaseStyles } from '../types';
 
 export type AvatarStyleProperties = 'circle' | 'square';
@@ -25,5 +24,3 @@ export const avatarStyles: AvatarStyles = {
     large: 64,
   },
 };
-
-registerComponentStyles('avatar', avatarStyles);

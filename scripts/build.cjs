@@ -51,6 +51,8 @@ async function run(argv) {
     srcDir,
     '--out-dir',
     outDir,
+    '--out-file-extension',
+    bundle === 'cjs' || bundle === 'es' ? '.cjs' : '.js',
     '--ignore',
     '"**/*.test.js","**/*.spec.ts","**/*.d.ts"',
   ].join(' ');

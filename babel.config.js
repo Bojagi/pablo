@@ -1,4 +1,4 @@
-module.exports = (api) => {
+export default (api) => {
   const useESModules = api.env(['esm', 'rollup']);
   const modernJS = api.env(['esm', 'es']);
 
@@ -23,7 +23,7 @@ module.exports = (api) => {
         ],
       ];
 
-  return {
+  const returnValue = {
     presets: [...basePresets, '@babel/typescript', '@babel/react'],
     plugins: [
       [
@@ -38,4 +38,13 @@ module.exports = (api) => {
       '@babel/plugin-proposal-optional-chaining',
     ],
   };
+
+  if (!api.env(['rollup'])) {
+    
+    returnValue.plugins.push(['babel-plugin-add-import-extension', { extension: useESModules ? 'js' : 'cjs' }]
+
+    );
+  }
+
+  return returnValue;
 };

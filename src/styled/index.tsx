@@ -8,8 +8,8 @@ type Styles<P extends Record<string, any>> =
   | Array<StyleFn<P> | string>
   | Record<string, any>;
 
-export const styled = <P extends Record<string, any>>(Component) => (
-  styles: Styles<P>
-): ComponentType<P> =>
-  (sc(Component)`${styles}
-    ${(props) => props.cssStyles}` as unknown) as ComponentType<P>;
+export const styled =
+  <P extends Record<string, any>>(Component) =>
+  (styles: Styles<P>): ComponentType<P> =>
+    sc(Component)`${styles}
+    ${(props) => props.cssStyles}` as unknown as ComponentType<P>;

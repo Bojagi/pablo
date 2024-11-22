@@ -1,9 +1,11 @@
 import React, { forwardRef, ReactNode, useState } from 'react';
-import { Transition, TransitionStatus } from 'react-transition-group';
-import styled, { Interpolation } from 'styled-components';
+import { Transition } from 'react-transition-group';
+import { styled } from 'styled-components';
 import useResizeObserver from 'use-resize-observer';
 import { useForwardRef } from '../utils/useForwardRef';
 import { useMountedRef } from '../utils/useMountedRef';
+import type { TransitionStatus } from 'react-transition-group';
+import type { Interpolation } from 'styled-components';
 
 export interface InnerInOutAnimationProps {
   state?: TransitionStatus;

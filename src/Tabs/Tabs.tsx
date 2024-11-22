@@ -162,7 +162,7 @@ function getFittingChildNodeCount(
   const moreButtonWidth = getNodeWidth(moreButtonRef);
   let countedWidth = moreButtonWidth;
   let i = 0;
-  // eslint-disable-next-line no-restricted-syntax
+
   for (const node of Array.from(parentNode.childNodes)) {
     if (node.nodeType === Node.ELEMENT_NODE && node !== moreButtonRef) {
       const nodeWidth = getNodeWidth(node as HTMLElement);

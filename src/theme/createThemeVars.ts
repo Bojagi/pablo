@@ -18,7 +18,7 @@ function internalThemeVars<T extends Record<string, any>>(
   }, {} as any);
 }
 
-export function createThemeVarArray<T extends string[]>(
+export function createThemeVarArray<T extends readonly string[]>(
   base: string,
   values: T
 ): Record<T[number], string> {

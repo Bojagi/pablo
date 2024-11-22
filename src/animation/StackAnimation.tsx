@@ -1,4 +1,5 @@
-import { css, Interpolation } from 'styled-components';
+import { css } from 'styled-components';
+import type { Interpolation } from 'styled-components';
 import {
   createInOutAnimation,
   InnerInOutAnimationProps,
@@ -27,7 +28,7 @@ const stackAnimationExit = css`
   transform: translateY(-50%);
 ` as Interpolation<any>;
 
-export interface StackAnimationProps extends InOutAnimationProps {}
+export type StackAnimationProps = InOutAnimationProps;
 
 export const StackAnimation = createInOutAnimation<StackAnimationProps>({
   baseStyles: stackAnimationBase,

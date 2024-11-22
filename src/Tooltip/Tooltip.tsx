@@ -1,6 +1,6 @@
-import React, { ReactComponentElement, useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { BasePlacement } from '@popperjs/core';
+import React, { ComponentElement, useEffect, useState } from 'react';
+import { styled } from 'styled-components';
+import type { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
 import { Typography } from '../Typography';
 import { conditionalStyles, getComponentStyle } from '../styleHelpers';
@@ -15,10 +15,9 @@ import { Popover } from '../Popover/Popover';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { SlideAnimation } from '../animation/SlideAnimation';
 import { BaseProps } from '../types';
-import { TooltipStyleProperties, tooltipStyles } from './styles';
+import { TooltipStyleProperties } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
-import { registerComponentStyles } from '../theme';
 
 export type TooltipSide = BasePlacement;
 
@@ -27,7 +26,7 @@ export interface TooltipProps extends LayoutBoxProps, BaseProps<TooltipStyleProp
   side?: TooltipSide;
   delay?: number;
   disabled?: boolean;
-  children: ReactComponentElement<any>;
+  children: ComponentElement<any, any>;
 }
 
 interface TooltipPopoverProps extends BaseProps<TooltipStyleProperties> {
@@ -120,5 +119,3 @@ export function Tooltip({
     </Popover>
   );
 }
-
-registerComponentStyles('tooltip', tooltipStyles);

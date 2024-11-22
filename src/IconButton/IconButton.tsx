@@ -1,10 +1,11 @@
-import styled, { css } from 'styled-components';
+import { styled, css } from 'styled-components';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { BaseProps } from '../types';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { IconButtonStyleProperties } from './styles';
+import { omit } from '../utils/omit';
 
 export type IconButtonSize = 'small' | 'medium' | 'large';
 export type IconButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
@@ -82,5 +83,5 @@ export const IconButton = styled.button.attrs<IconButtonProps>((props) => ({
           }
         `}
 
-  ${({ size, ...props }) => layoutInterpolationFn(props)}
+  ${(props) => layoutInterpolationFn(omit(props, ['size']))}
 `;

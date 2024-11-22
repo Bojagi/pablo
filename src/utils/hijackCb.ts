@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-function-type */
 export function hijackCbBefore<F extends Function>(cb: F | undefined, hijackFn: () => void) {
   return (...args) => {
     hijackFn();

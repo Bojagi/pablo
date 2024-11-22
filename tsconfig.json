@@ -18,7 +18,7 @@
     "noUnusedLocals": true
   },
   "paths": {
-    "@/*": ["src/*"],
+    "#/*": ["src/*"],
   },
   "include": ["src", "./jestSetup.ts", "testUtils/renderStyledComponent.tsx", "testUtils/waitOneTick.tsx"],
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest"]

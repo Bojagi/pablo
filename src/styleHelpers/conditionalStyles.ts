@@ -1,4 +1,4 @@
-import { Interpolation, ExecutionContext } from 'styled-components';
+import type { Interpolation, ExecutionContext } from 'styled-components';
 import { PabloThemeableProps, PabloTheme } from '../theme/types';
 
 export function conditionalStyles<P extends Record<string, any>, PK extends keyof P = keyof P>(

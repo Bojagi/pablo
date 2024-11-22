@@ -1,5 +1,4 @@
 import { getSpacing } from '../styleHelpers/getSpacing';
-import { registerComponentStyles } from '../theme/defaultComponentStyles';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
@@ -21,5 +20,3 @@ export const cardStyles: CardStyles = {
   color: themeVars.colors.common.whiteContrastText,
   shadow: ['0px 1px 2px rgba(0, 0, 0, 0.1)', '0px 4px 10px rgba(0, 0, 0, 0.05)'],
 };
-
-registerComponentStyles('card', cardStyles);

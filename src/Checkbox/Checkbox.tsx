@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
+import { styled, css } from 'styled-components';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 import {
   BaseCheckable,
@@ -12,8 +12,8 @@ import { baseStyle } from '../shared/baseStyle';
 
 const checkboxSize = css`
   calc(${getComponentStyle('checkbox.handleSize.{size}')} + 2 * (${getComponentStyle(
-  'checkbox.innerPadding.{size}'
-)} + ${getComponentStyle('checkbox.borderWidth')}px))
+    'checkbox.innerPadding.{size}'
+  )} + ${getComponentStyle('checkbox.borderWidth')}px))
 `;
 
 const CheckboxBox = styled.div<CheckableBoxProps>`
@@ -51,7 +51,7 @@ const CheckboxHandle = styled.div<CheckableHandleProps>`
   ${getCustomStyles('checkbox.styles', 'handle')}
 `;
 
-export interface CheckboxProps extends BaseCheckableProps {}
+export type CheckboxProps = BaseCheckableProps;
 
 export const Checkbox = forwardRef<HTMLDivElement, CheckboxProps>((props, ref) => (
   <BaseCheckable

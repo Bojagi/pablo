@@ -1,13 +1,11 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseInput, InnerInputProps, InputVariant } from '../shared/BaseInput';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
-import { registerComponentStyles } from '../theme/defaultComponentStyles';
-import { textareaStyles } from './styles';
 
 export interface TextAreaProps extends LayoutBoxProps {
   id?: string;
@@ -22,10 +20,9 @@ export interface TextAreaProps extends LayoutBoxProps {
   onChange: (newValue: string, e: React.FormEvent<HTMLTextAreaElement>) => void;
 }
 
-interface InnerTextAreaProps
-  extends InnerInputProps<{
-    rows: number | undefined;
-  }> {}
+type InnerTextAreaProps = InnerInputProps<{
+  rows: number | undefined;
+}>;
 
 const InnerTextArea = styled.textarea<InnerTextAreaProps>`
   ${baseStyle}
@@ -58,5 +55,3 @@ export const TextArea = forwardRef<HTMLDivElement, TextAreaProps>(
     );
   }
 );
-
-registerComponentStyles('textArea', textareaStyles);

@@ -1,9 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import React, { ReactNode } from 'react';
-import { theme, useConfig, ComponentsProvider } from 'docz';
+import React from 'react';
 
-import { PabloThemeProvider } from '@/theme/PabloThemeProvider';
-import { ToastProvider } from '@/ToastProvider';
+import { PabloThemeProvider } from '../theme/PabloThemeProvider';
+import { ToastProvider } from '../ToastProvider';
 
 export default ({ children }) => (
   <PabloThemeProvider>

@@ -15,11 +15,13 @@ export function createBreakpoints(
   array: BreakpointsArray,
   usedBreakpointNames: Breakpoint[] = breakpointNames
 ): Breakpoints {
-  const newBreakpoints = ([...array] as unknown) as Breakpoints;
-  usedBreakpointNames.forEach((bp, index) => {
-    newBreakpoints[bp] = newBreakpoints[index];
-  });
-  newBreakpoints.breakpointNames = usedBreakpointNames;
+  const newBreakpoints: Breakpoints = usedBreakpointNames.reduce(
+    (acc, bp, index) => ({
+      ...acc,
+      [bp]: array[index],
+    }),
+    { array, breakpointNames: usedBreakpointNames } as unknown as Breakpoints
+  );
 
   return newBreakpoints as Breakpoints;
 }

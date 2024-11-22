@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
+import { styled, css } from 'styled-components';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 import {
   BaseCheckable,
@@ -9,13 +9,11 @@ import {
 } from '../shared/BaseCheckable';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
-import { switchStyles } from './styles';
-import { registerComponentStyles } from '../theme/defaultComponentStyles';
 
 const switchBoxSize = (multiplier) => css`
   calc(${multiplier} * ${getComponentStyle('switch.handleSize.{size}')} + 2 * (${getComponentStyle(
-  'switch.innerPadding.{size}'
-)} + ${getComponentStyle('switch.borderWidth')}px))
+    'switch.innerPadding.{size}'
+  )} + ${getComponentStyle('switch.borderWidth')}px))
 `;
 
 const SwitchBox = styled.div<CheckableBoxProps>`
@@ -64,7 +62,7 @@ const SwitchHandle = styled.div<CheckableHandleProps>`
   ${getCustomStyles('switch.styles', 'handle')}
 `;
 
-export interface SwitchProps extends BaseCheckableProps {}
+export type SwitchProps = BaseCheckableProps;
 
 export const Switch = forwardRef<HTMLDivElement, SwitchProps>((props, ref) => (
   <BaseCheckable
@@ -77,5 +75,3 @@ export const Switch = forwardRef<HTMLDivElement, SwitchProps>((props, ref) => (
     {...props}
   />
 ));
-
-registerComponentStyles('switch', switchStyles);

@@ -5,10 +5,9 @@ import { Title } from '../Typography';
 import { getComponentStyle, shadowTransformer, transitionTransformer } from '../styleHelpers';
 import { Portal } from '../Portal/Portal';
 import { BaseProps, CssFunctionReturn } from '../types';
-import { ModalStyleProperties, modalStyles } from './styles';
+import { ModalStyleProperties } from './styles';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
-import { registerComponentStyles } from '../theme/defaultComponentStyles';
 
 export interface TopRightItemProps {
   onClose?: () => void;
@@ -181,5 +180,3 @@ export function Modal({
     </Portal>
   );
 }
-
-registerComponentStyles('modal', modalStyles);

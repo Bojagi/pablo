@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 import { BookOpen, GitPullRequest, Settings } from 'react-feather';
 import { css } from 'styled-components';
 import { Box } from '../Box';

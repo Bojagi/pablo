@@ -1,7 +1,5 @@
-import { Placement } from '@popperjs/core';
-import React, { forwardRef, ReactComponentElement, ReactElement } from 'react';
-
-import styled from 'styled-components';
+import React, { forwardRef } from 'react';
+import { styled } from 'styled-components';
 import { Box } from '../Box';
 import { Popover, PopoverProps } from '../Popover/Popover';
 import { PopoverArrow } from '../PopoverArrow/PopoverArrow';
@@ -11,9 +9,11 @@ import { BaseProps } from '../types';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { MenuItemProps } from './MenuItem';
 import { MenuStyleProperties } from './styles';
+import type { Placement } from '@popperjs/core';
+import type { ComponentElement, ReactElement } from 'react';
 
 export interface MenuProps extends BaseProps<MenuStyleProperties> {
-  children: ReactComponentElement<any>;
+  children: ComponentElement<any, any>;
   open: boolean;
   placement: Placement;
   offset?: number;

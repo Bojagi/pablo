@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 import { Bold, Italic, Crop, Edit, Underline, ArrowLeft } from 'react-feather';
 import { css } from 'styled-components';
 import { Toolbar } from './Toolbar';

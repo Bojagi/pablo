@@ -2,7 +2,6 @@ import { get } from '@styled-system/core';
 import { PabloThemeableProps } from '../theme/types';
 import { InterpolateFn } from './index';
 
-/* eslint-disable no-redeclare */
 export function getSpacing(index: number): InterpolateFn<string>;
 export function getSpacing(index: number, suffix: true): InterpolateFn<string>;
 export function getSpacing(index: number, suffix: false): InterpolateFn<number>;
@@ -13,4 +12,3 @@ export function getSpacing(index: any, suffix: any = true): any {
     return (suffix ? `${spacing}px` : spacing) as any;
   };
 }
-/* eslint-enable no-redeclare */

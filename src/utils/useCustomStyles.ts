@@ -6,7 +6,7 @@ export function useCustomStyles<S extends string>(
   stylesPath: string,
   propStyles: CustomStyles<S> = {}
 ): (key: S) => CssFunctionReturn {
-  const customThemeStyles = ((useComponentStyle(stylesPath) as unknown) as CustomStyles<S>) || {};
+  const customThemeStyles = (useComponentStyle(stylesPath) as unknown as CustomStyles<S>) || {};
 
   return (key: S) => [customThemeStyles[key], propStyles[key]];
 }

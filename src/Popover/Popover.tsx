@@ -1,16 +1,6 @@
-import React, {
-  ComponentElement,
-  ComponentType,
-  forwardRef,
-  ReactElement,
-  ReactNode,
-  Ref,
-  useEffect,
-  useState,
-} from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import { usePopper } from 'react-popper';
-import { Placement } from '@popperjs/core';
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
 import { setRef } from '../utils/setRef';
@@ -18,6 +8,8 @@ import { useReRenderForwardRef } from '../utils/useForwardRef';
 import { InOutAnimationProps, NoAnimation } from '../animation';
 import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 import { baseStyle } from '../shared/baseStyle';
+import type { Placement } from '@popperjs/core';
+import type { ComponentElement, ComponentType, ReactElement, ReactNode, Ref } from 'react';
 
 export interface PopoverProps {
   children: ComponentElement<any, any>;
@@ -88,10 +80,10 @@ export const Popover = forwardRef(
       setRef(ref, popperElement);
     }, [ref, popperElement]);
 
-    const handleClickOutside = React.useMemo(() => (open ? onClickOutside : () => {}), [
-      open,
-      onClickOutside,
-    ]);
+    const handleClickOutside = React.useMemo(
+      () => (open ? onClickOutside : () => {}),
+      [open, onClickOutside]
+    );
 
     const { styles, attributes } = usePopper(referenceElement, popperElement, {
       modifiers: [
@@ -119,7 +111,7 @@ export const Popover = forwardRef(
           ref: setReferenceElement,
           'aria-haspopup': ariaHasPopup,
         }),
-      [children, setReferenceElement]
+      [ariaHasPopup, children, setReferenceElement]
     );
 
     const clonedArrow = React.useMemo(

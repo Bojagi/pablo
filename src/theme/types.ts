@@ -1,5 +1,5 @@
 import React from 'react';
-import { CSSObject, Interpolation } from 'styled-components';
+import type { CSSObject, Interpolation } from 'styled-components';
 import { ButtonStyles } from '../Button/styles';
 import { CardStyles } from '../Card/styles';
 import { SidebarNavStyles } from '../SidebarNav/styles';
@@ -37,8 +37,8 @@ type RecursivePartial<T> = {
   [P in keyof T]?: T[P] extends (infer U)[]
     ? RecursivePartial<U>[]
     : T[P] extends object
-    ? RecursivePartial<T[P]>
-    : T[P];
+      ? RecursivePartial<T[P]>
+      : T[P];
 };
 
 export interface ComponentStyles {

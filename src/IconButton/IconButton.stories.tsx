@@ -1,5 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 import { Check } from 'react-feather';
 import { css } from 'styled-components';
 import { Flex } from '../Box';

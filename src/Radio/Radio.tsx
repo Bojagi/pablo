@@ -13,8 +13,8 @@ import { baseStyle } from '../shared/baseStyle';
 
 const radioBoxSize = css`
   calc(${getComponentStyle('radio.handleSize.{size}')} + 2 * (${getComponentStyle(
-  'radio.innerPadding.{size}'
-)} + ${getComponentStyle('radio.borderWidth')}px))
+    'radio.innerPadding.{size}'
+  )} + ${getComponentStyle('radio.borderWidth')}px))
 `;
 
 const RadioBox = styled.div<CheckableBoxProps>`

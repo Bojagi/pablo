@@ -1,4 +1,5 @@
-import { css, Interpolation } from 'styled-components';
+import { css } from 'styled-components';
+import type { Interpolation } from 'styled-components';
 import { createInOutAnimation, InOutAnimationProps } from './InOutAnimation';
 
 const fadeAnimationBase: any = css<FadeAnimationProps>`
@@ -15,7 +16,7 @@ const fadeAnimationExit = css`
   opacity: 0;
 ` as Interpolation<any>;
 
-export interface FadeAnimationProps extends InOutAnimationProps {}
+export type FadeAnimationProps = InOutAnimationProps;
 
 export const FadeAnimation = createInOutAnimation<FadeAnimationProps>({
   baseStyles: fadeAnimationBase,

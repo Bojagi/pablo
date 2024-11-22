@@ -1,6 +1,6 @@
 // Only types
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { TextColorProps, BackgroundColorProps } from 'styled-system';
+
+import type { TextColorProps, BackgroundColorProps } from 'styled-system';
 import { system } from '@styled-system/core';
 import { themeVars } from '../theme/themeVars';
 import { getByPath } from '../utils/getByPath';
