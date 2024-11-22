@@ -37,7 +37,7 @@ const defaultComponentStyles = {
   sidebarNav: sidebarNavStyles,
   switch: switchStyles,
   tabs: tabsStyles,
-  textarea: textareaStyles,
+  textArea: textareaStyles,
   toastCard: toastCardStyles,
   toolbar: toolbarStyles,
   tooltip: tooltipStyles,

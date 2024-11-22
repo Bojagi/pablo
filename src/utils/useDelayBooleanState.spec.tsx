@@ -3,6 +3,8 @@ import { useDelayedBooleanState } from './useDelayBooleanState';
 
 beforeEach(() => {
   jest.useFakeTimers();
+  jest.spyOn(global, 'setTimeout');
+  jest.spyOn(global, 'clearTimeout');
 });
 
 afterEach(cleanup);
@@ -50,7 +52,7 @@ test('Update state from true to false and set it directly (no delay)', () => {
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 0);
 
   act(() => {
-    jest.runTimersToTime(0);
+    jest.advanceTimersByTime(0);
   });
   expect(result.current[0]).toBeFalse();
 });
@@ -64,7 +66,7 @@ test('Update state from true to false and set it with delay when set', () => {
   expect(setTimeout).toHaveBeenCalledTimes(1);
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 200);
   act(() => {
-    jest.runTimersToTime(200);
+    jest.advanceTimersByTime(200);
   });
   expect(result.current[0]).toBeFalse();
 });
@@ -81,7 +83,7 @@ test('Update state from false to true and within delay time back to false ... an
   expect(clearTimeout).toHaveBeenCalledTimes(0);
 
   act(() => {
-    jest.runTimersToTime(50);
+    jest.advanceTimersByTime(50);
     result.current[1](false);
   });
 
@@ -91,7 +93,7 @@ test('Update state from false to true and within delay time back to false ... an
 
   // Run an additional 100ms (just to be sure)
   act(() => {
-    jest.runTimersToTime(100);
+    jest.advanceTimersByTime(100);
   });
 
   // Needs to be false still (timeout callback was not called)

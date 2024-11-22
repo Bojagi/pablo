@@ -1,7 +1,7 @@
-export default (api) => {
+module.exports = (api) => {
   const useESModules = api.env(['esm', 'rollup']);
   const modernJS = api.env(['esm', 'es']);
-
+  
   const basePresets = modernJS
     ? [
         [
@@ -33,14 +33,13 @@ export default (api) => {
         },
       ],
       'babel-plugin-styled-components',
-      ['@babel/plugin-proposal-class-properties', { loose: true }],
+      ['@babel/plugin-proposal-class-properties', { loose: false }],
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-proposal-optional-chaining',
     ],
   };
 
-  if (!api.env(['rollup'])) {
-    
+  if (!api.env(['rollup', 'test'])) {
     returnValue.plugins.push(['babel-plugin-add-import-extension', { extension: useESModules ? 'js' : 'cjs' }]
 
     );

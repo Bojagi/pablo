@@ -15,6 +15,15 @@ import { Tooltip } from './Tooltip';
 
 beforeEach(() => {
   jest.useFakeTimers();
+  jest.spyOn(global, 'setTimeout');
+});
+
+beforeEach(() => {
+  jest.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => cb(123) as any);
+});
+
+afterEach(() => {
+  (window.requestAnimationFrame as any).mockRestore();
 });
 
 afterEach(cleanup);
@@ -121,6 +130,7 @@ describe.each([
     });
     // This is because of passing ref on effect, which happens on next tick
     await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
+    console.log('wheee');
 
     // Trigger resize update and update the size
     act(() => {

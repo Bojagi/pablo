@@ -1,5 +1,7 @@
-import f from 'fs';
+import fs from 'fs';
 import path from 'path';
+
+const __dirname = import.meta.dirname;
 
 const styleFiles = fs
   .readdirSync(path.join(__dirname, 'src'))
@@ -17,6 +19,7 @@ const styleFiles = fs
 
 const config = {
   // preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/index.ts', '!**/*.stories.tsx'],
   testPathIgnorePatterns: ['/node_modules/', '/build/'],
   setupFilesAfterEnv: ['<rootDir>/jestSetup.ts', ...styleFiles],
