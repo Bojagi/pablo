@@ -23,13 +23,13 @@ They can also be `small` and `large`.
 
 <Playground>
   <Box display="flex" mx={-4}>
-    <IconButton mx={4} onClick="You clicked me!">
+    <IconButton mx={1} onClick="You clicked me!">
       <Trash2 />
     </IconButton>
-    <IconButton size="small" mx={4} onClick="You clicked me!">
+    <IconButton size="small" mx={1} onClick="You clicked me!">
       <Trash2 />
     </IconButton>
-    <IconButton size="large" mx={4} onClick="You clicked me!">
+    <IconButton size="large" mx={1} onClick="You clicked me!">
       <Trash2 />
     </IconButton>
   </Box>
@@ -60,13 +60,13 @@ The default color is `plain`.
     const [active, setActive] = React.useState(props.active);
     return (
       <Box display="flex" mx={-4}>
-        <IconButton mx={4} color="brand" active={active} onClick={() => setActive(!active)}>
+        <IconButton mx={1} color="brand" active={active} onClick={() => setActive(!active)}>
           <Crop />
         </IconButton>
-        <IconButton mx={4} color="positive" active={active} onClick={() => setActive(!active)}>
+        <IconButton mx={1} color="positive" active={active} onClick={() => setActive(!active)}>
           <CheckCircle />
         </IconButton>
-        <IconButton mx={4} color="negative" active={active} onClick={() => setActive(!active)}>
+        <IconButton mx={1} color="negative" active={active} onClick={() => setActive(!active)}>
           <Trash2 />
         </IconButton>
       </Box>

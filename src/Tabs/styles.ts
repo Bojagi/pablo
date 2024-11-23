@@ -54,7 +54,7 @@ export interface TabsStyles extends BaseStyles<TabsStyleProperties> {
 }
 
 export const tabsStyles: TabsStyles = {
-  gap: getSpacing(2),
+  gap: getSpacing(0.5),
   tab: {
     color: themeVars.colors.common.black,
     icon: {
@@ -62,7 +62,7 @@ export const tabsStyles: TabsStyles = {
       size: getComponentStyle('button.base.icon.size.medium'),
     },
     padding: (props) => css`
-      ${getSpacing(4)(props)} ${getSpacing(5)(props)} ${getSpacing(5)(props)}
+      ${getSpacing(1)(props)} ${getSpacing(1.5)(props)} ${getSpacing(1.5)(props)}
     `,
     margin: (props) => css`0 0 ${getSpacing(0)(props)}`,
     hover: {
@@ -76,15 +76,15 @@ export const tabsStyles: TabsStyles = {
     },
     selected: {
       padding: (props) => css`
-        ${getSpacing(4)(props)} ${getSpacing(5)(props)} ${getSpacing(5)(props)}
+        ${getSpacing(1)(props)} ${getSpacing(1.5)(props)} ${getSpacing(1.5)(props)}
       `,
       margin: '0',
       color: themeVars.colors.brand.main,
       bottomBorder: {
         color: themeVars.colors.brand.main,
-        thickness: getSpacing(2),
-        gap: getSpacing(4),
-        radius: getSpacing(2),
+        thickness: getSpacing(0.5),
+        gap: getSpacing(1),
+        radius: getSpacing(0.5),
       },
     },
   },

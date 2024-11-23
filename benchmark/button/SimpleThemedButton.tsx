@@ -22,7 +22,7 @@ const SimpleThemedButton = styled.button`
 `;
 
 const Wrapper = styled.div`
-  margin-bottom: ${getSpacing(1)};
+  margin-bottom: ${getSpacing(0.25)};
 `;
 
 export const SimpleThemedButtonApp = () => (

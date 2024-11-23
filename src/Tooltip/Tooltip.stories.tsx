@@ -12,23 +12,23 @@ export default {
 const BaseStory = (args) => (
   <Flex height="100%" width="50vw" alignItems="center" justifyContent="center">
     <Tooltip content="Left tooltip" side="left" {...args}>
-      <Button mx={5} color="plain">
+      <Button mx={1.5} color="plain">
         left
       </Button>
     </Tooltip>
     <Tooltip content="Top tooltip" side="top" {...args}>
-      <Button mx={5} color="plain">
+      <Button mx={1.5} color="plain">
         {' '}
         top
       </Button>
     </Tooltip>
     <Tooltip content="Bottom tooltip" side="bottom" {...args}>
-      <Button mx={5} color="plain">
+      <Button mx={1.5} color="plain">
         bottom
       </Button>
     </Tooltip>
     <Tooltip content="Right tooltip" side="right" {...args}>
-      <Button mx={5} color="plain">
+      <Button mx={1.5} color="plain">
         right
       </Button>
     </Tooltip>
@@ -44,7 +44,7 @@ WithDelay.args = { delay: 400 };
 export const WithDisabledButton = ({ disabled, ...args }) => (
   <Flex height="100%" width="100vw" alignItems="center" justifyContent="center">
     <Tooltip content="Top tooltip" side="top" {...args}>
-      <Button mx={5} color="plain" disabled={disabled}>
+      <Button mx={1.5} color="plain" disabled={disabled}>
         {' '}
         top
       </Button>

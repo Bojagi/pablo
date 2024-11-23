@@ -1,16 +1,8 @@
 import styled from '@emotion/styled';
-import { space } from '@styled-system/space';
 import { layout } from '@styled-system/layout';
 import { flexbox } from '@styled-system/flexbox';
 import { position } from '@styled-system/position';
-import { border } from '@styled-system/border';
-import type {
-  SpaceProps,
-  LayoutProps,
-  FlexboxProps,
-  PositionProps,
-  BorderProps,
-} from 'styled-system';
+import type { LayoutProps, FlexboxProps, PositionProps, PaddingProps } from 'styled-system';
 import { system } from '@styled-system/core';
 
 import { color, ColorProps } from './color';
@@ -19,6 +11,7 @@ import { baseStyle } from '../shared/baseStyle';
 import { getByPath } from '../utils/getByPath';
 import { themeVars } from '../theme/themeVars';
 import { interpolateCssProp } from '../utils/interpolateCssProp';
+import { margin, MarginProps, padding } from './spacingInterpolation';
 
 export interface BoxCssProps {
   css?: CssFunctionReturn;
@@ -28,17 +21,17 @@ export interface BoxFillableProps {
   fillColor?: string;
 }
 
-export type BoxProps = SpaceProps &
+export type BoxProps = MarginProps &
+  PaddingProps &
   ColorProps &
   LayoutProps &
-  BorderProps &
   FlexboxProps &
   PositionProps &
   BoxFillableProps &
   BoxCssProps;
 
 export const boxInterpolateFn = (props) =>
-  [space, color, layout, border, flexbox, position].map((fn) => fn(props));
+  [margin, padding, color, layout, flexbox, position].map((fn) => fn(props));
 
 export const Box = styled.div<BoxProps>`
   ${baseStyle}
@@ -52,10 +45,15 @@ export const Box = styled.div<BoxProps>`
   ${boxInterpolateFn}
 `;
 
-export type LayoutBoxProps = SpaceProps & FlexboxProps & LayoutProps & PositionProps & BoxCssProps;
+export type LayoutBoxProps = MarginProps &
+  PaddingProps &
+  FlexboxProps &
+  LayoutProps &
+  PositionProps &
+  BoxCssProps;
 
 export const layoutInterpolationFn = (props) =>
-  [space, layout, flexbox, position]
+  [margin, padding, layout, flexbox, position]
     .map((fn) => fn(props))
     .reduce((acc, styles) => ({ ...acc, ...styles }), {});
 

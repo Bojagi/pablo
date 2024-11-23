@@ -11,7 +11,7 @@ export interface NativeSelectStyles extends InputBaseStyles {
 
 export const nativeSelectStyles: NativeSelectStyles = {
   ...inputBaseStyles,
-  adornmentGap: getSpacing(4),
-  arrowGap: getSpacing(4),
-  reservedArrowSpace: (props) => css`calc(${getSpacing(4)(props)} * 2 + 8px)`,
+  adornmentGap: getSpacing(1),
+  arrowGap: getSpacing(1),
+  reservedArrowSpace: (props) => css`calc(${getSpacing(1)(props)} * 2 + 8px)`,
 };

@@ -85,7 +85,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
         <Flex alignItems={description ? 'flex-start' : 'center'}>
           {(type || icon) && (
             <Box
-              mr={5}
+              mr={1.5}
               data-testid="pbl-toastcard-iconbox"
               fillColor={iconColors[type || 'info']}
               css={[displayBlockIconsCss, ...getStyles('iconBox')]}

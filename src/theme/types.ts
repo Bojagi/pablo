@@ -29,7 +29,7 @@ export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
   | CSSInterpolation
   | ((props?: P) => CSSInterpolation);
 export interface PabloTheme {
-  space: Spacing;
+  spacing: Spacing;
   colors: Colors;
   typography: Typography;
   breakpoints: Breakpoints;

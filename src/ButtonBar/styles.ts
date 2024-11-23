@@ -9,5 +9,5 @@ export interface ButtonBarStyles extends BaseStyles<ButtonBarStyleProperties> {
 }
 
 export const buttonBarStyles: ButtonBarStyles = {
-  gap: getSpacing(2),
+  gap: getSpacing(0.5),
 };

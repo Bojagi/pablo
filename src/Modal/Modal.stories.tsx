@@ -143,7 +143,7 @@ WithCustomStyles.args = {
     paneBox: (props) => css`
       border: 5px solid blue;
       border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
-      padding: ${getSpacing(4)(props)};
+      padding: ${getSpacing(1)(props)};
     `,
   },
 };
@@ -180,7 +180,7 @@ export const WithCustomStylesFromTheme = () => {
       paneBox: (props) => css`
         border: 5px solid blue;
         border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
-        padding: ${getSpacing(4)(props)};
+        padding: ${getSpacing(1)(props)};
       `,
     },
   };

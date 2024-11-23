@@ -38,7 +38,7 @@ export interface ToolbarStyles extends BaseStyles<ToolbarStyleProperties> {
 }
 
 export const toolbarStyles: ToolbarStyles = {
-  gap: getSpacing(2),
+  gap: getSpacing(0.5),
   divider: {
     width: 1,
     color: themeVars.colors.borders.light,

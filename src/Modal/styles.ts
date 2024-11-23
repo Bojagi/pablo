@@ -28,15 +28,15 @@ export interface ModalStyles extends BaseStyles<ModalStyleProperties> {
 
 export const modalStyles: ModalStyles = {
   backdropColor: themeVars.colors.blackOpacity[600],
-  padding: getSpacing(7),
-  gap: getSpacing(5),
+  padding: getSpacing(3),
+  gap: getSpacing(1.5),
   backdropTransition: [['opacity', '0.3s']],
   box: {
     closedTransform: 'translateY(60px)',
     transition: [['transform', '0.3s']],
     shadow: ['0px 4px 20px rgba(0, 0, 0, 0.2)'],
     backgroundColor: themeVars.colors.background,
-    padding: getSpacing(5),
+    padding: getSpacing(1.5),
     maxWidth: {
       small: '520px',
       medium: '780px',

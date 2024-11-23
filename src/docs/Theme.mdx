@@ -177,7 +177,7 @@ With `getSpacing` you can get a spacing value of a specific index:
 ```js
 import { getSpacing } from '@bojagi/pablo/styleHelpers';
 const MyComponent = styled.div`
-  margin: ${getSpacing(4)}; /* resolves to 8px on the default theme */
+  margin: ${getSpacing(1)}; /* resolves to 8px on the default theme */
 `;
 ```
 
@@ -191,13 +191,13 @@ import { css } from '@emotion/react';
 
 const MyComponent = styled.div`
   /* Base styles (mobile and up) */
-  padding: ${getSpacing(4)}; 
+  padding: ${getSpacing(1)}; 
 
   /* Landscape tablet styles (and up) */
   ${breakpoint(
     'md',
     css`
-      padding: ${getSpacing(6)};
+      padding: ${getSpacing(1.5)};
     `,
   )}
 `;
@@ -213,13 +213,13 @@ import { css } from '@emotion/react';
 
 const MyComponent = styled.div`
   /* Landscape tablet styles (and up) */  
-  padding: ${getSpacing(6)}; 
+  padding: ${getSpacing(1.5)}; 
 
   /* Base styles (mobile and up) */  
   ${breakpoint(
     'md',
     css`
-      padding: ${getSpacing(4)};
+      padding: ${getSpacing(1)};
     `,
     mediaQueryBelow,
   )}

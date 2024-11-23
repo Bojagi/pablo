@@ -8,28 +8,28 @@ export default {
 };
 
 const BaseStory = (args) => (
-  <Flex mx={-4}>
+  <Flex mx={-1}>
     <Avatar
-      mx={4}
+      mx={1}
       size="large"
       src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
       {...args}
     />
     <Avatar
       size="medium"
-      mx={4}
+      mx={1}
       src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
       {...args}
     />
     <Avatar
       size="small"
-      mx={4}
+      mx={1}
       src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
       {...args}
     />
     <Avatar
       size="tiny"
-      mx={4}
+      mx={1}
       src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
       {...args}
     />

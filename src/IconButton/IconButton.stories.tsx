@@ -19,28 +19,28 @@ const baseStory = (args) => (
   <>
     <Subtitle>Small</Subtitle>
     <Flex mx={-4} mb={5}>
-      <ControlledIconButton mx={4} size="small" {...args}>
+      <ControlledIconButton mx={1} size="small" {...args}>
         <Check />
       </ControlledIconButton>
-      <ControlledIconButton mx={4} size="small" disabled {...args}>
+      <ControlledIconButton mx={1} size="small" disabled {...args}>
         <Check />
       </ControlledIconButton>
     </Flex>
     <Subtitle>Medium</Subtitle>
     <Flex mx={-4} mb={5}>
-      <ControlledIconButton mx={4} size="medium" {...args}>
+      <ControlledIconButton mx={1} size="medium" {...args}>
         <Check />
       </ControlledIconButton>
-      <ControlledIconButton mx={4} size="medium" disabled {...args}>
+      <ControlledIconButton mx={1} size="medium" disabled {...args}>
         <Check />
       </ControlledIconButton>
     </Flex>
     <Subtitle>Large</Subtitle>
     <Flex mx={-4} mb={5}>
-      <ControlledIconButton mx={4} size="large" {...args}>
+      <ControlledIconButton mx={1} size="large" {...args}>
         <Check />
       </ControlledIconButton>
-      <ControlledIconButton mx={4} size="large" disabled {...args}>
+      <ControlledIconButton mx={1} size="large" disabled {...args}>
         <Check />
       </ControlledIconButton>
     </Flex>

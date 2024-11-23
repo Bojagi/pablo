@@ -32,16 +32,16 @@ export interface SidebarNavStyles extends BaseStyles<SidebarNavStyleProperties> 
 
 export const sidebarNavStyles: SidebarNavStyles = {
   borderLeft: `1px solid ${themeVars.colors.borders.light}`,
-  borderLeftSpacing: getSpacing(6),
+  borderLeftSpacing: getSpacing(2),
   item: {
-    marginY: getSpacing(4),
+    marginY: getSpacing(1),
     focus: {
       outlineColor: themeVars.colors.brand.lightest,
-      outlineSize: getSpacing(2),
+      outlineSize: getSpacing(0.5),
     },
     active: {
       backgroundColor: themeVars.colors.brand.light,
-      outlineSize: getSpacing(2),
+      outlineSize: getSpacing(0.5),
     },
     selected: {
       backgroundColor: themeVars.colors.brand.lightest,

@@ -21,9 +21,9 @@ const MenuItemBox = styled.div<MenuItemProps>`
   display: block;
   color: ${themeVars.colors.common.black};
   text-decoration: none;
-  margin-top: ${getSpacing(1)};
-  margin-bottom: ${getSpacing(1)};
-  padding: ${getSpacing(2)};
+  margin-top: ${getSpacing(0.25)};
+  margin-bottom: ${getSpacing(0.25)};
+  padding: ${getSpacing(0.5)};
 
   ${(props: MenuItemProps) =>
     props.selected

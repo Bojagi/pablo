@@ -53,8 +53,8 @@ You can pass the `size` prop with the `small` value which renders a smaller vers
     const [checkedTwo, setCheckedTwo] = React.useState(true);
     return (
       <Box display="flex" mx={-2}>
-        <Switch mx={2} size="small" label="one" checked={checked} onChange={() => setChecked(!checked)} />
-        <Switch mx={2} size="small" label="two" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+        <Switch mx={0.5} size="small" label="one" checked={checked} onChange={() => setChecked(!checked)} />
+        <Switch mx={0.5} size="small" label="two" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
       </Box>
     );
   }}

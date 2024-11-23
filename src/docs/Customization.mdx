@@ -47,9 +47,9 @@ Example:
   <Headline mb={9} textColor="brand.main">This is my colorful main headline</Headline>
   <Paragraph>Negative margins on outer boxes are a nice way to make up for inner margins</Paragraph>
   <Box display="flex" mx={-2}>
-    <Avatar mx={2} src="https://bojagi.io/static/jm-a00804c651028a5a7aef34fc7718af46.jpg" />
-    <Avatar mx={2} src="https://bojagi.io/static/sm-645d391052b195f495445a27f34c283e.jpg" />
-    <Avatar mx={2} src="https://bojagi.io/static/sj-8caf8cfb656b71464fe1b15c9f6f44fd.jpg" />
+    <Avatar mx={0.5} src="https://bojagi.io/static/jm-a00804c651028a5a7aef34fc7718af46.jpg" />
+    <Avatar mx={0.5} src="https://bojagi.io/static/sm-645d391052b195f495445a27f34c283e.jpg" />
+    <Avatar mx={0.5} src="https://bojagi.io/static/sj-8caf8cfb656b71464fe1b15c9f6f44fd.jpg" />
   </Box>
 </Playground>
 
@@ -108,8 +108,8 @@ import { theme } from '@bojagi/pablo/theme';
 const customComponentStyles = { 
   checkbox: {
     innerPadding: {
-      medium: getSpacing(3),
-      small: getSpacing(2),
+      medium: getSpacing(0.75),
+      small: getSpacing(0.5),
     },
     handleColor: theme.colors.brand.light,
   },

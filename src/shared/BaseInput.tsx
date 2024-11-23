@@ -132,7 +132,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
     <Box ref={innerRef} mt={mt} css={getCustomStyles('root')}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
-          <ParagraphBold mb={3} customStyles={{ paragraphBold: getCustomStyles('label') }}>
+          <ParagraphBold mb={0.75} customStyles={{ paragraphBold: getCustomStyles('label') }}>
             {label}
           </ParagraphBold>
         </label>
@@ -176,7 +176,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
         <InfoText
           aria-live="polite"
           data-testid={`pbl-${name}-infotext`}
-          mt={2}
+          mt={0.5}
           id={props.error ? errorId : infoId}
           textColor={props.error ? 'negative.main' : 'text.info'}
           customStyles={{
