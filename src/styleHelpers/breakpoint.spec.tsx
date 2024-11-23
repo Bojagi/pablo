@@ -4,7 +4,6 @@ import { mediaQueryBelow } from '../breakpoints/mediaQueryFns';
 import { breakpoint } from './breakpoint';
 import styled from '@emotion/styled';
 import { render } from '@testing-library/react';
-import { PabloThemeProviderProps } from '../theme/types';
 import { PabloThemeProvider } from '../theme';
 
 test('Get media query with styles when media query was found', () => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { Box, Flex } from '../Box';
 import { Card } from '../Card';
@@ -15,8 +15,8 @@ export default {
 };
 
 const BaseStory = ({ component: Component, ...args }) => {
-  const [duration, setDuration] = React.useState(300);
-  const [visible, setVisible] = React.useState(false);
+  const [duration, setDuration] = useState(300);
+  const [visible, setVisible] = useState(false);
 
   return (
     <Flex

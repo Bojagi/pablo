@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { Flex } from '../Box';
 import { Radio, RadioProps } from './Radio';
@@ -9,7 +9,7 @@ export default {
 };
 
 const ControlledRadio = ({ checked: checkedInitial, ...props }: RadioProps) => {
-  const [checked, setChecked] = React.useState(checkedInitial);
+  const [checked, setChecked] = useState(checkedInitial);
   return (
     <Radio checked={checked} onChange={() => {}} onClick={() => setChecked(!checked)} {...props} />
   );
@@ -34,7 +34,7 @@ Small.args = {
 };
 
 const BaseRadioGroupStory = ({ customStyles, ...args }) => {
-  const [value, setValue] = React.useState<string>();
+  const [value, setValue] = useState<string>();
   return (
     <RadioGroup value={value} onChange={setValue} {...args}>
       <Radio value="hans" label="hans" customStyles={customStyles} />

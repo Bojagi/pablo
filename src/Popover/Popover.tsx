@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { forwardRef, useEffect, useState, useMemo, cloneElement } from 'react';
 import { usePopper } from 'react-popper';
 import styled from '@emotion/styled';
 import { Portal } from '../Portal/Portal';
@@ -80,7 +80,7 @@ export const Popover = forwardRef(
       setRef(ref, popperElement);
     }, [ref, popperElement]);
 
-    const handleClickOutside = React.useMemo(
+    const handleClickOutside = useMemo(
       () => (open ? onClickOutside : () => {}),
       [open, onClickOutside]
     );
@@ -105,18 +105,18 @@ export const Popover = forwardRef(
       strategy: 'fixed',
     });
 
-    const clonedElement = React.useMemo(
+    const clonedElement = useMemo(
       () =>
-        React.cloneElement(children, {
+        cloneElement(children, {
           ref: setReferenceElement,
           'aria-haspopup': ariaHasPopup,
         }),
       [ariaHasPopup, children, setReferenceElement]
     );
 
-    const clonedArrow = React.useMemo(
+    const clonedArrow = useMemo(
       () =>
-        React.cloneElement(arrow, {
+        cloneElement(arrow, {
           ref: setArrowElement,
           style: styles.arrow,
         }),

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, cloneElement } from 'react';
 import styled from '@emotion/styled';
 import { BoxProps, LayoutBoxProps } from '../Box';
 import { useComponentStyle } from '../theme/useComponentStyle';
@@ -27,7 +27,7 @@ export const ButtonBar = forwardRef<HTMLDivElement, ButtonBarProps>(
     return (
       <ButtonBarBox ref={ref} data-testid="pbl-buttonbar" {...props}>
         {guaranteeArray(children).map((child, i) =>
-          React.cloneElement(child, {
+          cloneElement(child, {
             key: i,
             mx: gap,
           })

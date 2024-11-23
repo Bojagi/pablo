@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, cloneElement } from 'react';
 import styled from '@emotion/styled';
 import { CheckableSize } from '../shared/BaseCheckable';
 import { Box, BoxProps } from '../Box';
@@ -25,7 +25,7 @@ export const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(
     <Box ref={ref} role="radiogroup" {...props}>
       {guaranteeArray(children).map((child) => (
         <RadioGroupItem key={child.props.value} size={size}>
-          {React.cloneElement(child, {
+          {cloneElement(child, {
             checked: value === child.props.value,
             size,
             name,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Search } from 'react-feather';
 import { css } from '@emotion/react';
@@ -15,7 +15,7 @@ const ControlledSelect = ({
   value: valueInitial,
   ...props
 }: Omit<NativeSelectProps, 'onChange'>) => {
-  const [value, setValue] = React.useState(valueInitial);
+  const [value, setValue] = useState(valueInitial);
   return <NativeSelect value={value} mb={4} {...props} onChange={setValue} />;
 };
 

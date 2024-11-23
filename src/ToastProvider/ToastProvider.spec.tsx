@@ -1,5 +1,5 @@
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { PabloThemeProvider } from '../theme';
 import { ToastProvider, useToast } from './ToastProvider';
 import '../../testUtils/mockResizeObserver';
@@ -233,7 +233,7 @@ test.skip('Should not hide message after time when duration is 0', async () => {
 function Trigger({ duration, type, closable }) {
   const { addToast } = useToast();
 
-  const handleAddToast = React.useCallback(() => {
+  const handleAddToast = useCallback(() => {
     addToast({
       duration,
       title: `Hello there`,

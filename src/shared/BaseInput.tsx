@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Box, layoutInterpolationFn } from '../Box';
@@ -120,7 +120,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   customStyles,
   ...props
 }: BaseInputOuterProps<P, E>) {
-  const [focus, setFocus] = React.useState(false);
+  const [focus, setFocus] = useState(false);
   const InputComponent = inputComponent as any;
   const generatedId = useUniqueId();
   const id = idProp || generatedId;

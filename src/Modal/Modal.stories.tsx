@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { MoreHorizontal, X } from 'react-feather';
 import { css } from '@emotion/react';
@@ -36,7 +36,7 @@ const ModalButtonBar = ({ setOpen }) => (
 );
 
 const BaseStory = ({ additionalBody: AdditionalBody, ...args }) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <>
       <Button onClick={() => setOpen(true)}>open modal</Button>
@@ -149,7 +149,7 @@ WithCustomStyles.args = {
 };
 
 export const WithCustomStylesFromTheme = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const args = {
     title: 'Hallo',
     topRightItem: ({ onClose }) => (

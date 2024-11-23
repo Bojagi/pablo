@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { useState, forwardRef } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Flex, LayoutBoxProps } from '../Box';
@@ -100,7 +100,7 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
     const typographyVariant = useComponentStyle(
       `${componentName}.typographyVariant.${size}`
     ) as TypographyVariant;
-    const [focus, setFocus] = React.useState(false);
+    const [focus, setFocus] = useState(false);
     const getCustomStyles = useCustomStyles(`${componentName}.styles`, customStyles);
 
     return (

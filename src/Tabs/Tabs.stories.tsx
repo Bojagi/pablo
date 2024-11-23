@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BookOpen, GitPullRequest, Settings } from 'react-feather';
 import { css } from '@emotion/react';
@@ -29,7 +29,7 @@ export const TabsWithSelectedProp = () => (
 );
 
 export const TabsWithOnSelectCb = () => {
-  const [selected, setSelected] = React.useState('second');
+  const [selected, setSelected] = useState('second');
   return (
     <Tabs selected={selected} onSelect={setSelected}>
       <Tab name="first">First tab</Tab>
@@ -54,8 +54,8 @@ export const TabsWithIcons = () => (
 );
 
 export const TabsWithOverflow = () => {
-  const [selected, setSelected] = React.useState('second');
-  const [width, setWidth] = React.useState(600);
+  const [selected, setSelected] = useState('second');
+  const [width, setWidth] = useState(600);
   return (
     <Box>
       <Input
@@ -103,7 +103,7 @@ const CustomTab = (props) => (
 );
 
 export const TabsWithCustomStyles = () => {
-  const [selected, setSelected] = React.useState('second');
+  const [selected, setSelected] = useState('second');
   return (
     <Tabs
       selected={selected}

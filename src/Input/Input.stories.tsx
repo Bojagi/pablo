@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Search } from 'react-feather';
 import { css } from '@emotion/react';
@@ -12,7 +12,7 @@ export default {
 };
 
 const ControlledInput = ({ value: valueInitial, ...props }: Omit<InputProps, 'onChange'>) => {
-  const [value, setValue] = React.useState(valueInitial);
+  const [value, setValue] = useState(valueInitial);
   return <Input value={value} mb={4} {...props} onChange={setValue} />;
 };
 

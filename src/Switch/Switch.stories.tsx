@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { Box, Flex } from '../Box';
 import { Switch, SwitchProps } from './Switch';
@@ -8,7 +8,7 @@ export default {
 };
 
 const ControlledSwitch = ({ checked: checkedInitial, ...props }: Omit<SwitchProps, 'onChange'>) => {
-  const [checked, setChecked] = React.useState(checkedInitial);
+  const [checked, setChecked] = useState(checkedInitial);
   return <Switch checked={checked} {...props} onChange={() => setChecked(!checked)} />;
 };
 

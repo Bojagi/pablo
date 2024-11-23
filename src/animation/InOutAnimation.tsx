@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode, useState } from 'react';
+import React, { forwardRef, ReactNode, useState, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
 import styled from '@emotion/styled';
 import useResizeObserver from 'use-resize-observer';
@@ -55,7 +55,7 @@ const InOutAnimation = forwardRef<HTMLDivElement, InOutAnimationProps>(
     const mountedRef = useMountedRef();
     const { width, height } = useResizeObserver<HTMLDivElement>({ ref: innerRef });
 
-    React.useEffect(() => {
+    useEffect(() => {
       const requestCallback =
         (window as any).requestIdleCallback || requestAnimationFrame || setTimeout;
       requestCallback(() => mountedRef.current && setAnimationIn(visible));

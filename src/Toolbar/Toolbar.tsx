@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, cloneElement } from 'react';
 import styled from '@emotion/styled';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';
@@ -32,13 +32,13 @@ export const Toolbar = forwardRef<HTMLDivElement, ToolbarProps>(
       if (child.type === ToolbarItem) {
         const childProps = child.props as ToolbarItemProps;
 
-        return React.cloneElement(child, {
+        return cloneElement(child, {
           key: childProps.name,
           active: selected ? childProps.name === selected : childProps.active,
         });
       }
 
-      return React.cloneElement(child, { key: index });
+      return cloneElement(child, { key: index });
     });
     return (
       <ToolbarBox role="toolbar" aria-orientation="horizontal" ref={ref} {...props}>

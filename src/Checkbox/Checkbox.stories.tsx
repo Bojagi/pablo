@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { Flex, Box } from '../Box';
 import { Checkbox, CheckboxProps } from './Checkbox';
@@ -11,7 +11,7 @@ const ControlledCheckbox = ({
   checked: checkedInitial,
   ...props
 }: Omit<CheckboxProps, 'onChange'>) => {
-  const [checked, setChecked] = React.useState(checkedInitial);
+  const [checked, setChecked] = useState(checkedInitial);
   return <Checkbox checked={checked} onChange={() => setChecked(!checked)} {...props} />;
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Flex } from '../Box';
@@ -115,7 +115,7 @@ export function Modal({
   open = false,
   customStyles,
 }: ModalProps) {
-  const mouseDownRef = React.useRef<HTMLElement>(null);
+  const mouseDownRef = useRef<HTMLElement>(null);
   const getCustomStyles = useCustomStyles('modal.styles', customStyles);
 
   useEffect(() => {
@@ -126,7 +126,7 @@ export function Modal({
     }
   }, [open]);
 
-  const handleClose = React.useCallback(
+  const handleClose = useCallback(
     (e: React.PointerEvent<HTMLDivElement>) => {
       // Only close if the mouse down before the click happened directly over the backdrop
       if (e.target === e.currentTarget && !mouseDownRef.current && onClose) {

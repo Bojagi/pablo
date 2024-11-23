@@ -1,4 +1,4 @@
-import React, { ReactNode, useReducer } from 'react';
+import React, { ReactNode, useReducer, createContext, useContext, useCallback } from 'react';
 import { Box } from '../Box';
 import { ToastCard } from '../ToastCard';
 import { createUniqueId } from '../utils/useUniqueId';
@@ -13,10 +13,10 @@ export const FADE_DURATION = 300;
 
 export type AddMessageFunction = (messageOptions: ToastMessageOptions) => void;
 
-const addMessageContext = React.createContext<AddMessageFunction>(() => {});
+const addMessageContext = createContext<AddMessageFunction>(() => {});
 
 export function useToast() {
-  const addToast = React.useContext(addMessageContext);
+  const addToast = useContext(addMessageContext);
   return { addToast };
 }
 
@@ -29,14 +29,14 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
   const [messages, dispatchMessage] = useReducer(toastMessageReducer, []);
   const mountedRef = useMountedRef();
 
-  const addMessage = React.useCallback((message: ToastMessageOptions) => {
+  const addMessage = useCallback((message: ToastMessageOptions) => {
     dispatchMessage({
       type: 'add',
       message,
     });
   }, []);
 
-  const removeMessage = React.useCallback(
+  const removeMessage = useCallback(
     (id: string) => {
       console.log('xxxxxx');
 
@@ -50,7 +50,7 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
     [mountedRef]
   );
 
-  const hideMessage = React.useCallback(
+  const hideMessage = useCallback(
     (id: string) => {
       if (mountedRef.current) {
         dispatchMessage({
@@ -62,7 +62,7 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
     [mountedRef]
   );
 
-  const handleAddMessage = React.useCallback(
+  const handleAddMessage = useCallback(
     (messageOptions: ToastMessageOptions) => {
       const id = messageOptions.id || createUniqueId('toast-message');
       const duration =
