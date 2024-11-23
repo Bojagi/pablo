@@ -27,9 +27,9 @@ jobs:
       run: 'yarn'
     - run: |
         export VERSION_SHOULD_MATCH=${{ github.event.inputs.version_should_match }}
-        export RELEASE_VERSION=$(node ./scripts/getDraftReleaseVersion)
+        export RELEASE_VERSION=$(node ./scripts/getDraftReleaseVersion.cjs)
         yarn run publish-script
-        node ./scripts/publishDraftRelease
+        node ./scripts/publishDraftRelease.cjs
       name: 'Publish'
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_BOT_SECRET }}
