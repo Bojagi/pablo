@@ -10,7 +10,7 @@ export default [
   // browser-friendly UMD build
   {
     input: 'src/index.ts',
-    external: ['react', 'react-dom', 'styled-components'],
+    external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
     output: {
       name: 'pablo',
       file: 'build/pablo.min.js',
@@ -18,7 +18,8 @@ export default [
       globals: {
         react: 'React',
         'react-dom': 'ReactDom',
-        'styled-components': 'styledComponents',
+        '@emotion/react': '@emotion/react',
+        '@emotion/styled': '@emotion/styled',
       },
     },
     plugins: [

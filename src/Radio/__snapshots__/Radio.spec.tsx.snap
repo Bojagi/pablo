@@ -1,13 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render radio checked 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
-.c3 {
+.emotion-1 {
+  box-sizing: border-box;
+  position: relative;
+  width: calc(12px + 2 * (6px + 1px));
+  height: calc(12px + 2 * (6px + 1px));
+  border-radius: 50%;
+  padding: 6px;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-3 {
   box-sizing: border-box;
   position: absolute;
   display: block;
@@ -21,49 +55,26 @@ exports[`Render radio checked 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  box-sizing: border-box;
-  position: relative;
-  width: calc(12px + 2 * (6px + 1px));
-  height: calc(12px + 2 * (6px + 1px));
-  border-radius: 50%;
-  padding: 6px;
-  background-color: var(--pbl-theme-colors-common-white);
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  opacity: 1;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.c2 {
-  box-sizing: border-box;
-  width: 12px;
-  height: 12px;
-  transform: scale(1);
-  border-radius: 50%;
-  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
-  background-color: var(--pbl-theme-colors-brand-main);
-}
-
 <div>
   <div
-    alignitems="center"
-    class="c0"
+    class="emotion-0"
     role="radio"
   >
     <div
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-radio"
     >
       <div
-        class="c2"
+        class="emotion-2"
         data-testid="pbl-radio-handle"
       />
       <input
         checked=""
-        class="c3"
+        class="emotion-3"
         data-testid="pbl-radio-input"
         id="custom-id"
         type="radio"
+        value=""
       />
     </div>
   </div>
@@ -71,13 +82,47 @@ exports[`Render radio checked 1`] = `
 `;
 
 exports[`Render radio unchecked 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
-.c3 {
+.emotion-1 {
+  box-sizing: border-box;
+  position: relative;
+  width: calc(12px + 2 * (6px + 1px));
+  height: calc(12px + 2 * (6px + 1px));
+  border-radius: 50%;
+  padding: 6px;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-3 {
   box-sizing: border-box;
   position: absolute;
   display: block;
@@ -91,48 +136,25 @@ exports[`Render radio unchecked 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  box-sizing: border-box;
-  position: relative;
-  width: calc(12px + 2 * (6px + 1px));
-  height: calc(12px + 2 * (6px + 1px));
-  border-radius: 50%;
-  padding: 6px;
-  background-color: var(--pbl-theme-colors-common-white);
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  opacity: 1;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.c2 {
-  box-sizing: border-box;
-  width: 12px;
-  height: 12px;
-  transform: scale(0);
-  border-radius: 50%;
-  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
-  background-color: var(--pbl-theme-colors-brand-main);
-}
-
 <div>
   <div
-    alignitems="center"
-    class="c0"
+    class="emotion-0"
     role="radio"
   >
     <div
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-radio"
     >
       <div
-        class="c2"
+        class="emotion-2"
         data-testid="pbl-radio-handle"
       />
       <input
-        class="c3"
+        class="emotion-3"
         data-testid="pbl-radio-input"
         id="custom-id"
         type="radio"
+        value=""
       />
     </div>
   </div>
@@ -140,7 +162,7 @@ exports[`Render radio unchecked 1`] = `
 `;
 
 exports[`Render radio with label 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -154,12 +176,9 @@ exports[`Render radio with label 1`] = `
 }
 
 <label
-  class="c0"
-  customstyles="[object Object]"
+  class="emotion-0"
   data-testid="pbl-radio-label"
   for="custom-id"
-  mb="0"
-  ml="4"
 >
   I am a 
   <strong>

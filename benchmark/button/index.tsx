@@ -1,7 +1,6 @@
 import { PerformanceObserver, performance } from 'perf_hooks';
 import * as React from 'react';
 import { renderToString } from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
 import { SimpleThemedButtonApp } from './SimpleThemedButton';
 import { PabloButtonApp } from './PabloButton';
 import { DirectButtonApp } from './DirectButton';
@@ -17,15 +16,11 @@ obs.observe({ entryTypes: ['measure'] });
 function benchmark(Component) {
   performance.mark('START');
   for (let i = 0; i < RUNS; i += 1) {
-    const sheet = new ServerStyleSheet();
     try {
-      renderToString(sheet.collectStyles(<Component />));
-      sheet.getStyleTags(); // or sheet.getStyleElement();
+      renderToString(<Component />);
     } catch (error) {
       // handle error
       console.error(error);
-    } finally {
-      sheet.seal();
     }
   }
   performance.mark('END');

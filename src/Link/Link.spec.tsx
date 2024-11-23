@@ -17,44 +17,44 @@ test('Render Link with the right styles', () => {
 
   // Hover state
   expect(linkElem).toHaveStyleRule('color', themeVars.colors.brand.main, {
-    modifier: ':hover',
+    target: ':hover',
   });
   expect(linkElem).toHaveStyleRule('text-decoration', 'underline', {
-    modifier: ':hover',
+    target: ':hover',
   });
   expect(linkElem).toHaveStyleRule('font-style', 'normal', {
-    modifier: ':hover',
+    target: ':hover',
   });
   expect(linkElem).toHaveStyleRule('font-weight', 'inherit', {
-    modifier: ':hover',
+    target: ':hover',
   });
 
   // Focus state
   expect(linkElem).toHaveStyleRule('color', themeVars.colors.brand.main, {
-    modifier: ':focus',
+    target: ':focus',
   });
   expect(linkElem).toHaveStyleRule('text-decoration', 'underline', {
-    modifier: ':focus',
+    target: ':focus',
   });
   expect(linkElem).toHaveStyleRule('font-style', 'normal', {
-    modifier: ':focus',
+    target: ':focus',
   });
   expect(linkElem).toHaveStyleRule('font-weight', 'inherit', {
-    modifier: ':focus',
+    target: ':focus',
   });
 
   // Visited state
   expect(linkElem).toHaveStyleRule('color', themeVars.colors.brand.main, {
-    modifier: ':visited',
+    target: ':visited',
   });
   expect(linkElem).toHaveStyleRule('text-decoration', 'none', {
-    modifier: ':visited',
+    target: ':visited',
   });
   expect(linkElem).toHaveStyleRule('font-style', 'normal', {
-    modifier: ':visited',
+    target: ':visited',
   });
   expect(linkElem).toHaveStyleRule('font-weight', 'inherit', {
-    modifier: ':visited',
+    target: ':visited',
   });
 });
 

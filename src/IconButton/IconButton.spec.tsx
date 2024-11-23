@@ -21,28 +21,28 @@ test.each([
     expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.black);
 
     expect(buttonNode).toHaveStyleRule('background-color', themeVars.colors.blackOpacity['50'], {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     });
     expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.black, {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     });
 
     expect(buttonNode).toHaveStyleRule('background-color', themeVars.colors.blackOpacity['100'], {
-      modifier: ':focus:enabled',
+      target: ':focus:enabled',
     });
     expect(buttonNode).toHaveStyleRule('color', themeVars.colors.common.black, {
-      modifier: ':focus:enabled',
+      target: ':focus:enabled',
     });
 
     // Icon
     expect(buttonNode).toHaveStyleRule('transform', /scale\(\s*1\s*\)/, {
-      modifier: '&>*',
+      target: '>*',
     });
     expect(buttonNode).toHaveStyleRule('width', expectedIconSize, {
-      modifier: '&>*',
+      target: '>*',
     });
     expect(buttonNode).toHaveStyleRule('height', expectedIconSize, {
-      modifier: '&>*',
+      target: '>*',
     });
   }
 );
@@ -56,7 +56,7 @@ test('Render active with correct styles', () => {
 
   // Icon
   expect(buttonNode).toHaveStyleRule('transform', /scale\(\s*0.833333333\s*\)/, {
-    modifier: '&>*',
+    target: '>*',
   });
 });
 

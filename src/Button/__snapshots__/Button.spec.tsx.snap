@@ -1,7 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render button with end icon 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -12,81 +69,42 @@ exports[`render button with end icon 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-main);
-  background: var(--pbl-theme-colors-brand-main);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-dark);
-  background: var(--pbl-theme-colors-brand-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-darkest);
-  background: var(--pbl-theme-colors-brand-darkest);
-}
-
-.c2 {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-left: 8px;
 }
 
-.c2,
-.c2>* {
+.emotion-2,
+.emotion-2>* {
   width: 20px;
   height: 20px;
 }
 
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
     <div
-      class="c2"
-      cssstyles=",,,"
+      class="emotion-2"
       data-testid="pbl-button-icon"
-      marginside="left"
     >
       <div>
         myIcon
@@ -97,7 +115,86 @@ exports[`render button with end icon 1`] = `
 `;
 
 exports[`render button with start icon 1`] = `
-.c2 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.emotion-1,
+.emotion-1>* {
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -108,83 +205,22 @@ exports[`render button with start icon 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-main);
-  background: var(--pbl-theme-colors-brand-main);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-dark);
-  background: var(--pbl-theme-colors-brand-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-darkest);
-  background: var(--pbl-theme-colors-brand-darkest);
-}
-
-.c1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 8px;
-}
-
-.c1,
-.c1>* {
-  width: 20px;
-  height: 20px;
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primary"
   >
     <div
-      class="c1"
-      cssstyles=",,,"
+      class="emotion-1"
       data-testid="pbl-button-icon"
-      marginside="right"
     >
       <div>
         myIcon
       </div>
     </div>
     <span
-      class="c2"
+      class="emotion-2"
     >
       Hello
     </span>
@@ -193,7 +229,64 @@ exports[`render button with start icon 1`] = `
 `;
 
 exports[`render primary brand color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -204,60 +297,14 @@ exports[`render primary brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-main);
-  background: var(--pbl-theme-colors-brand-main);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-dark);
-  background: var(--pbl-theme-colors-brand-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-darkest);
-  background: var(--pbl-theme-colors-brand-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -266,7 +313,64 @@ exports[`render primary brand color button 1`] = `
 `;
 
 exports[`render primary negative color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-main);
+  background: var(--pbl-theme-colors-negative-main);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-dark);
+  background: var(--pbl-theme-colors-negative-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-darkest);
+  background: var(--pbl-theme-colors-negative-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -277,60 +381,14 @@ exports[`render primary negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: var(--pbl-theme-colors-negative-main);
-  background: var(--pbl-theme-colors-negative-main);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: var(--pbl-theme-colors-negative-dark);
-  background: var(--pbl-theme-colors-negative-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: var(--pbl-theme-colors-negative-darkest);
-  background: var(--pbl-theme-colors-negative-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="negative"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -339,7 +397,64 @@ exports[`render primary negative color button 1`] = `
 `;
 
 exports[`render primary plain color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-gray-100);
+  background: var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-gray-200);
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-gray-300);
+  background: var(--pbl-theme-colors-gray-200);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -350,60 +465,14 @@ exports[`render primary plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-gray-100);
-  background: var(--pbl-theme-colors-gray-50);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-gray-200);
-  background: var(--pbl-theme-colors-gray-100);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-gray-300);
-  background: var(--pbl-theme-colors-gray-200);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="plain"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -412,7 +481,64 @@ exports[`render primary plain color button 1`] = `
 `;
 
 exports[`render primary positive color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-main);
+  background: var(--pbl-theme-colors-positive-main);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-dark);
+  background: var(--pbl-theme-colors-positive-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-darkest);
+  background: var(--pbl-theme-colors-positive-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -423,60 +549,14 @@ exports[`render primary positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: var(--pbl-theme-colors-positive-main);
-  background: var(--pbl-theme-colors-positive-main);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: var(--pbl-theme-colors-positive-dark);
-  background: var(--pbl-theme-colors-positive-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: var(--pbl-theme-colors-positive-darkest);
-  background: var(--pbl-theme-colors-positive-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="positive"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -485,7 +565,64 @@ exports[`render primary positive color button 1`] = `
 `;
 
 exports[`render primaryInverted brand color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-main);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-contrastText);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-main);
+  border-color: var(--pbl-theme-colors-brand-lightest);
+  background: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-main);
+  border-color: var(--pbl-theme-colors-brand-light);
+  background: var(--pbl-theme-colors-brand-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -496,60 +633,14 @@ exports[`render primaryInverted brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-main);
-  border-color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-contrastText);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-main);
-  border-color: var(--pbl-theme-colors-brand-lightest);
-  background: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-main);
-  border-color: var(--pbl-theme-colors-brand-light);
-  background: var(--pbl-theme-colors-brand-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -558,7 +649,64 @@ exports[`render primaryInverted brand color button 1`] = `
 `;
 
 exports[`render primaryInverted negative color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-negative-main);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-contrastText);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-main);
+  border-color: var(--pbl-theme-colors-negative-lightest);
+  background: var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-negative-main);
+  border-color: var(--pbl-theme-colors-negative-light);
+  background: var(--pbl-theme-colors-negative-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -569,60 +717,14 @@ exports[`render primaryInverted negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-negative-main);
-  border-color: var(--pbl-theme-colors-negative-contrastText);
-  background: var(--pbl-theme-colors-negative-contrastText);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-negative-main);
-  border-color: var(--pbl-theme-colors-negative-lightest);
-  background: var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-negative-main);
-  border-color: var(--pbl-theme-colors-negative-light);
-  background: var(--pbl-theme-colors-negative-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="negative"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -631,7 +733,64 @@ exports[`render primaryInverted negative color button 1`] = `
 `;
 
 exports[`render primaryInverted plain color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-common-white);
+  background: var(--pbl-theme-colors-common-white);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-gray-50);
+  background: var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-gray-100);
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -642,60 +801,14 @@ exports[`render primaryInverted plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-common-white);
-  background: var(--pbl-theme-colors-common-white);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-gray-50);
-  background: var(--pbl-theme-colors-gray-50);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-gray-100);
-  background: var(--pbl-theme-colors-gray-100);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="plain"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -704,7 +817,64 @@ exports[`render primaryInverted plain color button 1`] = `
 `;
 
 exports[`render primaryInverted positive color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-positive-main);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-contrastText);
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-main);
+  border-color: var(--pbl-theme-colors-positive-lightest);
+  background: var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-positive-main);
+  border-color: var(--pbl-theme-colors-positive-light);
+  background: var(--pbl-theme-colors-positive-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -715,60 +885,14 @@ exports[`render primaryInverted positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-positive-main);
-  border-color: var(--pbl-theme-colors-positive-contrastText);
-  background: var(--pbl-theme-colors-positive-contrastText);
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-positive-main);
-  border-color: var(--pbl-theme-colors-positive-lightest);
-  background: var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-positive-main);
-  border-color: var(--pbl-theme-colors-positive-light);
-  background: var(--pbl-theme-colors-positive-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="positive"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="primaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -777,7 +901,64 @@ exports[`render primaryInverted positive color button 1`] = `
 `;
 
 exports[`render secondary brand color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-dark);
+  border-color: var(--pbl-theme-colors-brand-dark);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -788,60 +969,14 @@ exports[`render secondary brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-dark);
-  border-color: var(--pbl-theme-colors-brand-dark);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-darkest);
-  border-color: var(--pbl-theme-colors-brand-darkest);
-  background: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-darkest);
-  border-color: var(--pbl-theme-colors-brand-darkest);
-  background: var(--pbl-theme-colors-brand-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -850,7 +985,64 @@ exports[`render secondary brand color button 1`] = `
 `;
 
 exports[`render secondary negative color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-negative-dark);
+  border-color: var(--pbl-theme-colors-negative-dark);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
+  border-color: var(--pbl-theme-colors-negative-darkest);
+  background: var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
+  border-color: var(--pbl-theme-colors-negative-darkest);
+  background: var(--pbl-theme-colors-negative-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -861,60 +1053,14 @@ exports[`render secondary negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-negative-dark);
-  border-color: var(--pbl-theme-colors-negative-dark);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-negative-darkest);
-  border-color: var(--pbl-theme-colors-negative-darkest);
-  background: var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-negative-darkest);
-  border-color: var(--pbl-theme-colors-negative-darkest);
-  background: var(--pbl-theme-colors-negative-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="negative"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -923,7 +1069,64 @@ exports[`render secondary negative color button 1`] = `
 `;
 
 exports[`render secondary plain color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-common-black);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: var(--pbl-theme-colors-common-black);
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -934,60 +1137,14 @@ exports[`render secondary plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-common-black);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-common-black);
-  background: var(--pbl-theme-colors-gray-50);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: var(--pbl-theme-colors-common-black);
-  background: var(--pbl-theme-colors-gray-100);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="plain"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -996,7 +1153,64 @@ exports[`render secondary plain color button 1`] = `
 `;
 
 exports[`render secondary positive color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-positive-dark);
+  border-color: var(--pbl-theme-colors-positive-dark);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
+  border-color: var(--pbl-theme-colors-positive-darkest);
+  background: var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
+  border-color: var(--pbl-theme-colors-positive-darkest);
+  background: var(--pbl-theme-colors-positive-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1007,60 +1221,14 @@ exports[`render secondary positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-positive-dark);
-  border-color: var(--pbl-theme-colors-positive-dark);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-positive-darkest);
-  border-color: var(--pbl-theme-colors-positive-darkest);
-  background: var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-positive-darkest);
-  border-color: var(--pbl-theme-colors-positive-darkest);
-  background: var(--pbl-theme-colors-positive-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="positive"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondary"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1069,7 +1237,64 @@ exports[`render secondary positive color button 1`] = `
 `;
 
 exports[`render secondaryInverted brand color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-contrastText);
+  background: var(--pbl-theme-colors-brand-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1080,60 +1305,14 @@ exports[`render secondaryInverted brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-contrastText);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: var(--pbl-theme-colors-brand-contrastText);
-  background: var(--pbl-theme-colors-brand-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1142,7 +1321,64 @@ exports[`render secondaryInverted brand color button 1`] = `
 `;
 
 exports[`render secondaryInverted negative color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: var(--pbl-theme-colors-negative-contrastText);
+  background: var(--pbl-theme-colors-negative-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1153,60 +1389,14 @@ exports[`render secondaryInverted negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: var(--pbl-theme-colors-negative-contrastText);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: var(--pbl-theme-colors-negative-contrastText);
-  background: var(--pbl-theme-colors-negative-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: var(--pbl-theme-colors-negative-contrastText);
-  background: var(--pbl-theme-colors-negative-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="negative"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1215,7 +1405,64 @@ exports[`render secondaryInverted negative color button 1`] = `
 `;
 
 exports[`render secondaryInverted plain color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-common-white);
+  border-color: var(--pbl-theme-colors-common-white);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-common-white);
+  border-color: var(--pbl-theme-colors-common-white);
+  background: var(--pbl-theme-colors-gray-800);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-common-white);
+  border-color: var(--pbl-theme-colors-common-white);
+  background: var(--pbl-theme-colors-gray-600);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1226,60 +1473,14 @@ exports[`render secondaryInverted plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-common-white);
-  border-color: var(--pbl-theme-colors-common-white);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-common-white);
-  border-color: var(--pbl-theme-colors-common-white);
-  background: var(--pbl-theme-colors-gray-800);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-common-white);
-  border-color: var(--pbl-theme-colors-common-white);
-  background: var(--pbl-theme-colors-gray-600);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="plain"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1288,7 +1489,64 @@ exports[`render secondaryInverted plain color button 1`] = `
 `;
 
 exports[`render secondaryInverted positive color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: var(--pbl-theme-colors-positive-contrastText);
+  background: var(--pbl-theme-colors-positive-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1299,60 +1557,14 @@ exports[`render secondaryInverted positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: var(--pbl-theme-colors-positive-contrastText);
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: var(--pbl-theme-colors-positive-contrastText);
-  background: var(--pbl-theme-colors-positive-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: var(--pbl-theme-colors-positive-contrastText);
-  background: var(--pbl-theme-colors-positive-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="positive"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="secondaryInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1361,7 +1573,64 @@ exports[`render secondaryInverted positive color button 1`] = `
 `;
 
 exports[`render text brand color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-dark);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-darkest);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-brand-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1372,60 +1641,14 @@ exports[`render text brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-dark);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-darkest);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-darkest);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-brand-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="text"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1434,7 +1657,64 @@ exports[`render text brand color button 1`] = `
 `;
 
 exports[`render text negative color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-negative-dark);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-negative-darkest);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-negative-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1445,60 +1725,14 @@ exports[`render text negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-negative-dark);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-negative-darkest);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-negative-darkest);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-negative-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="negative"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="text"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1507,7 +1741,64 @@ exports[`render text negative color button 1`] = `
 `;
 
 exports[`render text plain color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-common-black);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-common-black);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1518,60 +1809,14 @@ exports[`render text plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-common-black);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-gray-50);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-common-black);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-gray-100);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="plain"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="text"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1580,7 +1825,64 @@ exports[`render text plain color button 1`] = `
 `;
 
 exports[`render text positive color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-positive-dark);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-positive-darkest);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-positive-light);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1591,60 +1893,14 @@ exports[`render text positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-positive-dark);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-positive-darkest);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-positive-darkest);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-positive-light);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="positive"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="text"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1653,7 +1909,64 @@ exports[`render text positive color button 1`] = `
 `;
 
 exports[`render textInverted brand color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-brand-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-brand-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1664,60 +1977,14 @@ exports[`render textInverted brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-brand-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-brand-contrastText);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-brand-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="brand"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="textInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1726,7 +1993,64 @@ exports[`render textInverted brand color button 1`] = `
 `;
 
 exports[`render textInverted negative color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-negative-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-negative-contrastText);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-negative-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1737,60 +2061,14 @@ exports[`render textInverted negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-negative-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-negative-contrastText);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-negative-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="negative"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="textInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1799,7 +2077,64 @@ exports[`render textInverted negative color button 1`] = `
 `;
 
 exports[`render textInverted plain color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-common-white);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-common-white);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-gray-800);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-common-white);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-gray-600);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1810,60 +2145,14 @@ exports[`render textInverted plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-common-white);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-common-white);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-gray-800);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-common-white);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-gray-600);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="plain"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="textInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>
@@ -1872,7 +2161,64 @@ exports[`render textInverted plain color button 1`] = `
 `;
 
 exports[`render textInverted positive color button 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: transparent;
+  background: transparent;
+}
+
+.emotion-0:enabled {
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+}
+
+.emotion-0:hover:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-positive-dark);
+}
+
+.emotion-0:active:enabled {
+  color: var(--pbl-theme-colors-positive-contrastText);
+  border-color: transparent;
+  background: var(--pbl-theme-colors-positive-darkest);
+}
+
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -1883,60 +2229,14 @@ exports[`render textInverted positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 14px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  justify-content: center;
-  width: inherit;
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: transparent;
-  background: transparent;
-}
-
-.c0:enabled {
-  cursor: pointer;
-}
-
-.c0:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
-}
-
-.c0:hover:enabled {
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-positive-dark);
-}
-
-.c0:active:enabled {
-  color: var(--pbl-theme-colors-positive-contrastText);
-  border-color: transparent;
-  background: var(--pbl-theme-colors-positive-darkest);
-}
-
 <div>
   <button
-    class="c0"
+    class="emotion-0"
     color="positive"
-    cssstyles=","
     data-testid="pbl-button"
-    variant="textInverted"
   >
     <span
-      class="c1"
+      class="emotion-1"
     >
       Hello
     </span>

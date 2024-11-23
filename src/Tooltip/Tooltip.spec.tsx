@@ -130,7 +130,6 @@ describe.each([
     });
     // This is because of passing ref on effect, which happens on next tick
     await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
-    console.log('wheee');
 
     // Trigger resize update and update the size
     act(() => {

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonTypography component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -14,7 +14,7 @@ exports[`ButtonTypography component  Render component 1`] = `
 
 <div>
   <span
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </span>
@@ -22,7 +22,7 @@ exports[`ButtonTypography component  Render component 1`] = `
 `;
 
 exports[`Headline component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -35,7 +35,7 @@ exports[`Headline component  Render component 1`] = `
 
 <div>
   <h2
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h2>
@@ -43,7 +43,7 @@ exports[`Headline component  Render component 1`] = `
 `;
 
 exports[`InfoBold component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -57,7 +57,7 @@ exports[`InfoBold component  Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -65,7 +65,7 @@ exports[`InfoBold component  Render component 1`] = `
 `;
 
 exports[`InfoText component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -78,7 +78,7 @@ exports[`InfoText component  Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -86,7 +86,7 @@ exports[`InfoText component  Render component 1`] = `
 `;
 
 exports[`Paragraph component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -99,7 +99,7 @@ exports[`Paragraph component  Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -107,7 +107,7 @@ exports[`Paragraph component  Render component 1`] = `
 `;
 
 exports[`ParagraphBold component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -121,7 +121,7 @@ exports[`ParagraphBold component  Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -129,7 +129,7 @@ exports[`ParagraphBold component  Render component 1`] = `
 `;
 
 exports[`Subtitle component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -142,7 +142,7 @@ exports[`Subtitle component  Render component 1`] = `
 
 <div>
   <h4
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h4>
@@ -150,7 +150,7 @@ exports[`Subtitle component  Render component 1`] = `
 `;
 
 exports[`Title component  Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -163,7 +163,7 @@ exports[`Title component  Render component 1`] = `
 
 <div>
   <h3
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h3>
@@ -171,7 +171,7 @@ exports[`Title component  Render component 1`] = `
 `;
 
 exports[`Typography component with variant button Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -184,7 +184,7 @@ exports[`Typography component with variant button Render component 1`] = `
 
 <div>
   <span
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </span>
@@ -192,7 +192,7 @@ exports[`Typography component with variant button Render component 1`] = `
 `;
 
 exports[`Typography component with variant button Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -205,7 +205,7 @@ exports[`Typography component with variant button Render inline component 1`] = 
 
 <div>
   <span
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </span>
@@ -213,7 +213,7 @@ exports[`Typography component with variant button Render inline component 1`] = 
 `;
 
 exports[`Typography component with variant headline Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -226,7 +226,7 @@ exports[`Typography component with variant headline Render component 1`] = `
 
 <div>
   <h2
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h2>
@@ -234,7 +234,7 @@ exports[`Typography component with variant headline Render component 1`] = `
 `;
 
 exports[`Typography component with variant headline Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -247,7 +247,7 @@ exports[`Typography component with variant headline Render inline component 1`] 
 
 <div>
   <h2
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h2>
@@ -255,7 +255,7 @@ exports[`Typography component with variant headline Render inline component 1`] 
 `;
 
 exports[`Typography component with variant info Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -268,7 +268,7 @@ exports[`Typography component with variant info Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -276,7 +276,7 @@ exports[`Typography component with variant info Render component 1`] = `
 `;
 
 exports[`Typography component with variant info Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -289,7 +289,7 @@ exports[`Typography component with variant info Render inline component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -297,7 +297,7 @@ exports[`Typography component with variant info Render inline component 1`] = `
 `;
 
 exports[`Typography component with variant infoBold Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -311,7 +311,7 @@ exports[`Typography component with variant infoBold Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -319,7 +319,7 @@ exports[`Typography component with variant infoBold Render component 1`] = `
 `;
 
 exports[`Typography component with variant infoBold Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -333,7 +333,7 @@ exports[`Typography component with variant infoBold Render inline component 1`] 
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -341,7 +341,7 @@ exports[`Typography component with variant infoBold Render inline component 1`] 
 `;
 
 exports[`Typography component with variant paragraph Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -354,7 +354,7 @@ exports[`Typography component with variant paragraph Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -362,7 +362,7 @@ exports[`Typography component with variant paragraph Render component 1`] = `
 `;
 
 exports[`Typography component with variant paragraph Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -375,7 +375,7 @@ exports[`Typography component with variant paragraph Render inline component 1`]
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -383,7 +383,7 @@ exports[`Typography component with variant paragraph Render inline component 1`]
 `;
 
 exports[`Typography component with variant paragraphBold Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -397,7 +397,7 @@ exports[`Typography component with variant paragraphBold Render component 1`] = 
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -405,7 +405,7 @@ exports[`Typography component with variant paragraphBold Render component 1`] = 
 `;
 
 exports[`Typography component with variant paragraphBold Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -419,7 +419,7 @@ exports[`Typography component with variant paragraphBold Render inline component
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -427,7 +427,7 @@ exports[`Typography component with variant paragraphBold Render inline component
 `;
 
 exports[`Typography component with variant subtitle Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -440,7 +440,7 @@ exports[`Typography component with variant subtitle Render component 1`] = `
 
 <div>
   <h4
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h4>
@@ -448,7 +448,7 @@ exports[`Typography component with variant subtitle Render component 1`] = `
 `;
 
 exports[`Typography component with variant subtitle Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -461,7 +461,7 @@ exports[`Typography component with variant subtitle Render inline component 1`] 
 
 <div>
   <h4
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h4>
@@ -469,7 +469,7 @@ exports[`Typography component with variant subtitle Render inline component 1`] 
 `;
 
 exports[`Typography component with variant title Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -482,7 +482,7 @@ exports[`Typography component with variant title Render component 1`] = `
 
 <div>
   <h3
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h3>
@@ -490,7 +490,7 @@ exports[`Typography component with variant title Render component 1`] = `
 `;
 
 exports[`Typography component with variant title Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -503,7 +503,7 @@ exports[`Typography component with variant title Render inline component 1`] = `
 
 <div>
   <h3
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </h3>
@@ -511,7 +511,7 @@ exports[`Typography component with variant title Render inline component 1`] = `
 `;
 
 exports[`Typography component with variant undefined Render component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -524,7 +524,7 @@ exports[`Typography component with variant undefined Render component 1`] = `
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -532,7 +532,7 @@ exports[`Typography component with variant undefined Render component 1`] = `
 `;
 
 exports[`Typography component with variant undefined Render inline component 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -545,7 +545,7 @@ exports[`Typography component with variant undefined Render inline component 1`]
 
 <div>
   <p
-    class="c0"
+    class="emotion-0"
   >
     Hello
   </p>

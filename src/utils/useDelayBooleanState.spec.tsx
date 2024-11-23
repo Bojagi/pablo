@@ -1,4 +1,4 @@
-import { act, renderHook, cleanup } from '@testing-library/react-hooks';
+import { act, renderHook, cleanup } from '@testing-library/react';
 import { useDelayedBooleanState } from './useDelayBooleanState';
 
 beforeEach(() => {

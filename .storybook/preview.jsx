@@ -1,5 +1,4 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
 import { PabloThemeProvider } from '../src/theme';
 import { getSpacing } from '../src/styleHelpers/getSpacing';
 import { css } from '@emotion/react';

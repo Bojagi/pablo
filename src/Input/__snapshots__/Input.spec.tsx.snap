@@ -1,23 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render without value 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c1 {
+.emotion-1 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 300px;
 }
 
-.c2 {
+.emotion-2 {
   box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
   padding: 6px 8px;
@@ -28,22 +38,20 @@ exports[`Render without value 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <div
-      class="c1"
-      cssstyles=","
+      class="emotion-1"
       data-testid="pbl-input-wrapper"
       name="input"
-      variant="filled"
       width="300"
     >
       <input
         aria-invalid="false"
-        class="c2"
+        class="emotion-2"
         data-testid="pbl-input"
         id="custom-id"
-        variant="filled"
+        value=""
       />
     </div>
   </div>
@@ -51,11 +59,47 @@ exports[`Render without value 1`] = `
 `;
 
 exports[`Show error when an error message is given 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c3 {
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  border-color: var(--pbl-theme-colors-negative-main);
+  width: 300px;
+}
+
+.emotion-1:focus {
+  box-shadow: 0 0 0 3px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  padding: 6px 8px;
+  background-color: transparent;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  outline: none;
+}
+
+.emotion-3 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -68,64 +112,30 @@ exports[`Show error when an error message is given 1`] = `
   color: var(--pbl-theme-colors-negative-main);
 }
 
-.c1 {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  border-radius: 8px;
-  background-color: var(--pbl-theme-colors-common-white);
-  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  border-color: var(--pbl-theme-colors-negative-main);
-  width: 300px;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 3px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c2 {
-  box-sizing: border-box;
-  flex-grow: 1;
-  border: 0;
-  padding: 6px 8px;
-  background-color: transparent;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  outline: none;
-}
-
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <div
-      class="c1"
-      cssstyles=","
+      class="emotion-1"
       data-testid="pbl-input-wrapper"
-      error="[object Object]"
       name="input"
-      variant="filled"
       width="300"
     >
       <input
         aria-errormessage="custom-id-error"
         aria-invalid="true"
-        class="c2"
+        class="emotion-2"
         data-testid="pbl-input"
-        error="[object Object]"
         id="custom-id"
         value="some"
-        variant="filled"
       />
     </div>
     <p
       aria-live="polite"
-      class="c3"
-      customstyles="[object Object]"
+      class="emotion-3"
       data-testid="pbl-input-infotext"
       id="custom-id-error"
-      mt="2"
-      textcolor="negative.main"
     >
       Something 
       <strong>
@@ -138,11 +148,42 @@ exports[`Show error when an error message is given 1`] = `
 `;
 
 exports[`Show infotext when available 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c3 {
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  width: 300px;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  padding: 6px 8px;
+  background-color: transparent;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  outline: none;
+}
+
+.emotion-3 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -155,59 +196,30 @@ exports[`Show infotext when available 1`] = `
   color: var(--pbl-theme-colors-text-info);
 }
 
-.c1 {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  border-radius: 8px;
-  background-color: var(--pbl-theme-colors-common-white);
-  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  width: 300px;
-}
-
-.c2 {
-  box-sizing: border-box;
-  flex-grow: 1;
-  border: 0;
-  padding: 6px 8px;
-  background-color: transparent;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  outline: none;
-}
-
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <div
-      class="c1"
-      cssstyles=","
+      class="emotion-1"
       data-testid="pbl-input-wrapper"
-      infotext="[object Object]"
       name="input"
-      variant="filled"
       width="300"
     >
       <input
         aria-describedby="custom-id-info"
         aria-invalid="false"
-        class="c2"
+        class="emotion-2"
         data-testid="pbl-input"
         id="custom-id"
-        infotext="[object Object]"
         value="some"
-        variant="filled"
       />
     </div>
     <p
       aria-live="polite"
-      class="c3"
-      customstyles="[object Object]"
+      class="emotion-3"
       data-testid="pbl-input-infotext"
       id="custom-id-info"
-      mt="2"
-      textcolor="text.info"
     >
       Something that 
       <strong>
@@ -219,11 +231,11 @@ exports[`Show infotext when available 1`] = `
 `;
 
 exports[`Show label when available 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c1 {
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -236,19 +248,29 @@ exports[`Show label when available 1`] = `
   margin-bottom: 6px;
 }
 
-.c2 {
+.emotion-2 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 300px;
 }
 
-.c3 {
+.emotion-3 {
   box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
   padding: 6px 8px;
@@ -259,16 +281,14 @@ exports[`Show label when available 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <label
       data-testid="pbl-input-label"
       for="custom-id"
     >
       <p
-        class="c1"
-        customstyles="[object Object]"
-        mb="3"
+        class="emotion-1"
       >
         Your 
         <strong>
@@ -277,20 +297,17 @@ exports[`Show label when available 1`] = `
       </p>
     </label>
     <div
-      class="c2"
-      cssstyles=","
+      class="emotion-2"
       data-testid="pbl-input-wrapper"
       name="input"
-      variant="filled"
       width="300"
     >
       <input
         aria-invalid="false"
-        class="c3"
+        class="emotion-3"
         data-testid="pbl-input"
         id="custom-id"
         value="some"
-        variant="filled"
       />
     </div>
   </div>
