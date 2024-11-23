@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
-import { styled } from '../styled';
+import styled from '@emotion/styled';
 import { BaseProps } from '../types';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { ImageStyleProperties } from './styles';
+import { interpolateCssProp } from '../utils/interpolateCssProp';
 
 export interface ImageProps
   extends BaseProps<ImageStyleProperties>,
@@ -17,8 +18,9 @@ export interface ImageProps
   height?: number;
 }
 
-export const Image = styled<ImageProps>('img')([
+export const Image: FC<ImageProps> = styled('img')([
   baseStyle,
   layoutInterpolationFn,
+  interpolateCssProp,
   getCustomStyles('image.styles', 'root'),
 ]);

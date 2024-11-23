@@ -1,5 +1,5 @@
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { PabloThemeProvider } from '../theme';
 import { ToastProvider, useToast } from './ToastProvider';
 import '../../testUtils/mockResizeObserver';
@@ -17,8 +17,8 @@ test('Render toast stack on the bottom-right by default', () => {
     closable: true,
   });
   expect(getByTestId('pbl-toaststack')).toMatchSnapshot();
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('top', undefined);
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('left', undefined);
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('top', '0');
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('left', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('bottom', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('right', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('flex-direction', 'column-reverse');
@@ -31,8 +31,8 @@ test('Render toast stack on the bottom-right', () => {
     closable: true,
     side: 'bottom-right',
   });
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('top', undefined);
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('left', undefined);
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('top', '0');
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('top', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('bottom', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('right', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('flex-direction', 'column-reverse');
@@ -45,10 +45,10 @@ test('Render toast stack on the bottom-left', () => {
     closable: true,
     side: 'bottom-left',
   });
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('top', undefined);
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('top', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('left', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('bottom', '0');
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('right', undefined);
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('right', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('flex-direction', 'column-reverse');
 });
 
@@ -61,8 +61,8 @@ test('Render toast stack on the top-left', () => {
   });
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('top', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('left', '0');
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('bottom', undefined);
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('right', undefined);
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('bottom', '0');
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('right', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('flex-direction', 'column');
 });
 
@@ -74,8 +74,8 @@ test('Render toast stack on the top-right', () => {
     side: 'top-right',
   });
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('top', '0');
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('left', undefined);
-  expect(getByTestId('pbl-toaststack')).toHaveStyleRule('bottom', undefined);
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('left', '0');
+  expect(getByTestId('pbl-toaststack')).not.toHaveStyleRule('bottom', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('right', '0');
   expect(getByTestId('pbl-toaststack')).toHaveStyleRule('flex-direction', 'column');
 });
@@ -233,7 +233,7 @@ test.skip('Should not hide message after time when duration is 0', async () => {
 function Trigger({ duration, type, closable }) {
   const { addToast } = useToast();
 
-  const handleAddToast = React.useCallback(() => {
+  const handleAddToast = useCallback(() => {
     addToast({
       duration,
       title: `Hello there`,

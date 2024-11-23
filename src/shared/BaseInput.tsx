@@ -1,5 +1,6 @@
-import React from 'react';
-import { styled, css } from 'styled-components';
+import React, { useState } from 'react';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { Box, layoutInterpolationFn } from '../Box';
 import type { LayoutBoxProps } from '../Box';
 import type { Style } from '../theme/types';
@@ -78,16 +79,16 @@ const InputWrapper = styled.div<InputWrapperProps>`
   ${(props) =>
     props.focus &&
     css`
-      box-shadow: 0 0 0 ${getComponentStyle('{name}.{variant}.focus.outlineSize')}
-        ${getComponentStyle('{name}.{variant}.focus.outlineColor')};
+      box-shadow: 0 0 0 ${getComponentStyle('{name}.{variant}.focus.outlineSize')(props)}
+        ${getComponentStyle('{name}.{variant}.focus.outlineColor')(props)};
     `}
   ${(props) =>
     props.error &&
     css`
-      border-color: ${getComponentStyle('{name}.{variant}.error.borderColor')};
+      border-color: ${getComponentStyle('{name}.{variant}.error.borderColor')(props)};
       &:focus {
-        box-shadow: 0 0 0 ${getComponentStyle('{name}.{variant}.focus.outlineSize')}
-          ${getComponentStyle('{name}.{variant}.error.focus.outlineColor')};
+        box-shadow: 0 0 0 ${getComponentStyle('{name}.{variant}.focus.outlineSize')(props)}
+          ${getComponentStyle('{name}.{variant}.error.focus.outlineColor')(props)};
       }
     `}
   ${layoutInterpolationFn}
@@ -119,7 +120,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   customStyles,
   ...props
 }: BaseInputOuterProps<P, E>) {
-  const [focus, setFocus] = React.useState(false);
+  const [focus, setFocus] = useState(false);
   const InputComponent = inputComponent as any;
   const generatedId = useUniqueId();
   const id = idProp || generatedId;

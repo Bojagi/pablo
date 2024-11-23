@@ -1,38 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render Link with the right styles 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   color: var(--pbl-theme-colors-brand-main);
+  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   font-weight: inherit;
   outline: 0;
 }
 
-.c0:hover {
+.emotion-0:hover {
   color: var(--pbl-theme-colors-brand-main);
+  -webkit-text-decoration: underline;
   text-decoration: underline;
   font-style: normal;
   font-weight: inherit;
 }
 
-.c0:visited {
+.emotion-0:visited {
   color: var(--pbl-theme-colors-brand-main);
+  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   font-weight: inherit;
 }
 
-.c0:focus {
+.emotion-0:focus {
   color: var(--pbl-theme-colors-brand-main);
+  -webkit-text-decoration: underline;
   text-decoration: underline;
   font-style: normal;
   font-weight: inherit;
 }
 
 <a
-  class="c0"
+  class="emotion-0"
   href="https://hello.goodbye"
 >
   Hello

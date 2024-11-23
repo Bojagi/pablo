@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 
 /**
  * Boolean state with delayed applied "true" value.
@@ -12,10 +12,10 @@ export function useDelayedBooleanState(
   delayIn: number,
   delayOut: number = 0
 ): [boolean, (newValue: boolean) => void] {
-  const [outputState, setOutputState] = React.useState<boolean>(initialValue);
-  const [inputState, setInputState] = React.useState<boolean>(initialValue);
+  const [outputState, setOutputState] = useState<boolean>(initialValue);
+  const [inputState, setInputState] = useState<boolean>(initialValue);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Do nothing if input and output state match (e.g. initial true value)
     if (inputState === outputState) {
       return () => {};

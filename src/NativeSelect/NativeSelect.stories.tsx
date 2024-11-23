@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Search } from 'react-feather';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Box } from '../Box';
 import { IconButton } from '../IconButton';
 import { Typography } from '../Typography';
@@ -15,7 +15,7 @@ const ControlledSelect = ({
   value: valueInitial,
   ...props
 }: Omit<NativeSelectProps, 'onChange'>) => {
-  const [value, setValue] = React.useState(valueInitial);
+  const [value, setValue] = useState(valueInitial);
   return <NativeSelect value={value} mb={4} {...props} onChange={setValue} />;
 };
 

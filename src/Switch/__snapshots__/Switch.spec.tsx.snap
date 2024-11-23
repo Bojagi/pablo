@@ -1,13 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render switch checked 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
-.c3 {
+.emotion-1 {
+  box-sizing: border-box;
+  position: relative;
+  width: calc(2 * 18px + 2 * (2px + 1px));
+  height: calc(1 * 18px + 2 * (2px + 1px));
+  border-radius: calc(
+      (
+          18px + 2 *
+            2px + 2 *
+            1px
+        ) * 0.5
+    );
+  padding: 2px;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: translateX(
+      18px
+    );
+  -moz-transform: translateX(
+      18px
+    );
+  -ms-transform: translateX(
+      18px
+    );
+  transform: translateX(
+      18px
+    );
+  border-radius: 50%;
+  -webkit-transition: background-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
+  background-color: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-3 {
   box-sizing: border-box;
   position: absolute;
   display: block;
@@ -21,49 +69,26 @@ exports[`Render switch checked 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  box-sizing: border-box;
-  position: relative;
-  width: calc(2 * 18px + 2 * (2px + 1px));
-  height: calc(1 * 18px + 2 * (2px + 1px));
-  border-radius: calc( ( 18px + 2 * 2px + 2 * 1px ) * 0.5 );
-  padding: 2px;
-  background-color: var(--pbl-theme-colors-common-white);
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  opacity: 1;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.c2 {
-  box-sizing: border-box;
-  width: 18px;
-  height: 18px;
-  transform: translateX( 18px );
-  border-radius: 50%;
-  transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
-  background-color: var(--pbl-theme-colors-brand-main);
-}
-
 <div>
   <div
-    alignitems="center"
-    class="c0"
+    class="emotion-0"
     role="switch"
   >
     <div
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-switch"
     >
       <div
-        class="c2"
+        class="emotion-2"
         data-testid="pbl-switch-handle"
       />
       <input
         checked=""
-        class="c3"
+        class="emotion-3"
         data-testid="pbl-switch-input"
         id="custom-id"
         type="checkbox"
+        value=""
       />
     </div>
   </div>
@@ -71,13 +96,61 @@ exports[`Render switch checked 1`] = `
 `;
 
 exports[`Render switch unchecked 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
-.c3 {
+.emotion-1 {
+  box-sizing: border-box;
+  position: relative;
+  width: calc(2 * 18px + 2 * (2px + 1px));
+  height: calc(1 * 18px + 2 * (2px + 1px));
+  border-radius: calc(
+      (
+          18px + 2 *
+            2px + 2 *
+            1px
+        ) * 0.5
+    );
+  padding: 2px;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  -webkit-transform: translateX(
+      0
+    );
+  -moz-transform: translateX(
+      0
+    );
+  -ms-transform: translateX(
+      0
+    );
+  transform: translateX(
+      0
+    );
+  border-radius: 50%;
+  -webkit-transition: background-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
+  background-color: var(--pbl-theme-colors-gray-500);
+}
+
+.emotion-3 {
   box-sizing: border-box;
   position: absolute;
   display: block;
@@ -91,48 +164,25 @@ exports[`Render switch unchecked 1`] = `
   cursor: pointer;
 }
 
-.c1 {
-  box-sizing: border-box;
-  position: relative;
-  width: calc(2 * 18px + 2 * (2px + 1px));
-  height: calc(1 * 18px + 2 * (2px + 1px));
-  border-radius: calc( ( 18px + 2 * 2px + 2 * 1px ) * 0.5 );
-  padding: 2px;
-  background-color: var(--pbl-theme-colors-common-white);
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  opacity: 1;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.c2 {
-  box-sizing: border-box;
-  width: 18px;
-  height: 18px;
-  transform: translateX( 0 );
-  border-radius: 50%;
-  transition: background-color 0.15s ease-in-out,transform 0.15s ease-in-out;
-  background-color: var(--pbl-theme-colors-gray-500);
-}
-
 <div>
   <div
-    alignitems="center"
-    class="c0"
+    class="emotion-0"
     role="switch"
   >
     <div
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-switch"
     >
       <div
-        class="c2"
+        class="emotion-2"
         data-testid="pbl-switch-handle"
       />
       <input
-        class="c3"
+        class="emotion-3"
         data-testid="pbl-switch-input"
         id="custom-id"
         type="checkbox"
+        value=""
       />
     </div>
   </div>
@@ -140,7 +190,7 @@ exports[`Render switch unchecked 1`] = `
 `;
 
 exports[`Render switch with label 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -154,12 +204,9 @@ exports[`Render switch with label 1`] = `
 }
 
 <label
-  class="c0"
-  customstyles="[object Object]"
+  class="emotion-0"
   data-testid="pbl-switch-label"
   for="custom-id"
-  mb="0"
-  ml="4"
 >
   I am a 
   <strong>

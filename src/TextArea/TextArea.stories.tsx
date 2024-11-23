@@ -1,5 +1,5 @@
-import React from 'react';
-import { css } from 'styled-components';
+import React, { useState } from 'react';
+import { css } from '@emotion/react';
 import { Box } from '../Box';
 import { TextArea, TextAreaProps } from './TextArea';
 
@@ -8,7 +8,7 @@ export default {
 };
 
 const ControlledTextArea = ({ value: valueInitial, ...props }: Omit<TextAreaProps, 'onChange'>) => {
-  const [value, setValue] = React.useState(valueInitial);
+  const [value, setValue] = useState(valueInitial);
   return <TextArea rows={3} value={value} mb={4} {...props} onChange={setValue} />;
 };
 

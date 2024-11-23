@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Bold, Italic, Crop, Edit, Underline, ArrowLeft } from 'react-feather';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Toolbar } from './Toolbar';
 import { ToolbarDivider } from './ToolbarDivider';
 import { ToolbarItem } from './ToolbarItem';
@@ -11,8 +11,8 @@ export default {
 };
 
 export const SimpleToolbar = () => {
-  const [selectedTool, setSelectedTool] = React.useState('bold');
-  const [undoDisabled, setUndoDisabled] = React.useState(false);
+  const [selectedTool, setSelectedTool] = useState('bold');
+  const [undoDisabled, setUndoDisabled] = useState(false);
   return (
     <Toolbar my={9} mx={10} selected={selectedTool}>
       <ToolbarItem
@@ -74,8 +74,8 @@ const customToolbarItemStyles = {
 };
 
 export const CustomStyledToolbar = () => {
-  const [selectedTool, setSelectedTool] = React.useState('bold');
-  const [undoDisabled, setUndoDisabled] = React.useState(false);
+  const [selectedTool, setSelectedTool] = useState('bold');
+  const [undoDisabled, setUndoDisabled] = useState(false);
 
   return (
     <Toolbar

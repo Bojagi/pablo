@@ -1,4 +1,4 @@
-import { useTheme } from 'styled-components';
+import { useTheme } from '@emotion/react';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { useComponentStyleContext } from './context';
 

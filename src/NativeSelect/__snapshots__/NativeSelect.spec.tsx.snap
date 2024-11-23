@@ -1,25 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render without value 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c1 {
+.emotion-1 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 300px;
 }
 
-.c3 {
+.emotion-2 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2:after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
+  width: 8px;
+  height: 6px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-3 {
   box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   padding: 6px 8px;
   background-color: transparent;
@@ -29,44 +65,24 @@ exports[`Render without value 1`] = `
   position: relative;
 }
 
-.c2 {
-  position: relative;
-  width: 100%;
-  display: flex;
-}
-
-.c2 :after {
-  content: '';
-  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
-  width: 8px;
-  height: 6px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <div
-      class="c1"
-      cssstyles=","
+      class="emotion-1"
       data-testid="pbl-nativeSelect-wrapper"
       name="nativeSelect"
-      variant="filled"
       width="300"
     >
       <div
-        class="c2"
+        class="emotion-2"
       >
         <select
           aria-invalid="false"
-          class="c3"
+          class="emotion-3"
           data-testid="pbl-nativeSelect"
           id="custom-id"
-          variant="filled"
         >
           <option
             value=""
@@ -91,11 +107,76 @@ exports[`Render without value 1`] = `
 `;
 
 exports[`Show error when an error message is given 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c4 {
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  border-color: var(--pbl-theme-colors-negative-main);
+  width: 300px;
+}
+
+.emotion-1:focus {
+  box-shadow: 0 0 0 3px var(--pbl-theme-colors-negative-lightest);
+}
+
+.emotion-2 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2:after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
+  width: 8px;
+  height: 6px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 6px 8px;
+  background-color: transparent;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  outline: none;
+  padding-right: calc(8px * 2 + 8px);
+  position: relative;
+}
+
+.emotion-4 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -108,76 +189,25 @@ exports[`Show error when an error message is given 1`] = `
   color: var(--pbl-theme-colors-negative-main);
 }
 
-.c1 {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  border-radius: 8px;
-  background-color: var(--pbl-theme-colors-common-white);
-  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  border-color: var(--pbl-theme-colors-negative-main);
-  width: 300px;
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 3px var(--pbl-theme-colors-negative-lightest);
-}
-
-.c3 {
-  box-sizing: border-box;
-  flex-grow: 1;
-  border: 0;
-  appearance: none;
-  padding: 6px 8px;
-  background-color: transparent;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  outline: none;
-  padding-right: calc(8px * 2 + 8px);
-  position: relative;
-}
-
-.c2 {
-  position: relative;
-  width: 100%;
-  display: flex;
-}
-
-.c2 :after {
-  content: '';
-  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
-  width: 8px;
-  height: 6px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <div
-      class="c1"
-      cssstyles=","
+      class="emotion-1"
       data-testid="pbl-nativeSelect-wrapper"
-      error="[object Object]"
       name="nativeSelect"
-      variant="filled"
       width="300"
     >
       <div
-        class="c2"
+        class="emotion-2"
       >
         <select
           aria-errormessage="custom-id-error"
           aria-invalid="true"
-          class="c3"
+          class="emotion-3"
           data-testid="pbl-nativeSelect"
-          error="[object Object]"
           id="custom-id"
-          variant="filled"
         >
           <option
             value=""
@@ -199,12 +229,9 @@ exports[`Show error when an error message is given 1`] = `
     </div>
     <p
       aria-live="polite"
-      class="c4"
-      customstyles="[object Object]"
+      class="emotion-4"
       data-testid="pbl-nativeSelect-infotext"
       id="custom-id-error"
-      mt="2"
-      textcolor="negative.main"
     >
       Something 
       <strong>
@@ -217,11 +244,71 @@ exports[`Show error when an error message is given 1`] = `
 `;
 
 exports[`Show infotext when available 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c4 {
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
+  width: 300px;
+}
+
+.emotion-2 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2:after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
+  width: 8px;
+  height: 6px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 6px 8px;
+  background-color: transparent;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  outline: none;
+  padding-right: calc(8px * 2 + 8px);
+  position: relative;
+}
+
+.emotion-4 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -234,71 +321,25 @@ exports[`Show infotext when available 1`] = `
   color: var(--pbl-theme-colors-text-info);
 }
 
-.c1 {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  border-radius: 8px;
-  background-color: var(--pbl-theme-colors-common-white);
-  transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
-  width: 300px;
-}
-
-.c3 {
-  box-sizing: border-box;
-  flex-grow: 1;
-  border: 0;
-  appearance: none;
-  padding: 6px 8px;
-  background-color: transparent;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  outline: none;
-  padding-right: calc(8px * 2 + 8px);
-  position: relative;
-}
-
-.c2 {
-  position: relative;
-  width: 100%;
-  display: flex;
-}
-
-.c2 :after {
-  content: '';
-  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
-  width: 8px;
-  height: 6px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <div
-      class="c1"
-      cssstyles=","
+      class="emotion-1"
       data-testid="pbl-nativeSelect-wrapper"
-      infotext="[object Object]"
       name="nativeSelect"
-      variant="filled"
       width="300"
     >
       <div
-        class="c2"
+        class="emotion-2"
       >
         <select
           aria-describedby="custom-id-info"
           aria-invalid="false"
-          class="c3"
+          class="emotion-3"
           data-testid="pbl-nativeSelect"
           id="custom-id"
-          infotext="[object Object]"
-          variant="filled"
         >
           <option
             value=""
@@ -320,12 +361,9 @@ exports[`Show infotext when available 1`] = `
     </div>
     <p
       aria-live="polite"
-      class="c4"
-      customstyles="[object Object]"
+      class="emotion-4"
       data-testid="pbl-nativeSelect-infotext"
       id="custom-id-info"
-      mt="2"
-      textcolor="text.info"
     >
       Something that 
       <strong>
@@ -337,11 +375,11 @@ exports[`Show infotext when available 1`] = `
 `;
 
 exports[`Show label when available 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c1 {
+.emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -354,21 +392,57 @@ exports[`Show label when available 1`] = `
   margin-bottom: 6px;
 }
 
-.c2 {
+.emotion-2 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border: 1px solid var(--pbl-theme-colors-borders-main);
   border-radius: 8px;
   background-color: var(--pbl-theme-colors-common-white);
+  -webkit-transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   transition: border-color 0.3s,box-shadow 0.3s ease-in-out;
   width: 300px;
 }
 
-.c4 {
+.emotion-3 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3:after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
+  width: 8px;
+  height: 6px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-4 {
   box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   padding: 6px 8px;
   background-color: transparent;
@@ -378,35 +452,16 @@ exports[`Show label when available 1`] = `
   position: relative;
 }
 
-.c3 {
-  position: relative;
-  width: 100%;
-  display: flex;
-}
-
-.c3 :after {
-  content: '';
-  background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L0.535899 -6.52533e-07L7.4641 -4.68497e-08L4 6Z' fill='currentColor' /%3E%3C/svg%3E");
-  width: 8px;
-  height: 6px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 <div>
   <div
-    class="c0"
+    class="emotion-0"
   >
     <label
       data-testid="pbl-nativeSelect-label"
       for="custom-id"
     >
       <p
-        class="c1"
-        customstyles="[object Object]"
-        mb="3"
+        class="emotion-1"
       >
         Your 
         <strong>
@@ -415,22 +470,19 @@ exports[`Show label when available 1`] = `
       </p>
     </label>
     <div
-      class="c2"
-      cssstyles=","
+      class="emotion-2"
       data-testid="pbl-nativeSelect-wrapper"
       name="nativeSelect"
-      variant="filled"
       width="300"
     >
       <div
-        class="c3"
+        class="emotion-3"
       >
         <select
           aria-invalid="false"
-          class="c4"
+          class="emotion-4"
           data-testid="pbl-nativeSelect"
           id="custom-id"
-          variant="filled"
         >
           <option
             value=""

@@ -1,5 +1,5 @@
 import { forwardRef, ReactNode, useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import { createPortal } from 'react-dom';
 import { setRef } from '../utils/setRef';
 
 export interface PortalProps {
@@ -26,5 +26,5 @@ export const Portal = forwardRef<unknown, PortalProps>(({ children, name }, ref)
     return null;
   }
 
-  return ReactDOM.createPortal(children, mountPoint);
+  return createPortal(children, mountPoint);
 });

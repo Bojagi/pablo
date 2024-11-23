@@ -1,35 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render with nothing selected 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c2 {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-}
-
-.c1 {
+.emotion-1 {
   box-sizing: border-box;
   margin-bottom: 12px;
 }
 
-.c6 {
+.emotion-2 {
   box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin: 0;
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
-  margin-left: 8px;
-  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c5 {
+.emotion-3 {
+  box-sizing: border-box;
+  position: relative;
+  width: calc(12px + 2 * (6px + 1px));
+  height: calc(12px + 2 * (6px + 1px));
+  border-radius: 50%;
+  padding: 6px;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-5 {
   box-sizing: border-box;
   position: absolute;
   display: block;
@@ -43,52 +64,41 @@ exports[`Render with nothing selected 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.emotion-6 {
   box-sizing: border-box;
-  position: relative;
-  width: calc(12px + 2 * (6px + 1px));
-  height: calc(12px + 2 * (6px + 1px));
-  border-radius: 50%;
-  padding: 6px;
-  background-color: var(--pbl-theme-colors-common-white);
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  opacity: 1;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.c4 {
-  box-sizing: border-box;
-  width: 12px;
-  height: 12px;
-  transform: scale(0);
-  border-radius: 50%;
-  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
-  background-color: var(--pbl-theme-colors-brand-main);
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  margin-left: 8px;
+  margin-bottom: 0;
 }
 
 <div>
   <div
-    class="c0"
+    class="emotion-0"
     role="radiogroup"
   >
     <div
-      class="c1"
+      class="emotion-1"
     >
       <div
-        alignitems="center"
-        class="c2"
+        class="emotion-2"
         role="radio"
       >
         <div
-          class="c3"
+          class="emotion-3"
           data-testid="pbl-radio"
         >
           <div
-            class="c4"
+            class="emotion-4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c5"
+            class="emotion-5"
             data-testid="pbl-radio-input"
             id="custom-id-1"
             name="greeting"
@@ -97,35 +107,31 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
-          class="c6"
-          customstyles="[object Object]"
+          class="emotion-6"
           data-testid="pbl-radio-label"
           for="custom-id-1"
-          mb="0"
-          ml="4"
         >
           Hello
         </label>
       </div>
     </div>
     <div
-      class="c1"
+      class="emotion-1"
     >
       <div
-        alignitems="center"
-        class="c2"
+        class="emotion-2"
         role="radio"
       >
         <div
-          class="c3"
+          class="emotion-3"
           data-testid="pbl-radio"
         >
           <div
-            class="c4"
+            class="emotion-4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c5"
+            class="emotion-5"
             data-testid="pbl-radio-input"
             id="custom-id-2"
             name="greeting"
@@ -134,35 +140,31 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
-          class="c6"
-          customstyles="[object Object]"
+          class="emotion-6"
           data-testid="pbl-radio-label"
           for="custom-id-2"
-          mb="0"
-          ml="4"
         >
           World
         </label>
       </div>
     </div>
     <div
-      class="c1"
+      class="emotion-1"
     >
       <div
-        alignitems="center"
-        class="c2"
+        class="emotion-2"
         role="radio"
       >
         <div
-          class="c3"
+          class="emotion-3"
           data-testid="pbl-radio"
         >
           <div
-            class="c4"
+            class="emotion-4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c5"
+            class="emotion-5"
             data-testid="pbl-radio-input"
             id="custom-id-3"
             name="greeting"
@@ -171,12 +173,9 @@ exports[`Render with nothing selected 1`] = `
           />
         </div>
         <label
-          class="c6"
-          customstyles="[object Object]"
+          class="emotion-6"
           data-testid="pbl-radio-label"
           for="custom-id-3"
-          mb="0"
-          ml="4"
         >
           Bye
         </label>
@@ -187,35 +186,56 @@ exports[`Render with nothing selected 1`] = `
 `;
 
 exports[`Work with one radio button 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
 }
 
-.c2 {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-}
-
-.c1 {
+.emotion-1 {
   box-sizing: border-box;
   margin-bottom: 12px;
 }
 
-.c6 {
+.emotion-2 {
   box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin: 0;
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
-  margin-left: 8px;
-  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c5 {
+.emotion-3 {
+  box-sizing: border-box;
+  position: relative;
+  width: calc(12px + 2 * (6px + 1px));
+  height: calc(12px + 2 * (6px + 1px));
+  border-radius: 50%;
+  padding: 6px;
+  background-color: var(--pbl-theme-colors-common-white);
+  border: 1px solid var(--pbl-theme-colors-borders-main);
+  opacity: 1;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background-color: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-5 {
   box-sizing: border-box;
   position: absolute;
   display: block;
@@ -229,52 +249,41 @@ exports[`Work with one radio button 1`] = `
   cursor: pointer;
 }
 
-.c3 {
+.emotion-6 {
   box-sizing: border-box;
-  position: relative;
-  width: calc(12px + 2 * (6px + 1px));
-  height: calc(12px + 2 * (6px + 1px));
-  border-radius: 50%;
-  padding: 6px;
-  background-color: var(--pbl-theme-colors-common-white);
-  border: 1px solid var(--pbl-theme-colors-borders-main);
-  opacity: 1;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.c4 {
-  box-sizing: border-box;
-  width: 12px;
-  height: 12px;
-  transform: scale(0);
-  border-radius: 50%;
-  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
-  background-color: var(--pbl-theme-colors-brand-main);
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
+  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  margin-left: 8px;
+  margin-bottom: 0;
 }
 
 <div>
   <div
-    class="c0"
+    class="emotion-0"
     role="radiogroup"
   >
     <div
-      class="c1"
+      class="emotion-1"
     >
       <div
-        alignitems="center"
-        class="c2"
+        class="emotion-2"
         role="radio"
       >
         <div
-          class="c3"
+          class="emotion-3"
           data-testid="pbl-radio"
         >
           <div
-            class="c4"
+            class="emotion-4"
             data-testid="pbl-radio-handle"
           />
           <input
-            class="c5"
+            class="emotion-5"
             data-testid="pbl-radio-input"
             id="custom-id"
             name="greeting"
@@ -283,12 +292,9 @@ exports[`Work with one radio button 1`] = `
           />
         </div>
         <label
-          class="c6"
-          customstyles="[object Object]"
+          class="emotion-6"
           data-testid="pbl-radio-label"
           for="custom-id"
-          mb="0"
-          ml="4"
         >
           Hello
         </label>

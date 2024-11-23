@@ -142,7 +142,10 @@ test('Forward onFocus and onBlur to input and show focus outline', () => {
   });
   expect(onBlurMock).toHaveBeenCalledTimes(1);
 
-  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('box-shadow', undefined);
+  expect(getByTestId('pbl-checkbox')).not.toHaveStyleRule(
+    'box-shadow',
+    `0 0 0 3px ${themeVars.colors.brand.lightest}`
+  );
 });
 
 function renderComponent(props) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Box, Flex } from '../Box';
 import { Button } from '../Button';
 import { Checkbox } from '../Checkbox';
@@ -11,11 +11,11 @@ export default {
 
 const Trigger = () => {
   const { addToast } = useToast();
-  const [counter, setCounter] = React.useState(1);
-  const [closable, setClosable] = React.useState(true);
-  const [duration, setDuration] = React.useState(3000);
+  const [counter, setCounter] = useState(1);
+  const [closable, setClosable] = useState(true);
+  const [duration, setDuration] = useState(3000);
 
-  const handleAddToast = React.useCallback(() => {
+  const handleAddToast = useCallback(() => {
     addToast({
       duration,
       title: `Hello there #${counter}`,

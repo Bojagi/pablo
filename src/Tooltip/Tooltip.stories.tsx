@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 
 import { Flex } from '../Box';
 import { Button } from '../Button';
@@ -10,8 +10,8 @@ export default {
 };
 
 const BaseStory = (args) => (
-  <Flex height="100%" width="100vw" alignItems="center" justifyContent="center">
-    <Tooltip content="Top tooltip" side="left" {...args}>
+  <Flex height="100%" width="50vw" alignItems="center" justifyContent="center">
+    <Tooltip content="Left tooltip" side="left" {...args}>
       <Button mx={5} color="plain">
         left
       </Button>
@@ -22,12 +22,12 @@ const BaseStory = (args) => (
         top
       </Button>
     </Tooltip>
-    <Tooltip content="Top tooltip" side="bottom" {...args}>
+    <Tooltip content="Bottom tooltip" side="bottom" {...args}>
       <Button mx={5} color="plain">
         bottom
       </Button>
     </Tooltip>
-    <Tooltip content="Top tooltip" side="right" {...args}>
+    <Tooltip content="Right tooltip" side="right" {...args}>
       <Button mx={5} color="plain">
         right
       </Button>

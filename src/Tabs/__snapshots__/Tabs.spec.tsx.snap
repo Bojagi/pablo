@@ -1,15 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render first selected 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c3 {
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: var(--pbl-theme-colors-common-black);
+  position: relative;
+  padding: 8px 12px 12px;
+  margin: 0 0 0px;
+  white-space: nowrap;
+  color: var(--pbl-theme-colors-brand-main);
+  padding: 8px 12px 12px;
+  margin: 0;
+}
+
+.emotion-1:enabled {
+  cursor: pointer;
+}
+
+.emotion-1:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-1:hover {
+  background-color: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:active {
+  background-color: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  width: calc(100% - 2 * 8px);
+  height: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -20,71 +92,25 @@ exports[`Render first selected 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c2 {
+.emotion-3 {
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: var(--pbl-theme-colors-common-black);
-  position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
-  white-space: nowrap;
-  color: var(--pbl-theme-colors-brand-main);
-  padding: 8px 12px 12px;
-  margin: 0;
-}
-
-.c2:enabled {
-  cursor: pointer;
-}
-
-.c2:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c2:hover {
-  background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c2:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c2:active {
-  background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c2:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 8px;
-  width: calc(100% - 2 * 8px);
-  height: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  background-color: var(--pbl-theme-colors-brand-main);
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -96,36 +122,46 @@ exports[`Render first selected 1`] = `
   white-space: nowrap;
 }
 
-.c4:enabled {
+.emotion-3:enabled {
   cursor: pointer;
 }
 
-.c4:disabled {
+.emotion-3:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c4:hover {
+.emotion-3:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c4:focus {
+.emotion-3:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c4:active {
+.emotion-3:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5 {
+.emotion-7 {
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -136,36 +172,61 @@ exports[`Render first selected 1`] = `
   white-space: nowrap;
 }
 
-.c5:enabled {
+.emotion-7:enabled {
   cursor: pointer;
 }
 
-.c5:disabled {
+.emotion-7:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c5:hover {
+.emotion-7:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5:focus {
+.emotion-7:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5:active {
+.emotion-7:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c8 {
+.emotion-8 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-8>* {
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-9 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -175,36 +236,46 @@ exports[`Render first selected 1`] = `
   white-space: nowrap;
 }
 
-.c8:enabled {
+.emotion-9:enabled {
   cursor: pointer;
 }
 
-.c8:disabled {
+.emotion-9:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c8:hover {
+.emotion-9:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c8:focus {
+.emotion-9:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c8:active {
+.emotion-9:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c9 {
+.emotion-11 {
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -217,28 +288,28 @@ exports[`Render first selected 1`] = `
   margin: 0;
 }
 
-.c9:enabled {
+.emotion-11:enabled {
   cursor: pointer;
 }
 
-.c9:disabled {
+.emotion-11:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c9:hover {
+.emotion-11:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c9:focus {
+.emotion-11:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c9:active {
+.emotion-11:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c9:after {
+.emotion-11:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -250,73 +321,47 @@ exports[`Render first selected 1`] = `
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
-.c7 {
-  box-sizing: border-box;
-  display: flex;
-  width: 20px;
-  height: 20px;
-}
-
-.c7>* {
-  width: 20px;
-  height: 20px;
-}
-
-.c1 {
-  opacity: 0;
-}
-
-.c6 {
-  opacity: 0;
-  pointer-events: none;
-}
-
 <div>
   <div
-    class="c0 c1"
+    class="emotion-0"
     data-testid="pbl-tabs"
-    flexwrap="wrap"
-    mx="-4px"
     role="tablist"
   >
     <button
       aria-selected="true"
-      class="c2"
+      class="emotion-1"
       data-testid="pbl-tab"
-      mx="4px"
       name="hello"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         Hello
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c4"
+      class="emotion-3"
       data-testid="pbl-tab"
-      mx="4px"
       name="world"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         World
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c4"
+      class="emotion-3"
       data-testid="pbl-tab"
-      mx="4px"
       name="bye"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         Bye
       </span>
@@ -324,13 +369,12 @@ exports[`Render first selected 1`] = `
     <button
       aria-haspopup="menu"
       aria-selected="false"
-      class="c5 c6"
+      class="emotion-7"
       data-testid="pbl-tab"
-      ml="4"
       role="tab"
     >
       <div
-        class="c7"
+        class="emotion-8"
       >
         <svg
           height="24"
@@ -355,39 +399,39 @@ exports[`Render first selected 1`] = `
   >
     <button
       aria-selected="false"
-      class="c8"
+      class="emotion-9"
       data-testid="pbl-tab"
       name="hello"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         Hello
       </span>
     </button>
     <button
       aria-selected="true"
-      class="c9"
+      class="emotion-11"
       data-testid="pbl-tab"
       name="world"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         World
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c8"
+      class="emotion-9"
       data-testid="pbl-tab"
       name="bye"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         Bye
       </span>
@@ -397,34 +441,39 @@ exports[`Render first selected 1`] = `
 `;
 
 exports[`Render tabs with icons 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c4 {
+.emotion-1 {
   box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
-  line-height: var(--pbl-theme-typography-button-lineHeight);
-  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.c2 {
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -436,36 +485,73 @@ exports[`Render tabs with icons 1`] = `
   white-space: nowrap;
 }
 
-.c2:enabled {
+.emotion-1:enabled {
   cursor: pointer;
 }
 
-.c2:disabled {
+.emotion-1:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c2:hover {
+.emotion-1:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c2:focus {
+.emotion-1:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c2:active {
+.emotion-1:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5 {
+.emotion-2 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-2>* {
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -480,28 +566,28 @@ exports[`Render tabs with icons 1`] = `
   margin: 0;
 }
 
-.c5:enabled {
+.emotion-4:enabled {
   cursor: pointer;
 }
 
-.c5:disabled {
+.emotion-4:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c5:hover {
+.emotion-4:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5:focus {
+.emotion-4:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5:active {
+.emotion-4:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5:after {
+.emotion-4:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -513,15 +599,25 @@ exports[`Render tabs with icons 1`] = `
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
-.c6 {
+.emotion-10 {
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -532,36 +628,61 @@ exports[`Render tabs with icons 1`] = `
   white-space: nowrap;
 }
 
-.c6:enabled {
+.emotion-10:enabled {
   cursor: pointer;
 }
 
-.c6:disabled {
+.emotion-10:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c6:hover {
+.emotion-10:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c6:focus {
+.emotion-10:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c6:active {
+.emotion-10:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c9 {
+.emotion-11 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-11>* {
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-12 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -571,79 +692,42 @@ exports[`Render tabs with icons 1`] = `
   white-space: nowrap;
 }
 
-.c9:enabled {
+.emotion-12:enabled {
   cursor: pointer;
 }
 
-.c9:disabled {
+.emotion-12:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c9:hover {
+.emotion-12:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c9:focus {
+.emotion-12:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c9:active {
+.emotion-12:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c3 {
-  box-sizing: border-box;
-  display: flex;
-  margin-right: 8px;
-  width: 20px;
-  height: 20px;
-}
-
-.c3>* {
-  width: 20px;
-  height: 20px;
-}
-
-.c8 {
-  box-sizing: border-box;
-  display: flex;
-  width: 20px;
-  height: 20px;
-}
-
-.c8>* {
-  width: 20px;
-  height: 20px;
-}
-
-.c1 {
-  opacity: 0;
-}
-
-.c7 {
-  opacity: 0;
-  pointer-events: none;
 }
 
 <div>
   <div
-    class="c0 c1"
+    class="emotion-0"
     data-testid="pbl-tabs"
-    flexwrap="wrap"
-    mx="-4px"
     role="tablist"
   >
     <button
       aria-selected="false"
-      class="c2"
+      class="emotion-1"
       data-testid="pbl-tab"
-      mx="4px"
       name="first"
       role="tab"
     >
       <div
-        class="c3"
+        class="emotion-2"
       >
         <div
           data-testid="icon1"
@@ -652,21 +736,20 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="emotion-3"
       >
         First tab
       </span>
     </button>
     <button
       aria-selected="true"
-      class="c5"
+      class="emotion-4"
       data-testid="pbl-tab"
-      mx="4px"
       name="second"
       role="tab"
     >
       <div
-        class="c3"
+        class="emotion-2"
       >
         <div
           data-testid="icon2"
@@ -675,21 +758,20 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="emotion-3"
       >
         Second tab
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c2"
+      class="emotion-1"
       data-testid="pbl-tab"
-      mx="4px"
       name="third"
       role="tab"
     >
       <div
-        class="c3"
+        class="emotion-2"
       >
         <div
           data-testid="icon3"
@@ -698,7 +780,7 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="emotion-3"
       >
         Third tab
       </span>
@@ -706,13 +788,12 @@ exports[`Render tabs with icons 1`] = `
     <button
       aria-haspopup="menu"
       aria-selected="false"
-      class="c6 c7"
+      class="emotion-10"
       data-testid="pbl-tab"
-      ml="4"
       role="tab"
     >
       <div
-        class="c8"
+        class="emotion-11"
       >
         <svg
           height="24"
@@ -737,13 +818,13 @@ exports[`Render tabs with icons 1`] = `
   >
     <button
       aria-selected="false"
-      class="c9"
+      class="emotion-12"
       data-testid="pbl-tab"
       name="first"
       role="tab"
     >
       <div
-        class="c3"
+        class="emotion-2"
       >
         <div
           data-testid="icon1"
@@ -752,20 +833,20 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="emotion-3"
       >
         First tab
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c9"
+      class="emotion-12"
       data-testid="pbl-tab"
       name="second"
       role="tab"
     >
       <div
-        class="c3"
+        class="emotion-2"
       >
         <div
           data-testid="icon2"
@@ -774,20 +855,20 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="emotion-3"
       >
         Second tab
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c9"
+      class="emotion-12"
       data-testid="pbl-tab"
       name="third"
       role="tab"
     >
       <div
-        class="c3"
+        class="emotion-2"
       >
         <div
           data-testid="icon3"
@@ -796,7 +877,7 @@ exports[`Render tabs with icons 1`] = `
         </div>
       </div>
       <span
-        class="c4"
+        class="emotion-3"
       >
         Third tab
       </span>
@@ -806,34 +887,39 @@ exports[`Render tabs with icons 1`] = `
 `;
 
 exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c2 {
+.emotion-1 {
   box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
-  line-height: var(--pbl-theme-typography-button-lineHeight);
-  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.c1 {
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -848,28 +934,28 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   margin: 0;
 }
 
-.c1:enabled {
+.emotion-1:enabled {
   cursor: pointer;
 }
 
-.c1:disabled {
+.emotion-1:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c1:hover {
+.emotion-1:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c1:focus {
+.emotion-1:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c1:active {
+.emotion-1:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c1:after {
+.emotion-1:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -881,15 +967,36 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
-.c3 {
+.emotion-2 {
   box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -900,36 +1007,61 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   white-space: nowrap;
 }
 
-.c3:enabled {
+.emotion-3:enabled {
   cursor: pointer;
 }
 
-.c3:disabled {
+.emotion-3:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c3:hover {
+.emotion-3:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c3:focus {
+.emotion-3:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c3:active {
+.emotion-3:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5 {
+.emotion-4 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-4>* {
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -939,59 +1071,44 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   white-space: nowrap;
 }
 
-.c5:enabled {
+.emotion-5:enabled {
   cursor: pointer;
 }
 
-.c5:disabled {
+.emotion-5:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c5:hover {
+.emotion-5:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5:focus {
+.emotion-5:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c5:active {
+.emotion-5:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c4 {
-  box-sizing: border-box;
-  display: flex;
-  width: 20px;
-  height: 20px;
-}
-
-.c4>* {
-  width: 20px;
-  height: 20px;
 }
 
 <div>
   <div
-    class="c0"
+    class="emotion-0"
     data-testid="pbl-tabs"
     fake-width="100"
-    flexwrap="wrap"
-    mx="-4px"
     role="tablist"
   >
     <button
       aria-selected="true"
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-tab"
       fake-width="50"
-      mx="4px"
       name="hello"
       role="tab"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         Hello
       </span>
@@ -999,14 +1116,13 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
     <button
       aria-haspopup="menu"
       aria-selected="false"
-      class="c3 "
+      class="emotion-3"
       data-testid="pbl-tab"
       fake-width="50"
-      ml="4"
       role="tab"
     >
       <div
-        class="c4"
+        class="emotion-4"
       >
         <svg
           height="24"
@@ -1031,56 +1147,56 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   >
     <button
       aria-selected="false"
-      class="c5"
+      class="emotion-5"
       data-testid="pbl-tab"
       fake-width="50"
       name="hello"
       role="tab"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         Hello
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c5"
+      class="emotion-5"
       data-testid="pbl-tab"
       fake-width="50"
       name="world"
       role="tab"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         World
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c5"
+      class="emotion-5"
       data-testid="pbl-tab"
       fake-width="50"
       name="hi"
       role="tab"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         Hi
       </span>
     </button>
     <button
       aria-selected="false"
-      class="c5"
+      class="emotion-5"
       data-testid="pbl-tab"
       fake-width="50"
       name="earth"
       role="tab"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         Earth
       </span>
@@ -1090,34 +1206,39 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 `;
 
 exports[`Work with one tab 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin-left: -4px;
   margin-right: -4px;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.c3 {
+.emotion-1 {
   box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
-  line-height: var(--pbl-theme-typography-button-lineHeight);
-  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.c2 {
-  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 4px;
@@ -1132,28 +1253,28 @@ exports[`Work with one tab 1`] = `
   margin: 0;
 }
 
-.c2:enabled {
+.emotion-1:enabled {
   cursor: pointer;
 }
 
-.c2:disabled {
+.emotion-1:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c2:hover {
+.emotion-1:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c2:focus {
+.emotion-1:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c2:active {
+.emotion-1:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c2:after {
+.emotion-1:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1165,15 +1286,36 @@ exports[`Work with one tab 1`] = `
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
-.c4 {
+.emotion-2 {
   box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   margin-left: 8px;
@@ -1184,36 +1326,61 @@ exports[`Work with one tab 1`] = `
   white-space: nowrap;
 }
 
-.c4:enabled {
+.emotion-3:enabled {
   cursor: pointer;
 }
 
-.c4:disabled {
+.emotion-3:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c4:hover {
+.emotion-3:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c4:focus {
+.emotion-3:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c4:active {
+.emotion-3:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c7 {
+.emotion-4 {
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-4>* {
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
@@ -1223,66 +1390,42 @@ exports[`Work with one tab 1`] = `
   white-space: nowrap;
 }
 
-.c7:enabled {
+.emotion-5:enabled {
   cursor: pointer;
 }
 
-.c7:disabled {
+.emotion-5:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c7:hover {
+.emotion-5:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c7:focus {
+.emotion-5:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c7:active {
+.emotion-5:active {
   background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c6 {
-  box-sizing: border-box;
-  display: flex;
-  width: 20px;
-  height: 20px;
-}
-
-.c6>* {
-  width: 20px;
-  height: 20px;
-}
-
-.c1 {
-  opacity: 0;
-}
-
-.c5 {
-  opacity: 0;
-  pointer-events: none;
 }
 
 <div>
   <div
-    class="c0 c1"
+    class="emotion-0"
     data-testid="pbl-tabs"
-    flexwrap="wrap"
-    mx="-4px"
     role="tablist"
   >
     <button
       aria-selected="true"
-      class="c2"
+      class="emotion-1"
       data-testid="pbl-tab"
-      mx="4px"
       name="hello"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         Hello
       </span>
@@ -1290,13 +1433,12 @@ exports[`Work with one tab 1`] = `
     <button
       aria-haspopup="menu"
       aria-selected="false"
-      class="c4 c5"
+      class="emotion-3"
       data-testid="pbl-tab"
-      ml="4"
       role="tab"
     >
       <div
-        class="c6"
+        class="emotion-4"
       >
         <svg
           height="24"
@@ -1321,13 +1463,13 @@ exports[`Work with one tab 1`] = `
   >
     <button
       aria-selected="false"
-      class="c7"
+      class="emotion-5"
       data-testid="pbl-tab"
       name="hello"
       role="tab"
     >
       <span
-        class="c3"
+        class="emotion-2"
       >
         Hello
       </span>

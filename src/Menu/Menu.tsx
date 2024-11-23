@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { styled } from 'styled-components';
+import styled from '@emotion/styled';
 import { Box } from '../Box';
 import { Popover, PopoverProps } from '../Popover/Popover';
 import { PopoverArrow } from '../PopoverArrow/PopoverArrow';

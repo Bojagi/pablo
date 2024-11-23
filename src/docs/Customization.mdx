@@ -4,7 +4,7 @@ route: /customization
 ---
 
 import { Playground } from 'docz'
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Box } from '../Box/Box.tsx'
 import { Avatar } from '../Avatar/index.ts'
 import { Headline, Paragraph } from '../Typography/index.ts'
@@ -16,7 +16,7 @@ import { theme } from '../theme';
 # Customization
 
 Pablo is highly customizable with the principle of making customizations as easy as possible and 
-reduce boilerplate code. As Pablo is built on top of `styled-components` and `styled-system` it
+reduce boilerplate code. As Pablo is built on top of `emotion` and `styled-system` it
 utilizes both libraries to achive this.
 
 ## Ways of customization
@@ -152,7 +152,7 @@ Each component has a set of parts where you can overwrite styles. You can find a
 ```js
 import { getSpacing } from '@bojagi/pablo/styleHelpers';
 import { theme } from '@bojagi/pablo/theme';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 
 const customComponentStyles = { 
   button: {

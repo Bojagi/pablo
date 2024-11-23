@@ -4,21 +4,31 @@ import { Tab, Tabs } from '../Tabs';
 import { Breakpoint } from '../theme/breakpoints';
 import { Paragraph } from '../Typography';
 import { HideBelow, HideAbove, HideOnlyOn } from './Hide';
+import { Box } from '../Box';
 
 export default {
   title: 'Hide',
 };
 
 const CurrentBreakpoint = () => (
-  <Paragraph>
-    CurrentBreakpoint:
-    <br />
-    <ShowBelow breakpoint="sm">Below Small (mobile)</ShowBelow>
-    <ShowOnlyOn breakpoint="sm">Small (Tablet portrait)</ShowOnlyOn>
-    <ShowOnlyOn breakpoint="md">Medium (Tablet landscape)</ShowOnlyOn>
-    <ShowOnlyOn breakpoint="lg">Large (Desktop landscape)</ShowOnlyOn>
-    <ShowOnlyOn breakpoint="xl">XL Large (Desktop landscape)</ShowOnlyOn>
-  </Paragraph>
+  <Box>
+    <Paragraph>CurrentBreakpoint:</Paragraph>
+    <ShowBelow breakpoint="sm">
+      <Paragraph>Below Small (mobile)</Paragraph>
+    </ShowBelow>
+    <ShowOnlyOn breakpoint="sm">
+      <Paragraph>Small (Tablet portrait)</Paragraph>
+    </ShowOnlyOn>
+    <ShowOnlyOn breakpoint="md">
+      <Paragraph>Medium (Tablet landscape)</Paragraph>
+    </ShowOnlyOn>
+    <ShowOnlyOn breakpoint="lg">
+      <Paragraph>Large (Desktop landscape)</Paragraph>
+    </ShowOnlyOn>
+    <ShowOnlyOn breakpoint="xl">
+      <Paragraph>XL Large (Desktop landscape)</Paragraph>
+    </ShowOnlyOn>
+  </Box>
 );
 
 const BreakpointSelector = ({ selected, onSelect }) => (

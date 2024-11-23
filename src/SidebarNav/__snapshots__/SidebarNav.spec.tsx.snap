@@ -1,13 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render multiple nav items 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   border-left: 1px solid var(--pbl-theme-colors-borders-light);
   padding-left: 16px;
 }
 
-.c2 {
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 0;
+}
+
+.emotion-1:enabled {
+  cursor: pointer;
+}
+
+.emotion-1:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-1:hover {
+  background-color: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:active {
+  background-color: var(--pbl-theme-colors-brand-light);
+}
+
+.emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -18,112 +68,88 @@ exports[`Render multiple nav items 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c1 {
+.emotion-3 {
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-text-decoration: none;
   text-decoration: none;
   padding: 5px 8px;
   border: 1px solid transparent;
   background: transparent;
   border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  display: flex;
-  margin: 8px 0;
-}
-
-.c1:enabled {
-  cursor: pointer;
-}
-
-.c1:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c1:hover {
-  background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c1:active {
-  background-color: var(--pbl-theme-colors-brand-light);
-}
-
-.c3 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 5px 8px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   margin: 8px 0;
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c3:enabled {
+.emotion-3:enabled {
   cursor: pointer;
 }
 
-.c3:disabled {
+.emotion-3:disabled {
   opacity: 0.4;
   cursor: normal;
 }
 
-.c3:hover {
+.emotion-3:hover {
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
-.c3:focus {
+.emotion-3:focus {
   box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
 }
 
-.c3:active {
+.emotion-3:active {
   background-color: var(--pbl-theme-colors-brand-light);
 }
 
 <div>
   <ul
-    class="c0"
+    class="emotion-0"
     data-testid="pbl-sidebarnav"
   >
     <li
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         Hello
       </span>
     </li>
     <li
-      class="c3"
+      class="emotion-3"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         World
       </span>
     </li>
     <li
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         Bye
       </span>
@@ -133,13 +159,64 @@ exports[`Render multiple nav items 1`] = `
 `;
 
 exports[`Render one nav item 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   border-left: 1px solid var(--pbl-theme-colors-borders-light);
   padding-left: 16px;
 }
 
-.c2 {
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 0;
+  background-color: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:enabled {
+  cursor: pointer;
+}
+
+.emotion-1:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-1:hover {
+  background-color: var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:active {
+  background-color: var(--pbl-theme-colors-brand-light);
+}
+
+.emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   font-style: normal;
@@ -150,55 +227,17 @@ exports[`Render one nav item 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
-.c1 {
-  box-sizing: border-box;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  text-decoration: none;
-  padding: 5px 8px;
-  border: 1px solid transparent;
-  background: transparent;
-  border-radius: 4px;
-  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
-  outline: none;
-  display: flex;
-  margin: 8px 0;
-  background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c1:enabled {
-  cursor: pointer;
-}
-
-.c1:disabled {
-  opacity: 0.4;
-  cursor: normal;
-}
-
-.c1:hover {
-  background-color: var(--pbl-theme-colors-brand-lightest);
-}
-
-.c1:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
-}
-
-.c1:active {
-  background-color: var(--pbl-theme-colors-brand-light);
-}
-
 <div>
   <ul
-    class="c0"
+    class="emotion-0"
     data-testid="pbl-sidebarnav"
   >
     <li
-      class="c1"
+      class="emotion-1"
       data-testid="pbl-sidebarnav-item"
     >
       <span
-        class="c2"
+        class="emotion-2"
       >
         Hello
       </span>

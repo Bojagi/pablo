@@ -1,11 +1,12 @@
 import React, { forwardRef } from 'react';
 import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
-import { styled } from '../styled';
+import styled from '@emotion/styled';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { ButtonTypography } from '../Typography';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { ButtonStyleProperties } from './styles';
+import { interpolateCssProp } from '../utils/interpolateCssProp';
 
 export type ButtonVariant =
   | 'primary'
@@ -44,7 +45,7 @@ const getColorStyles = (props, suffix?: string) => {
   };
 };
 
-const InnerButton = styled<InnerButtonProps>('button')([
+const InnerButton = styled('button')<InnerButtonProps>([
   buttonBaseStyles,
   (props) => ({
     justifyContent: 'center',
@@ -63,21 +64,24 @@ const InnerButton = styled<InnerButtonProps>('button')([
 interface IconBoxProps {
   size: ButtonSize;
   marginSide: 'left' | 'right';
-  cssStyles?: CssFunctionReturn;
+  css?: CssFunctionReturn;
   children?: React.ReactNode;
 }
 
-const IconBox = styled<IconBoxProps>('div')((props) => ({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  [`margin-${props.marginSide}`]: getComponentStyle('button.base.icon.gap')(props),
+const IconBox = styled.div((props: IconBoxProps) => [
+  {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [`margin-${props.marginSide}`]: getComponentStyle('button.base.icon.gap')(props),
 
-  '&, & > *': {
-    width: getComponentStyle('button.base.icon.size.{size}')(props),
-    height: getComponentStyle('button.base.icon.size.{size}')(props),
+    '&, & > *': {
+      width: getComponentStyle('button.base.icon.size.{size}')(props),
+      height: getComponentStyle('button.base.icon.size.{size}')(props),
+    },
   },
-}));
+  interpolateCssProp,
+]);
 
 const knownVariants = [
   'primary',
@@ -119,11 +123,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
         disabled={disabled}
         color={color}
         fullWidth={fullWidth}
-        cssStyles={getCustomStyles(variant)}
+        css={getCustomStyles(variant)}
       >
         {startIcon && (
           <IconBox
-            cssStyles={[getCustomStyles('icon'), getCustomStyles('startIcon')]}
+            css={(props) => [getCustomStyles('icon', props), getCustomStyles('startIcon', props)]}
             marginSide="right"
             size={size}
             data-testid="pbl-button-icon"
@@ -134,7 +138,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
         <ButtonTypography>{children}</ButtonTypography>
         {endIcon && (
           <IconBox
-            cssStyles={[getCustomStyles('icon'), getCustomStyles('endIcon')]}
+            css={(props) => [getCustomStyles('icon', props), getCustomStyles('endIcon', props)]}
             marginSide="left"
             size={size}
             data-testid="pbl-button-icon"

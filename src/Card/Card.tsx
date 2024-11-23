@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, shadowTransformer } from '../styleHelpers/getComponentStyle';

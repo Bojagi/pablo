@@ -1,44 +1,50 @@
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { conditionalStyles } from '../styleHelpers';
 import { createInOutAnimation, InOutAnimationProps } from './InOutAnimation';
 import type { BasePlacement } from '@popperjs/core';
+import { PabloThemeableProps } from '../theme/types';
 
 export type TooltipSide = BasePlacement;
 
-const transformInterpolateFn =
-  (axis: 'Y' | 'X', directionMultiplier: -1 | 1) => (props: SlideAnimationProps) => {
-    const reverseMultiplier = props.reverse ? -1 : 1;
-    const axisMultiplier = axis === 'X' ? 0.5 : 1;
-    return props.visible
-      ? `translate${axis}(0)`
-      : `translate${axis}(${reverseMultiplier * directionMultiplier * axisMultiplier * 25}%)`;
-  };
+const transformInterpolateFn = (
+  axis: 'Y' | 'X',
+  directionMultiplier: -1 | 1,
+  props: SlideAnimationProps
+) => {
+  const reverseMultiplier = props.reverse ? -1 : 1;
+  const axisMultiplier = axis === 'X' ? 0.5 : 1;
+  return props.visible
+    ? `translate${axis}(0)`
+    : `translate${axis}(${reverseMultiplier * directionMultiplier * axisMultiplier * 25}%)`;
+};
 
-const topStyles = css<SlideAnimationProps>`
-  transform: ${transformInterpolateFn('Y', -1)};
+const topStyles = (props: SlideAnimationProps) => css`
+  transform: ${transformInterpolateFn('Y', -1, props)};
 `;
 
-const bottomStyles = css<SlideAnimationProps>`
-  transform: ${transformInterpolateFn('Y', 1)};
+const bottomStyles = (props: SlideAnimationProps) => css`
+  transform: ${transformInterpolateFn('Y', 1, props)};
 `;
 
-const rightStyles = css<SlideAnimationProps>`
-  transform: ${transformInterpolateFn('X', 1)};
+const rightStyles = (props: SlideAnimationProps) => css`
+  transform: ${transformInterpolateFn('X', 1, props)};
 `;
 
-const leftStyles = css<SlideAnimationProps>`
-  transform: ${transformInterpolateFn('X', -1)};
+const leftStyles = (props: SlideAnimationProps) => css`
+  transform: ${transformInterpolateFn('X', -1, props)};
 `;
 
-const stackAnimationBase: any = css<SlideAnimationProps>`
-  transition: ${(props) => css`opacity ${props.duration}ms, transform ${props.duration}ms`};
+const stackAnimationBase: any = (props: SlideAnimationProps & PabloThemeableProps) => css`
+  transition:
+    opacity ${props.duration}ms,
+    transform ${props.duration}ms;
   opacity: 0;
-  ${conditionalStyles('side' as any, {
+  ${conditionalStyles<SlideAnimationProps>('side', {
     top: topStyles,
     bottom: bottomStyles,
     right: rightStyles,
     left: leftStyles,
-  })}
+  })(props)}
 `;
 
 const stackAnimationEnter = css`
@@ -46,14 +52,14 @@ const stackAnimationEnter = css`
   transform: translateY(0) translateX(0);
 `;
 
-const stackAnimationExit = css<SlideAnimationProps>`
+const stackAnimationExit = (props: SlideAnimationProps & PabloThemeableProps) => css`
   opacity: 0;
-  ${conditionalStyles('side', {
+  ${conditionalStyles<SlideAnimationProps>('side', {
     top: topStyles,
     bottom: bottomStyles,
     right: rightStyles,
     left: leftStyles,
-  })}
+  })(props)}
 `;
 
 export interface SlideAnimationProps extends InOutAnimationProps {

@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import { styled, css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 import {
   BaseCheckable,
@@ -10,10 +11,10 @@ import {
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
 
-const switchBoxSize = (multiplier) => css`
-  calc(${multiplier} * ${getComponentStyle('switch.handleSize.{size}')} + 2 * (${getComponentStyle(
+const switchBoxSize = (multiplier) => (props) => css`
+  calc(${multiplier} * ${getComponentStyle('switch.handleSize.{size}')(props)} + 2 * (${getComponentStyle(
     'switch.innerPadding.{size}'
-  )} + ${getComponentStyle('switch.borderWidth')}px))
+  )(props)} + ${getComponentStyle('switch.borderWidth')(props)}px))
 `;
 
 const SwitchBox = styled.div<CheckableBoxProps>`
@@ -23,7 +24,7 @@ const SwitchBox = styled.div<CheckableBoxProps>`
   height: ${switchBoxSize(1)};
   border-radius: calc(
     (
-        ${(props) => getComponentStyle('switch.handleSize.{size}')(props)} + 2 *
+        ${getComponentStyle('switch.handleSize.{size}')} + 2 *
           ${getComponentStyle('switch.innerPadding.{size}')} + 2 *
           ${getComponentStyle('switch.borderWidth')}px
       ) * 0.5
@@ -39,8 +40,8 @@ const SwitchBox = styled.div<CheckableBoxProps>`
   ${(props) =>
     props.focus &&
     css`
-      box-shadow: 0 0 0 ${getComponentStyle('switch.focus.outlineSize')}
-        ${getComponentStyle('switch.focus.outlineColor')};
+      box-shadow: 0 0 0 ${getComponentStyle('switch.focus.outlineSize')(props)}
+        ${getComponentStyle('switch.focus.outlineColor')(props)};
     `};
   }
   ${getCustomStyles('switch.styles', 'box')}

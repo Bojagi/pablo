@@ -147,7 +147,7 @@ console.log(isTheSame) // logs 'true'
 
 ## Using theme values in custom components
 
-You can use the theme values in custom components that have been written with `styled-components`.
+You can use the theme values in custom components that have been written with `emotion`.
 
 ```js
 const MyComponent = styled.div`
@@ -187,7 +187,7 @@ Use the `breakpoints` function to apply specific styles depending on the screen 
 
 ```js
 import { breakpoint, getSpacing } from '@bojagi/pablo/styleHelpers';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 
 const MyComponent = styled.div`
   /* Base styles (mobile and up) */
@@ -209,7 +209,7 @@ it for styles below, you can pass the `mediaQueryBelow` function as third argume
 ```js
 import { breakpoint, getSpacing } from '@bojagi/pablo/styleHelpers';
 import { mediaQueryBelow } from '@bojagi/pablo/breakpoints';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 
 const MyComponent = styled.div`
   /* Landscape tablet styles (and up) */  

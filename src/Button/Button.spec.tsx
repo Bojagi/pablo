@@ -282,14 +282,14 @@ test.each([
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     }
   );
 });
@@ -312,14 +312,14 @@ test('Render primary brand button when no variant or color is given', () => {
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     }
   );
 });
@@ -342,14 +342,14 @@ test('Render primary brand button when unknown variant is given', () => {
     'border-color',
     expectedStyles.hoverBorderColor,
     {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     }
   );
   expect(getByTestId('pbl-button')).toHaveStyleRule(
     'background',
     expectedStyles.hoverBackgroundColor,
     {
-      modifier: ':hover:enabled',
+      target: ':hover:enabled',
     }
   );
 });
@@ -377,7 +377,7 @@ test('disable button element when disabled prop is true', () => {
   const { getByTestId } = renderComponent({ disabled: true });
   expect(getByTestId('pbl-button')).toBeDisabled();
   expect(getByTestId('pbl-button')).toHaveStyleRule('opacity', '0.4', {
-    modifier: ':disabled',
+    target: ':disabled',
   });
 });
 

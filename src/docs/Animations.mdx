@@ -20,7 +20,7 @@ components easier. Animations can also improve the connection between two elemen
 But animations are also hard to create, especially enter and exit animations, as you need to keep your elements
 available until the exit animation is finished. Existing tooling tries to make this kind of animations easier,
 but it's still a lot of boilerplate code or you need to write your own abstractions 
-(e.g. to make it work with `styled-components`).
+(e.g. to make it work with `emotion`).
 
 Pablo tries to abstract animations, so you don't need to worry about them too much, all you need to do is wrap
 the component that you want to show/hide with an animation in an animation component 
@@ -182,7 +182,7 @@ This is an example with the `Menu` component:
 It's really easy to write custom animations, here's the source code for our fade animation:
 
 ```js
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { createInOutAnimation } from '@bojagi/pablo/animation';
 
 const fadeAnimationBase = css`
@@ -213,5 +213,5 @@ It takes three styles (just use styled-component's `css` tag literal) for differ
 * `enterStyles` for styles when the wrapped component should be visible
 * `exitstyles` for styles when the wrapped component should be hidden
 
-You can use custom props for animations by just accessing it like usual in styled-components (like with the duration
+You can use custom props for animations by just accessing it like usual in emotion (like with the duration
 prop in the example above).

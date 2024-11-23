@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Check } from 'react-feather';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Flex } from '../Box';
 import { Subtitle } from '../Typography';
 import { IconButton } from './IconButton';
@@ -11,7 +11,7 @@ export default {
 };
 
 const ControlledIconButton = (props) => {
-  const [active, setActive] = React.useState(props.active);
+  const [active, setActive] = useState(props.active);
   return <IconButton {...props} active={active} onClick={() => setActive(!active)} />;
 };
 

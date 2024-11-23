@@ -1,10 +1,24 @@
-import type { Interpolation, ExecutionContext } from 'styled-components';
-import { PabloThemeableProps, PabloTheme } from '../theme/types';
+import type { WithTheme } from '@emotion/react';
+import { PabloTheme } from '../theme/types';
+import type { CSSInterpolation } from '@emotion/serialize';
+
+type StyleMap<P extends Record<string, any>, PK extends keyof P = keyof P> = Record<
+  P[PK],
+  CSSInterpolation | ((props: WithTheme<P, PabloTheme>) => CSSInterpolation)
+>;
 
 export function conditionalStyles<P extends Record<string, any>, PK extends keyof P = keyof P>(
   propKey: PK,
-  styleMap: Record<P[PK], Interpolation<P & Partial<ExecutionContext> & PabloTheme>>
+  styleMap: StyleMap<P, PK> | ((props: P) => StyleMap<P, PK>)
 ) {
-  return (props: P & PabloThemeableProps): Interpolation<P & ExecutionContext & PabloTheme> =>
-    styleMap[props[propKey]];
+  return (props: WithTheme<P, PabloTheme>): CSSInterpolation => {
+    const style = typeof styleMap === 'function' ? styleMap(props) : styleMap;
+
+    const mapValue = style[props[propKey]];
+    if (typeof mapValue === 'function') {
+      return mapValue(props);
+    }
+
+    return mapValue;
+  };
 }

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render large icon button with correct styles 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   width: 40px;
   height: 40px;
@@ -11,43 +11,67 @@ exports[`Render large icon button with correct styles 1`] = `
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  -webkit-transition: background-color 0.2s,color 0.2s;
   transition: background-color 0.2s,color 0.2s;
   border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.c0>* {
+.emotion-0>* {
   width: 36px;
   height: 36px;
+  -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transform: scale( 1 );
+  -webkit-transform: scale(
+        1
+      );
+  -moz-transform: scale(
+        1
+      );
+  -ms-transform: scale(
+        1
+      );
+  transform: scale(
+        1
+      );
 }
 
-.c0:enabled {
+.emotion-0:enabled {
   cursor: pointer;
 }
 
-.c0:disabled {
+.emotion-0:disabled {
   opacity: 0.3;
   cursor: normal;
 }
 
-.c0:hover:enabled {
+.emotion-0:hover:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-50);
   color: var(--pbl-theme-colors-common-black);
 }
 
-.c0:focus:enabled {
+.emotion-0:focus:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-100);
   color: var(--pbl-theme-colors-common-black);
 }
 
 <button
   aria-pressed="false"
-  class="c0"
+  class="emotion-0"
   color="plain"
 >
   <div>
@@ -57,7 +81,7 @@ exports[`Render large icon button with correct styles 1`] = `
 `;
 
 exports[`Render medium icon button with correct styles 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   width: 32px;
   height: 32px;
@@ -67,43 +91,67 @@ exports[`Render medium icon button with correct styles 1`] = `
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  -webkit-transition: background-color 0.2s,color 0.2s;
   transition: background-color 0.2s,color 0.2s;
   border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.c0>* {
+.emotion-0>* {
   width: 28px;
   height: 28px;
+  -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transform: scale( 1 );
+  -webkit-transform: scale(
+        1
+      );
+  -moz-transform: scale(
+        1
+      );
+  -ms-transform: scale(
+        1
+      );
+  transform: scale(
+        1
+      );
 }
 
-.c0:enabled {
+.emotion-0:enabled {
   cursor: pointer;
 }
 
-.c0:disabled {
+.emotion-0:disabled {
   opacity: 0.3;
   cursor: normal;
 }
 
-.c0:hover:enabled {
+.emotion-0:hover:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-50);
   color: var(--pbl-theme-colors-common-black);
 }
 
-.c0:focus:enabled {
+.emotion-0:focus:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-100);
   color: var(--pbl-theme-colors-common-black);
 }
 
 <button
   aria-pressed="false"
-  class="c0"
+  class="emotion-0"
   color="plain"
 >
   <div>
@@ -113,7 +161,7 @@ exports[`Render medium icon button with correct styles 1`] = `
 `;
 
 exports[`Render small icon button with correct styles 1`] = `
-.c0 {
+.emotion-0 {
   box-sizing: border-box;
   width: 24px;
   height: 24px;
@@ -123,43 +171,67 @@ exports[`Render small icon button with correct styles 1`] = `
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  -webkit-transition: background-color 0.2s,color 0.2s;
   transition: background-color 0.2s,color 0.2s;
   border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-.c0>* {
+.emotion-0>* {
   width: 20px;
   height: 20px;
+  -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transform: scale( 1 );
+  -webkit-transform: scale(
+        1
+      );
+  -moz-transform: scale(
+        1
+      );
+  -ms-transform: scale(
+        1
+      );
+  transform: scale(
+        1
+      );
 }
 
-.c0:enabled {
+.emotion-0:enabled {
   cursor: pointer;
 }
 
-.c0:disabled {
+.emotion-0:disabled {
   opacity: 0.3;
   cursor: normal;
 }
 
-.c0:hover:enabled {
+.emotion-0:hover:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-50);
   color: var(--pbl-theme-colors-common-black);
 }
 
-.c0:focus:enabled {
+.emotion-0:focus:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-100);
   color: var(--pbl-theme-colors-common-black);
 }
 
 <button
   aria-pressed="false"
-  class="c0"
+  class="emotion-0"
   color="plain"
 >
   <div>

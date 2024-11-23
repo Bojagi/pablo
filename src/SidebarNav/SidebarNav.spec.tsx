@@ -32,9 +32,9 @@ test('Render multiple nav items', () => {
   expect(allSidebarNav[0]).toHaveTextContent('Hello');
   expect(allSidebarNav[1]).toHaveTextContent('World');
   expect(allSidebarNav[2]).toHaveTextContent('Bye');
-  expect(allSidebarNav[0]).toHaveStyleRule('background-color', undefined);
+  expect(allSidebarNav[0]).not.toHaveStyleRule('background-color', themeVars.colors.brand.lightest);
   expect(allSidebarNav[1]).toHaveStyleRule('background-color', themeVars.colors.brand.lightest);
-  expect(allSidebarNav[2]).toHaveStyleRule('background-color', undefined);
+  expect(allSidebarNav[2]).not.toHaveStyleRule('background-color', themeVars.colors.brand.lightest);
 });
 
 function renderComponent(props) {

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import { buttonBaseStyles } from '../../src/ButtonBase';
 import { PabloThemeProvider } from '../../src/theme';
 import { Style } from '../../src/theme/types';

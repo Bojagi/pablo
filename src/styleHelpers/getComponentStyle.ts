@@ -1,6 +1,9 @@
+import type { WithTheme } from '@emotion/react';
+import { PabloTheme } from '../theme/types';
+
 export const getComponentStyle =
   (path: string, transformFn: (value: unknown) => string | number = (v) => v as string) =>
-  ({ theme, ...props }) => {
+  ({ theme, ...props }: WithTheme<any, PabloTheme>) => {
     const interpolatedPath = path.replace(/\{(.*?)\}/g, (_, val) => props[val] || val);
 
     const value = interpolatedPath

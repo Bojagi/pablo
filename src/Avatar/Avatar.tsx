@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import { styled, css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import { Image } from '../Image';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { conditionalStyles, getComponentStyle } from '../styleHelpers';
@@ -39,14 +40,14 @@ const AvatarImage = styled<
   ForwardRefExoticComponent<AvatarImageProps & RefAttributes<HTMLImageElement>>
 >(Image as any)`
   ${baseStyle}
-  ${conditionalStyles('variant', {
+  ${conditionalStyles('variant', (props) => ({
     square: css`
-      border-radius: ${getComponentStyle('avatar.square.borderRadius')}px;
+      border-radius: ${getComponentStyle('avatar.square.borderRadius')(props)}px;
     `,
     circle: css`
       border-radius: 50%;
     `,
-  }) as any}
+  })) as any}
 `;
 
 export const Avatar: FC<AvatarProps> = forwardRef<HTMLImageElement, AvatarProps>(

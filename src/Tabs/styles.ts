@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { Style } from '../theme/types';
 import { getComponentStyle } from '../styleHelpers';
@@ -61,10 +61,10 @@ export const tabsStyles: TabsStyles = {
       gap: getComponentStyle('button.base.icon.gap'),
       size: getComponentStyle('button.base.icon.size.medium'),
     },
-    padding: css`
-      ${getSpacing(4)} ${getSpacing(5)} ${getSpacing(5)}
+    padding: (props) => css`
+      ${getSpacing(4)(props)} ${getSpacing(5)(props)} ${getSpacing(5)(props)}
     `,
-    margin: css`0 0 ${getSpacing(0)}`,
+    margin: (props) => css`0 0 ${getSpacing(0)(props)}`,
     hover: {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
     },
@@ -75,8 +75,8 @@ export const tabsStyles: TabsStyles = {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
     },
     selected: {
-      padding: css`
-        ${getSpacing(4)} ${getSpacing(5)} ${getSpacing(5)}
+      padding: (props) => css`
+        ${getSpacing(4)(props)} ${getSpacing(5)(props)} ${getSpacing(5)(props)}
       `,
       margin: '0',
       color: themeVars.colors.brand.main,

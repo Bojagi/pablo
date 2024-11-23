@@ -1,8 +1,8 @@
-import { css } from 'styled-components';
-import type { Interpolation } from 'styled-components';
-import { createInOutAnimation, InnerInOutAnimationProps } from './InOutAnimation';
+import { css } from '@emotion/react';
+import type { Interpolation } from '@emotion/react';
+import { createInOutAnimation } from './InOutAnimation';
 
-const noAnimationBase = css<InnerInOutAnimationProps>``;
+const noAnimationBase = css``;
 
 const noAnimationEnter = css``;
 

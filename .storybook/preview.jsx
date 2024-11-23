@@ -1,8 +1,7 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
 import { PabloThemeProvider } from '../src/theme';
 import { getSpacing } from '../src/styleHelpers/getSpacing';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 
 export const parameters = {
   layout: 'centered',

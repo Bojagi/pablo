@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { baseStyle } from '../shared/baseStyle';
 import { CssFunctionReturn } from '../types';
 

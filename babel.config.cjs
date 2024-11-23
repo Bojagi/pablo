@@ -32,7 +32,6 @@ module.exports = (api) => {
           isTSX: true,
         },
       ],
-      'babel-plugin-styled-components',
       ['@babel/plugin-proposal-class-properties', { loose: false }],
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-proposal-optional-chaining',

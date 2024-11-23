@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render toolbar 1`] = `
-.c1 {
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -4px;
+  height: calc(24px + 2 * 4px);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
   box-sizing: border-box;
   width: 24px;
   height: 24px;
@@ -11,54 +25,72 @@ exports[`Render toolbar 1`] = `
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  -webkit-transition: background-color 0.2s,color 0.2s;
   transition: background-color 0.2s,color 0.2s;
   border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: 4px;
   margin-right: 4px;
 }
 
-.c1>* {
+.emotion-1>* {
   width: 20px;
   height: 20px;
+  -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transform: scale( 1 );
+  -webkit-transform: scale(
+        1
+      );
+  -moz-transform: scale(
+        1
+      );
+  -ms-transform: scale(
+        1
+      );
+  transform: scale(
+        1
+      );
 }
 
-.c1:enabled {
+.emotion-1:enabled {
   cursor: pointer;
 }
 
-.c1:disabled {
+.emotion-1:disabled {
   opacity: 0.3;
   cursor: normal;
 }
 
-.c1:hover:enabled {
+.emotion-1:hover:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-50);
   color: var(--pbl-theme-colors-common-black);
 }
 
-.c1:focus:enabled {
+.emotion-1:focus:enabled {
   background-color: var(--pbl-theme-colors-blackOpacity-100);
   color: var(--pbl-theme-colors-common-black);
 }
 
-.c0 {
-  box-sizing: border-box;
-  display: flex;
-  margin: 0 -4px;
-  height: calc(24px + 2 * 4px);
-  align-items: center;
-}
-
-.c2 {
+.emotion-4 {
   box-sizing: border-box;
   margin: 0 4px;
   width: 1px;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
   align-self: stretch;
   background-color: var(--pbl-theme-colors-borders-light);
 }
@@ -66,16 +98,14 @@ exports[`Render toolbar 1`] = `
 <div>
   <div
     aria-orientation="horizontal"
-    class="c0"
+    class="emotion-0"
     role="toolbar"
   >
     <button
       aria-pressed="false"
-      class="c1"
+      class="emotion-1"
       color="plain"
-      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
-      mx="4px"
       role="toolbar"
     >
       <div>
@@ -84,11 +114,9 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       aria-pressed="false"
-      class="c1"
+      class="emotion-1"
       color="plain"
-      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
-      mx="4px"
       role="toolbar"
     >
       <div>
@@ -97,11 +125,9 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       aria-pressed="false"
-      class="c1"
+      class="emotion-1"
       color="plain"
-      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
-      mx="4px"
       role="toolbar"
     >
       <div>
@@ -110,16 +136,14 @@ exports[`Render toolbar 1`] = `
     </button>
     <div
       aria-orientation="vertical"
-      class="c2"
+      class="emotion-4"
       role="separator"
     />
     <button
       aria-pressed="false"
-      class="c1"
+      class="emotion-1"
       color="plain"
-      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
-      mx="4px"
       role="toolbar"
     >
       <div>
@@ -128,11 +152,9 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       aria-pressed="false"
-      class="c1"
+      class="emotion-1"
       color="plain"
-      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
-      mx="4px"
       role="toolbar"
     >
       <div>
@@ -141,12 +163,10 @@ exports[`Render toolbar 1`] = `
     </button>
     <button
       aria-pressed="false"
-      class="c1"
+      class="emotion-1"
       color="plain"
-      customstyles="[object Object]"
       data-testid="pbl-toolbar-item-button"
       disabled=""
-      mx="4px"
       role="toolbar"
     >
       <div>

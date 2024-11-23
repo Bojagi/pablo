@@ -1,14 +1,15 @@
 import React, {
   forwardRef,
-  PointerEvent,
+  cloneElement,
   ReactElement,
   useCallback,
   useEffect,
   useRef,
   useState,
+  MouseEvent,
 } from 'react';
 // import { renderToStaticMarkup } from 'react-dom/server';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import useResizeObserver from 'use-resize-observer';
 import { Flex, LayoutBoxProps } from '../Box';
 import { MoreIcon } from '../Icons';
@@ -50,7 +51,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     );
 
     const handleItemClick = useCallback(
-      (item: React.ReactElement<TabProps>) => (e: PointerEvent<any>) => {
+      (item: React.ReactElement<TabProps>) => (e: MouseEvent<any>) => {
         if (item.props.onClick) {
           item.props.onClick(e);
         } else if (onSelect) {
@@ -90,7 +91,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
           {...props}
         >
           {displayableItems.map((child) =>
-            React.cloneElement(child, {
+            cloneElement(child, {
               key: child.props.name,
               mx: gap,
               onClick: handleItemClick(child),

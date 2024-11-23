@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { buttonBaseStyles, ButtonBaseProps } from '../ButtonBase';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { Typography } from '../Typography';
@@ -10,7 +11,7 @@ export interface SidebarNavItemProps extends ButtonBaseProps {
   children: React.ReactNode;
 }
 
-const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' } as any)<SidebarNavItemProps>`
+const SidebarNavItemWrapper = styled.li<SidebarNavItemProps>`
   ${buttonBaseStyles}
   display: flex;
   margin: ${getComponentStyle('sidebarNav.item.marginY')} 0;
@@ -19,8 +20,8 @@ const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' } as any)<SidebarN
   ${(props) =>
     props.selected &&
     css`
-      background-color: ${getComponentStyle('sidebarNav.item.selected.backgroundColor')};
-      ${getCustomStyles('sidebar.item.styles', 'selected')}
+      background-color: ${getComponentStyle('sidebarNav.item.selected.backgroundColor')(props)};
+      ${getCustomStyles('sidebar.item.styles', 'selected')(props)}
     `}
 
   &:hover {
@@ -39,6 +40,10 @@ const SidebarNavItemWrapper = styled.li.attrs({ size: 'small' } as any)<SidebarN
     ${getCustomStyles('sidebar.item.styles', 'active')}
   }
 `;
+
+SidebarNavItemWrapper.defaultProps = {
+  size: 'small',
+};
 
 export const SidebarNavItem = forwardRef<HTMLLIElement, SidebarNavItemProps>(
   ({ children, ...props }, ref) => (

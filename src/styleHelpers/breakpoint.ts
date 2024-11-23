@@ -1,23 +1,23 @@
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { MediaQueryFn, mediaQueryAbove } from '../breakpoints/mediaQueryFns';
 import { Breakpoint } from '../theme/breakpoints';
 import { themeVars } from '../theme/themeVars';
-import { Style } from '../theme/types';
+import { PabloThemeableProps, Style } from '../theme/types';
 
 export function breakpoint(
   breakpointName: Breakpoint,
   styles: Style,
   mediaQueryFn: MediaQueryFn = mediaQueryAbove
 ) {
-  return ({ theme }: { theme: any }): Style | null => {
-    const breakpointIndex = theme.breakpoints.breakpointNames.findIndex(
+  return (props: PabloThemeableProps): Style | null => {
+    const breakpointIndex = props.theme.breakpoints.breakpointNames.findIndex(
       (bp) => bp === breakpointName
     );
     const bp = themeVars.breakpoints[breakpointName];
     if (breakpointIndex >= 0) {
       return css`
-        @media ${mediaQueryFn(bp, theme.breakpoints, breakpointIndex)} {
-          ${styles}
+        @media ${mediaQueryFn(bp, props.theme.breakpoints, breakpointIndex)} {
+          ${typeof styles === 'function' ? styles(props) : styles}
         }
       `;
     }
