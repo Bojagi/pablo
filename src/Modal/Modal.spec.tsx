@@ -6,7 +6,7 @@ import {
   act,
 } from '@testing-library/react';
 import React from 'react';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { PabloThemeProvider } from '../theme';
 import { themeVars } from '../theme/themeVars';
 import { Modal } from './Modal';

@@ -1,5 +1,6 @@
 import React, { forwardRef, ReactElement, ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { Flex, Box, layoutInterpolationFn, LayoutBoxProps } from '../Box';
 import { IconButton } from '../IconButton';
 import { CloseIcon } from '../Icons';
@@ -54,7 +55,7 @@ const icons: Record<ToastType, ReactElement> = {
   error: <ErrorIcon />,
 };
 
-const displayBlockIconsCss = css<LayoutBoxProps>`
+const displayBlockIconsCss = css`
   & > * {
     display: block;
   }
@@ -77,8 +78,8 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
         ref={ref}
         id={generatedId}
         data-testid="pbl-toastcard"
-        aria-aria-labelledby={titleId}
-        aria-aria-describedby={descriptionId}
+        aria-labelledby={titleId}
+        aria-describedby={descriptionId}
         {...props}
       >
         <Flex alignItems={description ? 'flex-start' : 'center'}>
@@ -87,7 +88,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
               mr={5}
               data-testid="pbl-toastcard-iconbox"
               fillColor={iconColors[type || 'info']}
-              css={[displayBlockIconsCss, getStyles('iconBox')]}
+              css={[displayBlockIconsCss, ...getStyles('iconBox')]}
             >
               {icon || icons[type!]}
             </Box>
@@ -111,13 +112,13 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
                   mx={-5}
                   onClick={onClose}
                   size="small"
-                  css={
+                  css={(props) =>
                     css`
                       fill: ${color};
                       &:hover:enabled {
                         background-color: ${themeVars.colors.blackOpacity[300]};
                       }
-                      ${getStyles('closeButton')}
+                      ${getStyles('closeButton', props)}
                     ` as any
                   }
                 >

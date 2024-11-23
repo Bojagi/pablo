@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Button } from '../Button';
 import { Card } from '../Card';
 import { Paragraph, Title } from '../Typography';

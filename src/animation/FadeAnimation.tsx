@@ -1,9 +1,9 @@
-import { css } from 'styled-components';
-import type { Interpolation } from 'styled-components';
+import { css } from '@emotion/react';
+import type { Interpolation } from '@emotion/react';
 import { createInOutAnimation, InOutAnimationProps } from './InOutAnimation';
 
-const fadeAnimationBase: any = css<FadeAnimationProps>`
-  transition: ${(props) => css`opacity ${props.duration}ms`};
+const fadeAnimationBase = (props: FadeAnimationProps) => css`
+  transition: opacity ${props.duration}ms;
   opacity: 0;
 `;
 

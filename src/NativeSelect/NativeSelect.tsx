@@ -1,5 +1,5 @@
 import React, { forwardRef, ReactElement } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseInput, InnerInputProps, InputVariant } from '../shared/BaseInput';
@@ -58,7 +58,7 @@ const InnerSelect = forwardRef<HTMLSelectElement, React.ComponentProps<typeof St
       <StyledSelect ref={ref} {...props} />
     </SelectWrapper>
   )
-) as typeof StyledSelect;
+) as unknown as typeof StyledSelect;
 
 export const NativeSelect = forwardRef<HTMLDivElement, NativeSelectProps>(
   ({ width, variant = 'filled', ...props }, ref) => {

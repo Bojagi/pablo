@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { mediaQueryBelow, MediaQueryFn, mediaQueryOnly } from '../breakpoints/mediaQueryFns';
 import { breakpoint as breakpointFn } from '../styleHelpers';
 import { Breakpoint } from '../theme/breakpoints';

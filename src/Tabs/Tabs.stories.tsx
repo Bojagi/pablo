@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { BookOpen, GitPullRequest, Settings } from 'react-feather';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Box } from '../Box';
 import { Input } from '../Input';
 import { Tab } from './Tab';

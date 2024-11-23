@@ -1,5 +1,5 @@
 import React, { ComponentElement, useEffect, useState } from 'react';
-import { styled } from 'styled-components';
+import styled from '@emotion/styled';
 import type { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
 import { Typography } from '../Typography';

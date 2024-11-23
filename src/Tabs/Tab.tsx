@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { LayoutBoxProps } from '../Box';
 import { buttonBaseStyles } from '../ButtonBase';
 import { baseStyle } from '../shared/baseStyle';
@@ -51,22 +52,26 @@ const TabButton = styled.button<Partial<InnerTabProps>>`
   ${(props) =>
     props.selected &&
     css`
-      color: ${getComponentStyle('tabs.tab.selected.color')};
-      padding: ${getComponentStyle('tabs.tab.selected.padding')};
-      margin: ${getComponentStyle('tabs.tab.selected.margin')};
+      color: ${getComponentStyle('tabs.tab.selected.color')(props)};
+      padding: ${getComponentStyle('tabs.tab.selected.padding')(props)};
+      margin: ${getComponentStyle('tabs.tab.selected.margin')(props)};
       &:after {
         content: '';
         position: absolute;
         bottom: 0;
-        left: ${getComponentStyle('tabs.tab.selected.bottomBorder.gap')};
-        width: calc(100% - 2 * ${getComponentStyle('tabs.tab.selected.bottomBorder.gap')});
-        height: ${getComponentStyle('tabs.tab.selected.bottomBorder.thickness')};
-        border-top-left-radius: ${getComponentStyle('tabs.tab.selected.bottomBorder.radius')};
-        border-top-right-radius: ${getComponentStyle('tabs.tab.selected.bottomBorder.radius')};
-        background-color: ${getComponentStyle('tabs.tab.selected.bottomBorder.color')};
-        ${getCustomStyles('tabs.tab.styles', 'indicator')}
+        left: ${getComponentStyle('tabs.tab.selected.bottomBorder.gap')(props)};
+        width: calc(100% - 2 * ${getComponentStyle('tabs.tab.selected.bottomBorder.gap')(props)});
+        height: ${getComponentStyle('tabs.tab.selected.bottomBorder.thickness')(props)};
+        border-top-left-radius: ${getComponentStyle('tabs.tab.selected.bottomBorder.radius')(
+          props
+        )};
+        border-top-right-radius: ${getComponentStyle('tabs.tab.selected.bottomBorder.radius')(
+          props
+        )};
+        background-color: ${getComponentStyle('tabs.tab.selected.bottomBorder.color')(props)};
+        ${getCustomStyles('tabs.tab.styles', 'indicator')(props)}
       }
-      ${getCustomStyles('tabs.tab.styles', 'selected')}
+      ${getCustomStyles('tabs.tab.styles', 'selected')(props)}
     `}
 `;
 
@@ -80,7 +85,7 @@ const IconBox = styled.div<IconBoxProps>`
   ${(props) =>
     props.hasText &&
     css`
-      margin-right: ${getComponentStyle('tabs.tab.icon.gap')};
+      margin-right: ${getComponentStyle('tabs.tab.icon.gap')(props)};
     `}
   width: ${getComponentStyle('tabs.tab.icon.size')};
   height: ${getComponentStyle('tabs.tab.icon.size')};

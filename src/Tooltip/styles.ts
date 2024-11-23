@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
@@ -17,8 +17,8 @@ export interface TooltipStyles extends BaseStyles<TooltipStyleProperties> {
 
 export const tooltipStyles: TooltipStyles = {
   gap: getSpacing(2),
-  padding: css`
-    ${getSpacing(2)} ${getSpacing(4)}
+  padding: (props) => css`
+    ${getSpacing(2)(props)} ${getSpacing(4)(props)}
   `,
   zIndex: 100,
   backgroundColor: themeVars.colors.common.black,

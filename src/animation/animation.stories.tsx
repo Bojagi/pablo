@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Box, Flex } from '../Box';
 import { Card } from '../Card';
 import { Checkbox } from '../Checkbox';

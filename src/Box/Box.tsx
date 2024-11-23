@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { space } from '@styled-system/space';
 import { layout } from '@styled-system/layout';
 import { flexbox } from '@styled-system/flexbox';
@@ -18,6 +18,7 @@ import { CssFunctionReturn } from '../types';
 import { baseStyle } from '../shared/baseStyle';
 import { getByPath } from '../utils/getByPath';
 import { themeVars } from '../theme/themeVars';
+import { interpolateCssProp } from '../utils/interpolateCssProp';
 
 export interface BoxCssProps {
   css?: CssFunctionReturn;
@@ -41,7 +42,7 @@ export const boxInterpolateFn = (props) =>
 
 export const Box = styled.div<BoxProps>`
   ${baseStyle}
-  ${(props: BoxProps) => props.css}
+  ${interpolateCssProp}
   ${system({
     fillColor: {
       property: 'fill',

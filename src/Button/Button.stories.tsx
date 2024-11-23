@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { GitPullRequest } from 'react-feather';
-import { css, keyframes } from 'styled-components';
+import { css, keyframes } from '@emotion/react';
 import { Flex, Box } from '../Box';
 import { Subtitle } from '../Typography';
 import { Button } from './Button';

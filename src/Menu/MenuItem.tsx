@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { buttonBaseStyles } from '../ButtonBase';
 import { getSpacing } from '../styleHelpers';
 import { themeVars } from '../theme/themeVars';
@@ -10,7 +11,7 @@ import { MenuItemStyleProperties } from './styles';
 
 export interface MenuItemProps extends BaseProps<MenuItemStyleProperties> {
   children: ReactNode;
-  onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   selected?: boolean;
   as?: React.ElementType;
 }

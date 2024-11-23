@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 
 import {
@@ -11,10 +12,10 @@ import {
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
 
-const radioBoxSize = css`
-  calc(${getComponentStyle('radio.handleSize.{size}')} + 2 * (${getComponentStyle(
+const radioBoxSize = (props) => css`
+  calc(${getComponentStyle('radio.handleSize.{size}')(props)} + 2 * (${getComponentStyle(
     'radio.innerPadding.{size}'
-  )} + ${getComponentStyle('radio.borderWidth')}px))
+  )(props)} + ${getComponentStyle('radio.borderWidth')(props)}px))
 `;
 
 const RadioBox = styled.div<CheckableBoxProps>`
@@ -33,8 +34,8 @@ const RadioBox = styled.div<CheckableBoxProps>`
   ${(props) =>
     props.focus &&
     css`
-      box-shadow: 0 0 0 ${getComponentStyle('radio.focus.outlineSize')}
-        ${getComponentStyle('radio.focus.outlineColor')};
+      box-shadow: 0 0 0 ${getComponentStyle('radio.focus.outlineSize')(props)}
+        ${getComponentStyle('radio.focus.outlineColor')(props)};
     `};
   }
   ${getCustomStyles('radio.styles', 'box')}

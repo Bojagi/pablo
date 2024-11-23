@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Bold, Italic, Crop, Edit, Underline, ArrowLeft } from 'react-feather';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Toolbar } from './Toolbar';
 import { ToolbarDivider } from './ToolbarDivider';
 import { ToolbarItem } from './ToolbarItem';

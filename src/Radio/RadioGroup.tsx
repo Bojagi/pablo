@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { CheckableSize } from '../shared/BaseCheckable';
 import { Box, BoxProps } from '../Box';
 import { guaranteeArray } from '../utils/guaranteeArray';

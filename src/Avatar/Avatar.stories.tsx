@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Flex } from '../Box';
 import { Avatar } from './index';
 

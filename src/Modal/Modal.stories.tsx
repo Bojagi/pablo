@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MoreHorizontal, X } from 'react-feather';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Button } from '../Button';
 import { ButtonBar } from '../ButtonBar/ButtonBar';
 import { IconButton } from '../IconButton';
@@ -136,14 +136,14 @@ WithCustomStyles.args = {
     box: css`
       border: 5px solid red;
     `,
-    area: css`
+    area: (props) => css`
       background-color: rgba(0, 0, 255, 0.2);
-      border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
+      border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
     `,
-    paneBox: css`
+    paneBox: (props) => css`
       border: 5px solid blue;
-      border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
-      padding: ${getSpacing(4)};
+      border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
+      padding: ${getSpacing(4)(props)};
     `,
   },
 };
@@ -173,14 +173,14 @@ export const WithCustomStylesFromTheme = () => {
       box: css`
         border: 5px solid red;
       `,
-      area: css`
+      area: (props) => css`
         background-color: rgba(0, 0, 255, 0.2);
-        border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
+        border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
       `,
-      paneBox: css`
+      paneBox: (props) => css`
         border: 5px solid blue;
-        border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
-        padding: ${getSpacing(4)};
+        border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
+        padding: ${getSpacing(4)(props)};
       `,
     },
   };

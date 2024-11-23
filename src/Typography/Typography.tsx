@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import { styled, css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { typography } from '@styled-system/typography';
 import type { TypographyProps as StyledSystemTypographyProps } from 'styled-system';
 import { boxInterpolateFn, BoxProps } from '../Box';
@@ -18,18 +19,18 @@ export interface BaseTypographyProps
 }
 export interface TypographyProps extends BaseTypographyProps {
   variant: TypographyVariant;
-  as?: string | React.ComponentType<any>;
+  as?: React.ElementType;
   htmlFor?: string;
   children: React.ReactNode;
 }
 
-const baseTypographyStyle = css<BaseTypographyProps>`
+const baseTypographyStyle = (props: BaseTypographyProps) => css`
   ${baseStyle}
   font-family: ${themeVars.typography.base.fontFamily};
   font-style: normal;
   font-weight: ${themeVars.typography.base.fontWeight};
   margin: 0;
-  ${getCustomStyles('typography.styles', 'root')}
+  ${getCustomStyles('typography.styles', 'root')(props)}
 `;
 
 export const Paragraph = styled.p<BaseTypographyProps>`

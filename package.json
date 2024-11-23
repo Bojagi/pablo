@@ -104,6 +104,8 @@
     "yargs": "^16.2.0"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
     "@popperjs/core": "^2.8.4",
     "@react-hook/media-query": "^1.1.1",
     "@styled-system/border": "^5.1.5",

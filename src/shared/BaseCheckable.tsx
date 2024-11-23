@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { Flex, LayoutBoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { useComponentStyle } from '../theme/useComponentStyle';

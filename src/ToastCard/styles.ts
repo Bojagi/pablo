@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { getSpacing } from '../styleHelpers/getSpacing';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
@@ -16,8 +16,8 @@ export interface ToastCardStyles {
 
 export const toastCardStyles: ToastCardStyles = {
   width: '400px',
-  padding: css`
-    ${getSpacing(5)} ${getSpacing(7)} ${getSpacing(5)} ${getSpacing(5)}
+  padding: (props) => css`
+    ${getSpacing(5)(props)} ${getSpacing(7)(props)} ${getSpacing(5)(props)} ${getSpacing(5)(props)}
   `,
   borderRadius: '6px',
   backgroundColor: themeVars.colors.gray[800],

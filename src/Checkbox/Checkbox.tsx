@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import { styled, css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 import {
   BaseCheckable,
@@ -10,10 +11,10 @@ import {
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
 
-const checkboxSize = css`
-  calc(${getComponentStyle('checkbox.handleSize.{size}')} + 2 * (${getComponentStyle(
+const checkboxSize = (props) => css`
+  calc(${getComponentStyle('checkbox.handleSize.{size}')(props)} + 2 * (${getComponentStyle(
     'checkbox.innerPadding.{size}'
-  )} + ${getComponentStyle('checkbox.borderWidth')}px))
+  )(props)} + ${getComponentStyle('checkbox.borderWidth')(props)}px))
 `;
 
 const CheckboxBox = styled.div<CheckableBoxProps>`
@@ -33,8 +34,8 @@ const CheckboxBox = styled.div<CheckableBoxProps>`
   ${(props) =>
     props.focus &&
     css`
-      box-shadow: 0 0 0 ${getComponentStyle('checkbox.focus.outlineSize')}
-        ${getComponentStyle('checkbox.focus.outlineColor')};
+      box-shadow: 0 0 0 ${getComponentStyle('checkbox.focus.outlineSize')(props)}
+        ${getComponentStyle('checkbox.focus.outlineColor')(props)};
     `};
   }
   ${getCustomStyles('checkbox.styles', 'box')}

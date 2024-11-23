@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CSSObject, Interpolation } from 'styled-components';
+import type { CSSInterpolation } from '@emotion/serialize';
 import { ButtonStyles } from '../Button/styles';
 import { CardStyles } from '../Card/styles';
 import { SidebarNavStyles } from '../SidebarNav/styles';
@@ -25,12 +25,18 @@ import { ToastCardStyles } from '../ToastCard/styles';
 import { ImageStyles } from '../Image/styles';
 import { NativeSelectStyles } from '../NativeSelect/styles';
 
-export type Style = string | CSSObject | Interpolation<any>;
+export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
+  | CSSInterpolation
+  | ((props?: P) => CSSInterpolation);
 export interface PabloTheme {
   space: Spacing;
   colors: Colors;
   typography: Typography;
   breakpoints: Breakpoints;
+}
+
+export interface PabloThemeFull extends PabloTheme {
+  componentStyles: ComponentStyles;
 }
 
 type RecursivePartial<T> = {
@@ -70,5 +76,5 @@ export interface PabloThemeProviderProps {
 }
 
 export interface PabloThemeableProps {
-  theme: PabloTheme;
+  theme: PabloTheme & { componentStyles: ComponentStyles };
 }

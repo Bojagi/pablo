@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { Flex } from '../Box';
 import { Title } from '../Typography';
 import { getComponentStyle, shadowTransformer, transitionTransformer } from '../styleHelpers';
@@ -70,12 +71,12 @@ const ModalArea = styled.div<ModalAreaProps>`
   ${(props) =>
     !props.open &&
     css`
-      transform: ${getComponentStyle('modal.box.closedTransform')};
+      transform: ${getComponentStyle('modal.box.closedTransform')(props)};
     `}
   ${(props) =>
     props.animate &&
     css`
-      transition: ${getComponentStyle('modal.box.transition', transitionTransformer)};
+      transition: ${getComponentStyle('modal.box.transition', transitionTransformer)(props)};
     `}
   max-width: ${getComponentStyle('modal.box.maxWidth.{maxWidth}')};
   margin: auto;

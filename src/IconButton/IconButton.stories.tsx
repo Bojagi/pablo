@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Check } from 'react-feather';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { Flex } from '../Box';
 import { Subtitle } from '../Typography';
 import { IconButton } from './IconButton';

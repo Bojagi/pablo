@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { SlideAnimation } from '../animation/SlideAnimation';
 import { Button } from '../Button';
 import { Menu } from './Menu';

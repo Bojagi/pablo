@@ -20,6 +20,6 @@
   "paths": {
     "#/*": ["src/*"],
   },
-  "include": ["src", "./jestSetup.ts", "testUtils/renderStyledComponent.tsx", "testUtils/waitOneTick.tsx"],
+  "include": ["src", "./jestSetup.ts", "testUtils/renderStyledComponent.tsx", "testUtils/waitOneTick.tsx", "emotion.d.ts"],
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest"]
 }

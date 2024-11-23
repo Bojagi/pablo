@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from '@emotion/react';
 import { getSpacing } from '../styleHelpers';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
@@ -45,8 +45,8 @@ const filledVariantStyle = {
 
 export const inputBaseStyles: InputBaseStyles = {
   defaultWidth: 300,
-  padding: css`
-    ${getSpacing(3)} ${getSpacing(4)}
+  padding: (props) => css`
+    ${getSpacing(3)(props)} ${getSpacing(4)(props)}
   `,
   borderRadius: '8px',
   fontFamily: themeVars.typography.base.fontFamily,
