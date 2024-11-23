@@ -11,8 +11,8 @@ export interface SwitchStyles extends CheckableBaseStyles {
 export const switchStyles: SwitchStyles = {
   ...checkableBaseStyles,
   innerPadding: {
-    small: getSpacing(1),
-    medium: getSpacing(1),
+    small: getSpacing(0.25),
+    medium: getSpacing(0.25),
   },
   handleSize: {
     medium: '18px',

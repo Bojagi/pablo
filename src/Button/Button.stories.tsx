@@ -24,22 +24,22 @@ const SetOfButtons = ({ inverted, ...args }) => (
     flexDirection={args.fullWidth ? 'column' : 'row'}
   >
     <ButtonBox inverted={inverted} invertedBgColor="brand.main">
-      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="brand">
+      <Button mx={1} mb={args.fullWidth ? 4 : 0} {...args} color="brand">
         Brand
       </Button>
     </ButtonBox>
     <ButtonBox inverted={inverted} invertedBgColor="common.black">
-      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="plain">
+      <Button mx={1} mb={args.fullWidth ? 4 : 0} {...args} color="plain">
         Plain
       </Button>
     </ButtonBox>
     <ButtonBox inverted={inverted} invertedBgColor="positive.main">
-      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="positive">
+      <Button mx={1} mb={args.fullWidth ? 4 : 0} {...args} color="positive">
         Positive
       </Button>
     </ButtonBox>
     <ButtonBox inverted={inverted} invertedBgColor="negative.main">
-      <Button mx={4} mb={args.fullWidth ? 4 : 0} {...args} color="negative">
+      <Button mx={1} mb={args.fullWidth ? 4 : 0} {...args} color="negative">
         Negative
       </Button>
     </ButtonBox>

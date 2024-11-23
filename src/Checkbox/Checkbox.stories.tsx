@@ -17,9 +17,9 @@ const ControlledCheckbox = ({
 
 const baseStory = (args) => (
   <Flex mx={-4} mb={4}>
-    <ControlledCheckbox mx={4} checked={true} {...args} />
-    <ControlledCheckbox mx={4} checked={false} {...args} />
-    <ControlledCheckbox mx={4} checked={true} disabled={true} {...args} />
+    <ControlledCheckbox mx={1} checked={true} {...args} />
+    <ControlledCheckbox mx={1} checked={false} {...args} />
+    <ControlledCheckbox mx={1} checked={true} disabled={true} {...args} />
   </Flex>
 );
 

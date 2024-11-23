@@ -74,7 +74,7 @@ exports[`Render with nothing selected 1`] = `
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
   margin-left: 8px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 <div>
@@ -259,7 +259,7 @@ exports[`Work with one radio button 1`] = `
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
   margin-left: 8px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 <div>

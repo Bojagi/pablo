@@ -125,7 +125,7 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(
                     `
                   : undefined
               }
-              ml={4}
+              ml={1}
               ref={setIconButtonRef}
               onClick={() => setAdditionalMenuOpen(true)}
               icon={<MoreIcon />}

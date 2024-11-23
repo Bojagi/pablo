@@ -14,9 +14,9 @@ const ControlledSwitch = ({ checked: checkedInitial, ...props }: Omit<SwitchProp
 
 const baseStory = (args) => (
   <Flex mx={-4} mb={4}>
-    <ControlledSwitch mx={4} checked={true} {...args} />
-    <ControlledSwitch mx={4} checked={false} {...args} />
-    <ControlledSwitch mx={4} checked={true} disabled={true} {...args} />
+    <ControlledSwitch mx={1} checked={true} {...args} />
+    <ControlledSwitch mx={1} checked={false} {...args} />
+    <ControlledSwitch mx={1} checked={true} disabled={true} {...args} />
   </Flex>
 );
 

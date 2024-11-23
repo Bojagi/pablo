@@ -33,22 +33,22 @@ A tooltip can be positioned on each of the for sides of it's child.
 <Playground>
   <Box display="flex" mx={-4}>
     <Tooltip side="left" content="Left tooltip">
-      <Button mx={4} color="plain">
+      <Button mx={1} color="plain">
         Left
       </Button>
     </Tooltip>
     <Tooltip side="top" content="Top tooltip">
-      <Button mx={4} color="plain">
+      <Button mx={1} color="plain">
         top
       </Button>
     </Tooltip>
     <Tooltip side="bottom" content="Bottom tooltip">
-      <Button mx={4} color="plain">
+      <Button mx={1} color="plain">
         bottom
       </Button>
     </Tooltip>
     <Tooltip side="right" content="Right tooltip">
-      <Button mx={4} color="plain">
+      <Button mx={1} color="plain">
         right
       </Button>
     </Tooltip>
@@ -75,7 +75,7 @@ behavior you need to wrap the child in a `div`, `span` or any other element.
 
 <Playground>
   <Tooltip content="I'm not there!">
-    <Button mx={5} color="plain" disabled={true}>
+    <Button mx={1.5} color="plain" disabled={true}>
       I am not clickable
     </Button>
   </Tooltip>

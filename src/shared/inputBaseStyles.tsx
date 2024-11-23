@@ -46,7 +46,7 @@ const filledVariantStyle = {
 export const inputBaseStyles: InputBaseStyles = {
   defaultWidth: 300,
   padding: (props) => css`
-    ${getSpacing(3)(props)} ${getSpacing(4)(props)}
+    ${getSpacing(0.75)(props)} ${getSpacing(1)(props)}
   `,
   borderRadius: '8px',
   fontFamily: themeVars.typography.base.fontFamily,

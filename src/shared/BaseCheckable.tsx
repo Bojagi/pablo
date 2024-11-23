@@ -143,7 +143,7 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
         {label && (
           <Typography
             data-testid={`pbl-${componentName}-label`}
-            ml={4}
+            ml={1}
             mb={0}
             variant={typographyVariant}
             as="label"

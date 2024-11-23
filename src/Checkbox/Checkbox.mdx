@@ -36,8 +36,8 @@ You can pass an optional `label` prop with a `ReactNode` value to show a label n
     const [checkedTwo, setCheckedTwo] = React.useState(true);
     return (
       <Box display="flex" mx={-2}>
-        <Checkbox mx={2} label="Spaghetti" checked={checked} onChange={() => setChecked(!checked)} />
-        <Checkbox mx={2} label="Pizza" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+        <Checkbox mx={0.5} label="Spaghetti" checked={checked} onChange={() => setChecked(!checked)} />
+        <Checkbox mx={0.5} label="Pizza" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
       </Box>
     );
   }}
@@ -53,8 +53,8 @@ You can pass the `size` prop with the `small` value which renders a smaller vers
     const [checkedTwo, setCheckedTwo] = React.useState(true);
     return (
       <Box display="flex" mx={-2}>
-        <Checkbox mx={2} size="small" checked={checked} onChange={() => setChecked(!checked)} />
-        <Checkbox mx={2} size="small" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+        <Checkbox mx={0.5} size="small" checked={checked} onChange={() => setChecked(!checked)} />
+        <Checkbox mx={0.5} size="small" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
       </Box>
     );
   }}

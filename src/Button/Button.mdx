@@ -22,13 +22,13 @@ Buttons can be either `small`, `medium` or `large`. Default size is `medium`.
 
 <Playground>
   <Box mx={-4}>  
-    <Button size="small" mx={4}>
+    <Button size="small" mx={1}>
       Small
     </Button>
-    <Button mx={4}>
+    <Button mx={1}>
       Medium
     </Button>
-    <Button size="large" mx={4}>
+    <Button size="large" mx={1}>
       Large
     </Button>
   </Box>
@@ -43,16 +43,16 @@ You can also use the color `positive` for construcive or positive actions.
 
 <Playground>
   <Box mx={-4}>  
-    <Button mx={4}>
+    <Button mx={1}>
       Brand button
     </Button>
-    <Button color="plain" mx={4}>
+    <Button color="plain" mx={1}>
       Plain button
     </Button>
-    <Button color="positive" mx={4}>
+    <Button color="positive" mx={1}>
       Positive button
     </Button>
-    <Button color="negative" mx={4}>
+    <Button color="negative" mx={1}>
       Negative button
     </Button>
   </Box>
@@ -67,13 +67,13 @@ where `secondary` is more important than `text`.
 
 <Playground>
   <Box mx={-4}>  
-    <Button mx={4}>
+    <Button mx={1}>
       Accept
     </Button>
-    <Button variant="secondary" mx={4}>
+    <Button variant="secondary" mx={1}>
       Cancel
     </Button>
-    <Button variant="text" mx={4}>
+    <Button variant="text" mx={1}>
       read more
     </Button>
   </Box>
@@ -87,13 +87,13 @@ making it camel case (e.g. `primaryInverted`).
 
 <Playground>
   <Box borderRadius={4} py={6} px={4}  bgColor="brand.main">  
-    <Button variant="primaryInverted" mx={4}>
+    <Button variant="primaryInverted" mx={1}>
       Accept
     </Button>
-    <Button variant="secondaryInverted" mx={4}>
+    <Button variant="secondaryInverted" mx={1}>
       Cancel
     </Button>
-    <Button variant="textInverted" mx={4}>
+    <Button variant="textInverted" mx={1}>
       read more
     </Button>
   </Box>
@@ -108,16 +108,16 @@ Colors are applied based on the `variant` and `color` prop.
 
 <Playground>
   <Box display="flex" alignItems="center" mx={-4}>
-    <Button mx={4} endIcon={<GitPullRequest size={16} />}>
+    <Button mx={1} endIcon={<GitPullRequest size={16} />}>
       Accept
     </Button>
-    <Button mx={4} startIcon={<GitPullRequest size={16} />}>
+    <Button mx={1} startIcon={<GitPullRequest size={16} />}>
       Cancel
     </Button>
-    <Button mx={4} variant="secondary" endIcon={<GitPullRequest size={16} />}>
+    <Button mx={1} variant="secondary" endIcon={<GitPullRequest size={16} />}>
       Accept
     </Button>
-    <Button mx={4} variant="secondary" startIcon={<GitPullRequest size={16} />}>
+    <Button mx={1} variant="secondary" startIcon={<GitPullRequest size={16} />}>
       Cancel
     </Button>
   </Box>
