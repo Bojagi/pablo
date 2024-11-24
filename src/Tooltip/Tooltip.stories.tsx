@@ -4,13 +4,14 @@ import { css } from '@emotion/react';
 import { Flex } from '../Box';
 import { Button } from '../Button';
 import { Tooltip } from './Tooltip';
+import { FadeAnimation, StackAnimation } from '../animation';
 
 export default {
   title: 'Tooltip',
 };
 
 const BaseStory = (args) => (
-  <Flex height="100%" width="50vw" alignItems="center" justifyContent="center">
+  <Flex height="110vh" width="50vw" alignItems="center" justifyContent="center">
     <Tooltip content="Left tooltip" side="left" {...args}>
       <Button mx={1.5} color="plain">
         left
@@ -40,6 +41,24 @@ WithoutDelay.args = {};
 
 export const WithDelay = BaseStory.bind(null);
 WithDelay.args = { delay: 400 };
+
+export const WithClick = BaseStory.bind(null);
+WithClick.args = { showOnClick: true };
+
+export const WithSlowAnimation = BaseStory.bind(null);
+WithSlowAnimation.args = { animationDuration: 1000 };
+
+export const WithReverseAnimation = BaseStory.bind(null);
+WithReverseAnimation.args = { animationReverse: true, animationDuration: 1000 };
+
+export const WithFadeAnimation = BaseStory.bind(null);
+WithFadeAnimation.args = { animation: FadeAnimation, animationDuration: 1000 };
+
+export const WithStackAnimation = BaseStory.bind(null);
+WithStackAnimation.args = { animation: StackAnimation, animationDuration: 1000 };
+
+export const WithNoAnimation = BaseStory.bind(null);
+WithNoAnimation.args = { animationDuration: 0 };
 
 export const WithDisabledButton = ({ disabled, ...args }) => (
   <Flex height="100%" width="100vw" alignItems="center" justifyContent="center">

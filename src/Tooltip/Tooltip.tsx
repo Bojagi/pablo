@@ -1,4 +1,4 @@
-import React, { ComponentElement, useEffect, useState } from 'react';
+import React, { ComponentElement, ComponentType, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import type { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
@@ -18,12 +18,17 @@ import { BaseProps } from '../types';
 import { TooltipStyleProperties } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
+import { InOutAnimationProps } from '../animation';
 
 export type TooltipSide = BasePlacement;
 
 export interface TooltipProps extends LayoutBoxProps, BaseProps<TooltipStyleProperties> {
   content: React.ReactNode;
   side?: TooltipSide;
+  showOnClick?: boolean;
+  animation?: ComponentType<InOutAnimationProps>;
+  animationDuration?: number;
+  animationReverse?: boolean;
   delay?: number;
   disabled?: boolean;
   children: ComponentElement<any, any>;
@@ -72,17 +77,21 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
 export function Tooltip({
   content,
   children,
+  showOnClick,
   disabled = false,
   side = 'top',
   delay = 0,
+  animation = SlideAnimation,
+  animationDuration = 150,
+  animationReverse = false,
   customStyles,
 }: TooltipProps) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
 
   useEffect(() => {
     if (disabled) {
-      setIsHovered(false);
+      setOpen(false);
     }
   }, [disabled]);
 
@@ -90,19 +99,23 @@ export function Tooltip({
     return <>{children}</>;
   }
 
+  console.log('animationReverse', animationReverse);
+
   return (
     <Popover
-      open={isHovered && !disabled}
+      open={isOpen && !disabled}
       placement={side}
       offset={gap}
       delay={delay}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      animation={SlideAnimation}
+      onClick={() => showOnClick && setOpen((prevOpen) => !prevOpen)}
+      onClickOutside={() => setOpen(false)}
+      onMouseEnter={() => !showOnClick && setOpen(true)}
+      onMouseLeave={() => !showOnClick && setOpen(false)}
+      animation={animation}
       animationProps={{
         side,
-        reverse: true,
-        duration: 0,
+        reverse: animationReverse,
+        duration: animationDuration,
       }}
       content={
         <TooltipPopover
