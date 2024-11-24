@@ -99,8 +99,6 @@ export function Tooltip({
     return <>{children}</>;
   }
 
-  console.log('animationReverse', animationReverse);
-
   return (
     <Popover
       open={isOpen && !disabled}
