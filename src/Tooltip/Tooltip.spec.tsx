@@ -149,6 +149,37 @@ describe.each([
     expect(queryByTestId('pbl-tooltip-popover')).toBeNull();
   });
 
+  test('Do not show tooltip on hover when child is disabled', async () => {
+    const { getByTestId, queryByTestId } = renderComponent(
+      {
+        content: `This is a tooltip on the ${side} side`,
+        side,
+      },
+      {
+        disabled: true,
+      }
+    );
+    // This is because of passing ref on effect, which happens on next tick
+    await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
+
+    // Trigger resize update and update the size
+    act(() => {
+      getByTestId('pbl-tooltip-wrapper').setAttribute('fake-height', '10');
+      getByTestId('pbl-tooltip-wrapper').setAttribute('fake-width', '20');
+      fireEvent(getByTestId('pbl-tooltip-wrapper'), new Event('resize'));
+    });
+
+    act(() => {
+      fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
+      // wait for the tick to finish
+      jest.advanceTimersByTime(0);
+    });
+
+    await act(() => Promise.resolve());
+
+    expect(queryByTestId('pbl-tooltip-popover')).toBeNull();
+  });
+
   test('Hide tooltip if button is disabled after click', async () => {
     const { getByTestId, queryByTestId, rerender } = renderComponent({
       content: `This is a tooltip on the ${side} side`,
@@ -294,11 +325,13 @@ describe.each([
   });
 });
 
-function renderComponent(props) {
+function renderComponent(props, childProps = {}) {
   const renderFn = (innerProps) => (
     <PabloThemeProvider>
       <Tooltip animationDuration={10} {...innerProps}>
-        <div data-testid="pbl-tooltip-wrapper">content</div>
+        <div {...childProps} data-testid="pbl-tooltip-wrapper">
+          content
+        </div>
       </Tooltip>
     </PabloThemeProvider>
   );

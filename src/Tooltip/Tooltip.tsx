@@ -90,10 +90,10 @@ export function Tooltip({
   const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
 
   useEffect(() => {
-    if (disabled) {
+    if (disabled || children?.props?.disabled) {
       setOpen(false);
     }
-  }, [disabled]);
+  }, [disabled, children]);
 
   if (!content) {
     return <>{children}</>;
@@ -101,7 +101,7 @@ export function Tooltip({
 
   return (
     <Popover
-      open={isOpen && !disabled}
+      open={isOpen && !disabled && !children?.props?.disabled}
       placement={side}
       offset={gap}
       delay={delay}
