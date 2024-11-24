@@ -33,9 +33,9 @@ export default [
   },
   {
     path: 'build/esm/index.js',
-    name: 'Avatar Treeshaking',
-    import: '{ Avatar }',
-    limit: '6 kb',
+    name: 'Tooltip Treeshaking',
+    import: '{ Tooltip }',
+    limit: '10 kb',
     running: false,
   },
   {
