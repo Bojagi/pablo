@@ -4,14 +4,14 @@ import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
 import { setRef } from '../utils/setRef';
 import { useReRenderForwardRef } from '../utils/useForwardRef';
-import { InOutAnimationProps, NoAnimation } from '../animation';
+import { AnimatonSetupProps, InOutAnimationProps, NoAnimation } from '../animation';
 import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 import { baseStyle } from '../shared/baseStyle';
 import type { ComponentElement, ComponentType, ReactElement, ReactNode, Ref } from 'react';
 import { useNanopop } from './useNanopop';
 import type { NanoPopPosition } from 'nanopop';
 
-export interface PopoverProps {
+export interface PopoverProps<A extends InOutAnimationProps = InOutAnimationProps> {
   children: ComponentElement<any, any>;
   content: ReactNode;
   placement: NanoPopPosition;
@@ -24,7 +24,7 @@ export interface PopoverProps {
   arrow?: ReactElement;
   open: boolean;
   animation?: ComponentType<InOutAnimationProps>;
-  animationProps?: Omit<InOutAnimationProps, 'visible' | 'children'> & Record<string, any>;
+  animationProps?: AnimatonSetupProps<A>;
   'aria-haspopup'?: string;
 }
 

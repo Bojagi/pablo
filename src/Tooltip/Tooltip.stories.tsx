@@ -46,19 +46,19 @@ export const WithClick = BaseStory.bind(null);
 WithClick.args = { showOnClick: true };
 
 export const WithSlowAnimation = BaseStory.bind(null);
-WithSlowAnimation.args = { animationDuration: 1000 };
+WithSlowAnimation.args = { animationProps: { duration: 1000 } };
 
 export const WithReverseAnimation = BaseStory.bind(null);
-WithReverseAnimation.args = { animationReverse: true, animationDuration: 1000 };
+WithReverseAnimation.args = { animationProps: { reverse: true, duration: 1000 } };
 
 export const WithFadeAnimation = BaseStory.bind(null);
-WithFadeAnimation.args = { animation: FadeAnimation, animationDuration: 1000 };
+WithFadeAnimation.args = { animation: FadeAnimation, animationProps: { duration: 1000 } };
 
 export const WithStackAnimation = BaseStory.bind(null);
-WithStackAnimation.args = { animation: StackAnimation, animationDuration: 1000 };
+WithStackAnimation.args = { animation: StackAnimation, animationProps: { duration: 1000 } };
 
 export const WithNoAnimation = BaseStory.bind(null);
-WithNoAnimation.args = { animationDuration: 0 };
+WithNoAnimation.args = { animation: { duration: 0 } };
 
 export const WithDisabledButton = ({ disabled, ...args }) => (
   <Flex height="100%" width="100vw" alignItems="center" justifyContent="center">

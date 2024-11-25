@@ -282,8 +282,10 @@ describe.each([
   test('show tooltip on hover with delay', async () => {
     const { getByTestId, queryByTestId } = renderComponent({
       content: `This is a tooltip on the ${side} side`,
+      animationProps: {
+        duration: 10,
+      },
       delay: 100,
-      animationDuration: 10,
       side,
     });
     // This is because of passing ref on effect, which happens on next tick
@@ -328,7 +330,7 @@ describe.each([
 function renderComponent(props, childProps = {}) {
   const renderFn = (innerProps) => (
     <PabloThemeProvider>
-      <Tooltip animationDuration={10} {...innerProps}>
+      <Tooltip animationProps={{ duration: 10 }} {...innerProps}>
         <div {...childProps} data-testid="pbl-tooltip-wrapper">
           content
         </div>
