@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode, useState, useEffect } from 'react';
+import React, { forwardRef, type ReactNode, useState, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
 import styled from '@emotion/styled';
 import useResizeObserver from 'use-resize-observer';
@@ -32,14 +32,21 @@ export const InnerInOutAnimation = styled.div<InnerInOutAnimationProps>`
   }}
 `;
 
-export interface InOutAnimationProps {
+export type AnimatonSetupProps<P extends InOutAnimationProps> = Omit<
+  P,
+  keyof AnimationAdditionalProps
+>;
+
+export interface AnimationAdditionalProps {
   visible: boolean;
-  duration: number;
   onExited?: () => void;
   baseStyles?: Interpolation<InnerInOutAnimationProps>;
   enterStyles?: Interpolation<InnerInOutAnimationProps>;
   exitStyles?: Interpolation<InnerInOutAnimationProps>;
   children: ReactNode;
+}
+export interface InOutAnimationProps extends AnimationAdditionalProps {
+  duration: number;
 }
 
 export interface CreateInOutAnimationOptions {

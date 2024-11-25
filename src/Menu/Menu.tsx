@@ -9,13 +9,13 @@ import { BaseProps } from '../types';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { MenuItemProps } from './MenuItem';
 import { MenuStyleProperties } from './styles';
-import type { Placement } from '@popperjs/core';
 import type { ComponentElement, ReactElement } from 'react';
+import type { NanoPopPosition } from 'nanopop';
 
 export interface MenuProps extends BaseProps<MenuStyleProperties> {
   children: ComponentElement<any, any>;
   open: boolean;
-  placement: Placement;
+  placement: NanoPopPosition;
   offset?: number;
   onClose?: () => void;
   items: ReactElement<MenuItemProps>[];

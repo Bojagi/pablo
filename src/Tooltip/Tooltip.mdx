@@ -55,6 +55,19 @@ A tooltip can be positioned on each of the for sides of it's child.
   </Box>
 </Playground>
 
+### Tooltip by click
+
+By default the tooltip shows on hover. If you want to show the tooltip on click, you can use the `showOnClick` boolean prop.
+This disables the hover behavior and shows the tooltip on click.
+
+<Playground>
+  <Tooltip content="You only get me by click" showOnClick>
+      <Button color="plain">
+        Click me
+      </Button>
+    </Tooltip>
+</Playground>
+
 ### Tooltips with a delay
 
 If you want to only show a tooltip after hovering over it for a certain time, you can use the `delay` prop and pass
@@ -80,6 +93,22 @@ behavior you need to wrap the child in a `div`, `span` or any other element.
     </Button>
   </Tooltip>
 </Playground>
+
+### Using animation
+
+By default the tooltip has a slide in animation with a `100` millisecond duration. You can change this by using the following props:
+
+* `animation` - a pablo animation component (default `SlideAnimation`)
+* `animationProps` - Props for the animation component (default `{duration: 100, side: <side prop from Tooltip>, reverse: false'}`)
+
+<Playground>
+  <Tooltip content="I am really slow" animationProps={{duration: 5000}}>
+    <Button mx={1.5} color="plain">
+      Quickly, hover over me!
+    </Button>
+  </Tooltip>
+</Playground>
+
 
 ### Customizing the tooltip
 

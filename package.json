@@ -115,6 +115,7 @@
     "@styled-system/typography": "^5.1.2",
     "deepmerge": "^4.2.2",
     "isobject": "^4.0.0",
+    "nanopop": "^2.4.2",
     "react-popper": "^2.2.4",
     "react-transition-group": "^4.4.5",
     "use-resize-observer": "^9.1.0"

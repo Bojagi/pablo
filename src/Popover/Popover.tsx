@@ -1,34 +1,36 @@
 import React, { forwardRef, useEffect, useState, useMemo, cloneElement } from 'react';
-import { usePopper } from 'react-popper';
 import styled from '@emotion/styled';
 import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
 import { setRef } from '../utils/setRef';
 import { useReRenderForwardRef } from '../utils/useForwardRef';
-import { InOutAnimationProps, NoAnimation } from '../animation';
+import { AnimatonSetupProps, InOutAnimationProps, NoAnimation } from '../animation';
 import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 import { baseStyle } from '../shared/baseStyle';
-import type { Placement } from '@popperjs/core';
 import type { ComponentElement, ComponentType, ReactElement, ReactNode, Ref } from 'react';
+import { useNanopop } from './useNanopop';
+import type { NanoPopPosition } from 'nanopop';
 
-export interface PopoverProps {
+export interface PopoverProps<A extends InOutAnimationProps = InOutAnimationProps> {
   children: ComponentElement<any, any>;
   content: ReactNode;
-  placement: Placement;
+  placement: NanoPopPosition;
   offset?: number;
   delay?: number;
+  onClick?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   onClickOutside?: () => void;
   arrow?: ReactElement;
   open: boolean;
   animation?: ComponentType<InOutAnimationProps>;
-  animationProps?: Omit<InOutAnimationProps, 'visible' | 'children'> & Record<string, any>;
+  animationProps?: AnimatonSetupProps<A>;
   'aria-haspopup'?: string;
 }
 
 const PopoverWrapper = styled.div`
   ${baseStyle}
+  position: fixed;
   z-index: 1100;
 `;
 
@@ -43,6 +45,7 @@ export const Popover = forwardRef(
       offset = 0,
       onMouseEnter = () => {},
       onMouseLeave = () => {},
+      onClick,
       onClickOutside = () => {},
       arrow = <div />,
       animation: Animation = NoAnimation,
@@ -85,42 +88,33 @@ export const Popover = forwardRef(
       [open, onClickOutside]
     );
 
-    const { styles, attributes } = usePopper(referenceElement, popperElement, {
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, 10 + offset],
-          },
-        },
-        {
-          name: 'arrow',
-          options: {
-            element: arrowElement,
-            padding: 10,
-          },
-        },
-      ],
-      placement,
-      strategy: 'fixed',
+    useNanopop({
+      referenceElement,
+      popperElement,
+      arrowElement,
+      margin: 10 + offset,
+      position: placement,
     });
 
     const clonedElement = useMemo(
       () =>
         cloneElement(children, {
           ref: setReferenceElement,
+          onClick: (...args) => {
+            onClick?.();
+            children.props.onClick?.(...args);
+          },
           'aria-haspopup': ariaHasPopup,
         }),
-      [ariaHasPopup, children, setReferenceElement]
+      [ariaHasPopup, children, onClick, setReferenceElement]
     );
 
     const clonedArrow = useMemo(
       () =>
         cloneElement(arrow, {
           ref: setArrowElement,
-          style: styles.arrow,
         }),
-      [arrow, styles.arrow]
+      [arrow]
     );
 
     return (
@@ -128,7 +122,7 @@ export const Popover = forwardRef(
         {clonedElement}
         <Portal name="popover">
           {innerOpen && (
-            <PopoverWrapper ref={setPopperElement} style={styles.popper} {...attributes.popper}>
+            <PopoverWrapper ref={setPopperElement}>
               <ClickOutside onClickOutside={handleClickOutside}>
                 <Animation {...animationProps} visible={open}>
                   <div>{content}</div>

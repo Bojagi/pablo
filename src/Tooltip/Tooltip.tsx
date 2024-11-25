@@ -1,4 +1,4 @@
-import React, { ComponentElement, useEffect, useState } from 'react';
+import React, { ComponentElement, ComponentType, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import type { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
@@ -13,17 +13,23 @@ import {
 } from './tooltipSideStyles';
 import { Popover } from '../Popover/Popover';
 import { useComponentStyle } from '../theme/useComponentStyle';
-import { SlideAnimation } from '../animation/SlideAnimation';
+import { SlideAnimation, SlideAnimationProps } from '../animation/SlideAnimation';
 import { BaseProps } from '../types';
 import { TooltipStyleProperties } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
+import { AnimatonSetupProps, InOutAnimationProps } from '../animation';
 
 export type TooltipSide = BasePlacement;
 
-export interface TooltipProps extends LayoutBoxProps, BaseProps<TooltipStyleProperties> {
+export interface TooltipProps<A extends InOutAnimationProps = SlideAnimationProps>
+  extends LayoutBoxProps,
+    BaseProps<TooltipStyleProperties> {
   content: React.ReactNode;
   side?: TooltipSide;
+  showOnClick?: boolean;
+  animation?: ComponentType<A>;
+  animationProps?: Partial<AnimatonSetupProps<A>>;
   delay?: number;
   disabled?: boolean;
   children: ComponentElement<any, any>;
@@ -69,22 +75,26 @@ const TooltipPopover = styled.div<TooltipPopoverProps>`
   ${getCustomStyles('tooltip.styles', 'box')}
 `;
 
-export function Tooltip({
+const Tooltip = ({
   content,
   children,
+  showOnClick,
   disabled = false,
   side = 'top',
   delay = 0,
+  animation = SlideAnimation,
+  animationProps = {},
   customStyles,
-}: TooltipProps) {
-  const [isHovered, setIsHovered] = useState(false);
+}: TooltipProps) => {
+  const usedAnimationProps = { side, duration: 150, reverse: false, ...animationProps };
+  const [isOpen, setOpen] = useState(false);
   const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
 
   useEffect(() => {
-    if (disabled) {
-      setIsHovered(false);
+    if (disabled || children?.props?.disabled) {
+      setOpen(false);
     }
-  }, [disabled]);
+  }, [disabled, children]);
 
   if (!content) {
     return <>{children}</>;
@@ -92,18 +102,16 @@ export function Tooltip({
 
   return (
     <Popover
-      open={isHovered && !disabled}
+      open={isOpen && !disabled && !children?.props?.disabled}
       placement={side}
       offset={gap}
       delay={delay}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      animation={SlideAnimation}
-      animationProps={{
-        side,
-        reverse: true,
-        duration: 0,
-      }}
+      onClick={() => showOnClick && setOpen((prevOpen) => !prevOpen)}
+      onClickOutside={() => setOpen(false)}
+      onMouseEnter={() => !showOnClick && setOpen(true)}
+      onMouseLeave={() => !showOnClick && setOpen(false)}
+      animation={animation}
+      animationProps={usedAnimationProps}
       content={
         <TooltipPopover
           role="tooltip"
@@ -118,4 +126,6 @@ export function Tooltip({
       {children}
     </Popover>
   );
-}
+};
+
+export { Tooltip };
