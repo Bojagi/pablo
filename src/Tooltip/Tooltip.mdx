@@ -99,11 +99,10 @@ behavior you need to wrap the child in a `div`, `span` or any other element.
 By default the tooltip has a slide in animation with a `100` millisecond duration. You can change this by using the following props:
 
 * `animation` - a pablo animation component (default `SlideAnimation`)
-* `animationDuration` - The duration of the animation in milliseconds (default `100`)
-* `animationReverse` - If the animation should be reversed (default `false`)
+* `animationProps` - Props for the animation component (default `{duration: 100, side: <side prop from Tooltip>, reverse: false'}`)
 
 <Playground>
-  <Tooltip content="I am really slow" animationDuration={5000}>
+  <Tooltip content="I am really slow" animationProps={{duration: 5000}}>
     <Button mx={1.5} color="plain">
       Quickly, hover over me!
     </Button>
