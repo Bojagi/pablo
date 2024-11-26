@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState, useMemo, cloneElement, useCallback } from 'react';
+import React, { forwardRef, useEffect, useState, useMemo, cloneElement } from 'react';
 import styled from '@emotion/styled';
 import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
