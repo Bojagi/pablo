@@ -21,11 +21,16 @@ export interface BoxFillableProps {
   fillColor?: string;
 }
 
+export interface BoxCenterFlexProps {
+  centerFlex?: boolean;
+}
+
 export type BoxProps = MarginProps &
   PaddingProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
+  BoxCenterFlexProps &
   PositionProps &
   BoxFillableProps &
   BoxCssProps;
@@ -42,6 +47,8 @@ export const Box = styled.div<BoxProps>`
       transform: (value: string) => getByPath(themeVars.colors, value),
     },
   })}
+  ${(props) =>
+    props.centerFlex ? 'display: flex; justify-content: center; align-items: center;' : ''}
   ${boxInterpolateFn}
 `;
 
