@@ -14,11 +14,11 @@ export interface ColorProps {
 export const color = system({
   textColor: {
     property: 'color',
-    transform: (value: string) => getByPath(themeVars.colors, value),
+    transform: (value: string) => getByPath(themeVars.colors, value) || value,
   },
   bgColor: {
     property: 'backgroundColor',
-    transform: (value: string) => getByPath(themeVars.colors, value),
+    transform: (value: string) => getByPath(themeVars.colors, value) || value,
   },
   opacity: true,
 });

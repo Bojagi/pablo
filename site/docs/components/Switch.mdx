@@ -1,0 +1,68 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Switch
+
+Form element that allows users to toggle a boolean value. This is useful for filters and boolean settings.
+The `Switch` components shares an interface with the `Radio` and `Checkbox` components.
+
+## Import
+
+```js
+// Tree shakable import
+import { Switch } from '@bojagi/pablo';
+// Or direct import
+import { Switch } from '@bojagi/pablo/Switch';
+```
+
+## Examples
+
+### Single switch
+
+```jsx live
+() => {
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <Switch checked={checked} onChange={() => setChecked(!checked)} />
+  );
+}
+```
+
+### Switches with labels
+
+You can pass an optional `label` prop with a `ReactNode` value to show a label next to the checkbox.
+
+```jsx live
+() => {
+  const [checked, setChecked] = React.useState(false);
+  const [checkedTwo, setCheckedTwo] = React.useState(true);
+  return (
+    <Box my={-4}>
+      <Switch my={4} label="Spaghetti mode" checked={checked} onChange={() => setChecked(!checked)} />
+      <Switch my={4} label="Pizza mode" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+    </Box>
+  );
+}
+```
+
+### Small switches
+
+You can pass the `size` prop with the `small` value which renders a smaller version.
+
+```jsx live
+() => {
+  const [checked, setChecked] = React.useState(false);
+  const [checkedTwo, setCheckedTwo] = React.useState(true);
+  return (
+    <Box display="flex" mx={-2}>
+      <Switch mx={0.5} size="small" label="one" checked={checked} onChange={() => setChecked(!checked)} />
+      <Switch mx={0.5} size="small" label="two" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+    </Box>
+  );
+}
+```
+
+## Props
+<PropsTable name="Switch" type="direct" />
+
+## Box props
+<PropsTable name="Switch" type="box" />

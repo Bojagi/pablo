@@ -4,12 +4,12 @@ import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
 import { setRef } from '../utils/setRef';
 import { useReRenderForwardRef } from '../utils/useForwardRef';
-import { AnimatonSetupProps, InOutAnimationProps, NoAnimation } from '../animation';
+import { AnimationSetupProps, InOutAnimationProps, NoAnimation } from '../animation';
 import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 import { baseStyle } from '../shared/baseStyle';
 import type { ComponentElement, ComponentType, ReactElement, ReactNode, Ref } from 'react';
 import { useNanopop } from './useNanopop';
-import type { NanoPopPosition } from 'nanopop';
+import type { NanoPopPosition, PositionMatch } from 'nanopop';
 
 export interface PopoverProps<A extends InOutAnimationProps = InOutAnimationProps> {
   children: ComponentElement<any, any>;
@@ -24,7 +24,7 @@ export interface PopoverProps<A extends InOutAnimationProps = InOutAnimationProp
   arrow?: ReactElement;
   open: boolean;
   animation?: ComponentType<InOutAnimationProps>;
-  animationProps?: AnimatonSetupProps<A>;
+  animationProps?: AnimationSetupProps<A>;
   'aria-haspopup'?: string;
 }
 
@@ -61,6 +61,7 @@ export const Popover = forwardRef(
 
     const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
     const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
+    const [positionMatch, setPositionMatch] = useState<PositionMatch | null>(null);
 
     useEffect(() => {
       setInnerOpen(open);
@@ -94,6 +95,7 @@ export const Popover = forwardRef(
       arrowElement,
       margin: 10 + offset,
       position: placement,
+      onChange: setPositionMatch,
     });
 
     const clonedElement = useMemo(
@@ -113,8 +115,9 @@ export const Popover = forwardRef(
       () =>
         cloneElement(arrow, {
           ref: setArrowElement,
+          positionMatch,
         }),
-      [arrow]
+      [arrow, positionMatch]
     );
 
     return (
@@ -126,9 +129,9 @@ export const Popover = forwardRef(
               <ClickOutside onClickOutside={handleClickOutside}>
                 <Animation {...animationProps} visible={open}>
                   <div>{content}</div>
-                  {clonedArrow}
                 </Animation>
               </ClickOutside>
+              {clonedArrow}
             </PopoverWrapper>
           )}
         </Portal>

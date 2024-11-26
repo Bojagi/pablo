@@ -42,6 +42,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.12.16",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-typescript": "^7.12.16",
+    "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
     "@babel/preset-typescript": "^7.12.16",
     "@bojagi/cli": "0.18.0-next.3",
@@ -73,7 +74,6 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-add-import-extension": "^1.6.0",
     "cross-env": "^7.0.3",
-    "docz": "^2.3.1",
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
@@ -104,7 +104,6 @@
     "yargs": "^16.2.0"
   },
   "dependencies": {
-    "@popperjs/core": "^2.8.4",
     "@react-hook/media-query": "^1.1.1",
     "@styled-system/border": "^5.1.5",
     "@styled-system/core": "^5.1.2",
@@ -116,7 +115,6 @@
     "deepmerge": "^4.2.2",
     "isobject": "^4.0.0",
     "nanopop": "^2.4.2",
-    "react-popper": "^2.2.4",
     "react-transition-group": "^4.4.5",
     "use-resize-observer": "^9.1.0"
   },

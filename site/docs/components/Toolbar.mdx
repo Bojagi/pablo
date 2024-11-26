@@ -1,0 +1,169 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Toolbar
+
+A `Toolbar` is a set of `IconButtons` that can be used for actions or states of a specific function or section 
+(e.g. rich text editors or a drawing canvas).
+
+## Import
+
+```js
+// Tree shakable import
+import { Toolbar, ToolbarItem, ToolbarDivider } from '@bojagi/pablo';
+// Or direct import
+import { Toolbar, ToolbarItem, ToolbarDivider } from '@bojagi/pablo/Toolbar';
+```
+
+## Examples
+
+### Simple Toolbar
+
+Below you can see a simple toolbar. The `selected` state for the `ToolbarItem`s is specified as a `Toolbar` prop.
+The `ToolbarItem`s have a name, that is passed as first argument in the `onClick` function, so you can just pass a
+hook setter function. 
+
+```jsx live
+() => {
+  const [selectedTool, setSelectedTool] = React.useState('bold');
+  return (
+    <Toolbar selected={selectedTool}>
+      <ToolbarItem
+        name="bold"
+        onClick={setSelectedTool}
+        icon={<Bold size={20} />}
+      />
+      <ToolbarItem
+        name="underline"
+        onClick={setSelectedTool}
+        icon={<Underline size={20} />}
+      />
+      <ToolbarItem
+        name="italic"
+        onClick={setSelectedTool}
+        icon={<Italic size={20} />}
+      />
+    </Toolbar>
+  );
+}
+```
+
+### Tooltips
+
+It's advices do use a `tooltip`, so the toolbar is more accessable and easier to understand. 
+In case the normal tooltip position covers or overlaps with other content you can specify a side where the tooltip is show.
+The side value can be any valid `Tooltip` `side` prop value.
+
+```jsx live
+() => {
+  const [selectedTool, setSelectedTool] = React.useState('bold');
+  return (
+    <Toolbar selected={selectedTool}>
+      <ToolbarItem
+        name="bold"
+        tooltip="Make text bold"
+        tooltipSide="left"
+        onClick={setSelectedTool}
+        icon={<Bold size={20} />}
+      />
+      <ToolbarItem
+        name="underline"
+        tooltip="Underline text"
+        onClick={setSelectedTool}
+        icon={<Underline size={20} />}
+      />
+      <ToolbarItem
+        name="italic"
+        tooltip="Make text italic"
+        tooltipSide="right"
+        onClick={setSelectedTool}
+        icon={<Italic size={20} />}
+      />
+    </Toolbar>
+  );
+}
+```
+
+### Dividing a Toolbar
+
+In case you have subsections for your toolbar, you can divide them with a bar.
+
+```jsx live
+() => {
+  const [selectedTool, setSelectedTool] = React.useState('bold');
+  return (
+    <Toolbar selected={selectedTool}>
+      <ToolbarItem
+        name="bold"
+        onClick={setSelectedTool}
+        icon={<Bold size={20} />}
+      />
+      <ToolbarItem
+        name="underline"
+        onClick={setSelectedTool}
+        icon={<Underline size={20} />}
+      />
+      <ToolbarItem
+        name="italic"
+        onClick={setSelectedTool}
+        icon={<Italic size={20} />}
+      />
+      <ToolbarDivider />
+      <ToolbarItem
+        name="edit"
+        onClick={setSelectedTool}
+        icon={<Edit size={20} />}
+      />
+      <ToolbarItem
+        name="crop"
+        onClick={setSelectedTool}
+        icon={<Crop size={20} />}
+      />
+    </Toolbar>
+  );
+}
+```
+
+### Mixing tool selection and one time actions
+
+Toolbars can mix single tool selection where only one item can be selected at a time and one time action buttons (like undo).
+This can be done by setting the `onClick` prop with a different setter or action function. In the example below you can
+also see `ToolbarItem`s being disabled (by clicking on the undo button).
+```jsx live
+() => {
+  const [selectedTool, setSelectedTool] = React.useState('bold');
+  const [undoDisabled, setUndoDisabled] = React.useState(false);
+  return (
+    <Toolbar selected={selectedTool}>
+      <ToolbarItem
+        name="bold"
+        onClick={setSelectedTool}
+        icon={<Bold size={20} />}
+      />
+      <ToolbarItem
+        name="underline"
+        onClick={setSelectedTool}
+        icon={<Underline size={20} />}
+      />
+      <ToolbarItem
+        name="italic"
+        onClick={setSelectedTool}
+        icon={<Italic size={20} />}
+      />
+      <ToolbarDivider />
+      <ToolbarItem
+        name="undo"
+        disabled={undoDisabled}
+        onClick={() => setUndoDisabled(true)}
+        icon={<CornerUpLeft size={20} />}
+      />
+    </Toolbar>
+  );
+}
+```
+
+## Props
+
+<PropsTable name="Toolbar" type="direct" />
+
+## Box props
+<PropsTable name="Toolbar" type="box" />

@@ -1,4 +1,5 @@
 import { system } from '@styled-system/core';
+import { ResponsiveValue } from 'styled-system';
 
 const DEFAULT_SCALE = 8;
 
@@ -13,24 +14,34 @@ const getSpacing = (value: any, scale: number) => {
   return `${value * scale}px`;
 };
 
+const getGapSpacing = (value: any, scale: number) => {
+  if (Array.isArray(value)) {
+    return value.map((val) => getSpacing(val, scale)).join(' ');
+  }
+
+  const spacing = getSpacing(value, scale);
+  return [spacing, spacing].join(' ');
+};
+
 interface MarginProps {
-  m?: string | number;
-  mt?: string | number;
-  mr?: string | number;
-  mb?: string | number;
-  ml?: string | number;
-  mx?: string | number;
-  my?: string | number;
+  m?: ResponsiveValue<string | number>;
+  mt?: ResponsiveValue<string | number>;
+  mr?: ResponsiveValue<string | number>;
+  mb?: ResponsiveValue<string | number>;
+  ml?: ResponsiveValue<string | number>;
+  mx?: ResponsiveValue<string | number>;
+  my?: ResponsiveValue<string | number>;
 }
 
 interface PaddingProps {
-  p?: string | number;
-  pt?: string | number;
-  pr?: string | number;
-  pb?: string | number;
-  pl?: string | number;
-  px?: string | number;
-  py?: string | number;
+  p?: ResponsiveValue<string | number>;
+  pt?: ResponsiveValue<string | number>;
+  pr?: ResponsiveValue<string | number>;
+  pb?: ResponsiveValue<string | number>;
+  pl?: ResponsiveValue<string | number>;
+  px?: ResponsiveValue<string | number>;
+  py?: ResponsiveValue<string | number>;
+  gap?: ResponsiveValue<string | number | Array<string | number>>;
 }
 
 const getConfig = (property: string, shortHand: string) => ({
@@ -79,6 +90,9 @@ const getConfig = (property: string, shortHand: string) => ({
 });
 
 const margin = system(getConfig('margin', 'm'));
-const padding = system(getConfig('padding', 'p'));
+const padding = system({
+  ...getConfig('padding', 'p'),
+  gap: { property: 'gap', scale: 'spacing', transform: getGapSpacing, defaultScale: DEFAULT_SCALE },
+});
 
 export { margin, padding, MarginProps, PaddingProps };

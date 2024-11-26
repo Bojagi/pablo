@@ -32,7 +32,7 @@ export const InnerInOutAnimation = styled.div<InnerInOutAnimationProps>`
   }}
 `;
 
-export type AnimatonSetupProps<P extends InOutAnimationProps> = Omit<
+export type AnimationSetupProps<P extends InOutAnimationProps> = Omit<
   P,
   keyof AnimationAdditionalProps
 >;

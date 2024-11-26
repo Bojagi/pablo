@@ -1,6 +1,5 @@
 import React, { ComponentElement, ComponentType, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import type { BasePlacement } from '@popperjs/core';
 import { LayoutBoxProps } from '../Box';
 import { Typography } from '../Typography';
 import { conditionalStyles, getComponentStyle } from '../styleHelpers';
@@ -13,14 +12,14 @@ import {
 } from './tooltipSideStyles';
 import { Popover } from '../Popover/Popover';
 import { useComponentStyle } from '../theme/useComponentStyle';
-import { SlideAnimation, SlideAnimationProps } from '../animation/SlideAnimation';
 import { BaseProps } from '../types';
 import { TooltipStyleProperties } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
-import { AnimatonSetupProps, InOutAnimationProps } from '../animation';
+import { SlideAnimation } from '../animation/SlideAnimation';
+import type { AnimationSetupProps, InOutAnimationProps, SlideAnimationProps } from '../animation';
 
-export type TooltipSide = BasePlacement;
+export type TooltipSide = 'top' | 'left' | 'bottom' | 'right';
 
 export interface TooltipProps<A extends InOutAnimationProps = SlideAnimationProps>
   extends LayoutBoxProps,
@@ -29,7 +28,7 @@ export interface TooltipProps<A extends InOutAnimationProps = SlideAnimationProp
   side?: TooltipSide;
   showOnClick?: boolean;
   animation?: ComponentType<A>;
-  animationProps?: Partial<AnimatonSetupProps<A>>;
+  animationProps?: Partial<AnimationSetupProps<A>>;
   delay?: number;
   disabled?: boolean;
   children: ComponentElement<any, any>;

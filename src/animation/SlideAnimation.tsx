@@ -1,10 +1,7 @@
 import { css } from '@emotion/react';
 import { conditionalStyles } from '../styleHelpers';
 import { createInOutAnimation, InOutAnimationProps } from './InOutAnimation';
-import type { BasePlacement } from '@popperjs/core';
 import { PabloThemeableProps } from '../theme/types';
-
-export type TooltipSide = BasePlacement;
 
 const transformInterpolateFn = (
   axis: 'Y' | 'X',

@@ -1,0 +1,140 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Tooltip
+
+A component that decorates it's child with a tooltip that shows hints/information text on hovering over the child.
+
+## Import
+
+```js
+// Tree shakable import
+import { Tooltip } from '@bojagi/pablo';
+// Or direct import
+import { Tooltip } from '@bojagi/pablo/Tooltip';
+```
+
+## Examples
+
+### Tooltip positioning
+
+A tooltip can be positioned on each of the for sides of it's child. 
+
+```jsx live
+<Flex gap={1}>
+  <Tooltip side="left" content="Left tooltip">
+    <Button color="plain">
+      Left
+    </Button>
+  </Tooltip>
+  <Tooltip side="top" content="Top tooltip">
+    <Button color="plain">
+      top
+    </Button>
+  </Tooltip>
+  <Tooltip side="bottom" content="Bottom tooltip">
+    <Button color="plain">
+      bottom
+    </Button>
+  </Tooltip>
+  <Tooltip side="right" content="Right tooltip">
+    <Button color="plain">
+      right
+    </Button>
+  </Tooltip>
+</Flex>
+```
+
+### Plain tooltip
+
+```jsx live
+<Tooltip content="A tooltip shows on hovering (you just witnessed)">
+  <Button color="plain">
+    Hover over me
+  </Button>
+</Tooltip>
+```
+
+### Tooltip by click
+
+By default the tooltip shows on hover. If you want to show the tooltip on click, you can use the `showOnClick` boolean prop.
+This disables the hover behavior and shows the tooltip on click.
+
+```jsx live
+<Tooltip content="You only get me by click" showOnClick>
+  <Button color="plain">
+    Click me
+  </Button>
+</Tooltip>
+```
+
+### Tooltips with a delay
+
+If you want to only show a tooltip after hovering over it for a certain time, you can use the `delay` prop and pass
+a number that represents a millisecond time. This is useful for tooltips for more obvious actions.
+
+```jsx live
+<Tooltip content="Sorry for being late" delay={500}>
+  <Button color="plain">
+    Quickly, hover over me!
+  </Button>
+</Tooltip>
+```
+
+### Usage on disabled children
+
+When a child has the `disabled` prop set to true, the tooltip doesn't show as well. If you want to get around this
+behavior you need to wrap the child in a `div`, `span` or any other element. 
+
+```jsx live
+<Tooltip content="I'm not there!">
+  <Button mx={1.5} color="plain" disabled={true}>
+    I am not clickable
+  </Button>
+</Tooltip>
+```
+
+### Using animation
+
+By default the tooltip has a slide in animation with a `100` millisecond duration. You can change this by using the following props:
+
+* `animation` - a pablo animation component (default `SlideAnimation`)
+* `animationProps` - Props for the animation component (default `{duration: 100, side: <side prop from Tooltip>, reverse: false'}`)
+
+```jsx live
+<Tooltip content="I am really slow" animationProps={{duration: 5000}}>
+  <Button mx={1.5} color="plain">
+    Quickly, hover over me!
+  </Button>
+</Tooltip>
+```
+
+
+### Customizing the tooltip
+
+Additionally to the component configuration, you can overwrite styles freely (like with every other Pablo component).
+
+```jsx live
+<Tooltip
+  content="I am very special"
+  customStyles={{
+    box: css`
+      background-color: red;
+      border-radius: 100px;
+    `,
+    arrow: css`
+      border-bottom-color: red;
+    `,
+  }}
+>
+  <Button color="plain">
+    Hover over me 🌈
+  </Button>
+</Tooltip>
+```
+
+## Props
+
+<PropsTable name="Tooltip" type="direct" />
+
+## Box props
+<PropsTable name="Tooltip" type="box" />

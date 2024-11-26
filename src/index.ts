@@ -1,3 +1,4 @@
+export * from './animation';
 export * from './Avatar';
 export * from './Box';
 export * from './breakpoints';

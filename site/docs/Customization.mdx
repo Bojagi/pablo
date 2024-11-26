@@ -1,0 +1,233 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Customization
+
+Pablo is highly customizable with the principle of making customizations as easy as possible and 
+reduce boilerplate code. As Pablo is built on top of `emotion` and `styled-system` it
+utilizes both libraries to achive this.
+
+## Ways of customization
+
+There are different options for you to customize your components, all with different use cases
+in mind. We tried to make global style changes as easy as possible without the need to wrap the
+components on your own and end up with a mix of custom, wrapped and original components, which leads
+to inconsistent design and code quality.
+
+There are five different ways you can customize components:
+
+* Overwrite single styling properties such as padding or margin with `styled-system` props
+* Update the theme values to update primitives like color or typographic values globally
+* Change the `componentStyles` config to update component specific values such as gaps, colors or sizes
+* Overwrite styling of parts of components globally with styled-component's `css` tag literal
+* Overwrite styling of parts of components in place with the `customStyles` prop
+
+## Use styling props
+
+The quickest way to overwrite certain styles are the styling props that `styled-system` provides.
+Most of the components of Pablo support these props which mainly should be used for layouting purposes
+like adding margins (the `mx` and `my` props are quite useful for this). But you can also use
+them to change color on more plain components like `<Headline />`. 
+
+Example:
+
+```jsx live
+<>
+  <Headline mb={3} textColor="brand.main">This is my colorful main headline</Headline>
+  <Paragraph>Gap makes an inner spacing</Paragraph>
+  <Box display="flex" gap={1}>
+    <Avatar src="https://bojagi.io/static/jm-a00804c651028a5a7aef34fc7718af46.jpg" />
+    <Avatar src="https://bojagi.io/static/sm-645d391052b195f495445a27f34c283e.jpg" />
+    <Avatar src="https://bojagi.io/static/sj-8caf8cfb656b71464fe1b15c9f6f44fd.jpg" />
+  </Box>
+</>
+```
+
+## Customizing the theme
+
+The theme is a set of design primitives that affect the look of all your UI across all components.
+This includes color, spacing, typography (like font sizes, weight, line heights etc.) and breakpoints.
+
+The theme needs to be passed in the `PabloThemeProvider` that has to be wrapped around your app:
+
+```jsx
+import { PabloThemeProvider } from '@bojagi/pablo/theme';
+
+const customTheme = { /* your custom theme */ };
+
+const App = () => (
+  <PabloThemeProvider theme={customTheme}>
+    /* The rest of your app */
+  </PabloThemeProvider>
+)
+```
+
+Read more about it in the [Theme section](/docs/Theme).
+
+## Customizing component styles 
+
+Changing the theme itself most of the time is not enough as it touches more general styling. To
+customize the look of your UI even more you can configure the different components separately using
+`componentStyles`:
+
+```jsx
+import { PabloThemeProvider } from '@bojagi/pablo/theme';
+
+const customTheme = { /* your custom theme */ };
+const customComponentStyles = { /* your custom component styles */ };
+
+const App = () => (
+  <PabloThemeProvider theme={customTheme} componentStyles={customComponentStyles}>
+    /* The rest of your app */
+  </PabloThemeProvider>
+)
+```
+
+Like the theme the component styles are passed to the pablo theme provider and you can just overwrite
+them partially as they are merged with the default styles.
+
+You can use theme values by accessing them through CSS variables. For easier access Pablo provides a nested object 
+that contains the CSS variables. For usage of those take a look at the example below.
+
+Here is an example of some component configurations overwritten:
+
+```js
+import { getSpacing } from '@bojagi/pablo/styleHelpers';
+import { theme } from '@bojagi/pablo/theme';
+
+const customComponentStyles = { 
+  checkbox: {
+    innerPadding: {
+      medium: getSpacing(0.75),
+      small: getSpacing(0.5),
+    },
+    handleColor: theme.colors.brand.light,
+  },
+  button: {
+    base: {
+      icon: {
+        gap: '4px',
+      },
+      borderRadius: '2px',
+      focus: {
+        outlineSize: '8px'
+      },
+    },
+    brand: {
+      outlineColor: theme.colors.brand.darkest,
+    },
+    sizes: {
+      small: {
+        padding: css`
+          8px 12px
+        `,
+      },
+    },
+  },
+};
+```
+
+In the future all component documentation have a full list of all component style configurations.
+Please be patient until then or have a look in the source code or utilize the TypeScript types.
+
+## Overwriting styles 
+
+If even this is not enough for your custom styling needs you can overwrite the styling of
+the different component parts completely with the `customStyles` property. To do this you use the 
+`css` tag template literal. This should be done in the `componentStyles` through the
+`PabloThemeProvider` as well, but you can do this on single elements as well (more about that in the next section).
+
+Each component has a set of parts where you can overwrite styles. You can find an example below:
+
+```js
+import { getSpacing } from '@bojagi/pablo/styleHelpers';
+import { theme } from '@bojagi/pablo/theme';
+import { css } from '@emotion/react';
+
+const customComponentStyles = { 
+  button: {
+    customStyles: {
+      primary: css`
+        transform: rotate(15deg);
+        // You can use style helpers
+        color: ${theme.colors.brand.main};
+        // And you can also access the props of the respective component parts
+        ${props => props.color === 'brand' && css`
+          color: orange;
+        `}
+      `,
+    }
+  },
+  checkbox: {
+    customStyles: {
+      // The outer box of the checkbox
+      box: css`
+        background-color: blue;
+      `,
+      // The selection handle of a checkbox
+      handle: css`
+        background-color: red;
+      `,
+      // The optional text label
+      label: css`
+        text-decoration: underline;
+      `,
+    },
+  },
+};
+```
+
+Because these custom styles are just injected into the component parts you can use the full
+theme values, including the Pablo style helpers and the props of the element you are styling.
+
+In the future all component documentation have a full list of all customly stylable parts.
+Please be patient until then or have a look in the source code or utilize the TypeScript types.
+
+## Inline custom styles
+
+Sometimes you need to create your own custom variant of a component that is unique to only a specific
+area of your app or site (e.g. a huge button for your masthead).
+
+To achive this you can use the `customStyles` prop on any component and use the same object structure
+you would use in the `componentStyles` object.
+
+The below examples do the same customizations as the global styling example above.
+
+```jsx live
+  <>
+    <Checkbox
+      checked
+      customStyles={{
+        // The outer box of the checkbox
+        box: css`
+          background-color: blue;
+        `,
+        // The selection handle of a checkbox
+        handle: css`
+          background-color: red;
+        `,
+        // The optional text label
+        label: css`
+          text-decoration: underline;
+        `,
+      }}
+      label="Pizza"
+    />
+    <Button
+      mt={6}
+      customStyles={props => ({
+        primary: css`
+          transform: rotate(15deg);
+          // You can use style helpers
+          color: ${props.theme.colors.brand.main};
+          // And you can also access the props of the respective component parts
+          ${props.color === 'brand' && css`
+            color: orange;
+          `}
+        `,
+      })}
+    >
+      Click me
+    </Button>
+  </>
+```
+

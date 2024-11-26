@@ -1,0 +1,51 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Image
+
+The `Image` component is a plain proxy of the normal HTML `img` element but it adds support for the
+styled-system layouting props (like margins, paddings, positioning, etc.).
+
+## Import
+
+```js
+// Tree shakable import
+import { Image } from '@bojagi/pablo';
+// Or direct import
+import { Image } from '@bojagi/pablo/Image';
+```
+
+## Examples
+
+### Plain Image
+
+You can display `IconButton`s in different sizes. By default they have the size `medium`. 
+They can also be `small` and `large`. 
+
+```jsx live
+<Image src="https://bojagi.io/images/bojagi-social-preview.jpg" width={500} />
+```
+
+### Layouting an image
+
+You can use margin to give images a bit of space around them
+
+```jsx live
+<Box bgColor="papayaWhip">
+  <Image mx={1} my={2} src="https://bojagi.io/images/bojagi-social-preview.jpg" width={500} />
+</Box>
+```
+
+Or you can use positioning
+
+```jsx live
+<Box position="relative" m={2} height={600} width={600} bgColor="papayaWhip">
+  <Image position="absolute" top={50} left={200} src="https://bojagi.io/images/bojagi-social-preview.jpg" width={500} />
+</Box>
+```
+
+## Props
+
+<PropsTable name="Image" type="direct" />
+
+## Box props
+<PropsTable name="Image" type="box" />

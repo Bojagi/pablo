@@ -1,0 +1,64 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Avatar
+
+Renders an image with square dimensions and masks it with a circle or rounded corners.
+
+## Import
+
+```js
+// Tree shakable import
+import { Avatar } from '@bojagi/pablo';
+// Or direct import
+import { Avatar } from '@bojagi/pablo/Avatar';
+```
+
+## Examples
+
+### Different sizes
+
+Avatars can have different sizes, spaning from `tiny` to `large`. By default avatars are square.
+
+```jsx live
+  <Flex mx={-1}>
+    <Avatar
+      mx={1}
+      size="large"
+      src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
+      variant="square"
+    />
+    <Avatar
+      size="medium"
+      mx={1}
+      src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
+      variant="square"
+    />
+    <Avatar
+      size="small"
+      mx={1}
+      src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
+      variant="square"
+    />
+    <Avatar
+      size="tiny"
+      mx={1}
+      src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
+      variant="square"
+    />
+  </Flex>
+```
+
+### Circle
+```jsx live
+  <Avatar
+    size="large"
+    src="https://avatars.githubusercontent.com/u/36902682?s=200&v=4"
+    variant="circle"
+  />
+```
+
+## Props
+<PropsTable name="Avatar" type="direct" />
+
+## Box props
+<PropsTable name="Avatar" type="box" />

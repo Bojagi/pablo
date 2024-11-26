@@ -1,0 +1,43 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# SidebarNav
+
+The `SidebarNav` component is a navigation that supposed to be placed on the right of the main content.
+
+This component is subject to change and be split up in a `SideBar` component that can host
+multiple different components and a vertical navigation.
+
+## Import
+
+```js
+// Tree shakable import
+import { SidebarNav, SidebarNavItem } from '@bojagi/pablo';
+// Or direct import
+import { SidebarNav, SidebarNavItem } from '@bojagi/pablo/SidebarNav';
+```
+
+## Example
+
+```jsx live
+  <SidebarNav>
+    <SidebarNavItem>Hello</SidebarNavItem>
+    <SidebarNavItem selected>Goodbye</SidebarNavItem>
+    <SidebarNavItem>Ob1-La-Di Ob-La-Da</SidebarNavItem>
+  </SidebarNav>
+```
+
+## Props
+
+### SidebarNav
+<PropsTable name="SidebarNav" type="direct" />
+
+
+### SidebarNavItem
+<PropsTable name="SidebarNavItem" type="direct" />
+
+## Box props
+### SidebarNav
+<PropsTable name="SidebarNav" type="box" />
+
+### SidebarNavItem
+<PropsTable name="SidebarNavItem" type="box" />

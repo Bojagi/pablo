@@ -1,0 +1,116 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Input
+
+Form element that allows users to type in single line text. For multi-line text you can use the `TextArea` component.
+
+## Import
+
+```js
+// Tree shakable import
+import { Input } from '@bojagi/pablo';
+// Or direct import
+import { Input } from '@bojagi/pablo/Input';
+```
+
+## Examples
+
+### Simple Input
+
+The simplest form of an `Input` is just the field itself. You can pass a `useState` setter function to update state
+as the first argument of `onChange` is the value itself. 
+The second argument is the full `onChange` event of the native `input` element.
+
+```jsx live
+() => {
+  const [value, setValue] = React.useState('');
+  return (
+    <Input value={value} onChange={setValue} />
+  );
+}
+```
+
+### Input with label
+
+You should always add context to an input field so users know what to put into the field. For this you can pass the 
+`label` prop with the content for the `<label>` element (can be string or JSX).
+
+```jsx live
+() => {
+  const [name, setName] = React.useState('');
+  return (
+    <Input label="Name" value={name} onChange={setName} />
+  );
+}
+```
+
+### Input with additional information
+
+Additionally you can also pass the `infoText` prop to give hints on how to fill the field.
+
+```jsx live
+() => {
+  const [name, setName] = React.useState('');
+  return (
+    <Input label="Name" infoText="Don't use a fake name" value={name} onChange={setName} />
+  );
+}
+```
+
+### Input with error
+
+When you do validation on a field and the user input isn't valid, you can use the `error` prop and overwrite the `infoText` content with it.
+
+```jsx live
+() => {
+  const [name, setName] = React.useState('');
+  const hasError = React.useMemo(() => name.length && name !== 'Hans');
+  return (
+    <Input label="Name" error={hasError && "The only non fake name is Hans!"} infoText={"Don't use a fake name"} value={name} onChange={setName} />
+  );
+}
+```
+
+### Input with end or start component
+
+Sometimes you want to make the input more interactive. For this you can use components passed to the `end` or `start` prop.
+
+```jsx live
+() => {
+  const [password, setPassword] = React.useState('');
+  const [showPassword, setShowPassword] = React.useState(false);
+  return (
+    <Input 
+      type={showPassword ? 'text' : 'password'}
+      label="Password" 
+      value={password} 
+      onChange={setPassword} 
+      end={<IconButton size="small" onClick={() => setShowPassword(!showPassword)}>
+        {showPassword ? <Eye /> : <EyeOff />}
+      </IconButton>} 
+    />
+  );
+}
+```
+
+You can also use it for an inlined button (use `placeholder` instead of `label` prop).
+
+```jsx live
+() => {
+  const [searchTerm, setSearchTerm] = React.useState('');
+  return (
+    <Input 
+      placeholder="Search"
+      value={searchTerm} 
+      onChange={setSearchTerm} 
+      start={<IconButton ml={-0.5} size="small"><Search /></IconButton>} 
+    />
+  );
+}
+```
+
+## Props
+<PropsTable name="Input" type="direct" />
+
+## Box props
+<PropsTable name="Input" type="box" />
