@@ -1,10 +1,11 @@
 import React, { forwardRef, ReactNode } from 'react';
-import { Box, BoxProps } from '../Box';
+import { Box, type BoxProps } from '../Box';
 import styled from '@emotion/styled';
 import { getSpacing } from '../styleHelpers';
 import { omit } from '../utils/omit';
 import { css } from '@emotion/react';
-import { ResponsiveValue, system } from 'styled-system';
+import { system } from '@styled-system/core';
+import type { ResponsiveValue } from 'styled-system';
 
 type FlexGridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
