@@ -9,10 +9,10 @@ const config: Config = {
   favicon: 'https://bojagi.io/icons/icon-144x144.png?v=b0a76b9ff4200101aff48dfaa1c6ef47',
 
   // Set the production url of your site here
-  url: 'https://bojagi.github.io/pablo',
+  url: 'https://bojagi.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/pablo',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
