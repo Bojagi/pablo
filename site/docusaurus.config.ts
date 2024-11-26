@@ -9,7 +9,7 @@ const config: Config = {
   favicon: 'https://bojagi.io/icons/icon-144x144.png?v=b0a76b9ff4200101aff48dfaa1c6ef47',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://bojagi.github.io/pablo',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
