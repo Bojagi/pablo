@@ -53,21 +53,22 @@ const FlexGridColumn = styled(InnerColumnBox)`
     `}
 `;
 
-interface GridBoxProps extends BoxProps {
+type GapTuple = [number | string, number | string];
+interface GridBoxProps extends Omit<BoxProps, 'gap'> {
   columns?: number;
-  gap: [number, number];
+  gapTuple: GapTuple;
   children: ReactNode;
 }
 
-interface FlexGridProps extends Omit<GridBoxProps, 'gap'> {
-  gap?: number | [number, number];
+interface FlexGridProps extends Omit<GridBoxProps, 'gapTuple'> {
+  gap?: number | string | GapTuple;
 }
 
 const GridBox = styled(Box)<GridBoxProps>`
   ${(props) => css`
     --pbl-flexgrid-columns: ${props.columns || 12};
-    --pbl-flexgrid-gap-column: ${getSpacing(props.gap[0])(props)};
-    --pbl-flexgrid-gap-row: ${getSpacing(props.gap[1])(props)};
+    --pbl-flexgrid-gap-column: ${getSpacing(props.gapTuple[0])(props)};
+    --pbl-flexgrid-gap-row: ${getSpacing(props.gapTuple[1])(props)};
   `}
   display: flex;
   flex-wrap: wrap;
@@ -75,9 +76,9 @@ const GridBox = styled(Box)<GridBoxProps>`
 `;
 
 const FlexGrid = ({ children, gap = 2, ...props }: FlexGridProps) => {
-  const gapTuple = Array.isArray(gap) ? gap : ([gap, gap] as [number, number]);
+  const tuple = Array.isArray(gap) ? gap : ([gap, gap] as [number, number]);
   return (
-    <GridBox gap={gapTuple} {...props}>
+    <GridBox {...props} gapTuple={tuple}>
       {children}
     </GridBox>
   );

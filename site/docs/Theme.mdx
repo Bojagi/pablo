@@ -1,0 +1,322 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Theme
+
+The theme is a set of design primitives that affect the look of all your UI across all components.
+This includes color, spacing, typography (like font sizes, weight, line heights etc.) and breakpoints.
+
+The theme needs to be initialized with the `PabloThemeProvider`.
+
+```jsx
+import { PabloThemeProvider } from '@bojagi/pablo/theme';
+
+const customTheme = { /* your custom theme */ };
+
+const App = () => (
+  <PabloThemeProvider theme={customTheme}>
+    /* The rest of your app */
+  </PabloThemeProvider>
+)
+```
+
+You can overwrite all or some of the theme values. They will be merged with the default ones to create a complete theme.
+
+## Color
+
+There are different types of colors you can use. The most important color being `brand`, which represents
+your brand color. It is used to highlight interactable elements and sets the tone of your brand. Brand is a shaded color.
+
+### Shaded colors
+Shaded colors are `brand`, `positive`, `negative` and `neutral`.  They have a `main` variant which is used when
+there is no specific shade specified and and different darker or lighter shades:
+
+* `lightest`
+* `light`
+* `main`
+* `dark`
+* `darkest`
+* `contrastText`
+* `contrastTextLight`
+
+In addition to the shades they all have contrast text for normal/dark and light backgrounds as well
+to define a text color that guarantees contrast and readability on colored backgrounds (like buttons).
+
+### Gray
+
+There are three kinds of gray color palettes: `gray`, `blackOpacity` and `whiteOpacity`. They all have
+the same shades:
+
+`50`, `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`
+
+By default these represent a percentage scale from black to white, where `50` is 5% black and `900` 90%.
+
+The two opacity palettes use transparency instead of solid shades where the base color is either black or white.
+This is useful when you want to use gray scales on top of colored backgrounds (e.g. `whiteOpacity` on dark backgrounds)
+because of the transparency the gray shades adjust to the background color.
+
+### Common colors
+
+There are some common colors specified:
+
+* `white` (default `#ffffff`)
+* `black` (default `#000000`)
+* `whiteContrastText`: (default `#000000`)
+* `blackContrastText`: (default `#ffffff`)
+
+### Other colors
+
+You can also set text, border and background colors. For a full overview look at the default theme
+displayed at the end of this document.
+
+## Spacing
+
+Spacing is used to define spaces between components (not used for spacing inside components like padding between button borders and text).
+
+Currently it's an array of values, so when you want to access it you specify the index of the array:
+
+```
+[0, 2, 4, 6, 8, 12, 16, 24, 32, 64, 128]
+```
+
+Above you see the default spacings which grows in a fibunacci like scale, to get spacing of `8px`
+you need to use index `4`.
+
+Disclaimer:
+This is subject to change in favor of multiplication of a base spacing as it is easier to remember
+and is calculatable.
+
+## Typography
+
+Pablo uses the following typography elements which mostly reflect the `Typography` variants:
+
+* `paragraph`
+* `paragraphBold`
+* `button`
+* `headline`
+* `title`
+* `subtitle`
+* `info`
+* `infoBold`
+
+Exception for this are the two `Bold` suffixed properties which are used for `<strong/>` emphasis text
+within paragraph and info text respectively.
+
+In addition to the above properties there is also a `base` config that are shared among all
+`Typography` variants.
+
+In `base` you can define the following options for all typography:
+
+* `fontFamily`, which is used by all variants
+* `fontWeight`, which is overwritten by some variants
+
+The specific variants above have the following properties that overwrites the `base` when set:
+
+* `fontSize`
+* `lineHeight`
+* `marginBottom`, which defines the margin at the end of the text block
+* `fontFamily` (optional)
+* `fontWeight` (optional)
+
+## Breakpoints
+
+Pablo uses five different breakpoints:
+
+* default is mobile and up
+* `sm` is used for portrait tablets
+* `md` for landscape tables
+* `lg` for small desktops like a laptop 
+* `xl` for big screens
+
+These breakpoints are specified as an array. To customize it you can use the `createBreakpoints` utility.
+
+```js
+import { createBreakpoints } from '@bojagi/pablo/theme';
+// default mobile breakpoint is excluded, as it starts at 0
+const breakpoints = createBreakpoints(['700px', '1000px', '1200px', '1920px']);
+```
+
+In addition to the array you an then also access the named sizes (like `lg`) though this as well
+
+```js
+const isTheSame = breakpoints[2] === breakpoints.lg;
+console.log(isTheSame) // logs 'true'
+```
+
+## Using theme values in custom components
+
+You can use the theme values in custom components that have been written with `emotion`.
+
+```js
+const MyComponent = styled.div`
+  background-color: ${props => props.theme.color.brand.main};
+`;
+```
+
+As you can see this is quite long and a pain to write, therefore Pablo offers a set of helper functions.
+
+### Color
+
+```js
+import { theme } from '@bojagi/pablo/theme';
+const MyComponent = styled.div`
+  background-color: ${theme.colors.brand.main};
+`;
+```
+
+You can access theme colors by just referencing them specific theme color from the `theme` object.
+This theme object contains nested objects that hold the CSS variable name to the color, so you don't
+need to reference the whole variable and get type safety through TypeScript.
+
+### `getSpacing`
+
+With `getSpacing` you can get a spacing value of a specific index:
+
+```js
+import { getSpacing } from '@bojagi/pablo/styleHelpers';
+const MyComponent = styled.div`
+  margin: ${getSpacing(1)}; /* resolves to 8px on the default theme */
+`;
+```
+
+### `breakpoints`
+
+Use the `breakpoints` function to apply specific styles depending on the screen size.
+
+```js
+import { breakpoint, getSpacing } from '@bojagi/pablo/styleHelpers';
+import { css } from '@emotion/react';
+
+const MyComponent = styled.div`
+  /* Base styles (mobile and up) */
+  padding: ${getSpacing(1)}; 
+
+  /* Landscape tablet styles (and up) */
+  ${breakpoint(
+    'md',
+    css`
+      padding: ${getSpacing(1.5)};
+    `,
+  )}
+`;
+```
+
+By default it applies the breakpoint styles the defined breakpoint and up. If you want to apply
+it for styles below, you can pass the `mediaQueryBelow` function as third argument.
+
+```js
+import { breakpoint, getSpacing } from '@bojagi/pablo/styleHelpers';
+import { mediaQueryBelow } from '@bojagi/pablo/breakpoints';
+import { css } from '@emotion/react';
+
+const MyComponent = styled.div`
+  /* Landscape tablet styles (and up) */  
+  padding: ${getSpacing(1.5)}; 
+
+  /* Base styles (mobile and up) */  
+  ${breakpoint(
+    'md',
+    css`
+      padding: ${getSpacing(1)};
+    `,
+    mediaQueryBelow,
+  )}
+`;
+```
+
+## Default theme
+
+For reference here you can find the full default theme:
+
+```js
+import { createBreakpoints } from '@bojagi/pablo/theme';
+export const defaultTheme = {
+  background: '#fafafa',
+  common: {
+    white: '#ffffff',
+    black: '#000000',
+    whiteContrastText: '#000000'
+    blackContrastText: '#ffffff',
+  },
+  gray: {
+    '50': '#f0f0f0',
+    '100': '#e0e0e0',
+    '200': '#d0d0d0',
+    '300': '#b0b0b0',
+    '400': '#a0a0a0',
+    '500': '#808080',
+    '600': '#606060',
+    '700': '#505050',
+    '800': '#303030',
+    '900': '#202020',
+  },
+  blackOpacity: {
+    '50': 'rgba(0,0,0,0.05)',
+    '100': 'rgba(0,0,0,0.1)',
+    '200': 'rgba(0,0,0,0.2)',
+    '300': 'rgba(0,0,0,0.3)',
+    '400': 'rgba(0,0,0,0.4)',
+    '500': 'rgba(0,0,0,0.5)',
+    '600': 'rgba(0,0,0,0.6)',
+    '700': 'rgba(0,0,0,0.7)',
+    '800': 'rgba(0,0,0,0.8)',
+    '900': 'rgba(0,0,0,0.9)',
+  },
+  whiteOpacity: {
+    '50': 'rgba(255,255,255,0.05)',
+    '100': 'rgba(255,255,255,0.1)',
+    '200': 'rgba(255,255,255,0.2)',
+    '300': 'rgba(255,255,255,0.3)',
+    '400': 'rgba(255,255,255,0.4)',
+    '500': 'rgba(255,255,255,0.5)',
+    '600': 'rgba(255,255,255,0.6)',
+    '700': 'rgba(255,255,255,0.7)',
+    '800': 'rgba(255,255,255,0.8)',
+    '900': 'rgba(255,255,255,0.9)',
+  },
+  borders: {
+    main: 'rgba(0,0,0,0.25)',
+    light: 'rgba(0,0,0,0.1)',
+  },
+  text: {
+    main: '#000000',
+    info: 'rgba(0,0,0,0.5)',
+  },
+  brand: {
+    lightest: '#EBE7FF',
+    light: '#D6CEFF',
+    main: '#6A50F2',
+    dark: '#4129BD',
+    darkest: '#281683',
+    contrastText: '#ffffff',
+    contrastTextLight: '#000000',
+  },
+  positive: {
+    lightest: '#DFF6E6',
+    light: '#BBECCB',
+    main: '#38C765',
+    dark: '#2FB85A',
+    darkest: '#108B36',
+    contrastText: '#ffffff',
+    contrastTextLight: '#000000',
+  },
+  negative: {
+    lightest: '#FFE7E5',
+    light: '#FFCFCC',
+    main: '#F21D0D',
+    dark: '#CA271B',
+    darkest: '#871A12',
+    contrastText: '#ffffff',
+    contrastTextLight: '#000000',
+  },
+  neutral: {
+    lightest: '#FCF5DB',
+    light: '#FFEB9E',
+    main: '#FFDD5B',
+    dark: '#EDC52A',
+    darkest: '#D6AC0B',
+    contrastText: '#ffffff',
+    contrastTextLight: '#000000',
+  },
+  breakpoints: createBreakpoints(['700px', '1000px', '1200px', '1920px']),
+};
+```

@@ -1,0 +1,36 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# ButtonBar
+
+A layouting component to put multiple buttons next to each other aligned to the right. 
+It's handy for dialogs and confirmations.
+
+## Import
+
+```js
+// Tree shakable import
+import { ButtonBar } from '@bojagi/pablo';
+// Or direct import
+import { ButtonBar } from '@bojagi/pablo/ButtonBar';
+```
+
+## Example
+
+```jsx live
+  <Card width={500}>
+    <Title>Do you want to proceed?</Title>
+    <Paragraph>Please select one of the buttons below!</Paragraph>
+    <ButtonBar>
+      <Button size="medium" variant="text" color="plain">
+        Cancel
+      </Button>
+      <Button size="medium">Accept</Button>
+    </ButtonBar>
+  </Card>
+```
+
+## Props
+<PropsTable name="ButtonBar" type="direct" />
+
+## Box props
+<PropsTable name="ButtonBar" type="box" />

@@ -92,6 +92,8 @@ const knownVariants = [
   'textInverted',
 ];
 
+console.log('wheee');
+
 export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
   (
     {
@@ -111,6 +113,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
   ) => {
     const isKnownVariant = knownVariants.indexOf(variant) > -1;
     const getCustomStyles = useCustomStyles('button.styles', customStyles);
+    console.log('getCustomStyles', getCustomStyles(variant));
 
     return (
       <InnerButton

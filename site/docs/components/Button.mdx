@@ -1,0 +1,188 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+import { Button } from '@bojagi/pablo/Button';
+import { Box } from '@bojagi/pablo/Box';
+import { css, keyframes } from '@emotion/react';
+
+# Button
+
+Interactive element that can either trigger an action or can be used as a link.
+
+## Import
+
+```js
+// Tree shakable import
+import { Button } from '@bojagi/pablo';
+// Or direct import
+import { Button } from '@bojagi/pablo/Button';
+```
+
+## Examples
+
+### Different sizes
+
+Buttons can be either `small`, `medium` or `large`. Default size is `medium`.
+
+```jsx live
+  <Box mx={-1}>  
+    <Button size="small" mx={1}>
+      Small
+    </Button>
+    <Button mx={1}>
+      Medium
+    </Button>
+    <Button size="large" mx={1}>
+      Large
+    </Button>
+  </Box>
+```
+
+### Colors
+
+Colors can be used to give a button a certain emphasis. By default a button uses the `brand` color.
+It can also be set to `plain` for actions that are not as important. If you want show that a button
+triggers a descructive action (like deleting something) you can use `negative`. 
+You can also use the color `positive` for construcive or positive actions.
+
+```jsx live
+  <Box mx={-1}>  
+    <Button mx={1}>
+      Brand button
+    </Button>
+    <Button color="plain" mx={1}>
+      Plain button
+    </Button>
+    <Button color="positive" mx={1}>
+      Positive button
+    </Button>
+    <Button color="negative" mx={1}>
+      Negative button
+    </Button>
+  </Box>
+```
+
+### Variants
+
+In addition to color you can use different variants. Variants are an even better way to structure your
+buttons and give them different levels of importance. By default a button has the variant `primary`.
+The variant `secondary` and `text` can be used if you want to give a button less importance, 
+where `secondary` is more important than `text`.
+
+```jsx live
+  <Box mx={-1}>  
+    <Button mx={1}>
+      Accept
+    </Button>
+    <Button variant="secondary" mx={1}>
+      Cancel
+    </Button>
+    <Button variant="text" mx={1}>
+      read more
+    </Button>
+  </Box>
+```
+
+### Inverted variants
+
+Similar to variants, you can use inverted variants. These are useful if you want to show the variants
+on brand colored or dark background. For this you need to add the `Inverted` suffix on the variant prop,
+making it camel case (e.g. `primaryInverted`).
+
+```jsx live
+  <Box borderRadius={4} py={6} px={4}  bgColor="brand.main">  
+    <Button variant="primaryInverted" mx={1}>
+      Accept
+    </Button>
+    <Button variant="secondaryInverted" mx={1}>
+      Cancel
+    </Button>
+    <Button variant="textInverted" mx={1}>
+      read more
+    </Button>
+  </Box>
+```
+
+### Icons
+
+If you want to make your button more recognizable or give it even more emphasis you can use icons.
+Icons can be either added to the start or end of a button. You can use any icon library you want
+as Pablo is agnostic regarding libraries. In the examples below we use icons from `react-feather`.
+Colors are applied based on the `variant` and `color` prop.
+
+```jsx live
+  <Box display="flex" alignItems="center" mx={-1}>
+    <Button mx={1} endIcon={<GitPullRequest size={16} />}>
+      Accept
+    </Button>
+    <Button mx={1} startIcon={<GitPullRequest size={16} />}>
+      Cancel
+    </Button>
+    <Button mx={1} variant="secondary" endIcon={<GitPullRequest size={16} />}>
+      Accept
+    </Button>
+    <Button mx={1} variant="secondary" startIcon={<GitPullRequest size={16} />}>
+      Cancel
+    </Button>
+  </Box>
+```
+
+### Using buttons as link
+
+You can use the `as` property to change the component of the button. 
+In the example below we use simple link, but you can use the `Link` component 
+of `react-router` or `gatsby` as well.
+
+```jsx live
+  <Button as="a" href="https://bojagi.io" target="_blank">
+    Link button
+  </Button>
+```
+
+### Using full width buttons
+If you want your button to span over the full width of it's parent, you can use the `fullWidth` boolean prop.
+
+```jsx live
+  <Button fullWidth endIcon={<GitPullRequest size={16} />}>
+    I am a full width button
+  </Button>
+```
+
+### Customize a button
+
+You can customize every bit of a button with the `customStyles` prop using the `css` function of `styled-component`.
+
+You can customize following things: 
+
+* `icon` (general icon styles)
+* `startIcon`
+* `endIcon`
+* `primary`
+* `secondary`
+* `text`
+
+```jsx live
+  <Box display="flex" justifyContent="center">
+    <Button startIcon={<GitPullRequest size={16} />} customStyles={{
+      primary: css`
+        transform: rotate(4deg);
+        background-color: tomato;
+        &:hover:enabled {
+          background-color: red;
+        }
+      `,
+      icon: css`
+        color: blue;
+      `,
+      startIcon: css`
+        margin-right: 100px;
+      `,
+    }}>
+      I am fancy
+    </Button>
+  </Box>
+```
+
+## Props
+<PropsTable name="Button" type="direct" />
+
+## Box props
+<PropsTable name="Button" type="box" />

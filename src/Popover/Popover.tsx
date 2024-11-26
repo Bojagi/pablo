@@ -4,7 +4,7 @@ import { Portal } from '../Portal/Portal';
 import { ClickOutside } from '../ClickOutside/ClickOutside';
 import { setRef } from '../utils/setRef';
 import { useReRenderForwardRef } from '../utils/useForwardRef';
-import { AnimatonSetupProps, InOutAnimationProps, NoAnimation } from '../animation';
+import { AnimationSetupProps, InOutAnimationProps, NoAnimation } from '../animation';
 import { useDelayedBooleanState } from '../utils/useDelayBooleanState';
 import { baseStyle } from '../shared/baseStyle';
 import type { ComponentElement, ComponentType, ReactElement, ReactNode, Ref } from 'react';
@@ -24,7 +24,7 @@ export interface PopoverProps<A extends InOutAnimationProps = InOutAnimationProp
   arrow?: ReactElement;
   open: boolean;
   animation?: ComponentType<InOutAnimationProps>;
-  animationProps?: AnimatonSetupProps<A>;
+  animationProps?: AnimationSetupProps<A>;
   'aria-haspopup'?: string;
 }
 

@@ -1,0 +1,82 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# IconButton
+
+IconButtons are buttons that only consists of an icon. They are useful for actions on places where space is rare
+and an icon on it's own is really descriptive.
+
+## Import
+
+```js
+// Tree shakable import
+import { IconButton } from '@bojagi/pablo';
+// Or direct import
+import { IconButton } from '@bojagi/pablo/IconButton';
+```
+
+## Examples
+
+### Sized IconButton
+
+You can display `IconButton`s in different sizes. By default they have the size `medium`. 
+They can also be `small` and `large`. 
+
+```jsx live
+<Flex gap={1}>
+  <IconButton onClick="You clicked me!">
+    <Trash2 />
+  </IconButton>
+  <IconButton size="small" onClick="You clicked me!">
+    <Trash2 />
+  </IconButton>
+  <IconButton size="large" onClick="You clicked me!">
+    <Trash2 />
+  </IconButton>
+</Flex>
+```
+
+### Active Icon buttons
+IconButtons can also be used to toggle certain functionality (e.g. bold text mode in rich text inputs). For this
+you can use the boolean `active` prop.
+
+```jsx live
+() => {
+  const [active, setActive] = React.useState(props.active);
+  return (
+    <IconButton active={active} onClick={() => setActive(!active)}>
+      <Italic />
+    </IconButton>
+  );;
+}
+```
+
+### Colored IconButton
+
+To give IconButtons a different color, just use the `color` prop. Colors can be `brand`, `plain`, `negative` or `positive`.
+The default color is `plain`. 
+
+```jsx live
+() => {
+  const [active, setActive] = React.useState(props.active);
+  return (
+    <Flex gap={1}>
+      <IconButton color="brand" active={active} onClick={() => setActive(!active)}>
+        <Crop />
+      </IconButton>
+      <IconButton color="positive" active={active} onClick={() => setActive(!active)}>
+        <CheckCircle />
+      </IconButton>
+      <IconButton color="negative" active={active} onClick={() => setActive(!active)}>
+        <Trash2 />
+      </IconButton>
+    </Flex>
+  );
+}
+```
+
+## Props
+
+<PropsTable name="IconButton" type="direct" />
+
+## Box props
+<PropsTable name="IconButton" type="box" />

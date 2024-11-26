@@ -1,0 +1,45 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Card
+
+Renders a plain card with content inside.
+
+## Import
+
+```js
+// Tree shakable import
+import { Card } from '@bojagi/pablo';
+// Or direct import
+import { Card } from '@bojagi/pablo/Card';
+```
+
+## Examples
+
+### Square
+```jsx live
+<Card>
+  <Title>This is a card</Title>
+  <Paragraph>With som e text</Paragraph>
+</Card>
+```
+
+### Custom styles
+```jsx live
+<Card
+  customStyles={{
+    root: css`
+      background-color: blue;
+      color: white;
+    `,
+  }}
+>
+  <Title>This is a card</Title>
+  <Paragraph>With some text</Paragraph>
+</Card>
+```
+
+## Props
+<PropsTable name="Card" type="direct" />
+
+## Box props
+<PropsTable name="Card" type="box" />

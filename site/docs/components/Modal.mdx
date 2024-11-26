@@ -1,0 +1,201 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Modal
+
+With the `Modal` component you can show additional content on user interaction that overlays the page and
+hides the content behind it. The additional content is presented within a pane and can also have additional panes.
+
+## Import
+
+```js
+// Tree shakable import
+import { Modal } from '@bojagi/pablo';
+// Or direct import
+import { Modal } from '@bojagi/pablo/Modal';
+```
+
+## Simple modal
+
+The modal takes the content to display when it's open as a child. The title of the modal is optional.
+
+```jsx live
+() => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>open modal</Button>
+      <Modal title="Hej" onClose={() => setOpen(false)} open={open}>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>
+      </Modal>
+    </>
+  );
+}
+```
+
+## Modal as a confirmation dialog
+
+You can use a modal also as confirmation dialog together with the `ButtonBar` component.
+
+```jsx live
+() => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>open modal</Button>
+      <Modal onClose={() => setOpen(false)} open={open}>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>
+        <ButtonBar>
+          <Button size="medium" color="plain" variant="primary" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
+          <Button size="medium" onClick={() => setOpen(false)}>
+            Done
+          </Button>
+        </ButtonBar>
+      </Modal>
+    </>
+  );
+}
+```
+
+## Top right icon/component
+
+You can put any component in the top right corner of a modal with the `topRightItem` prop (e.g. a close button).
+
+```jsx live
+() => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>open modal</Button>
+      <Modal
+        onClose={() => setOpen(false)}
+        title="Hej"
+        open={open}
+        topRightItem={({ onClose }) => (
+          <IconButton size="medium">
+            <X onClick={onClose} />
+          </IconButton>
+        )}
+      >
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>
+        <ButtonBar>
+          <Button size="medium" color="plain" variant="primary" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
+          <Button size="medium" onClick={() => setOpen(false)}>
+            Done
+          </Button>
+        </ButtonBar>
+      </Modal>
+    </>
+  );
+}
+```
+
+You can also put in multiple items in there (e.g. multiple buttons with a `ButtonBar` component).
+
+```jsx live
+() => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>open modal</Button>
+      <Modal
+        onClose={() => setOpen(false)}
+        title="Hej"
+        open={open}
+        topRightItem={({ onClose }) => (
+          <ButtonBar>
+            <IconButton size="medium">
+              <MoreHorizontal />
+            </IconButton>
+            <IconButton size="medium" onClick={onClose}>
+              <X />
+            </IconButton>
+          </ButtonBar>
+        )}
+      >
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>
+        <ButtonBar>
+          <Button size="medium" color="plain" variant="primary" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
+          <Button size="medium" onClick={() => setOpen(false)}>
+            Done
+          </Button>
+        </ButtonBar>
+      </Modal>
+    </>
+  );
+}
+```
+
+### Additional panes
+
+Sometimes you need more panes to add a different section to the modal. These additional panes are displayed
+as separate boxes below the main box. In case your panes change order or are dynamically added and removed you
+need add `key` props to them, otherwise there might be rendering problems.
+
+```jsx live
+() => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>open modal</Button>
+      <Modal
+        onClose={() => setOpen(false)}
+        open={open}
+        additionalPanes={[
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </Paragraph>,
+          <Paragraph mb={0}>Goodbye</Paragraph>,
+          <Paragraph mb={0}>I am the Walrus</Paragraph>,
+        ]}
+      >
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+          non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </Paragraph>
+      </Modal>
+    </>
+  );
+}
+```
+
+## Props
+
+<PropsTable name="Modal" type="direct" />
+
+## Box props
+<PropsTable name="Modal" type="box" />

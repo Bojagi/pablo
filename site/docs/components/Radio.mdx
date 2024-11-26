@@ -1,0 +1,127 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Radio
+
+Form element that allows users to select a single item from a set of options. 
+The `Radio` component shares an interface with the `Checkbox` and `Switch` components.
+
+## Import
+
+```js
+// Tree shakable import
+import { Radio, RadioGroup } from '@bojagi/pablo';
+// Or direct import
+import { Radio, RadioGroup } from '@bojagi/pablo/Radio';
+```
+
+## Examples
+
+### Single radio component
+
+```jsx live
+() => {
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <Radio checked={checked} onChange={() => setChecked(!checked)}  />
+  );
+}
+```
+
+### Radio selectors with labels
+
+You can pass an optional `label` prop with a `ReactNode` value to show a label next to the checkbox.
+
+```jsx live
+() => {
+  const [selectedDish, setDish] = React.useState(undefined);
+  return (
+    <Box display="flex" mx={-2}>
+      <Radio mx={0.5} label="Spaghetti" checked={selectedDish === 'spaghetti'} onChange={() => setDish('spaghetti')} />
+      <Radio mx={0.5} label="Pizza" checked={selectedDish === 'pizza'} onChange={() => setDish('pizza')} />
+    </Box>
+  );
+}
+```
+
+### Grouped radio selectors
+
+In the above example the selection management is done manually, it makes more sense though to use the `RadioGroup` to
+group the values together. The `RadioGroup` component takes the selected `value` and `onChange` callback props.
+For this to work the `Radio` components need to be passed a `value` where they should be selected. The `checked` prop is not needed.
+
+```jsx live
+() => {
+  const [selectedDish, setDish] = React.useState(undefined);
+  return (
+    <RadioGroup value={selectedDish} onChange={setDish}>
+      <Radio mx={0.5} label="Spaghetti" value="spaghetti" />
+      <Radio mx={0.5} label="Pizza" value="pizza" />
+    </RadioGroup>
+  );
+}
+```
+
+### Small radio selectors
+
+You can pass the `size` prop with the `small` value which renders a smaller version.
+
+```jsx live
+() => {
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <Radio size="small" checked={checked} onChange={() => setChecked(!checked)} />
+  );
+}
+```
+
+When you want to set the size on a `RadioGroup` you have to set it in the `RadioGroup` component
+
+```jsx live
+() => {
+  const [selectedDish, setDish] = React.useState(undefined);
+  return (
+    <RadioGroup size="small" value={selectedDish} onChange={setDish}>
+      <Radio mx={0.5} label="Spaghetti" value="spaghetti" />
+      <Radio mx={0.5} label="Pizza" value="pizza" />
+    </RadioGroup>
+  );
+}
+```
+
+### Custom styling
+
+You can overwrite the styles of parts of this component as well. 
+
+```jsx live
+() => {
+  const [checked, setChecked] = React.useState(false);
+  const customStyles = {
+    box: css`
+      background-color: blue;
+      order: 2;
+    `,
+    handle: css`
+      background-color: red;
+    `,
+    label: css`
+      text-decoration: underline;
+      order: 1;
+      margin-right: ${getSpacing(1)};
+    `,
+  };
+  return (
+    <Radio
+      checked={checked}
+      label="weird"
+      onChange={() => setChecked(!checked)}
+      customStyles={customStyles} 
+    />
+  );
+}
+```
+
+## Props
+<PropsTable name="Radio" type="direct" />
+
+## Box props
+<PropsTable name="Radio" type="box" />

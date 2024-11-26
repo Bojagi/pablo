@@ -1,0 +1,110 @@
+import { PropsTable } from '@site/src/components/PropsTable';
+
+# Typography
+
+The Pablo `Typography` components help you to keep a consistent look and not overload your design with
+different typographical settings that can get out of date quite and unmaintainable quite quickly.
+
+## Import
+
+```js
+// Tree shakable import
+import { Typography } from '@bojagi/pablo';
+
+// Separate components
+import { 
+  Headline,
+  Title,
+  Subtitle,
+  Paragraph,
+  ParagraphBold,
+  InfoText,
+  InfoTextBold
+} from '@bojagi/pablo'
+
+// Or direct import
+import { Typography ,Headline, Title /* ... */ } from '@bojagi/pablo/Typography';
+```
+
+## Usage
+
+Pablo has the following Typography variants:
+
+* `headline` for the main heading of a page
+* `title` for section headings
+* `subtitle` for sub section headings
+* `paragraph` for floating text
+* `paragraphBold` for inline parts within paragraphs that should have an emphasis
+* `info` for information texts (small type size)
+* `infoBold` for information texts (small type size)
+
+You can pass the variant as a prop in the `Typography` component.
+
+```jsx
+import { Typography } from '@bojagi/pablo/Typography';
+<Typography variant="headline">Pablo documenatation</Typography>
+```
+
+To make your code more readable there are separate components available for you to use.
+
+```jsx live
+<>
+  <Headline>Headline</Headline>
+  <Title>Title</Title>
+  <Subtitle>Subtitle</Subtitle>
+  <Paragraph>Paragraph</Paragraph>
+  <ParagraphBold>ParagraphBold</ParagraphBold>
+  <InfoText>Info</InfoText>
+  <InfoTextBold>InfoBold</InfoTextBold>
+</>
+```
+
+## Examples
+
+### Inline text
+
+To put text somewhere without any padding or margin, you can set the boolean `inline` prop.
+
+```jsx live
+<>
+  <Headline inline>Headline</Headline>
+  <Title inline>Title</Title>
+  <Subtitle inline>Subtitle</Subtitle>
+  <Paragraph inline>Paragraph</Paragraph>
+  <ParagraphBold inline>ParagraphBold</ParagraphBold>
+  <InfoText inline>Info</InfoText>
+  <InfoTextBold inline>InfoBold</InfoTextBold>
+</>
+```
+
+### Colored text
+
+To use color with a text just pass the `textColor` prop and pass the color name.
+
+For example you can use the info text color, that by default is a bit lighter than the standard text color.
+
+```jsx live
+<InfoText textColor="text.info">This is some info</InfoText>
+```
+
+You can use also brand, positive or negative colors:
+
+```jsx live
+<>
+  <Headline textColor="brand.main">Headline</Headline>
+  <Title textColor="positive.main">Title</Title>
+  <Subtitle textColor="negative.main">Subtitle</Subtitle>
+  <Paragraph textColor="positive.dark">Paragraph</Paragraph>
+  <ParagraphBold textColor="positive.light">Paragraph Bold</ParagraphBold>
+  <InfoText textColor="brand.light">Info Text</InfoText>
+  <InfoTextBold textColor="brand.dark">Info Text Bold</InfoTextBold>
+  <Paragraph textColor="neutral.dark">Paragraph</Paragraph>
+</>
+```
+
+## Props
+
+<PropsTable name="Typography" type="direct" />
+
+## Box props
+<PropsTable name="Typography" type="box" />
