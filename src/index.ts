@@ -10,6 +10,7 @@ export * from './IconButton';
 export * from './Image';
 export * from './Input';
 export * from './ClickOutside';
+export * from './FlexGrid';
 export * from './Hide';
 export * from './Menu';
 export * from './Modal';
