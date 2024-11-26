@@ -170,6 +170,8 @@ exports[`Render first selected 1`] = `
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .emotion-7:enabled {
@@ -626,6 +628,8 @@ exports[`Render tabs with icons 1`] = `
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .emotion-10:enabled {
@@ -1324,6 +1328,8 @@ exports[`Work with one tab 1`] = `
   padding: 8px 12px 12px;
   margin: 0 0 0px;
   white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .emotion-3:enabled {
