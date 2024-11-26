@@ -1,5 +1,5 @@
 import { useCallback, useLayoutEffect } from 'react';
-import { reposition, type NanoPopPosition } from 'nanopop';
+import { type PositionMatch, reposition, type NanoPopPosition } from 'nanopop';
 
 type InputElement<E = HTMLDivElement> = E | null;
 
@@ -10,6 +10,7 @@ interface UseNanopopOptions {
   arrowElement?: InputElement;
   margin: number;
   position: NanoPopPosition;
+  onChange?: (newPosition: PositionMatch | null) => void;
 }
 
 const useNanopop = ({
@@ -19,6 +20,7 @@ const useNanopop = ({
   arrowElement,
   margin,
   position,
+  onChange = () => {},
 }: UseNanopopOptions) => {
   const repos = useCallback(() => {
     if (!referenceElement || !popperElement) {
@@ -27,13 +29,14 @@ const useNanopop = ({
 
     const container = targetWindow.document.documentElement?.getBoundingClientRect();
 
-    reposition(referenceElement, popperElement, {
+    const newPlacement = reposition(referenceElement, popperElement, {
       margin,
       position,
       container,
       arrow: arrowElement || undefined,
     });
-  }, [referenceElement, popperElement, targetWindow, margin, position, arrowElement]);
+    onChange(newPlacement);
+  }, [onChange, referenceElement, popperElement, targetWindow, margin, position, arrowElement]);
 
   useLayoutEffect(() => {
     repos();

@@ -28,8 +28,6 @@ const transformFn = (prop) => {
 };
 
 const getFilteredProps = (type, props) => {
-  console.log('props', props);
-
   return Object.entries(props).reduce((acc, [key, value]) => {
     if (getFilterFn(type)(value)) {
       acc[key] = transformFn(value);

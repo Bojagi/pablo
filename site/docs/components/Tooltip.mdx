@@ -15,22 +15,12 @@ import { Tooltip } from '@bojagi/pablo/Tooltip';
 
 ## Examples
 
-### Plain tooltip
-
-```jsx live
-<Tooltip content="A tooltip shows on hovering (you just witnessed)">
-  <Button color="plain">
-    Hover over me
-  </Button>
-</Tooltip>
-```
-
 ### Tooltip positioning
 
 A tooltip can be positioned on each of the for sides of it's child. 
 
 ```jsx live
-<Box display="flex" gap={1}>
+<Flex gap={1}>
   <Tooltip side="left" content="Left tooltip">
     <Button color="plain">
       Left
@@ -51,7 +41,17 @@ A tooltip can be positioned on each of the for sides of it's child.
       right
     </Button>
   </Tooltip>
-</Box>
+</Flex>
+```
+
+### Plain tooltip
+
+```jsx live
+<Tooltip content="A tooltip shows on hovering (you just witnessed)">
+  <Button color="plain">
+    Hover over me
+  </Button>
+</Tooltip>
 ```
 
 ### Tooltip by click

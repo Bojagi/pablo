@@ -3,11 +3,6 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import path from 'path';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-// const __dirname = import.meta.dirname;
-// console.log('__dirname', __dirname);
-console.log('__dirname', path.resolve(__dirname, '../src'));
-
 const config: Config = {
   title: 'Bojagi Pablo',
   tagline: 'Low footprint design system',

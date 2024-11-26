@@ -49,6 +49,8 @@ const TabButton = styled.button<Partial<InnerTabProps>>`
     ${getCustomStyles('tabs.tab.styles', 'active')}
   }
 
+  ${(props) => props.css}
+
   ${(props) =>
     props.selected &&
     css`

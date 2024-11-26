@@ -15,7 +15,7 @@ import type { NanoPopPosition } from 'nanopop';
 export interface MenuProps extends BaseProps<MenuStyleProperties> {
   children: ComponentElement<any, any>;
   open: boolean;
-  placement: NanoPopPosition;
+  placement?: NanoPopPosition;
   offset?: number;
   onClose?: () => void;
   items: ReactElement<MenuItemProps>[];
@@ -42,7 +42,7 @@ export const Menu = forwardRef(
       open,
       offset,
       onClose,
-      placement,
+      placement = 'bottom-end',
       animation,
       animationProps,
       customStyles,
