@@ -19,12 +19,12 @@ import { Checkbox } from '@bojagi/pablo/Checkbox';
 ### Single checkbox
 
 ```jsx live
-  {() => {
-    const [checked, setChecked] = React.useState(false);
-    return (
-      <Checkbox checked={checked} onChange={() => setChecked(!checked)} />
-    );
-  }}
+() => {
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <Checkbox checked={checked} onChange={() => setChecked(!checked)} />
+  );
+}
 ```
 
 ### Checkboxes with labels
@@ -32,16 +32,16 @@ import { Checkbox } from '@bojagi/pablo/Checkbox';
 You can pass an optional `label` prop with a `ReactNode` value to show a label next to the checkbox.
 
 ```jsx live
-  {() => {
-    const [checked, setChecked] = React.useState(false);
-    const [checkedTwo, setCheckedTwo] = React.useState(true);
-    return (
-      <Flex gap={0.5}>
-        <Checkbox label="Spaghetti" checked={checked} onChange={() => setChecked(!checked)} />
-        <Checkbox label="Pizza" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
-      </Flex>
-    );
-  }}
+() => {
+  const [checked, setChecked] = React.useState(false);
+  const [checkedTwo, setCheckedTwo] = React.useState(true);
+  return (
+    <Flex gap={0.5}>
+      <Checkbox label="Spaghetti" checked={checked} onChange={() => setChecked(!checked)} />
+      <Checkbox label="Pizza" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+    </Flex>
+  );
+}
 ```
 
 ### Small checkboxes
@@ -49,16 +49,16 @@ You can pass an optional `label` prop with a `ReactNode` value to show a label n
 You can pass the `size` prop with the `small` value which renders a smaller version.
 
 ```jsx live
-  {() => {
-    const [checked, setChecked] = React.useState(false);
-    const [checkedTwo, setCheckedTwo] = React.useState(true);
-    return (
-      <Flex gap={0.5}>
-        <Checkbox size="small" checked={checked} onChange={() => setChecked(!checked)} />
-        <Checkbox size="small" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
-      </Flex>
-    );
-  }}
+() => {
+  const [checked, setChecked] = React.useState(false);
+  const [checkedTwo, setCheckedTwo] = React.useState(true);
+  return (
+    <Flex gap={0.5}>
+      <Checkbox size="small" checked={checked} onChange={() => setChecked(!checked)} />
+      <Checkbox size="small" checked={checkedTwo} onChange={() => setCheckedTwo(!checkedTwo)} />
+    </Flex>
+  );
+}
 ```
 
 ## Props
