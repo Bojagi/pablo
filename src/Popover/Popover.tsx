@@ -11,7 +11,7 @@ import type { ComponentElement, ComponentType, ReactElement, ReactNode, Ref } fr
 import { useNanopop } from './useNanopop';
 import type { NanoPopPosition, PositionMatch } from 'nanopop';
 
-export interface PopoverProps<A extends InOutAnimationProps = InOutAnimationProps> {
+export interface PopoverProps<A extends object = object> {
   children: ComponentElement<any, any>;
   content: ReactNode;
   placement: NanoPopPosition;
@@ -23,8 +23,8 @@ export interface PopoverProps<A extends InOutAnimationProps = InOutAnimationProp
   onClickOutside?: () => void;
   arrow?: ReactElement;
   open: boolean;
-  animation?: ComponentType<InOutAnimationProps>;
-  animationProps?: AnimationSetupProps<A>;
+  animation?: ComponentType<InOutAnimationProps<A>>;
+  animationProps?: AnimationSetupProps & A;
   'aria-haspopup'?: string;
 }
 

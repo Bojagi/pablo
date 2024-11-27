@@ -15,24 +15,19 @@ const animationEnter = css`
   transform: scale(1);
 `;
 
-const dropInAnimationExit = (props: AnimationStyleProps) => css`
+const animationExit = (shrink: boolean) => (props: AnimationStyleProps) => css`
   opacity: 0;
-  transform: ${transformInterpolateFn(true, props)};
-`;
-
-const popOutAnimationExit = (props: AnimationStyleProps) => css`
-  opacity: 0;
-  transform: ${transformInterpolateFn(false, props)};
+  transform: ${transformInterpolateFn(shrink, props)};
 `;
 
 export const DropInAnimation = createInOutAnimation({
   baseStyles: animationBase,
   enterStyles: animationEnter,
-  exitStyles: dropInAnimationExit,
+  exitStyles: animationExit(true),
 });
 
 export const PopOutAnimation = createInOutAnimation({
   baseStyles: animationBase,
   enterStyles: animationEnter,
-  exitStyles: popOutAnimationExit,
+  exitStyles: animationExit(false),
 });

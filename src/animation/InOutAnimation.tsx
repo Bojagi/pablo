@@ -25,7 +25,7 @@ export interface AnimationAdditionalProps {
   children: ReactNode;
 }
 
-export type AnimationStyleProps<T extends Record<string, any> = object> = {
+export type AnimationStyleProps<T extends object = object> = {
   visible: boolean;
   status: TransitionStatus;
   easing: string;
@@ -35,7 +35,7 @@ export type AnimationStyleProps<T extends Record<string, any> = object> = {
 } & T &
   PabloThemeableProps;
 
-export type InOutAnimationProps<T extends Record<string, any>> = AnimationAdditionalProps &
+export type InOutAnimationProps<T extends object = object> = AnimationAdditionalProps &
   AnimationStyleSetup<AnimationStyleProps<T>> &
   AnimationSetupProps &
   T;
@@ -95,7 +95,7 @@ const InOutAnimation = forwardRef<HTMLDivElement, InOutAnimationProps<any>>(
   }
 );
 
-export function createInOutAnimation<P extends Record<string, any>>({
+export function createInOutAnimation<P extends object>({
   baseStyles,
   enterStyles,
   exitStyles,
