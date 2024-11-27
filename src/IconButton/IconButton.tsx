@@ -64,6 +64,8 @@ const StyledIconButton = styled.button<IconButtonProps>`
 
   ${getCustomStyles('iconButton.styles', 'root')}
 
+  ${(props) => props.css}
+
   ${(props) =>
     props.active
       ? css`

@@ -72,6 +72,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
     const generatedId = useUniqueId();
     const titleId = `${generatedId}-title`;
     const descriptionId = `${generatedId}-title`;
+    console.log('color', color);
 
     return (
       <CardWrapper
@@ -109,7 +110,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
               {closable && (
                 <IconButton
                   data-testid="pbl-toastcard-closebtn"
-                  mx={-5}
+                  mx={-1.5}
                   onClick={onClose}
                   size="small"
                   css={(props) =>
