@@ -38,8 +38,6 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
 
   const removeMessage = useCallback(
     (id: string) => {
-      console.log('xxxxxx');
-
       if (mountedRef.current) {
         dispatchMessage({
           type: 'remove',
@@ -99,7 +97,7 @@ export function ToastProvider({ children, side = 'bottom-right' }: ToastProvider
                   role={isAlert ? 'alert' : 'status'}
                   aria-atomic="true"
                   {...message}
-                  mb={4}
+                  mb={1.5}
                   onClose={() => hideMessage(message.id!)}
                 />
               </StackAnimation>

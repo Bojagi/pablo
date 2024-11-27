@@ -1,11 +1,9 @@
-import React, { forwardRef, type ReactNode, useState, useEffect } from 'react';
-import { Transition } from 'react-transition-group';
+import React, { forwardRef, type ReactNode, useEffect } from 'react';
 import styled from '@emotion/styled';
 import useResizeObserver from 'use-resize-observer';
 import { useForwardRef } from '../utils/useForwardRef';
-import { useMountedRef } from '../utils/useMountedRef';
-import type { TransitionStatus } from 'react-transition-group';
 import type { Interpolation } from '@emotion/react';
+import { TransitionStatus, useTransitionState } from 'react-transition-state';
 
 export interface InnerInOutAnimationProps {
   state?: TransitionStatus;
@@ -57,33 +55,35 @@ export interface CreateInOutAnimationOptions {
 
 const InOutAnimation = forwardRef<HTMLDivElement, InOutAnimationProps>(
   ({ visible, onExited, duration, children, ...additionalProps }, ref) => {
-    const [animationIn, setAnimationIn] = useState(false);
     const [innerRef, setInnerRef] = useForwardRef(ref);
-    const mountedRef = useMountedRef();
     const { width, height } = useResizeObserver<HTMLDivElement>({ ref: innerRef });
 
+    const [{ status }, toggle] = useTransitionState({
+      timeout: duration,
+      preEnter: true,
+      onStateChange: (newStatus) => {
+        if (newStatus.current.status === 'exited' && onExited) {
+          onExited();
+        }
+      },
+    });
+
     useEffect(() => {
-      const requestCallback =
-        (window as any).requestIdleCallback || requestAnimationFrame || setTimeout;
-      requestCallback(() => mountedRef.current && setAnimationIn(visible));
-    }, [visible, mountedRef]);
+      toggle(visible);
+    }, [toggle, visible]);
 
     return (
-      <Transition in={animationIn} timeout={duration} onExited={onExited}>
-        {(state) => (
-          <InnerInOutAnimation
-            ref={setInnerRef}
-            data-testid="pbl-animation-inner"
-            duration={duration}
-            selfWidth={width}
-            selfHeight={height}
-            state={state}
-            {...additionalProps}
-          >
-            {children}
-          </InnerInOutAnimation>
-        )}
-      </Transition>
+      <InnerInOutAnimation
+        ref={setInnerRef}
+        data-testid="pbl-animation-inner"
+        duration={duration}
+        selfWidth={width}
+        selfHeight={height}
+        state={status}
+        {...additionalProps}
+      >
+        {children}
+      </InnerInOutAnimation>
     );
   }
 );

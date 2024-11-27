@@ -319,6 +319,11 @@ describe.each([
       jest.advanceTimersByTime(1);
     });
 
+    // Advance one more time to trigger "entering" state of the animation
+    act(() => {
+      jest.advanceTimersByTime(1);
+    });
+
     expect(getByTestId('pbl-animation-inner')).toHaveStyleRule('opacity', '1');
     expect(getByTestId('pbl-animation-inner')).toHaveStyleRule(
       'transform',

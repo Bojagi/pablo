@@ -8,7 +8,7 @@ export default [
   { 
     path: 'build/Button/index.cjs',
     name: 'Button direct import (Common JS)',
-    limit: '10 kb',
+    limit: '11.5 kb',
     running: false,
   },
   {
