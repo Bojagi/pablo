@@ -1,19 +1,9 @@
 import { css } from '@emotion/react';
-import type { Interpolation } from '@emotion/react';
-import {
-  createInOutAnimation,
-  InnerInOutAnimationProps,
-  InOutAnimationProps,
-} from './InOutAnimation';
+import { AnimationStyleProps, createInOutAnimation } from './InOutAnimation';
 
-const getMarginTop = (props: InnerInOutAnimationProps) =>
-  props.selfHeight ? -props.selfHeight : 0;
+const getMarginTop = (props: AnimationStyleProps) => (props.selfHeight ? -props.selfHeight : 0);
 
-const stackAnimationBase = (props: InnerInOutAnimationProps) => css`
-  transition:
-    opacity ${props.duration}ms,
-    margin-top ${props.duration}ms,
-    transform ${props.duration}ms;
+const stackAnimationBase = (props: AnimationStyleProps) => css`
   margin-top: ${getMarginTop(props)}px;
   opacity: 0;
   transform: translateY(50%);
@@ -25,16 +15,13 @@ const stackAnimationEnter = css`
   transform: translateY(0);
 `;
 
-const stackAnimationExit = (props: InnerInOutAnimationProps) =>
-  css`
-    opacity: 0;
-    margin-top: ${getMarginTop(props)}px;
-    transform: translateY(-50%);
-  ` as Interpolation<any>;
+const stackAnimationExit = (props: AnimationStyleProps) => css`
+  opacity: 0;
+  margin-top: ${getMarginTop(props)}px;
+  transform: translateY(-50%);
+`;
 
-export type StackAnimationProps = InOutAnimationProps;
-
-export const StackAnimation = createInOutAnimation<StackAnimationProps>({
+export const StackAnimation = createInOutAnimation({
   baseStyles: stackAnimationBase,
   enterStyles: stackAnimationEnter,
   exitStyles: stackAnimationExit,

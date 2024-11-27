@@ -9,6 +9,8 @@ import { SlideAnimation } from './SlideAnimation';
 import { NoAnimation as NoAnimationComponent } from './NoAnimation';
 import { StackAnimation } from './StackAnimation';
 import { FadeAnimation } from './FadeAnimation';
+import { DropInAnimation, PopOutAnimation } from './ScaleAnimation';
+import { NativeSelect } from '../NativeSelect';
 
 export default {
   title: 'Animation',
@@ -17,9 +19,11 @@ export default {
 const BaseStory = ({ component: Component, ...args }) => {
   const [duration, setDuration] = useState(300);
   const [visible, setVisible] = useState(false);
+  const [easing, setEasing] = useState('easeInOut');
 
   return (
     <Flex
+      gap={2}
       css={css`
         position: absolute;
         top: 0;
@@ -29,7 +33,7 @@ const BaseStory = ({ component: Component, ...args }) => {
       `}
       alignItems="stretch"
     >
-      <Flex justifyContent="center" alignItems="center" flexGrow={1} flexBasis={0}>
+      <Box centerFlex flexGrow={1} flexBasis={0}>
         <Box mb={4}>
           <Checkbox
             mb={1}
@@ -44,8 +48,15 @@ const BaseStory = ({ component: Component, ...args }) => {
             onChange={(v) => setDuration(parseInt(v, 10) || 0)}
             value={duration}
           />
+          <NativeSelect label="Easing" mb={1} onChange={setEasing} value={easing}>
+            <option>easeInOut</option>
+            <option>easeIn</option>
+            <option>easeOut</option>
+            <option>bounce</option>
+            <option>linear</option>
+          </NativeSelect>
         </Box>
-      </Flex>
+      </Box>
       <Box
         display="flex"
         justifyContent="center"
@@ -55,8 +66,8 @@ const BaseStory = ({ component: Component, ...args }) => {
         flexBasis={0}
         bgColor="gray.50"
       >
-        <Box maxWidth={400} height={200}>
-          <Component duration={duration} visible={visible} {...args}>
+        <Box maxWidth={400} height={200} p={3}>
+          <Component duration={duration} visible={visible} easing={easing} {...args}>
             <Card>
               <Title>I am animated</Title>
             </Card>
@@ -82,6 +93,16 @@ Slide.args = {
   component: SlideAnimation,
   side: 'left',
   reverse: false,
+};
+
+export const DropIn = BaseStory.bind(null);
+DropIn.args = {
+  component: DropInAnimation,
+};
+
+export const PopOut = BaseStory.bind(null);
+PopOut.args = {
+  component: PopOutAnimation,
 };
 
 export const NoAnimation = BaseStory.bind(null);
