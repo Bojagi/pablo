@@ -72,7 +72,6 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
     const generatedId = useUniqueId();
     const titleId = `${generatedId}-title`;
     const descriptionId = `${generatedId}-title`;
-    console.log('color', color);
 
     return (
       <CardWrapper

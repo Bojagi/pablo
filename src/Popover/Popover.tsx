@@ -34,6 +34,8 @@ const PopoverWrapper = styled.div`
   z-index: 1100;
 `;
 
+const DefaultArrow = styled.div``;
+
 export const Popover = forwardRef(
   (
     {
@@ -47,7 +49,7 @@ export const Popover = forwardRef(
       onMouseLeave = () => {},
       onClick,
       onClickOutside = () => {},
-      arrow = <div />,
+      arrow = <DefaultArrow />,
       animation: Animation = NoAnimation,
       animationProps = { duration: 0 },
       'aria-haspopup': ariaHasPopup,
