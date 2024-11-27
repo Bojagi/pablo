@@ -17,18 +17,18 @@ import { TooltipStyleProperties } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
 import { SlideAnimation } from '../animation/SlideAnimation';
-import type { AnimationSetupProps, InOutAnimationProps, SlideAnimationProps } from '../animation';
+import type { AnimationSetupProps, InOutAnimationProps } from '../animation';
 
 export type TooltipSide = 'top' | 'left' | 'bottom' | 'right';
 
-export interface TooltipProps<A extends InOutAnimationProps = SlideAnimationProps>
+export interface TooltipProps<A extends object = object>
   extends LayoutBoxProps,
     BaseProps<TooltipStyleProperties> {
   content: React.ReactNode;
   side?: TooltipSide;
   showOnClick?: boolean;
-  animation?: ComponentType<A>;
-  animationProps?: Partial<AnimationSetupProps<A>>;
+  animation?: ComponentType<InOutAnimationProps<A>>;
+  animationProps?: Partial<AnimationSetupProps & A>;
   delay?: number;
   disabled?: boolean;
   children: ComponentElement<any, any>;

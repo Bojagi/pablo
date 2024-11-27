@@ -1,3 +1,4 @@
+import { animationStyles } from '../animation/styles';
 import { avatarStyles } from '../Avatar/styles';
 import { buttonStyles } from '../Button/styles';
 import { buttonBarStyles } from '../ButtonBar/styles';
@@ -21,6 +22,7 @@ import { tooltipStyles } from '../Tooltip/styles';
 import { typographyStyles } from '../Typography/styles';
 
 const defaultComponentStyles = {
+  animation: animationStyles,
   button: buttonStyles,
   avatar: avatarStyles,
   buttonBar: buttonBarStyles,

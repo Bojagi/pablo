@@ -24,6 +24,7 @@ import { LinkStyles } from '../Link/styles';
 import { ToastCardStyles } from '../ToastCard/styles';
 import { ImageStyles } from '../Image/styles';
 import { NativeSelectStyles } from '../NativeSelect/styles';
+import { AnimationStyles } from '../animation/styles';
 
 export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
   | CSSInterpolation
@@ -48,6 +49,7 @@ type RecursivePartial<T> = {
 };
 
 export interface ComponentStyles {
+  animation: AnimationStyles;
   card: CardStyles;
   tabs: TabsStyles;
   sidebarNav: SidebarNavStyles;
