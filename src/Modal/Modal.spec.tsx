@@ -49,7 +49,7 @@ test('Render open modal', () => {
   const { getByTestId } = renderComponent({ open: true, children: <div>Hello World</div> });
   expect(getByTestId('pbl-modal-backdrop')).toHaveStyleRule('opacity', '1');
   // Not click though
-  expect(getByTestId('pbl-modal-backdrop')).not.toHaveStyleRule('pointer-events');
+  expect(getByTestId('pbl-modal-backdrop')).not.toHaveStyleRule('pointer-events', 'none');
   expect(document.body).toHaveStyle('overflow: hidden');
 });
 

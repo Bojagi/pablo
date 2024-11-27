@@ -59,8 +59,10 @@ const stackAnimationExit = (props: SlideAnimationProps & PabloThemeableProps) =>
   })(props)}
 `;
 
+export type SlideAnimationSide = 'top' | 'left' | 'bottom' | 'right';
+
 export interface SlideAnimationProps extends InOutAnimationProps {
-  side: TooltipSide;
+  side: SlideAnimationSide;
   reverse?: boolean;
 }
 

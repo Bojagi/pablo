@@ -6,7 +6,7 @@ import { css } from '@emotion/react';
 export interface ArrowProps {
   size: number;
   color: string;
-  positionMatch: string | null;
+  positionMatch?: string | null;
   customCss?: CssFunctionReturn;
 }
 
@@ -14,10 +14,6 @@ export const PopoverArrow = styled.div<ArrowProps>`
   ${baseStyle}
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
-  ${(props) => {
-    console.log(props.positionMatch);
-    return '';
-  }}
   position: fixed;
   &:after {
     ${baseStyle}
