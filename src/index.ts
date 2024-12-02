@@ -21,6 +21,7 @@ export * from './PopoverArrow';
 export * from './Portal';
 export * from './Radio';
 export * from './Show';
+export * from './Slider';
 export * from './SidebarNav';
 export * from './Switch';
 export * from './Tabs';
