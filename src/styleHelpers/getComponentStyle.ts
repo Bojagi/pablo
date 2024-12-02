@@ -16,7 +16,7 @@ const getArrayPath = <P extends object>(path: ComponentPath<P>, props: object) =
 
 export const getComponentStyle =
   <P extends object>(
-    path: ComponentPath<P>,
+    path: ComponentPath<P> | string,
     transformFn: (value: unknown) => string | number = (v) => v as string
   ) =>
   (props: WithTheme<any, PabloTheme>) => {
