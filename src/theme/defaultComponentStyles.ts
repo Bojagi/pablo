@@ -13,6 +13,7 @@ import { modalStyles } from '../Modal/styles';
 import { nativeSelectStyles } from '../NativeSelect/styles';
 import { radioStyles } from '../Radio/styles';
 import { sidebarNavStyles } from '../SidebarNav/styles';
+import { sliderStyles } from '../Slider/styles';
 import { switchStyles } from '../Switch/styles';
 import { tabsStyles } from '../Tabs/styles';
 import { textareaStyles } from '../TextArea/styles';
@@ -37,6 +38,7 @@ const defaultComponentStyles = {
   nativeSelect: nativeSelectStyles,
   radio: radioStyles,
   sidebarNav: sidebarNavStyles,
+  slider: sliderStyles,
   switch: switchStyles,
   tabs: tabsStyles,
   textArea: textareaStyles,

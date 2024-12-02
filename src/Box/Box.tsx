@@ -4,7 +4,6 @@ import { flexbox } from '@styled-system/flexbox';
 import { position } from '@styled-system/position';
 import type { LayoutProps, FlexboxProps, PositionProps } from 'styled-system';
 import { system } from '@styled-system/core';
-import type * as CSS from 'csstype';
 
 import { color, ColorProps } from './color';
 import { CssFunctionReturn } from '../types';
@@ -23,17 +22,24 @@ export interface BoxFillableProps {
   fillColor?: string;
 }
 
+export interface BoxFlexProps extends FlexboxProps {
+  grow?: number | boolean;
+  shrink?: number | boolean;
+}
+
 export type BoxProps = MarginProps &
   PaddingProps &
   ColorProps &
   LayoutProps &
-  FlexboxProps &
+  BoxFlexProps &
   PositionProps &
   BoxFillableProps &
   BoxCssProps;
 
+const flexGrow = ifProp('grow', (_, value) => `flex-grow: ${value};`);
+const flexShrink = ifProp('shrink', (_, value) => `flex-shrink: ${value};`);
 export const boxInterpolateFn = (props) =>
-  [margin, padding, color, layout, flexbox, position].map((fn) => fn(props));
+  [margin, padding, color, layout, flexbox, position, flexGrow, flexShrink].map((fn) => fn(props));
 
 const fill = system({
   fillColor: {
@@ -52,40 +58,17 @@ export const Box = styled.div<BoxProps>`
 
 export type LayoutBoxProps = MarginProps &
   PaddingProps &
-  FlexboxProps &
+  BoxFlexProps &
   LayoutProps &
   PositionProps &
   BoxCssProps;
 
 export const layoutInterpolationFn = (props) =>
-  [margin, padding, layout, flexbox, position]
+  [margin, padding, layout, flexbox, position, flexGrow, flexShrink]
     .map((fn) => fn(props))
     .reduce((acc, styles) => ({ ...acc, ...styles }), {});
 
 export const LayoutBox = styled.div<LayoutBoxProps>`
   ${baseStyle}
   ${layoutInterpolationFn}
-`;
-
-export type FlexProps = LayoutBoxProps & {
-  center?: boolean;
-  equal?: boolean;
-  end?: boolean;
-  start?: boolean;
-  between?: boolean;
-  stretch?: boolean;
-  direction?: CSS.Property.FlexDirection;
-};
-
-const justifyContent = (where: CSS.Property.JustifyContent) => `justify-content: ${where};`;
-
-export const Flex = styled(Box)<FlexProps>`
-  display: flex;
-  ${ifProp('center', 'justify-content: center; align-items: center;')}
-  ${ifProp('equal', '> * { flex-basis: 100%; flex-grow: 1; flex-shrink: 1; }')}
-  ${ifProp('between', justifyContent('space-between'))}
-  ${ifProp('end', justifyContent('flex-end'))}
-  ${ifProp('start', justifyContent('flex-start'))}
-  ${ifProp('stretch', 'align-items: stretch;')}
-  ${ifProp('direction', (_, value) => `flex-direction: ${value};`)}
 `;

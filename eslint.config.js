@@ -57,6 +57,9 @@ export default [
       // 'import/no-unresolved': 'off',
       'no-unused-vars': 'off',
       'react-hooks/rules-of-hooks': 'error',
+      "react-hooks/exhaustive-deps": ["warn", {
+        "additionalHooks": "(useEventListener)"
+      }],
       'react-hooks/exhaustive-deps': 'warn',
     },
   },

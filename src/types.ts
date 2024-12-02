@@ -15,3 +15,7 @@ export interface BaseStyles<StyleKeys extends string> {
 export interface BaseProps<StyleKeys extends string> {
   customStyles?: CustomStyles<StyleKeys>;
 }
+
+export type ComponentPathResolverFn<P extends object> = (props: P) => string;
+
+export type ComponentPath<P extends object> = (string | ComponentPathResolverFn<P>)[];
