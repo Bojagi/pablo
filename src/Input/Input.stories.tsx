@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Search } from 'react-feather';
 import { css } from '@emotion/react';
-import { Box } from '../Box';
+import { Box, Flex } from '../Box';
 import { IconButton } from '../IconButton';
 import { Typography } from '../Typography';
 import { Input, InputProps } from './Input';
@@ -73,6 +73,21 @@ export const MultipleInputs = () => (
       <ControlledInput label="credit card no." infoText="optional" />
     </Box>
   </Box>
+);
+
+export const MultipleInputsWithFlex = () => (
+  <Flex width={300} gap={2} equal p={2}>
+    <ControlledInput fullWidth label="name" />
+    <ControlledInput
+      fullWidth
+      label="search"
+      end={
+        <IconButton size="small">
+          <Search />
+        </IconButton>
+      }
+    />
+  </Flex>
 );
 
 export const WithEndComponent = baseStory.bind(null);

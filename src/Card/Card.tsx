@@ -15,6 +15,7 @@ export const Card = styled.div<CardProps>`
   color: ${getComponentStyle('card.color')};
   box-shadow: ${getComponentStyle('card.shadow', shadowTransformer)};
   border-radius: ${getComponentStyle('card.borderRadius')};
+  ${(props) => props.css}
   ${layoutInterpolationFn}
   ${getCustomStyles('card.styles', 'root')}
 `;

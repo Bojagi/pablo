@@ -23,12 +23,14 @@ export interface InputProps extends LayoutBoxProps {
 const InnerInput = styled.input<InnerInputProps>`
   ${baseStyle}
   flex-grow: 1;
+  flex-shrink: 1;
   border: 0;
   padding: ${getComponentStyle('input.padding')};
   background-color: transparent;
   font-family: ${getComponentStyle('input.fontFamily')};
   outline: none;
   ${getCustomStyles('input.styles', 'field')}
+  width: 100%;
 `;
 
 export const Input = forwardRef<HTMLDivElement, InputProps>(

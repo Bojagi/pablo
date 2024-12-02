@@ -3,15 +3,23 @@
 exports[`Render button bar 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  gap: 4px 4px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
-  margin: 0 -4px;
 }
 
 .emotion-1 {
@@ -36,8 +44,6 @@ exports[`Render button bar 1`] = `
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -109,6 +115,116 @@ exports[`Render button bar 1`] = `
         class="emotion-2"
       >
         Button 2
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Render button bar with one item 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: 4px 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
+  transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: inherit;
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-main);
+  background: var(--pbl-theme-colors-brand-main);
+}
+
+.emotion-1:enabled {
+  cursor: pointer;
+}
+
+.emotion-1:disabled {
+  opacity: 0.4;
+  cursor: normal;
+}
+
+.emotion-1:focus {
+  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+}
+
+.emotion-1:hover:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-dark);
+  background: var(--pbl-theme-colors-brand-dark);
+}
+
+.emotion-1:active:enabled {
+  color: var(--pbl-theme-colors-brand-contrastText);
+  border-color: var(--pbl-theme-colors-brand-darkest);
+  background: var(--pbl-theme-colors-brand-darkest);
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="pbl-buttonbar"
+  >
+    <button
+      class="emotion-1"
+      color="brand"
+      data-testid="pbl-button"
+    >
+      <span
+        class="emotion-2"
+      >
+        Button 1
       </span>
     </button>
   </div>

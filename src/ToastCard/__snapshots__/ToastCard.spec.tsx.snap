@@ -13,14 +13,14 @@ exports[`Render toast card with no type and with only title 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
@@ -94,6 +94,10 @@ exports[`type error Render toast card with custom icon 1`] = `
   display: block;
 }
 
+.emotion-0>* {
+  display: block;
+}
+
 <div
   class="emotion-0"
   data-testid="pbl-toastcard-iconbox"
@@ -117,20 +121,24 @@ exports[`type error Render toast card with only title 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
   box-sizing: border-box;
   fill: var(--pbl-theme-colors-negative-main);
   margin-right: 12px;
+}
+
+.emotion-2>* {
+  display: block;
 }
 
 .emotion-2>* {
@@ -227,6 +235,10 @@ exports[`type info Render toast card with custom icon 1`] = `
   display: block;
 }
 
+.emotion-0>* {
+  display: block;
+}
+
 <div
   class="emotion-0"
   data-testid="pbl-toastcard-iconbox"
@@ -250,20 +262,24 @@ exports[`type info Render toast card with only title 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
   box-sizing: border-box;
   fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
+}
+
+.emotion-2>* {
+  display: block;
 }
 
 .emotion-2>* {
@@ -360,6 +376,10 @@ exports[`type success Render toast card with custom icon 1`] = `
   display: block;
 }
 
+.emotion-0>* {
+  display: block;
+}
+
 <div
   class="emotion-0"
   data-testid="pbl-toastcard-iconbox"
@@ -383,20 +403,24 @@ exports[`type success Render toast card with only title 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
   box-sizing: border-box;
   fill: var(--pbl-theme-colors-positive-main);
   margin-right: 12px;
+}
+
+.emotion-2>* {
+  display: block;
 }
 
 .emotion-2>* {
@@ -493,6 +517,10 @@ exports[`type undefined Render toast card with custom icon 1`] = `
   display: block;
 }
 
+.emotion-0>* {
+  display: block;
+}
+
 <div
   class="emotion-0"
   data-testid="pbl-toastcard-iconbox"
@@ -516,20 +544,24 @@ exports[`type undefined Render toast card with only title 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
   box-sizing: border-box;
   fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
+}
+
+.emotion-2>* {
+  display: block;
 }
 
 .emotion-2>* {
@@ -615,6 +647,10 @@ exports[`type unknown Render toast card with custom icon 1`] = `
   display: block;
 }
 
+.emotion-0>* {
+  display: block;
+}
+
 <div
   class="emotion-0"
   data-testid="pbl-toastcard-iconbox"
@@ -638,20 +674,24 @@ exports[`type unknown Render toast card with only title 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
   box-sizing: border-box;
   fill: var(--pbl-theme-colors-common-white);
   margin-right: 12px;
+}
+
+.emotion-2>* {
+  display: block;
 }
 
 .emotion-2>* {
@@ -737,6 +777,10 @@ exports[`type warning Render toast card with custom icon 1`] = `
   display: block;
 }
 
+.emotion-0>* {
+  display: block;
+}
+
 <div
   class="emotion-0"
   data-testid="pbl-toastcard-iconbox"
@@ -760,20 +804,24 @@ exports[`type warning Render toast card with only title 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
   box-sizing: border-box;
   fill: var(--pbl-theme-colors-neutral-main);
   margin-right: 12px;
+}
+
+.emotion-2>* {
+  display: block;
 }
 
 .emotion-2>* {
