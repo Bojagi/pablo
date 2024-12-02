@@ -23,16 +23,11 @@ export interface BoxFillableProps {
   fillColor?: string;
 }
 
-export interface BoxCenterFlexProps {
-  centerFlex?: boolean;
-}
-
 export type BoxProps = MarginProps &
   PaddingProps &
   ColorProps &
   LayoutProps &
   FlexboxProps &
-  BoxCenterFlexProps &
   PositionProps &
   BoxFillableProps &
   BoxCssProps;
@@ -52,8 +47,6 @@ export const Box = styled.div<BoxProps>`
   ${interpolateCssProp}
   ${fill}
   ${(props) => props.css}
-  ${(props) =>
-    props.centerFlex ? 'display: flex; justify-content: center; align-items: center;' : ''}
   ${boxInterpolateFn}
 `;
 
