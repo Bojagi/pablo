@@ -3,16 +3,18 @@
 exports[`Render first selected 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 0;
+  opacity: 0;
   margin-left: -4px;
   margin-right: -4px;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-1 {
@@ -445,16 +447,18 @@ exports[`Render first selected 1`] = `
 exports[`Render tabs with icons 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 0;
+  opacity: 0;
   margin-left: -4px;
   margin-right: -4px;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-1 {
@@ -893,16 +897,16 @@ exports[`Render tabs with icons 1`] = `
 exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: -4px;
   margin-right: -4px;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-1 {
@@ -1212,16 +1216,18 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 exports[`Work with one tab 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  opacity: 0;
+  opacity: 0;
   margin-left: -4px;
   margin-right: -4px;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-1 {

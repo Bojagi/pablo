@@ -12,23 +12,18 @@ test('Render button bar', () => {
     </ButtonBar>
   );
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-buttonbar')).toHaveStyleRule('margin', '0 -4px');
+  expect(getByTestId('pbl-buttonbar')).toHaveStyleRule('gap', '4px 4px');
   const allButtons = getAllByTestId('pbl-button');
   expect(allButtons).toBeArrayOfSize(2);
-  expect(allButtons[0]).toHaveStyleRule('margin-left', '4px');
-  expect(allButtons[0]).toHaveStyleRule('margin-right', '4px');
-  expect(allButtons[1]).toHaveStyleRule('margin-left', '4px');
-  expect(allButtons[1]).toHaveStyleRule('margin-right', '4px');
 });
 
 test('Render button bar with one item', () => {
-  const { getByTestId } = renderComponent(
+  const { container } = renderComponent(
     <ButtonBar>
       <Button>Button 1</Button>
     </ButtonBar>
   );
-  expect(getByTestId('pbl-button')).toHaveStyleRule('margin-left', '4px');
-  expect(getByTestId('pbl-button')).toHaveStyleRule('margin-right', '4px');
+  expect(container).toMatchSnapshot();
 });
 
 function renderComponent(elem) {
