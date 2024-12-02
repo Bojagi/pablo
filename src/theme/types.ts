@@ -25,6 +25,7 @@ import { ToastCardStyles } from '../ToastCard/styles';
 import { ImageStyles } from '../Image/styles';
 import { NativeSelectStyles } from '../NativeSelect/styles';
 import { AnimationStyles } from '../animation/styles';
+import { SliderStyles } from '../Slider/styles';
 
 export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
   | CSSInterpolation
@@ -48,11 +49,16 @@ type RecursivePartial<T> = {
       : T[P];
 };
 
+export interface ComponentPrimitiveStyle {
+  css?: Style;
+}
+
 export interface ComponentStyles {
   animation: AnimationStyles;
   card: CardStyles;
   tabs: TabsStyles;
   sidebarNav: SidebarNavStyles;
+  slider: SliderStyles;
   button: ButtonStyles;
   checkbox: CheckboxStyles;
   switch: SwitchStyles;

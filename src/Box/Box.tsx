@@ -12,6 +12,7 @@ import { getByPath } from '../utils/getByPath';
 import { themeVars } from '../theme/themeVars';
 import { interpolateCssProp } from '../utils/interpolateCssProp';
 import { margin, MarginProps, PaddingProps, padding } from './spacingInterpolation';
+import { ifProp } from '../styleHelpers/styleProp';
 
 export interface BoxCssProps {
   css?: CssFunctionReturn;
@@ -21,17 +22,24 @@ export interface BoxFillableProps {
   fillColor?: string;
 }
 
+export interface BoxFlexProps extends FlexboxProps {
+  grow?: number | boolean;
+  shrink?: number | boolean;
+}
+
 export type BoxProps = MarginProps &
   PaddingProps &
   ColorProps &
   LayoutProps &
-  FlexboxProps &
+  BoxFlexProps &
   PositionProps &
   BoxFillableProps &
   BoxCssProps;
 
+const flexGrow = ifProp('grow', (_, value) => `flex-grow: ${value};`);
+const flexShrink = ifProp('shrink', (_, value) => `flex-shrink: ${value};`);
 export const boxInterpolateFn = (props) =>
-  [margin, padding, color, layout, flexbox, position].map((fn) => fn(props));
+  [margin, padding, color, layout, flexbox, position, flexGrow, flexShrink].map((fn) => fn(props));
 
 const fill = system({
   fillColor: {
@@ -50,13 +58,13 @@ export const Box = styled.div<BoxProps>`
 
 export type LayoutBoxProps = MarginProps &
   PaddingProps &
-  FlexboxProps &
+  BoxFlexProps &
   LayoutProps &
   PositionProps &
   BoxCssProps;
 
 export const layoutInterpolationFn = (props) =>
-  [margin, padding, layout, flexbox, position]
+  [margin, padding, layout, flexbox, position, flexGrow, flexShrink]
     .map((fn) => fn(props))
     .reduce((acc, styles) => ({ ...acc, ...styles }), {});
 

@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LowerOutOfBounds story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: 16px 16px;
+  width: 50vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  0: f;
+  1: l;
+  2: e;
+  3: x;
+  4: -;
+  5: s;
+  6: h;
+  7: r;
+  8: i;
+  9: n;
+  10: k;
+  13: s;
+  14: h;
+  15: r;
+  16: i;
+  17: n;
+  18: k;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  width: 100%;
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  margin-bottom: 0;
+}
+
+<div
+  class="emotion-0"
+  width="50vw"
+>
+  <div
+    class="emotion-1"
+    role="slider"
+  >
+    <div
+      class="emotion-2"
+      data-testid="slider-rail"
+    />
+    <div
+      class="emotion-3"
+      data-testid="slider-track"
+      style="width: 0%;"
+    />
+    <div
+      class="emotion-4"
+      data-testid="slider-thumb"
+      style="left: 0%;"
+    />
+  </div>
+  <div
+    class="emotion-5"
+    width="50"
+  >
+    <p
+      class="emotion-6"
+    >
+      50
+    </p>
+  </div>
+</div>
+`;
+
+exports[`OffsetRangeSlider story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: 16px 16px;
+  width: 50vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  0: f;
+  1: l;
+  2: e;
+  3: x;
+  4: -;
+  5: s;
+  6: h;
+  7: r;
+  8: i;
+  9: n;
+  10: k;
+  13: s;
+  14: h;
+  15: r;
+  16: i;
+  17: n;
+  18: k;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  width: 100%;
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  margin-bottom: 0;
+}
+
+<div
+  class="emotion-0"
+  width="50vw"
+>
+  <div
+    class="emotion-1"
+    role="slider"
+  >
+    <div
+      class="emotion-2"
+      data-testid="slider-rail"
+    />
+    <div
+      class="emotion-3"
+      data-testid="slider-track"
+      style="width: 16.77018633540373%;"
+    />
+    <div
+      class="emotion-4"
+      data-testid="slider-thumb"
+      style="left: 16.77018633540373%;"
+    />
+  </div>
+  <div
+    class="emotion-5"
+    width="50"
+  >
+    <p
+      class="emotion-6"
+    >
+      50
+    </p>
+  </div>
+</div>
+`;
+
+exports[`SimpleSlider story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: 16px 16px;
+  width: 50vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  0: f;
+  1: l;
+  2: e;
+  3: x;
+  4: -;
+  5: s;
+  6: h;
+  7: r;
+  8: i;
+  9: n;
+  10: k;
+  13: s;
+  14: h;
+  15: r;
+  16: i;
+  17: n;
+  18: k;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  width: 100%;
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  margin-bottom: 0;
+}
+
+<div
+  class="emotion-0"
+  width="50vw"
+>
+  <div
+    class="emotion-1"
+    role="slider"
+  >
+    <div
+      class="emotion-2"
+      data-testid="slider-rail"
+    />
+    <div
+      class="emotion-3"
+      data-testid="slider-track"
+      style="width: 50%;"
+    />
+    <div
+      class="emotion-4"
+      data-testid="slider-thumb"
+      style="left: 50%;"
+    />
+  </div>
+  <div
+    class="emotion-5"
+    width="50"
+  >
+    <p
+      class="emotion-6"
+    >
+      50
+    </p>
+  </div>
+</div>
+`;
+
+exports[`UpperOutOfBounds story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: 16px 16px;
+  width: 50vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  0: f;
+  1: l;
+  2: e;
+  3: x;
+  4: -;
+  5: s;
+  6: h;
+  7: r;
+  8: i;
+  9: n;
+  10: k;
+  13: s;
+  14: h;
+  15: r;
+  16: i;
+  17: n;
+  18: k;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  width: 100%;
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-style: normal;
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin: 0;
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  margin-bottom: 0;
+}
+
+<div
+  class="emotion-0"
+  width="50vw"
+>
+  <div
+    class="emotion-1"
+    role="slider"
+  >
+    <div
+      class="emotion-2"
+      data-testid="slider-rail"
+    />
+    <div
+      class="emotion-3"
+      data-testid="slider-track"
+      style="width: 100%;"
+    />
+    <div
+      class="emotion-4"
+      data-testid="slider-thumb"
+      style="left: 100%;"
+    />
+  </div>
+  <div
+    class="emotion-5"
+    width="50"
+  >
+    <p
+      class="emotion-6"
+    >
+      50
+    </p>
+  </div>
+</div>
+`;
