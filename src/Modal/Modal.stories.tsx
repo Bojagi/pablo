@@ -138,11 +138,11 @@ WithCustomStyles.args = {
     `,
     area: (props) => css`
       background-color: rgba(0, 0, 255, 0.2);
-      border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
+      border-radius: ${getComponentStyle(['modal', 'box', 'borderRadius'])(props)}px;
     `,
     paneBox: (props) => css`
       border: 5px solid blue;
-      border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
+      border-radius: ${getComponentStyle(['modal', 'box', 'borderRadius'])(props)}px;
       padding: ${getSpacing(1)(props)};
     `,
   },
@@ -175,11 +175,11 @@ export const WithCustomStylesFromTheme = () => {
       `,
       area: (props) => css`
         background-color: rgba(0, 0, 255, 0.2);
-        border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
+        border-radius: ${getComponentStyle(['modal', 'box', 'borderRadius'])(props)}px;
       `,
       paneBox: (props) => css`
         border: 5px solid blue;
-        border-radius: ${getComponentStyle('modal.box.borderRadius')(props)}px;
+        border-radius: ${getComponentStyle(['modal', 'box', 'borderRadius'])(props)}px;
         padding: ${getSpacing(1)(props)};
       `,
     },

@@ -14,7 +14,7 @@ import { baseStyle } from '../shared/baseStyle';
 const switchBoxSize = (multiplier) => (props) => css`
   calc(${multiplier} * ${getComponentStyle('switch.handleSize.{size}')(props)} + 2 * (${getComponentStyle(
     'switch.innerPadding.{size}'
-  )(props)} + ${getComponentStyle('switch.borderWidth')(props)}px))
+  )(props)} + ${getComponentStyle(['switch', 'borderWidth'])(props)}px))
 `;
 
 const SwitchBox = styled.div<CheckableBoxProps>`
@@ -26,13 +26,13 @@ const SwitchBox = styled.div<CheckableBoxProps>`
     (
         ${getComponentStyle('switch.handleSize.{size}')} + 2 *
           ${getComponentStyle('switch.innerPadding.{size}')} + 2 *
-          ${getComponentStyle('switch.borderWidth')}px
+          ${getComponentStyle(['switch', 'borderWidth'])}px
       ) * 0.5
   );
   padding: ${getComponentStyle('switch.innerPadding.{size}')};
-  background-color: ${getComponentStyle('switch.backgroundColor')};
-  border: ${getComponentStyle('switch.borderWidth')}px solid
-    ${getComponentStyle('switch.borderColor')};
+  background-color: ${getComponentStyle(['switch', 'backgroundColor'])};
+  border: ${getComponentStyle(['switch', 'borderWidth'])}px solid
+    ${getComponentStyle(['switch', 'borderColor'])};
   opacity: ${(props) => (props.disabled ? 0.3 : 1)};
 
   transition: ${getComponentStyle('switch.boxTransition', transitionTransformer)};
@@ -40,8 +40,8 @@ const SwitchBox = styled.div<CheckableBoxProps>`
   ${(props) =>
     props.focus &&
     css`
-      box-shadow: 0 0 0 ${getComponentStyle('switch.focus.outlineSize')(props)}
-        ${getComponentStyle('switch.focus.outlineColor')(props)};
+      box-shadow: 0 0 0 ${getComponentStyle(['switch', 'focus', 'outlineSize'])(props)}
+        ${getComponentStyle(['switch', 'focus', 'outlineColor'])(props)};
     `};
   }
   ${getCustomStyles('switch.styles', 'box')}
@@ -58,8 +58,8 @@ const SwitchHandle = styled.div<CheckableHandleProps>`
   transition: ${getComponentStyle('switch.handleTransition', transitionTransformer)};
   background-color: ${(props) =>
     props.checked
-      ? getComponentStyle('switch.handleColorChecked')(props)
-      : getComponentStyle('switch.handleColorUnchecked')(props)};
+      ? getComponentStyle(['switch', 'handleColorChecked'])(props)
+      : getComponentStyle(['switch', 'handleColorUnchecked'])(props)};
   ${getCustomStyles('switch.styles', 'handle')}
 `;
 

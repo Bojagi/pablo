@@ -9,28 +9,30 @@ interface CreateComponentPrimitiveOptions<T extends keyof JSX.IntrinsicElements>
   tag?: T;
 }
 
-type ComponentPrimitiveProps<P extends object> = {
-  componentPath: ComponentPath<P>;
-} & P;
+interface ComponentPrimitiveProps {
+  componentPath: ComponentPath;
+}
 
 const getPrimitiveStyle =
-  <P extends object, I extends ComponentPrimitiveProps<P>>(
-    property: string | string[],
+  <P extends object>(
+    property: string | ComponentPath,
     transformFn?: (value: unknown) => string | number
   ) =>
-  (props: I) => {
-    const componentPath = props.componentPath as ComponentPath<P>;
-    const propertyArray = guaranteeArray(property);
-    return getComponentStyle([...componentPath, ...propertyArray], transformFn)(props);
+  (props: P & ComponentPrimitiveProps) => {
+    const propertyPath = guaranteeArray(property);
+    return getComponentStyle([...props.componentPath, ...propertyPath], transformFn)(props);
   };
 
 const componentPrimitive =
-  <P extends object, T extends keyof JSX.IntrinsicElements = 'div'>(
-    componentPath: ComponentPath<P>,
+  <P extends object, T extends keyof JSX.IntrinsicElements>(
+    componentPath: ComponentPath,
     { tag = 'div' as any }: CreateComponentPrimitiveOptions<T> = {}
   ) =>
-  (template: TemplateStringsArray, ...styles: Array<Interpolation<ComponentPrimitiveProps<P>>>) => {
-    const StyledComponent = styled(tag)<ComponentPrimitiveProps<P>>(
+  (
+    template: TemplateStringsArray,
+    ...styles: Array<Interpolation<P & ComponentPrimitiveProps<P>>>
+  ) => {
+    const StyledComponent = styled(tag)<P & ComponentPrimitiveProps<P>>(
       template,
       ...styles,
       getPrimitiveStyle('css')

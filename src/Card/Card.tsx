@@ -10,11 +10,11 @@ export interface CardProps extends LayoutBoxProps, BaseProps<CardStyleProperties
 
 export const Card = styled.div<CardProps>`
   ${baseStyle}
-  padding: ${getComponentStyle('card.padding')};
-  background-color: ${getComponentStyle('card.backgroundColor')};
-  color: ${getComponentStyle('card.color')};
+  padding: ${getComponentStyle(['card', 'padding'])};
+  background-color: ${getComponentStyle(['card', 'backgroundColor'])};
+  color: ${getComponentStyle(['card', 'color'])};
   box-shadow: ${getComponentStyle('card.shadow', shadowTransformer)};
-  border-radius: ${getComponentStyle('card.borderRadius')};
+  border-radius: ${getComponentStyle(['card', 'borderRadius'])};
   ${(props) => props.css}
   ${layoutInterpolationFn}
   ${getCustomStyles('card.styles', 'root')}

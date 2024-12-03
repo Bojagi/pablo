@@ -7,7 +7,7 @@ import { Style } from '../../src/theme/types';
 import { getComponentStyle } from '../../src/utils/styleHelpers';
 
 const getButtonOutlineShadow = (color: Style) => css`
-  box-shadow: 0 0 0 ${getComponentStyle('button.base.focus.outlineSize')} ${color};
+  box-shadow: 0 0 0 ${getComponentStyle(['button', 'base', 'focus', 'outlineSize'])} ${color};
 `;
 
 const PabloButton = styled.button`

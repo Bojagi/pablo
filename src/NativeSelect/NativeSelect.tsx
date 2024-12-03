@@ -26,11 +26,11 @@ const StyledSelect = styled.select<InnerInputProps>`
   flex-grow: 1;
   border: 0;
   appearance: none;
-  padding: ${getComponentStyle('nativeSelect.padding')};
+  padding: ${getComponentStyle(['nativeSelect', 'padding'])};
   background-color: transparent;
-  font-family: ${getComponentStyle('nativeSelect.fontFamily')};
+  font-family: ${getComponentStyle(['nativeSelect', 'fontFamily'])};
   outline: none;
-  padding-right: ${getComponentStyle('nativeSelect.reservedArrowSpace')};
+  padding-right: ${getComponentStyle(['nativeSelect', 'reservedArrowSpace'])};
   position: relative;
   ${getCustomStyles('nativeSelect.styles', 'field')}
 `;
@@ -46,7 +46,7 @@ const SelectWrapper = styled.div`
     width: 8px;
     height: 6px;
     position: absolute;
-    right: ${getComponentStyle('nativeSelect.arrowGap')};
+    right: ${getComponentStyle(['nativeSelect', 'arrowGap'])};
     top: 50%;
     transform: translateY(-50%);
   }

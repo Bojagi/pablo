@@ -42,7 +42,7 @@ const Backdrop = styled.div<BackdropProps>`
   left: 0;
   top: 0;
   overflow: scroll;
-  background-color: ${getComponentStyle('modal.backdropColor')};
+  background-color: ${getComponentStyle(['modal', 'backdropColor'])};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ const ModalArea = styled.div<ModalAreaProps>`
   ${(props) =>
     !props.open &&
     css`
-      transform: ${getComponentStyle('modal.box.closedTransform')(props)};
+      transform: ${getComponentStyle(['modal', 'box', 'closedTransform'])(props)};
     `}
   ${(props) =>
     props.animate &&
@@ -81,7 +81,7 @@ const ModalArea = styled.div<ModalAreaProps>`
   max-width: ${getComponentStyle('modal.box.maxWidth.{maxWidth}')};
   margin: auto;
   min-height: min-content;
-  padding: ${getComponentStyle('modal.padding')};
+  padding: ${getComponentStyle(['modal', 'padding'])};
   ${(props) => props.css}
 `;
 
@@ -91,16 +91,16 @@ interface ModalBoxProps {
 
 const ModalBox = styled.div<ModalBoxProps>`
   ${baseStyle}
-  border-radius: ${getComponentStyle('modal.box.borderRadius')}px;
-  background-color: ${getComponentStyle('modal.box.backgroundColor')};
-  padding: ${getComponentStyle('modal.box.padding')};
+  border-radius: ${getComponentStyle(['modal', 'box', 'borderRadius'])}px;
+  background-color: ${getComponentStyle(['modal', 'box', 'backgroundColor'])};
+  padding: ${getComponentStyle(['modal', 'box', 'padding'])};
   box-shadow: ${getComponentStyle('modal.box.shadow', shadowTransformer)};
   ${(props) => props.css}
 `;
 
 const PaneBox = styled.div<ModalBoxProps>`
   ${baseStyle}
-  margin-top: ${getComponentStyle('modal.gap')};
+  margin-top: ${getComponentStyle(['modal', 'gap'])};
   ${(props) => props.css}
 `;
 

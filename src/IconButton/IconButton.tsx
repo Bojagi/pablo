@@ -2,12 +2,14 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { LayoutBoxProps, layoutInterpolationFn } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
-import { getComponentStyle, transitionTransformer } from '../styleHelpers';
+import { componentPrimitive, getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { IconButtonStyleProperties } from './styles';
 import { omit } from '../utils/omit';
 import React, { forwardRef, HTMLProps } from 'react';
+import { ifProp } from '../styleHelpers/styleProp';
+import { pabloCss } from '../styleHelpers/css';
 
 export type IconButtonSize = 'small' | 'medium' | 'large';
 export type IconButtonColor = 'brand' | 'plain' | 'negative' | 'positive';
@@ -23,33 +25,57 @@ export interface IconButtonProps
   children?: React.ReactNode;
   css?: CssFunctionReturn<IconButtonProps>;
 }
-const StyledIconButton = styled.button<IconButtonProps>`
+
+const activeStyles = (props: IconButtonProps) => pabloCss`
+  background-color: ${getComponentStyle(['iconButton', props.color, 'active', 'backgroundColor'])};
+  color: ${getComponentStyle(['iconButton', props.color, 'active', 'color'])};
+  ${getCustomStyles('iconButton.styles', 'active')}
+`;
+
+const nonActiveStyles = (props: IconButtonProps) => pabloCss`
+  &:hover:enabled {
+    background-color: ${getComponentStyle(['iconButton', props.color, 'hover', 'backgroundColor'])};
+    color: ${getComponentStyle(['iconButton', props.color, 'hover', 'color'])};
+    ${getCustomStyles('iconButton.styles', 'hover')}
+  }
+
+  &:focus:enabled {
+    background-color: ${getComponentStyle(['iconButton', props.color, 'focus', 'backgroundColor'])};
+    color: ${getComponentStyle(['iconButton', props.color, 'focus', 'color'])};
+    ${getCustomStyles('iconButton.styles', 'focus')}
+  }
+`;
+
+const StyledIconButton = componentPrimitive<IconButtonProps, 'button'>(['iconButton'], {
+  tag: 'button',
+})`
   ${baseStyle}
-  width: ${getComponentStyle('iconButton.size.{size}')};
-  height: ${getComponentStyle('iconButton.size.{size}')};
-  background-color: ${getComponentStyle('iconButton.{color}.backgroundColor')};
-  color: ${getComponentStyle('iconButton.{color}.color')};
+  width:  ${getComponentStyle((props) => ['iconButton', 'size', props.size])};
+  height: ${getComponentStyle((props) => ['iconButton', 'size', props.size])};
+  background-color: ${getComponentStyle((props) => ['iconButton', props.color, 'backgroundColor'])};
+  color: ${getComponentStyle(['iconButton', '{color}', 'color'])};
 
   border: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-  transition: ${getComponentStyle('iconButton.transition', transitionTransformer)};
-  border-radius: ${getComponentStyle('iconButton.borderRadius')};
+  transition: ${getComponentStyle(['iconButton', 'transition'], transitionTransformer)};
+  border-radius: ${getComponentStyle(['iconButton', 'borderRadius'])};
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
 
   & > * {
-    width: ${getComponentStyle('iconButton.icon.size.{size}')};
-    height: ${getComponentStyle('iconButton.icon.size.{size}')};
-    transition: ${getComponentStyle('iconButton.icon.transition', transitionTransformer)};
+    width: ${getComponentStyle((props) => ['iconButton', 'icon', 'size', props.size])};
+    height: ${getComponentStyle((props) => ['iconButton', 'icon', 'size', props.size])};
+    transition: ${getComponentStyle(['iconButton', 'icon', 'transition'], transitionTransformer)};
     transform: scale(
-      ${(props) =>
-        props.active
-          ? props.theme.componentStyles.iconButton.icon.active.scale
-          : props.theme.componentStyles.iconButton.icon.scale}
+      ${ifProp(
+        'active',
+        (props) => props.theme.componentStyles.iconButton.icon.active.scale,
+        (props) => props.theme.componentStyles.iconButton.icon.scale
+      )}
     );
   }
 
@@ -58,7 +84,7 @@ const StyledIconButton = styled.button<IconButtonProps>`
   }
 
   &:disabled {
-    opacity: ${getComponentStyle('iconButton.disabled.opacity')};
+    opacity: ${getComponentStyle(['iconButton', 'disabled', 'opacity'])};
     cursor: normal;
   }
 
@@ -66,32 +92,7 @@ const StyledIconButton = styled.button<IconButtonProps>`
 
   ${(props) => props.css}
 
-  ${(props) =>
-    props.active
-      ? css`
-          background-color: ${getComponentStyle('iconButton.{color}.active.backgroundColor')(
-            props
-          )};
-          color: ${getComponentStyle('iconButton.{color}.active.color')(props)};
-          ${getCustomStyles('iconButton.styles', 'active')(props)}
-        `
-      : css`
-          &:hover:enabled {
-            background-color: ${getComponentStyle('iconButton.{color}.hover.backgroundColor')(
-              props
-            )};
-            color: ${getComponentStyle('iconButton.{color}.hover.color')(props)};
-            ${getCustomStyles('iconButton.styles', 'hover')(props)}
-          }
-
-          &:focus:enabled {
-            background-color: ${getComponentStyle('iconButton.{color}.focus.backgroundColor')(
-              props
-            )};
-            color: ${getComponentStyle('iconButton.{color}.focus.color')(props)};
-            ${getCustomStyles('iconButton.styles', 'focus')(props)}
-          }
-        `}
+  ${ifProp('active', activeStyles, nonActiveStyles)}
 
   ${(props) => layoutInterpolationFn(omit(props, ['size']))}
 `;

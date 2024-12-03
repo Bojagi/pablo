@@ -17,11 +17,11 @@ import { useUniqueId } from '../utils/useUniqueId';
 
 const CardWrapper = styled.div<LayoutBoxProps>`
   ${baseStyle}
-  border-radius: ${getComponentStyle('toastCard.borderRadius')};
-  max-width: ${getComponentStyle('toastCard.width')};
-  background-color: ${getComponentStyle('toastCard.backgroundColor')};
-  color: ${getComponentStyle('toastCard.color')};
-  padding: ${getComponentStyle('toastCard.padding')};
+  border-radius: ${getComponentStyle(['toastCard', 'borderRadius'])};
+  max-width: ${getComponentStyle(['toastCard', 'width'])};
+  background-color: ${getComponentStyle(['toastCard', 'backgroundColor'])};
+  color: ${getComponentStyle(['toastCard', 'color'])};
+  padding: ${getComponentStyle(['toastCard', 'padding'])};
   box-shadow: ${getComponentStyle('toastCard.shadow', shadowTransformer)};
   ${layoutInterpolationFn}
   ${getCustomStyles('toastCard.styles', 'card')}

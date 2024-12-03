@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react';
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
+import { transitionTransformer } from '../styleHelpers/getComponentStyle';
 
 import {
   BaseCheckable,
@@ -11,44 +9,47 @@ import {
 } from '../shared/BaseCheckable';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
+import { componentPrimitive, getPrimitiveStyle } from '../styleHelpers';
+import { ifProp } from '../styleHelpers/styleProp';
+import { pabloCss } from '../styleHelpers/css';
 
-const radioBoxSize = (props) => css`
-  calc(${getComponentStyle('radio.handleSize.{size}')(props)} + 2 * (${getComponentStyle(
-    'radio.innerPadding.{size}'
-  )(props)} + ${getComponentStyle('radio.borderWidth')(props)}px))
+const radioBoxSize = pabloCss<Required<CheckableBoxProps>>`
+  calc(
+    ${getPrimitiveStyle(['handleSize', (props) => props.size])} + 2 * (
+    ${getPrimitiveStyle(['innerPadding', (props) => props.size])}
+   + ${getPrimitiveStyle('borderWidth')}px))
 `;
 
-const RadioBox = styled.div<CheckableBoxProps>`
+const RadioBox = componentPrimitive<Required<CheckableBoxProps>>(['radio'])`
   ${baseStyle}
   position: relative;
   width: ${radioBoxSize};
   height: ${radioBoxSize};
   border-radius: 50%;
-  padding: ${getComponentStyle('radio.innerPadding.{size}')};
-  background-color: ${getComponentStyle('radio.backgroundColor')};
-  border: ${getComponentStyle('radio.borderWidth')}px solid
-    ${getComponentStyle('radio.borderColor')};
+  padding: ${getPrimitiveStyle(['innerPadding', (props) => props.size])};
+  background-color: ${getPrimitiveStyle('backgroundColor')};
+  border: ${getPrimitiveStyle('borderWidth')}px solid
+    ${getPrimitiveStyle('borderColor')};
   opacity: ${(props) => (props.disabled ? 0.3 : 1)};
-  transition: ${getComponentStyle('radio.boxTransition', transitionTransformer)};
+  transition: ${getPrimitiveStyle('boxTransition', transitionTransformer)};
 
-  ${(props) =>
-    props.focus &&
-    css`
-      box-shadow: 0 0 0 ${getComponentStyle('radio.focus.outlineSize')(props)}
-        ${getComponentStyle('radio.focus.outlineColor')(props)};
-    `};
-  }
+  ${ifProp(
+    'focus',
+    pabloCss`
+      box-shadow: 0 0 0 ${getPrimitiveStyle(['focus', 'outlineSize'])} ${getPrimitiveStyle(['focus', 'outlineColor'])};
+    `
+  )}
   ${getCustomStyles('radio.styles', 'box')}
 `;
 
-const RadioHandle = styled.div<CheckableHandleProps>`
+const RadioHandle = componentPrimitive<Required<CheckableHandleProps>>(['radio'])`
   ${baseStyle}
-  width: ${getComponentStyle('radio.handleSize.{size}')};
-  height: ${getComponentStyle('radio.handleSize.{size}')};
-  transform: scale(${(props: any) => (props.checked ? 1 : 0)});
+  width: ${getPrimitiveStyle(['handleSize', (props) => props.size])};
+  height: ${getPrimitiveStyle(['handleSize', (props) => props.size])};
+  transform: scale(${ifProp('checked', 1, 0)});
   border-radius: 50%;
-  transition: ${getComponentStyle('radio.handleTransition', transitionTransformer)};
-  background-color: ${getComponentStyle('radio.handleColor')};
+  transition: ${getPrimitiveStyle('handleTransition', transitionTransformer)};
+  background-color: ${getPrimitiveStyle('handleColor')};
   ${getCustomStyles('radio.styles', 'handle')}
 `;
 

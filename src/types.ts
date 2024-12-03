@@ -1,4 +1,4 @@
-import { PabloThemeableProps, Style } from './theme/types';
+import { ComponentStyles, PabloThemeableProps, Style } from './theme/types';
 
 export type SingleOrArray<T> = T | T[];
 
@@ -18,4 +18,13 @@ export interface BaseProps<StyleKeys extends string> {
 
 export type ComponentPathResolverFn<P extends object> = (props: P) => string;
 
-export type ComponentPath<P extends object> = (string | ComponentPathResolverFn<P>)[];
+export type NonArrayObject = object & { length?: never };
+
+type PathTuple<T> =
+  T extends Record<string, any>
+    ? {
+        [K in keyof T]: T[K] extends NonArrayObject ? [K, ...PathTuple<T[K]>] : [K];
+      }[keyof T]
+    : [];
+
+export type ComponentPath = PathTuple<ComponentStyles>;

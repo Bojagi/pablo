@@ -29,9 +29,9 @@ const InnerTextArea = styled.textarea<InnerTextAreaProps>`
   resize: none;
   border: 0;
   flex-grow: 1;
-  padding: ${getComponentStyle('textArea.padding')};
+  padding: ${getComponentStyle(['textArea', 'padding'])};
   background-color: transparent;
-  font-family: ${getComponentStyle('textArea.fontFamily')};
+  font-family: ${getComponentStyle(['textArea', 'fontFamily'])};
   outline: none;
   ${getCustomStyles('textArea.styles', 'field')}
 `;

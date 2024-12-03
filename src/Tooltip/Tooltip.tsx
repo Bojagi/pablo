@@ -40,13 +40,13 @@ interface TooltipPopoverProps extends BaseProps<TooltipStyleProperties> {
 
 const TooltipPopover = styled.div<TooltipPopoverProps>`
   ${baseStyle}
-  z-index: ${getComponentStyle('tooltip.zIndex')};
+  z-index: ${getComponentStyle(['tooltip', 'zIndex'])};
   pointer-events: none;
   position: relative;
-  border-radius: ${getComponentStyle('tooltip.borderRadius')}px;
-  padding: ${getComponentStyle('tooltip.padding')};
-  background-color: ${getComponentStyle('tooltip.backgroundColor')};
-  color: ${getComponentStyle('tooltip.color')};
+  border-radius: ${getComponentStyle(['tooltip', 'borderRadius'])}px;
+  padding: ${getComponentStyle(['tooltip', 'padding'])};
+  background-color: ${getComponentStyle(['tooltip', 'backgroundColor'])};
+  color: ${getComponentStyle(['tooltip', 'color'])};
   white-space: nowrap;
 
   /* Bottom Arrow */

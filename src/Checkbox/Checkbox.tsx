@@ -10,11 +10,12 @@ import {
 } from '../shared/BaseCheckable';
 import { getCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from '../shared/baseStyle';
+import { ifProp } from '../styleHelpers/styleProp';
 
 const checkboxSize = (props) => css`
-  calc(${getComponentStyle('checkbox.handleSize.{size}')(props)} + 2 * (${getComponentStyle(
+  calc(${getComponentStyle(['checkbox', 'handleSize', props.size])(props)} + 2 * (${getComponentStyle(
     'checkbox.innerPadding.{size}'
-  )(props)} + ${getComponentStyle('checkbox.borderWidth')(props)}px))
+  )(props)} + ${getComponentStyle(['checkbox', 'borderWidth'])(props)}px))
 `;
 
 const CheckboxBox = styled.div<CheckableBoxProps>`
@@ -22,11 +23,11 @@ const CheckboxBox = styled.div<CheckableBoxProps>`
   position: relative;
   width: ${checkboxSize};
   height: ${checkboxSize};
-  border-radius: ${getComponentStyle('checkbox.outerBorderRadius')};
-  padding: ${getComponentStyle('checkbox.innerPadding.{size}')};
-  background-color: ${getComponentStyle('checkbox.backgroundColor')};
-  border: ${getComponentStyle('checkbox.borderWidth')}px solid
-    ${getComponentStyle('checkbox.borderColor')};
+  border-radius: ${getComponentStyle(['checkbox', 'outerBorderRadius'])};
+  padding: ${getComponentStyle(['checkbox', 'innerPadding', (props) => props.size])};
+  background-color: ${getComponentStyle(['checkbox', 'backgroundColor'])};
+  border: ${getComponentStyle(['checkbox', 'borderWidth'])}px solid
+    ${getComponentStyle(['checkbox', 'borderColor'])};
   opacity: ${(props) => (props.disabled ? 0.3 : 1)};
 
   transition: ${getComponentStyle('checkbox.boxTransition', transitionTransformer)};
@@ -34,8 +35,8 @@ const CheckboxBox = styled.div<CheckableBoxProps>`
   ${(props) =>
     props.focus &&
     css`
-      box-shadow: 0 0 0 ${getComponentStyle('checkbox.focus.outlineSize')(props)}
-        ${getComponentStyle('checkbox.focus.outlineColor')(props)};
+      box-shadow: 0 0 0 ${getComponentStyle(['checkbox', 'focus', 'outlineSize'])(props)}
+        ${getComponentStyle(['checkbox', 'focus', 'outlineColor'])(props)};
     `};
   }
   ${getCustomStyles('checkbox.styles', 'box')}
@@ -43,12 +44,12 @@ const CheckboxBox = styled.div<CheckableBoxProps>`
 
 const CheckboxHandle = styled.div<CheckableHandleProps>`
   ${baseStyle}
-  width: ${getComponentStyle('checkbox.handleSize.{size}')};
-  height: ${getComponentStyle('checkbox.handleSize.{size}')};
-  transform: scale(${(props: any) => (props.checked ? 1 : 0)});
-  border-radius: ${getComponentStyle('checkbox.innerBorderRadius')};
-  transition: ${getComponentStyle('checkbox.handleTransition')};
-  background-color: ${getComponentStyle('checkbox.handleColor')};
+  width: ${getComponentStyle(['checkbox', 'handleSize', (props) => props.size])};
+  height: ${getComponentStyle(['checkbox', 'handleSize', (props) => props.size])};
+  transform: scale(${ifProp('checked', 1, 0)});
+  border-radius: ${getComponentStyle(['checkbox', 'innerBorderRadius'])};
+  transition: ${getComponentStyle(['checkbox', 'handleTransition'])};
+  background-color: ${getComponentStyle(['checkbox', 'handleColor'])};
   ${getCustomStyles('checkbox.styles', 'handle')}
 `;
 

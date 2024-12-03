@@ -7,10 +7,10 @@ import { ToolbarDividerStyleProperties } from './styles';
 
 export const ToolbarDivider = styled('div')<BaseProps<ToolbarDividerStyleProperties>>`
   ${baseStyle}
-  margin: 0 ${getComponentStyle('toolbar.gap')};
-  width: ${getComponentStyle('toolbar.divider.width')}px;
+  margin: 0 ${getComponentStyle(['toolbar', 'gap'])};
+  width: ${getComponentStyle(['toolbar', 'divider', 'width'])}px;
   align-self: stretch;
-  background-color: ${getComponentStyle('toolbar.divider.color')};
+  background-color: ${getComponentStyle(['toolbar', 'divider', 'color'])};
   ${getCustomStyles('toolbar.divider.styles', 'root')}
 `;
 

@@ -14,8 +14,8 @@ export interface SidebarNavProps extends LayoutBoxProps, BaseProps<SidebarNavSty
 
 const SidebarNavBox = styled.ul<LayoutBoxProps>`
   ${baseStyle}
-  border-left: ${getComponentStyle('sidebarNav.borderLeft')};
-  padding-left: ${getComponentStyle('sidebarNav.borderLeftSpacing')};
+  border-left: ${getComponentStyle(['sidebarNav', 'borderLeft'])};
+  padding-left: ${getComponentStyle(['sidebarNav', 'borderLeftSpacing'])};
   ${layoutInterpolationFn}
   ${getCustomStyles('sidebar.styles', 'root')}
 `;

@@ -1,28 +1,15 @@
-import type { Interpolation } from '@emotion/react';
-import type { CSSInterpolation } from '@emotion/serialize';
-
-type InterpolationFunction<P extends object> = (props: P, prop?: keyof P) => CSSInterpolation;
-type StyleInterpolation<P extends object> = Interpolation<P> | InterpolationFunction<P>;
-
-const interpolateCss = <P extends object>(
-  style: StyleInterpolation<P>,
-  props: P,
-  prop?: keyof P
-) => {
-  if (typeof style === 'function') {
-    return style(props, prop);
-  }
-
-  if (Array.isArray(style)) {
-    return style.map((css) => interpolateCss(css, props));
-  }
-
-  return style;
-};
+import { interpolateStyle, StyleInterpolation } from './interpolateStyles';
 
 const ifProp =
-  <P extends object>(prop: keyof P, style: StyleInterpolation<P>) =>
-  (props: P) =>
-    props[prop] ? interpolateCss(style, props, prop) : null;
+  <P extends object>(
+    prop: keyof P,
+    style: StyleInterpolation<P>,
+    fallbackStyle?: StyleInterpolation<P>
+  ) =>
+  (props: P) => {
+    return props[prop]
+      ? interpolateStyle(style, props, prop)
+      : interpolateStyle(fallbackStyle, props, prop);
+  };
 
 export { ifProp };
