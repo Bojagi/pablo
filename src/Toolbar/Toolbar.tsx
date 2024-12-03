@@ -12,8 +12,8 @@ import { baseStyle } from '../shared/baseStyle';
 const ToolbarBox = styled.div<LayoutBoxProps>`
   ${baseStyle}
   display: flex;
-  margin: 0 -${getComponentStyle('toolbar.gap')};
-  height: calc(${getComponentStyle('toolbar.item.size')} + 2 * ${getComponentStyle('toolbar.gap')});
+  margin: 0 -${getComponentStyle(['toolbar', 'gap'])};
+  height: calc(${getComponentStyle(['toolbar', 'item', 'size'])} + 2 * ${getComponentStyle(['toolbar', 'gap'])});
   align-items: center;
   ${layoutInterpolationFn}
   ${getCustomStyles('toolbar.styles', 'root')}

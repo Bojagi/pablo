@@ -9,7 +9,7 @@ import { baseStyle } from '../shared/baseStyle';
 
 const RadioGroupItem = styled.div<{ size: CheckableSize }>`
   ${baseStyle}
-  margin-bottom: ${getComponentStyle('radio.groupItemGap.{size}')};
+  margin-bottom: ${getComponentStyle((props) => ['radio', 'groupItemGap', props.size])};
 `;
 
 export interface RadioGroupProps extends BoxProps {

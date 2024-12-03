@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Box, layoutInterpolationFn } from '../Box';
 import type { LayoutBoxProps } from '../Box';
-import type { Style } from '../theme/types';
+import type { InputComponentIdentifier, Style } from '../theme/types';
 import { InfoText, ParagraphBold } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
@@ -11,6 +11,8 @@ import { useUniqueId } from '../utils/useUniqueId';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from './baseStyle';
+import { pabloCss } from '../styleHelpers/css';
+import { ifProp } from '../styleHelpers/styleProp';
 
 export type BaseInputStyleProperties =
   | 'root'
@@ -55,42 +57,45 @@ export type BaseInputOuterProps<P extends Record<string, any>, E extends HTMLEle
   'onChange'
 > &
   BaseInputProps<E> & {
-    name: string;
+    name: InputComponentIdentifier;
     inputComponent: React.FC<P>;
     adornmentGap?: Style | number;
   };
 
-interface InputWrapperProps extends LayoutBoxProps {
+interface InputWrapperProps extends InnerInputProps {
+  name: 'textarea' | 'input';
   fullWidth: boolean;
   focus: boolean;
   error: boolean;
   cssStyles: CssFunctionReturn;
 }
 
+const focusStyles = pabloCss<InputWrapperProps>`
+  box-shadow: 0 0 0
+    ${getComponentStyle((props) => [props.name, props.variant, 'focus', 'outlineSize'])}
+    ${getComponentStyle((props) => [props.name, props.variant, 'focus', 'outlineColor'])};
+`;
+
+const errorStyles = (props: InputWrapperProps) =>
+  pabloCss`
+  border-color: ${getComponentStyle([props.name, props.variant, 'error', 'borderColor'])};
+  &:focus {
+    box-shadow: 0 0 0 ${getComponentStyle([props.name, props.variant, 'focus', 'outlineSize'])}
+      ${getComponentStyle([props.name, props.variant, 'error', 'focus', 'outlineColor'])};
+  }
+`(props);
+
 const InputWrapper = styled.div<InputWrapperProps>`
   ${baseStyle}
   display: flex;
   align-items: center;
-  border: ${getComponentStyle('{name}.borderWidth')}px solid
-    ${getComponentStyle('{name}.{variant}.borderColor')};
-  border-radius: ${getComponentStyle('{name}.borderRadius')};
-  background-color: ${getComponentStyle('{name}.{variant}.backgroundColor')};
-  transition: ${getComponentStyle('{name}.transitions', transitionTransformer)};
-  ${(props) =>
-    props.focus &&
-    css`
-      box-shadow: 0 0 0 ${getComponentStyle('{name}.{variant}.focus.outlineSize')(props)}
-        ${getComponentStyle('{name}.{variant}.focus.outlineColor')(props)};
-    `}
-  ${(props) =>
-    props.error &&
-    css`
-      border-color: ${getComponentStyle('{name}.{variant}.error.borderColor')(props)};
-      &:focus {
-        box-shadow: 0 0 0 ${getComponentStyle('{name}.{variant}.focus.outlineSize')(props)}
-          ${getComponentStyle('{name}.{variant}.error.focus.outlineColor')(props)};
-      }
-    `}
+  border: ${getComponentStyle((props) => [props.name, 'borderWidth'])}px solid
+    ${getComponentStyle((props) => [props.name, props.variant, 'borderColor'])};
+  border-radius: ${getComponentStyle((props) => [props.name, 'borderRadius'])};
+  background-color: ${getComponentStyle((props) => [props.name, props.variant, 'backgroundColor'])};
+  transition: ${getComponentStyle((props) => [props.name, 'transitions'], transitionTransformer)};
+  ${ifProp('focus', focusStyles)}
+  ${ifProp('error', errorStyles)}
   ${layoutInterpolationFn}
   ${(props) =>
     props.fullWidth &&

@@ -26,7 +26,7 @@ beforeEach(() => {
 });
 
 test('Get component style by simple path', () => {
-  const result = getComponentStyle('button.hover.color')({ theme });
+  const result = getComponentStyle(['button', 'hover', 'color'])({ theme });
   expect(result).toBe('black');
 });
 
@@ -36,22 +36,22 @@ test('Get component style by interpolated path with props put into the path', ()
 });
 
 test('Get component style by interpolated path with unknown props and put prop name into path', () => {
-  const result = getComponentStyle('button.{unknownState}')({ theme, state: 'focus' });
+  const result = getComponentStyle(['button', '{unknownState}'])({ theme, state: 'focus' });
   expect(result).toBe('yellow');
 });
 
 test('Get component style with content being a interpolation function', () => {
-  const result = getComponentStyle('button.hover.interpolatedColor')({ theme });
+  const result = getComponentStyle(['button', 'hover', 'interpolatedColor'])({ theme });
   expect(result).toBe('someInterpolatedValue');
 });
 
 test('Get empty object component style with unknown path', () => {
-  const result = getComponentStyle('button.unknown.color')({ theme });
+  const result = getComponentStyle(['button', 'unknown', 'color'])({ theme });
   expect(result).toBeUndefined();
 });
 
 test('Get empty object component style with componentStyles being undefined', () => {
-  const result = getComponentStyle('button.hover.color')({ theme: {} });
+  const result = getComponentStyle(['button', 'hover', 'color'])({ theme: {} });
   expect(result).toBeUndefined();
 });
 

@@ -9,23 +9,23 @@ interface CreateComponentPrimitiveOptions<T extends keyof JSX.IntrinsicElements>
   tag?: T;
 }
 
-interface ComponentPrimitiveProps<P extends object> {
-  componentPath: ComponentPath<P>;
+interface ComponentPrimitiveProps {
+  componentPath: ComponentPath;
 }
 
 const getPrimitiveStyle =
   <P extends object>(
-    property: string | ComponentPath<P>,
+    property: string | ComponentPath,
     transformFn?: (value: unknown) => string | number
   ) =>
-  (props: P & ComponentPrimitiveProps<P>) => {
+  (props: P & ComponentPrimitiveProps) => {
     const propertyPath = guaranteeArray(property);
     return getComponentStyle([...props.componentPath, ...propertyPath], transformFn)(props);
   };
 
 const componentPrimitive =
-  <P extends object, T extends keyof JSX.IntrinsicElements = 'div'>(
-    componentPath: ComponentPath<P>,
+  <P extends object, T extends keyof JSX.IntrinsicElements>(
+    componentPath: ComponentPath,
     { tag = 'div' as any }: CreateComponentPrimitiveOptions<T> = {}
   ) =>
   (

@@ -2,25 +2,15 @@ import type { WithTheme } from '@emotion/react';
 import { PabloTheme } from '../theme/types';
 import { ComponentPath } from '../types';
 
-const getStringPath = (path: string, props: object) =>
-  path.replace(/\{(.*?)\}/g, (_, val) => props[val] || val).split('.');
-
-const getArrayPath = <P extends object>(path: ComponentPath<P>, props: object) =>
-  path.map((key) => {
-    if (typeof key === 'function') {
-      return key(props as P);
-    }
-
-    return key;
-  });
+type FunctionPath<P extends object> = (props: P) => ComponentPath;
 
 export const getComponentStyle =
   <P extends object>(
-    path: ComponentPath<P> | string,
+    path: FunctionPath<P> | ComponentPath,
     transformFn: (value: unknown) => string | number = (v) => v as string
   ) =>
-  (props: WithTheme<any, PabloTheme>) => {
-    const pathArray = Array.isArray(path) ? getArrayPath(path, props) : getStringPath(path, props);
+  (props: WithTheme<P, PabloTheme>) => {
+    const pathArray = typeof path === 'function' ? path(props) : path;
 
     const value = pathArray.reduce(
       (acc, key) => (acc && acc[key]) || undefined,

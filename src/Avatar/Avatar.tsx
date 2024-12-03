@@ -42,7 +42,7 @@ const AvatarImage = styled<
   ${baseStyle}
   ${conditionalStyles('variant', (props) => ({
     square: css`
-      border-radius: ${getComponentStyle('avatar.square.borderRadius')(props)}px;
+      border-radius: ${getComponentStyle(['avatar', 'square', 'borderRadius'])(props)}px;
     `,
     circle: css`
       border-radius: 50%;
