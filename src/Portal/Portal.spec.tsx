@@ -2,10 +2,9 @@ import {
   render,
   getByTestId as globalGetByTestId,
   getAllByTestId as globalGetAllByTestId,
-  waitFor,
 } from '@testing-library/react';
 import React from 'react';
-import { PabloThemeProvider, rootContext } from '../theme';
+import { PabloThemeProvider } from '../theme';
 import { Portal } from './Portal';
 
 test('Render Portal component', () => {
@@ -34,7 +33,7 @@ test('Forward ref object with ShadowRoot', async () => {
   renderComponent({ ref }, shadowRoot);
   expect(ref.current).toBeDefined();
   expect(ref.current.getAttribute('data-testid')).toBe('pbl-portal-mountpoint');
-  expect(ref.current.parentElement).toBe(shadowRoot);
+  expect(ref.current.parentNode).toBe(shadowRoot);
 });
 
 test('Forward ref function with ShadowRoot', () => {
@@ -46,8 +45,6 @@ test('Forward ref function with ShadowRoot', () => {
 });
 
 function renderComponent(props: object, rootElement: ShadowRoot | Document = document) {
-  console.log('document', rootElement);
-
   const { baseElement, unmount } = render(
     <PabloThemeProvider root={rootElement}>
       <Portal name="portal" {...props}>
