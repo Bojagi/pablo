@@ -4,7 +4,7 @@ import isObject from 'isobject';
 import { getDefaultComponentStyles } from './defaultComponentStyles';
 import { defaultTheme } from './defaultTheme';
 import { PabloTheme, ComponentStyles, PabloThemeProviderProps } from './types';
-import { pabloThemeContext, pabloComponentStylesContext } from './context';
+import { pabloThemeContext, pabloComponentStylesContext, rootContext } from './context';
 import { themeVarNames } from './themeVars';
 import { css, Global, ThemeProvider } from '@emotion/react';
 
@@ -24,6 +24,7 @@ function createThemeVarDefinitions(theme: any, keyNameObject: any) {
 export const PabloThemeProvider = ({
   theme = {},
   componentStyles = {},
+  root,
   children,
 }: PabloThemeProviderProps) => {
   const mergedTheme = merge(defaultTheme, theme, { arrayMerge: overwriteMerge }) as PabloTheme;
@@ -40,7 +41,7 @@ export const PabloThemeProvider = ({
   );
 
   return (
-    <>
+    <rootContext.Provider value={root || document}>
       <ThemeProvider theme={styledTheme}>
         <Global
           styles={css`
@@ -55,6 +56,6 @@ export const PabloThemeProvider = ({
           </pabloComponentStylesContext.Provider>
         </pabloThemeContext.Provider>
       </ThemeProvider>
-    </>
+    </rootContext.Provider>
   );
 };

@@ -28,7 +28,9 @@ const ColumnItem = ({ height = 100, size, ...props }: Omit<FlexGridColumnProps, 
       ref={ref}
       bgColor="brand.main"
       textColor="brand.contrastText"
-      centerFlex
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
       {...props}
     >
       <Paragraph>Size {sizeText}</Paragraph>

@@ -15,8 +15,11 @@ export interface AnimationSetupProps {
 
 export interface AnimationStyleSetup<T> {
   baseStyles?: Interpolation<T>;
-  enterStyles?: Interpolation<T>;
-  exitStyles?: Interpolation<T>;
+  exitedStyles?: Interpolation<T>;
+  exitingStyles?: Interpolation<T>;
+  enteredStyles?: Interpolation<T>;
+  enteringStyles?: Interpolation<T>;
+  preEnterStyles?: Interpolation<T>;
 }
 
 export interface AnimationAdditionalProps {
@@ -43,13 +46,18 @@ export type InOutAnimationProps<T extends object = object> = AnimationAdditional
 export const InnerInOutAnimation = styled.div<AnimationStyleProps<any>>`
   transition: all ${(props) => props.duration}ms ${(props) => props.easing};
   ${(props) => props.baseStyles}
-  ${({ status, enterStyles, exitStyles }) => {
+  ${({ status, preEnterStyles, enteredStyles, exitedStyles, exitingStyles, enteringStyles }) => {
     switch (status) {
-      case 'entered':
+      case 'preEnter':
+        return preEnterStyles;
       case 'entering':
-        return enterStyles;
+        return enteringStyles || enteredStyles;
+      case 'entered':
+        return enteredStyles;
+      case 'exiting':
+        return exitingStyles || exitedStyles;
       case 'exited':
-        return exitStyles;
+        return exitedStyles;
       default:
         return null;
     }
@@ -97,16 +105,22 @@ const InOutAnimation = forwardRef<HTMLDivElement, InOutAnimationProps<any>>(
 
 export function createInOutAnimation<P extends object>({
   baseStyles,
-  enterStyles,
-  exitStyles,
+  preEnterStyles,
+  enteredStyles,
+  enteringStyles,
+  exitedStyles,
+  exitingStyles,
 }: AnimationStyleSetup<AnimationStyleProps<P>>) {
   return forwardRef<HTMLDivElement, InOutAnimationProps<P>>((props, ref) => {
     return (
       <InOutAnimation
         ref={ref}
         baseStyles={baseStyles}
-        enterStyles={enterStyles}
-        exitStyles={exitStyles}
+        preEnterStyles={preEnterStyles}
+        enteringStyles={enteringStyles}
+        enteredStyles={enteredStyles}
+        exitedStyles={exitedStyles}
+        exitingStyles={exitingStyles}
         {...props}
       />
     );
