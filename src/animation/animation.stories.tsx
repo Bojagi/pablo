@@ -33,7 +33,7 @@ const BaseStory = ({ component: Component, ...args }) => {
       `}
       alignItems="stretch"
     >
-      <Box centerFlex flexGrow={1} flexBasis={0}>
+      <Flex center flexGrow={1} flexBasis={0}>
         <Box mb={4}>
           <Checkbox
             mb={1}
@@ -56,16 +56,8 @@ const BaseStory = ({ component: Component, ...args }) => {
             <option>linear</option>
           </NativeSelect>
         </Box>
-      </Box>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        flexGrow={1}
-        flexShrink={0}
-        flexBasis={0}
-        bgColor="gray.50"
-      >
+      </Flex>
+      <Flex center flexGrow={1} flexShrink={0} flexBasis={0} bgColor="gray.50">
         <Box maxWidth={400} height={200} p={3}>
           <Component duration={duration} visible={visible} easing={easing} {...args}>
             <Card>
@@ -73,7 +65,7 @@ const BaseStory = ({ component: Component, ...args }) => {
             </Card>
           </Component>
         </Box>
-      </Box>
+      </Flex>
     </Flex>
   );
 };

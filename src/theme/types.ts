@@ -80,6 +80,7 @@ export interface ComponentStyles {
 export interface PabloThemeProviderProps {
   theme?: RecursivePartial<PabloTheme>;
   componentStyles?: RecursivePartial<ComponentStyles>;
+  root?: Document | ShadowRoot;
   children: React.ReactNode;
 }
 

@@ -1,10 +1,12 @@
 import { css } from '@emotion/react';
 import { createInOutAnimation } from './InOutAnimation';
 
-const noAnimationExit = css`
+const style = css`
   visibility: hidden;
+  transition: none;
 `;
 
 export const NoAnimation = createInOutAnimation({
-  exitStyles: noAnimationExit,
+  exitedStyles: style,
+  exitingStyles: style,
 });
