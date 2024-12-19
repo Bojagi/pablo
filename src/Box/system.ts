@@ -228,6 +228,7 @@ const system = <const T extends SystemPropertyConfig | SystemPropertyConfig[]>(
 export type {
   ResponsiveValue,
   InterpolationTransformFn,
+  InterpolationFunction,
   IdentityTransformFn,
   SystemInterpolationPropertyConfig,
   SystemPropertyConfig,
