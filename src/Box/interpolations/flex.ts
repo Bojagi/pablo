@@ -1,14 +1,22 @@
 import type * as CSS from 'csstype';
-import { identityTransform, InterpolationTransformFn, system } from '../system';
+import { identityTransform, InterpolationTransformFn, ResponsiveValue, system } from '../system';
 
 export interface FlexItemProps {
-  grow?: number | boolean;
-  shrink?: number | boolean;
-  flexBasis?: CSS.Property.FlexBasis;
-  flex?: CSS.Property.Flex;
-  justifySelf?: CSS.Property.JustifySelf;
-  alignSelf?: CSS.Property.AlignSelf;
-  order?: CSS.Property.Order;
+  grow?: ResponsiveValue<number | boolean>;
+  shrink?: ResponsiveValue<number | boolean>;
+  flexBasis?: ResponsiveValue<CSS.Property.FlexBasis>;
+  flex?: ResponsiveValue<CSS.Property.Flex>;
+  justifySelf?: ResponsiveValue<CSS.Property.JustifySelf>;
+  alignSelf?: ResponsiveValue<CSS.Property.AlignSelf>;
+  order?: ResponsiveValue<CSS.Property.Order>;
+}
+
+export interface FlexContainerProps {
+  direction?: ResponsiveValue<CSS.Property.FlexDirection>;
+  wrap?: ResponsiveValue<CSS.Property.FlexWrap>;
+  justifyContent?: ResponsiveValue<CSS.Property.JustifyContent>;
+  alignItems?: ResponsiveValue<CSS.Property.AlignItems>;
+  alignContent?: ResponsiveValue<CSS.Property.AlignContent>;
 }
 
 export const flexItem = system([
@@ -22,6 +30,7 @@ export const flexItem = system([
   },
   {
     properties: ['flexBasis'],
+    as: 'basis',
   },
   {
     properties: ['flex'],
@@ -40,6 +49,11 @@ export const flexItem = system([
 ]);
 
 export const flexContainer = system([
+  {
+    properties: ['flexWrap'],
+    fromProps: ['wrap'],
+    transform: identityTransform as InterpolationTransformFn<CSS.Property.FlexWrap>,
+  },
   {
     properties: ['flexDirection'],
     fromProps: ['direction'],

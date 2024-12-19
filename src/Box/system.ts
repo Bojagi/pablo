@@ -14,7 +14,8 @@ type InterpolationTransformFn<T = any, R extends InterpolationReturn = Interpola
   value: T,
   theme: PabloTheme
 ) => R;
-type ResponsiveValue<T> = T | (T | null)[] | Record<Breakpoint, T | null>;
+type BreakpointObject<T> = Partial<Record<Breakpoint, T | null | undefined>>;
+type ResponsiveValue<T> = T | (T | null | undefined)[] | BreakpointObject<T>;
 
 type InterpolationFn = (props: PabloThemeableProps) => CSSObject;
 type SystemInterpolationFn<T> = (value: T) => InterpolationFn;
@@ -83,7 +84,12 @@ type StyledInterpolationFunctions<C extends SystemPropertyConfig<T>, T = any> = 
 type ArrayStyledInterpolationFunctions<C extends readonly SystemPropertyConfig[]> = {
   [K in ExtractStyledFunctionKey<C[number]>]: SystemInterpolationFn<
     TransformParameterType<
-      Extract<C[number], { as?: K } | { fromProps?: readonly K[] } | { properties: readonly K[] }>
+      Extract<
+        C[number],
+        | { as?: K }
+        | { fromProps?: IncludedInArray<K, string> }
+        | { properties: IncludedInArray<K, string> }
+      >
     >
   >;
 };
@@ -97,6 +103,8 @@ type SystemFn<
     : C extends SystemPropertyConfig<T>
       ? StyledInterpolationFunctions<C>
       : never);
+
+type InterpolateReturnTuple = readonly [string, InterpolationReturn, Breakpoint | null];
 
 const stringableTransform =
   <T>(transformFn: InterpolationTransformFn<Exclude<T, string>>) =>
@@ -117,14 +125,12 @@ const spacingTransform: InterpolationTransformFn<number | string> = stringableTr
 const colorTransform: InterpolationTransformFn<KeyMap<Colors>> = (value) =>
   (getByPath(themeVars.colors as Colors, value) as InterpolationReturn) || value;
 
-type InterpolateReturnTuple = readonly [string, InterpolationReturn, string | null];
-
 const interpolateSingleValue = (
   properties: readonly string[],
   value: any,
   props: PabloThemeableProps,
   transform: InterpolationTransformFn = identityTransform,
-  forBreakpoint: string | null = null
+  forBreakpoint: Breakpoint | null = null
 ): InterpolateReturnTuple[] => {
   const transformedValue = transform(value, props.theme);
   return properties.map((property) => [property, transformedValue, forBreakpoint] as const);
@@ -148,19 +154,19 @@ const interpolate = (
   }
   if (typeof value === 'object') {
     return Object.entries(value).flatMap(([key, value]) => {
-      return interpolateSingleValue(properties, value, props, transform, key);
+      return interpolateSingleValue(properties, value, props, transform, key as Breakpoint);
     });
   }
   return interpolateSingleValue(properties, value, props, transform);
 };
 
 const makeObject = (
-  pairs: (readonly [string, string | number | undefined | null, string | null])[]
+  pairs: (readonly [string, string | number | undefined | null, Breakpoint | null])[],
+  theme: PabloTheme
 ) => {
   return pairs.reduce((acc, [key, value, breakpointName]) => {
     if (breakpointName && breakpointName !== 'base') {
-      const bp = themeVars.breakpoints[breakpointName];
-      const breakpointKey = `@media min-width: ${mediaQueryAbove(bp)}`;
+      const breakpointKey = `@media min-width: ${mediaQueryAbove(breakpointName, theme.breakpoints)}`;
 
       if (!acc[breakpointKey]) {
         acc[breakpointKey] = {};
@@ -177,7 +183,7 @@ const systemInterpolation =
   <T>(config: SystemInterpolationPropertyConfig<T>) =>
   (value: TransformParameterType<typeof config>) =>
   (props: PabloThemeableProps) =>
-    makeObject(interpolate(config.properties, value, props, config.transform));
+    makeObject(interpolate(config.properties, value, props, config.transform), props.theme);
 
 const createSystemProperty = (config: SystemPropertyConfig) => {
   const fromProps = config.fromProps || config.properties;
@@ -192,7 +198,10 @@ const createSystemProperty = (config: SystemPropertyConfig) => {
 
 const createSystemProperties = <T extends SystemPropertyConfig[]>(configs: T): SystemFn<T> => {
   const interpolationFn = (props: PabloThemeableProps): CSSObject => {
-    return makeObject(configs.flatMap((config) => createSystemProperty(config)(props)));
+    return makeObject(
+      configs.flatMap((config) => createSystemProperty(config)(props)),
+      props.theme
+    );
   };
 
   configs.forEach((config) => {

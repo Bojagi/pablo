@@ -1,19 +1,18 @@
-import type * as CSS from 'csstype';
 import { ifProp } from '../styleHelpers/styleProp';
 import { Box, type BoxProps } from './Box';
 import styled from '@emotion/styled';
-import { flexContainer } from './interpolations/flex';
+import { flexContainer, FlexContainerProps } from './interpolations/flex';
 import { PabloThemeableProps } from '../theme/types';
 
-export type FlexProps = BoxProps & {
-  center?: boolean;
-  equal?: boolean;
-  end?: boolean;
-  start?: boolean;
-  between?: boolean;
-  stretch?: boolean;
-  direction?: CSS.Property.FlexDirection;
-};
+export type FlexProps = BoxProps &
+  FlexContainerProps & {
+    center?: boolean;
+    equal?: boolean;
+    end?: boolean;
+    start?: boolean;
+    between?: boolean;
+    stretch?: boolean;
+  };
 
 type InternalFlexProps = PabloThemeableProps & FlexProps;
 

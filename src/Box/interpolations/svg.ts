@@ -1,7 +1,9 @@
+import { Colors } from '../../theme/colors';
+import { CssColor, KeyMap } from '../../types';
 import { colorTransform, ResponsiveValue, system } from '../system';
 
 export interface SvgProps {
-  fillColor?: ResponsiveValue<string>;
+  fillColor?: ResponsiveValue<KeyMap<Colors> | CssColor>;
 }
 
 export const svg = system([

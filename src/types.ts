@@ -1,3 +1,4 @@
+import type * as CSS from 'csstype';
 import { PabloThemeableProps, Style } from './theme/types';
 
 export type SingleOrArray<T> = T | T[];
@@ -40,3 +41,9 @@ export type KeyMap<
         | `${PX}${D<PX, C>}${string & P}`
         | KeyMap<T[P], SKIP, C, `${PX}${D<PX, C>}${string & P}`, Next<I>>]: T[P];
 };
+
+export type CssColor =
+  | CSS.DataType.NamedColor
+  | `#${string}`
+  | `rgba(${string})`
+  | `rgb(${string})`;

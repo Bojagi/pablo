@@ -1,10 +1,10 @@
 import { colorTransform, ResponsiveValue, system } from '../system';
-import { KeyMap } from '../../types';
+import { CssColor, KeyMap } from '../../types';
 import { Colors } from '../../theme/colors';
 
 export interface ColorProps {
-  bgColor?: ResponsiveValue<KeyMap<Colors>>;
-  textColor?: ResponsiveValue<KeyMap<Colors>>;
+  bgColor?: ResponsiveValue<KeyMap<Colors> | CssColor>;
+  textColor?: ResponsiveValue<KeyMap<Colors> | CssColor>;
   opacity?: ResponsiveValue<number>;
 }
 

@@ -6,13 +6,15 @@ import {
   spacingTransform,
   system,
 } from '../system';
-import { KeyMap } from '../../types';
-import { Colors } from '../../theme/colors';
 
 export interface PositionProps {
-  bgColor?: ResponsiveValue<KeyMap<Colors>>;
-  textColor?: ResponsiveValue<KeyMap<Colors>>;
-  opacity?: number;
+  position?: ResponsiveValue<CSS.Property.Position>;
+  pos?: ResponsiveValue<CSS.Property.Position>;
+  zIndex?: ResponsiveValue<CSS.Property.ZIndex>;
+  top?: ResponsiveValue<CSS.Property.Top>;
+  right?: ResponsiveValue<CSS.Property.Right>;
+  bottom?: ResponsiveValue<CSS.Property.Bottom>;
+  left?: ResponsiveValue<CSS.Property.Left>;
 }
 
 export const position = system([
