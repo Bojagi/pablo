@@ -3,15 +3,9 @@ import { useDynamicImport } from 'docusaurus-plugin-react-docgen-typescript/useD
 const getFilterFn = (type) => {
   switch (type) {
     case 'direct':
-      return (prop) =>
-        !prop.parent?.fileName.includes('styled-system') &&
-        !prop.parent?.fileName.includes('spacingInterpolation.ts') &&
-        !prop.parent?.fileName.includes('Box/color.ts');
+      return (prop) => !prop.parent?.fileName.includes('interpolations');
     case 'box':
-      return (prop) =>
-        prop.parent?.fileName.includes('styled-system') ||
-        prop.parent?.fileName.includes('spacingInterpolation.ts') ||
-        prop.parent?.fileName.includes('Box/color.ts');
+      return (prop) => prop.parent?.fileName.includes('interpolations');
     case 'all':
     default:
       return () => true;

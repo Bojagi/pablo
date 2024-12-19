@@ -2,6 +2,8 @@ import type * as CSS from 'csstype';
 import { ifProp } from '../styleHelpers/styleProp';
 import { Box, type BoxProps } from './Box';
 import styled from '@emotion/styled';
+import { flexContainer } from './interpolations/flex';
+import { PabloThemeableProps } from '../theme/types';
 
 export type FlexProps = BoxProps & {
   center?: boolean;
@@ -13,15 +15,15 @@ export type FlexProps = BoxProps & {
   direction?: CSS.Property.FlexDirection;
 };
 
-const justifyContent = (where: CSS.Property.JustifyContent) => `justify-content: ${where};`;
+type InternalFlexProps = PabloThemeableProps & FlexProps;
 
 export const Flex = styled(Box)<FlexProps>`
   display: flex;
+  ${flexContainer}
   ${ifProp('center', 'justify-content: center; align-items: center;')}
   ${ifProp('equal', '> * { flex-basis: 100%; flex-grow: 1; flex-shrink: 1; }')}
-  ${ifProp('between', justifyContent('space-between'))}
-  ${ifProp('end', justifyContent('flex-end'))}
-  ${ifProp('start', justifyContent('flex-start'))}
   ${ifProp('stretch', 'align-items: stretch;')}
-  ${ifProp('direction', (_, value) => `flex-direction: ${value};`)}
+  ${ifProp<InternalFlexProps>('between', flexContainer.justifyContent('space-between'))}
+  ${ifProp<InternalFlexProps>('end', flexContainer.justifyContent('flex-end'))}
+  ${ifProp<InternalFlexProps>('start', flexContainer.justifyContent('flex-start'))}
 `;

@@ -1,18 +1,12 @@
-// Only types
-
-import type { TextColorProps, BackgroundColorProps } from 'styled-system';
-import { themeVars } from '../../theme/themeVars';
-import { getByPath } from '../../utils/getByPath';
-import { InterpolationTransformFn, system } from '../system';
+import { colorTransform, ResponsiveValue, system } from '../system';
+import { KeyMap } from '../../types';
+import { Colors } from '../../theme/colors';
 
 export interface ColorProps {
-  bgColor?: BackgroundColorProps['backgroundColor'];
-  textColor?: TextColorProps['color'];
-  opacity?: number;
+  bgColor?: ResponsiveValue<KeyMap<Colors>>;
+  textColor?: ResponsiveValue<KeyMap<Colors>>;
+  opacity?: ResponsiveValue<number>;
 }
-
-const colorTransform: InterpolationTransformFn<string> = (value) =>
-  getByPath(themeVars.colors, value) || value;
 
 export const color = system([
   {

@@ -4,15 +4,17 @@ import { themeVars } from '../theme';
 import { Breakpoint } from '../theme/breakpoints';
 import { PabloTheme, PabloThemeableProps } from '../theme/types';
 import { enforceArray } from '../utils/enforceArray';
+import { getByPath } from '../utils/getByPath';
+import { Colors } from '../theme/colors';
+import { KeyMap } from '../types';
 type InterpolationReturn = string | number | null | undefined;
 type IdentityTransformFn<T extends InterpolationReturn = InterpolationReturn> =
   InterpolationTransformFn<T, T>;
-const identityTransform: IdentityTransformFn = <T>(value: T): T => value;
 type InterpolationTransformFn<T = any, R extends InterpolationReturn = InterpolationReturn> = (
   value: T,
   theme: PabloTheme
 ) => R;
-type ResponsiveValue<T> = T | Array<T | null> | Record<Breakpoint, T | null>;
+type ResponsiveValue<T> = T | (T | null)[] | Record<Breakpoint, T | null>;
 
 type InterpolationFn = (props: PabloThemeableProps) => CSSObject;
 type SystemInterpolationFn<T> = (value: T) => InterpolationFn;
@@ -37,23 +39,26 @@ type ExtractSystemProp<T extends SystemPropertyConfig<any>> = T extends {
   ? B[number]
   : T['properties'][number];
 
-type SingleSystemConfigProps<C extends SystemPropertyConfig<T>, T = any> = {
-  [K in ExtractSystemProp<C>]?: TransformParameterType<
-    Extract<C, { as?: K } | { fromProps?: readonly K[] } | { properties: readonly K[] }>
-  >;
-};
+type IncludedInArray<K, T> = readonly [K, ...T[]] | readonly [...T[], K];
 
-type ArraySystemConfigProps<C extends readonly SystemPropertyConfig<T>[], T = any> = {
-  [K in ExtractSystemProp<C[number]>]?: TransformParameterType<
-    Extract<C[number], { as?: K } | { fromProps?: readonly K[] } | { properties: readonly K[] }>
+type SingleSystemConfigProps<C extends SystemPropertyConfig<T>, T = any> = {
+  [K in ExtractSystemProp<C>]?: ResponsiveValue<
+    TransformParameterType<
+      Extract<
+        C,
+        | { as?: K }
+        | { fromProps?: IncludedInArray<K, string> }
+        | { properties: IncludedInArray<K, string> }
+      >
+    >
   >;
 };
 
 type SystemConfigProps<
   C extends SystemPropertyConfig<T> | readonly SystemPropertyConfig<T>[],
   T = any,
-> = C extends SystemPropertyConfig[]
-  ? ArraySystemConfigProps<C>
+> = C extends readonly SystemPropertyConfig[]
+  ? SingleSystemConfigProps<C[number]>
   : C extends SystemPropertyConfig
     ? SingleSystemConfigProps<C>
     : never;
@@ -101,6 +106,7 @@ const stringableTransform =
     }
     return transformFn(value as Exclude<T, string>, theme);
   };
+const identityTransform: IdentityTransformFn = <T>(value: T): T => value;
 const pixelTransform: InterpolationTransformFn<number | string> = stringableTransform(
   (value) => `${value}px`
 );
@@ -108,13 +114,18 @@ const spacingTransform: InterpolationTransformFn<number | string> = stringableTr
   (value, theme) => `${value * theme.spacing}px`
 );
 
+const colorTransform: InterpolationTransformFn<KeyMap<Colors>> = (value) =>
+  (getByPath(themeVars.colors as Colors, value) as InterpolationReturn) || value;
+
+type InterpolateReturnTuple = readonly [string, InterpolationReturn, string | null];
+
 const interpolateSingleValue = (
   properties: readonly string[],
   value: any,
   props: PabloThemeableProps,
   transform: InterpolationTransformFn = identityTransform,
   forBreakpoint: string | null = null
-) => {
+): InterpolateReturnTuple[] => {
   const transformedValue = transform(value, props.theme);
   return properties.map((property) => [property, transformedValue, forBreakpoint] as const);
 };
@@ -124,7 +135,7 @@ const interpolate = (
   value: any | readonly any[],
   props: PabloThemeableProps,
   transform: InterpolationTransformFn = identityTransform
-) => {
+): InterpolateReturnTuple[] => {
   if (value === undefined) {
     return [];
   }
@@ -212,4 +223,11 @@ export type {
   SystemInterpolationPropertyConfig,
   SystemPropertyConfig,
 };
-export { system, systemInterpolation, pixelTransform, spacingTransform, identityTransform };
+export {
+  system,
+  systemInterpolation,
+  pixelTransform,
+  spacingTransform,
+  identityTransform,
+  colorTransform,
+};

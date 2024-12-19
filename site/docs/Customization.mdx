@@ -3,8 +3,8 @@ import { PropsTable } from '@site/src/components/PropsTable';
 # Customization
 
 Pablo is highly customizable with the principle of making customizations as easy as possible and 
-reduce boilerplate code. As Pablo is built on top of `emotion` and `styled-system` it
-utilizes both libraries to achive this.
+reduce boilerplate code. As Pablo is built on top of `emotion`. It uses a custom styled system implementation
+to be able to customize styles via props.
 
 ## Ways of customization
 
@@ -15,7 +15,7 @@ to inconsistent design and code quality.
 
 There are five different ways you can customize components:
 
-* Overwrite single styling properties such as padding or margin with `styled-system` props
+* Overwrite single styling properties such as padding or margin with styled system props
 * Update the theme values to update primitives like color or typographic values globally
 * Change the `componentStyles` config to update component specific values such as gaps, colors or sizes
 * Overwrite styling of parts of components globally with styled-component's `css` tag literal
@@ -23,7 +23,7 @@ There are five different ways you can customize components:
 
 ## Use styling props
 
-The quickest way to overwrite certain styles are the styling props that `styled-system` provides.
+The quickest way to overwrite certain styles is to use the styled system props.
 Most of the components of Pablo support these props which mainly should be used for layouting purposes
 like adding margins (the `mx` and `my` props are quite useful for this). But you can also use
 them to change color on more plain components like `<Headline />`. 

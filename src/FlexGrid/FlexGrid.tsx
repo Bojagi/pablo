@@ -4,12 +4,11 @@ import styled from '@emotion/styled';
 import { getSpacing } from '../styleHelpers';
 import { omit } from '../utils/omit';
 import { css } from '@emotion/react';
-import { system } from '@styled-system/core';
-import type { ResponsiveValue } from 'styled-system';
+import { identityTransform, IdentityTransformFn, ResponsiveValue, system } from '../Box/system';
 
 type FlexGridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-interface FlexGridColumnProps extends Omit<BoxProps, 'size'> {
+interface FlexGridColumnProps extends BoxProps {
   children: ReactNode;
   size: ResponsiveValue<FlexGridSize> | 'fillup';
 }
@@ -29,9 +28,9 @@ const InnerColumnBox = forwardRef<HTMLDivElement, FlexGridColumnProps>(
 );
 
 const columnSizeInterpolationFn = system({
-  size: {
-    property: '--pbl-flexgrid-column-width' as any,
-  },
+  properties: ['--pbl-flexgrid-column-width'],
+  fromProps: ['size'],
+  transform: identityTransform as IdentityTransformFn<FlexGridSize | 'fillup'>,
 });
 
 const FlexGridColumn = styled(InnerColumnBox)`
