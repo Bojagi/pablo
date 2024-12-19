@@ -77,6 +77,9 @@ export interface ComponentStyles {
   toastCard: ToastCardStyles;
 }
 
+export type ComponentIdentifier = keyof ComponentStyles;
+export type InputComponentIdentifier = 'input' | 'textarea' | 'nativeSelect';
+
 export interface PabloThemeProviderProps {
   theme?: RecursivePartial<PabloTheme>;
   componentStyles?: RecursivePartial<ComponentStyles>;

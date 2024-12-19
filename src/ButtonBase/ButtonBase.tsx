@@ -17,9 +17,9 @@ export const buttonBaseStyles: any = [
     alignItems: 'center',
     textDecoration: 'none',
     padding: getComponentStyle('button.sizes.{size}.padding')(props),
-    border: `${getComponentStyle('button.base.borderSize')(props)}px solid transparent`,
+    border: `${getComponentStyle(['button', 'base', 'borderSize'])(props)}px solid transparent`,
     background: 'transparent',
-    borderRadius: getComponentStyle('button.base.borderRadius')(props),
+    borderRadius: getComponentStyle(['button', 'base', 'borderRadius'])(props),
     transition: getComponentStyle('button.base.transitions', transitionTransformer)(props),
     outline: 'none',
 
@@ -28,7 +28,7 @@ export const buttonBaseStyles: any = [
     },
 
     '&:disabled': {
-      opacity: getComponentStyle('button.base.disabled.opacity')(props),
+      opacity: getComponentStyle(['button', 'base', 'disabled', 'opacity'])(props),
       cursor: 'normal',
     },
   }),

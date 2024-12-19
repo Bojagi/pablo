@@ -58,21 +58,21 @@ export const tabsStyles: TabsStyles = {
   tab: {
     color: themeVars.colors.common.black,
     icon: {
-      gap: getComponentStyle('button.base.icon.gap'),
-      size: getComponentStyle('button.base.icon.size.medium'),
+      gap: getComponentStyle(['button', 'base', 'icon', 'gap']),
+      size: getComponentStyle(['button', 'base', 'icon', 'size', 'medium']),
     },
     padding: (props) => css`
       ${getSpacing(1)(props)} ${getSpacing(1.5)(props)} ${getSpacing(1.5)(props)}
     `,
     margin: (props) => css`0 0 ${getSpacing(0)(props)}`,
     hover: {
-      backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
+      backgroundColor: getComponentStyle(['button', 'brand', 'text', 'hover', 'backgroundColor']),
     },
     focus: {
-      outlineColor: getComponentStyle('button.brand.outlineColor'),
+      outlineColor: getComponentStyle(['button', 'brand', 'outlineColor']),
     },
     active: {
-      backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
+      backgroundColor: getComponentStyle(['button', 'brand', 'text', 'hover', 'backgroundColor']),
     },
     selected: {
       padding: (props) => css`

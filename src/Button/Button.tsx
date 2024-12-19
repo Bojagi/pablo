@@ -52,9 +52,9 @@ const InnerButton = styled('button')<InnerButtonProps>([
     width: props.fullWidth ? '100%' : 'inherit',
     ...getColorStyles(props),
     '&:focus': {
-      boxShadow: `0 0 0 ${getComponentStyle('button.base.focus.outlineSize')(
+      boxShadow: `0 0 0 ${getComponentStyle(['button', 'base', 'focus', 'outlineSize'])(
         props
-      )} ${getComponentStyle('button.{color}.outlineColor')(props)}`,
+      )} ${getComponentStyle(['button', props.color, 'outlineColor'])(props)}`,
     },
     '&:hover:enabled': getColorStyles(props, 'hover'),
     '&:active:enabled': getColorStyles(props, 'active'),
@@ -73,7 +73,7 @@ const IconBox = styled.div((props: IconBoxProps) => [
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    [`margin-${props.marginSide}`]: getComponentStyle('button.base.icon.gap')(props),
+    [`margin-${props.marginSide}`]: getComponentStyle(['button', 'base', 'icon', 'gap'])(props),
 
     '&, & > *': {
       width: getComponentStyle('button.base.icon.size.{size}')(props),

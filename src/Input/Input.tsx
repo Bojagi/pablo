@@ -25,9 +25,9 @@ const InnerInput = styled.input<InnerInputProps>`
   flex-grow: 1;
   flex-shrink: 1;
   border: 0;
-  padding: ${getComponentStyle('input.padding')};
+  padding: ${getComponentStyle(['input', 'padding'])};
   background-color: transparent;
-  font-family: ${getComponentStyle('input.fontFamily')};
+  font-family: ${getComponentStyle(['input', 'fontFamily'])};
   outline: none;
   ${getCustomStyles('input.styles', 'field')}
   width: 100%;
