@@ -1,33 +1,25 @@
 import { createThemeVarArray } from './createThemeVars';
 
-export type Breakpoint = 'sm' | 'md' | 'lg' | 'xl';
+export type DefinableBreakpoint = 'sm' | 'md' | 'lg' | 'xl';
+export type Breakpoint = 'base' | DefinableBreakpoint;
 
-export const breakpointNames: Breakpoint[] = ['sm', 'md', 'lg', 'xl'];
-
-export type BreakpointsArray = [string, string, string, string];
-
-export type Breakpoints = BreakpointsArray &
-  Record<Breakpoint, string> & {
-    breakpointNames: Breakpoint[];
-  };
+export type Breakpoints = Map<Breakpoint, number>;
 
 export function createBreakpoints(
-  array: BreakpointsArray,
-  usedBreakpointNames: Breakpoint[] = breakpointNames
-): Breakpoints {
-  const newBreakpoints: Breakpoints = usedBreakpointNames.reduce(
-    (acc, bp, index) => ({
-      ...acc,
-      [bp]: array[index],
-    }),
-    { array, breakpointNames: usedBreakpointNames } as unknown as Breakpoints
-  );
-
-  return newBreakpoints as Breakpoints;
+  tuples: [DefinableBreakpoint, number][]
+): Map<Breakpoint, number> {
+  return new Map([['base', 0], ...tuples]);
 }
 
-export const defaultBreakpoints: BreakpointsArray = ['700px', '1000px', '1200px', '1920px'];
+export const defaultBreakpointsTuple: [DefinableBreakpoint, number][] = [
+  ['sm', 700],
+  ['md', 1000],
+  ['lg', 1200],
+  ['xl', 1920],
+];
 
-export const breakpoints = createBreakpoints(defaultBreakpoints, breakpointNames);
-
-export const breakpointVars = createThemeVarArray('breakpoints', breakpointNames);
+export const breakpoints = createBreakpoints(defaultBreakpointsTuple);
+export const breakpointVars = createThemeVarArray(
+  'breakpoints',
+  defaultBreakpointsTuple.map(([name]) => name)
+);

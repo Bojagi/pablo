@@ -1,18 +1,18 @@
 import styled from '@emotion/styled';
-import { layout } from '@styled-system/layout';
 import { flexbox } from '@styled-system/flexbox';
 import { position } from '@styled-system/position';
-import type { LayoutProps, FlexboxProps, PositionProps } from 'styled-system';
+import { layout, type FlexboxProps, type PositionProps } from 'styled-system';
 import { system } from '@styled-system/core';
 
-import { color, ColorProps } from './color';
+import { color, ColorProps } from './interpolations/color';
 import { CssFunctionReturn } from '../types';
 import { baseStyle } from '../shared/baseStyle';
 import { getByPath } from '../utils/getByPath';
 import { themeVars } from '../theme/themeVars';
 import { interpolateCssProp } from '../utils/interpolateCssProp';
-import { margin, MarginProps, PaddingProps, padding } from './spacingInterpolation';
+import { margin, MarginProps, PaddingProps, padding } from './interpolations/spacing';
 import { ifProp } from '../styleHelpers/styleProp';
+import { LayoutProps } from './interpolations/layout';
 
 export interface BoxCssProps {
   css?: CssFunctionReturn;
