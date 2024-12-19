@@ -1,9 +1,16 @@
-export function getByPath(obj: Record<string, any>, path: string) {
+import { Path } from 'ts-toolbelt/out/Object/Path';
+import { Split } from 'ts-toolbelt/out/String/Split';
+import { KeyMap } from '../types';
+
+export function getByPath<O extends object, P extends KeyMap<O>>(
+  obj: O,
+  path: P
+): Path<O, Split<P, '.'>> {
   if (!path) {
-    return undefined;
+    return undefined as any;
   }
 
-  return internalGetByPath(obj, path.split('.'));
+  return internalGetByPath(obj, (path as string).split('.'));
 }
 
 function internalGetByPath(obj: Record<string, any>, path: string[]) {

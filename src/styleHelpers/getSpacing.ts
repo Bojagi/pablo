@@ -1,4 +1,3 @@
-import { get } from '@styled-system/core';
 import { PabloThemeableProps } from '../theme/types';
 import { InterpolateFn } from './index';
 
@@ -11,8 +10,7 @@ export function getSpacing(multiplier: number, suffix: boolean = true): any {
       return multiplier;
     }
 
-    const spacing = get(theme, 'spacing');
-
+    const spacing = theme.spacing;
     return (suffix ? `${spacing * multiplier}px` : spacing * multiplier) as any;
   };
 }

@@ -14,13 +14,12 @@ test('Get media query with styles when media query was found', () => {
     `
   )({
     theme: {
-      breakpoints: {
-        0: '100px',
-        1: '200px',
-        2: '300px',
-        3: '400px',
-        breakpointNames: ['sm', 'md', 'lg', 'xl'],
-      },
+      breakpoints: new Map([
+        ['sm', '100px'],
+        ['md', '200px'],
+        ['lg', '300px'],
+        ['xl', '400px'],
+      ]),
     },
   } as any) as any;
 
@@ -43,13 +42,12 @@ test('Get media below query with styles when media query was found', () => {
     mediaQueryBelow
   )({
     theme: {
-      breakpoints: {
-        0: '100px',
-        1: '200px',
-        2: '300px',
-        3: '400px',
-        breakpointNames: ['sm', 'md', 'lg', 'xl'],
-      },
+      breakpoints: new Map([
+        ['sm', '100px'],
+        ['md', '200px'],
+        ['lg', '300px'],
+        ['xl', '400px'],
+      ]),
     },
   } as any) as any;
 
@@ -71,13 +69,12 @@ test('Get no media query and no responsive styles when media query was NOT found
     `
   )({
     theme: {
-      breakpoints: {
-        0: '100px',
-        1: '200px',
-        2: '300px',
-        3: '400px',
-        breakpointNames: ['sm', 'md', 'lg', 'xl'],
-      },
+      breakpoints: new Map([
+        ['sm', '100px'],
+        ['md', '200px'],
+        ['lg', '300px'],
+        ['xl', '400px'],
+      ]),
     },
   } as any) as any;
   expect(output).toBeNull();

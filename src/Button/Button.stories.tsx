@@ -21,7 +21,7 @@ const SetOfButtons = ({ inverted, ...args }) => (
     mx={-4}
     mb={4}
     width={args.fullWidth ? 400 : 0}
-    flexDirection={args.fullWidth ? 'column' : 'row'}
+    direction={args.fullWidth ? 'column' : 'row'}
   >
     <ButtonBox inverted={inverted} invertedBgColor="brand.main">
       <Button mx={1} mb={args.fullWidth ? 4 : 0} {...args} color="brand">

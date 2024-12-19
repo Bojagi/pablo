@@ -1,37 +1,33 @@
 import React, { forwardRef, ReactNode } from 'react';
-import { Box, type BoxProps } from '../Box';
+import { Box, Flex, FlexProps, type BoxProps } from '../Box';
 import styled from '@emotion/styled';
 import { getSpacing } from '../styleHelpers';
-import { omit } from '../utils/omit';
 import { css } from '@emotion/react';
-import { system } from '@styled-system/core';
-import type { ResponsiveValue } from 'styled-system';
+import { identityTransform, IdentityTransformFn, ResponsiveValue, system } from '../Box/system';
 
 type FlexGridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-interface FlexGridColumnProps extends Omit<BoxProps, 'size'> {
+interface FlexGridColumnProps extends BoxProps {
   children: ReactNode;
-  size: ResponsiveValue<FlexGridSize> | 'fillup';
+  as?: React.ElementType;
+  size: ResponsiveValue<FlexGridSize | 'fillup'>;
 }
 
 const InnerColumnBox = forwardRef<HTMLDivElement, FlexGridColumnProps>(
-  ({ children, ...props }, ref) => {
-    const innerProps = omit(props, ['size']);
-
+  ({ children, as: As, ...props }, ref) => {
+    const InnerComponent = As || Box;
     return (
-      <>
-        <Box ref={ref} {...innerProps}>
-          {children}
-        </Box>
-      </>
+      <InnerComponent ref={ref} {...props}>
+        {children}
+      </InnerComponent>
     );
   }
 );
 
 const columnSizeInterpolationFn = system({
-  size: {
-    property: '--pbl-flexgrid-column-width' as any,
-  },
+  properties: ['--pbl-flexgrid-column-width'],
+  fromProps: ['size'],
+  transform: identityTransform as IdentityTransformFn<FlexGridSize | 'fillup'>,
 });
 
 const FlexGridColumn = styled(InnerColumnBox)`
@@ -54,7 +50,7 @@ const FlexGridColumn = styled(InnerColumnBox)`
 `;
 
 type GapTuple = [number | string, number | string];
-interface GridBoxProps extends Omit<BoxProps, 'gap'> {
+interface GridBoxProps extends Omit<FlexProps, 'gap'> {
   columns?: number;
   gapTuple: GapTuple;
   children: ReactNode;
@@ -64,13 +60,12 @@ interface FlexGridProps extends Omit<GridBoxProps, 'gapTuple'> {
   gap?: number | string | GapTuple;
 }
 
-const GridBox = styled(Box)<GridBoxProps>`
+const GridBox = styled(Flex)<GridBoxProps>`
   ${(props) => css`
     --pbl-flexgrid-columns: ${props.columns || 12};
     --pbl-flexgrid-gap-column: ${getSpacing(props.gapTuple[0])(props)};
     --pbl-flexgrid-gap-row: ${getSpacing(props.gapTuple[1])(props)};
   `}
-  display: flex;
   flex-wrap: wrap;
   gap: var(--pbl-flexgrid-gap-row) var(--pbl-flexgrid-gap-column);
 `;
@@ -78,7 +73,7 @@ const GridBox = styled(Box)<GridBoxProps>`
 const FlexGrid = ({ children, gap = 2, ...props }: FlexGridProps) => {
   const tuple = Array.isArray(gap) ? gap : ([gap, gap] as [number, number]);
   return (
-    <GridBox {...props} gapTuple={tuple}>
+    <GridBox {...(props as any)} gapTuple={tuple}>
       {children}
     </GridBox>
   );

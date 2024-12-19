@@ -148,7 +148,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
         {...props}
       >
         {start && (
-          <Box flexShrink={0} ml={adornmentGap as any} css={getCustomStyles('startAdornment')}>
+          <Box shrink={0} ml={adornmentGap as any} css={getCustomStyles('startAdornment')}>
             {start}
           </Box>
         )}
@@ -167,7 +167,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           customStyles={customStyles}
         />
         {end && (
-          <Box flexShrink={0} mr={adornmentGap as any} css={getCustomStyles('endAdornment')}>
+          <Box shrink={0} mr={adornmentGap as any} css={getCustomStyles('endAdornment')}>
             {end}
           </Box>
         )}

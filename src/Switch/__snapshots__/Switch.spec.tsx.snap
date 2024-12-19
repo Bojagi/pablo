@@ -3,14 +3,14 @@
 exports[`Render switch checked 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-1 {
@@ -98,14 +98,14 @@ exports[`Render switch checked 1`] = `
 exports[`Render switch unchecked 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-1 {
@@ -200,7 +200,6 @@ exports[`Render switch with label 1`] = `
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
   margin-left: 8px;
-  margin-bottom: 0px;
 }
 
 <label

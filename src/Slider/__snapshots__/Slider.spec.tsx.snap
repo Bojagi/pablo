@@ -21,24 +21,15 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  0: f;
-  1: l;
-  2: e;
-  3: x;
-  4: -;
-  5: s;
-  6: h;
-  7: r;
-  8: i;
-  9: n;
-  10: k;
-  13: s;
-  14: h;
-  15: r;
-  16: i;
-  17: n;
-  18: k;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
   width: 100%;
+  height: 16px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -52,18 +43,29 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
 
 .emotion-2 {
   width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-3 {
   position: absolute;
+  height: 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  border-radius: 10px;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .emotion-4 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--pbl-theme-colors-common-white);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2),0px 4px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
@@ -72,6 +74,7 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
   transform: translateY(-50%) translateX(-50%);
   cursor: -webkit-grab;
   cursor: grab;
+  border: 1px solid var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-5 {
@@ -159,24 +162,15 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  0: f;
-  1: l;
-  2: e;
-  3: x;
-  4: -;
-  5: s;
-  6: h;
-  7: r;
-  8: i;
-  9: n;
-  10: k;
-  13: s;
-  14: h;
-  15: r;
-  16: i;
-  17: n;
-  18: k;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
   width: 100%;
+  height: 16px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -190,18 +184,29 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
 
 .emotion-2 {
   width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-3 {
   position: absolute;
+  height: 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  border-radius: 10px;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .emotion-4 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--pbl-theme-colors-common-white);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2),0px 4px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
@@ -210,6 +215,7 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
   transform: translateY(-50%) translateX(-50%);
   cursor: -webkit-grab;
   cursor: grab;
+  border: 1px solid var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-5 {
@@ -297,24 +303,15 @@ exports[`SimpleSlider story snapshot 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  0: f;
-  1: l;
-  2: e;
-  3: x;
-  4: -;
-  5: s;
-  6: h;
-  7: r;
-  8: i;
-  9: n;
-  10: k;
-  13: s;
-  14: h;
-  15: r;
-  16: i;
-  17: n;
-  18: k;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
   width: 100%;
+  height: 16px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -328,18 +325,29 @@ exports[`SimpleSlider story snapshot 1`] = `
 
 .emotion-2 {
   width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-3 {
   position: absolute;
+  height: 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  border-radius: 10px;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .emotion-4 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--pbl-theme-colors-common-white);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2),0px 4px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
@@ -348,6 +356,7 @@ exports[`SimpleSlider story snapshot 1`] = `
   transform: translateY(-50%) translateX(-50%);
   cursor: -webkit-grab;
   cursor: grab;
+  border: 1px solid var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-5 {
@@ -435,24 +444,15 @@ exports[`UpperOutOfBounds story snapshot 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  0: f;
-  1: l;
-  2: e;
-  3: x;
-  4: -;
-  5: s;
-  6: h;
-  7: r;
-  8: i;
-  9: n;
-  10: k;
-  13: s;
-  14: h;
-  15: r;
-  16: i;
-  17: n;
-  18: k;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
   width: 100%;
+  height: 16px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -466,18 +466,29 @@ exports[`UpperOutOfBounds story snapshot 1`] = `
 
 .emotion-2 {
   width: 100%;
+  height: 8px;
+  border-radius: 8px;
+  background-color: var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-3 {
   position: absolute;
+  height: 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  border-radius: 10px;
+  background-color: var(--pbl-theme-colors-brand-main);
 }
 
 .emotion-4 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--pbl-theme-colors-common-white);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2),0px 4px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
@@ -486,6 +497,7 @@ exports[`UpperOutOfBounds story snapshot 1`] = `
   transform: translateY(-50%) translateX(-50%);
   cursor: -webkit-grab;
   cursor: grab;
+  border: 1px solid var(--pbl-theme-colors-gray-100);
 }
 
 .emotion-5 {

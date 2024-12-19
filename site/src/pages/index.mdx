@@ -2,7 +2,7 @@
 
 ## What is Pablo?
 
-Pablo is the design system of Bojagi built on top of `emotion` and `styled-system`. 
+Pablo is the design system of Bojagi built on top of `emotion`. 
 
 It's build on these three core principles:
 
@@ -21,8 +21,8 @@ const [name, setName] = useState('');
 <Input value="name" label="Name" onChange={setName} />
 ```
 
-Every component of Pablo is also extending most of the `Box` component props, which is built on
-top of `styled-system`. This way there is no need for wrapping divs only for the sake of layouting.
+Every component of Pablo is also extending most of the `Box` component props, which implements our
+own styled system implementation. This way there is no need for wrapping divs only for the sake of layouting.
 
 ```jsx
 <Box display="flex" mx={-4}>
@@ -39,7 +39,7 @@ extend. There are different ways you can customize:
 * Update the theme values to update primitives like color or typographic values globally
 * Change the `componentStyles` config to update component specific values such as gaps, colors or sizes
 * Overwrite styling of parts of components globally with styled-component's `css` tag literal
-* Overwrite single styling properties such as padding or margin with `styled-system` props
+* Overwrite single styling properties such as padding or margin with styled system props
 * Overwrite styling of parts of components in place with the `customStyles` prop
 
 Get a full insight into customization in the [Customization Section](/docs/Customization).
