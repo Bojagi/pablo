@@ -29,7 +29,7 @@ test('Get media query with styles when media query was found', () => {
 
   const { container } = renderComponent(Component);
   expect(container.firstChild).toHaveStyleRule('background-color', 'red', {
-    media: 'only screen and (min-width: 200px)',
+    media: 'only screen and (min-width: var(--pbl-theme-breakpoints-md))',
   });
 });
 
@@ -57,7 +57,7 @@ test('Get media below query with styles when media query was found', () => {
 
   const { container } = renderComponent(Component);
   expect(container.firstChild).toHaveStyleRule('background-color', 'red', {
-    media: 'only screen and (max-width: calc(200px - 1px))',
+    media: 'only screen and (max-width: calc(var(--pbl-theme-breakpoints-md) - 1px))',
   });
 });
 

@@ -19,14 +19,20 @@ export interface FlexContainerProps {
   alignContent?: ResponsiveValue<CSS.Property.AlignContent>;
 }
 
+const shrinkGrowTransform: InterpolationTransformFn<number | string | boolean, number | string> = (
+  value
+) => (value === true ? 1 : value === false ? 0 : value);
+
 export const flexItem = system([
   {
     properties: ['flexGrow'],
     fromProps: ['grow', 'flexGrow'],
+    transform: shrinkGrowTransform,
   },
   {
     properties: ['flexShrink'],
     fromProps: ['shrink', 'flexShrink'],
+    transform: shrinkGrowTransform,
   },
   {
     properties: ['flexBasis'],

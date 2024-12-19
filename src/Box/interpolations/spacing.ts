@@ -5,7 +5,6 @@ const getGapSpacing = (value: any, theme: PabloTheme) => {
   if (Array.isArray(value)) {
     return value.map((val) => spacingTransform(val, theme)).join(' ');
   }
-
   const spacing = spacingTransform(value, theme);
   return [spacing, spacing].join(' ');
 };
