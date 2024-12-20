@@ -4,6 +4,8 @@ import styled from '@emotion/styled';
 import { getSpacing } from '../styleHelpers';
 import { css } from '@emotion/react';
 import { identityTransform, IdentityTransformFn, ResponsiveValue, system } from '../Box/system';
+import { flexItem } from '../Box/interpolations/flex';
+import { ifPropIs } from '../styleHelpers/styleProp';
 
 type FlexGridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
@@ -33,12 +35,8 @@ const columnSizeInterpolationFn = system({
 const FlexGridColumn = styled(InnerColumnBox)`
   ${columnSizeInterpolationFn}
   flex-basis: auto;
-  ${(props) =>
-    props.size === 'fillup' &&
-    css`
-      flex-grow: 1;
-    `}
-  ${(props) =>
+  ${ifPropIs('size', 'fillup', flexItem.grow(1))}
+  ${(props: FlexGridColumnProps) =>
     props.size !== 'fillup' &&
     css`
       width: calc(

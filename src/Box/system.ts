@@ -182,7 +182,7 @@ const makeObject = (
 const systemInterpolation =
   <T>(config: SystemInterpolationPropertyConfig<T>) =>
   (value: TransformParameterType<typeof config>) =>
-  (props: PabloThemeableProps) =>
+  (props: any) =>
     makeObject(interpolate(config.properties, value, props, config.transform), props.theme);
 
 const createSystemProperty = (config: SystemPropertyConfig) => {
