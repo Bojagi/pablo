@@ -166,7 +166,7 @@ const makeObject = (
 ) => {
   return pairs.reduce((acc, [key, value, breakpointName]) => {
     if (breakpointName && breakpointName !== 'base') {
-      const breakpointKey = `@media min-width: ${mediaQueryAbove(breakpointName, theme.breakpoints)}`;
+      const breakpointKey = `@media ${mediaQueryAbove(breakpointName, theme.breakpoints)}`;
 
       if (!acc[breakpointKey]) {
         acc[breakpointKey] = {};
@@ -198,10 +198,16 @@ const createSystemProperty = (config: SystemPropertyConfig) => {
 
 const createSystemProperties = <T extends SystemPropertyConfig[]>(configs: T): SystemFn<T> => {
   const interpolationFn = (props: PabloThemeableProps): CSSObject => {
-    return makeObject(
+    const x = makeObject(
       configs.flatMap((config) => createSystemProperty(config)(props)),
       props.theme
     );
+
+    if (configs[0].fromProps?.[0] === 'size') {
+      console.log('return ', x);
+    }
+
+    return x;
   };
 
   configs.forEach((config) => {
