@@ -47,3 +47,17 @@ export type CssColor =
   | `#${string}`
   | `rgba(${string})`
   | `rgb(${string})`;
+
+export interface AsProp<C extends React.ElementType> {
+  as?: C;
+}
+
+export type PolyProps<C extends React.ElementType, P = unknown> = AsProp<C> &
+  Omit<React.ComponentPropsWithRef<C>, keyof AsProp<C>> &
+  P;
+
+export type PolyComponent<C extends React.ElementType, P = unknown> = <
+  E extends React.ElementType = C,
+>(
+  props: PolyProps<E, P>
+) => JSX.Element | null;

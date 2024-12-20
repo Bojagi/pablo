@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Box, Flex, FlexProps, type BoxProps } from '../Box';
 import styled from '@emotion/styled';
 import { getSpacing } from '../styleHelpers';
@@ -6,25 +6,14 @@ import { css } from '@emotion/react';
 import { identityTransform, IdentityTransformFn, ResponsiveValue, system } from '../Box/system';
 import { flexItem } from '../Box/interpolations/flex';
 import { ifPropIs } from '../styleHelpers/styleProp';
+import { PolyComponent } from '../types';
 
 type FlexGridSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 interface FlexGridColumnProps extends BoxProps {
   children: ReactNode;
-  as?: React.ElementType;
   size: ResponsiveValue<FlexGridSize | 'fillup'>;
 }
-
-const InnerColumnBox = forwardRef<HTMLDivElement, FlexGridColumnProps>(
-  ({ children, as: As, ...props }, ref) => {
-    const InnerComponent = As || Box;
-    return (
-      <InnerComponent ref={ref} {...props}>
-        {children}
-      </InnerComponent>
-    );
-  }
-);
 
 const columnSizeInterpolationFn = system({
   properties: ['--pbl-flexgrid-column-width'],
@@ -32,11 +21,11 @@ const columnSizeInterpolationFn = system({
   transform: identityTransform as IdentityTransformFn<FlexGridSize | 'fillup'>,
 });
 
-const FlexGridColumn = styled(InnerColumnBox)`
+const FlexGridColumn: PolyComponent<typeof Box, FlexGridColumnProps> = styled(Box)`
   ${columnSizeInterpolationFn}
   flex-basis: auto;
   ${ifPropIs('size', 'fillup', flexItem.grow(1))}
-  ${(props: FlexGridColumnProps) =>
+  ${(props) =>
     props.size !== 'fillup' &&
     css`
       width: calc(
@@ -45,7 +34,7 @@ const FlexGridColumn = styled(InnerColumnBox)`
           (var(--pbl-flexgrid-gap-column) / var(--pbl-flexgrid-columns))
       );
     `}
-`;
+` as any;
 
 type GapTuple = [number | string, number | string];
 interface GridBoxProps extends Omit<FlexProps, 'gap'> {

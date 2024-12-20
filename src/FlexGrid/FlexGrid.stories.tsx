@@ -4,7 +4,7 @@ import { Flex } from '../Box';
 import { Paragraph } from '../Typography';
 
 export default {
-  title: 'Grid',
+  title: 'FlexGrid',
 };
 
 const ColumnItem = ({ height = 100, size, ...props }: Omit<FlexGridColumnProps, 'children'>) => {
@@ -25,6 +25,7 @@ const ColumnItem = ({ height = 100, size, ...props }: Omit<FlexGridColumnProps, 
   return (
     <FlexGrid.Column
       as={Flex}
+      center
       height={height}
       size={size}
       ref={ref}
