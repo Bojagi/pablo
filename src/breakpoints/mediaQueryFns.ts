@@ -7,8 +7,8 @@ export const mediaQueryAbove: MediaQueryFn = (breakpointName, breakpoints) => {
 };
 
 export const mediaQueryBelow: MediaQueryFn = (breakpointName, breakpoints) => {
-  const bp = breakpoints.get(breakpointName);
-  return `only screen and (max-width: (${bp}px - 1px))`;
+  const bp = breakpoints.get(breakpointName) || 0;
+  return `only screen and (max-width: ${bp - 1}px)`;
 };
 
 export const mediaQueryOnly: MediaQueryFn = (breakpointName, breakpoints) => {
@@ -18,7 +18,7 @@ export const mediaQueryOnly: MediaQueryFn = (breakpointName, breakpoints) => {
     return mediaQueryAbove(breakpointName, breakpoints);
   }
 
-  const lowerBound = breakpoints.get(breakpointName);
-  const upperBound = breakpoints.get(allBreakpoints[index + 1][0]);
-  return `only screen and (min-width: ${lowerBound}) and (max-width: (${upperBound} - 1px))`;
+  const lowerBound = breakpoints.get(breakpointName) || 0;
+  const upperBound = breakpoints.get(allBreakpoints[index + 1][0]) || 0;
+  return `only screen and (min-width: ${lowerBound}px) and (max-width: ${upperBound - 1}px)`;
 };

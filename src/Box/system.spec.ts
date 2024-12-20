@@ -74,10 +74,10 @@ test('Create a system interpolation from props with responsive values as array',
     })
   ).toEqual({
     margin: '12px',
-    '@media min-width: only screen and (min-width: var(--pbl-theme-breakpoints-sm))': {
+    '@media only screen and (min-width: 700px)': {
       margin: '15px',
     },
-    '@media min-width: only screen and (min-width: var(--pbl-theme-breakpoints-md))': {
+    '@media only screen and (min-width: 1000px)': {
       margin: '18px',
     },
   });
@@ -97,10 +97,10 @@ test('Create a system interpolation from props with responsive values as object'
     })
   ).toEqual({
     margin: '12px',
-    '@media min-width: only screen and (min-width: var(--pbl-theme-breakpoints-sm))': {
+    '@media only screen and (min-width: 700px)': {
       margin: '15px',
     },
-    '@media min-width: only screen and (min-width: var(--pbl-theme-breakpoints-lg))': {
+    '@media only screen and (min-width: 1200px)': {
       margin: '18px',
     },
   });

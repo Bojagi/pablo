@@ -197,18 +197,11 @@ const createSystemProperty = (config: SystemPropertyConfig) => {
 };
 
 const createSystemProperties = <T extends SystemPropertyConfig[]>(configs: T): SystemFn<T> => {
-  const interpolationFn = (props: PabloThemeableProps): CSSObject => {
-    const x = makeObject(
+  const interpolationFn = (props: PabloThemeableProps): CSSObject =>
+    makeObject(
       configs.flatMap((config) => createSystemProperty(config)(props)),
       props.theme
     );
-
-    if (configs[0].fromProps?.[0] === 'size') {
-      console.log('return ', x);
-    }
-
-    return x;
-  };
 
   configs.forEach((config) => {
     const fromProps = config.fromProps || config.properties;
