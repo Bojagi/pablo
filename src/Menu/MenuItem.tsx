@@ -2,12 +2,12 @@ import React, { ReactNode } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { buttonBaseStyles } from '../ButtonBase';
-import { getSpacing } from '../styleHelpers';
 import { themeVars } from '../theme/themeVars';
 import { BaseProps } from '../types';
 import { ButtonTypography } from '../Typography';
 import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
 import { MenuItemStyleProperties } from './styles';
+import { margin, padding } from '../Box/interpolations/spacing';
 
 export interface MenuItemProps extends BaseProps<MenuItemStyleProperties> {
   children: ReactNode;
@@ -21,9 +21,8 @@ const MenuItemBox = styled.div<MenuItemProps>`
   display: block;
   color: ${themeVars.colors.common.black};
   text-decoration: none;
-  margin-top: ${getSpacing(0.25)};
-  margin-bottom: ${getSpacing(0.25)};
-  padding: ${getSpacing(0.5)};
+  ${margin.y(0.25)}
+  ${padding.all(0.5)}
 
   ${(props: MenuItemProps) =>
     props.selected

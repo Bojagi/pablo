@@ -1,23 +1,24 @@
-import { BreakpointsArray } from '../theme/breakpoints';
+import { Breakpoint, Breakpoints } from '../theme/breakpoints';
 
-export type MediaQueryFn = (
-  breakpoint: string,
-  breakpoints: BreakpointsArray,
-  index: number
-) => string;
+export type MediaQueryFn = (breakpointName: Breakpoint, breakpoints: Breakpoints) => string;
+export const mediaQueryAbove: MediaQueryFn = (breakpointName, breakpoints) => {
+  const bp = breakpoints.get(breakpointName);
+  return `only screen and (min-width: ${bp}px)`;
+};
 
-export const mediaQueryAbove: MediaQueryFn = (breakpoint) =>
-  `only screen and (min-width: ${breakpoint})`;
+export const mediaQueryBelow: MediaQueryFn = (breakpointName, breakpoints) => {
+  const bp = breakpoints.get(breakpointName) || 0;
+  return `only screen and (max-width: ${bp - 1}px)`;
+};
 
-export const mediaQueryBelow: MediaQueryFn = (breakpoint) =>
-  `only screen and (max-width: calc(${breakpoint} - 1px))`;
-
-export const mediaQueryOnly: MediaQueryFn = (breakpoint, breakpoints, index) => {
-  if (index === breakpoints.length - 1) {
-    return mediaQueryAbove(breakpoint, breakpoints, index);
+export const mediaQueryOnly: MediaQueryFn = (breakpointName, breakpoints) => {
+  const allBreakpoints = Array.from(breakpoints.entries());
+  const index = allBreakpoints.findIndex(([bp]) => bp === breakpointName);
+  if (index === allBreakpoints.length - 1) {
+    return mediaQueryAbove(breakpointName, breakpoints);
   }
 
-  return `only screen and (min-width: ${breakpoints[index]}) and (max-width: calc(${
-    breakpoints[index + 1]
-  } - 1px))`;
+  const lowerBound = breakpoints.get(breakpointName) || 0;
+  const upperBound = breakpoints.get(allBreakpoints[index + 1][0]) || 0;
+  return `only screen and (min-width: ${lowerBound}px) and (max-width: ${upperBound - 1}px)`;
 };

@@ -12,14 +12,14 @@ exports[`Render with nothing selected 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3 {
@@ -74,7 +74,6 @@ exports[`Render with nothing selected 1`] = `
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
   margin-left: 8px;
-  margin-bottom: 0px;
 }
 
 <div>
@@ -197,14 +196,14 @@ exports[`Work with one radio button 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3 {
@@ -259,7 +258,6 @@ exports[`Work with one radio button 1`] = `
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
   margin-left: 8px;
-  margin-bottom: 0px;
 }
 
 <div>

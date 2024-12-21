@@ -21,8 +21,13 @@ const interpolateCss = <P extends object>(
 };
 
 const ifProp =
-  <P extends object>(prop: keyof P, style: StyleInterpolation<P>) =>
+  <P extends object>(prop: keyof P, style: StyleInterpolation<any>) =>
   (props: P) =>
     props[prop] ? interpolateCss(style, props, prop) : null;
 
-export { ifProp };
+const ifPropIs =
+  <P extends object, K extends keyof P>(prop: K, value: P[K], style: StyleInterpolation<any>) =>
+  (props: P) =>
+    props[prop] === value ? interpolateCss(style, props, prop) : null;
+
+export { ifProp, ifPropIs };

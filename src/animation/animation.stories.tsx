@@ -33,7 +33,7 @@ const BaseStory = ({ component: Component, ...args }) => {
       `}
       alignItems="stretch"
     >
-      <Flex center flexGrow={1} flexBasis={0}>
+      <Flex center grow={1} flexBasis={0}>
         <Box mb={4}>
           <Checkbox
             mb={1}
@@ -57,7 +57,7 @@ const BaseStory = ({ component: Component, ...args }) => {
           </NativeSelect>
         </Box>
       </Flex>
-      <Flex center flexGrow={1} flexShrink={0} flexBasis={0} bgColor="gray.50">
+      <Flex center grow={1} shrink={0} flexBasis={0} bgColor="gray.50">
         <Box maxWidth={400} height={200} p={3}>
           <Component duration={duration} visible={visible} easing={easing} {...args}>
             <Card>

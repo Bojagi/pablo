@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FlexGrid, FlexGridColumnProps } from './FlexGrid';
+import { Flex } from '../Box';
 import { Paragraph } from '../Typography';
 
 export default {
-  title: 'Grid',
+  title: 'FlexGrid',
 };
 
 const ColumnItem = ({ height = 100, size, ...props }: Omit<FlexGridColumnProps, 'children'>) => {
@@ -23,14 +24,13 @@ const ColumnItem = ({ height = 100, size, ...props }: Omit<FlexGridColumnProps, 
 
   return (
     <FlexGrid.Column
+      as={Flex}
+      center
       height={height}
       size={size}
       ref={ref}
       bgColor="brand.main"
       textColor="brand.contrastText"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
       {...props}
     >
       <Paragraph>Size {sizeText}</Paragraph>
@@ -60,11 +60,11 @@ export const MultiLineGrid = () => (
 
 export const ResponsiveGrid = () => (
   <FlexGrid width="80vw" gap={1}>
-    <ColumnItem height={{ _: 150, sm: 300 }} size={{ _: 6, sm: 8 }} />
-    <ColumnItem height={{ _: 150, sm: 300 }} size={{ _: 6, sm: 4 }} />
-    <ColumnItem height={200} size={{ _: 12, sm: 4 }} />
-    <ColumnItem height={200} size={{ _: 12, sm: 4 }} />
-    <ColumnItem height={200} size={{ _: 12, sm: 4 }} />
+    <ColumnItem height={[150, 300]} size={[6, 8]} />
+    <ColumnItem height={[150, 300]} size={[6, 4]} />
+    <ColumnItem height={200} size={[12, 4]} />
+    <ColumnItem height={200} size={[12, 4]} />
+    <ColumnItem height={200} size={{ base: 12, sm: 4 }} />
   </FlexGrid>
 );
 

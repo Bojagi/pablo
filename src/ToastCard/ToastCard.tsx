@@ -9,11 +9,12 @@ import { Paragraph, Subtitle } from '../Typography';
 import { getComponentStyle, shadowTransformer } from '../styleHelpers';
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './Icons';
 import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
-import { BaseProps } from '../types';
+import { BaseProps, KeyMap } from '../types';
 import { ToastCardStyleProperties } from './styles';
 import { baseStyle } from '../shared/baseStyle';
 import { themeVars } from '../theme/themeVars';
 import { useUniqueId } from '../utils/useUniqueId';
+import { Colors } from '../theme/colors';
 
 const CardWrapper = styled.div<LayoutBoxProps>`
   ${baseStyle}
@@ -41,12 +42,12 @@ export interface ToastCardProps extends LayoutBoxProps, BaseProps<ToastCardStyle
 
 const ALLOWED_TYPES: ToastType[] = ['info', 'success', 'warning', 'error'];
 
-const iconColors: Record<ToastType, string> = {
+const iconColors: Record<ToastType, KeyMap<Colors>> = {
   info: 'common.white',
   success: 'positive.main',
   warning: 'neutral.main',
   error: 'negative.main',
-};
+} as const;
 
 const icons: Record<ToastType, ReactElement> = {
   info: <InfoIcon />,
@@ -93,12 +94,12 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
               {icon || icons[type!]}
             </Box>
           )}
-          <Box flexGrow={1}>
+          <Box grow={1}>
             <Flex>
               <Subtitle
                 data-testid="pbl-toastcard-title"
                 id={titleId}
-                flexGrow={1}
+                grow={1}
                 inline={!description}
                 customStyles={{
                   subtitle: getStyles('title'),

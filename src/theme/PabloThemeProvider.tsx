@@ -9,13 +9,14 @@ import { themeVarNames } from './themeVars';
 import { css, Global, ThemeProvider } from '@emotion/react';
 
 const overwriteMerge = (_, sourceArray) => sourceArray;
+const isMergeableObject = (val) => isObject(val) && !Array.isArray(val) && !(val instanceof Map);
 
 function createThemeVarDefinitions(theme: any, keyNameObject: any) {
   return Array.from(Object.entries(keyNameObject))
     .map(([key, varName]) =>
       isObject(varName)
         ? createThemeVarDefinitions(theme[key], keyNameObject[key])
-        : `--${varName}: ${theme[key]};`
+        : `--${varName}: ${theme instanceof Map ? theme.get(key) : theme[key]};`
     )
     .flat()
     .join(' ');
@@ -27,7 +28,10 @@ export const PabloThemeProvider = ({
   root,
   children,
 }: PabloThemeProviderProps) => {
-  const mergedTheme = merge(defaultTheme, theme, { arrayMerge: overwriteMerge }) as PabloTheme;
+  const mergedTheme = merge(defaultTheme, theme, {
+    arrayMerge: overwriteMerge,
+    isMergeableObject,
+  }) as PabloTheme;
   const defaultComponentStyles = getDefaultComponentStyles();
 
   const mergedComponentStyles = merge(defaultComponentStyles, componentStyles) as ComponentStyles;

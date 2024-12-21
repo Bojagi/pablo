@@ -2,8 +2,9 @@ import React, { ReactNode } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { baseStyle } from '../shared/baseStyle';
-import { getComponentStyle, getSpacing } from '../styleHelpers';
+import { getComponentStyle } from '../styleHelpers';
 import { ToastStackSide } from './types';
+import { padding } from '../Box/interpolations/spacing';
 
 export interface ToastStackProps {
   side: ToastStackSide;
@@ -12,7 +13,7 @@ export interface ToastStackProps {
 
 const ToastStackBox = styled.div<ToastStackProps>`
   ${baseStyle}
-  padding: ${getSpacing(1.5)};
+  ${padding.all(1.5)}
   width: ${getComponentStyle('toastCard.width')};
   position: fixed;
   display: flex;

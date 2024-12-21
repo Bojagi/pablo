@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 import { Slider } from './Slider';
 import * as stories from './Slider.stories';
+import { PabloThemeProvider } from '../theme';
 
 const defaultProps = {
   from: 0,
@@ -141,5 +142,9 @@ test('UpperOutOfBounds story snapshot', () => {
 });
 
 function createStoryComponent(Story) {
-  return <Story {...Story.args} />;
+  return (
+    <PabloThemeProvider>
+      <Story {...Story.args} />
+    </PabloThemeProvider>
+  );
 }
