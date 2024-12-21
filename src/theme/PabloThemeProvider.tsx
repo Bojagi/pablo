@@ -39,7 +39,7 @@ const EmotionCache = ({ root, children }: EmotionCacheProps) => {
     () =>
       doc &&
       createCache({
-        key: 'app',
+        key: 'pbl',
         container: doc instanceof Document ? doc.head : doc,
         stylisPlugins: [prefixer],
       }),

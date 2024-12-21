@@ -10,7 +10,7 @@ export default [
   // browser-friendly UMD build
   {
     input: 'src/index.ts',
-    external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
+    external: ['react', 'react-dom', '@emotion/react', '@emotion/styled', '@emotion/cache', '@emotion/sheet', 'stylis'],
     output: {
       name: 'pablo',
       file: 'build/pablo.min.js',
@@ -20,6 +20,9 @@ export default [
         'react-dom': 'ReactDom',
         '@emotion/react': '@emotion/react',
         '@emotion/styled': '@emotion/styled',
+        '@emotion/cache': '@emotion/cache',
+        '@emotion/sheet': '@emotion/sheet',
+        'stylis': 'stylis',
       },
     },
     plugins: [
