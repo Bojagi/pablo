@@ -50,14 +50,14 @@ exports[`Render closed modal with just a content element 1`] = `
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .emotion-2 {
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 12px;
+  padding: 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -101,20 +101,20 @@ exports[`Render with additional panes 1`] = `
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .emotion-1 {
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 12px;
+  padding: 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 
 <div
@@ -178,7 +178,7 @@ exports[`Render with title 1`] = `
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 12px;
+  padding: 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -233,7 +233,7 @@ exports[`Render with title and topRightItem 1`] = `
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 12px;
+  padding: 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -291,7 +291,7 @@ exports[`Render with topRightItem 1`] = `
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 12px;
+  padding: 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 

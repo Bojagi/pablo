@@ -82,9 +82,15 @@ test('Render medium switch', () => {
     size: 'medium',
     label: 'medium label',
   });
-  expect(getByTestId('pbl-switch')).toHaveStyleRule('width', 'calc(2 * 18px + 2 * (2px + 1px))');
-  expect(getByTestId('pbl-switch')).toHaveStyleRule('height', 'calc(1 * 18px + 2 * (2px + 1px))');
-  expect(getByTestId('pbl-switch')).toHaveStyleRule('padding', '2px');
+  expect(getByTestId('pbl-switch')).toHaveStyleRule(
+    'width',
+    'calc(2 * 18px + 2 * (0.125rem + 1px))'
+  );
+  expect(getByTestId('pbl-switch')).toHaveStyleRule(
+    'height',
+    'calc(1 * 18px + 2 * (0.125rem + 1px))'
+  );
+  expect(getByTestId('pbl-switch')).toHaveStyleRule('padding', '0.125rem');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('width', '18px');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('height', '18px');
   // Uses subtitle typography
@@ -99,9 +105,15 @@ test('Render small switch', () => {
     size: 'small',
     label: 'small label',
   });
-  expect(getByTestId('pbl-switch')).toHaveStyleRule('width', 'calc(2 * 12px + 2 * (2px + 1px))');
-  expect(getByTestId('pbl-switch')).toHaveStyleRule('height', 'calc(1 * 12px + 2 * (2px + 1px))');
-  expect(getByTestId('pbl-switch')).toHaveStyleRule('padding', '2px');
+  expect(getByTestId('pbl-switch')).toHaveStyleRule(
+    'width',
+    'calc(2 * 12px + 2 * (0.125rem + 1px))'
+  );
+  expect(getByTestId('pbl-switch')).toHaveStyleRule(
+    'height',
+    'calc(1 * 12px + 2 * (0.125rem + 1px))'
+  );
+  expect(getByTestId('pbl-switch')).toHaveStyleRule('padding', '0.125rem');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('width', '12px');
   expect(getByTestId('pbl-switch-handle')).toHaveStyleRule('height', '12px');
   // Uses paragraph typography

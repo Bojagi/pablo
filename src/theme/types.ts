@@ -37,6 +37,10 @@ export interface PabloTheme {
   breakpoints: Breakpoints;
 }
 
+export type ThemeValueGetter<V = any> = (
+  value: V
+) => ({ theme }: PabloThemeableProps) => CSSInterpolation;
+
 export interface PabloThemeFull extends PabloTheme {
   componentStyles: ComponentStyles;
 }

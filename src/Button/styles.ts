@@ -92,7 +92,7 @@ const gray = themeVars.colors.gray;
 
 export const buttonStyles: ButtonStyles = {
   base: {
-    borderRadius: getSpacing(0.5),
+    borderRadius: '0.25rem',
     icon: {
       gap: getSpacing(1),
       size: {

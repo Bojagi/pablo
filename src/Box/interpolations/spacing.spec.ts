@@ -17,7 +17,7 @@ describe.each([
   ['macro padding', padding, 'padding', 0.5, 'p'],
   ['micro margin', microMargin, 'margin', 0.25, 'mm'],
   ['micro padding', microPadding, 'padding', 0.25, 'mp'],
-])('%s system', (name, systemFn, property, base, shorthand) => {
+])('%s system', (name, systemFn: any, property, base, shorthand) => {
   test(`${name} system`, () => {
     expect(systemFn({ [shorthand]: 10, ...props })).toEqual({
       [property]: `${10 * base}rem`,
@@ -111,7 +111,7 @@ describe.each([
 test.each([
   ['macro', 0.5, padding],
   ['micro', 0.25, microPadding],
-])('%s gap spacing', (_, base, systemFn) => {
+])('%s gap spacing', (_, base, systemFn: typeof padding) => {
   expect(systemFn({ gap: 10, ...props })).toEqual({
     gap: `${10 * base}rem ${10 * base}rem`,
   });
@@ -121,4 +121,43 @@ test.each([
   expect(systemFn.gap(10)(props)).toEqual({
     gap: `${10 * base}rem ${10 * base}rem`,
   });
+});
+
+test('getSpacing', () => {
+  expect(margin.get('xxxs')(props)).toEqual('0.125rem');
+  expect(margin.get('xxs')(props)).toEqual('0.25rem');
+  expect(margin.get('xs')(props)).toEqual('0.375rem');
+  expect(margin.get('sm')(props)).toEqual('0.5rem');
+  expect(margin.get('md')(props)).toEqual('0.75rem');
+  expect(margin.get('lg')(props)).toEqual('1rem');
+  expect(margin.get('xl')(props)).toEqual('1.5rem');
+  expect(margin.get('xxl')(props)).toEqual('2rem');
+  expect(margin.get('xxxl')(props)).toEqual('3rem');
+  expect(padding.get('xxxs')(props)).toEqual('0.125rem');
+  expect(padding.get('xxs')(props)).toEqual('0.25rem');
+  expect(padding.get('xs')(props)).toEqual('0.375rem');
+  expect(padding.get('sm')(props)).toEqual('0.5rem');
+  expect(padding.get('md')(props)).toEqual('0.75rem');
+  expect(padding.get('lg')(props)).toEqual('1rem');
+  expect(padding.get('xl')(props)).toEqual('1.5rem');
+  expect(padding.get('xxl')(props)).toEqual('2rem');
+  expect(padding.get('xxxl')(props)).toEqual('3rem');
+  expect(microMargin.get('xxxs')(props)).toEqual('0.0625rem');
+  expect(microMargin.get('xxs')(props)).toEqual('0.125rem');
+  expect(microMargin.get('xs')(props)).toEqual('0.1875rem');
+  expect(microMargin.get('sm')(props)).toEqual('0.25rem');
+  expect(microMargin.get('md')(props)).toEqual('0.375rem');
+  expect(microMargin.get('lg')(props)).toEqual('0.5rem');
+  expect(microMargin.get('xl')(props)).toEqual('0.75rem');
+  expect(microMargin.get('xxl')(props)).toEqual('1rem');
+  expect(microMargin.get('xxxl')(props)).toEqual('1.5rem');
+  expect(microPadding.get('xxxs')(props)).toEqual('0.0625rem');
+  expect(microPadding.get('xxs')(props)).toEqual('0.125rem');
+  expect(microPadding.get('xs')(props)).toEqual('0.1875rem');
+  expect(microPadding.get('sm')(props)).toEqual('0.25rem');
+  expect(microPadding.get('md')(props)).toEqual('0.375rem');
+  expect(microPadding.get('lg')(props)).toEqual('0.5rem');
+  expect(microPadding.get('xl')(props)).toEqual('0.75rem');
+  expect(microPadding.get('xxl')(props)).toEqual('1rem');
+  expect(microPadding.get('xxxl')(props)).toEqual('1.5rem');
 });

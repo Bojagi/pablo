@@ -31,7 +31,7 @@ test('Render closed modal with just a content element', () => {
 
   // Modal Area
   expect(getByTestId('pbl-modal-area')).toHaveStyleRule('max-width', '780px');
-  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('padding', '24px');
+  expect(getByTestId('pbl-modal-area')).toHaveStyleRule('padding', '1.5rem');
   expect(getByTestId('pbl-modal-area')).toHaveStyleRule('margin', 'auto'); // Crucial for centering and scrolling
   expect(getByTestId('pbl-modal-area')).toHaveStyleRule('min-height', 'min-content'); // Crucial for centering and scrolling
 
@@ -41,7 +41,7 @@ test('Render closed modal with just a content element', () => {
     'background-color',
     themeVars.colors.background
   );
-  expect(getByTestId('pbl-modal-box')).toHaveStyleRule('padding', '12px');
+  expect(getByTestId('pbl-modal-box')).toHaveStyleRule('padding', '0.75rem');
   expect(document.body).toHaveStyle('overflow: auto');
 });
 
@@ -136,7 +136,7 @@ test('Render with additional panes', () => {
   });
   expect(getByTestId('pbl-modal-area')).toMatchSnapshot();
   expect(getAllByTestId('pbl-modal-pane')).toBeArrayOfSize(3);
-  expect(getAllByTestId('pbl-modal-pane')[0]).toHaveStyleRule('margin-top', '12px');
+  expect(getAllByTestId('pbl-modal-pane')[0]).toHaveStyleRule('margin-top', '0.75rem');
 });
 
 test('Close when clicking on the backdrop', () => {

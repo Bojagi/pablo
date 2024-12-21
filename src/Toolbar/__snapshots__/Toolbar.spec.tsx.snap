@@ -7,8 +7,8 @@ exports[`Render toolbar 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -4px;
-  height: calc(24px + 2 * 4px);
+  margin: 0 -0.25rem;
+  height: calc(24px + 2 * 0.25rem);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -43,8 +43,8 @@ exports[`Render toolbar 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-1>* {
@@ -87,7 +87,7 @@ exports[`Render toolbar 1`] = `
 
 .emotion-4 {
   box-sizing: border-box;
-  margin: 0 4px;
+  margin: 0 0.25rem;
   width: 1px;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;

@@ -5,8 +5,8 @@ exports[`Render first selected 1`] = `
   box-sizing: border-box;
   opacity: 0;
   opacity: 0;
-  margin-left: -4px;
-  margin-right: -4px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,19 +34,19 @@ exports[`Render first selected 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: 8px 12px 12px;
+  padding: 0.5rem 0.75rem 0.75rem;
   margin: 0;
 }
 
@@ -64,7 +64,7 @@ exports[`Render first selected 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:active {
@@ -75,11 +75,11 @@ exports[`Render first selected 1`] = `
   content: '';
   position: absolute;
   bottom: 0;
-  left: 8px;
-  width: calc(100% - 2 * 8px);
-  height: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  left: 0.5rem;
+  width: calc(100% - 2 * 0.5rem);
+  height: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
@@ -111,16 +111,16 @@ exports[`Render first selected 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
 }
 
@@ -138,7 +138,7 @@ exports[`Render first selected 1`] = `
 }
 
 .emotion-3:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-3:active {
@@ -162,15 +162,15 @@ exports[`Render first selected 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 8px;
+  margin-left: 0.5rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -190,7 +190,7 @@ exports[`Render first selected 1`] = `
 }
 
 .emotion-7:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-7:active {
@@ -229,14 +229,14 @@ exports[`Render first selected 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
 }
 
@@ -254,7 +254,7 @@ exports[`Render first selected 1`] = `
 }
 
 .emotion-9:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-9:active {
@@ -278,17 +278,17 @@ exports[`Render first selected 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: 8px 12px 12px;
+  padding: 0.5rem 0.75rem 0.75rem;
   margin: 0;
 }
 
@@ -306,7 +306,7 @@ exports[`Render first selected 1`] = `
 }
 
 .emotion-11:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-11:active {
@@ -317,11 +317,11 @@ exports[`Render first selected 1`] = `
   content: '';
   position: absolute;
   bottom: 0;
-  left: 8px;
-  width: calc(100% - 2 * 8px);
-  height: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  left: 0.5rem;
+  width: calc(100% - 2 * 0.5rem);
+  height: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
@@ -450,8 +450,8 @@ exports[`Render tabs with icons 1`] = `
   box-sizing: border-box;
   opacity: 0;
   opacity: 0;
-  margin-left: -4px;
-  margin-right: -4px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -479,16 +479,16 @@ exports[`Render tabs with icons 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
 }
 
@@ -506,7 +506,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:active {
@@ -519,7 +519,7 @@ exports[`Render tabs with icons 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
+  margin-right: 0.5rem;
   width: 20px;
   height: 20px;
 }
@@ -557,19 +557,19 @@ exports[`Render tabs with icons 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: 8px 12px 12px;
+  padding: 0.5rem 0.75rem 0.75rem;
   margin: 0;
 }
 
@@ -587,7 +587,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .emotion-4:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-4:active {
@@ -598,11 +598,11 @@ exports[`Render tabs with icons 1`] = `
   content: '';
   position: absolute;
   bottom: 0;
-  left: 8px;
-  width: calc(100% - 2 * 8px);
-  height: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  left: 0.5rem;
+  width: calc(100% - 2 * 0.5rem);
+  height: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
@@ -623,15 +623,15 @@ exports[`Render tabs with icons 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 8px;
+  margin-left: 0.5rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -651,7 +651,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .emotion-10:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-10:active {
@@ -690,14 +690,14 @@ exports[`Render tabs with icons 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
 }
 
@@ -715,7 +715,7 @@ exports[`Render tabs with icons 1`] = `
 }
 
 .emotion-12:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-12:active {
@@ -899,8 +899,8 @@ exports[`Render tabs with icons 1`] = `
 exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-left: -4px;
-  margin-right: -4px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -928,19 +928,19 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: 8px 12px 12px;
+  padding: 0.5rem 0.75rem 0.75rem;
   margin: 0;
 }
 
@@ -958,7 +958,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:active {
@@ -969,11 +969,11 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   content: '';
   position: absolute;
   bottom: 0;
-  left: 8px;
-  width: calc(100% - 2 * 8px);
-  height: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  left: 0.5rem;
+  width: calc(100% - 2 * 0.5rem);
+  height: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
@@ -1005,15 +1005,15 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 8px;
+  margin-left: 0.5rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
 }
 
@@ -1031,7 +1031,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .emotion-3:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-3:active {
@@ -1070,14 +1070,14 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
 }
 
@@ -1095,7 +1095,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 }
 
 .emotion-5:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-5:active {
@@ -1221,8 +1221,8 @@ exports[`Work with one tab 1`] = `
   box-sizing: border-box;
   opacity: 0;
   opacity: 0;
-  margin-left: -4px;
-  margin-right: -4px;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1250,19 +1250,19 @@ exports[`Work with one tab 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: 8px 12px 12px;
+  padding: 0.5rem 0.75rem 0.75rem;
   margin: 0;
 }
 
@@ -1280,7 +1280,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:active {
@@ -1291,11 +1291,11 @@ exports[`Work with one tab 1`] = `
   content: '';
   position: absolute;
   bottom: 0;
-  left: 8px;
-  width: calc(100% - 2 * 8px);
-  height: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  left: 0.5rem;
+  width: calc(100% - 2 * 0.5rem);
+  height: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   background-color: var(--pbl-theme-colors-brand-main);
 }
 
@@ -1327,15 +1327,15 @@ exports[`Work with one tab 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
-  margin-left: 8px;
+  margin-left: 0.5rem;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -1355,7 +1355,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .emotion-3:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-3:active {
@@ -1394,14 +1394,14 @@ exports[`Work with one tab 1`] = `
   text-decoration: none;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
   color: var(--pbl-theme-colors-common-black);
   position: relative;
-  padding: 8px 12px 12px;
-  margin: 0 0 0px;
+  padding: 0.5rem 0.75rem 0.75rem;
+  margin: 0 0 0rem;
   white-space: nowrap;
 }
 
@@ -1419,7 +1419,7 @@ exports[`Work with one tab 1`] = `
 }
 
 .emotion-5:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-5:active {

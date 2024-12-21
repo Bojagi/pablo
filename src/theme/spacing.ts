@@ -17,7 +17,8 @@ export interface Spacing {
   sizes: SpacingSizes;
 }
 
-export const spacingNames: Array<keyof SpacingSizes> = [
+export type SpacingNames = keyof SpacingSizes;
+export const spacingNames: Array<SpacingNames> = [
   'xxxs',
   'xxs',
   'xs',
@@ -29,7 +30,7 @@ export const spacingNames: Array<keyof SpacingSizes> = [
   'xxxl',
 ];
 
-export const spacing: Spacing = {
+export const spacingTokens: Spacing = {
   unit: 'rem',
   // Spacing for layouts
   macro: 0.5,

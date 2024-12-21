@@ -73,11 +73,14 @@ test('Render medium radio', () => {
     size: 'medium',
     label: 'medium label',
   });
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(12px + 2 * (6px + 1px))');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', 'calc(12px + 2 * (6px + 1px))');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '6px');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '12px');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '12px');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(0.75rem + 2 * (0.375rem + 1px))');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule(
+    'height',
+    'calc(0.75rem + 2 * (0.375rem + 1px))'
+  );
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '0.375rem');
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '0.75rem');
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '0.75rem');
   // Uses subtitle typography
   expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',
@@ -90,11 +93,11 @@ test('Render small radio', () => {
     size: 'small',
     label: 'small label',
   });
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(8px + 2 * (4px + 1px))');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', 'calc(8px + 2 * (4px + 1px))');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '4px');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '8px');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '8px');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(0.5rem + 2 * (0.25rem + 1px))');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', 'calc(0.5rem + 2 * (0.25rem + 1px))');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '0.25rem');
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '0.5rem');
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '0.5rem');
   // Uses paragraph typography
   expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',

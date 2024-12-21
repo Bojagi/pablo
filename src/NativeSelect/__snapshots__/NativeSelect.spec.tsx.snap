@@ -38,7 +38,7 @@ exports[`Render without value 1`] = `
   width: 8px;
   height: 6px;
   position: absolute;
-  right: 8px;
+  right: 0.5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -57,11 +57,11 @@ exports[`Render without value 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  padding: 6px 8px;
+  padding: 0.375rem 0.5rem;
   background-color: transparent;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   outline: none;
-  padding-right: calc(8px * 2 + 8px);
+  padding-right: calc(0.5rem * 2 + 8px);
   position: relative;
 }
 
@@ -149,7 +149,7 @@ exports[`Show error when an error message is given 1`] = `
   width: 8px;
   height: 6px;
   position: absolute;
-  right: 8px;
+  right: 0.5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -168,11 +168,11 @@ exports[`Show error when an error message is given 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  padding: 6px 8px;
+  padding: 0.375rem 0.5rem;
   background-color: transparent;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   outline: none;
-  padding-right: calc(8px * 2 + 8px);
+  padding-right: calc(0.5rem * 2 + 8px);
   position: relative;
 }
 
@@ -185,7 +185,7 @@ exports[`Show error when an error message is given 1`] = `
   font-size: var(--pbl-theme-typography-info-fontSize);
   line-height: var(--pbl-theme-typography-info-lineHeight);
   margin-bottom: var(--pbl-theme-typography-info-marginBottom);
-  margin-top: 4px;
+  margin-top: 0.25rem;
   color: var(--pbl-theme-colors-negative-main);
 }
 
@@ -281,7 +281,7 @@ exports[`Show infotext when available 1`] = `
   width: 8px;
   height: 6px;
   position: absolute;
-  right: 8px;
+  right: 0.5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -300,11 +300,11 @@ exports[`Show infotext when available 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  padding: 6px 8px;
+  padding: 0.375rem 0.5rem;
   background-color: transparent;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   outline: none;
-  padding-right: calc(8px * 2 + 8px);
+  padding-right: calc(0.5rem * 2 + 8px);
   position: relative;
 }
 
@@ -317,7 +317,7 @@ exports[`Show infotext when available 1`] = `
   font-size: var(--pbl-theme-typography-info-fontSize);
   line-height: var(--pbl-theme-typography-info-lineHeight);
   margin-bottom: var(--pbl-theme-typography-info-marginBottom);
-  margin-top: 4px;
+  margin-top: 0.25rem;
   color: var(--pbl-theme-colors-text-info);
 }
 
@@ -389,7 +389,7 @@ exports[`Show label when available 1`] = `
   line-height: var(--pbl-theme-typography-paragraphBold-lineHeight);
   font-weight: var(--pbl-theme-typography-paragraphBold-fontWeight);
   margin-bottom: var(--pbl-theme-typography-paragraphBold-marginBottom);
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 .emotion-2 {
@@ -425,7 +425,7 @@ exports[`Show label when available 1`] = `
   width: 8px;
   height: 6px;
   position: absolute;
-  right: 8px;
+  right: 0.5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -444,11 +444,11 @@ exports[`Show label when available 1`] = `
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  padding: 6px 8px;
+  padding: 0.375rem 0.5rem;
   background-color: transparent;
   font-family: var(--pbl-theme-typography-base-fontFamily);
   outline: none;
-  padding-right: calc(8px * 2 + 8px);
+  padding-right: calc(0.5rem * 2 + 8px);
   position: relative;
 }
 

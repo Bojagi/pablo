@@ -2,7 +2,7 @@ import type { CSSObject } from '@emotion/react';
 import { mediaQueryAbove } from '../breakpoints/mediaQueryFns';
 import { themeVars } from '../theme';
 import { Breakpoint } from '../theme/breakpoints';
-import { PabloTheme, PabloThemeableProps } from '../theme/types';
+import { PabloTheme, PabloThemeableProps, ThemeValueGetter } from '../theme/types';
 import { enforceArray } from '../utils/enforceArray';
 import { getByPath } from '../utils/getByPath';
 import { Colors } from '../theme/colors';
@@ -97,13 +97,16 @@ type ArrayStyledInterpolationFunctions<C extends readonly SystemPropertyConfig[]
 
 type SystemFn<
   C extends readonly SystemPropertyConfig<T>[] | SystemPropertyConfig<T>,
+  A extends ThemeValueGetter = any,
   T = any,
 > = InterpolationFunction<SystemConfigProps<C>> &
   (C extends readonly SystemPropertyConfig<T>[]
     ? ArrayStyledInterpolationFunctions<C>
     : C extends SystemPropertyConfig<T>
       ? StyledInterpolationFunctions<C>
-      : never);
+      : never) & {
+    get: A extends ThemeValueGetter ? A : never;
+  };
 
 type InterpolateReturnTuple = readonly [string, InterpolationReturn, Breakpoint | null];
 
@@ -229,11 +232,17 @@ const createSystemProperties = <T extends SystemPropertyConfig[]>(configs: T): S
   return interpolationFn as SystemFn<T>;
 };
 
-const system = <const T extends SystemPropertyConfig | SystemPropertyConfig[]>(
-  config: T
-): SystemFn<T> => {
+const system = <
+  const T extends SystemPropertyConfig | SystemPropertyConfig[],
+  const A extends ThemeValueGetter,
+>(
+  config: T,
+  getterFn?: A
+): SystemFn<T, A> => {
   const arrayConfig = enforceArray(config);
-  return createSystemProperties(arrayConfig) as SystemFn<T>;
+  const properties = createSystemProperties(arrayConfig);
+  properties.get = getterFn;
+  return properties as SystemFn<T, A>;
 };
 
 export type {

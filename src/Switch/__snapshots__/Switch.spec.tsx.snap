@@ -16,16 +16,16 @@ exports[`Render switch checked 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   position: relative;
-  width: calc(2 * 18px + 2 * (2px + 1px));
-  height: calc(1 * 18px + 2 * (2px + 1px));
+  width: calc(2 * 18px + 2 * (0.125rem + 1px));
+  height: calc(1 * 18px + 2 * (0.125rem + 1px));
   border-radius: calc(
       (
           18px + 2 *
-            2px + 2 *
+            0.125rem + 2 *
             1px
         ) * 0.5
     );
-  padding: 2px;
+  padding: 0.125rem;
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
@@ -111,16 +111,16 @@ exports[`Render switch unchecked 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   position: relative;
-  width: calc(2 * 18px + 2 * (2px + 1px));
-  height: calc(1 * 18px + 2 * (2px + 1px));
+  width: calc(2 * 18px + 2 * (0.125rem + 1px));
+  height: calc(1 * 18px + 2 * (0.125rem + 1px));
   border-radius: calc(
       (
           18px + 2 *
-            2px + 2 *
+            0.125rem + 2 *
             1px
         ) * 0.5
     );
-  padding: 2px;
+  padding: 0.125rem;
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
@@ -199,7 +199,7 @@ exports[`Render switch with label 1`] = `
   font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 <label

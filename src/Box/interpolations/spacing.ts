@@ -1,3 +1,4 @@
+import { SpacingNames } from '../../theme/spacing';
 import { PabloTheme } from '../../theme/types';
 import {
   InterpolationReturn,
@@ -38,6 +39,8 @@ interface PaddingProps {
   py?: ResponsiveValue<string | number>;
   gap?: ResponsiveValue<string | number | Array<string | number>>;
 }
+
+type SpacingProps = MarginProps & PaddingProps;
 
 const getConfig = <P extends string, S extends string>(
   property: P,
@@ -89,16 +92,26 @@ const getConfig = <P extends string, S extends string>(
     },
   ] as const;
 
-const margin = system([...getConfig('margin', 'm', macroSpacingTransform)]);
-const microMargin = system([...getConfig('margin', 'mm', microSpacingTransform)]);
-const padding = system([
+const marginConfig = getConfig('margin', 'm', macroSpacingTransform);
+const paddingConfig = [
   ...getConfig('padding', 'p', macroSpacingTransform),
   { properties: ['gap'], transform: getGapSpacing(macroSpacingTransform) },
-]);
-
-const microPadding = system([
+] as const;
+const microMarginConfig = getConfig('margin', 'mm', microSpacingTransform);
+const microPaddingConfig = [
   ...getConfig('padding', 'mp', microSpacingTransform),
   { properties: ['gap'], transform: getGapSpacing(microSpacingTransform) },
-]);
+] as const;
 
-export { margin, padding, microMargin, microPadding, MarginProps, PaddingProps };
+const macroGetter = (value: number | SpacingNames) => (props) =>
+  macroSpacingTransform(value, props.theme);
+
+const microGetter = (value: number | SpacingNames) => (props) =>
+  microSpacingTransform(value, props.theme);
+
+const margin = system([...marginConfig], macroGetter);
+const microMargin = system([...microMarginConfig], microGetter);
+const padding = system([...paddingConfig], macroGetter);
+const microPadding = system([...microPaddingConfig], microGetter);
+
+export { margin, padding, microMargin, microPadding, MarginProps, PaddingProps, SpacingProps };

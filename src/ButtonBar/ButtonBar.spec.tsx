@@ -12,7 +12,7 @@ test('Render button bar', () => {
     </ButtonBar>
   );
   expect(container).toMatchSnapshot();
-  expect(getByTestId('pbl-buttonbar')).toHaveStyleRule('gap', '4px 4px');
+  expect(getByTestId('pbl-buttonbar')).toHaveStyleRule('gap', '0.25rem 0.25rem');
   const allButtons = getAllByTestId('pbl-button');
   expect(allButtons).toBeArrayOfSize(2);
 });
