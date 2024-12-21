@@ -27,9 +27,26 @@ test('Forward ref function', () => {
   expect(ref.mock.calls[0][0].getAttribute('data-testid')).toBe('pbl-portal-mountpoint');
 });
 
-function renderComponent(props) {
+test('Forward ref object with ShadowRoot', async () => {
+  const ref: any = {};
+  const shadowRoot = document.createElement('div').attachShadow({ mode: 'open' });
+  renderComponent({ ref }, shadowRoot);
+  expect(ref.current).toBeDefined();
+  expect(ref.current.getAttribute('data-testid')).toBe('pbl-portal-mountpoint');
+  expect(ref.current.parentNode).toBe(shadowRoot);
+});
+
+test('Forward ref function with ShadowRoot', () => {
+  const ref = jest.fn();
+  const shadowRoot = document.createElement('div').attachShadow({ mode: 'open' });
+  renderComponent({ ref }, shadowRoot);
+  expect(ref).toHaveBeenCalledTimes(1);
+  expect(ref.mock.calls[0][0].getAttribute('data-testid')).toBe('pbl-portal-mountpoint');
+});
+
+function renderComponent(props: object, rootElement: ShadowRoot | Document = document) {
   const { baseElement, unmount } = render(
-    <PabloThemeProvider>
+    <PabloThemeProvider root={rootElement}>
       <Portal name="portal" {...props}>
         <div data-testid="outside-elem">Outside content</div>
       </Portal>

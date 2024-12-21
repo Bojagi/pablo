@@ -57,7 +57,7 @@ To set text color you use the `textColor` prop and for background color `bgColor
 You either can use colors from the Pablo theme (e.g. `brand.main`) or css hex or named color (e.g. `#ffffff` or `tomato`).
 
 ```jsx live
-<Box p={4} bgColor="brand.main" centerFlex textColor="papayawhip">
+<Box p={4} bgColor="brand.main" textColor="papayawhip">
   I'm a Tomato
 </Box>
 ```
@@ -80,16 +80,6 @@ align the left and right edges back to the content outside.
 ```
 
 We are planning to make a shortcut component that does this for you automatically as this setup is quite common.
-
-### Using the `centerFlex` prop
-
-You can use the `centerFlex` prop to center the content of the box horizontally and vertically.
-
-```jsx live
-<Box centerFlex p={1} size={500} bgColor="blue">
-  <Box mx={1} size={50} bgColor="red" />
-</Box>
-```
 
 ### Custom CSS
 

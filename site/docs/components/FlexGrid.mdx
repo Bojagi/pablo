@@ -30,7 +30,7 @@ a column of 6 columns takes half of the width. You can also set `size="fillup"` 
 
 ```jsx live
 function Component() {
-  const columnStyleProps = { bgColor: 'brand.main', textColor: 'brand.contrastText', p: 2, centerFlex: true };
+  const columnStyleProps = { bgColor: 'brand.main', textColor: 'brand.contrastText', p: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' };
   return (
     <FlexGrid width="100%">
       <FlexGrid.Column size={4} {...columnStyleProps}>
@@ -53,13 +53,13 @@ Like with any `Box` style props, you can use the `size` prop to define the colum
 
 ```jsx live
 function Component() {
-  const columnStyleProps = { bgColor: 'brand.main', textColor: 'brand.contrastText', p: 2, centerFlex: true };
+  const columnStyleProps = { bgColor: 'brand.main', textColor: 'brand.contrastText', p: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' };
   return (
     <FlexGrid width="100%">
-      <FlexGrid.Column size={{ _: 12, sm: 6 }} bgColor="brand.main" textColor="brand.contrastText" p={2} centerFlex>
+      <FlexGrid.Column size={{ _: 12, sm: 6 }} bgColor="brand.main" textColor="brand.contrastText" p={2}>
         <Paragraph>Size 12 on mobile, Size 6 on portrait tablet and higher</Paragraph>
       </FlexGrid.Column>
-      <FlexGrid.Column size={{ _: 12, sm: 6 }}  bgColor="brand.main" textColor="brand.contrastText" p={2} centerFlex>
+      <FlexGrid.Column size={{ _: 12, sm: 6 }}  bgColor="brand.main" textColor="brand.contrastText" p={2}>
         <Paragraph>Size 12 on mobile, Size 6 on portrait tablet and higher</Paragraph>
       </FlexGrid.Column>
     </FlexGrid>
@@ -73,7 +73,7 @@ If you create multiple columns that don't fit into one row, they will automatica
 
 ```jsx live
 function Component() {
-  const columnStyleProps = { bgColor: 'brand.main', textColor: 'brand.contrastText', p: 2, centerFlex: true };
+  const columnStyleProps = { bgColor: 'brand.main', textColor: 'brand.contrastText', p: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' };
   return (
     <FlexGrid width="100%" gap={1}>
       <FlexGrid.Column size={8} {...columnStyleProps}>
