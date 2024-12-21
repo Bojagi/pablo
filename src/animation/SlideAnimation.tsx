@@ -39,7 +39,7 @@ const leftStyles = (props: SlideStyleProps) => css`
   transform: ${transformInterpolateFn('X', -1, props)};
 `;
 
-const slideAnimationBase: any = (props: SlideStyleProps) => css`
+const slideAnimationExited: any = (props: SlideStyleProps) => css`
   opacity: 0;
   ${conditionalStyles<SlideStyleProps>('side', {
     top: topStyles,
@@ -49,12 +49,12 @@ const slideAnimationBase: any = (props: SlideStyleProps) => css`
   })(props)}
 `;
 
-const slideAnimationEnter = css`
+const slideAnimationEntered = css`
   opacity: 1;
   transform: translateY(0) translateX(0);
 `;
 
 export const SlideAnimation = createInOutAnimation<SlideAnimationProps>({
-  baseStyles: slideAnimationBase,
-  enterStyles: slideAnimationEnter,
+  exitedStyles: slideAnimationExited,
+  enteredStyles: slideAnimationEntered,
 });
