@@ -3,7 +3,7 @@ import { color, ColorProps } from './interpolations/color';
 import { CssFunctionReturn } from '../types';
 import { baseStyle } from '../shared/baseStyle';
 import { interpolateCssProp } from '../utils/interpolateCssProp';
-import { margin, padding, spacing, SpacingProps } from './interpolations/spacing';
+import { margin, padding, SpacingProps } from './interpolations/spacing';
 import { layout, LayoutProps } from './interpolations/layout';
 import { svg, SvgProps } from './interpolations/svg';
 import { position, PositionProps } from './interpolations/position';
