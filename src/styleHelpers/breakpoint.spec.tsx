@@ -15,10 +15,10 @@ test('Get media query with styles when media query was found', () => {
   )({
     theme: {
       breakpoints: new Map([
-        ['sm', '100px'],
-        ['md', '200px'],
-        ['lg', '300px'],
-        ['xl', '400px'],
+        ['sm', 100],
+        ['md', 200],
+        ['lg', 300],
+        ['xl', 400],
       ]),
     },
   } as any) as any;
@@ -29,7 +29,7 @@ test('Get media query with styles when media query was found', () => {
 
   const { container } = renderComponent(Component);
   expect(container.firstChild).toHaveStyleRule('background-color', 'red', {
-    media: 'only screen and (min-width: var(--pbl-theme-breakpoints-md))',
+    media: 'only screen and (min-width: 200px)',
   });
 });
 
@@ -43,10 +43,10 @@ test('Get media below query with styles when media query was found', () => {
   )({
     theme: {
       breakpoints: new Map([
-        ['sm', '100px'],
-        ['md', '200px'],
-        ['lg', '300px'],
-        ['xl', '400px'],
+        ['sm', 100],
+        ['md', 200],
+        ['lg', 300],
+        ['xl', 400],
       ]),
     },
   } as any) as any;
@@ -57,7 +57,7 @@ test('Get media below query with styles when media query was found', () => {
 
   const { container } = renderComponent(Component);
   expect(container.firstChild).toHaveStyleRule('background-color', 'red', {
-    media: 'only screen and (max-width: calc(var(--pbl-theme-breakpoints-md) - 1px))',
+    media: 'only screen and (max-width: 199px)',
   });
 });
 
