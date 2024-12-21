@@ -3,7 +3,7 @@ import {
   identityTransform,
   InterpolationTransformFn,
   ResponsiveValue,
-  spacingTransform,
+  macroSpacingTransform,
   system,
 } from '../system';
 
@@ -17,6 +17,8 @@ export interface PositionProps {
   left?: ResponsiveValue<CSS.Property.Left>;
 }
 
+const transform = macroSpacingTransform;
+
 export const position = system([
   {
     properties: ['position'],
@@ -29,18 +31,18 @@ export const position = system([
   },
   {
     properties: ['top'],
-    transform: spacingTransform,
+    transform,
   },
   {
     properties: ['right'],
-    transform: spacingTransform,
+    transform,
   },
   {
     properties: ['bottom'],
-    transform: spacingTransform,
+    transform,
   },
   {
     properties: ['left'],
-    transform: spacingTransform,
+    transform,
   },
 ]);

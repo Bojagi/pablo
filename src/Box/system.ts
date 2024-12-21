@@ -7,6 +7,7 @@ import { enforceArray } from '../utils/enforceArray';
 import { getByPath } from '../utils/getByPath';
 import { Colors } from '../theme/colors';
 import { KeyMap } from '../types';
+import { spacingNames } from '../theme/spacing';
 type InterpolationReturn = string | number | null | undefined;
 type IdentityTransformFn<T extends InterpolationReturn = InterpolationReturn> =
   InterpolationTransformFn<T, T>;
@@ -118,9 +119,20 @@ const identityTransform: IdentityTransformFn = <T>(value: T): T => value;
 const pixelTransform: InterpolationTransformFn<number | string> = stringableTransform(
   (value) => `${value}px`
 );
-const spacingTransform: InterpolationTransformFn<number | string> = stringableTransform(
-  (value, theme) => `${value * theme.spacing}px`
-);
+const spacingTransform =
+  (name: string): InterpolationTransformFn<number | string> =>
+  (value, theme) => {
+    if (typeof value === 'string' && spacingNames.includes(value as any)) {
+      return `${theme.spacing.sizes[value] * theme.spacing[name]}${theme.spacing.unit}`;
+    }
+    if (typeof value === 'string') {
+      return value;
+    }
+    return `${value * theme.spacing[name]}${theme.spacing.unit}`;
+  };
+
+const macroSpacingTransform = spacingTransform('macro');
+const microSpacingTransform = spacingTransform('micro');
 
 const colorTransform: InterpolationTransformFn<KeyMap<Colors>> = (value) =>
   (getByPath(themeVars.colors as Colors, value) as InterpolationReturn) || value;
@@ -226,6 +238,7 @@ const system = <const T extends SystemPropertyConfig | SystemPropertyConfig[]>(
 
 export type {
   ResponsiveValue,
+  InterpolationReturn,
   InterpolationTransformFn,
   InterpolationFunction,
   IdentityTransformFn,
@@ -236,7 +249,8 @@ export {
   system,
   systemInterpolation,
   pixelTransform,
-  spacingTransform,
+  macroSpacingTransform,
+  microSpacingTransform,
   identityTransform,
   colorTransform,
 };

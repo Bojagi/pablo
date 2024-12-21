@@ -1,11 +1,20 @@
 import { PabloTheme } from '../../theme/types';
-import { ResponsiveValue, spacingTransform, system } from '../system';
+import {
+  InterpolationReturn,
+  InterpolationTransformFn,
+  microSpacingTransform,
+  macroSpacingTransform,
+  ResponsiveValue,
+  system,
+} from '../system';
 
-const getGapSpacing = (value: any, theme: PabloTheme) => {
+type SpacingTransformFn = InterpolationTransformFn<number | string, InterpolationReturn>;
+
+const getGapSpacing = (transformFn: SpacingTransformFn) => (value: any, theme: PabloTheme) => {
   if (Array.isArray(value)) {
-    return value.map((val) => spacingTransform(val, theme)).join(' ');
+    return value.map((val) => transformFn(val, theme)).join(' ');
   }
-  const spacing = spacingTransform(value, theme);
+  const spacing = transformFn(value, theme);
   return [spacing, spacing].join(' ');
 };
 
@@ -30,56 +39,66 @@ interface PaddingProps {
   gap?: ResponsiveValue<string | number | Array<string | number>>;
 }
 
-const getConfig = <P extends string, S extends string>(property: P, shortHand: S) =>
+const getConfig = <P extends string, S extends string>(
+  property: P,
+  shortHand: S,
+  transform: SpacingTransformFn
+) =>
   [
     {
       properties: [property],
-      transform: spacingTransform,
+      transform,
       fromProps: [shortHand],
       as: 'all',
     },
     {
       properties: [`${property}Top`],
-      transform: spacingTransform,
+      transform,
       fromProps: [`${shortHand}t`],
       as: 'top',
     },
     {
       properties: [`${property}Right`],
-      transform: spacingTransform,
+      transform,
       fromProps: [`${shortHand}r`],
       as: 'right',
     },
     {
       properties: [`${property}Bottom`],
-      transform: spacingTransform,
+      transform,
       fromProps: [`${shortHand}b`],
       as: 'bottom',
     },
     {
       properties: [`${property}Left`],
-      transform: spacingTransform,
+      transform,
       fromProps: [`${shortHand}l`],
       as: 'left',
     },
     {
       properties: [`${property}Left`, `${property}Right`],
-      transform: spacingTransform,
+      transform,
       fromProps: [`${shortHand}x`],
       as: 'x',
     },
     {
       properties: [`${property}Top`, `${property}Bottom`],
-      transform: spacingTransform,
+      transform,
       fromProps: [`${shortHand}y`],
       as: 'y',
     },
   ] as const;
 
-const margin = system([...getConfig('margin', 'm')]);
+const margin = system([...getConfig('margin', 'm', macroSpacingTransform)]);
+const microMargin = system([...getConfig('margin', 'mm', microSpacingTransform)]);
 const padding = system([
-  ...getConfig('padding', 'p'),
-  { properties: ['gap'], transform: getGapSpacing },
+  ...getConfig('padding', 'p', macroSpacingTransform),
+  { properties: ['gap'], transform: getGapSpacing(macroSpacingTransform) },
 ]);
 
-export { margin, padding, MarginProps, PaddingProps };
+const microPadding = system([
+  ...getConfig('padding', 'mp', microSpacingTransform),
+  { properties: ['gap'], transform: getGapSpacing(microSpacingTransform) },
+]);
+
+export { margin, padding, microMargin, microPadding, MarginProps, PaddingProps };
