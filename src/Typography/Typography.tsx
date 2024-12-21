@@ -1,8 +1,6 @@
 import React, { forwardRef } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { typography } from '@styled-system/typography';
-import type { TypographyProps as StyledSystemTypographyProps } from 'styled-system';
 import { boxInterpolateFn, BoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { BaseProps } from '../types';
@@ -10,11 +8,12 @@ import { getCustomStyles } from '../utils/useCustomStyles';
 import { TypographyStyleProperties } from './styles';
 import { TypographyVariant } from './types';
 import { themeVars } from '../theme/themeVars';
+import { typography, TypographyInterpolationProps } from '../Box/interpolations/typography';
 
 export interface BaseTypographyProps
   extends BoxProps,
     BaseProps<TypographyStyleProperties>,
-    StyledSystemTypographyProps {
+    TypographyInterpolationProps {
   inline?: boolean;
 }
 export interface TypographyProps extends BaseTypographyProps {

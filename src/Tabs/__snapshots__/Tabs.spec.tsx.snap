@@ -7,14 +7,14 @@ exports[`Render first selected 1`] = `
   opacity: 0;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .emotion-1 {
@@ -330,6 +330,7 @@ exports[`Render first selected 1`] = `
     class="emotion-0"
     data-testid="pbl-tabs"
     role="tablist"
+    wrap="wrap"
   >
     <button
       aria-selected="true"
@@ -451,14 +452,14 @@ exports[`Render tabs with icons 1`] = `
   opacity: 0;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .emotion-1 {
@@ -726,6 +727,7 @@ exports[`Render tabs with icons 1`] = `
     class="emotion-0"
     data-testid="pbl-tabs"
     role="tablist"
+    wrap="wrap"
   >
     <button
       aria-selected="false"
@@ -899,14 +901,14 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   box-sizing: border-box;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .emotion-1 {
@@ -1106,6 +1108,7 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
     data-testid="pbl-tabs"
     fake-width="100"
     role="tablist"
+    wrap="wrap"
   >
     <button
       aria-selected="true"
@@ -1220,14 +1223,14 @@ exports[`Work with one tab 1`] = `
   opacity: 0;
   margin-left: -4px;
   margin-right: -4px;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .emotion-1 {
@@ -1428,6 +1431,7 @@ exports[`Work with one tab 1`] = `
     class="emotion-0"
     data-testid="pbl-tabs"
     role="tablist"
+    wrap="wrap"
   >
     <button
       aria-selected="true"

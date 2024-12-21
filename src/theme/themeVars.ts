@@ -10,6 +10,11 @@ export const themeVarNames = {
 };
 
 function createThemeReferences<T extends Record<string, any>>(obj: T): T {
+  if (obj instanceof Map) {
+    return Object.fromEntries(
+      Array.from(obj.entries()).map(([key, value]) => [key, `var(--${value})`])
+    ) as T;
+  }
   return Object.entries(obj).reduce(
     (acc, [key, value]) => ({
       ...acc,
