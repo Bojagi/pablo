@@ -13,7 +13,7 @@ export const Portal = forwardRef<unknown, PortalProps>(({ children, name }, ref)
   const rootElement = useContext(rootContext);
   useEffect(() => setMountPoint(document.createElement('div')), []);
   useEffect(() => {
-    if (mountPoint) {
+    if (mountPoint && rootElement) {
       mountPoint.setAttribute('data-testid', `pbl-${name}-mountpoint`);
       const mountPointParent = rootElement instanceof ShadowRoot ? rootElement : rootElement.body;
       mountPointParent.appendChild(mountPoint);

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import type { ReactElement } from 'react';
 import merge from 'deepmerge';
 import isObject from 'isobject';
 import { getDefaultComponentStyles } from './defaultComponentStyles';
@@ -24,10 +25,41 @@ function createThemeVarDefinitions(theme: any, keyNameObject: any) {
     .join(' ');
 }
 
+interface EmotionCacheProps {
+  root?: ShadowRoot | Document;
+  children: ReactElement;
+}
+
+const EmotionCache = ({ root, children }: EmotionCacheProps) => {
+  const [doc, setDoc] = React.useState<Document | ShadowRoot | undefined>(root);
+  React.useLayoutEffect(() => {
+    setDoc((existingDocument) => existingDocument || document);
+  }, []);
+  const emotionCache = React.useMemo(
+    () =>
+      doc &&
+      createCache({
+        key: 'app',
+        container: doc instanceof Document ? doc.head : doc,
+        stylisPlugins: [prefixer],
+      }),
+    [doc]
+  );
+
+  if (!emotionCache || !root) {
+    return <>{children}</>;
+  }
+  return (
+    <CacheProvider value={emotionCache}>
+      <rootContext.Provider value={root}>{children}</rootContext.Provider>
+    </CacheProvider>
+  );
+};
+
 export const PabloThemeProvider = ({
   theme = {},
   componentStyles = {},
-  root = document,
+  root,
   children,
 }: PabloThemeProviderProps) => {
   const mergedTheme = merge(defaultTheme, theme, {
@@ -38,16 +70,6 @@ export const PabloThemeProvider = ({
 
   const mergedComponentStyles = merge(defaultComponentStyles, componentStyles) as ComponentStyles;
 
-  const emotionCache = React.useMemo(
-    () =>
-      createCache({
-        key: 'app',
-        container: root instanceof Document ? root.head : root,
-        stylisPlugins: [prefixer],
-      }),
-    [root]
-  );
-
   const styledTheme = React.useMemo(
     () => ({
       ...mergedTheme,
@@ -57,23 +79,21 @@ export const PabloThemeProvider = ({
   );
 
   return (
-    <CacheProvider value={emotionCache}>
-      <rootContext.Provider value={root}>
-        <ThemeProvider theme={styledTheme}>
-          <Global
-            styles={css`
-              :root {
-                ${createThemeVarDefinitions(mergedTheme, themeVarNames)}
-              }
-            `}
-          />
-          <pabloThemeContext.Provider value={mergedTheme}>
-            <pabloComponentStylesContext.Provider value={mergedComponentStyles}>
-              {children}
-            </pabloComponentStylesContext.Provider>
-          </pabloThemeContext.Provider>
-        </ThemeProvider>
-      </rootContext.Provider>
-    </CacheProvider>
+    <EmotionCache root={root}>
+      <ThemeProvider theme={styledTheme}>
+        <Global
+          styles={css`
+            :root {
+              ${createThemeVarDefinitions(mergedTheme, themeVarNames)}
+            }
+          `}
+        />
+        <pabloThemeContext.Provider value={mergedTheme}>
+          <pabloComponentStylesContext.Provider value={mergedComponentStyles}>
+            {children}
+          </pabloComponentStylesContext.Provider>
+        </pabloThemeContext.Provider>
+      </ThemeProvider>
+    </EmotionCache>
   );
 };
