@@ -19,7 +19,7 @@ exports[`render button with end icon 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -43,7 +43,7 @@ exports[`render button with end icon 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -82,7 +82,7 @@ exports[`render button with end icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .emotion-2,
@@ -133,7 +133,7 @@ exports[`render button with start icon 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -157,7 +157,7 @@ exports[`render button with start icon 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -185,7 +185,7 @@ exports[`render button with start icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-1,
@@ -247,7 +247,7 @@ exports[`render primary brand color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -271,7 +271,7 @@ exports[`render primary brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -331,7 +331,7 @@ exports[`render primary negative color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -355,7 +355,7 @@ exports[`render primary negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -415,7 +415,7 @@ exports[`render primary plain color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -439,7 +439,7 @@ exports[`render primary plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -499,7 +499,7 @@ exports[`render primary positive color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -523,7 +523,7 @@ exports[`render primary positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -583,7 +583,7 @@ exports[`render primaryInverted brand color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -607,7 +607,7 @@ exports[`render primaryInverted brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -667,7 +667,7 @@ exports[`render primaryInverted negative color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -691,7 +691,7 @@ exports[`render primaryInverted negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -751,7 +751,7 @@ exports[`render primaryInverted plain color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -775,7 +775,7 @@ exports[`render primaryInverted plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -835,7 +835,7 @@ exports[`render primaryInverted positive color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -859,7 +859,7 @@ exports[`render primaryInverted positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -919,7 +919,7 @@ exports[`render secondary brand color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -943,7 +943,7 @@ exports[`render secondary brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1003,7 +1003,7 @@ exports[`render secondary negative color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1027,7 +1027,7 @@ exports[`render secondary negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1087,7 +1087,7 @@ exports[`render secondary plain color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1111,7 +1111,7 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -1171,7 +1171,7 @@ exports[`render secondary positive color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1195,7 +1195,7 @@ exports[`render secondary positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1255,7 +1255,7 @@ exports[`render secondaryInverted brand color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1279,7 +1279,7 @@ exports[`render secondaryInverted brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1339,7 +1339,7 @@ exports[`render secondaryInverted negative color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1363,7 +1363,7 @@ exports[`render secondaryInverted negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1423,7 +1423,7 @@ exports[`render secondaryInverted plain color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1447,7 +1447,7 @@ exports[`render secondaryInverted plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -1507,7 +1507,7 @@ exports[`render secondaryInverted positive color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1531,7 +1531,7 @@ exports[`render secondaryInverted positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1591,7 +1591,7 @@ exports[`render text brand color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1615,7 +1615,7 @@ exports[`render text brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1675,7 +1675,7 @@ exports[`render text negative color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1699,7 +1699,7 @@ exports[`render text negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1759,7 +1759,7 @@ exports[`render text plain color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1783,7 +1783,7 @@ exports[`render text plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -1843,7 +1843,7 @@ exports[`render text positive color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1867,7 +1867,7 @@ exports[`render text positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1927,7 +1927,7 @@ exports[`render textInverted brand color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1951,7 +1951,7 @@ exports[`render textInverted brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -2011,7 +2011,7 @@ exports[`render textInverted negative color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -2035,7 +2035,7 @@ exports[`render textInverted negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -2095,7 +2095,7 @@ exports[`render textInverted plain color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -2119,7 +2119,7 @@ exports[`render textInverted plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -2179,7 +2179,7 @@ exports[`render textInverted positive color button 1`] = `
   padding: 10px 14px;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -2203,7 +2203,7 @@ exports[`render textInverted positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 4px var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {

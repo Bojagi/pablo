@@ -3,7 +3,7 @@ import { color, ColorProps } from './interpolations/color';
 import { CssFunctionReturn } from '../types';
 import { baseStyle } from '../shared/baseStyle';
 import { interpolateCssProp } from '../utils/interpolateCssProp';
-import { margin, MarginProps, PaddingProps, padding } from './interpolations/spacing';
+import { margin, padding, SpacingProps } from './interpolations/spacing';
 import { layout, LayoutProps } from './interpolations/layout';
 import { svg, SvgProps } from './interpolations/svg';
 import { position, PositionProps } from './interpolations/position';
@@ -13,8 +13,7 @@ export interface BoxCssProps {
   css?: CssFunctionReturn;
 }
 
-export type BoxProps = MarginProps &
-  PaddingProps &
+export type BoxProps = SpacingProps &
   ColorProps &
   LayoutProps &
   FlexItemProps &
@@ -32,8 +31,7 @@ export const Box = styled.div<BoxProps>`
   ${boxInterpolateFn}
 `;
 
-export type LayoutBoxProps = MarginProps &
-  PaddingProps &
+export type LayoutBoxProps = SpacingProps &
   FlexItemProps &
   LayoutProps &
   PositionProps &

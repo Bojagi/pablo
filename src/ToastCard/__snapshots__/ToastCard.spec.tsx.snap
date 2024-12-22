@@ -7,7 +7,7 @@ exports[`Render toast card with no type and with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 12px 24px 12px 12px;
+  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -86,7 +86,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 exports[`type error Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-negative-main);
 }
 
@@ -115,7 +115,7 @@ exports[`type error Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 12px 24px 12px 12px;
+  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -133,7 +133,7 @@ exports[`type error Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-negative-main);
 }
 
@@ -227,7 +227,7 @@ exports[`type error Render toast card with only title 1`] = `
 exports[`type info Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -256,7 +256,7 @@ exports[`type info Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 12px 24px 12px 12px;
+  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -274,7 +274,7 @@ exports[`type info Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -368,7 +368,7 @@ exports[`type info Render toast card with only title 1`] = `
 exports[`type success Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-positive-main);
 }
 
@@ -397,7 +397,7 @@ exports[`type success Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 12px 24px 12px 12px;
+  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -415,7 +415,7 @@ exports[`type success Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-positive-main);
 }
 
@@ -509,7 +509,7 @@ exports[`type success Render toast card with only title 1`] = `
 exports[`type undefined Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -538,7 +538,7 @@ exports[`type undefined Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 12px 24px 12px 12px;
+  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -556,7 +556,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -639,7 +639,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 exports[`type unknown Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -668,7 +668,7 @@ exports[`type unknown Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 12px 24px 12px 12px;
+  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -686,7 +686,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -769,7 +769,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 exports[`type warning Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-neutral-main);
 }
 
@@ -798,7 +798,7 @@ exports[`type warning Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 12px 24px 12px 12px;
+  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -816,7 +816,7 @@ exports[`type warning Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 12px;
+  margin-right: 0.75rem;
   fill: var(--pbl-theme-colors-neutral-main);
 }
 

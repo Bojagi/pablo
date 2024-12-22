@@ -3,7 +3,7 @@
 exports[`LowerOutOfBounds story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 16px 16px;
+  gap: 1rem 1rem;
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,7 +144,7 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
 exports[`OffsetRangeSlider story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 16px 16px;
+  gap: 1rem 1rem;
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -285,7 +285,7 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
 exports[`SimpleSlider story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 16px 16px;
+  gap: 1rem 1rem;
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -426,7 +426,7 @@ exports[`SimpleSlider story snapshot 1`] = `
 exports[`UpperOutOfBounds story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 16px 16px;
+  gap: 1rem 1rem;
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;

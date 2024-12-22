@@ -2,11 +2,12 @@ import type { CSSObject } from '@emotion/react';
 import { mediaQueryAbove } from '../breakpoints/mediaQueryFns';
 import { themeVars } from '../theme';
 import { Breakpoint } from '../theme/breakpoints';
-import { PabloTheme, PabloThemeableProps } from '../theme/types';
+import { PabloTheme, PabloThemeableProps, ThemeValueGetter } from '../theme/types';
 import { enforceArray } from '../utils/enforceArray';
 import { getByPath } from '../utils/getByPath';
 import { Colors } from '../theme/colors';
 import { KeyMap } from '../types';
+import { spacingNames } from '../theme/spacing';
 type InterpolationReturn = string | number | null | undefined;
 type IdentityTransformFn<T extends InterpolationReturn = InterpolationReturn> =
   InterpolationTransformFn<T, T>;
@@ -96,13 +97,16 @@ type ArrayStyledInterpolationFunctions<C extends readonly SystemPropertyConfig[]
 
 type SystemFn<
   C extends readonly SystemPropertyConfig<T>[] | SystemPropertyConfig<T>,
+  A extends ThemeValueGetter = any,
   T = any,
 > = InterpolationFunction<SystemConfigProps<C>> &
   (C extends readonly SystemPropertyConfig<T>[]
     ? ArrayStyledInterpolationFunctions<C>
     : C extends SystemPropertyConfig<T>
       ? StyledInterpolationFunctions<C>
-      : never);
+      : never) & {
+    get: A extends ThemeValueGetter ? A : never;
+  };
 
 type InterpolateReturnTuple = readonly [string, InterpolationReturn, Breakpoint | null];
 
@@ -118,9 +122,20 @@ const identityTransform: IdentityTransformFn = <T>(value: T): T => value;
 const pixelTransform: InterpolationTransformFn<number | string> = stringableTransform(
   (value) => `${value}px`
 );
-const spacingTransform: InterpolationTransformFn<number | string> = stringableTransform(
-  (value, theme) => `${value * theme.spacing}px`
-);
+const spacingTransform =
+  (name: string): InterpolationTransformFn<number | string> =>
+  (value, theme) => {
+    if (typeof value === 'string' && spacingNames.includes(value as any)) {
+      return `${theme.spacing.sizes[value] * theme.spacing[name]}${theme.spacing.unit}`;
+    }
+    if (typeof value === 'string') {
+      return value;
+    }
+    return `${value * theme.spacing[name]}${theme.spacing.unit}`;
+  };
+
+const macroSpacingTransform = spacingTransform('macro');
+const microSpacingTransform = spacingTransform('micro');
 
 const colorTransform: InterpolationTransformFn<KeyMap<Colors>> = (value) =>
   (getByPath(themeVars.colors as Colors, value) as InterpolationReturn) || value;
@@ -217,15 +232,22 @@ const createSystemProperties = <T extends SystemPropertyConfig[]>(configs: T): S
   return interpolationFn as SystemFn<T>;
 };
 
-const system = <const T extends SystemPropertyConfig | SystemPropertyConfig[]>(
-  config: T
-): SystemFn<T> => {
+const system = <
+  const T extends SystemPropertyConfig | SystemPropertyConfig[],
+  const A extends ThemeValueGetter,
+>(
+  config: T,
+  getterFn?: A
+): SystemFn<T, A> => {
   const arrayConfig = enforceArray(config);
-  return createSystemProperties(arrayConfig) as SystemFn<T>;
+  const properties = createSystemProperties(arrayConfig);
+  properties.get = getterFn;
+  return properties as SystemFn<T, A>;
 };
 
 export type {
   ResponsiveValue,
+  InterpolationReturn,
   InterpolationTransformFn,
   InterpolationFunction,
   IdentityTransformFn,
@@ -236,7 +258,8 @@ export {
   system,
   systemInterpolation,
   pixelTransform,
-  spacingTransform,
+  macroSpacingTransform,
+  microSpacingTransform,
   identityTransform,
   colorTransform,
 };

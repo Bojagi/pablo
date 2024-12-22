@@ -72,18 +72,18 @@ test('Render with size "medium"', () => {
   const { getAllByTestId } = renderComponent({ size: 'medium' });
   const allRadios = getAllByTestId('pbl-radio-handle');
   expect(allRadios).toHaveLength(3);
-  expect(allRadios[0]).toHaveStyleRule('width', '12px');
-  expect(allRadios[1]).toHaveStyleRule('width', '12px');
-  expect(allRadios[2]).toHaveStyleRule('width', '12px');
+  expect(allRadios[0]).toHaveStyleRule('width', '0.75rem');
+  expect(allRadios[1]).toHaveStyleRule('width', '0.75rem');
+  expect(allRadios[2]).toHaveStyleRule('width', '0.75rem');
 });
 
 test('Render with size "small"', () => {
   const { getAllByTestId } = renderComponent({ size: 'small' });
   const allRadios = getAllByTestId('pbl-radio-handle');
   expect(allRadios).toHaveLength(3);
-  expect(allRadios[0]).toHaveStyleRule('width', '8px');
-  expect(allRadios[1]).toHaveStyleRule('width', '8px');
-  expect(allRadios[2]).toHaveStyleRule('width', '8px');
+  expect(allRadios[0]).toHaveStyleRule('width', '0.5rem');
+  expect(allRadios[1]).toHaveStyleRule('width', '0.5rem');
+  expect(allRadios[2]).toHaveStyleRule('width', '0.5rem');
 });
 
 function renderComponent(props) {
