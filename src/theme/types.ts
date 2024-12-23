@@ -26,6 +26,7 @@ import { ImageStyles } from '../Image/styles';
 import { NativeSelectStyles } from '../NativeSelect/styles';
 import { AnimationStyles } from '../animation/styles';
 import { SliderStyles } from '../Slider/styles';
+import { Fluid } from './fluid';
 
 export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
   | CSSInterpolation
@@ -33,6 +34,7 @@ export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
 export interface PabloTheme {
   spacing: Spacing;
   colors: Colors;
+  fluid: Fluid;
   typography: Typography;
   breakpoints: Breakpoints;
 }

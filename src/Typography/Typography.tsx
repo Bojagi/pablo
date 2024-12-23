@@ -35,6 +35,7 @@ const baseTypographyStyle = (props: BaseTypographyProps) => css`
 export const Paragraph = styled.p<BaseTypographyProps>`
   ${baseTypographyStyle}
   font-size: ${themeVars.typography.paragraph.fontSize};
+  font-weight: ${themeVars.typography.paragraph.fontWeight};
   line-height: ${themeVars.typography.paragraph.lineHeight};
   margin-bottom: ${(props) => (props.inline ? 0 : themeVars.typography.paragraph.marginBottom)};
   ${getCustomStyles('typography.styles', 'paragraph')}
@@ -56,6 +57,7 @@ export const ParagraphBold = styled.p<BaseTypographyProps>`
 export const ButtonTypography = styled.span<BaseTypographyProps>`
   ${baseTypographyStyle}
   font-size: ${themeVars.typography.button.fontSize};
+  font-weight: ${themeVars.typography.button.fontWeight};
   line-height: ${themeVars.typography.button.lineHeight};
   margin-bottom: ${(props) => (props.inline ? 0 : themeVars.typography.button.marginBottom)};
   ${getCustomStyles('typography.styles', 'button')}
@@ -66,6 +68,7 @@ export const ButtonTypography = styled.span<BaseTypographyProps>`
 export const Headline = styled.h2<BaseTypographyProps>`
   ${baseTypographyStyle}
   font-size: ${themeVars.typography.headline.fontSize};
+  font-weight: ${themeVars.typography.headline.fontWeight};
   line-height: ${themeVars.typography.headline.lineHeight};
   margin-bottom: ${(props) => (props.inline ? 0 : themeVars.typography.headline.marginBottom)};
   ${getCustomStyles('typography.styles', 'headline')}
@@ -77,6 +80,7 @@ export const Title = styled.h3<BaseTypographyProps>`
   ${baseTypographyStyle}
   font-size: ${themeVars.typography.title.fontSize};
   line-height: ${themeVars.typography.title.lineHeight};
+  font-weight: ${themeVars.typography.title.fontWeight};
   margin-bottom: ${(props) => (props.inline ? 0 : themeVars.typography.title.marginBottom)};
   ${getCustomStyles('typography.styles', 'title')}
   ${boxInterpolateFn}
@@ -87,6 +91,7 @@ export const Subtitle = styled.h4<BaseTypographyProps>`
   ${baseTypographyStyle}
   font-size: ${themeVars.typography.subtitle.fontSize};
   line-height: ${themeVars.typography.subtitle.lineHeight};
+  font-weight: ${themeVars.typography.subtitle.fontWeight};
   margin-bottom: ${(props) => (props.inline ? 0 : themeVars.typography.subtitle.marginBottom)};
   ${getCustomStyles('typography.styles', 'subtitle')}
   ${boxInterpolateFn}
@@ -97,6 +102,7 @@ export const InfoText = styled.p<BaseTypographyProps>`
   ${baseTypographyStyle}
   font-size: ${themeVars.typography.info.fontSize};
   line-height: ${themeVars.typography.info.lineHeight};
+  font-weight: ${themeVars.typography.info.fontWeight};
   margin-bottom: ${(props) => (props.inline ? 0 : themeVars.typography.info.marginBottom)};
   ${getCustomStyles('typography.styles', 'info')}
   ${boxInterpolateFn}

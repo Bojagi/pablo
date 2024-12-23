@@ -2,18 +2,19 @@ import type { CSSObject } from '@emotion/react';
 import { mediaQueryAbove } from '../breakpoints/mediaQueryFns';
 import { themeVars } from '../theme';
 import { Breakpoint } from '../theme/breakpoints';
-import { PabloTheme, PabloThemeableProps, ThemeValueGetter } from '../theme/types';
+import { PabloTheme, PabloThemeableProps, PabloThemeFull, ThemeValueGetter } from '../theme/types';
 import { enforceArray } from '../utils/enforceArray';
 import { getByPath } from '../utils/getByPath';
 import { Colors } from '../theme/colors';
 import { KeyMap } from '../types';
-import { spacingNames } from '../theme/spacing';
+import { SpacingNames, spacingNames } from '../theme/spacing';
+import { getSpacing } from '../styleHelpers';
 type InterpolationReturn = string | number | null | undefined;
 type IdentityTransformFn<T extends InterpolationReturn = InterpolationReturn> =
   InterpolationTransformFn<T, T>;
 type InterpolationTransformFn<T = any, R extends InterpolationReturn = InterpolationReturn> = (
   value: T,
-  theme: PabloTheme
+  theme: PabloThemeFull
 ) => R;
 type BreakpointObject<T> = Partial<Record<Breakpoint, T | null | undefined>>;
 type ResponsiveValue<T> = T | (T | null | undefined)[] | BreakpointObject<T>;
@@ -134,8 +135,11 @@ const spacingTransform =
     return `${value * theme.spacing[name]}${theme.spacing.unit}`;
   };
 
-const macroSpacingTransform = spacingTransform('macro');
 const microSpacingTransform = spacingTransform('micro');
+const macroSpacingTransform: InterpolationTransformFn<number | SpacingNames | string> = (
+  value,
+  theme
+) => getSpacing(value)({ theme });
 
 const colorTransform: InterpolationTransformFn<KeyMap<Colors>> = (value) =>
   (getByPath(themeVars.colors as Colors, value) as InterpolationReturn) || value;

@@ -12,8 +12,8 @@ export interface SpacingSizes {
 
 export interface Spacing {
   unit: 'rem' | 'em' | 'px';
-  macro: number;
-  micro: number;
+  macro: number | [number, number];
+  micro: number | [number, number];
   sizes: SpacingSizes;
 }
 
@@ -33,7 +33,7 @@ export const spacingNames: Array<SpacingNames> = [
 export const spacingTokens: Spacing = {
   unit: 'rem',
   // Spacing for layouts
-  macro: 0.5,
+  macro: [0.5, 0.75],
   // Spacing for components
   micro: 0.25,
   // Sizes with multipliers for unit

@@ -76,3 +76,45 @@ export const ColoredTypography = () => (
     </Typography>
   </Box>
 );
+
+export const ExampleText = () => (
+  <Box mb={4} mx="auto" maxWidth="1000px">
+    <Box mx={4}>
+      <Typography variant="headline">Bojagi (보자기)</Typography>
+      <Typography variant="title">Documentation</Typography>
+      <Typography variant="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ligula sit amet metus
+        pellentesque porttitor non porta velit. Nulla feugiat vestibulum nisl non bibendum.
+        Suspendisse condimentum leo quis nisl condimentum, ut viverra sem placerat. Quisque at sem
+        eget odio ullamcorper vulputate. Suspendisse et nisl at ipsum congue tempus. Aliquam
+        ultricies tellus quis est bibendum, et volutpat elit pretium. Sed euismod nisl ut dui
+        sollicitudin blandit. Donec fringilla nisi est, quis elementum odio consequat et. Ut quis
+        neque mauris. Morbi et nulla nec velit interdum fermentum efficitur at purus. Donec quis
+        bibendum turpis. Nullam euismod tortor vel ipsum rhoncus, interdum feugiat lorem aliquet.
+        Suspendisse rutrum feugiat dictum.
+      </Typography>
+      <Typography variant="paragraph">
+        Integer odio sem, volutpat a efficitur quis, ornare a arcu. Vestibulum porta id eros in
+        pulvinar. Integer in mollis metus, non ornare neque. Morbi porttitor vitae sem ut ornare.
+        Nullam aliquet leo sit amet arcu maximus blandit id nec nisi. Aliquam pretium erat vitae
+        ipsum malesuada consequat. Maecenas dignissim sit amet libero id venenatis. Mauris elit
+        arcu, vestibulum id luctus nec, dapibus at tortor. Nullam eget lectus lacus. Donec semper
+        sagittis tellus ac convallis. Fusce iaculis posuere porta.
+      </Typography>
+      <Typography variant="subtitle">Subtitle</Typography>
+      <Typography variant="paragraph">
+        Phasellus mollis libero risus, vitae luctus turpis bibendum nec. Duis vel nunc sagittis,
+        placerat orci quis, tincidunt dolor. Suspendisse in rutrum magna. Pellentesque a metus
+        tincidunt, ornare diam a, varius urna. Phasellus fermentum ipsum lacus, vel vestibulum nunc
+        rhoncus vel. Sed tellus sem, pharetra in odio non, scelerisque rutrum arcu. Nunc tempus
+        augue nec leo sagittis, ut aliquet sapien rutrum. Praesent euismod mollis rhoncus. Maecenas
+        porta condimentum facilisis. Morbi at eros nulla. Quisque congue nisi id eros auctor
+        tincidunt. Vivamus aliquam eros vel ipsum sodales eleifend. Integer a iaculis sem. Sed
+        elementum nulla vitae felis imperdiet, sit amet aliquam erat tempor. Nulla facilisi.
+      </Typography>
+      <Typography variant="info" textColor="text.info">
+        The above text is Lorem Ipsum
+      </Typography>
+    </Box>
+  </Box>
+);

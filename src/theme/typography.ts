@@ -1,4 +1,7 @@
+import { calculateFluidClamp } from '../styleHelpers/fluidClamp';
 import { createThemeVars } from './createThemeVars';
+import { fluid } from './fluid';
+import { Style } from './types';
 
 export interface TypographyBase {
   fontFamily: string;
@@ -7,7 +10,7 @@ export interface TypographyBase {
 
 export interface TypographyDefinition {
   fontFamily?: string;
-  fontSize: string;
+  fontSize: Style;
   lineHeight: string;
   fontWeight?: string | number;
   marginBottom: string | number;
@@ -25,45 +28,61 @@ export interface Typography {
   infoBold: TypographyDefinition;
 }
 
+const getStep = (size: number) => {
+  const { minScreen, maxScreen, minBaseSize, maxBaseSize, minRatio, maxRatio } = fluid;
+  const stepMinSize = minBaseSize * Math.pow(minRatio, size);
+  const stepMaxSize = maxBaseSize * Math.pow(maxRatio, size);
+  return calculateFluidClamp(stepMinSize, stepMaxSize, minScreen, maxScreen);
+};
+
 export const typography: Typography = {
   base: {
     fontFamily: '"IBM Plex Sans", sans-serif',
     fontWeight: 'normal',
   },
   paragraph: {
-    lineHeight: '1.4em',
-    fontSize: '0.875rem',
-    marginBottom: '0.75em',
+    lineHeight: '1.45em',
+    // fontSize: '0.875rem',
+    fontSize: getStep(0),
+    marginBottom: '1em',
   },
   paragraphBold: {
     lineHeight: '1.4em',
-    fontSize: '0.875rem',
-    marginBottom: '0.75em',
+    // fontSize: '0.875rem',
+    fontSize: getStep(0),
+    marginBottom: '1em',
     fontWeight: 500,
   },
   button: {
     lineHeight: '1.29em',
-    fontSize: '0.875rem',
+    // fontSize: '0.875rem',
+    fontSize: getStep(0),
     marginBottom: 0,
   },
   headline: {
-    lineHeight: '1.29em',
-    fontSize: '1.75rem',
-    marginBottom: '0.5em',
+    lineHeight: '1.1em',
+    // fontSize: '1.75rem',
+    fontSize: getStep(3),
+    marginBottom: '0.4em',
+    fontWeight: 700,
   },
   title: {
-    lineHeight: '1.3333333em',
-    fontSize: '1.5rem',
-    marginBottom: '0.5em',
+    lineHeight: '1.1em',
+    // fontSize: '1.5rem',
+    fontSize: getStep(2),
+    fontWeight: 500,
+    marginBottom: '0.4em',
   },
   subtitle: {
-    lineHeight: '1.375em',
-    fontSize: '1rem',
+    lineHeight: '1.1em',
+    // fontSize: '1rem',
+    fontSize: getStep(1),
     marginBottom: '0.5em',
   },
   info: {
     lineHeight: '1.5em',
-    fontSize: '0.75rem',
+    // fontSize: '0.75rem',
+    fontSize: getStep(-1),
     marginBottom: 0,
   },
   infoBold: {

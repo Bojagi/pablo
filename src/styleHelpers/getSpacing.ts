@@ -1,13 +1,29 @@
+import { SpacingNames } from '../theme/spacing';
 import { PabloThemeableProps } from '../theme/types';
-import { InterpolateFn } from './index';
+import { calculateFluidClamp, ensureFluidTuple } from './fluidClamp';
 
-export function getSpacing(multiplier: number): InterpolateFn<string> {
-  return ({ theme }: PabloThemeableProps) => {
+const getSpacing =
+  (inputMultiplier: number | SpacingNames | string) =>
+  ({ theme }: PabloThemeableProps) => {
+    const fluid = theme.fluid;
+    const [minSize, maxSize] = ensureFluidTuple(theme.spacing.macro);
+
+    const multiplier = theme.spacing.sizes[inputMultiplier] || inputMultiplier;
+
     if (typeof multiplier === 'string') {
       return multiplier;
     }
 
-    const spacing = theme.spacing;
-    return `${spacing.macro * multiplier}${spacing.unit}`;
+    if (minSize === maxSize) {
+      return `${minSize * multiplier}rem`;
+    }
+
+    return calculateFluidClamp(
+      minSize * multiplier,
+      maxSize * multiplier,
+      fluid.minScreen,
+      fluid.maxScreen
+    );
   };
-}
+
+export { getSpacing };
