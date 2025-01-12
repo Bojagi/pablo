@@ -32,6 +32,7 @@ const InnerTextArea = styled.textarea<InnerTextAreaProps>`
   padding: ${getComponentStyle('textArea.padding')};
   background-color: transparent;
   font-family: ${getComponentStyle('textArea.fontFamily')};
+  font-size: ${getComponentStyle('textArea.fontSize')};
   outline: none;
   ${getCustomStyles('textArea.styles', 'field')}
 `;

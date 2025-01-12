@@ -3,6 +3,7 @@ import { PabloTheme } from './types';
 import { colors } from './colors';
 import { typography } from './typography';
 import { fluid } from './fluid';
+import { shape } from './shape';
 import { breakpoints } from './breakpoints';
 
 export const defaultTheme: PabloTheme = {
@@ -11,4 +12,5 @@ export const defaultTheme: PabloTheme = {
   typography,
   breakpoints,
   fluid,
+  shape,
 };

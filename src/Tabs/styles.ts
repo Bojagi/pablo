@@ -34,13 +34,21 @@ export interface TabFocusStyles {
   outlineColor: Style;
 }
 
+export interface TabSizeStyles {
+  padding: Style;
+  borderRadius: Style;
+}
+
 export interface TabStyles extends BaseStyles<TabStyleProperties> {
   icon: {
     gap: Style;
     size: Style;
   };
+  sizes: {
+    medium: TabSizeStyles;
+    large: TabSizeStyles;
+  };
   color: Style;
-  padding: Style;
   margin: Style;
   focus: TabFocusStyles;
   hover: TabHoverStyles;
@@ -61,9 +69,16 @@ export const tabsStyles: TabsStyles = {
       gap: getComponentStyle('button.base.icon.gap'),
       size: getComponentStyle('button.base.icon.size.medium'),
     },
-    padding: (props) => css`
-      ${getSpacing(1)(props)} ${getSpacing(1.5)(props)} ${getSpacing(1.5)(props)}
-    `,
+    sizes: {
+      medium: {
+        padding: '1.25em 1.75em 1.75em',
+        borderRadius: 'md',
+      },
+      large: {
+        padding: '2em 2.5em 2.5em',
+        borderRadius: 'lg',
+      },
+    },
     margin: (props) => css`0 0 ${getSpacing(0)(props)}`,
     hover: {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),

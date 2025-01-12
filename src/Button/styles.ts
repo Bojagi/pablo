@@ -22,7 +22,6 @@ export interface ButtonBaseStyles extends BaseStyles<ButtonStyleProperties> {
       large: Style;
     };
   };
-  borderRadius: Style;
   disabled: {
     opacity: number;
   };
@@ -39,6 +38,7 @@ export interface ButtonBaseStyles extends BaseStyles<ButtonStyleProperties> {
 
 export interface ButtonSizeStyles {
   padding: Style;
+  borderRadius: Style;
 }
 
 export interface ButtonShadedVariantStyles {
@@ -92,7 +92,6 @@ const gray = themeVars.colors.gray;
 
 export const buttonStyles: ButtonStyles = {
   base: {
-    borderRadius: '0.25rem',
     icon: {
       gap: getSpacing(1),
       size: {
@@ -122,13 +121,16 @@ export const buttonStyles: ButtonStyles = {
   },
   sizes: {
     small: {
-      padding: '5px 8px',
+      padding: '0.45rem 0.5rem',
+      borderRadius: 'md',
     },
     medium: {
-      padding: '10px 14px',
+      padding: '0.75rem 0.875rem',
+      borderRadius: 'md',
     },
     large: {
-      padding: '14px 22px',
+      padding: '1rem 1.375rem',
+      borderRadius: 'lg',
     },
   },
   plain: {

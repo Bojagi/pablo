@@ -117,7 +117,7 @@ const stringableTransform =
     if (typeof value === 'string') {
       return value;
     }
-    return transformFn(value as Exclude<T, string>, theme);
+    return transformFn(value as Exclude<T, string>, theme as any);
   };
 const identityTransform: IdentityTransformFn = <T>(value: T): T => value;
 const pixelTransform: InterpolationTransformFn<number | string> = stringableTransform(

@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import { getSpacing } from '../styleHelpers';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
+import { getTypographyStep } from '../theme/typography';
 
 export interface InputBaseVariantStyles {
   borderColor: Style;
@@ -22,6 +23,7 @@ export interface InputBaseStyles {
   defaultWidth: number | string;
   borderWidth: number;
   fontFamily: Style;
+  fontSize: Style;
   transitions: string[][];
   borderRadius: Style;
   outline: InputBaseVariantStyles;
@@ -45,10 +47,9 @@ const filledVariantStyle = {
 
 export const inputBaseStyles: InputBaseStyles = {
   defaultWidth: 300,
-  padding: (props) => css`
-    ${getSpacing(0.75)(props)} ${getSpacing(1)(props)}
-  `,
-  borderRadius: '8px',
+  padding: '0.5em 0.75em',
+  fontSize: getTypographyStep(0),
+  borderRadius: 'lg',
   fontFamily: themeVars.typography.base.fontFamily,
   borderWidth: 1,
   filled: filledVariantStyle,

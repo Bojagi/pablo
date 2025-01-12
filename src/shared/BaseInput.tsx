@@ -4,13 +4,14 @@ import styled from '@emotion/styled';
 import { Box, layoutInterpolationFn } from '../Box';
 import type { LayoutBoxProps } from '../Box';
 import type { Style } from '../theme/types';
-import { InfoText, ParagraphBold } from '../Typography';
+import { InfoText, Paragraph } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { useUniqueId } from '../utils/useUniqueId';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from './baseStyle';
+import { borderRadiusTransform } from '../Box/interpolations/shape';
 
 export type BaseInputStyleProperties =
   | 'root'
@@ -73,7 +74,8 @@ const InputWrapper = styled.div<InputWrapperProps>`
   align-items: center;
   border: ${getComponentStyle('{name}.borderWidth')}px solid
     ${getComponentStyle('{name}.{variant}.borderColor')};
-  border-radius: ${getComponentStyle('{name}.borderRadius')};
+  font-size: ${getComponentStyle('{name}.fontSize')};
+  border-radius: ${getComponentStyle('{name}.borderRadius', borderRadiusTransform)};
   background-color: ${getComponentStyle('{name}.{variant}.backgroundColor')};
   transition: ${getComponentStyle('{name}.transitions', transitionTransformer)};
   ${(props) =>
@@ -132,9 +134,9 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
     <Box ref={innerRef} mt={mt} css={getCustomStyles('root')}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
-          <ParagraphBold mb={0.75} customStyles={{ paragraphBold: getCustomStyles('label') }}>
+          <Paragraph mb={0.75} customStyles={{ paragraphBold: getCustomStyles('label') }}>
             {label}
-          </ParagraphBold>
+          </Paragraph>
         </label>
       )}
       <InputWrapper

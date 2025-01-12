@@ -28,6 +28,37 @@ export const TabsWithSelectedProp = () => (
   </Tabs>
 );
 
+export const TabsWithDifferentSizes = () => (
+  <Box width={500}>
+    <Box mb="xl">
+      <Tabs selected="second">
+        <Tab name="first" size="medium">
+          First tab
+        </Tab>
+        <Tab name="second" size="medium">
+          Second tab
+        </Tab>
+        <Tab name="third" size="medium">
+          Third tab
+        </Tab>
+      </Tabs>
+    </Box>
+    <Box mb="xl">
+      <Tabs selected="second">
+        <Tab name="first" size="large">
+          First tab
+        </Tab>
+        <Tab name="second" size="large">
+          Second tab
+        </Tab>
+        <Tab name="third" size="large">
+          Third tab
+        </Tab>
+      </Tabs>
+    </Box>
+  </Box>
+);
+
 export const TabsWithOnSelectCb = () => {
   const [selected, setSelected] = useState('second');
   return (

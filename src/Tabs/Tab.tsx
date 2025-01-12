@@ -13,12 +13,13 @@ import { TabStyleProperties } from './styles';
 export interface InnerTabProps extends LayoutBoxProps, BaseProps<TabStyleProperties> {
   selected?: boolean;
   icon?: React.ReactNode;
+  size?: 'medium';
   name: string;
   children?: React.ReactNode;
   onClick?: (e: React.PointerEvent<HTMLButtonElement>) => void;
 }
 
-export type TabProps<C extends React.ElementType = 'button'> = InnerTabProps &
+export type TabProps<C extends React.ElementType = 'button'> = Omit<InnerTabProps, 'size'> &
   React.ComponentPropsWithRef<C> & {
     as?: C;
   };
@@ -27,7 +28,7 @@ const TabButton = styled.button<Partial<InnerTabProps>>`
   ${buttonBaseStyles}
   color: ${getComponentStyle('tabs.tab.color')};
   position: relative;
-  padding: ${getComponentStyle('tabs.tab.padding')};
+  padding: ${getComponentStyle('tabs.tab.{size}.padding')};
   margin: ${getComponentStyle('tabs.tab.margin')};
   white-space: nowrap;
 
@@ -104,6 +105,7 @@ export const Tab = forwardRef<HTMLButtonElement, TabProps<any>>(
       ref={ref}
       data-testid="pbl-tab"
       role="tab"
+      size="medium"
       {...props}
       selected={selected}
       aria-selected={selected ? 'true' : 'false'}
