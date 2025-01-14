@@ -82,11 +82,11 @@ exports[`Render button bar 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -203,11 +203,11 @@ exports[`Render button bar with one item 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 

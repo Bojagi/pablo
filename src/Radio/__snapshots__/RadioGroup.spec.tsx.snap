@@ -67,12 +67,13 @@ exports[`Render with nothing selected 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  margin-left: 0.5rem;
   margin-left: 0.5rem;
 }
 
@@ -251,12 +252,13 @@ exports[`Work with one radio button 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
   line-height: var(--pbl-theme-typography-subtitle-lineHeight);
+  font-size: var(--pbl-theme-typography-subtitle-fontSize);
   margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  margin-left: 0.5rem;
   margin-left: 0.5rem;
 }
 

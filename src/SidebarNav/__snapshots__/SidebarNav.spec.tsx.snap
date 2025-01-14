@@ -60,11 +60,11 @@ exports[`Render multiple nav items 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -219,11 +219,11 @@ exports[`Render one nav item 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
