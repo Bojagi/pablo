@@ -1,7 +1,7 @@
 import { PabloThemeableProps } from '../theme/types';
 import { InterpolateFn } from './index';
 
-export function getSpacing(multiplier: number): InterpolateFn<string> {
+export function getSpacing(multiplier: number | string): InterpolateFn<string> {
   return ({ theme }: PabloThemeableProps) => {
     if (typeof multiplier === 'string') {
       return multiplier;
