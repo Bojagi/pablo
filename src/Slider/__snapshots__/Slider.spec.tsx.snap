@@ -97,11 +97,12 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
   line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
   margin-bottom: 0;
 }
 
@@ -238,11 +239,12 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
   line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
   margin-bottom: 0;
 }
 
@@ -379,11 +381,12 @@ exports[`SimpleSlider story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
   line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
   margin-bottom: 0;
 }
 
@@ -520,11 +523,12 @@ exports[`UpperOutOfBounds story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
   line-height: var(--pbl-theme-typography-paragraph-lineHeight);
+  font-size: var(--pbl-theme-typography-paragraph-fontSize);
+  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
   margin-bottom: 0;
 }
 

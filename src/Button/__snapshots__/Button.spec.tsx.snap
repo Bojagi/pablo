@@ -61,11 +61,11 @@ exports[`render button with end icon 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -197,11 +197,11 @@ exports[`render button with start icon 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -289,11 +289,11 @@ exports[`render primary brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -373,11 +373,11 @@ exports[`render primary negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -457,11 +457,11 @@ exports[`render primary plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -541,11 +541,11 @@ exports[`render primary positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -625,11 +625,11 @@ exports[`render primaryInverted brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -709,11 +709,11 @@ exports[`render primaryInverted negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -793,11 +793,11 @@ exports[`render primaryInverted plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -877,11 +877,11 @@ exports[`render primaryInverted positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -961,11 +961,11 @@ exports[`render secondary brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1045,11 +1045,11 @@ exports[`render secondary negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1129,11 +1129,11 @@ exports[`render secondary plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1213,11 +1213,11 @@ exports[`render secondary positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1297,11 +1297,11 @@ exports[`render secondaryInverted brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1381,11 +1381,11 @@ exports[`render secondaryInverted negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1465,11 +1465,11 @@ exports[`render secondaryInverted plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1549,11 +1549,11 @@ exports[`render secondaryInverted positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1633,11 +1633,11 @@ exports[`render text brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1717,11 +1717,11 @@ exports[`render text negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1801,11 +1801,11 @@ exports[`render text plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1885,11 +1885,11 @@ exports[`render text positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1969,11 +1969,11 @@ exports[`render textInverted brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -2053,11 +2053,11 @@ exports[`render textInverted negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -2137,11 +2137,11 @@ exports[`render textInverted plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -2221,11 +2221,11 @@ exports[`render textInverted positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 

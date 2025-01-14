@@ -179,12 +179,14 @@ exports[`Show error when an error message is given 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-info-fontSize);
   line-height: var(--pbl-theme-typography-info-lineHeight);
+  font-size: var(--pbl-theme-typography-info-fontSize);
   margin-bottom: var(--pbl-theme-typography-info-marginBottom);
+  margin-top: 0.25rem;
+  color: var(--pbl-theme-colors-negative-main);
   margin-top: 0.25rem;
   color: var(--pbl-theme-colors-negative-main);
 }
@@ -311,12 +313,14 @@ exports[`Show infotext when available 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-info-fontSize);
   line-height: var(--pbl-theme-typography-info-lineHeight);
+  font-size: var(--pbl-theme-typography-info-fontSize);
   margin-bottom: var(--pbl-theme-typography-info-marginBottom);
+  margin-top: 0.25rem;
+  color: var(--pbl-theme-colors-text-info);
   margin-top: 0.25rem;
   color: var(--pbl-theme-colors-text-info);
 }
@@ -382,13 +386,14 @@ exports[`Show label when available 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-paragraphBold-fontSize);
   line-height: var(--pbl-theme-typography-paragraphBold-lineHeight);
-  font-weight: var(--pbl-theme-typography-paragraphBold-fontWeight);
+  font-size: var(--pbl-theme-typography-paragraphBold-fontSize);
   margin-bottom: var(--pbl-theme-typography-paragraphBold-marginBottom);
+  font-weight: var(--pbl-theme-typography-paragraphBold-fontWeight);
+  margin-bottom: 0.375rem;
   margin-bottom: 0.375rem;
 }
 
