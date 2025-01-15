@@ -130,6 +130,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const errorId = `${id}-error`;
   const actualInfoText = props.error || props.infoText;
   const getCustomStyles = useCustomStyles(`${name}.styles`, customStyles);
+
   return (
     <Box ref={innerRef} mt={mt} css={getCustomStyles('root')}>
       {label && (

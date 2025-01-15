@@ -86,11 +86,11 @@ exports[`Render first selected 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -532,11 +532,11 @@ exports[`Render tabs with icons 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -980,11 +980,11 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
@@ -1302,11 +1302,11 @@ exports[`Work with one tab 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-style: normal;
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  font-style: normal;
   margin: 0;
-  font-size: var(--pbl-theme-typography-button-fontSize);
   line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 

@@ -9,7 +9,6 @@ const getSpacing =
     const [minSize, maxSize] = ensureFluidTuple(theme.spacing.macro);
 
     const multiplier = theme.spacing.sizes[inputMultiplier] || inputMultiplier;
-
     if (typeof multiplier === 'string') {
       return multiplier;
     }
