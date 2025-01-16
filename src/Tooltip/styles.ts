@@ -23,5 +23,5 @@ export const tooltipStyles: TooltipStyles = {
   zIndex: 100,
   backgroundColor: themeVars.colors.common.black,
   color: themeVars.colors.common.white,
-  borderRadius: 4,
+  borderRadius: 6,
 };

@@ -8,81 +8,100 @@ export default {
 
 export const All = () => (
   <Box mb={4}>
-    <Typography variant="headline">Headline</Typography>
-    <Typography variant="title">Title</Typography>
-    <Typography variant="subtitle">Subtitle</Typography>
-    <Typography variant="paragraph">Paragraph</Typography>
-    <Typography variant="paragraphBold">Paragraph Bold</Typography>
-    <Typography variant="info">Info Text</Typography>
-    <Typography variant="infoBold">Info Text Bold</Typography>
+    <Typography variant="h1">H1</Typography>
+    <Typography variant="h2">H2</Typography>
+    <Typography variant="h3">H3</Typography>
+    <Typography variant="h4">H4</Typography>
+    <Typography variant="body">Body</Typography>
+    <Typography variant="body" bold>
+      Body bold
+    </Typography>
+    <Typography variant="body" small>
+      Body small
+    </Typography>
+    <Typography variant="body" small bold>
+      Body small and bold
+    </Typography>
     <Typography variant="button">Button</Typography>
+    <Typography variant="button" small>
+      Button small
+    </Typography>
   </Box>
 );
 
 export const Inline = () => (
   <Box mb={4}>
-    <Typography inline variant="headline">
-      Headline
+    <Typography inline variant="h1">
+      H1
     </Typography>
-    <Typography inline variant="title">
-      Title
+    <Typography inline variant="h2">
+      H2
     </Typography>
-    <Typography inline variant="subtitle">
-      Subtitle
+    <Typography inline variant="h3">
+      H3
     </Typography>
-    <Typography inline variant="paragraph">
-      Paragraph
+    <Typography inline variant="h4">
+      H4
     </Typography>
-    <Typography inline variant="paragraphBold">
-      Paragraph Bold
+    <Typography inline variant="body">
+      Body
     </Typography>
-    <Typography inline variant="info">
-      Info Text
+    <Typography inline variant="body" bold>
+      Body bold
     </Typography>
-    <Typography inline variant="infoBold">
-      Info Text Bold
+    <Typography inline variant="body" small>
+      Body small
+    </Typography>
+    <Typography inline variant="body" small bold>
+      Body small and bold
     </Typography>
     <Typography inline variant="button">
       Button
+    </Typography>
+    <Typography inline variant="button" small>
+      Button small
     </Typography>
   </Box>
 );
 
 export const ColoredTypography = () => (
   <Box mb={4}>
-    <Typography mb={4} textColor="brand.main" variant="headline">
-      Headline
+    <Typography mb={4} textColor="brand.main" variant="h2">
+      H2
     </Typography>
-    <Typography mb={4} textColor="positive.main" variant="title">
-      Title
+    <Typography mb={4} textColor="positive.main" variant="h3">
+      H3
     </Typography>
-    <Typography mb={4} textColor="negative.main" variant="subtitle">
-      Subtitle
+    <Typography mb={4} textColor="negative.main" variant="h4">
+      H4
     </Typography>
-    <Typography mb={4} textColor="positive.dark" variant="paragraph">
-      Paragraph
+    <Typography mb={4} textColor="positive.dark" variant="body">
+      Body
     </Typography>
-    <Typography mb={4} textColor="positive.light" variant="paragraphBold">
-      Paragraph Bold
+    <Typography mb={4} textColor="positive.light" variant="body" bold>
+      Body bold
     </Typography>
-    <Typography mb={4} textColor="brand.light" variant="info">
-      Info Text
+    <Typography mb={4} textColor="brand.light" variant="body" small>
+      Body small
     </Typography>
-    <Typography mb={4} textColor="brand.dark" variant="infoBold">
-      Info Text Bold
+    <Typography mb={4} textColor="brand.dark" variant="body" small bold>
+      body small and bold
     </Typography>
     <Typography mb={4} textColor="neutral.dark" variant="button">
       Button
+    </Typography>
+    <Typography mb={4} textColor="neutral.dark" variant="button" small>
+      Button small
     </Typography>
   </Box>
 );
 
 export const ExampleText = () => (
-  <Box mb={4} mx="auto" maxWidth="1000px">
+  <Box mb={4} mx="auto" maxWidth="1100px">
     <Box mx={4}>
-      <Typography variant="headline">Bojagi (보자기)</Typography>
-      <Typography variant="title">Documentation</Typography>
-      <Typography variant="paragraph">
+      <Typography variant="h1">Bojagi (보자기)</Typography>
+      <Typography variant="h3">Documentation</Typography>
+      <Typography variant="body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec ligula sit amet metus
         pellentesque porttitor non porta velit. Nulla feugiat vestibulum nisl non bibendum.
         Suspendisse condimentum leo quis nisl condimentum, ut viverra sem placerat. Quisque at sem
@@ -93,7 +112,7 @@ export const ExampleText = () => (
         bibendum turpis. Nullam euismod tortor vel ipsum rhoncus, interdum feugiat lorem aliquet.
         Suspendisse rutrum feugiat dictum.
       </Typography>
-      <Typography variant="paragraph">
+      <Typography variant="body">
         Integer odio sem, volutpat a efficitur quis, ornare a arcu. Vestibulum porta id eros in
         pulvinar. Integer in mollis metus, non ornare neque. Morbi porttitor vitae sem ut ornare.
         Nullam aliquet leo sit amet arcu maximus blandit id nec nisi. Aliquam pretium erat vitae
@@ -101,8 +120,8 @@ export const ExampleText = () => (
         arcu, vestibulum id luctus nec, dapibus at tortor. Nullam eget lectus lacus. Donec semper
         sagittis tellus ac convallis. Fusce iaculis posuere porta.
       </Typography>
-      <Typography variant="subtitle">Subtitle</Typography>
-      <Typography variant="paragraph">
+      <Typography variant="h4">Subtitle</Typography>
+      <Typography variant="body">
         Phasellus mollis libero risus, vitae luctus turpis bibendum nec. Duis vel nunc sagittis,
         placerat orci quis, tincidunt dolor. Suspendisse in rutrum magna. Pellentesque a metus
         tincidunt, ornare diam a, varius urna. Phasellus fermentum ipsum lacus, vel vestibulum nunc
@@ -112,7 +131,7 @@ export const ExampleText = () => (
         tincidunt. Vivamus aliquam eros vel ipsum sodales eleifend. Integer a iaculis sem. Sed
         elementum nulla vitae felis imperdiet, sit amet aliquam erat tempor. Nulla facilisi.
       </Typography>
-      <Typography variant="info" textColor="text.info">
+      <Typography variant="body" small textColor="text.info">
         The above text is Lorem Ipsum
       </Typography>
     </Box>

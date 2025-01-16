@@ -112,7 +112,7 @@ WithStartComponent.args = {
   fullWidth: false,
   width: 600,
   start: (
-    <Typography mb={0} variant="paragraphBold">
+    <Typography inline variant="body" bold>
       search:
     </Typography>
   ),

@@ -11,6 +11,6 @@ export interface CheckboxStyles extends CheckableBaseStyles {
 export const checkboxStyles: CheckboxStyles = {
   ...checkableBaseStyles,
   handleColor: themeVars.colors.brand.main,
-  innerBorderRadius: '3px',
-  outerBorderRadius: '4px',
+  innerBorderRadius: '4px',
+  outerBorderRadius: '6px',
 };

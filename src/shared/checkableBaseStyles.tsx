@@ -29,15 +29,15 @@ export interface CheckableBaseStyles {
 
 export const checkableBaseStyles: CheckableBaseStyles = {
   innerPadding: {
-    medium: getSpacing(0.75),
-    small: getSpacing(0.5),
+    medium: getSpacing(1, true),
+    small: getSpacing(1, true),
   },
   borderWidth: 1,
   borderColor: themeVars.colors.borders.main,
   backgroundColor: themeVars.colors.common.white,
   handleSize: {
-    medium: getSpacing(1.5),
-    small: getSpacing(1),
+    medium: getSpacing(3, true),
+    small: getSpacing(2, true),
   },
   focus: {
     outlineSize: '3px',

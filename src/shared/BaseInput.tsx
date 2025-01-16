@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Box, layoutInterpolationFn } from '../Box';
+import { Box, layoutInterpolationFn, useBoxProps } from '../Box';
 import type { LayoutBoxProps } from '../Box';
 import type { Style } from '../theme/types';
 import { InfoText, Paragraph } from '../Typography';
@@ -62,6 +62,8 @@ export type BaseInputOuterProps<P extends Record<string, any>, E extends HTMLEle
   };
 
 interface InputWrapperProps extends LayoutBoxProps {
+  variant: InputVariant;
+  name: string;
   fullWidth: boolean;
   focus: boolean;
   error: boolean;
@@ -114,14 +116,20 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   fullWidth = false,
   adornmentGap = 0,
   value,
-  mt,
   start,
   end,
   onFocus,
   onBlur,
+  onClick,
   customStyles,
+  variant,
   ...props
 }: BaseInputOuterProps<P, E>) {
+  const [boxProps, inputProps] = useBoxProps(props);
+  console.log('inputProps', inputProps);
+
+  console.log('boxProps', boxProps);
+
   const [focus, setFocus] = useState(false);
   const InputComponent = inputComponent as any;
   const generatedId = useUniqueId();
@@ -132,7 +140,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const getCustomStyles = useCustomStyles(`${name}.styles`, customStyles);
 
   return (
-    <Box ref={innerRef} mt={mt} css={getCustomStyles('root')}>
+    <Box ref={innerRef} css={getCustomStyles('root')} {...boxProps}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
           <Paragraph mb={0.75} customStyles={{ paragraphBold: getCustomStyles('label') }}>
@@ -148,7 +156,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
         error={!!props.error}
         focus={focus}
         cssStyles={getCustomStyles('wrapper')}
-        {...props}
+        variant={variant}
       >
         {start && (
           <Box shrink={0} ml={adornmentGap as any} css={getCustomStyles('startAdornment')}>
@@ -156,7 +164,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           </Box>
         )}
         <InputComponent
-          {...props}
+          {...inputProps}
           data-testid={`pbl-${name}`}
           id={id}
           ref={inputRef}

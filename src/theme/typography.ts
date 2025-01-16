@@ -16,17 +16,21 @@ export interface TypographyDefinition {
   marginBottom: string | number;
 }
 
+export interface TypographyDefinitionVariant<K extends string> {
+  variants: Record<K, Partial<TypographyDefinition>>;
+}
+
 export interface Typography {
   base: TypographyBase;
-  paragraph: TypographyDefinition;
-  paragraphBold: TypographyDefinition;
-  button: TypographyDefinition;
-  headline: TypographyDefinition;
-  title: TypographyDefinition;
-  subtitle: TypographyDefinition;
-  info: TypographyDefinition;
-  infoBold: TypographyDefinition;
+  body: TypographyDefinition & TypographyDefinitionVariant<'bold' | 'small'>;
+  button: TypographyDefinition & TypographyDefinitionVariant<'small'>;
+  h1: TypographyDefinition;
+  h2: TypographyDefinition;
+  h3: TypographyDefinition;
+  h4: TypographyDefinition;
 }
+
+export type TypographyVariants = keyof Typography;
 
 export const getTypographyStep = (size: number) => {
   const { minScreen, maxScreen, minBaseSize, maxBaseSize, minRatio, maxRatio } = fluid;
@@ -40,55 +44,58 @@ export const typography: Typography = {
     fontFamily: '"IBM Plex Sans", sans-serif',
     fontWeight: 'normal',
   },
-  paragraph: {
+  body: {
     lineHeight: '1.45em',
     // fontSize: '0.875rem',
     fontSize: getTypographyStep(0),
     marginBottom: '1em',
-  },
-  paragraphBold: {
-    lineHeight: '1.4em',
-    // fontSize: '0.875rem',
-    fontSize: getTypographyStep(0),
-    marginBottom: '1em',
-    fontWeight: 500,
+    variants: {
+      bold: {
+        fontWeight: 500,
+      },
+      small: {
+        fontSize: getTypographyStep(-1),
+      },
+    },
   },
   button: {
     lineHeight: '1.125em',
     // fontSize: '0.875rem',
     fontSize: getTypographyStep(0),
     marginBottom: 0,
+    variants: {
+      small: {
+        fontSize: getTypographyStep(-1),
+        fontWeight: 500,
+      },
+    },
   },
-  headline: {
+  h1: {
+    lineHeight: '1.1em',
+    // fontSize: '1.75rem',
+    fontSize: getTypographyStep(4),
+    marginBottom: '0.3em',
+    fontWeight: 700,
+  },
+  h2: {
     lineHeight: '1.1em',
     // fontSize: '1.75rem',
     fontSize: getTypographyStep(3),
     marginBottom: '0.4em',
     fontWeight: 700,
   },
-  title: {
+  h3: {
     lineHeight: '1.1em',
     // fontSize: '1.5rem',
     fontSize: getTypographyStep(2),
     fontWeight: 500,
     marginBottom: '0.4em',
   },
-  subtitle: {
+  h4: {
     lineHeight: '1.1em',
     // fontSize: '1rem',
     fontSize: getTypographyStep(1),
     marginBottom: '0.5em',
-  },
-  info: {
-    lineHeight: '1.5em',
-    // fontSize: '0.75rem',
-    fontSize: getTypographyStep(-1),
-    marginBottom: 0,
-  },
-  infoBold: {
-    lineHeight: '1.5em',
-    fontSize: '0.75rem',
-    marginBottom: 0,
     fontWeight: 500,
   },
 };

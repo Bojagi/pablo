@@ -13,7 +13,7 @@ const fluid: Fluid = {
   minBaseSize: 1,
   maxBaseSize: 1.125,
   minRatio: 1.3,
-  maxRatio: 1.7,
+  maxRatio: 1.5,
 };
 
 export { fluid, type Fluid };

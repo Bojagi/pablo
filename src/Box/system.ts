@@ -107,6 +107,7 @@ type SystemFn<
       ? StyledInterpolationFunctions<C>
       : never) & {
     get: A extends ThemeValueGetter ? A : never;
+    propNames: string[];
   };
 
 type InterpolateReturnTuple = readonly [string, InterpolationReturn, Breakpoint | null];
@@ -222,15 +223,14 @@ const createSystemProperties = <T extends SystemPropertyConfig[]>(configs: T): S
       props.theme
     );
 
+  (interpolationFn as any).propNames = (interpolationFn as any).propNames || [];
   configs.forEach((config) => {
     const fromProps = config.fromProps || config.properties;
-    if (config.as) {
-      (interpolationFn as any)[config.as] = systemInterpolation(config);
-    } else {
-      fromProps.forEach((property) => {
-        (interpolationFn as any)[property] = systemInterpolation(config);
-      });
-    }
+    const exposedUpdateMethods = config.as ? [config.as] : fromProps;
+    exposedUpdateMethods.forEach((property) => {
+      (interpolationFn as any)[property] = systemInterpolation(config);
+    });
+    (interpolationFn as any).propNames.push(...fromProps);
   });
 
   return interpolationFn as SystemFn<T>;

@@ -3,7 +3,7 @@ import { buttonBaseStyles, ButtonBaseProps, ButtonSize } from '../ButtonBase';
 import styled from '@emotion/styled';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
 import { BaseProps, CssFunctionReturn } from '../types';
-import { ButtonTypography } from '../Typography';
+import { Typography } from '../Typography';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { ButtonStyleProperties } from './styles';
 import { interpolateCssProp } from '../utils/interpolateCssProp';
@@ -135,7 +135,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps<any>>(
             {startIcon}
           </IconBox>
         )}
-        <ButtonTypography>{children}</ButtonTypography>
+        <Typography variant="button" small={size === 'small'}>
+          {children}
+        </Typography>
         {endIcon && (
           <IconBox
             css={(props) => [getCustomStyles('icon', props), getCustomStyles('endIcon', props)]}
