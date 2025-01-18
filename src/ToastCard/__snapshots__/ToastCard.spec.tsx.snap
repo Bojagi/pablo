@@ -42,13 +42,17 @@ exports[`Render toast card with no type and with only title 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-family: var(--pbl-theme-typography-h4-fontFamily);
   font-size: var(--pbl-theme-typography-h4-fontSize);
-  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
   font-weight: var(--pbl-theme-typography-h4-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -166,13 +170,17 @@ exports[`type error Render toast card with only title 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-family: var(--pbl-theme-typography-h4-fontFamily);
   font-size: var(--pbl-theme-typography-h4-fontSize);
-  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
   font-weight: var(--pbl-theme-typography-h4-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -309,13 +317,17 @@ exports[`type info Render toast card with only title 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-family: var(--pbl-theme-typography-h4-fontFamily);
   font-size: var(--pbl-theme-typography-h4-fontSize);
-  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
   font-weight: var(--pbl-theme-typography-h4-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -452,13 +464,17 @@ exports[`type success Render toast card with only title 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-family: var(--pbl-theme-typography-h4-fontFamily);
   font-size: var(--pbl-theme-typography-h4-fontSize);
-  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
   font-weight: var(--pbl-theme-typography-h4-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -595,13 +611,17 @@ exports[`type undefined Render toast card with only title 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-family: var(--pbl-theme-typography-h4-fontFamily);
   font-size: var(--pbl-theme-typography-h4-fontSize);
-  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
   font-weight: var(--pbl-theme-typography-h4-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -727,13 +747,17 @@ exports[`type unknown Render toast card with only title 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-family: var(--pbl-theme-typography-h4-fontFamily);
   font-size: var(--pbl-theme-typography-h4-fontSize);
-  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
   font-weight: var(--pbl-theme-typography-h4-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -859,13 +883,17 @@ exports[`type warning Render toast card with only title 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-family: var(--pbl-theme-typography-h4-fontFamily);
   font-size: var(--pbl-theme-typography-h4-fontSize);
-  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
   font-weight: var(--pbl-theme-typography-h4-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
   margin-bottom: 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;

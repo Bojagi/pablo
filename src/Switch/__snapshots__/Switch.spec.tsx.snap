@@ -193,22 +193,19 @@ exports[`Render switch with label 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
   margin-left: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem);
-}
-
-.emotion-0 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-0 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <label

@@ -14,12 +14,12 @@ import { css, Global, ThemeProvider, CacheProvider } from '@emotion/react';
 const overwriteMerge = (_, sourceArray) => sourceArray;
 const isMergeableObject = (val) => isObject(val) && !Array.isArray(val) && !(val instanceof Map);
 
-function createThemeVarDefinitions(theme: any, keyNameObject: any) {
+function createThemeVarDefinitions(theme: any, keyNameObject: any, base?: any) {
   return Array.from(Object.entries(keyNameObject))
     .map(([key, varName]) =>
       isObject(varName)
-        ? createThemeVarDefinitions(theme[key], keyNameObject[key])
-        : `--${varName}: ${theme instanceof Map ? theme.get(key) : theme[key]};`
+        ? createThemeVarDefinitions(theme[key], keyNameObject[key], theme.base)
+        : `--${varName}: ${(theme instanceof Map ? theme.get(key) : theme[key]) || base[key]};`
     )
     .flat()
     .join(' ');

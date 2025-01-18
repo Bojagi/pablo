@@ -61,17 +61,17 @@ exports[`render button with end icon 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 .emotion-2 {
@@ -202,17 +202,17 @@ exports[`render button with start icon 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-2 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -299,17 +299,17 @@ exports[`render primary brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -388,17 +388,17 @@ exports[`render primary negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -477,17 +477,17 @@ exports[`render primary plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -566,17 +566,17 @@ exports[`render primary positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -655,17 +655,17 @@ exports[`render primaryInverted brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -744,17 +744,17 @@ exports[`render primaryInverted negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -833,17 +833,17 @@ exports[`render primaryInverted plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -922,17 +922,17 @@ exports[`render primaryInverted positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1011,17 +1011,17 @@ exports[`render secondary brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1100,17 +1100,17 @@ exports[`render secondary negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1189,17 +1189,17 @@ exports[`render secondary plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1278,17 +1278,17 @@ exports[`render secondary positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1367,17 +1367,17 @@ exports[`render secondaryInverted brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1456,17 +1456,17 @@ exports[`render secondaryInverted negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1545,17 +1545,17 @@ exports[`render secondaryInverted plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1634,17 +1634,17 @@ exports[`render secondaryInverted positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1723,17 +1723,17 @@ exports[`render text brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1812,17 +1812,17 @@ exports[`render text negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1901,17 +1901,17 @@ exports[`render text plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -1990,17 +1990,17 @@ exports[`render text positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -2079,17 +2079,17 @@ exports[`render textInverted brand color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -2168,17 +2168,17 @@ exports[`render textInverted negative color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -2257,17 +2257,17 @@ exports[`render textInverted plain color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>
@@ -2346,17 +2346,17 @@ exports[`render textInverted positive color button 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 <div>

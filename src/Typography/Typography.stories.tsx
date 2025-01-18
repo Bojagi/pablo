@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '../Box';
 import { Typography } from './Typography';
+import { PabloThemeProvider } from '../theme';
 
 export default {
   title: 'Typography',
@@ -95,6 +96,40 @@ export const ColoredTypography = () => (
     </Typography>
   </Box>
 );
+
+export const Override = () => {
+  const theme = {
+    typography: {
+      h1: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
+      h2: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
+      h3: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
+      h4: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
+      body: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
+      button: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
+    },
+  };
+  return (
+    <PabloThemeProvider theme={theme}>
+      <Box mb={4}>
+        <Typography mb={4} variant="h2">
+          H2
+        </Typography>
+        <Typography mb={4} variant="h3">
+          H3
+        </Typography>
+        <Typography mb={4} variant="h4">
+          H4
+        </Typography>
+        <Typography mb={4} variant="body">
+          Body
+        </Typography>
+        <Typography mb={4} variant="button">
+          Button
+        </Typography>
+      </Box>
+    </PabloThemeProvider>
+  );
+};
 
 export const ExampleText = () => (
   <Box mb={4} mx="auto" maxWidth="1100px">

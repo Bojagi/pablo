@@ -97,21 +97,18 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
-}
-
-.emotion-6 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-6 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div
@@ -247,21 +244,18 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
-}
-
-.emotion-6 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-6 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div
@@ -397,21 +391,18 @@ exports[`SimpleSlider story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
-}
-
-.emotion-6 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-6 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div
@@ -547,21 +538,18 @@ exports[`UpperOutOfBounds story snapshot 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
-}
-
-.emotion-6 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-6 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div

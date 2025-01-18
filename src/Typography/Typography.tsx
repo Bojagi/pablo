@@ -72,7 +72,7 @@ const typographyComponents = {
 
 export const H1 = typographyComponents.h1;
 export const Display = H1;
-const H2 = typographyComponents.h2;
+export const H2 = typographyComponents.h2;
 export const Headline = H2;
 export const H3 = typographyComponents.h3;
 export const Title = H3;

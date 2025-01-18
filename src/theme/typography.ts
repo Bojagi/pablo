@@ -16,6 +16,23 @@ export interface TypographyDefinition {
   marginBottom: string | number;
 }
 
+const typographyTokenNames: Array<keyof TypographyDefinition> = [
+  'fontFamily',
+  'fontSize',
+  'lineHeight',
+  'fontWeight',
+  'marginBottom',
+] as const;
+const typographyTypesTokenNames: Array<keyof Typography> = [
+  'base',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'body',
+  'button',
+] as const;
+
 export interface TypographyDefinitionVariant<K extends string> {
   variants: Record<K, Partial<TypographyDefinition>>;
 }
@@ -100,4 +117,12 @@ export const typography: Typography = {
   },
 };
 
-export const typographyVars = createThemeVars('typography', typography);
+export const typographyVars = createThemeVars(
+  'typography',
+  Object.fromEntries(
+    typographyTypesTokenNames.map((key) => [
+      key,
+      Object.fromEntries(typographyTokenNames.map((token) => [token, null])),
+    ])
+  )
+);

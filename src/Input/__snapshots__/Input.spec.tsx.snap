@@ -114,23 +114,19 @@ exports[`Show error when an error message is given 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
   margin-top: clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem);
   color: var(--pbl-theme-colors-negative-main);
-}
-
-.emotion-3 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-3 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div>
@@ -213,23 +209,19 @@ exports[`Show infotext when available 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
   margin-top: clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem);
   color: var(--pbl-theme-colors-text-info);
-}
-
-.emotion-3 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-3 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div>
@@ -274,21 +266,18 @@ exports[`Show label when available 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-family: var(--pbl-theme-typography-body-fontFamily);
   font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: clamp(0.375rem, 0.3214285714285714rem + 0.26785714285714285vw, 0.5625rem);
-}
-
-.emotion-1 variants bold {
-  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
-}
-
-.emotion-1 variants small {
-  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 .emotion-2 {

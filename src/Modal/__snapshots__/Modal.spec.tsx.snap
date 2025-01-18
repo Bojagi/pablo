@@ -196,11 +196,15 @@ exports[`Render with title 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h3-lineHeight);
+  font-family: var(--pbl-theme-typography-h3-fontFamily);
   font-size: var(--pbl-theme-typography-h3-fontSize);
+  line-height: var(--pbl-theme-typography-h3-lineHeight);
   font-weight: var(--pbl-theme-typography-h3-fontWeight);
   margin-bottom: var(--pbl-theme-typography-h3-marginBottom);
 }
@@ -252,11 +256,15 @@ exports[`Render with title and topRightItem 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-h3-lineHeight);
+  font-family: var(--pbl-theme-typography-h3-fontFamily);
   font-size: var(--pbl-theme-typography-h3-fontSize);
+  line-height: var(--pbl-theme-typography-h3-lineHeight);
   font-weight: var(--pbl-theme-typography-h3-fontWeight);
   margin-bottom: var(--pbl-theme-typography-h3-marginBottom);
 }

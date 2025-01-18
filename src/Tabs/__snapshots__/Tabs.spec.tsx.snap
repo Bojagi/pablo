@@ -86,17 +86,17 @@ exports[`Render first selected 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-2 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 .emotion-3 {
@@ -537,17 +537,17 @@ exports[`Render tabs with icons 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-3 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 .emotion-4 {
@@ -990,17 +990,17 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-2 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 .emotion-3 {
@@ -1317,17 +1317,17 @@ exports[`Work with one tab 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
   font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-family: var(--pbl-theme-typography-button-fontFamily);
   font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-.emotion-2 variants small {
-  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
-  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 .emotion-3 {
