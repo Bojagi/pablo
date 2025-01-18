@@ -1,6 +1,6 @@
 {
   "name": "@bojagi/pablo",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "main": "index.js",
   "main:next": "es/index.js",
   "module": "esm/index.js",
