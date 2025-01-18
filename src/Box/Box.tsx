@@ -8,6 +8,8 @@ import { layout, LayoutProps } from './interpolations/layout';
 import { svg, SvgProps } from './interpolations/svg';
 import { position, PositionProps } from './interpolations/position';
 import { flexItem, FlexItemProps } from './interpolations/flex';
+import { shape, ShapeProps } from './interpolations/shape';
+import { splitProps } from '../utils/splitProps';
 
 export interface BoxCssProps {
   css?: CssFunctionReturn;
@@ -19,10 +21,26 @@ export type BoxProps = SpacingProps &
   FlexItemProps &
   PositionProps &
   SvgProps &
+  ShapeProps &
   BoxCssProps;
 
 export const boxInterpolateFn = (props) =>
-  [margin, padding, color, layout, svg, position, flexItem].map((fn) => fn(props));
+  [margin, padding, color, shape, layout, svg, position, flexItem].map((fn) => fn(props));
+
+export const boxPropNames = [
+  ...margin.propNames,
+  ...padding.propNames,
+  ...color.propNames,
+  ...shape.propNames,
+  ...layout.propNames,
+  ...svg.propNames,
+  ...position.propNames,
+  ...flexItem.propNames,
+];
+
+export const useBoxProps = (props: Record<string, any>) => {
+  return splitProps(props, boxPropNames);
+};
 
 export const Box = styled.div<BoxProps>`
   ${baseStyle}

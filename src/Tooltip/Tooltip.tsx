@@ -11,7 +11,7 @@ import {
   leftArrowStyles,
 } from './tooltipSideStyles';
 import { Popover } from '../Popover/Popover';
-import { useComponentStyle } from '../theme/useComponentStyle';
+import { useNumericComponentStyle } from '../theme/useComponentStyle';
 import { BaseProps } from '../types';
 import { TooltipStyleProperties } from './styles';
 import { getCustomStyles } from '../utils/useCustomStyles';
@@ -87,7 +87,7 @@ const Tooltip = ({
 }: TooltipProps) => {
   const usedAnimationProps = { side, duration: 150, reverse: false, ...animationProps };
   const [isOpen, setOpen] = useState(false);
-  const gap = parseInt((useComponentStyle('tooltip.gap') as string) || '0', 10);
+  const gap = useNumericComponentStyle('tooltip.gap');
 
   useEffect(() => {
     if (disabled || children?.props?.disabled) {
@@ -118,7 +118,9 @@ const Tooltip = ({
           side={side}
           customStyles={customStyles}
         >
-          <Typography variant="info">{content}</Typography>
+          <Typography variant="body" small inline>
+            {content}
+          </Typography>
         </TooltipPopover>
       }
     >

@@ -2,18 +2,19 @@ import type { CSSObject } from '@emotion/react';
 import { mediaQueryAbove } from '../breakpoints/mediaQueryFns';
 import { themeVars } from '../theme';
 import { Breakpoint } from '../theme/breakpoints';
-import { PabloTheme, PabloThemeableProps, ThemeValueGetter } from '../theme/types';
+import { PabloTheme, PabloThemeableProps, PabloThemeFull, ThemeValueGetter } from '../theme/types';
 import { enforceArray } from '../utils/enforceArray';
 import { getByPath } from '../utils/getByPath';
 import { Colors } from '../theme/colors';
 import { KeyMap } from '../types';
-import { spacingNames } from '../theme/spacing';
+import { SpacingNames } from '../theme/spacing';
+import { getSpacing } from '../styleHelpers';
 type InterpolationReturn = string | number | null | undefined;
 type IdentityTransformFn<T extends InterpolationReturn = InterpolationReturn> =
   InterpolationTransformFn<T, T>;
 type InterpolationTransformFn<T = any, R extends InterpolationReturn = InterpolationReturn> = (
   value: T,
-  theme: PabloTheme
+  theme: PabloThemeFull
 ) => R;
 type BreakpointObject<T> = Partial<Record<Breakpoint, T | null | undefined>>;
 type ResponsiveValue<T> = T | (T | null | undefined)[] | BreakpointObject<T>;
@@ -106,6 +107,7 @@ type SystemFn<
       ? StyledInterpolationFunctions<C>
       : never) & {
     get: A extends ThemeValueGetter ? A : never;
+    propNames: string[];
   };
 
 type InterpolateReturnTuple = readonly [string, InterpolationReturn, Breakpoint | null];
@@ -116,26 +118,21 @@ const stringableTransform =
     if (typeof value === 'string') {
       return value;
     }
-    return transformFn(value as Exclude<T, string>, theme);
+    return transformFn(value as Exclude<T, string>, theme as any);
   };
 const identityTransform: IdentityTransformFn = <T>(value: T): T => value;
 const pixelTransform: InterpolationTransformFn<number | string> = stringableTransform(
   (value) => `${value}px`
 );
-const spacingTransform =
-  (name: string): InterpolationTransformFn<number | string> =>
-  (value, theme) => {
-    if (typeof value === 'string' && spacingNames.includes(value as any)) {
-      return `${theme.spacing.sizes[value] * theme.spacing[name]}${theme.spacing.unit}`;
-    }
-    if (typeof value === 'string') {
-      return value;
-    }
-    return `${value * theme.spacing[name]}${theme.spacing.unit}`;
-  };
 
-const macroSpacingTransform = spacingTransform('macro');
-const microSpacingTransform = spacingTransform('micro');
+const microSpacingTransform: InterpolationTransformFn<number | SpacingNames | string> = (
+  value,
+  theme
+) => getSpacing(value, true)({ theme });
+const macroSpacingTransform: InterpolationTransformFn<number | SpacingNames | string> = (
+  value,
+  theme
+) => getSpacing(value)({ theme });
 
 const colorTransform: InterpolationTransformFn<KeyMap<Colors>> = (value) =>
   (getByPath(themeVars.colors as Colors, value) as InterpolationReturn) || value;
@@ -218,15 +215,14 @@ const createSystemProperties = <T extends SystemPropertyConfig[]>(configs: T): S
       props.theme
     );
 
+  (interpolationFn as any).propNames = (interpolationFn as any).propNames || [];
   configs.forEach((config) => {
     const fromProps = config.fromProps || config.properties;
-    if (config.as) {
-      (interpolationFn as any)[config.as] = systemInterpolation(config);
-    } else {
-      fromProps.forEach((property) => {
-        (interpolationFn as any)[property] = systemInterpolation(config);
-      });
-    }
+    const exposedUpdateMethods = config.as ? [config.as] : fromProps;
+    exposedUpdateMethods.forEach((property) => {
+      (interpolationFn as any)[property] = systemInterpolation(config);
+    });
+    (interpolationFn as any).propNames.push(...fromProps);
   });
 
   return interpolationFn as SystemFn<T>;

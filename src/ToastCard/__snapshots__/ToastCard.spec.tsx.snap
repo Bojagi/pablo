@@ -7,7 +7,7 @@ exports[`Render toast card with no type and with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -45,14 +45,11 @@ exports[`Render toast card with no type and with only title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-size: var(--pbl-theme-typography-h4-fontSize);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  font-weight: var(--pbl-theme-typography-h4-fontWeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -91,7 +88,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 exports[`type error Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-negative-main);
 }
 
@@ -120,7 +117,7 @@ exports[`type error Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -138,7 +135,7 @@ exports[`type error Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-negative-main);
 }
 
@@ -172,14 +169,11 @@ exports[`type error Render toast card with only title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-size: var(--pbl-theme-typography-h4-fontSize);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  font-weight: var(--pbl-theme-typography-h4-fontWeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -237,7 +231,7 @@ exports[`type error Render toast card with only title 1`] = `
 exports[`type info Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -266,7 +260,7 @@ exports[`type info Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -284,7 +278,7 @@ exports[`type info Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -318,14 +312,11 @@ exports[`type info Render toast card with only title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-size: var(--pbl-theme-typography-h4-fontSize);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  font-weight: var(--pbl-theme-typography-h4-fontWeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -383,7 +374,7 @@ exports[`type info Render toast card with only title 1`] = `
 exports[`type success Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-positive-main);
 }
 
@@ -412,7 +403,7 @@ exports[`type success Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -430,7 +421,7 @@ exports[`type success Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-positive-main);
 }
 
@@ -464,14 +455,11 @@ exports[`type success Render toast card with only title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-size: var(--pbl-theme-typography-h4-fontSize);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  font-weight: var(--pbl-theme-typography-h4-fontWeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -529,7 +517,7 @@ exports[`type success Render toast card with only title 1`] = `
 exports[`type undefined Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -558,7 +546,7 @@ exports[`type undefined Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -576,7 +564,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -610,14 +598,11 @@ exports[`type undefined Render toast card with only title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-size: var(--pbl-theme-typography-h4-fontSize);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  font-weight: var(--pbl-theme-typography-h4-fontWeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -664,7 +649,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 exports[`type unknown Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -693,7 +678,7 @@ exports[`type unknown Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -711,7 +696,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-common-white);
 }
 
@@ -745,14 +730,11 @@ exports[`type unknown Render toast card with only title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-size: var(--pbl-theme-typography-h4-fontSize);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  font-weight: var(--pbl-theme-typography-h4-fontWeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -799,7 +781,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 exports[`type warning Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-neutral-main);
 }
 
@@ -828,7 +810,7 @@ exports[`type warning Render toast card with only title 1`] = `
   max-width: 400px;
   background-color: var(--pbl-theme-colors-gray-800);
   color: var(--pbl-theme-colors-common-blackContrastText);
-  padding: 0.75rem 1.5rem 0.75rem 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -846,7 +828,7 @@ exports[`type warning Render toast card with only title 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-right: 0.75rem;
+  margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   fill: var(--pbl-theme-colors-neutral-main);
 }
 
@@ -880,14 +862,11 @@ exports[`type warning Render toast card with only title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
+  line-height: var(--pbl-theme-typography-h4-lineHeight);
+  font-size: var(--pbl-theme-typography-h4-fontSize);
+  margin-bottom: var(--pbl-theme-typography-h4-marginBottom);
+  font-weight: var(--pbl-theme-typography-h4-fontWeight);
   margin-bottom: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;

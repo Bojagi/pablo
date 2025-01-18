@@ -3,7 +3,7 @@
 exports[`Render toast stack on the bottom-right by default 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  padding: 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   width: 400px;
   position: fixed;
   display: -webkit-box;

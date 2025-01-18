@@ -4,7 +4,7 @@ exports[`Render multiple nav items 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-left: 1px solid var(--pbl-theme-colors-borders-light);
-  padding-left: 1rem;
+  padding-left: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
 }
 
 .emotion-1 {
@@ -22,10 +22,10 @@ exports[`Render multiple nav items 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 5px 8px;
+  padding: 0.45rem 0.5rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -33,7 +33,7 @@ exports[`Render multiple nav items 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.5rem 0;
+  margin: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) 0;
 }
 
 .emotion-1:enabled {
@@ -50,7 +50,7 @@ exports[`Render multiple nav items 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:active {
@@ -66,6 +66,11 @@ exports[`Render multiple nav items 1`] = `
   line-height: var(--pbl-theme-typography-button-lineHeight);
   font-size: var(--pbl-theme-typography-button-fontSize);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
+.emotion-2 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
 }
 
 .emotion-3 {
@@ -83,10 +88,10 @@ exports[`Render multiple nav items 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 5px 8px;
+  padding: 0.45rem 0.5rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -94,7 +99,7 @@ exports[`Render multiple nav items 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.5rem 0;
+  margin: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) 0;
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
@@ -112,7 +117,7 @@ exports[`Render multiple nav items 1`] = `
 }
 
 .emotion-3:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-3:active {
@@ -128,31 +133,31 @@ exports[`Render multiple nav items 1`] = `
       class="emotion-1"
       data-testid="pbl-sidebarnav-item"
     >
-      <span
+      <p
         class="emotion-2"
       >
         Hello
-      </span>
+      </p>
     </li>
     <li
       class="emotion-3"
       data-testid="pbl-sidebarnav-item"
     >
-      <span
+      <p
         class="emotion-2"
       >
         World
-      </span>
+      </p>
     </li>
     <li
       class="emotion-1"
       data-testid="pbl-sidebarnav-item"
     >
-      <span
+      <p
         class="emotion-2"
       >
         Bye
-      </span>
+      </p>
     </li>
   </ul>
 </div>
@@ -162,7 +167,7 @@ exports[`Render one nav item 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-left: 1px solid var(--pbl-theme-colors-borders-light);
-  padding-left: 1rem;
+  padding-left: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
 }
 
 .emotion-1 {
@@ -180,10 +185,10 @@ exports[`Render one nav item 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 5px 8px;
+  padding: 0.45rem 0.5rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -191,7 +196,7 @@ exports[`Render one nav item 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.5rem 0;
+  margin: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) 0;
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
 
@@ -209,7 +214,7 @@ exports[`Render one nav item 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:active {
@@ -227,6 +232,11 @@ exports[`Render one nav item 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-2 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <ul
     class="emotion-0"
@@ -236,11 +246,11 @@ exports[`Render one nav item 1`] = `
       class="emotion-1"
       data-testid="pbl-sidebarnav-item"
     >
-      <span
+      <p
         class="emotion-2"
       >
         Hello
-      </span>
+      </p>
     </li>
   </ul>
 </div>

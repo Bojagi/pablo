@@ -1,6 +1,6 @@
 import type * as CSS from 'csstype';
 import { pixelTransform, ResponsiveValue, system } from '../system';
-import { PabloTheme } from '../../theme/types';
+import { PabloThemeFull } from '../../theme/types';
 import { isNumber } from '../../utils/isNumber';
 
 interface LayoutProps {
@@ -14,7 +14,7 @@ interface LayoutProps {
   display?: ResponsiveValue<CSS.Property.Display>;
 }
 
-const widthTransform = (value: number | string, theme: PabloTheme) =>
+const widthTransform = (value: number | string, theme: PabloThemeFull) =>
   isNumber(value) && value <= 1 ? `${value * 100}%` : pixelTransform(value, theme);
 
 const layout = system([

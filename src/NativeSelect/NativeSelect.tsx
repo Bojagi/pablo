@@ -29,6 +29,7 @@ const StyledSelect = styled.select<InnerInputProps>`
   padding: ${getComponentStyle('nativeSelect.padding')};
   background-color: transparent;
   font-family: ${getComponentStyle('nativeSelect.fontFamily')};
+  font-size: ${getComponentStyle('nativeSelect.fontSize')};
   outline: none;
   padding-right: ${getComponentStyle('nativeSelect.reservedArrowSpace')};
   position: relative;

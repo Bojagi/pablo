@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { buttonBaseStyles } from '../ButtonBase';
 import { themeVars } from '../theme/themeVars';
 import { BaseProps } from '../types';
-import { ButtonTypography } from '../Typography';
+import { Typography } from '../Typography';
 import { getCustomStyles, useCustomStyles } from '../utils/useCustomStyles';
 import { MenuItemStyleProperties } from './styles';
 import { margin, padding } from '../Box/interpolations/spacing';
@@ -50,12 +50,13 @@ export const MenuItem = ({ children, onClick, as, customStyles, ...props }: Menu
     customStyles={customStyles}
     {...props}
   >
-    <ButtonTypography
+    <Typography
+      variant="button"
       customStyles={{
         button: useCustomStyles('menu.styles', customStyles)('itemText'),
       }}
     >
       {children}
-    </ButtonTypography>
+    </Typography>
   </MenuItemBox>
 );

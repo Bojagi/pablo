@@ -1,4 +1,5 @@
 import { layoutInterpolationFn, LayoutBoxProps } from '../Box';
+import { borderRadiusTransform } from '../Box/interpolations/shape';
 import { baseStyle } from '../shared/baseStyle';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers/getComponentStyle';
 import { omit } from '../utils/omit';
@@ -19,7 +20,10 @@ export const buttonBaseStyles: any = [
     padding: getComponentStyle('button.sizes.{size}.padding')(props),
     border: `${getComponentStyle('button.base.borderSize')(props)}px solid transparent`,
     background: 'transparent',
-    borderRadius: getComponentStyle('button.base.borderRadius')(props),
+    borderRadius: getComponentStyle(
+      'button.sizes.{size}.borderRadius',
+      borderRadiusTransform
+    )(props),
     transition: getComponentStyle('button.base.transitions', transitionTransformer)(props),
     outline: 'none',
 

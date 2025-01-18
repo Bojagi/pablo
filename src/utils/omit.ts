@@ -1,7 +1,4 @@
-const omit = <T extends object>(obj: T, keys: Array<keyof T>) => {
-  const result = { ...obj };
-  keys.forEach((key) => delete result[key]);
-  return result;
-};
+const omit = <T extends object>(obj: T, keys: Array<keyof T>) =>
+  Object.fromEntries(Object.entries(obj).filter(([key]) => !keys.includes(key as keyof T)));
 
 export { omit };

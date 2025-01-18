@@ -23,7 +23,7 @@ test('position', () => {
 
 test('top', () => {
   expect(position({ ...props, top: 2 })).toEqual({
-    top: '1rem',
+    top: expect.stringMatching(/clamp\(1rem, .*?, 1\.5rem\)/),
   });
   expect(position({ ...props, top: '100%' })).toEqual({
     top: '100%',
@@ -32,7 +32,7 @@ test('top', () => {
 
 test('right', () => {
   expect(position({ ...props, right: 2 })).toEqual({
-    right: '1rem',
+    right: expect.stringMatching(/clamp\(1rem, .*?, 1\.5rem\)/),
   });
   expect(position({ ...props, right: '100%' })).toEqual({
     right: '100%',
@@ -41,7 +41,7 @@ test('right', () => {
 
 test('bottom', () => {
   expect(position({ ...props, bottom: 2 })).toEqual({
-    bottom: '1rem',
+    bottom: expect.stringMatching(/clamp\(1rem, .*?, 1\.5rem\)/),
   });
   expect(position({ ...props, bottom: '100%' })).toEqual({
     bottom: '100%',
@@ -50,7 +50,7 @@ test('bottom', () => {
 
 test('left', () => {
   expect(position({ ...props, left: 2 })).toEqual({
-    left: '1rem',
+    left: expect.stringMatching(/clamp\(1rem, .*?, 1\.5rem\)/),
   });
   expect(position({ ...props, left: '100%' })).toEqual({
     left: '100%',

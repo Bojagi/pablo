@@ -2,6 +2,8 @@ import { spacingTokens } from './spacing';
 import { PabloTheme } from './types';
 import { colors } from './colors';
 import { typography } from './typography';
+import { fluid } from './fluid';
+import { shape } from './shape';
 import { breakpoints } from './breakpoints';
 
 export const defaultTheme: PabloTheme = {
@@ -9,4 +11,6 @@ export const defaultTheme: PabloTheme = {
   colors,
   typography,
   breakpoints,
+  fluid,
+  shape,
 };

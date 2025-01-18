@@ -74,19 +74,25 @@ test('Render medium checkbox', () => {
   });
   expect(getByTestId('pbl-checkbox')).toHaveStyleRule(
     'width',
-    'calc(0.75rem + 2 * (0.375rem + 1px))'
+    /calc\(clamp\(0.75rem, .*?, 1.5rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
   );
   expect(getByTestId('pbl-checkbox')).toHaveStyleRule(
     'height',
-    'calc(0.75rem + 2 * (0.375rem + 1px))'
+    /calc\(clamp\(0.75rem, .*?, 1.5rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
   );
-  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('padding', '0.375rem');
-  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('width', '0.75rem');
-  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('height', '0.75rem');
+  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('padding', /clamp\(0.25rem, .*?, 0.5rem\)/);
+  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule(
+    'width',
+    /clamp\(0.75rem, .*?, 1.5rem\)/
+  );
+  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule(
+    'height',
+    /clamp\(0.75rem, .*?, 1.5rem\)/
+  );
   // Uses subtitle typography
   expect(getByTestId('pbl-checkbox-label')).toHaveStyleRule(
     'font-size',
-    themeVars.typography.subtitle.fontSize
+    themeVars.typography.body.fontSize
   );
 });
 
@@ -97,19 +103,22 @@ test('Render small checkbox', () => {
   });
   expect(getByTestId('pbl-checkbox')).toHaveStyleRule(
     'width',
-    'calc(0.5rem + 2 * (0.25rem + 1px))'
+    /calc\(clamp\(0.5rem, .*?, 1rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
   );
   expect(getByTestId('pbl-checkbox')).toHaveStyleRule(
     'height',
-    'calc(0.5rem + 2 * (0.25rem + 1px))'
+    /calc\(clamp\(0.5rem, .*?, 1rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
   );
-  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('padding', '0.25rem');
-  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('width', '0.5rem');
-  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('height', '0.5rem');
+  expect(getByTestId('pbl-checkbox')).toHaveStyleRule('padding', /clamp\(0.25rem, .*?, 0.5rem\)/);
+  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule('width', /clamp\(0.5rem, .*?, 1rem\)/);
+  expect(getByTestId('pbl-checkbox-handle')).toHaveStyleRule(
+    'height',
+    /clamp\(0.5rem, .*?, 1rem\)/
+  );
   // Uses paragraph typography
   expect(getByTestId('pbl-checkbox-label')).toHaveStyleRule(
     'font-size',
-    themeVars.typography.paragraph.fontSize
+    themeVars.typography.body.fontSize
   );
 });
 

@@ -35,6 +35,7 @@ const useNanopop = ({
       container,
       arrow: arrowElement || undefined,
     });
+
     onChange(newPlacement);
   }, [onChange, referenceElement, popperElement, targetWindow, margin, position, arrowElement]);
 

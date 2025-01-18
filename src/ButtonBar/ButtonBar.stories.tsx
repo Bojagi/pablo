@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import { Button } from '../Button';
 import { Card } from '../Card';
-import { Paragraph, Title } from '../Typography';
+import { H4, Body } from '../Typography';
 import { ButtonBar } from './ButtonBar';
 
 export default {
@@ -11,8 +11,8 @@ export default {
 
 export const WithTwoButtons = () => (
   <Card width={500}>
-    <Title>Do you want to proceed?</Title>
-    <Paragraph>Please select one of the buttons below!</Paragraph>
+    <H4>Do you want to proceed?</H4>
+    <Body>Please select one of the buttons below!</Body>
     <ButtonBar>
       <Button size="medium" variant="text" color="plain">
         Cancel
@@ -24,8 +24,8 @@ export const WithTwoButtons = () => (
 
 export const WithOneButtons = () => (
   <Card width={500}>
-    <Title>Move along</Title>
-    <Paragraph>You don't have an option!</Paragraph>
+    <H4>Move along</H4>
+    <Body>You don't have an option!</Body>
     <ButtonBar>
       <Button size="medium">Ok</Button>
     </ButtonBar>
@@ -34,8 +34,8 @@ export const WithOneButtons = () => (
 
 export const WithCustomStyles = () => (
   <Card width={500}>
-    <Title>Do you want to proceed?</Title>
-    <Paragraph>Please select one of the buttons below!</Paragraph>
+    <H4>Do you want to proceed?</H4>
+    <Body>Please select one of the buttons below!</Body>
     <ButtonBar
       customStyles={{
         root: css`

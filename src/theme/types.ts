@@ -26,6 +26,8 @@ import { ImageStyles } from '../Image/styles';
 import { NativeSelectStyles } from '../NativeSelect/styles';
 import { AnimationStyles } from '../animation/styles';
 import { SliderStyles } from '../Slider/styles';
+import { Fluid } from './fluid';
+import { ShapeTokens } from './shape';
 
 export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
   | CSSInterpolation
@@ -33,9 +35,13 @@ export type Style<P extends PabloThemeableProps = PabloThemeableProps> =
 export interface PabloTheme {
   spacing: Spacing;
   colors: Colors;
+  fluid: Fluid;
+  shape: ShapeTokens;
   typography: Typography;
   breakpoints: Breakpoints;
 }
+
+export type FluidValue = number | [number, number];
 
 export type ThemeValueGetter<V = any> = (
   value: V

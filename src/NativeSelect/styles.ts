@@ -13,5 +13,5 @@ export const nativeSelectStyles: NativeSelectStyles = {
   ...inputBaseStyles,
   adornmentGap: getSpacing(1),
   arrowGap: getSpacing(1),
-  reservedArrowSpace: (props) => css`calc(${getSpacing(1)(props)} * 2 + 8px)`,
+  reservedArrowSpace: (props: any) => css`calc(${getSpacing(1)(props)} * 2 + 8px)`,
 };

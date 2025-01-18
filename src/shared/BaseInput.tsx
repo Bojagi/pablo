@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Box, layoutInterpolationFn } from '../Box';
+import { Box, layoutInterpolationFn, useBoxProps } from '../Box';
 import type { LayoutBoxProps } from '../Box';
 import type { Style } from '../theme/types';
-import { InfoText, ParagraphBold } from '../Typography';
+import { InfoText, Paragraph } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { getComponentStyle, transitionTransformer } from '../styleHelpers';
 import { useUniqueId } from '../utils/useUniqueId';
 import { BaseProps, CssFunctionReturn } from '../types';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { baseStyle } from './baseStyle';
+import { borderRadiusTransform } from '../Box/interpolations/shape';
 
 export type BaseInputStyleProperties =
   | 'root'
@@ -61,6 +62,8 @@ export type BaseInputOuterProps<P extends Record<string, any>, E extends HTMLEle
   };
 
 interface InputWrapperProps extends LayoutBoxProps {
+  variant: InputVariant;
+  name: string;
   fullWidth: boolean;
   focus: boolean;
   error: boolean;
@@ -73,7 +76,8 @@ const InputWrapper = styled.div<InputWrapperProps>`
   align-items: center;
   border: ${getComponentStyle('{name}.borderWidth')}px solid
     ${getComponentStyle('{name}.{variant}.borderColor')};
-  border-radius: ${getComponentStyle('{name}.borderRadius')};
+  font-size: ${getComponentStyle('{name}.fontSize')};
+  border-radius: ${getComponentStyle('{name}.borderRadius', borderRadiusTransform)};
   background-color: ${getComponentStyle('{name}.{variant}.backgroundColor')};
   transition: ${getComponentStyle('{name}.transitions', transitionTransformer)};
   ${(props) =>
@@ -112,14 +116,15 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   fullWidth = false,
   adornmentGap = 0,
   value,
-  mt,
   start,
   end,
   onFocus,
   onBlur,
   customStyles,
+  variant,
   ...props
 }: BaseInputOuterProps<P, E>) {
+  const [boxProps, inputProps] = useBoxProps(props);
   const [focus, setFocus] = useState(false);
   const InputComponent = inputComponent as any;
   const generatedId = useUniqueId();
@@ -130,12 +135,12 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const getCustomStyles = useCustomStyles(`${name}.styles`, customStyles);
 
   return (
-    <Box ref={innerRef} mt={mt} css={getCustomStyles('root')}>
+    <Box ref={innerRef} css={getCustomStyles('root')} {...boxProps}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
-          <ParagraphBold mb={0.75} customStyles={{ paragraphBold: getCustomStyles('label') }}>
+          <Paragraph mb={0.75} customStyles={{ body: getCustomStyles('label') }}>
             {label}
-          </ParagraphBold>
+          </Paragraph>
         </label>
       )}
       <InputWrapper
@@ -146,7 +151,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
         error={!!props.error}
         focus={focus}
         cssStyles={getCustomStyles('wrapper')}
-        {...props}
+        variant={variant}
       >
         {start && (
           <Box shrink={0} ml={adornmentGap as any} css={getCustomStyles('startAdornment')}>
@@ -154,7 +159,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           </Box>
         )}
         <InputComponent
-          {...props}
+          {...inputProps}
           data-testid={`pbl-${name}`}
           id={id}
           ref={inputRef}
@@ -181,7 +186,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           id={props.error ? errorId : infoId}
           textColor={props.error ? 'negative.main' : 'text.info'}
           customStyles={{
-            info: getCustomStyles('infoText'),
+            body: getCustomStyles('infoText'),
           }}
         >
           {actualInfoText}

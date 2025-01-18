@@ -73,18 +73,24 @@ test('Render medium radio', () => {
     size: 'medium',
     label: 'medium label',
   });
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(0.75rem + 2 * (0.375rem + 1px))');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule(
+    'width',
+    /calc\(clamp\(0.75rem, .*?, 1.5rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
+  );
   expect(getByTestId('pbl-radio')).toHaveStyleRule(
     'height',
-    'calc(0.75rem + 2 * (0.375rem + 1px))'
+    /calc\(clamp\(0.75rem, .*?, 1.5rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
   );
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '0.375rem');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '0.75rem');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '0.75rem');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', /clamp\(0.25rem, .*?, 0.5rem\)/);
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', /clamp\(0.75rem, .*?, 1.5rem\)/);
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule(
+    'height',
+    /clamp\(0.75rem, .*?, 1.5rem\)/
+  );
   // Uses subtitle typography
   expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',
-    themeVars.typography.subtitle.fontSize
+    themeVars.typography.body.fontSize
   );
 });
 
@@ -93,15 +99,21 @@ test('Render small radio', () => {
     size: 'small',
     label: 'small label',
   });
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('width', 'calc(0.5rem + 2 * (0.25rem + 1px))');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('height', 'calc(0.5rem + 2 * (0.25rem + 1px))');
-  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', '0.25rem');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', '0.5rem');
-  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', '0.5rem');
+  expect(getByTestId('pbl-radio')).toHaveStyleRule(
+    'width',
+    /calc\(clamp\(0.5rem, .*?, 1rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
+  );
+  expect(getByTestId('pbl-radio')).toHaveStyleRule(
+    'height',
+    /calc\(clamp\(0.5rem, .*?, 1rem\) \+ 2 \* \(clamp\(0.25rem, .*?, 0.5rem\) \+ 1px\)\)/
+  );
+  expect(getByTestId('pbl-radio')).toHaveStyleRule('padding', /clamp\(0.25rem, .*?, 0.5rem\)/);
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('width', /clamp\(0.5rem, .*?, 1rem\)/);
+  expect(getByTestId('pbl-radio-handle')).toHaveStyleRule('height', /clamp\(0.5rem, .*?, 1rem\)/);
   // Uses paragraph typography
   expect(getByTestId('pbl-radio-label')).toHaveStyleRule(
     'font-size',
-    themeVars.typography.paragraph.fontSize
+    themeVars.typography.body.fontSize
   );
 });
 

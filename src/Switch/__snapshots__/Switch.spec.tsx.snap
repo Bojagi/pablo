@@ -16,16 +16,16 @@ exports[`Render switch checked 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   position: relative;
-  width: calc(2 * 18px + 2 * (0.125rem + 1px));
-  height: calc(1 * 18px + 2 * (0.125rem + 1px));
+  width: calc(2 * 18px + 2 * (clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem) + 1px));
+  height: calc(1 * 18px + 2 * (clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem) + 1px));
   border-radius: calc(
       (
           18px + 2 *
-            0.125rem + 2 *
+            clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem) + 2 *
             1px
         ) * 0.5
     );
-  padding: 0.125rem;
+  padding: clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem);
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
@@ -111,16 +111,16 @@ exports[`Render switch unchecked 1`] = `
 .emotion-1 {
   box-sizing: border-box;
   position: relative;
-  width: calc(2 * 18px + 2 * (0.125rem + 1px));
-  height: calc(1 * 18px + 2 * (0.125rem + 1px));
+  width: calc(2 * 18px + 2 * (clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem) + 1px));
+  height: calc(1 * 18px + 2 * (clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem) + 1px));
   border-radius: calc(
       (
           18px + 2 *
-            0.125rem + 2 *
+            clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem) + 2 *
             1px
         ) * 0.5
     );
-  padding: 0.125rem;
+  padding: clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem);
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
@@ -196,11 +196,19 @@ exports[`Render switch with label 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
-  margin-left: 0.5rem;
-  margin-left: 0.5rem;
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+  margin-left: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem);
+}
+
+.emotion-0 variants bold {
+  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
+}
+
+.emotion-0 variants small {
+  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <label

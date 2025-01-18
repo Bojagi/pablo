@@ -1,7 +1,7 @@
-import { TypographyVariant } from '../Typography';
 import { getSpacing } from '../styleHelpers';
 import { Style } from '../theme/types';
 import { themeVars } from '../theme/themeVars';
+import { TypographyVariants } from '../theme/typography';
 
 export interface CheckableBaseStyles {
   innerPadding: {
@@ -22,22 +22,22 @@ export interface CheckableBaseStyles {
   boxTransition: string[][];
   handleTransition: string[][];
   typographyVariant: {
-    medium: TypographyVariant;
-    small: TypographyVariant;
+    medium: TypographyVariants;
+    small: TypographyVariants;
   };
 }
 
 export const checkableBaseStyles: CheckableBaseStyles = {
   innerPadding: {
-    medium: getSpacing(0.75),
-    small: getSpacing(0.5),
+    medium: getSpacing(1, true),
+    small: getSpacing(1, true),
   },
   borderWidth: 1,
   borderColor: themeVars.colors.borders.main,
   backgroundColor: themeVars.colors.common.white,
   handleSize: {
-    medium: getSpacing(1.5),
-    small: getSpacing(1),
+    medium: getSpacing(3, true),
+    small: getSpacing(2, true),
   },
   focus: {
     outlineSize: '3px',
@@ -46,7 +46,7 @@ export const checkableBaseStyles: CheckableBaseStyles = {
   boxTransition: [['box-shadow', '0.3s', 'ease-in-out']],
   handleTransition: [['transform', '0.15s', 'cubic-bezier(0.34, 1.56, 0.64, 1)']],
   typographyVariant: {
-    medium: 'subtitle',
-    small: 'paragraph',
+    medium: 'body',
+    small: 'body',
   },
 };

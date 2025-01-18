@@ -151,7 +151,7 @@ function getNodeWidth(node?: HTMLElement | null) {
 
   const { offsetWidth } = node as HTMLElement;
   const style = getComputedStyle(node as HTMLElement);
-  const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+  const margin = parseFloat(style.marginLeft || '0') + parseFloat(style.marginRight || '0') || 0;
   return offsetWidth + margin;
 }
 

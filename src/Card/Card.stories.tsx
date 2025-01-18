@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { Paragraph, Title } from '../Typography';
+import { Paragraph, Subtitle } from '../Typography';
 import { Card } from './Card';
 
 export default {
@@ -9,7 +9,7 @@ export default {
 
 export const PlainCard = () => (
   <Card>
-    <Title>This is a card</Title>
+    <Subtitle>This is a card</Subtitle>
     <Paragraph>With some text</Paragraph>
   </Card>
 );
@@ -23,7 +23,7 @@ export const CustomStyles = () => (
       `,
     }}
   >
-    <Title>This is a card</Title>
+    <Subtitle>This is a card</Subtitle>
     <Paragraph>With some text</Paragraph>
   </Card>
 );

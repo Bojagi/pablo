@@ -30,14 +30,14 @@ const Trigger = () => {
     <Flex width="100%" height="90vh" justifyContent="center" alignItems="center">
       <Box>
         <Checkbox
-          mb={4}
+          mb={2}
           label="closable"
           checked={closable}
           onChange={() => setClosable((val) => !val)}
         />
         <Input
+          mb={2}
           label="Duration"
-          mb={4}
           onChange={(v) => setDuration(parseInt(v, 10) || 0)}
           value={duration}
         />
