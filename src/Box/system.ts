@@ -7,7 +7,7 @@ import { enforceArray } from '../utils/enforceArray';
 import { getByPath } from '../utils/getByPath';
 import { Colors } from '../theme/colors';
 import { KeyMap } from '../types';
-import { SpacingNames, spacingNames } from '../theme/spacing';
+import { SpacingNames } from '../theme/spacing';
 import { getSpacing } from '../styleHelpers';
 type InterpolationReturn = string | number | null | undefined;
 type IdentityTransformFn<T extends InterpolationReturn = InterpolationReturn> =
@@ -124,19 +124,11 @@ const identityTransform: IdentityTransformFn = <T>(value: T): T => value;
 const pixelTransform: InterpolationTransformFn<number | string> = stringableTransform(
   (value) => `${value}px`
 );
-const spacingTransform =
-  (name: string): InterpolationTransformFn<number | string> =>
-  (value, theme) => {
-    if (typeof value === 'string' && spacingNames.includes(value as any)) {
-      return `${theme.spacing.sizes[value] * theme.spacing[name]}${theme.spacing.unit}`;
-    }
-    if (typeof value === 'string') {
-      return value;
-    }
-    return `${value * theme.spacing[name]}${theme.spacing.unit}`;
-  };
 
-const microSpacingTransform = spacingTransform('micro');
+const microSpacingTransform: InterpolationTransformFn<number | SpacingNames | string> = (
+  value,
+  theme
+) => getSpacing(value, true)({ theme });
 const macroSpacingTransform: InterpolationTransformFn<number | SpacingNames | string> = (
   value,
   theme

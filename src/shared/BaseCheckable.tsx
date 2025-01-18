@@ -5,10 +5,11 @@ import { Flex, LayoutBoxProps } from '../Box';
 import { baseStyle } from '../shared/baseStyle';
 import { useComponentStyle } from '../theme/useComponentStyle';
 import { BaseProps, CssFunctionReturn } from '../types';
-import { Typography, TypographyVariant } from '../Typography';
+import { Typography } from '../Typography';
 import { hijackCbBefore } from '../utils/hijackCb';
 import { useCustomStyles } from '../utils/useCustomStyles';
 import { useUniqueId } from '../utils/useUniqueId';
+import { TypographyVariants } from '../theme/typography';
 
 export type CheckableSize = 'small' | 'medium';
 export type CheckableStyleProperties = 'box' | 'handle' | 'label';
@@ -99,7 +100,7 @@ export const BaseCheckable = forwardRef<HTMLDivElement, OuterBaseCheckableProps>
     const id = idProp || generatedId;
     const typographyVariant = useComponentStyle(
       `${componentName}.typographyVariant.${size}`
-    ) as TypographyVariant;
+    ) as TypographyVariants;
     const [focus, setFocus] = useState(false);
     const getCustomStyles = useCustomStyles(`${componentName}.styles`, customStyles);
 

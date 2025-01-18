@@ -3,7 +3,7 @@
 exports[`Render button bar 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 0.25rem 0.25rem;
+  gap: clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,10 +37,10 @@ exports[`Render button bar 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -64,7 +64,7 @@ exports[`Render button bar 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:hover:enabled {
@@ -90,6 +90,11 @@ exports[`Render button bar 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-2 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <div
     class="emotion-0"
@@ -100,22 +105,22 @@ exports[`Render button bar 1`] = `
       color="brand"
       data-testid="pbl-button"
     >
-      <span
+      <p
         class="emotion-2"
       >
         Button 1
-      </span>
+      </p>
     </button>
     <button
       class="emotion-1"
       color="brand"
       data-testid="pbl-button"
     >
-      <span
+      <p
         class="emotion-2"
       >
         Button 2
-      </span>
+      </p>
     </button>
   </div>
 </div>
@@ -124,7 +129,7 @@ exports[`Render button bar 1`] = `
 exports[`Render button bar with one item 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 0.25rem 0.25rem;
+  gap: clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,10 +163,10 @@ exports[`Render button bar with one item 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -185,7 +190,7 @@ exports[`Render button bar with one item 1`] = `
 }
 
 .emotion-1:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-1:hover:enabled {
@@ -211,6 +216,11 @@ exports[`Render button bar with one item 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-2 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <div
     class="emotion-0"
@@ -221,11 +231,11 @@ exports[`Render button bar with one item 1`] = `
       color="brand"
       data-testid="pbl-button"
     >
-      <span
+      <p
         class="emotion-2"
       >
         Button 1
-      </span>
+      </p>
     </button>
   </div>
 </div>

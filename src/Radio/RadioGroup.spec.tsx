@@ -3,6 +3,7 @@ import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { RadioGroup } from './RadioGroup';
 import { Radio } from './Radio';
+import { clampRegExp } from '../../testUtils/matchClamp';
 
 let onChangeMock;
 
@@ -72,18 +73,18 @@ test('Render with size "medium"', () => {
   const { getAllByTestId } = renderComponent({ size: 'medium' });
   const allRadios = getAllByTestId('pbl-radio-handle');
   expect(allRadios).toHaveLength(3);
-  expect(allRadios[0]).toHaveStyleRule('width', '0.75rem');
-  expect(allRadios[1]).toHaveStyleRule('width', '0.75rem');
-  expect(allRadios[2]).toHaveStyleRule('width', '0.75rem');
+  expect(allRadios[0]).toHaveStyleRule('width', clampRegExp(1.5, 0.5, 1));
+  expect(allRadios[1]).toHaveStyleRule('width', clampRegExp(1.5, 0.5, 1));
+  expect(allRadios[2]).toHaveStyleRule('width', clampRegExp(1.5, 0.5, 1));
 });
 
 test('Render with size "small"', () => {
   const { getAllByTestId } = renderComponent({ size: 'small' });
   const allRadios = getAllByTestId('pbl-radio-handle');
   expect(allRadios).toHaveLength(3);
-  expect(allRadios[0]).toHaveStyleRule('width', '0.5rem');
-  expect(allRadios[1]).toHaveStyleRule('width', '0.5rem');
-  expect(allRadios[2]).toHaveStyleRule('width', '0.5rem');
+  expect(allRadios[0]).toHaveStyleRule('width', clampRegExp(1, 0.5, 1));
+  expect(allRadios[1]).toHaveStyleRule('width', clampRegExp(1, 0.5, 1));
+  expect(allRadios[2]).toHaveStyleRule('width', clampRegExp(1, 0.5, 1));
 });
 
 function renderComponent(props) {

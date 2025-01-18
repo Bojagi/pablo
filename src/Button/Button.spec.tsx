@@ -363,14 +363,20 @@ test('render button with start icon', () => {
   const { container, getByTestId } = renderComponent({ startIcon: <div>myIcon</div> });
   expect(container).toMatchSnapshot();
   expect(getByTestId('pbl-button-icon')).toBeDefined();
-  expect(getByTestId('pbl-button-icon')).toHaveStyleRule('margin-right', '0.5rem');
+  expect(getByTestId('pbl-button-icon')).toHaveStyleRule(
+    'margin-right',
+    /clamp\(0.5rem, .*?, 0.75rem\)/
+  );
 });
 
 test('render button with end icon', () => {
   const { container, getByTestId } = renderComponent({ endIcon: <div>myIcon</div> });
   expect(container).toMatchSnapshot();
   expect(getByTestId('pbl-button-icon')).toBeDefined();
-  expect(getByTestId('pbl-button-icon')).toHaveStyleRule('margin-left', '0.5rem');
+  expect(getByTestId('pbl-button-icon')).toHaveStyleRule(
+    'margin-left',
+    /clamp\(0.5rem, .*?, 0.75rem\)/
+  );
 });
 
 test('disable button element when disabled prop is true', () => {

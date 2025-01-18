@@ -1,5 +1,3 @@
-import { css } from '@emotion/react';
-import { getSpacing } from '../styleHelpers';
 import { themeVars } from '../theme/themeVars';
 import { Style } from '../theme/types';
 import { getTypographyStep } from '../theme/typography';

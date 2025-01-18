@@ -35,7 +35,7 @@ export const spacingTokens: Spacing = {
   // Spacing for layouts
   macro: [0.5, 0.75],
   // Spacing for components
-  micro: 0.25,
+  micro: [0.25, 0.5],
   // Sizes with multipliers for unit
   sizes: {
     xxxs: 0.25,

@@ -54,6 +54,6 @@ test('get named spacing', () => {
 test('get fluid spacing with multiplier', () => {
   const props = { theme: THEME_FLUID };
   expect(getSpacing(0.5)(props)).toBe(
-    'clamp(0.5rem, 0.4642857142857143rem + 0.00011160714285714285vw, 0.625rem)'
+    'clamp(0.5rem, 0.4642857142857143rem + 0.011160714285714286vw, 0.625rem)'
   );
 });

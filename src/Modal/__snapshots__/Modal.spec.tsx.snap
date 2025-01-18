@@ -50,14 +50,14 @@ exports[`Render closed modal with just a content element 1`] = `
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
-  padding: 1.5rem;
+  padding: clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem);
 }
 
 .emotion-2 {
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -101,20 +101,20 @@ exports[`Render with additional panes 1`] = `
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
-  padding: 1.5rem;
+  padding: clamp(1.5rem, 1.2857142857142856rem + 1.0714285714285714vw, 2.25rem);
 }
 
 .emotion-1 {
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  margin-top: 0.75rem;
+  margin-top: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
 }
 
 <div
@@ -178,7 +178,7 @@ exports[`Render with title 1`] = `
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -199,9 +199,10 @@ exports[`Render with title 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-title-lineHeight);
-  font-size: var(--pbl-theme-typography-title-fontSize);
-  margin-bottom: var(--pbl-theme-typography-title-marginBottom);
+  line-height: var(--pbl-theme-typography-h3-lineHeight);
+  font-size: var(--pbl-theme-typography-h3-fontSize);
+  font-weight: var(--pbl-theme-typography-h3-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h3-marginBottom);
 }
 
 <div
@@ -233,7 +234,7 @@ exports[`Render with title and topRightItem 1`] = `
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -254,9 +255,10 @@ exports[`Render with title and topRightItem 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-title-lineHeight);
-  font-size: var(--pbl-theme-typography-title-fontSize);
-  margin-bottom: var(--pbl-theme-typography-title-marginBottom);
+  line-height: var(--pbl-theme-typography-h3-lineHeight);
+  font-size: var(--pbl-theme-typography-h3-fontSize);
+  font-weight: var(--pbl-theme-typography-h3-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-h3-marginBottom);
 }
 
 <div
@@ -291,7 +293,7 @@ exports[`Render with topRightItem 1`] = `
   box-sizing: border-box;
   border-radius: 12px;
   background-color: var(--pbl-theme-colors-background);
-  padding: 0.75rem;
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 

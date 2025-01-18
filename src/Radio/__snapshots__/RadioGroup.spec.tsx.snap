@@ -7,7 +7,7 @@ exports[`Render with nothing selected 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  margin-bottom: 0.75rem;
+  margin-bottom: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
 }
 
 .emotion-2 {
@@ -25,10 +25,10 @@ exports[`Render with nothing selected 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   position: relative;
-  width: calc(0.75rem + 2 * (0.375rem + 1px));
-  height: calc(0.75rem + 2 * (0.375rem + 1px));
+  width: calc(clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem) + 2 * (clamp(0.25rem, 0.17857142857142858rem + 0.35714285714285715vw, 0.5rem) + 1px));
+  height: calc(clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem) + 2 * (clamp(0.25rem, 0.17857142857142858rem + 0.35714285714285715vw, 0.5rem) + 1px));
   border-radius: 50%;
-  padding: 0.375rem;
+  padding: clamp(0.25rem, 0.17857142857142858rem + 0.35714285714285715vw, 0.5rem);
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
@@ -38,8 +38,8 @@ exports[`Render with nothing selected 1`] = `
 
 .emotion-4 {
   box-sizing: border-box;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem);
+  height: clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -70,11 +70,19 @@ exports[`Render with nothing selected 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
-  margin-left: 0.5rem;
-  margin-left: 0.5rem;
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+  margin-left: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem);
+}
+
+.emotion-6 variants bold {
+  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
+}
+
+.emotion-6 variants small {
+  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div>
@@ -192,7 +200,7 @@ exports[`Work with one radio button 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
-  margin-bottom: 0.75rem;
+  margin-bottom: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
 }
 
 .emotion-2 {
@@ -210,10 +218,10 @@ exports[`Work with one radio button 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   position: relative;
-  width: calc(0.75rem + 2 * (0.375rem + 1px));
-  height: calc(0.75rem + 2 * (0.375rem + 1px));
+  width: calc(clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem) + 2 * (clamp(0.25rem, 0.17857142857142858rem + 0.35714285714285715vw, 0.5rem) + 1px));
+  height: calc(clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem) + 2 * (clamp(0.25rem, 0.17857142857142858rem + 0.35714285714285715vw, 0.5rem) + 1px));
   border-radius: 50%;
-  padding: 0.375rem;
+  padding: clamp(0.25rem, 0.17857142857142858rem + 0.35714285714285715vw, 0.5rem);
   background-color: var(--pbl-theme-colors-common-white);
   border: 1px solid var(--pbl-theme-colors-borders-main);
   opacity: 1;
@@ -223,8 +231,8 @@ exports[`Work with one radio button 1`] = `
 
 .emotion-4 {
   box-sizing: border-box;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem);
+  height: clamp(0.75rem, 0.5357142857142857rem + 1.0714285714285714vw, 1.5rem);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -255,11 +263,19 @@ exports[`Work with one radio button 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-subtitle-lineHeight);
-  font-size: var(--pbl-theme-typography-subtitle-fontSize);
-  margin-bottom: var(--pbl-theme-typography-subtitle-marginBottom);
-  margin-left: 0.5rem;
-  margin-left: 0.5rem;
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+  margin-left: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem);
+}
+
+.emotion-6 variants bold {
+  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
+}
+
+.emotion-6 variants small {
+  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div>

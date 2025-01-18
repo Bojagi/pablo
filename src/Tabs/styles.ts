@@ -79,7 +79,7 @@ export const tabsStyles: TabsStyles = {
         borderRadius: 'lg',
       },
     },
-    margin: (props) => css`0 0 ${getSpacing(0)(props)}`,
+    margin: (props: any) => css`0 0 ${getSpacing(0)(props)}`,
     hover: {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
     },
@@ -90,7 +90,7 @@ export const tabsStyles: TabsStyles = {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
     },
     selected: {
-      padding: (props) => css`
+      padding: (props: any) => css`
         ${getSpacing(1)(props)} ${getSpacing(1.5)(props)} ${getSpacing(1.5)(props)}
       `,
       margin: '0',

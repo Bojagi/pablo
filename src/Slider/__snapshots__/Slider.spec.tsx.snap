@@ -3,7 +3,7 @@
 exports[`LowerOutOfBounds story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 1rem 1rem;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -100,10 +100,18 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
-  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+}
+
+.emotion-6 variants bold {
+  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
+}
+
+.emotion-6 variants small {
+  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div
@@ -145,7 +153,7 @@ exports[`LowerOutOfBounds story snapshot 1`] = `
 exports[`OffsetRangeSlider story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 1rem 1rem;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -242,10 +250,18 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
-  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+}
+
+.emotion-6 variants bold {
+  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
+}
+
+.emotion-6 variants small {
+  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div
@@ -287,7 +303,7 @@ exports[`OffsetRangeSlider story snapshot 1`] = `
 exports[`SimpleSlider story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 1rem 1rem;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -384,10 +400,18 @@ exports[`SimpleSlider story snapshot 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
-  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+}
+
+.emotion-6 variants bold {
+  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
+}
+
+.emotion-6 variants small {
+  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div
@@ -429,7 +453,7 @@ exports[`SimpleSlider story snapshot 1`] = `
 exports[`UpperOutOfBounds story snapshot 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  gap: 1rem 1rem;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
   width: 50vw;
   display: -webkit-box;
   display: -webkit-flex;
@@ -526,10 +550,18 @@ exports[`UpperOutOfBounds story snapshot 1`] = `
   font-weight: var(--pbl-theme-typography-base-fontWeight);
   font-style: normal;
   margin: 0;
-  line-height: var(--pbl-theme-typography-paragraph-lineHeight);
-  font-size: var(--pbl-theme-typography-paragraph-fontSize);
-  margin-bottom: var(--pbl-theme-typography-paragraph-marginBottom);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+}
+
+.emotion-6 variants bold {
+  font-weight: var(--pbl-theme-typography-body-variants-bold-fontWeight);
+}
+
+.emotion-6 variants small {
+  font-size: var(--pbl-theme-typography-body-variants-small-fontSize);
 }
 
 <div

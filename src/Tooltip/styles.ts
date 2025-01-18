@@ -17,7 +17,7 @@ export interface TooltipStyles extends BaseStyles<TooltipStyleProperties> {
 
 export const tooltipStyles: TooltipStyles = {
   gap: getSpacing(0.5),
-  padding: (props) => css`
+  padding: (props: any) => css`
     ${getSpacing(0.5)(props)} ${getSpacing(1)(props)}
   `,
   zIndex: 100,

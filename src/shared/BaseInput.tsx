@@ -120,16 +120,11 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   end,
   onFocus,
   onBlur,
-  onClick,
   customStyles,
   variant,
   ...props
 }: BaseInputOuterProps<P, E>) {
   const [boxProps, inputProps] = useBoxProps(props);
-  console.log('inputProps', inputProps);
-
-  console.log('boxProps', boxProps);
-
   const [focus, setFocus] = useState(false);
   const InputComponent = inputComponent as any;
   const generatedId = useUniqueId();
@@ -143,7 +138,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
     <Box ref={innerRef} css={getCustomStyles('root')} {...boxProps}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
-          <Paragraph mb={0.75} customStyles={{ paragraphBold: getCustomStyles('label') }}>
+          <Paragraph mb={0.75} customStyles={{ body: getCustomStyles('label') }}>
             {label}
           </Paragraph>
         </label>
@@ -191,7 +186,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
           id={props.error ? errorId : infoId}
           textColor={props.error ? 'negative.main' : 'text.info'}
           customStyles={{
-            info: getCustomStyles('infoText'),
+            body: getCustomStyles('infoText'),
           }}
         >
           {actualInfoText}

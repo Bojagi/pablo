@@ -21,8 +21,6 @@ export const getComponentStyle =
   ) =>
   (props: WithTheme<any, PabloTheme>) => {
     const pathArray = Array.isArray(path) ? getArrayPath(path, props) : getStringPath(path, props);
-    console.log('pathArray', pathArray);
-
     const value = pathArray.reduce(
       (acc, key) => (acc && acc[key]) || undefined,
       props.theme.componentStyles || {}

@@ -39,8 +39,6 @@ export const boxPropNames = [
 ];
 
 export const useBoxProps = (props: Record<string, any>) => {
-  console.log('boxPropNames', boxPropNames);
-
   return splitProps(props, boxPropNames);
 };
 

@@ -16,7 +16,7 @@ export interface ToastCardStyles {
 
 export const toastCardStyles: ToastCardStyles = {
   width: '400px',
-  padding: (props) => css`
+  padding: (props: any) => css`
     ${getSpacing(1.5)(props)} ${getSpacing(3)(props)} ${getSpacing(1.5)(props)} ${getSpacing(1.5)(
       props
     )}

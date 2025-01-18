@@ -16,10 +16,10 @@ exports[`render button with end icon 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -43,7 +43,7 @@ exports[`render button with end icon 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -69,6 +69,11 @@ exports[`render button with end icon 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -82,7 +87,7 @@ exports[`render button with end icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 0.5rem;
+  margin-left: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem);
 }
 
 .emotion-2,
@@ -97,11 +102,11 @@ exports[`render button with end icon 1`] = `
     color="brand"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
     <div
       class="emotion-2"
       data-testid="pbl-button-icon"
@@ -130,10 +135,10 @@ exports[`render button with start icon 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -157,7 +162,7 @@ exports[`render button with start icon 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -185,7 +190,7 @@ exports[`render button with start icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 0.5rem;
+  margin-right: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem);
 }
 
 .emotion-1,
@@ -205,6 +210,11 @@ exports[`render button with start icon 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-2 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
@@ -219,11 +229,11 @@ exports[`render button with start icon 1`] = `
         myIcon
       </div>
     </div>
-    <span
+    <p
       class="emotion-2"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -244,10 +254,10 @@ exports[`render primary brand color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -271,7 +281,7 @@ exports[`render primary brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -297,17 +307,22 @@ exports[`render primary brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="brand"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -328,10 +343,10 @@ exports[`render primary negative color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -355,7 +370,7 @@ exports[`render primary negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -381,17 +396,22 @@ exports[`render primary negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="negative"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -412,10 +432,10 @@ exports[`render primary plain color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -439,7 +459,7 @@ exports[`render primary plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -465,17 +485,22 @@ exports[`render primary plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="plain"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -496,10 +521,10 @@ exports[`render primary positive color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -523,7 +548,7 @@ exports[`render primary positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -549,17 +574,22 @@ exports[`render primary positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="positive"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -580,10 +610,10 @@ exports[`render primaryInverted brand color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -607,7 +637,7 @@ exports[`render primaryInverted brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -633,17 +663,22 @@ exports[`render primaryInverted brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="brand"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -664,10 +699,10 @@ exports[`render primaryInverted negative color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -691,7 +726,7 @@ exports[`render primaryInverted negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -717,17 +752,22 @@ exports[`render primaryInverted negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="negative"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -748,10 +788,10 @@ exports[`render primaryInverted plain color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -775,7 +815,7 @@ exports[`render primaryInverted plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -801,17 +841,22 @@ exports[`render primaryInverted plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="plain"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -832,10 +877,10 @@ exports[`render primaryInverted positive color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -859,7 +904,7 @@ exports[`render primaryInverted positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -885,17 +930,22 @@ exports[`render primaryInverted positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="positive"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -916,10 +966,10 @@ exports[`render secondary brand color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -943,7 +993,7 @@ exports[`render secondary brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -969,17 +1019,22 @@ exports[`render secondary brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="brand"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1000,10 +1055,10 @@ exports[`render secondary negative color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1027,7 +1082,7 @@ exports[`render secondary negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1053,17 +1108,22 @@ exports[`render secondary negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="negative"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1084,10 +1144,10 @@ exports[`render secondary plain color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1111,7 +1171,7 @@ exports[`render secondary plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -1137,17 +1197,22 @@ exports[`render secondary plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="plain"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1168,10 +1233,10 @@ exports[`render secondary positive color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1195,7 +1260,7 @@ exports[`render secondary positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1221,17 +1286,22 @@ exports[`render secondary positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="positive"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1252,10 +1322,10 @@ exports[`render secondaryInverted brand color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1279,7 +1349,7 @@ exports[`render secondaryInverted brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1305,17 +1375,22 @@ exports[`render secondaryInverted brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="brand"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1336,10 +1411,10 @@ exports[`render secondaryInverted negative color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1363,7 +1438,7 @@ exports[`render secondaryInverted negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1389,17 +1464,22 @@ exports[`render secondaryInverted negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="negative"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1420,10 +1500,10 @@ exports[`render secondaryInverted plain color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1447,7 +1527,7 @@ exports[`render secondaryInverted plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -1473,17 +1553,22 @@ exports[`render secondaryInverted plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="plain"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1504,10 +1589,10 @@ exports[`render secondaryInverted positive color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1531,7 +1616,7 @@ exports[`render secondaryInverted positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1557,17 +1642,22 @@ exports[`render secondaryInverted positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="positive"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1588,10 +1678,10 @@ exports[`render text brand color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1615,7 +1705,7 @@ exports[`render text brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1641,17 +1731,22 @@ exports[`render text brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="brand"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1672,10 +1767,10 @@ exports[`render text negative color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1699,7 +1794,7 @@ exports[`render text negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1725,17 +1820,22 @@ exports[`render text negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="negative"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1756,10 +1856,10 @@ exports[`render text plain color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1783,7 +1883,7 @@ exports[`render text plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -1809,17 +1909,22 @@ exports[`render text plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="plain"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1840,10 +1945,10 @@ exports[`render text positive color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1867,7 +1972,7 @@ exports[`render text positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1893,17 +1998,22 @@ exports[`render text positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="positive"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -1924,10 +2034,10 @@ exports[`render textInverted brand color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -1951,7 +2061,7 @@ exports[`render textInverted brand color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-brand-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-brand-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -1977,17 +2087,22 @@ exports[`render textInverted brand color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="brand"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -2008,10 +2123,10 @@ exports[`render textInverted negative color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -2035,7 +2150,7 @@ exports[`render textInverted negative color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-negative-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-negative-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -2061,17 +2176,22 @@ exports[`render textInverted negative color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="negative"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -2092,10 +2212,10 @@ exports[`render textInverted plain color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -2119,7 +2239,7 @@ exports[`render textInverted plain color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-gray-50);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-gray-50);
 }
 
 .emotion-0:hover:enabled {
@@ -2145,17 +2265,22 @@ exports[`render textInverted plain color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="plain"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;
@@ -2176,10 +2301,10 @@ exports[`render textInverted positive color button 1`] = `
   align-items: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0.75rem 0.875rem;
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 0.25rem;
+  border-radius: clamp(0.375rem, 0.375rem + 0vw, 0.375rem);
   -webkit-transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,-webkit-transform,0.15s;
   transition: background-color,0.3s,color 0.3s,border-color 0.3s,box-shadow 0.3s ease-in-out,transform,0.15s;
   outline: none;
@@ -2203,7 +2328,7 @@ exports[`render textInverted positive color button 1`] = `
 }
 
 .emotion-0:focus {
-  box-shadow: 0 0 0 0.25rem var(--pbl-theme-colors-positive-lightest);
+  box-shadow: 0 0 0 clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem) var(--pbl-theme-colors-positive-lightest);
 }
 
 .emotion-0:hover:enabled {
@@ -2229,17 +2354,22 @@ exports[`render textInverted positive color button 1`] = `
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
 }
 
+.emotion-1 variants small {
+  font-size: var(--pbl-theme-typography-button-variants-small-fontSize);
+  font-weight: var(--pbl-theme-typography-button-variants-small-fontWeight);
+}
+
 <div>
   <button
     class="emotion-0"
     color="positive"
     data-testid="pbl-button"
   >
-    <span
+    <p
       class="emotion-1"
     >
       Hello
-    </span>
+    </p>
   </button>
 </div>
 `;

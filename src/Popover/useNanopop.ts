@@ -29,8 +29,6 @@ const useNanopop = ({
 
     const container = targetWindow.document.documentElement?.getBoundingClientRect();
 
-    console.log('referenceElement', referenceElement, margin);
-
     const newPlacement = reposition(referenceElement, popperElement, {
       margin,
       position,

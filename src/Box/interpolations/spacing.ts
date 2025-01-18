@@ -1,5 +1,5 @@
 import { SpacingNames } from '../../theme/spacing';
-import { PabloTheme } from '../../theme/types';
+import { PabloThemeFull } from '../../theme/types';
 import {
   InterpolationReturn,
   InterpolationTransformFn,
@@ -11,7 +11,7 @@ import {
 
 type SpacingTransformFn = InterpolationTransformFn<number | string, InterpolationReturn>;
 
-const getGapSpacing = (transformFn: SpacingTransformFn) => (value: any, theme: PabloTheme) => {
+const getGapSpacing = (transformFn: SpacingTransformFn) => (value: any, theme: PabloThemeFull) => {
   if (Array.isArray(value)) {
     return value.map((val) => transformFn(val, theme)).join(' ');
   }

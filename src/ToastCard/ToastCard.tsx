@@ -102,7 +102,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
                 grow={1}
                 inline={!description}
                 customStyles={{
-                  subtitle: getStyles('title'),
+                  h4: getStyles('title'),
                 }}
               >
                 {title}
@@ -133,7 +133,7 @@ export const ToastCard = forwardRef<HTMLDivElement, ToastCardProps>(
                 id={descriptionId}
                 data-testid="pbl-toastcard-description"
                 customStyles={{
-                  paragraph: getStyles('description'),
+                  body: getStyles('description'),
                 }}
               >
                 {description}
