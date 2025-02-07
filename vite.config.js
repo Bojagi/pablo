@@ -7,6 +7,11 @@ const config = defineConfig({
       react(),
     ],
     build: {
+      minify: false,
+      terserOptions: {
+        compress: false,
+        mangle: false,
+      },
       lib: {
         entry: getLibEntries(),
         formats: ['es', 'cjs'],
