@@ -1,19 +1,14 @@
 {
   "name": "@bojagi/pablo",
   "version": "0.12.1",
-  "main": "index.js",
-  "main:next": "es/index.js",
-  "module": "esm/index.js",
-  "browser": "pablo.min.js",
-  "typings": "./index.d.ts",
   "type": "module",
   "contributors": [
     "Simon Jentsch <simon@bojagi.io>"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn build:cjs && yarn build:esm && yarn build:es && yarn build:umd && yarn build:copy-files && yarn build:types",
+    "build": "yarn build:src && yarn build:types && yarn build:cp-files && yarn build:package",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "build:umd": "cross-env BABEL_ENV=rollup yarn rollup -c",
@@ -23,6 +18,10 @@
     "build:types": "tsc -p tsconfig.build.json",
     "build:copy-files": "cp package.json build/package.json && cp README.md build/README.md",
     "publish-script": "$PWD/scripts/publish.sh",
+
+    "build:src": "yarn vite build",
+    "build:package": "node scripts/buildPackageJson.js",
+    "build:cp-files": "cp README.md dist/README.md",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:size": "size-limit",
@@ -71,6 +70,7 @@
     "@typescript-eslint/eslint-plugin": "^8.15.0",
     "@typescript-eslint/eslint-plugin-tslint": "^7.0.2",
     "@typescript-eslint/parser": "4.10.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
     "babel-loader": "^8.2.2",
     "babel-plugin-add-import-extension": "^1.6.0",
     "cross-env": "^7.0.3",
@@ -101,6 +101,7 @@
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.1-alpha.6",
     "vite": "^5.4.11",
+    "vitest": "^3.0.5",
     "webpack-dev-server": "^3.11.0",
     "yargs": "^16.2.0"
   },
