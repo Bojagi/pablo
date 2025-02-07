@@ -36,16 +36,6 @@
     "stylis": "4.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.25.9",
-    "@babel/core": "^7.26.0",
-    "@babel/node": "^7.26.0",
-    "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/plugin-proposal-optional-chaining": "^7.12.16",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-typescript": "^7.12.16",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
-    "@babel/preset-typescript": "^7.12.16",
     "@bojagi/cli": "0.18.0-next.3",
     "@emotion/jest": "^11.13.0",
     "@emotion/react": "^11.13.5",
