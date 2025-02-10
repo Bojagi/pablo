@@ -5,10 +5,10 @@ import { ToastProvider, useToast } from './ToastProvider';
 import '../../testUtils/mockResizeObserver';
 
 beforeEach(() => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
 });
 
-afterEach(cleanup);
+//afterEach(cleanup);
 
 test('Render toast stack on the bottom-right by default', () => {
   const { getByTestId } = renderComponent({
@@ -126,13 +126,13 @@ test.skip('Hide message after duration and animation', async () => {
   act(() => {
     fireEvent.click(getByTestId('add-toast'));
     // introduction animation (300ms) plus 100ms visibility
-    jest.advanceTimersByTime(400);
+    vi.advanceTimersByTime(400);
   });
 
   // Trigger leaving animation by waiting for RAF
   await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
   act(() => {
-    jest.advanceTimersByTime(299);
+    vi.advanceTimersByTime(299);
   });
 
   // Should still be there as the animation takes 300ms
@@ -140,7 +140,7 @@ test.skip('Hide message after duration and animation', async () => {
   expect(getByTestId('pbl-toastcard-description')).toHaveTextContent('Something happened!');
 
   act(() => {
-    jest.advanceTimersByTime(1);
+    vi.advanceTimersByTime(1);
   });
 
   await waitFor(
@@ -162,13 +162,13 @@ test.skip('Hide message after default duration and animation', async () => {
 
   act(() => {
     fireEvent.click(getByTestId('add-toast'));
-    jest.advanceTimersByTime(3300);
+    vi.advanceTimersByTime(3300);
   });
 
   // Trigger leaving animation by waiting for RAF
   await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
   act(() => {
-    jest.advanceTimersByTime(300);
+    vi.advanceTimersByTime(300);
   });
 
   expect(getByTestId('pbl-toaststack').childNodes).toHaveLength(0);
@@ -184,13 +184,13 @@ test('Hide message after duration and animation with component being unmounted i
 
   act(() => {
     fireEvent.click(getByTestId('add-toast'));
-    jest.advanceTimersByTime(100);
+    vi.advanceTimersByTime(100);
   });
 
   unmount();
 
   act(() => {
-    jest.advanceTimersByTime(300);
+    vi.advanceTimersByTime(300);
   });
 });
 
@@ -203,7 +203,7 @@ test.skip('Should not hide message after time when duration is 0', async () => {
 
   act(() => {
     fireEvent.click(getByTestId('add-toast'));
-    jest.advanceTimersByTime(1000);
+    vi.advanceTimersByTime(1000);
   });
 
   // Should still be there as duration is 0
@@ -216,7 +216,7 @@ test.skip('Should not hide message after time when duration is 0', async () => {
   });
   await act(() => new Promise((resolve) => requestAnimationFrame(resolve as any)));
   act(() => {
-    jest.advanceTimersByTime(299);
+    vi.advanceTimersByTime(299);
   });
 
   // Should still be there as the animation takes 300ms
@@ -224,7 +224,7 @@ test.skip('Should not hide message after time when duration is 0', async () => {
   expect(getByTestId('pbl-toastcard-description')).toHaveTextContent('Something happened!');
 
   act(() => {
-    jest.advanceTimersByTime(1);
+    vi.advanceTimersByTime(1);
   });
 
   expect(getByTestId('pbl-toaststack').childNodes).toHaveLength(0);

@@ -20,6 +20,11 @@ const config = defineConfig({
         external: getExternals(['react/jsx-runtime']),
       },
     },
+    test: {
+      environment: 'jsdom',
+      globals: true,
+      setupFiles: './vitestSetup.js', // assuming the test folder is in the root of our project
+    },
   })
 
 export default config;

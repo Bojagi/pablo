@@ -8,10 +8,10 @@ import { SidebarNavItem } from './SidebarNavItem';
 let onSelectMock;
 
 beforeEach(() => {
-  onSelectMock = jest.fn();
+  onSelectMock = vi.fn();
 });
 
-afterEach(cleanup);
+//afterEach(cleanup);
 
 test('Render one nav item', () => {
   const { container } = render(

@@ -1,4 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Headline component  > Render component 1`] = `
+<div>
+  <h2
+    class="css-1339ijz"
+  >
+    Hello
+  </h2>
+</div>
+`;
 
 exports[`Headline component  Render component 1`] = `
 .emotion-0 {
@@ -26,6 +36,16 @@ exports[`Headline component  Render component 1`] = `
 </div>
 `;
 
+exports[`InfoText component  > Render component 1`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
 exports[`InfoText component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -46,6 +66,16 @@ exports[`InfoText component  Render component 1`] = `
 <div>
   <p
     class="emotion-0"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Paragraph component  > Render component 1`] = `
+<div>
+  <p
+    class="css-1mhoefm"
   >
     Hello
   </p>
@@ -78,6 +108,16 @@ exports[`Paragraph component  Render component 1`] = `
 </div>
 `;
 
+exports[`ParagraphBold component  > Render component 1`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
 exports[`ParagraphBold component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -101,6 +141,16 @@ exports[`ParagraphBold component  Render component 1`] = `
   >
     Hello
   </p>
+</div>
+`;
+
+exports[`Subtitle component  > Render component 1`] = `
+<div>
+  <h4
+    class="css-175ynur"
+  >
+    Hello
+  </h4>
 </div>
 `;
 
@@ -130,6 +180,16 @@ exports[`Subtitle component  Render component 1`] = `
 </div>
 `;
 
+exports[`Title component  > Render component 1`] = `
+<div>
+  <h3
+    class="css-g5ixaq"
+  >
+    Hello
+  </h3>
+</div>
+`;
+
 exports[`Title component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -153,6 +213,86 @@ exports[`Title component  Render component 1`] = `
   >
     Hello
   </h3>
+</div>
+`;
+
+exports[`Typography component with variant body > Render component 1`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant body > Render component 2`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant body > Render component 3`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant body > Render component 4`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant body > Render inline component 1`] = `
+<div>
+  <p
+    class="css-9vzirb"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant body > Render inline component 2`] = `
+<div>
+  <p
+    class="css-9vzirb"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant body > Render inline component 3`] = `
+<div>
+  <p
+    class="css-9vzirb"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant body > Render inline component 4`] = `
+<div>
+  <p
+    class="css-9vzirb"
+  >
+    Hello
+  </p>
 </div>
 `;
 
@@ -368,6 +508,46 @@ exports[`Typography component with variant body Render inline component 4`] = `
 </div>
 `;
 
+exports[`Typography component with variant button > Render component 1`] = `
+<div>
+  <p
+    class="css-1o40wl"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant button > Render component 2`] = `
+<div>
+  <p
+    class="css-1o40wl"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant button > Render inline component 1`] = `
+<div>
+  <p
+    class="css-1mkocjd"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant button > Render inline component 2`] = `
+<div>
+  <p
+    class="css-1mkocjd"
+  >
+    Hello
+  </p>
+</div>
+`;
+
 exports[`Typography component with variant button Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -474,6 +654,26 @@ exports[`Typography component with variant button Render inline component 2`] = 
 </div>
 `;
 
+exports[`Typography component with variant h1 > Render component 1`] = `
+<div>
+  <h1
+    class="css-1cjkc52"
+  >
+    Hello
+  </h1>
+</div>
+`;
+
+exports[`Typography component with variant h1 > Render inline component 1`] = `
+<div>
+  <h1
+    class="css-zzcdts"
+  >
+    Hello
+  </h1>
+</div>
+`;
+
 exports[`Typography component with variant h1 Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -524,6 +724,26 @@ exports[`Typography component with variant h1 Render inline component 1`] = `
   >
     Hello
   </h1>
+</div>
+`;
+
+exports[`Typography component with variant h2 > Render component 1`] = `
+<div>
+  <h2
+    class="css-1339ijz"
+  >
+    Hello
+  </h2>
+</div>
+`;
+
+exports[`Typography component with variant h2 > Render inline component 1`] = `
+<div>
+  <h2
+    class="css-ibxpnx"
+  >
+    Hello
+  </h2>
 </div>
 `;
 
@@ -580,6 +800,26 @@ exports[`Typography component with variant h2 Render inline component 1`] = `
 </div>
 `;
 
+exports[`Typography component with variant h3 > Render component 1`] = `
+<div>
+  <h3
+    class="css-g5ixaq"
+  >
+    Hello
+  </h3>
+</div>
+`;
+
+exports[`Typography component with variant h3 > Render inline component 1`] = `
+<div>
+  <h3
+    class="css-a9d6ov"
+  >
+    Hello
+  </h3>
+</div>
+`;
+
 exports[`Typography component with variant h3 Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -633,6 +873,26 @@ exports[`Typography component with variant h3 Render inline component 1`] = `
 </div>
 `;
 
+exports[`Typography component with variant h4 > Render component 1`] = `
+<div>
+  <h4
+    class="css-175ynur"
+  >
+    Hello
+  </h4>
+</div>
+`;
+
+exports[`Typography component with variant h4 > Render inline component 1`] = `
+<div>
+  <h4
+    class="css-1q0iwoi"
+  >
+    Hello
+  </h4>
+</div>
+`;
+
 exports[`Typography component with variant h4 Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -683,6 +943,66 @@ exports[`Typography component with variant h4 Render inline component 1`] = `
   >
     Hello
   </h4>
+</div>
+`;
+
+exports[`Typography component with variant undefined > Render component 1`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant undefined > Render component 2`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant undefined > Render component 3`] = `
+<div>
+  <p
+    class="css-1mhoefm"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant undefined > Render inline component 1`] = `
+<div>
+  <p
+    class="css-9vzirb"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant undefined > Render inline component 2`] = `
+<div>
+  <p
+    class="css-9vzirb"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`Typography component with variant undefined > Render inline component 3`] = `
+<div>
+  <p
+    class="css-9vzirb"
+  >
+    Hello
+  </p>
 </div>
 `;
 

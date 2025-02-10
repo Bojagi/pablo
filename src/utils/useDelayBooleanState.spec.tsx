@@ -2,15 +2,15 @@ import { act, renderHook, cleanup } from '@testing-library/react';
 import { useDelayedBooleanState } from './useDelayBooleanState';
 
 beforeEach(() => {
-  jest.useFakeTimers();
-  jest.spyOn(global, 'setTimeout');
-  jest.spyOn(global, 'clearTimeout');
+  vi.useFakeTimers();
+  vi.spyOn(global, 'setTimeout');
+  vi.spyOn(global, 'clearTimeout');
 });
 
-afterEach(cleanup);
+//afterEach(cleanup);
 
 afterEach(() => {
-  jest.clearAllTimers();
+  vi.clearAllTimers();
 });
 
 test('should set delayed state with initial value being false', () => {
@@ -37,7 +37,7 @@ test('Update state from false to true and only set true after delay time', () =>
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 100);
 
   act(() => {
-    jest.runAllTimers();
+    vi.runAllTimers();
   });
   expect(result.current[0]).toBeTrue();
 });
@@ -52,7 +52,7 @@ test('Update state from true to false and set it directly (no delay)', () => {
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 0);
 
   act(() => {
-    jest.advanceTimersByTime(0);
+    vi.advanceTimersByTime(0);
   });
   expect(result.current[0]).toBeFalse();
 });
@@ -66,7 +66,7 @@ test('Update state from true to false and set it with delay when set', () => {
   expect(setTimeout).toHaveBeenCalledTimes(1);
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 200);
   act(() => {
-    jest.advanceTimersByTime(200);
+    vi.advanceTimersByTime(200);
   });
   expect(result.current[0]).toBeFalse();
 });
@@ -83,7 +83,7 @@ test('Update state from false to true and within delay time back to false ... an
   expect(clearTimeout).toHaveBeenCalledTimes(0);
 
   act(() => {
-    jest.advanceTimersByTime(50);
+    vi.advanceTimersByTime(50);
     result.current[1](false);
   });
 
@@ -93,7 +93,7 @@ test('Update state from false to true and within delay time back to false ... an
 
   // Run an additional 100ms (just to be sure)
   act(() => {
-    jest.advanceTimersByTime(100);
+    vi.advanceTimersByTime(100);
   });
 
   // Needs to be false still (timeout callback was not called)

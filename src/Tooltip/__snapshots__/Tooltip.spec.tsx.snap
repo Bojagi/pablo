@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Do not show tooltip if there is no content prop 1`] = `
 <body>
@@ -9,6 +9,12 @@ exports[`Do not show tooltip if there is no content prop 1`] = `
       content
     </div>
   </div>
+</body>
+`;
+
+exports[`side "bottom" > render and update size 1`] = `
+<body>
+  <div />
 </body>
 `;
 
@@ -27,6 +33,12 @@ exports[`side "bottom" render and update size 1`] = `
 </body>
 `;
 
+exports[`side "left" > render and update size 1`] = `
+<body>
+  <div />
+</body>
+`;
+
 exports[`side "left" render and update size 1`] = `
 <body>
   <div>
@@ -42,7 +54,37 @@ exports[`side "left" render and update size 1`] = `
 </body>
 `;
 
+exports[`side "right" > render and update size 1`] = `
+<body>
+  <div>
+    <div
+      data-testid="pbl-tooltip-wrapper"
+    >
+      content
+    </div>
+  </div>
+  <div
+    data-testid="pbl-popover-mountpoint"
+  />
+</body>
+`;
+
 exports[`side "right" render and update size 1`] = `
+<body>
+  <div>
+    <div
+      data-testid="pbl-tooltip-wrapper"
+    >
+      content
+    </div>
+  </div>
+  <div
+    data-testid="pbl-popover-mountpoint"
+  />
+</body>
+`;
+
+exports[`side "top" > render and update size 1`] = `
 <body>
   <div>
     <div

@@ -8,10 +8,10 @@ import { clampRegExp } from '../../testUtils/matchClamp';
 let onChangeMock;
 
 beforeEach(() => {
-  onChangeMock = jest.fn();
+  onChangeMock = vi.fn();
 });
 
-afterEach(cleanup);
+//afterEach(cleanup);
 
 test('Work with one radio button', () => {
   const { container } = render(

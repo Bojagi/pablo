@@ -19,7 +19,7 @@ test('Render toast card with title and description', () => {
 });
 
 test('Render closable toast card', () => {
-  const onCloseMock = jest.fn();
+  const onCloseMock = vi.fn();
   const { getByTestId } = renderComponent({
     title: 'Hi',
     onClose: onCloseMock,

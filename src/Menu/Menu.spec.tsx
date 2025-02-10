@@ -15,7 +15,7 @@ import { waitOneTick } from '../../testUtils/waitOneTick';
 let menuItemClickHandler;
 
 beforeEach(() => {
-  menuItemClickHandler = jest.fn();
+  menuItemClickHandler = vi.fn();
 });
 
 test.skip('Render closed Menu', () => {

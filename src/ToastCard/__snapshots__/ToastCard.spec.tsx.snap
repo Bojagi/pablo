@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Render toast card with no type and with only title 1`] = `
 .emotion-0 {
@@ -80,6 +80,66 @@ exports[`Render toast card with no type and with only title 1`] = `
           class="emotion-4"
           data-testid="pbl-toastcard-title"
           id=":r0:-title"
+        >
+          Hi
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`type error > Render toast card with custom icon 1`] = `
+<div
+  class="css-1fencwe"
+  data-testid="pbl-toastcard-iconbox"
+>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`type error > Render toast card with only title 1`] = `
+<div
+  aria-describedby=":ra:-title"
+  aria-labelledby=":ra:-title"
+  class="css-193uck2"
+  data-testid="pbl-toastcard"
+  id=":ra:"
+>
+  <div
+    class="css-cluvyb"
+  >
+    <div
+      class="css-1fencwe"
+      data-testid="pbl-toastcard-iconbox"
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"
+        />
+      </svg>
+    </div>
+    <div
+      class="css-1yympon"
+    >
+      <div
+        class="css-gawlgn"
+      >
+        <h4
+          class="css-dz5l77"
+          data-testid="pbl-toastcard-title"
+          id=":ra:-title"
         >
           Hi
         </h4>
@@ -236,6 +296,66 @@ exports[`type error Render toast card with only title 1`] = `
 </div>
 `;
 
+exports[`type info > Render toast card with custom icon 1`] = `
+<div
+  class="css-1r6p8h4"
+  data-testid="pbl-toastcard-iconbox"
+>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`type info > Render toast card with only title 1`] = `
+<div
+  aria-describedby=":r4:-title"
+  aria-labelledby=":r4:-title"
+  class="css-193uck2"
+  data-testid="pbl-toastcard"
+  id=":r4:"
+>
+  <div
+    class="css-cluvyb"
+  >
+    <div
+      class="css-1r6p8h4"
+      data-testid="pbl-toastcard-iconbox"
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="css-1yympon"
+    >
+      <div
+        class="css-gawlgn"
+      >
+        <h4
+          class="css-dz5l77"
+          data-testid="pbl-toastcard-title"
+          id=":r4:-title"
+        >
+          Hi
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`type info Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -374,6 +494,66 @@ exports[`type info Render toast card with only title 1`] = `
           class="emotion-5"
           data-testid="pbl-toastcard-title"
           id=":r5:-title"
+        >
+          Hi
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`type success > Render toast card with custom icon 1`] = `
+<div
+  class="css-1emn84t"
+  data-testid="pbl-toastcard-iconbox"
+>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`type success > Render toast card with only title 1`] = `
+<div
+  aria-describedby=":r6:-title"
+  aria-labelledby=":r6:-title"
+  class="css-193uck2"
+  data-testid="pbl-toastcard"
+  id=":r6:"
+>
+  <div
+    class="css-cluvyb"
+  >
+    <div
+      class="css-1emn84t"
+      data-testid="pbl-toastcard-iconbox"
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.997-4L6.76 11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.003 16z"
+        />
+      </svg>
+    </div>
+    <div
+      class="css-1yympon"
+    >
+      <div
+        class="css-gawlgn"
+      >
+        <h4
+          class="css-dz5l77"
+          data-testid="pbl-toastcard-title"
+          id=":r6:-title"
         >
           Hi
         </h4>
@@ -530,6 +710,55 @@ exports[`type success Render toast card with only title 1`] = `
 </div>
 `;
 
+exports[`type undefined > Render toast card with custom icon 1`] = `
+<div
+  class="css-1r6p8h4"
+  data-testid="pbl-toastcard-iconbox"
+>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`type undefined > Render toast card with only title 1`] = `
+<div
+  aria-describedby=":r2:-title"
+  aria-labelledby=":r2:-title"
+  class="css-193uck2"
+  data-testid="pbl-toastcard"
+  id=":r2:"
+>
+  <div
+    class="css-cluvyb"
+  >
+    <div
+      class="css-1r6p8h4"
+      data-testid="pbl-toastcard-iconbox"
+    >
+      <div>
+        hi
+      </div>
+    </div>
+    <div
+      class="css-1yympon"
+    >
+      <div
+        class="css-gawlgn"
+      >
+        <h4
+          class="css-dz5l77"
+          data-testid="pbl-toastcard-title"
+          id=":r2:-title"
+        >
+          Hi
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`type undefined Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -666,6 +895,55 @@ exports[`type undefined Render toast card with only title 1`] = `
 </div>
 `;
 
+exports[`type unknown > Render toast card with custom icon 1`] = `
+<div
+  class="css-1r6p8h4"
+  data-testid="pbl-toastcard-iconbox"
+>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`type unknown > Render toast card with only title 1`] = `
+<div
+  aria-describedby=":rc:-title"
+  aria-labelledby=":rc:-title"
+  class="css-193uck2"
+  data-testid="pbl-toastcard"
+  id=":rc:"
+>
+  <div
+    class="css-cluvyb"
+  >
+    <div
+      class="css-1r6p8h4"
+      data-testid="pbl-toastcard-iconbox"
+    >
+      <div>
+        hi
+      </div>
+    </div>
+    <div
+      class="css-1yympon"
+    >
+      <div
+        class="css-gawlgn"
+      >
+        <h4
+          class="css-dz5l77"
+          data-testid="pbl-toastcard-title"
+          id=":rc:-title"
+        >
+          Hi
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`type unknown Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -793,6 +1071,66 @@ exports[`type unknown Render toast card with only title 1`] = `
           class="emotion-5"
           data-testid="pbl-toastcard-title"
           id=":rd:-title"
+        >
+          Hi
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`type warning > Render toast card with custom icon 1`] = `
+<div
+  class="css-1ifvejt"
+  data-testid="pbl-toastcard-iconbox"
+>
+  <div>
+    hello
+  </div>
+</div>
+`;
+
+exports[`type warning > Render toast card with only title 1`] = `
+<div
+  aria-describedby=":r8:-title"
+  aria-labelledby=":r8:-title"
+  class="css-193uck2"
+  data-testid="pbl-toastcard"
+  id=":r8:"
+>
+  <div
+    class="css-cluvyb"
+  >
+    <div
+      class="css-1ifvejt"
+      data-testid="pbl-toastcard-iconbox"
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zm-8.66 16h15.588L12 5.5 4.206 19zM11 16h2v2h-2v-2zm0-7h2v5h-2V9z"
+        />
+      </svg>
+    </div>
+    <div
+      class="css-1yympon"
+    >
+      <div
+        class="css-gawlgn"
+      >
+        <h4
+          class="css-dz5l77"
+          data-testid="pbl-toastcard-title"
+          id=":r8:-title"
         >
           Hi
         </h4>

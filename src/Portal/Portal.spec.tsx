@@ -21,7 +21,7 @@ test('Forward ref object', () => {
 });
 
 test('Forward ref function', () => {
-  const ref = jest.fn();
+  const ref = vi.fn();
   renderComponent({ ref });
   expect(ref).toHaveBeenCalledTimes(1);
   expect(ref.mock.calls[0][0].getAttribute('data-testid')).toBe('pbl-portal-mountpoint');
@@ -37,7 +37,7 @@ test('Forward ref object with ShadowRoot', async () => {
 });
 
 test('Forward ref function with ShadowRoot', () => {
-  const ref = jest.fn();
+  const ref = vi.fn();
   const shadowRoot = document.createElement('div').attachShadow({ mode: 'open' });
   renderComponent({ ref }, shadowRoot);
   expect(ref).toHaveBeenCalledTimes(1);

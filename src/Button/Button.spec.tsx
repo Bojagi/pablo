@@ -4,7 +4,7 @@ import { PabloThemeProvider } from '../theme';
 import { themeVars } from '../theme/themeVars';
 import { Button } from './Button';
 
-afterEach(cleanup);
+//afterEach(cleanup);
 
 test.each([
   [

@@ -8,11 +8,11 @@ const defaultProps = {
   from: 0,
   to: 100,
   value: 50,
-  onChange: jest.fn(),
+  onChange: vi.fn(),
 };
 
 beforeEach(() => {
-  jest.clearAllMocks();
+  vi.clearAllMocks();
 });
 
 test('renders correctly', () => {
@@ -29,7 +29,7 @@ test('calls onChange when dragging thumb', () => {
 
   // Mock getBoundingClientRect
   const railRect = { left: 0, width: 200 };
-  jest.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
+  vi.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
   // Set bounding rect that the click is exactly in the center
   jest
     .spyOn(thumb, 'getBoundingClientRect')
@@ -59,7 +59,7 @@ test('handles custom range correctly', () => {
   if (!thumb || !rail) throw new Error('Thumb or rail not found');
 
   const railRect = { left: 0, width: 200 };
-  jest.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
+  vi.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
   // Set bounding rect that the click is exactly in the center
   jest
     .spyOn(thumb, 'getBoundingClientRect')
@@ -80,7 +80,7 @@ test('constrains value within bounds', () => {
 
   // Mock getBoundingClientRect
   const railRect = { left: 0, width: 200 };
-  jest.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
+  vi.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
 
   // Simulate drag beyond maximum
   fireEvent.mouseDown(thumb, { clientX: 100 });

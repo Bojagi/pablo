@@ -14,19 +14,19 @@ import '../../testUtils/mockResizeObserver';
 import { Tooltip } from './Tooltip';
 
 beforeEach(() => {
-  jest.useFakeTimers();
-  jest.spyOn(global, 'setTimeout');
+  vi.useFakeTimers();
+  vi.spyOn(global, 'setTimeout');
 });
 
 beforeEach(() => {
-  jest.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => cb(123) as any);
+  vi.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => cb(123) as any);
 });
 
 afterEach(() => {
   (window.requestAnimationFrame as any).mockRestore();
 });
 
-afterEach(cleanup);
+//afterEach(cleanup);
 
 Object.defineProperties(window.HTMLElement.prototype, {
   offsetHeight: {
@@ -141,7 +141,7 @@ describe.each([
     act(() => {
       fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
       // wait for the tick to finish
-      jest.advanceTimersByTime(0);
+      vi.advanceTimersByTime(0);
     });
 
     await act(() => Promise.resolve());
@@ -172,7 +172,7 @@ describe.each([
     act(() => {
       fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
       // wait for the tick to finish
-      jest.advanceTimersByTime(0);
+      vi.advanceTimersByTime(0);
     });
 
     await act(() => Promise.resolve());
@@ -199,7 +199,7 @@ describe.each([
     act(() => {
       fireEvent.mouseEnter(getByTestId('pbl-tooltip-wrapper'));
       // wait for the tick to finish
-      jest.advanceTimersByTime(500);
+      vi.advanceTimersByTime(500);
     });
 
     await waitFor(() => {
@@ -213,7 +213,7 @@ describe.each([
     });
 
     act(() => {
-      jest.runAllTimers();
+      vi.runAllTimers();
     });
 
     expect(queryByTestId('pbl-tooltip-popover')).toBeNull();
@@ -225,7 +225,7 @@ describe.each([
     });
 
     act(() => {
-      jest.runAllTimers();
+      vi.runAllTimers();
     });
 
     expect(queryByTestId('pbl-tooltip-popover')).toBeNull();
@@ -310,18 +310,18 @@ describe.each([
 
     // Waiting 1ms less should still not make it visible
     act(() => {
-      jest.advanceTimersByTime(99);
+      vi.advanceTimersByTime(99);
     });
     expect(queryByTestId('pbl-animation-inner')).not.toBeInTheDocument();
 
     // Wait remaining 1ms should make it visible
     act(() => {
-      jest.advanceTimersByTime(1);
+      vi.advanceTimersByTime(1);
     });
 
     // Advance one more time to trigger "entering" state of the animation
     act(() => {
-      jest.advanceTimersByTime(1);
+      vi.advanceTimersByTime(1);
     });
 
     expect(getByTestId('pbl-animation-inner')).toHaveStyleRule('opacity', '1');

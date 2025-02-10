@@ -96,7 +96,7 @@ test('Render with width auto when "fullWidth" prop is set', () => {
 });
 
 test('Trigger onChange event when the content of the inner input changed', () => {
-  const onChangeMock = jest.fn();
+  const onChangeMock = vi.fn();
   const { getByTestId } = renderComponent({
     value: 'some',
     onChange: onChangeMock,
@@ -114,7 +114,7 @@ test('Trigger onChange event when the content of the inner input changed', () =>
 });
 
 test('Use generated id when no "id" prop is set', () => {
-  const onChangeMock = jest.fn();
+  const onChangeMock = vi.fn();
   const { getByTestId } = renderComponent({
     value: 'some',
     id: undefined,
