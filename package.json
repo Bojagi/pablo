@@ -33,7 +33,6 @@
     "@emotion/jest": "^11.13.0",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
-    "@octokit/rest": "^18.1.1",
     "@size-limit/preset-big-lib": "^11.1.6",
     "@size-limit/time": "^11.1.6",
     "@size-limit/webpack-why": "^11.1.6",

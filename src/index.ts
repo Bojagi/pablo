@@ -1,3 +1,6 @@
+// for direct exports you also have to add it to
+// ./packageExports.js
+
 export * from './animation';
 export * from './Avatar';
 export * from './Box';
