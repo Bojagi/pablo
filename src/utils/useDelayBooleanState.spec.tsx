@@ -1,4 +1,4 @@
-import { act, renderHook, cleanup } from '@testing-library/react';
+import { act, renderHook } from '@testing-library/react';
 import { useDelayedBooleanState } from './useDelayBooleanState';
 
 beforeEach(() => {
@@ -7,9 +7,8 @@ beforeEach(() => {
   vi.spyOn(global, 'clearTimeout');
 });
 
-//afterEach(cleanup);
-
 afterEach(() => {
+  vi.clearAllMocks();
   vi.clearAllTimers();
 });
 
