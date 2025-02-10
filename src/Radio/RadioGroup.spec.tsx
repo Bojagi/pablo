@@ -1,4 +1,4 @@
-import { act, fireEvent, render, cleanup } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { RadioGroup } from './RadioGroup';

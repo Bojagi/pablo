@@ -1,4 +1,4 @@
-import { act, cleanup, fireEvent, render } from '@testing-library/react';
+import { act, fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { themeVars } from '../theme/themeVars';
@@ -9,8 +9,6 @@ let onChangeMock;
 beforeEach(() => {
   onChangeMock = vi.fn();
 });
-
-//afterEach(cleanup);
 
 test('Render checkbox unchecked', () => {
   const { container, getByTestId } = renderComponent({ checked: false });

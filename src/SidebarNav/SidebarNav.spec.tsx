@@ -1,4 +1,4 @@
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { themeVars } from '../theme/themeVars';
@@ -10,8 +10,6 @@ let onSelectMock;
 beforeEach(() => {
   onSelectMock = vi.fn();
 });
-
-//afterEach(cleanup);
 
 test('Render one nav item', () => {
   const { container } = render(

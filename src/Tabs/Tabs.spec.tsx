@@ -1,4 +1,4 @@
-import { render, cleanup, act, fireEvent } from '@testing-library/react';
+import { render, act, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { Tabs } from './Tabs';

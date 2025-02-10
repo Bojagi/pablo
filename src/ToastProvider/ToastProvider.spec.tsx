@@ -1,4 +1,4 @@
-import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, waitFor } from '@testing-library/react';
 import React, { useCallback } from 'react';
 import { PabloThemeProvider } from '../theme';
 import { ToastProvider, useToast } from './ToastProvider';
@@ -7,8 +7,6 @@ import '../../testUtils/mockResizeObserver';
 beforeEach(() => {
   vi.useFakeTimers();
 });
-
-//afterEach(cleanup);
 
 test('Render toast stack on the bottom-right by default', () => {
   const { getByTestId } = renderComponent({
