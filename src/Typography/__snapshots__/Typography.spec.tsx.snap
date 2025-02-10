@@ -1,16 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Headline component  > Render component 1`] = `
-<div>
-  <h2
-    class="css-1339ijz"
-  >
-    Hello
-  </h2>
-</div>
-`;
-
-exports[`Headline component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -37,16 +27,6 @@ exports[`Headline component  Render component 1`] = `
 `;
 
 exports[`InfoText component  > Render component 1`] = `
-<div>
-  <p
-    class="css-1mhoefm"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`InfoText component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -73,16 +53,6 @@ exports[`InfoText component  Render component 1`] = `
 `;
 
 exports[`Paragraph component  > Render component 1`] = `
-<div>
-  <p
-    class="css-1mhoefm"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Paragraph component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -109,16 +79,6 @@ exports[`Paragraph component  Render component 1`] = `
 `;
 
 exports[`ParagraphBold component  > Render component 1`] = `
-<div>
-  <p
-    class="css-1mhoefm"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`ParagraphBold component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -145,16 +105,6 @@ exports[`ParagraphBold component  Render component 1`] = `
 `;
 
 exports[`Subtitle component  > Render component 1`] = `
-<div>
-  <h4
-    class="css-175ynur"
-  >
-    Hello
-  </h4>
-</div>
-`;
-
-exports[`Subtitle component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -181,16 +131,6 @@ exports[`Subtitle component  Render component 1`] = `
 `;
 
 exports[`Title component  > Render component 1`] = `
-<div>
-  <h3
-    class="css-g5ixaq"
-  >
-    Hello
-  </h3>
-</div>
-`;
-
-exports[`Title component  Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -217,9 +157,25 @@ exports[`Title component  Render component 1`] = `
 `;
 
 exports[`Typography component with variant body > Render component 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+}
+
 <div>
   <p
-    class="css-1mhoefm"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -227,9 +183,25 @@ exports[`Typography component with variant body > Render component 1`] = `
 `;
 
 exports[`Typography component with variant body > Render component 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+}
+
 <div>
   <p
-    class="css-1mhoefm"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -237,9 +209,25 @@ exports[`Typography component with variant body > Render component 2`] = `
 `;
 
 exports[`Typography component with variant body > Render component 3`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+}
+
 <div>
   <p
-    class="css-1mhoefm"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -247,9 +235,25 @@ exports[`Typography component with variant body > Render component 3`] = `
 `;
 
 exports[`Typography component with variant body > Render component 4`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+}
+
 <div>
   <p
-    class="css-1mhoefm"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -257,9 +261,26 @@ exports[`Typography component with variant body > Render component 4`] = `
 `;
 
 exports[`Typography component with variant body > Render inline component 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
 <div>
   <p
-    class="css-9vzirb"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -267,9 +288,26 @@ exports[`Typography component with variant body > Render inline component 1`] = 
 `;
 
 exports[`Typography component with variant body > Render inline component 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
 <div>
   <p
-    class="css-9vzirb"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -277,9 +315,26 @@ exports[`Typography component with variant body > Render inline component 2`] = 
 `;
 
 exports[`Typography component with variant body > Render inline component 3`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
 <div>
   <p
-    class="css-9vzirb"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -287,201 +342,6 @@ exports[`Typography component with variant body > Render inline component 3`] = 
 `;
 
 exports[`Typography component with variant body > Render inline component 4`] = `
-<div>
-  <p
-    class="css-9vzirb"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render component 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render component 2`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render component 3`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render component 4`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render inline component 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-  margin-bottom: 0;
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render inline component 2`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-  margin-bottom: 0;
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render inline component 3`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-  margin-bottom: 0;
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant body Render inline component 4`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -509,9 +369,25 @@ exports[`Typography component with variant body Render inline component 4`] = `
 `;
 
 exports[`Typography component with variant button > Render component 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-button-fontFamily);
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
 <div>
   <p
-    class="css-1o40wl"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -519,9 +395,25 @@ exports[`Typography component with variant button > Render component 1`] = `
 `;
 
 exports[`Typography component with variant button > Render component 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-button-fontFamily);
+  font-size: var(--pbl-theme-typography-button-fontSize);
+  line-height: var(--pbl-theme-typography-button-lineHeight);
+  font-weight: var(--pbl-theme-typography-button-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+}
+
 <div>
   <p
-    class="css-1o40wl"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -529,78 +421,6 @@ exports[`Typography component with variant button > Render component 2`] = `
 `;
 
 exports[`Typography component with variant button > Render inline component 1`] = `
-<div>
-  <p
-    class="css-1mkocjd"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant button > Render inline component 2`] = `
-<div>
-  <p
-    class="css-1mkocjd"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant button Render component 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-button-fontFamily);
-  font-size: var(--pbl-theme-typography-button-fontSize);
-  line-height: var(--pbl-theme-typography-button-lineHeight);
-  font-weight: var(--pbl-theme-typography-button-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant button Render component 2`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-button-fontFamily);
-  font-size: var(--pbl-theme-typography-button-fontSize);
-  line-height: var(--pbl-theme-typography-button-lineHeight);
-  font-weight: var(--pbl-theme-typography-button-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-button-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant button Render inline component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -627,7 +447,7 @@ exports[`Typography component with variant button Render inline component 1`] = 
 </div>
 `;
 
-exports[`Typography component with variant button Render inline component 2`] = `
+exports[`Typography component with variant button > Render inline component 2`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -655,26 +475,6 @@ exports[`Typography component with variant button Render inline component 2`] = 
 `;
 
 exports[`Typography component with variant h1 > Render component 1`] = `
-<div>
-  <h1
-    class="css-1cjkc52"
-  >
-    Hello
-  </h1>
-</div>
-`;
-
-exports[`Typography component with variant h1 > Render inline component 1`] = `
-<div>
-  <h1
-    class="css-zzcdts"
-  >
-    Hello
-  </h1>
-</div>
-`;
-
-exports[`Typography component with variant h1 Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -700,7 +500,7 @@ exports[`Typography component with variant h1 Render component 1`] = `
 </div>
 `;
 
-exports[`Typography component with variant h1 Render inline component 1`] = `
+exports[`Typography component with variant h1 > Render inline component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -728,26 +528,6 @@ exports[`Typography component with variant h1 Render inline component 1`] = `
 `;
 
 exports[`Typography component with variant h2 > Render component 1`] = `
-<div>
-  <h2
-    class="css-1339ijz"
-  >
-    Hello
-  </h2>
-</div>
-`;
-
-exports[`Typography component with variant h2 > Render inline component 1`] = `
-<div>
-  <h2
-    class="css-ibxpnx"
-  >
-    Hello
-  </h2>
-</div>
-`;
-
-exports[`Typography component with variant h2 Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -773,7 +553,7 @@ exports[`Typography component with variant h2 Render component 1`] = `
 </div>
 `;
 
-exports[`Typography component with variant h2 Render inline component 1`] = `
+exports[`Typography component with variant h2 > Render inline component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -801,26 +581,6 @@ exports[`Typography component with variant h2 Render inline component 1`] = `
 `;
 
 exports[`Typography component with variant h3 > Render component 1`] = `
-<div>
-  <h3
-    class="css-g5ixaq"
-  >
-    Hello
-  </h3>
-</div>
-`;
-
-exports[`Typography component with variant h3 > Render inline component 1`] = `
-<div>
-  <h3
-    class="css-a9d6ov"
-  >
-    Hello
-  </h3>
-</div>
-`;
-
-exports[`Typography component with variant h3 Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -846,7 +606,7 @@ exports[`Typography component with variant h3 Render component 1`] = `
 </div>
 `;
 
-exports[`Typography component with variant h3 Render inline component 1`] = `
+exports[`Typography component with variant h3 > Render inline component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -874,26 +634,6 @@ exports[`Typography component with variant h3 Render inline component 1`] = `
 `;
 
 exports[`Typography component with variant h4 > Render component 1`] = `
-<div>
-  <h4
-    class="css-175ynur"
-  >
-    Hello
-  </h4>
-</div>
-`;
-
-exports[`Typography component with variant h4 > Render inline component 1`] = `
-<div>
-  <h4
-    class="css-1q0iwoi"
-  >
-    Hello
-  </h4>
-</div>
-`;
-
-exports[`Typography component with variant h4 Render component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -919,7 +659,7 @@ exports[`Typography component with variant h4 Render component 1`] = `
 </div>
 `;
 
-exports[`Typography component with variant h4 Render inline component 1`] = `
+exports[`Typography component with variant h4 > Render inline component 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
@@ -947,9 +687,25 @@ exports[`Typography component with variant h4 Render inline component 1`] = `
 `;
 
 exports[`Typography component with variant undefined > Render component 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+}
+
 <div>
   <p
-    class="css-1mhoefm"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -957,9 +713,25 @@ exports[`Typography component with variant undefined > Render component 1`] = `
 `;
 
 exports[`Typography component with variant undefined > Render component 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+}
+
 <div>
   <p
-    class="css-1mhoefm"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -967,9 +739,25 @@ exports[`Typography component with variant undefined > Render component 2`] = `
 `;
 
 exports[`Typography component with variant undefined > Render component 3`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+}
+
 <div>
   <p
-    class="css-1mhoefm"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -977,9 +765,26 @@ exports[`Typography component with variant undefined > Render component 3`] = `
 `;
 
 exports[`Typography component with variant undefined > Render inline component 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
 <div>
   <p
-    class="css-9vzirb"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -987,9 +792,26 @@ exports[`Typography component with variant undefined > Render inline component 1
 `;
 
 exports[`Typography component with variant undefined > Render inline component 2`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
 <div>
   <p
-    class="css-9vzirb"
+    class="emotion-0"
   >
     Hello
   </p>
@@ -997,148 +819,6 @@ exports[`Typography component with variant undefined > Render inline component 2
 `;
 
 exports[`Typography component with variant undefined > Render inline component 3`] = `
-<div>
-  <p
-    class="css-9vzirb"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant undefined Render component 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant undefined Render component 2`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant undefined Render component 3`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant undefined Render inline component 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-  margin-bottom: 0;
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant undefined Render inline component 2`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font-family: var(--pbl-theme-typography-base-fontFamily);
-  font-size: var(--pbl-theme-typography-base-fontSize);
-  line-height: var(--pbl-theme-typography-base-lineHeight);
-  font-weight: var(--pbl-theme-typography-base-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
-  font-style: normal;
-  margin: 0;
-  font-family: var(--pbl-theme-typography-body-fontFamily);
-  font-size: var(--pbl-theme-typography-body-fontSize);
-  line-height: var(--pbl-theme-typography-body-lineHeight);
-  font-weight: var(--pbl-theme-typography-body-fontWeight);
-  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
-  margin-bottom: 0;
-}
-
-<div>
-  <p
-    class="emotion-0"
-  >
-    Hello
-  </p>
-</div>
-`;
-
-exports[`Typography component with variant undefined Render inline component 3`] = `
 .emotion-0 {
   box-sizing: border-box;
   font-family: var(--pbl-theme-typography-base-fontFamily);
