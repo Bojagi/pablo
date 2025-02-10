@@ -11,8 +11,6 @@ beforeEach(() => {
   onChangeMock = vi.fn();
 });
 
-//afterEach(cleanup);
-
 test('Work with one radio button', () => {
   const { container } = render(
     <PabloThemeProvider>

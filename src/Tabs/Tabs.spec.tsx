@@ -18,7 +18,6 @@ beforeEach(() => {
   onSelectMock = vi.fn();
 });
 
-//afterEach(cleanup);
 afterEach(cleanupResizeObserver);
 
 test('Work with one tab', () => {
