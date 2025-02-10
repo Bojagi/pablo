@@ -1,5 +1,5 @@
 // for direct exports you also have to add it to
-// ./packageExports.js
+// ../packageExports.js
 
 export * from './animation';
 export * from './Avatar';

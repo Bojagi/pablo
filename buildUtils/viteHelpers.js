@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 import { readPackage } from './packageHelpers';
 import { builtinModules } from 'module';
-import { packageExports } from '../src/packageExports.js';
+import { packageExports } from '../packageExports.js';
 
 const repoDir = resolve(import.meta.dirname, '..')
 
