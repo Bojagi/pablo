@@ -30,7 +30,6 @@
     "stylis": "4.2.0"
   },
   "devDependencies": {
-    "@bojagi/cli": "0.18.0-next.3",
     "@emotion/jest": "^11.13.0",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
@@ -62,6 +61,7 @@
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "^5.0.0",
     "jest-extended": "^0.11.5",
+    "jsdom": "^26.0.0",
     "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
