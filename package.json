@@ -16,8 +16,7 @@
     "build:types": "tsc -p tsconfig.build.json",
     "build:package": "node scripts/buildPackageJson.js",
     "build:cp-files": "cp README.md dist/README.md",
-    "test": "vitest",
-    "test:watch": "vitest --watch",
+    "test": "vitest --pool=vmThreads",
     "test:size": "size-limit",
     "lint": "eslint src"
   },
