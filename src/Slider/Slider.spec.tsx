@@ -31,9 +31,9 @@ test('calls onChange when dragging thumb', () => {
   const railRect = { left: 0, width: 200 };
   vi.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
   // Set bounding rect that the click is exactly in the center
-  jest
-    .spyOn(thumb, 'getBoundingClientRect')
-    .mockImplementation(() => ({ left: 90, width: 20 }) as DOMRect);
+  vi.spyOn(thumb, 'getBoundingClientRect').mockImplementation(
+    () => ({ left: 90, width: 20 }) as DOMRect
+  );
 
   // Simulate drag start
   fireEvent.mouseDown(thumb, { clientX: 100 });
@@ -61,9 +61,9 @@ test('handles custom range correctly', () => {
   const railRect = { left: 0, width: 200 };
   vi.spyOn(rail, 'getBoundingClientRect').mockImplementation(() => railRect as DOMRect);
   // Set bounding rect that the click is exactly in the center
-  jest
-    .spyOn(thumb, 'getBoundingClientRect')
-    .mockImplementation(() => ({ left: 90, width: 20 }) as DOMRect);
+  vi.spyOn(thumb, 'getBoundingClientRect').mockImplementation(
+    () => ({ left: 90, width: 20 }) as DOMRect
+  );
 
   fireEvent.mouseDown(thumb, { clientX: 100 });
   fireEvent.mouseMove(window, { clientX: 150 });

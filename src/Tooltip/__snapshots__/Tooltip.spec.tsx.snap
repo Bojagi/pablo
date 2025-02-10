@@ -14,12 +14,6 @@ exports[`Do not show tooltip if there is no content prop 1`] = `
 
 exports[`side "bottom" > render and update size 1`] = `
 <body>
-  <div />
-</body>
-`;
-
-exports[`side "bottom" render and update size 1`] = `
-<body>
   <div>
     <div
       data-testid="pbl-tooltip-wrapper"
@@ -34,12 +28,6 @@ exports[`side "bottom" render and update size 1`] = `
 `;
 
 exports[`side "left" > render and update size 1`] = `
-<body>
-  <div />
-</body>
-`;
-
-exports[`side "left" render and update size 1`] = `
 <body>
   <div>
     <div
@@ -69,37 +57,7 @@ exports[`side "right" > render and update size 1`] = `
 </body>
 `;
 
-exports[`side "right" render and update size 1`] = `
-<body>
-  <div>
-    <div
-      data-testid="pbl-tooltip-wrapper"
-    >
-      content
-    </div>
-  </div>
-  <div
-    data-testid="pbl-popover-mountpoint"
-  />
-</body>
-`;
-
 exports[`side "top" > render and update size 1`] = `
-<body>
-  <div>
-    <div
-      data-testid="pbl-tooltip-wrapper"
-    >
-      content
-    </div>
-  </div>
-  <div
-    data-testid="pbl-popover-mountpoint"
-  />
-</body>
-`;
-
-exports[`side "top" render and update size 1`] = `
 <body>
   <div>
     <div
