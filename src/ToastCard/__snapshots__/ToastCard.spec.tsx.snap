@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Render toast card with no type and with only title 1`] = `
 .emotion-0 {
@@ -89,7 +89,7 @@ exports[`Render toast card with no type and with only title 1`] = `
 </div>
 `;
 
-exports[`type error Render toast card with custom icon 1`] = `
+exports[`type error > Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
@@ -114,7 +114,7 @@ exports[`type error Render toast card with custom icon 1`] = `
 </div>
 `;
 
-exports[`type error Render toast card with only title 1`] = `
+exports[`type error > Render toast card with only title 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-radius: 6px;
@@ -236,7 +236,7 @@ exports[`type error Render toast card with only title 1`] = `
 </div>
 `;
 
-exports[`type info Render toast card with custom icon 1`] = `
+exports[`type info > Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
@@ -261,7 +261,7 @@ exports[`type info Render toast card with custom icon 1`] = `
 </div>
 `;
 
-exports[`type info Render toast card with only title 1`] = `
+exports[`type info > Render toast card with only title 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-radius: 6px;
@@ -383,7 +383,7 @@ exports[`type info Render toast card with only title 1`] = `
 </div>
 `;
 
-exports[`type success Render toast card with custom icon 1`] = `
+exports[`type success > Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
@@ -408,7 +408,7 @@ exports[`type success Render toast card with custom icon 1`] = `
 </div>
 `;
 
-exports[`type success Render toast card with only title 1`] = `
+exports[`type success > Render toast card with only title 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-radius: 6px;
@@ -530,7 +530,7 @@ exports[`type success Render toast card with only title 1`] = `
 </div>
 `;
 
-exports[`type undefined Render toast card with custom icon 1`] = `
+exports[`type undefined > Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
@@ -555,7 +555,7 @@ exports[`type undefined Render toast card with custom icon 1`] = `
 </div>
 `;
 
-exports[`type undefined Render toast card with only title 1`] = `
+exports[`type undefined > Render toast card with only title 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-radius: 6px;
@@ -666,7 +666,7 @@ exports[`type undefined Render toast card with only title 1`] = `
 </div>
 `;
 
-exports[`type unknown Render toast card with custom icon 1`] = `
+exports[`type unknown > Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
@@ -691,7 +691,7 @@ exports[`type unknown Render toast card with custom icon 1`] = `
 </div>
 `;
 
-exports[`type unknown Render toast card with only title 1`] = `
+exports[`type unknown > Render toast card with only title 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-radius: 6px;
@@ -802,7 +802,7 @@ exports[`type unknown Render toast card with only title 1`] = `
 </div>
 `;
 
-exports[`type warning Render toast card with custom icon 1`] = `
+exports[`type warning > Render toast card with custom icon 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin-right: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
@@ -827,7 +827,7 @@ exports[`type warning Render toast card with custom icon 1`] = `
 </div>
 `;
 
-exports[`type warning Render toast card with only title 1`] = `
+exports[`type warning > Render toast card with only title 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border-radius: 6px;

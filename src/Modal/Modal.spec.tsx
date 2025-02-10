@@ -146,7 +146,7 @@ test('Render with additional panes', () => {
 });
 
 test('Close when clicking on the backdrop', () => {
-  const onCloseMock = jest.fn();
+  const onCloseMock = vi.fn();
   const { getByTestId } = renderComponent({
     open: true,
     onClose: onCloseMock,
@@ -161,7 +161,7 @@ test('Close when clicking on the backdrop', () => {
 });
 
 test('Do not close when pressing mouse button on box, moving to backdrop and releasing button there', () => {
-  const onCloseMock = jest.fn();
+  const onCloseMock = vi.fn();
   const { getByTestId } = renderComponent({
     open: true,
     onClose: onCloseMock,
@@ -181,7 +181,7 @@ test('Do not close when pressing mouse button on box, moving to backdrop and rel
 });
 
 test('Click on box should not trigger close event', () => {
-  const onCloseMock = jest.fn();
+  const onCloseMock = vi.fn();
   const { getByTestId } = renderComponent({
     open: true,
     onClose: onCloseMock,

@@ -1,4 +1,4 @@
-import { render, cleanup, act, fireEvent } from '@testing-library/react';
+import { render, act, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { themeVars } from '../theme/themeVars';
@@ -7,10 +7,8 @@ import { Switch } from './Switch';
 let onChangeMock;
 
 beforeEach(() => {
-  onChangeMock = jest.fn();
+  onChangeMock = vi.fn();
 });
-
-afterEach(cleanup);
 
 test('Render switch unchecked', () => {
   const { container, getByTestId } = renderComponent({ checked: false });
@@ -141,8 +139,8 @@ test('Render without onChange function ', () => {
 });
 
 test('Forward onFocus and onBlur to input and show focus outline', () => {
-  const onFocusMock = jest.fn();
-  const onBlurMock = jest.fn();
+  const onFocusMock = vi.fn();
+  const onBlurMock = vi.fn();
   const { getByTestId } = renderComponent({
     onChange: undefined,
     checked: undefined,

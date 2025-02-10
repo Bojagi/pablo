@@ -27,6 +27,8 @@ jobs:
       
       - name: Build
         run: yarn build
+        env:
+          VERSION: ${{ github.ref_name }}
 
       - name: Authenticate with registry
         run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
@@ -35,3 +37,5 @@ jobs:
 
       - name: deploy
         run: ./scripts/deploy.sh
+        env:
+          VERSION: ${{ github.ref_name }}

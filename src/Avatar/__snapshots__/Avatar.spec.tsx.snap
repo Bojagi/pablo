@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`circle variant Render size large 1`] = `
+exports[`circle variant > Render size large 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 64px;
@@ -19,7 +19,7 @@ exports[`circle variant Render size large 1`] = `
 </div>
 `;
 
-exports[`circle variant Render size medium 1`] = `
+exports[`circle variant > Render size medium 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 40px;
@@ -38,7 +38,7 @@ exports[`circle variant Render size medium 1`] = `
 </div>
 `;
 
-exports[`circle variant Render size small 1`] = `
+exports[`circle variant > Render size small 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 32px;
@@ -57,7 +57,7 @@ exports[`circle variant Render size small 1`] = `
 </div>
 `;
 
-exports[`circle variant Render size tiny 1`] = `
+exports[`circle variant > Render size tiny 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 24px;
@@ -76,7 +76,7 @@ exports[`circle variant Render size tiny 1`] = `
 </div>
 `;
 
-exports[`circle variant Render size undefined 1`] = `
+exports[`circle variant > Render size undefined 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 40px;
@@ -95,7 +95,7 @@ exports[`circle variant Render size undefined 1`] = `
 </div>
 `;
 
-exports[`square variant Render size large 1`] = `
+exports[`square variant > Render size large 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 64px;
@@ -114,7 +114,7 @@ exports[`square variant Render size large 1`] = `
 </div>
 `;
 
-exports[`square variant Render size medium 1`] = `
+exports[`square variant > Render size medium 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 40px;
@@ -133,7 +133,7 @@ exports[`square variant Render size medium 1`] = `
 </div>
 `;
 
-exports[`square variant Render size small 1`] = `
+exports[`square variant > Render size small 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 32px;
@@ -152,7 +152,7 @@ exports[`square variant Render size small 1`] = `
 </div>
 `;
 
-exports[`square variant Render size tiny 1`] = `
+exports[`square variant > Render size tiny 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 24px;
@@ -171,7 +171,7 @@ exports[`square variant Render size tiny 1`] = `
 </div>
 `;
 
-exports[`square variant Render size undefined 1`] = `
+exports[`square variant > Render size undefined 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 40px;
@@ -190,7 +190,7 @@ exports[`square variant Render size undefined 1`] = `
 </div>
 `;
 
-exports[`undefined variant Render size large 1`] = `
+exports[`undefined variant > Render size large 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 64px;
@@ -209,7 +209,7 @@ exports[`undefined variant Render size large 1`] = `
 </div>
 `;
 
-exports[`undefined variant Render size medium 1`] = `
+exports[`undefined variant > Render size medium 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 40px;
@@ -228,7 +228,7 @@ exports[`undefined variant Render size medium 1`] = `
 </div>
 `;
 
-exports[`undefined variant Render size small 1`] = `
+exports[`undefined variant > Render size small 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 32px;
@@ -247,7 +247,7 @@ exports[`undefined variant Render size small 1`] = `
 </div>
 `;
 
-exports[`undefined variant Render size tiny 1`] = `
+exports[`undefined variant > Render size tiny 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 24px;
@@ -266,7 +266,7 @@ exports[`undefined variant Render size tiny 1`] = `
 </div>
 `;
 
-exports[`undefined variant Render size undefined 1`] = `
+exports[`undefined variant > Render size undefined 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   width: 40px;

@@ -9,7 +9,7 @@ import '../../testUtils/mockResizeObserver';
 import { themeVars } from '../theme/themeVars';
 
 beforeEach(() => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
 });
 
 test('Render toolbar', () => {
@@ -86,7 +86,7 @@ test('Render toolbar items selected by "selected" Toolbar prop', async () => {
 });
 
 test('Trigger onClick on all items and call function with item name as argument', async () => {
-  const onClickMock = jest.fn();
+  const onClickMock = vi.fn();
   const { getAllByTestId } = renderComponent({}, { onClick: onClickMock });
   // This is because of passing ref on effect, which happens on next tick
   await act(() => Promise.resolve());
@@ -134,7 +134,7 @@ test('Render toolbar items with tooltip', async () => {
   });
 
   act(() => {
-    jest.advanceTimersByTime(500);
+    vi.advanceTimersByTime(500);
   });
 
   await waitOneTick(0, true);

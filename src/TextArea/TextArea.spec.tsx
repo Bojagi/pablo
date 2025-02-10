@@ -96,7 +96,7 @@ test('Render with width auto when "fullWidth" prop is set', () => {
 });
 
 test('Trigger onChange event when the content of the inner textarea changed', () => {
-  const onChangeMock = jest.fn();
+  const onChangeMock = vi.fn();
   const { getByTestId } = renderComponent({
     value: 'some',
     onChange: onChangeMock,
@@ -122,7 +122,7 @@ test('Render with custom row count when "rows" prop is set', () => {
 });
 
 test('Use generated id when no "id" prop is set', () => {
-  const onChangeMock = jest.fn();
+  const onChangeMock = vi.fn();
   const { getByTestId } = renderComponent({
     value: 'some',
     id: undefined,

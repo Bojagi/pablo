@@ -1,4 +1,4 @@
-import { render, cleanup, act, fireEvent } from '@testing-library/react';
+import { render, act, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { PabloThemeProvider } from '../theme';
 import { Tabs } from './Tabs';
@@ -15,10 +15,9 @@ import { themeVars } from '../theme/themeVars';
 let onSelectMock;
 
 beforeEach(() => {
-  onSelectMock = jest.fn();
+  onSelectMock = vi.fn();
 });
 
-afterEach(cleanup);
 afterEach(cleanupResizeObserver);
 
 test('Work with one tab', () => {
@@ -168,7 +167,7 @@ test('Select "more" tab', async () => {
 });
 
 test('Select "more" tab with custom click handler', async () => {
-  const onClickMock = jest.fn();
+  const onClickMock = vi.fn();
   const { getByTestId, getAllByTestId, baseElement } = render(
     <PabloThemeProvider>
       <Tabs selected="earth">
@@ -282,7 +281,7 @@ test('Render tabs with icons', () => {
 });
 
 test('Trigger onClick on tab', () => {
-  const onClickMock = jest.fn();
+  const onClickMock = vi.fn();
   const { getByTestId } = render(
     <PabloThemeProvider>
       <Tab name="lonely" onClick={onClickMock}>

@@ -3,11 +3,11 @@ import { act } from '@testing-library/react';
 
 export function waitOneTick(ms: number = 0, timeMocked: boolean = false) {
   if (timeMocked) {
-    jest.useRealTimers();
+    vi.useRealTimers();
   }
   const promise = act(() => new Promise((resolve) => setTimeout(resolve, ms)));
   if (timeMocked) {
-    jest.useFakeTimers();
+    vi.useFakeTimers();
   }
   return promise;
 }
