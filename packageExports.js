@@ -1,5 +1,9 @@
+// NOTE:
+// if you want to export a single file just use the fileName within src, eg: 'MyComponent' => MyComponent.js and MyComponent.cjs
+// if you want to export a whole folder point to the index withing, eg: 'Box/index' => Box/index.js and Box/index.cjs
+
 export const packageExports = [
-  'index', 
+  'index',
   'animation/index',
   'Avatar/index',
   'Box/index',

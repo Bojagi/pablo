@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
-import { packageExports } from './packageExports.js';
+import { packageExports } from '../packageExports.js';
 
 export function readPackage(dir) {
   return JSON.parse(readFileSync(resolve(dir, 'package.json')));
