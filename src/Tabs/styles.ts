@@ -16,7 +16,6 @@ export interface TabActiveBorderBottomStyles {
 }
 
 export interface TabSelectedStyles {
-  padding: Style;
   margin: Style;
   color: Style;
   bottomBorder: TabActiveBorderBottomStyles;
@@ -50,6 +49,7 @@ export interface TabStyles extends BaseStyles<TabStyleProperties> {
   };
   color: Style;
   margin: Style;
+  boxSizing: Style;
   focus: TabFocusStyles;
   hover: TabHoverStyles;
   active: TabActiveStyles;
@@ -79,6 +79,7 @@ export const tabsStyles: TabsStyles = {
         borderRadius: 'lg',
       },
     },
+    boxSizing: 'border-box',
     margin: (props: any) => css`0 0 ${getSpacing(0)(props)}`,
     hover: {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
@@ -90,9 +91,6 @@ export const tabsStyles: TabsStyles = {
       backgroundColor: getComponentStyle('button.brand.text.hover.backgroundColor'),
     },
     selected: {
-      padding: (props: any) => css`
-        ${getSpacing(1)(props)} ${getSpacing(1.5)(props)} ${getSpacing(1.5)(props)}
-      `,
       margin: '0',
       color: themeVars.colors.brand.main,
       bottomBorder: {
