@@ -46,7 +46,6 @@ exports[`Render first selected 1`] = `
   margin: 0 0 clamp(0rem, 0rem + 0vw, 0rem);
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   margin: 0;
 }
 
@@ -293,7 +292,6 @@ exports[`Render first selected 1`] = `
   margin: 0 0 clamp(0rem, 0rem + 0vw, 0rem);
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   margin: 0;
 }
 
@@ -579,7 +577,6 @@ exports[`Render tabs with icons 1`] = `
   margin: 0 0 clamp(0rem, 0rem + 0vw, 0rem);
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   margin: 0;
 }
 
@@ -950,7 +947,6 @@ exports[`Show "more" tab when there are too many tabs to fit the content 1`] = `
   margin: 0 0 clamp(0rem, 0rem + 0vw, 0rem);
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   margin: 0;
 }
 
@@ -1277,7 +1273,6 @@ exports[`Work with one tab 1`] = `
   margin: 0 0 clamp(0rem, 0rem + 0vw, 0rem);
   white-space: nowrap;
   color: var(--pbl-theme-colors-brand-main);
-  padding: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
   margin: 0;
 }
 
