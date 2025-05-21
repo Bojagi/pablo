@@ -20,8 +20,9 @@ export interface PopoverProps<A extends object = object> {
   onClick?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
-  onClickOutside?: () => void;
+  onClickOutside?: (e: MouseEvent) => void;
   arrow?: ReactElement;
+  style?: React.CSSProperties;
   open: boolean;
   animation?: ComponentType<InOutAnimationProps<A>>;
   animationProps?: AnimationSetupProps & A;
@@ -39,6 +40,7 @@ const DefaultArrow = styled.div``;
 export const Popover = forwardRef(
   (
     {
+      style,
       children,
       content,
       placement,
@@ -87,8 +89,18 @@ export const Popover = forwardRef(
     }, [ref, popperElement]);
 
     const handleClickOutside = useMemo(
-      () => (open ? onClickOutside : () => {}),
-      [open, onClickOutside]
+      () =>
+        open
+          ? (e) => {
+              if (referenceElement?.contains(e.target)) {
+                console.log('aaa');
+
+                return;
+              }
+              onClickOutside(e);
+            }
+          : () => {},
+      [open, referenceElement, onClickOutside]
     );
 
     useNanopop({
@@ -104,6 +116,7 @@ export const Popover = forwardRef(
       () =>
         cloneElement(children, {
           ref: setReferenceElement,
+          innerRef: setReferenceElement,
           onClick: (...args) => {
             onClick?.();
             children.props.onClick?.(...args);
@@ -115,6 +128,7 @@ export const Popover = forwardRef(
 
     const clonedArrow = useMemo(
       () =>
+        arrow &&
         cloneElement(arrow, {
           ref: setArrowElement,
           positionMatch,
@@ -127,7 +141,7 @@ export const Popover = forwardRef(
         {clonedElement}
         <Portal name="popover">
           {innerOpen && (
-            <PopoverWrapper ref={setPopperElement}>
+            <PopoverWrapper ref={setPopperElement} style={style}>
               <ClickOutside onClickOutside={handleClickOutside}>
                 <Animation {...animationProps} visible={open}>
                   <div>{content}</div>

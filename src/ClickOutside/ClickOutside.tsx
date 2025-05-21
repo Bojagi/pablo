@@ -3,7 +3,7 @@ import { useReRenderForwardRef } from '../utils/useForwardRef';
 
 export interface ClickOutsideProps {
   children: ReactElement;
-  onClickOutside: () => void;
+  onClickOutside: (e: MouseEvent) => void;
 }
 
 export const ClickOutside = forwardRef<any, ClickOutsideProps>(
@@ -26,7 +26,7 @@ export const ClickOutside = forwardRef<any, ClickOutsideProps>(
         } while (targetEl);
         // This is a click outside.
 
-        onClickOutside();
+        onClickOutside(e);
       };
 
       // Wait a tick, otherwise an opening click event will be directly triggering outside click as well

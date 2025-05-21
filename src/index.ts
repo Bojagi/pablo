@@ -9,6 +9,7 @@ export * from './Button';
 export * from './ButtonBar';
 export * from './ButtonBase';
 export * from './Card';
+export * from './Combobox';
 export * from './Checkbox';
 export * from './ClickOutside';
 export * from './IconButton';
