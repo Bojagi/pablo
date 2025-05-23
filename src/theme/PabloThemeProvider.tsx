@@ -16,11 +16,26 @@ const isMergeableObject = (val) => isObject(val) && !Array.isArray(val) && !(val
 
 function createThemeVarDefinitions(theme: any, keyNameObject: any, base?: any) {
   return Array.from(Object.entries(keyNameObject))
-    .map(([key, varName]) =>
-      isObject(varName)
-        ? createThemeVarDefinitions(theme[key], keyNameObject[key], theme.base)
-        : `--${varName}: ${(theme instanceof Map ? theme.get(key) : theme[key]) || base[key]};`
-    )
+    .map(([key, varName]) => {
+      if (!theme) {
+        return '';
+      }
+
+      if (isObject(varName)) {
+        return createThemeVarDefinitions(theme[key], varName, theme.base || base);
+      }
+      const keyName = `--${varName}`;
+
+      const keyValue = theme instanceof Map ? theme.get(key) : theme?.[key];
+      if (!keyValue && !base) {
+        return '';
+      }
+      if (!keyValue || keyValue === '') {
+        return `${keyName}: ${base[key]};`;
+      }
+
+      return `${keyName}: ${keyValue};`;
+    })
     .flat()
     .join(' ');
 }
