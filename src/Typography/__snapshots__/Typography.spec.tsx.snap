@@ -41,6 +41,8 @@ exports[`InfoText component  > Render component 1`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-weight: 500;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
 }
 
 <div>
@@ -93,6 +95,7 @@ exports[`ParagraphBold component  > Render component 1`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-weight: 500;
 }
 
 <div>
@@ -197,6 +200,7 @@ exports[`Typography component with variant body > Render component 2`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-weight: 500;
 }
 
 <div>
@@ -223,6 +227,7 @@ exports[`Typography component with variant body > Render component 3`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
 }
 
 <div>
@@ -249,6 +254,8 @@ exports[`Typography component with variant body > Render component 4`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-weight: 500;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
 }
 
 <div>
@@ -303,6 +310,7 @@ exports[`Typography component with variant body > Render inline component 2`] = 
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 <div>
@@ -330,6 +338,7 @@ exports[`Typography component with variant body > Render inline component 3`] = 
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
 }
 
 <div>
@@ -357,6 +366,8 @@ exports[`Typography component with variant body > Render inline component 4`] = 
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+  font-weight: 500;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
 }
 
 <div>
@@ -409,6 +420,8 @@ exports[`Typography component with variant button > Render component 2`] = `
   line-height: var(--pbl-theme-typography-button-lineHeight);
   font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
+  font-weight: 500;
 }
 
 <div>
@@ -463,6 +476,8 @@ exports[`Typography component with variant button > Render inline component 2`] 
   font-weight: var(--pbl-theme-typography-button-fontWeight);
   margin-bottom: var(--pbl-theme-typography-button-marginBottom);
   margin-bottom: 0;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
+  font-weight: 500;
 }
 
 <div>
@@ -727,6 +742,7 @@ exports[`Typography component with variant undefined > Render component 2`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-weight: 500;
 }
 
 <div>
@@ -753,6 +769,8 @@ exports[`Typography component with variant undefined > Render component 3`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-weight: 500;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
 }
 
 <div>
@@ -807,6 +825,7 @@ exports[`Typography component with variant undefined > Render inline component 2
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 <div>
@@ -834,6 +853,8 @@ exports[`Typography component with variant undefined > Render inline component 3
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
   margin-bottom: 0;
+  font-weight: 500;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
 }
 
 <div>
