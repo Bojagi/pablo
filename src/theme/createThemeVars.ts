@@ -14,7 +14,13 @@ function internalThemeVars<T extends Record<string, any>>(
 ): DeepStringReplace<T, [number, string]> {
   return Object.entries(themeObject).reduce((acc, [key, value]) => {
     const keyVar = `${base}-${key}`;
-    return { ...acc, [key]: isObject(value) ? internalThemeVars(keyVar, value) : `${keyVar}` };
+    if (value === undefined) {
+      return acc;
+    }
+    return {
+      ...acc,
+      [key]: isObject(value) ? internalThemeVars(keyVar, value) : keyVar,
+    };
   }, {} as any);
 }
 

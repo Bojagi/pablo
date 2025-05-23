@@ -194,6 +194,7 @@ exports[`Show error when an error message is given 1`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
   margin-top: clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem);
   color: var(--pbl-theme-colors-negative-main);
 }
@@ -333,6 +334,7 @@ exports[`Show infotext when available 1`] = `
   line-height: var(--pbl-theme-typography-body-lineHeight);
   font-weight: var(--pbl-theme-typography-body-fontWeight);
   margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
   margin-top: clamp(0.25rem, 0.2142857142857143rem + 0.17857142857142858vw, 0.375rem);
   color: var(--pbl-theme-colors-text-info);
 }

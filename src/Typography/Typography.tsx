@@ -55,8 +55,8 @@ const getTypographyStyles = (type: TypographyVariants, tag: keyof JSX.IntrinsicE
   ${themeVars.typography[type]};
   ${getCustomStyles('typography.styles', type)}
   ${ifProp('inline', 'margin-bottom: 0;')}
-  ${ifProp('bold' as any, (themeVars.typography[type] as any).variants?.bold)}
-  ${ifProp('small' as any, (themeVars.typography[type] as any).variants?.small)}
+  ${ifProp('bold' as any, (props) => props.theme.typography[type].variants?.bold)}
+  ${ifProp('small' as any, (props) => props.theme.typography[type].variants?.small)}
   ${typography}
   ${boxInterpolateFn}
 `;
