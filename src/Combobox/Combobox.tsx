@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useRef } from 'react';
+import React, { useState, forwardRef, useRef, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { LayoutBoxProps } from '../Box';
 import { getComponentStyle } from '../styleHelpers/getComponentStyle';
@@ -55,6 +55,9 @@ const AutocompleteBox = styled.div`
   border-width: 1px;
   border-style: solid;
   padding: 0.5em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
   box-sizing: border-box;
   border-color: ${getComponentStyle('input.outline.borderColor')};
   z-index: 1;
@@ -72,9 +75,17 @@ const ComboboxItemWrapper = styled.div`
 export const Combobox = forwardRef<HTMLDivElement, ComboboxProps>(
   ({ width, variant = 'filled', children, onChange, value, ...props }, ref) => {
     const [open, setOpen] = useState(false);
+    const [suggestionMaxHeight, setSuggestionMaxHeight] = useState(window.innerHeight);
     const innerRef = useRef<HTMLInputElement>(null);
-    const inputWidth = useRef<number>(0);
     const [selectedItemIndex, setSelectedItemIndex] = useState<number>(-1);
+
+    const domRect = innerRef.current?.getBoundingClientRect() || {
+      width: 0,
+      height: 0,
+      bottom: 0,
+      top: 0,
+      left: 0,
+    };
 
     const setRef = (node) => {
       innerRef.current = node;
@@ -86,6 +97,17 @@ export const Combobox = forwardRef<HTMLDivElement, ComboboxProps>(
         }
       }
     };
+
+    useEffect(() => {
+      const setter = () => {
+        console.log('domRect', domRect);
+
+        setSuggestionMaxHeight(window.innerHeight - domRect.bottom - 10);
+      };
+      setter();
+      window.addEventListener('resize', setter);
+      return () => window.removeEventListener('resize', setter);
+    });
 
     const handleBlur = useBlur((target) => {
       if (target && target.closest('[data-pbl-type=combobox-item]')) {
@@ -116,8 +138,6 @@ export const Combobox = forwardRef<HTMLDivElement, ComboboxProps>(
             />
           );
         }) ?? [];
-
-    inputWidth.current = innerRef.current?.getBoundingClientRect().width || 0;
 
     const showPopupBasedOnValue = props.showOnEmpty || value?.length > 0;
     const showPopup = showPopupBasedOnValue && items?.length > 0;
@@ -161,11 +181,11 @@ export const Combobox = forwardRef<HTMLDivElement, ComboboxProps>(
           innerRef?.current?.blur();
           setOpen(false);
         }}
-        style={{ width: inputWidth.current }}
+        style={{ width: domRect.width, height: 'fit-content', maxHeight: suggestionMaxHeight }}
         offset={-8}
         arrow={null}
         delay={0}
-        open={open}
+        open={true}
         content={content}
       >
         <BaseInput<InnerInputProps, HTMLInputElement>

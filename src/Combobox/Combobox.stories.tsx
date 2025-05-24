@@ -49,7 +49,7 @@ const items = [
 const Label = ({ item }) => (
   <Box>
     <Body inline>{item.value}</Body>
-    <Body inline small color="gray.100">
+    <Body inline small textColor="gray.300">
       {item.system}
     </Body>
   </Box>

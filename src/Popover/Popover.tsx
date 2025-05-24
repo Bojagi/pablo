@@ -35,6 +35,10 @@ const PopoverWrapper = styled.div`
   z-index: 1100;
 `;
 
+const ContentWrapper = styled.div`
+  display: contents;
+`;
+
 const DefaultArrow = styled.div``;
 
 export const Popover = forwardRef(
@@ -144,7 +148,7 @@ export const Popover = forwardRef(
             <PopoverWrapper ref={setPopperElement} style={style}>
               <ClickOutside onClickOutside={handleClickOutside}>
                 <Animation {...animationProps} visible={open}>
-                  <div>{content}</div>
+                  <ContentWrapper>{content}</ContentWrapper>
                 </Animation>
               </ClickOutside>
               {clonedArrow}
