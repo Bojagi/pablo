@@ -16,7 +16,7 @@ type ComponentPrimitiveProps<P extends object> = {
 const getPrimitiveStyle =
   <P extends object, I extends ComponentPrimitiveProps<P>>(
     property: string | string[],
-    transformFn?: (value: unknown) => string | number
+    transformFn?: (value: unknown) => string | number | any
   ) =>
   (props: I) => {
     const componentPath = props.componentPath as ComponentPath<P>;
@@ -30,11 +30,13 @@ const componentPrimitive =
     { tag = 'div' as any }: CreateComponentPrimitiveOptions<T> = {}
   ) =>
   (template: TemplateStringsArray, ...styles: Array<Interpolation<ComponentPrimitiveProps<P>>>) => {
+    const extendedTemplate = Object.assign([...template, ''], { raw: [...template.raw, ''] });
     const StyledComponent = styled(tag)<ComponentPrimitiveProps<P>>(
-      template,
+      extendedTemplate as TemplateStringsArray,
       ...styles,
       getPrimitiveStyle('css')
     );
+
     return forwardRef<HTMLElement, P & JSX.IntrinsicElements[T]>((props: any, ref) => (
       <StyledComponent componentPath={componentPath} ref={ref} {...props} />
     ));

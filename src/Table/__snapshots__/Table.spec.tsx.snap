@@ -1,0 +1,1237 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Component content table story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
+  width: 80vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  width: 100%;
+  height: 1px;
+  border-collapse: collapse;
+  border: 0;
+}
+
+.emotion-2 {
+  background-color: var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-4 {
+  padding: 0;
+  text-align: left;
+}
+
+.emotion-4:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.emotion-4:last-of-type {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.emotion-5 {
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
+  padding-bottom: calc(clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) + );
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*>.emotion-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: undefined;
+  width: 100%;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+*:last-of-type>.emotion-5:after {
+  width: calc(100% - undefined);
+}
+
+.emotion-5:first-of-type>.emotion-5:after {
+  left: undefined;
+  width: calc(100% - undefined);
+}
+
+tr:last-of-type>*>.emotion-5:after {
+  content: none;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
+.emotion-15 {
+  padding: 0;
+}
+
+.emotion-16 {
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
+  padding-bottom: calc(clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) + 1px);
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*>.emotion-16:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+*:last-of-type>.emotion-16:after {
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+.emotion-16:first-of-type>.emotion-16:after {
+  left: clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem);
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+tr:last-of-type>*>.emotion-16:after {
+  content: none;
+}
+
+.emotion-17 {
+  box-sizing: border-box;
+}
+
+.emotion-19 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+  font-size: clamp(0.7692307692307692rem, 0.7747252747252746rem + -0.027472527472527375vw, 0.75rem);
+  color: var(--pbl-theme-colors-gray-400);
+}
+
+<div
+  class="emotion-0"
+  width="80vw"
+>
+  <table
+    class="emotion-1"
+  >
+    <thead
+      class="emotion-2"
+    >
+      <tr
+        class="emotion-3"
+      >
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Game
+            </p>
+          </div>
+        </th>
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Year
+            </p>
+          </div>
+        </th>
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Platform
+            </p>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="emotion-3"
+    >
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <div
+              class="emotion-17"
+            >
+              <p
+                class="emotion-6"
+              >
+                Final Fantasy VI
+              </p>
+              <p
+                class="emotion-19"
+              >
+                Director: Yoshinori Kitase
+              </p>
+            </div>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1994
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              SNES
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <div
+              class="emotion-17"
+            >
+              <p
+                class="emotion-6"
+              >
+                Metal Gear Solid
+              </p>
+              <p
+                class="emotion-19"
+              >
+                Director: Hideo Kojima
+              </p>
+            </div>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              PS1
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <div
+              class="emotion-17"
+            >
+              <p
+                class="emotion-6"
+              >
+                The Legend of Zelda: Ocarina of Time
+              </p>
+              <p
+                class="emotion-19"
+              >
+                Director: Shigeru Miyamoto
+              </p>
+            </div>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              N64
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Simple Table story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
+  width: 80vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  width: 100%;
+  height: 1px;
+  border-collapse: collapse;
+  border: 0;
+}
+
+.emotion-2 {
+  background-color: var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-4 {
+  padding: 0;
+  text-align: left;
+}
+
+.emotion-4:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.emotion-4:last-of-type {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.emotion-5 {
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
+  padding-bottom: calc(clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) + );
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*>.emotion-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: undefined;
+  width: 100%;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+*:last-of-type>.emotion-5:after {
+  width: calc(100% - undefined);
+}
+
+.emotion-5:first-of-type>.emotion-5:after {
+  left: undefined;
+  width: calc(100% - undefined);
+}
+
+tr:last-of-type>*>.emotion-5:after {
+  content: none;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
+.emotion-15 {
+  padding: 0;
+}
+
+.emotion-16 {
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
+  padding-bottom: calc(clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) + 1px);
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*>.emotion-16:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+*:last-of-type>.emotion-16:after {
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+.emotion-16:first-of-type>.emotion-16:after {
+  left: clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem);
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+tr:last-of-type>*>.emotion-16:after {
+  content: none;
+}
+
+<div
+  class="emotion-0"
+  width="80vw"
+>
+  <table
+    class="emotion-1"
+  >
+    <thead
+      class="emotion-2"
+    >
+      <tr
+        class="emotion-3"
+      >
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Game
+            </p>
+          </div>
+        </th>
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Year
+            </p>
+          </div>
+        </th>
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Platform
+            </p>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="emotion-3"
+    >
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              Final Fantasy VI
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1994
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              SNES
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              Metal Gear Solid
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              PS1
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              The Legend of Zelda: Ocarina of Time
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              N64
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Simple table story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
+  width: 80vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  width: 100%;
+  height: 1px;
+  border-collapse: collapse;
+  border: 0;
+}
+
+.emotion-2 {
+  background-color: var(--pbl-theme-colors-gray-50);
+}
+
+.emotion-4 {
+  padding: 0;
+  text-align: left;
+}
+
+.emotion-4:first-of-type {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.emotion-4:last-of-type {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.emotion-5 {
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
+  padding-bottom: calc(clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) + );
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*>.emotion-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: undefined;
+  width: 100%;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+*:last-of-type>.emotion-5:after {
+  width: calc(100% - undefined);
+}
+
+.emotion-5:first-of-type>.emotion-5:after {
+  left: undefined;
+  width: calc(100% - undefined);
+}
+
+tr:last-of-type>*>.emotion-5:after {
+  content: none;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
+.emotion-15 {
+  padding: 0;
+}
+
+.emotion-16 {
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
+  padding-bottom: calc(clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) + 1px);
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*>.emotion-16:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+*:last-of-type>.emotion-16:after {
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+.emotion-16:first-of-type>.emotion-16:after {
+  left: clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem);
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+tr:last-of-type>*>.emotion-16:after {
+  content: none;
+}
+
+<div
+  class="emotion-0"
+  width="80vw"
+>
+  <table
+    class="emotion-1"
+  >
+    <thead
+      class="emotion-2"
+    >
+      <tr
+        class="emotion-3"
+      >
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Game
+            </p>
+          </div>
+        </th>
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Year
+            </p>
+          </div>
+        </th>
+        <th
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Platform
+            </p>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="emotion-3"
+    >
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              Final Fantasy VI
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1994
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              SNES
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              Metal Gear Solid
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              PS1
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-3"
+      >
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              The Legend of Zelda: Ocarina of Time
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-15"
+        >
+          <div
+            class="emotion-16"
+          >
+            <p
+              class="emotion-6"
+            >
+              N64
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Without header story snapshot 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  gap: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem) clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
+  width: 80vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  width: 100%;
+  height: 1px;
+  border-collapse: collapse;
+  border: 0;
+}
+
+.emotion-4 {
+  padding: 0;
+}
+
+.emotion-5 {
+  padding: clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem);
+  padding-bottom: calc(clamp(0.75rem, 0.6428571428571428rem + 0.5357142857142857vw, 1.125rem) + 1px);
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*>.emotion-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: var(--pbl-theme-colors-gray-100);
+}
+
+*:last-of-type>.emotion-5:after {
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+.emotion-5:first-of-type>.emotion-5:after {
+  left: clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem);
+  width: calc(100% - clamp(0.125rem, 0.10714285714285715rem + 0.08928571428571429vw, 0.1875rem));
+}
+
+tr:last-of-type>*>.emotion-5:after {
+  content: none;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  font-family: var(--pbl-theme-typography-base-fontFamily);
+  font-size: var(--pbl-theme-typography-base-fontSize);
+  line-height: var(--pbl-theme-typography-base-lineHeight);
+  font-weight: var(--pbl-theme-typography-base-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-base-marginBottom);
+  font-style: normal;
+  margin: 0;
+  font-family: var(--pbl-theme-typography-body-fontFamily);
+  font-size: var(--pbl-theme-typography-body-fontSize);
+  line-height: var(--pbl-theme-typography-body-lineHeight);
+  font-weight: var(--pbl-theme-typography-body-fontWeight);
+  margin-bottom: var(--pbl-theme-typography-body-marginBottom);
+  margin-bottom: 0;
+}
+
+<div
+  class="emotion-0"
+  width="80vw"
+>
+  <table
+    class="emotion-1"
+  >
+    <tbody
+      class="emotion-2"
+    >
+      <tr
+        class="emotion-2"
+      >
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Final Fantasy VI
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              1994
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              SNES
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-2"
+      >
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              Metal Gear Solid
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              PS1
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="emotion-2"
+      >
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              The Legend of Zelda: Ocarina of Time
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              1998
+            </p>
+          </div>
+        </td>
+        <td
+          class="emotion-4"
+        >
+          <div
+            class="emotion-5"
+          >
+            <p
+              class="emotion-6"
+            >
+              N64
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
