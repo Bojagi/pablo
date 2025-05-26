@@ -65,20 +65,20 @@ test('renders Table.Header with rows and columns', () => {
   expect(screen.getByText('Header Column 2')).toBeInTheDocument();
 });
 
-// test('Simple table story snapshot', () => {
-//   const { container } = render(createStoryComponent(stories.SimpleTable));
-//   expect(container.firstChild).toMatchSnapshot();
-// });
+test('Simple table story snapshot', () => {
+  const { container } = render(createStoryComponent(stories.SimpleTable));
+  expect(container.firstChild).toMatchSnapshot();
+});
 
-// test('Without header story snapshot', () => {
-//   const { container } = render(createStoryComponent(stories.WithoutHeader));
-//   expect(container.firstChild).toMatchSnapshot();
-// });
+test('Without header story snapshot', () => {
+  const { container } = render(createStoryComponent(stories.WithoutHeader));
+  expect(container.firstChild).toMatchSnapshot();
+});
 
-// test('Component content table story snapshot', () => {
-//   const { container } = render(createStoryComponent(stories.ComponentContentTable));
-//   expect(container.firstChild).toMatchSnapshot();
-// });
+test('Component content table story snapshot', () => {
+  const { container } = render(createStoryComponent(stories.ComponentContentTable));
+  expect(container.firstChild).toMatchSnapshot();
+});
 
 function createStoryComponent(Story) {
   return (
