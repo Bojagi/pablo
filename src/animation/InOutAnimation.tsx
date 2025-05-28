@@ -45,6 +45,7 @@ export type InOutAnimationProps<T extends object = object> = AnimationAdditional
 
 export const InnerInOutAnimation = styled.div<AnimationStyleProps<any>>`
   transition: all ${(props) => props.duration}ms ${(props) => props.easing};
+  display: contents;
   ${(props) => props.baseStyles}
   ${({ status, preEnterStyles, enteredStyles, exitedStyles, exitingStyles, enteringStyles }) => {
     switch (status) {

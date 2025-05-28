@@ -33,6 +33,12 @@ const useNanopop = ({
       margin,
       position,
       container,
+      positionFlipOrder: {
+        top: 'tb',
+        bottom: 'bt',
+        left: 'lr',
+        right: 'rl',
+      },
       arrow: arrowElement || undefined,
     });
 
