@@ -30,6 +30,7 @@ export * from './Slider';
 export * from './SidebarNav';
 export * from './Switch';
 export * from './Tabs';
+export * from './Table';
 export * from './TextArea';
 export * from './theme';
 export * from './ToastCard';

@@ -15,6 +15,7 @@ import { radioStyles } from '../Radio/styles';
 import { sidebarNavStyles } from '../SidebarNav/styles';
 import { sliderStyles } from '../Slider/styles';
 import { switchStyles } from '../Switch/styles';
+import { tableStyles } from '../Table/styles';
 import { tabsStyles } from '../Tabs/styles';
 import { textareaStyles } from '../TextArea/styles';
 import { toastCardStyles } from '../ToastCard/styles';
@@ -40,6 +41,7 @@ const defaultComponentStyles = {
   sidebarNav: sidebarNavStyles,
   slider: sliderStyles,
   switch: switchStyles,
+  table: tableStyles,
   tabs: tabsStyles,
   textArea: textareaStyles,
   toastCard: toastCardStyles,
