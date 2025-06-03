@@ -20,8 +20,9 @@ export interface PopoverProps<A extends object = object> {
   onClick?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  anchorElement?: HTMLElement | null;
   onClickOutside?: (e: MouseEvent) => void;
-  arrow?: ReactElement;
+  arrow?: ReactElement | null;
   style?: React.CSSProperties;
   open: boolean;
   animation?: ComponentType<InOutAnimationProps<A>>;
@@ -48,6 +49,7 @@ export const Popover = forwardRef(
       children,
       content,
       placement,
+      anchorElement,
       open,
       delay = 0,
       offset = 0,
@@ -64,7 +66,8 @@ export const Popover = forwardRef(
   ) => {
     const [innerOpen, setInnerOpen] = useDelayedBooleanState(open, delay, animationProps.duration);
     const [referenceElement, setReferenceElement] = useReRenderForwardRef<HTMLElement | null>(
-      children.ref as Ref<HTMLElement>
+      children.ref as Ref<HTMLElement>,
+      anchorElement
     );
 
     const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
@@ -97,8 +100,6 @@ export const Popover = forwardRef(
         open
           ? (e) => {
               if (referenceElement?.contains(e.target)) {
-                console.log('aaa');
-
                 return;
               }
               onClickOutside(e);

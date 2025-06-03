@@ -5,10 +5,18 @@ import { css } from '@emotion/react';
 import { Box, Flex } from '../Box';
 import { IconButton } from '../IconButton';
 import { Body, Typography } from '../Typography';
-import { Combobox, ComboboxItem, ComboboxProps } from './Combobox';
+import { Combobox, ComboboxProps } from './Combobox';
 
 export default {
   title: 'Combobox',
+};
+
+const filter = (item, value) => {
+  return (
+    (item.value.toLowerCase().includes(value.toLowerCase()) ||
+      item.system.toLowerCase().includes(value.toLowerCase())) &&
+    value.toLowerCase() !== item.value.toLowerCase()
+  );
 };
 
 const ControlledInput = ({
@@ -16,7 +24,17 @@ const ControlledInput = ({
   ...props
 }: Omit<ComboboxProps, 'onChange'>) => {
   const [value, setValue] = useState(valueInitial);
-  return <Combobox showOnEmpty value={value} mb={4} {...props} onChange={setValue} />;
+  return (
+    <Combobox
+      filter={filter}
+      toValue={(item) => item.value}
+      showOnEmpty
+      value={value}
+      mb={4}
+      {...props}
+      onChange={setValue}
+    />
+  );
 };
 
 const items = [
@@ -25,12 +43,25 @@ const items = [
     system: 'SNES',
   },
   {
+    value: 'Final Fight',
+    system: 'SNES',
+  },
+  {
     value: 'Super Mario Bros. 3',
     system: 'NES',
+    filter: (item, value) => {
+      return filter(item, value) || value.toLowerCase().includes('luigi');
+    },
   },
   {
     value: 'The Legend of Zelda: Ocarina of Time',
     system: 'N64',
+    toValue: () => 'Zelda 5',
+  },
+  {
+    value: 'The Legend of Zelda: A Link to the Past',
+    system: 'SNES',
+    toValue: () => 'Zelda 3',
   },
   {
     value: 'Portal 2',
@@ -56,15 +87,13 @@ const Label = ({ item }) => (
 );
 
 const baseStory = (args) => (
-  <ControlledInput
-    showOnEmpty
-    children={items.map((item) => (
-      <ComboboxItem key={item.value} value={item.value}>
+  <ControlledInput showOnEmpty {...args}>
+    {items.map((item) => (
+      <Combobox.Item key={item.value} filter={item.filter} toValue={item.toValue} value={item}>
         <Label item={item} />
-      </ComboboxItem>
+      </Combobox.Item>
     ))}
-    {...args}
-  />
+  </ControlledInput>
 );
 
 export const FullWidth = baseStory.bind(null);
