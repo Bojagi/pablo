@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { forwardRef, useCallback, useEffect, useRef, useState } from 'react';
 import { LayoutBoxProps } from '../Box';
 import { componentPrimitive, getPrimitiveStyle } from '../styleHelpers';
 
@@ -26,7 +26,7 @@ interface AutocompleteBoxProps extends LayoutBoxProps {
   anchor: HTMLElement | null;
 }
 
-const AutocompleteBox = (props: AutocompleteBoxProps) => {
+const AutocompleteBox = forwardRef<HTMLDivElement, AutocompleteBoxProps>((props, ref) => {
   const [availableHeight, setAvailableHeight] = useState(window.innerHeight);
   const width = useRef<number | null>(0);
 
@@ -47,6 +47,7 @@ const AutocompleteBox = (props: AutocompleteBoxProps) => {
 
   return (
     <Wrapper
+      ref={ref}
       style={{
         maxHeight: availableHeight ? `${availableHeight}px` : '300px',
         width: width.current || 0,
@@ -56,6 +57,6 @@ const AutocompleteBox = (props: AutocompleteBoxProps) => {
       {props.children}
     </Wrapper>
   );
-};
+});
 
 export { AutocompleteBox, AutocompleteBoxProps };
