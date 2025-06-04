@@ -1,6 +1,5 @@
 import React, { isValidElement } from 'react';
-import { getComponentStyle } from '../styleHelpers';
-import styled from '@emotion/styled';
+import { componentPrimitive, getComponentStyle, getPrimitiveStyle } from '../styleHelpers';
 import { Body } from '../Typography';
 import { AutocompleteItem, AutocompleteItemRenderFn } from './types';
 
@@ -17,13 +16,14 @@ interface WrapperProps {
   selected?: boolean;
 }
 
-const Wrapper = styled.div<WrapperProps>`
-  font-family: ${getComponentStyle('input.fontFamily')};
-  font-size: ${getComponentStyle('input.fontSize')};
-  padding: 0.25em;
+const Wrapper = componentPrimitive<WrapperProps>(['autocomplete', 'item'])`
+  padding: ${getPrimitiveStyle('padding')};
   cursor: pointer;
-  background-color: ${({ theme, selected }) => (selected ? theme.colors.brand.lightest : null)};
-  border-radius: 0.5em;
+  border-radius: ${getPrimitiveStyle('borderRadius')};
+
+  &[data-selected='true'] {
+    background-color: ${getComponentStyle(['autocomplete', 'item', 'selected', 'backgroundColor'])};
+  }
 `;
 
 const getRenderItem = <V, O>({
@@ -51,6 +51,7 @@ const AutoCompleteItemBox = <V, O = V>(props: AutoCompleteItemBoxProps<V, O>) =>
   return (
     <Wrapper
       data-pbl-type="autocomplete-item"
+      data-selected={props.selected && 'true'}
       selected={props.selected}
       onClick={(e) => {
         e.preventDefault();

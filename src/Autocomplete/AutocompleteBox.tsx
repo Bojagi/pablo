@@ -1,26 +1,23 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import styled from '@emotion/styled';
-import { Box, LayoutBoxProps } from '../Box';
-import { borderRadiusTransform } from '../Box/interpolations/shape';
-import { getComponentStyle } from '../styleHelpers';
+import { LayoutBoxProps } from '../Box';
+import { componentPrimitive, getPrimitiveStyle } from '../styleHelpers';
 
 interface WrapperProps extends LayoutBoxProps {
   availableHeight?: number;
 }
 
-const Wrapper = styled(Box)<WrapperProps>`
-  background-color: white;
-  border-radius: ${(props) =>
-    borderRadiusTransform(getComponentStyle('input.borderRadius')(props), props.theme)};
-  box-shadow: ${getComponentStyle('input.boxShadow')};
-  border-width: 1px;
+const Wrapper = componentPrimitive<WrapperProps>(['autocomplete', 'container'])`
+  background-color: ${getPrimitiveStyle('backgroundColor')};
+  border-radius: ${getPrimitiveStyle('borderRadius')};
+  box-shadow: ${getPrimitiveStyle('boxShadow')};
+  border-width: ${getPrimitiveStyle('borderWidth')};
   border-style: solid;
-  padding: 0.5em;
+  border-color: ${getPrimitiveStyle('borderColor')};
+  padding: ${getPrimitiveStyle('padding')};
   overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
   box-sizing: border-box;
-  border-color: ${getComponentStyle('input.outline.borderColor')};
   z-index: 1;
 `;
 
