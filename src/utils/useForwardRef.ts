@@ -30,7 +30,7 @@ export function useReRenderForwardRef<T>(
   const [innerRef, setInnerRefValue] = useState(override || null);
   const setInnerRef = useCallback(
     (value) => {
-      if (override === undefined) {
+      if (override === undefined || override === null) {
         setInnerRefValue(value);
         setRef(outsideRef, value);
       }
@@ -39,7 +39,7 @@ export function useReRenderForwardRef<T>(
   );
 
   useEffect(() => {
-    if (override !== undefined) {
+    if (override !== undefined && override !== null) {
       setInnerRefValue(override || null);
     }
   }, [override, setInnerRef]);

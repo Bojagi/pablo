@@ -1,5 +1,5 @@
 import { animationStyles } from '../animation/styles';
-import { autocompleteStyles } from '../Autocomplete/styles';
+import { dropdownListStyles } from '../DropdownList/styles';
 import { avatarStyles } from '../Avatar/styles';
 import { buttonStyles } from '../Button/styles';
 import { buttonBarStyles } from '../ButtonBar/styles';
@@ -25,13 +25,13 @@ import { tooltipStyles } from '../Tooltip/styles';
 import { typographyStyles } from '../Typography/styles';
 
 const defaultComponentStyles = {
-  autocomplete: autocompleteStyles,
   animation: animationStyles,
   button: buttonStyles,
   avatar: avatarStyles,
   buttonBar: buttonBarStyles,
   card: cardStyles,
   checkbox: checkboxStyles,
+  dropdownList: dropdownListStyles,
   iconButton: iconButtonStyles,
   image: imageStyles,
   input: inputStyles,

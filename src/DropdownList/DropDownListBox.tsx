@@ -6,7 +6,7 @@ interface WrapperProps extends LayoutBoxProps {
   availableHeight?: number;
 }
 
-const Wrapper = componentPrimitive<WrapperProps>(['autocomplete', 'container'])`
+const Wrapper = componentPrimitive<WrapperProps>(['dropdownList', 'container'])`
   background-color: ${getPrimitiveStyle('backgroundColor')};
   border-radius: ${getPrimitiveStyle('borderRadius')};
   box-shadow: ${getPrimitiveStyle('boxShadow')};
@@ -21,12 +21,12 @@ const Wrapper = componentPrimitive<WrapperProps>(['autocomplete', 'container'])`
   z-index: 1;
 `;
 
-interface AutocompleteBoxProps extends LayoutBoxProps {
+interface DropdownListBoxProps extends LayoutBoxProps {
   children: React.ReactNode;
   anchor: HTMLElement | null;
 }
 
-const AutocompleteBox = forwardRef<HTMLDivElement, AutocompleteBoxProps>((props, ref) => {
+const DropdownListBox = forwardRef<HTMLDivElement, DropdownListBoxProps>((props, ref) => {
   const [availableHeight, setAvailableHeight] = useState(window.innerHeight);
   const width = useRef<number | null>(0);
 
@@ -59,4 +59,4 @@ const AutocompleteBox = forwardRef<HTMLDivElement, AutocompleteBoxProps>((props,
   );
 });
 
-export { AutocompleteBox, AutocompleteBoxProps };
+export { DropdownListBox, DropdownListBoxProps };

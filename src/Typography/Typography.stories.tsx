@@ -104,7 +104,14 @@ export const Override = () => {
       h2: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
       h3: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
       h4: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
-      body: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
+      body: {
+        fontFamily: 'Times New Roman',
+        fontWeight: 'bold',
+        variants: {
+          bold: { fontWeight: 'normal', fontSize: '3rem' },
+          small: { fontSize: '0.875rem' },
+        },
+      },
       button: { fontFamily: 'Times New Roman', fontWeight: 'bold' },
     },
   };
@@ -122,6 +129,12 @@ export const Override = () => {
         </Typography>
         <Typography mb={4} variant="body">
           Body
+        </Typography>
+        <Typography mb={4} variant="body" bold>
+          Body Bold
+        </Typography>
+        <Typography mb={4} variant="body" small>
+          Body Small
         </Typography>
         <Typography mb={4} variant="button">
           Button

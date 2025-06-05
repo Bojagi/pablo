@@ -3,9 +3,9 @@ import { Style } from '../theme/types';
 import { BaseStyles } from '../types';
 import { themeVars } from '../theme/themeVars';
 
-export type AutocompleteStyleProperties = 'simple';
+export type DropdownListStyleProperties = 'simple';
 
-export interface AutocompleteStyles extends BaseStyles<AutocompleteStyleProperties> {
+export interface DropdownListStyles extends BaseStyles<DropdownListStyleProperties> {
   container: {
     backgroundColor: Style;
     borderRadius: Style;
@@ -23,7 +23,7 @@ export interface AutocompleteStyles extends BaseStyles<AutocompleteStyleProperti
   };
 }
 
-export const autocompleteStyles: AutocompleteStyles = {
+export const dropdownListStyles: DropdownListStyles = {
   container: {
     backgroundColor: themeVars.colors.common.white,
     borderRadius: '0.5rem',
