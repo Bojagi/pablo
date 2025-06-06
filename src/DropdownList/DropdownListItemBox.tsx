@@ -16,7 +16,16 @@ interface WrapperProps {
   selected?: boolean;
 }
 
-const Wrapper = componentPrimitive<WrapperProps>(['dropdownList', 'item'])`
+const getElementProps = (selected) => ({
+  'data-pbl-type': 'dropdownList-item',
+  'data-selected': selected && 'true',
+  'aria-selected': selected && 'true',
+  role: 'option',
+});
+
+const Wrapper = componentPrimitive<WrapperProps, 'li'>(['dropdownList', 'item'], {
+  tag: 'li',
+})`
   padding: ${getPrimitiveStyle('padding')};
   cursor: pointer;
   border-radius: ${getPrimitiveStyle('borderRadius')};
@@ -32,19 +41,29 @@ const getRenderItem = <V, O>(
 ): React.ReactNode => {
   if (render) {
     const renderedItem = render({
-      item: item.value,
+      value: item.value,
+      label: item.label,
       onSelect: () => onSelect?.(item.value),
       selected,
     });
+
+    if (typeof renderedItem === 'string') {
+      return <Body>{renderedItem}</Body>;
+    }
+
     if (isValidElement(renderedItem)) {
       if (!shouldWrap) {
-        return cloneElement(renderedItem, {
-          'data-pbl-type': 'dropdownList-item',
-          'data-selected': selected && 'true',
-        } as any);
+        return cloneElement(renderedItem, getElementProps(selected) as any);
       }
       return renderedItem;
     }
+  }
+
+  if (item.label) {
+    if (isValidElement(item.label)) {
+      return item.label;
+    }
+    return <Body>{item.label}</Body>;
   }
 
   const stringifiedItem = toString ? toString(item.value) : item.toString?.(item.value);
@@ -59,8 +78,7 @@ const DropdownListItemBox = <V, O = V>(props: DropdownListItemBoxProps<V, O>) =>
   }
   return (
     <Wrapper
-      data-pbl-type="dropdownList-item"
-      data-selected={props.selected && 'true'}
+      {...getElementProps(props.selected)}
       selected={props.selected}
       onClick={(e) => {
         e.preventDefault();

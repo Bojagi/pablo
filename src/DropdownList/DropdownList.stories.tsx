@@ -22,12 +22,12 @@ const filterFn = (item: Game, searchTerm: string) => {
   );
 };
 
-const render = ({ item }) => {
+const render = ({ value }) => {
   return (
     <Box>
-      <Body inline>{item.name}</Body>
+      <Body inline>{value.name}</Body>
       <Body inline small textColor="gray.300">
-        {item.system}
+        {value.system}
       </Body>
     </Box>
   );
@@ -169,8 +169,8 @@ NonClosingDropdownList.args = {
   closeOnSelect: false,
 };
 
-const customRenderer: DropdownListItemRenderFn<Game> = ({ item }) => (
-  <Box bgColor="red">{item.name}</Box>
+const customRenderer: DropdownListItemRenderFn<Game> = ({ value }) => (
+  <Box bgColor="red">{value.name}</Box>
 );
 
 export const WithCustomRender = baseStory.bind(null);
@@ -186,10 +186,10 @@ const CustomWrapper = styled(Flex)<{ selected?: boolean }>`
   ${(props) => props.selected && `text-decoration: underline;`}
 `;
 
-const customUnwrappedRenderer: DropdownListItemRenderFn<Game> = ({ item, selected, onSelect }) => (
+const customUnwrappedRenderer: DropdownListItemRenderFn<Game> = ({ value, selected, onSelect }) => (
   <CustomWrapper selected={selected} gap={2}>
     <Body inline>
-      {item.name} ({item.system})
+      {value.name} ({value.system})
     </Body>
     <Button size="small" onClick={onSelect}>
       select

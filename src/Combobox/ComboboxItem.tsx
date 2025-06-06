@@ -2,12 +2,12 @@ import React from 'react';
 import { getComponentStyle } from '../styleHelpers';
 import styled from '@emotion/styled';
 
-interface ComboboxItemProps {
+interface ComboboxItemProps<T extends string | object> {
   children: React.ReactNode;
-  value: string;
-  onSelect?: (value: string) => void;
-  filter?: (item: string | object, value: string) => boolean;
-  toValue?: (item: string | object) => string;
+  value: T;
+  onSelect?: (value: T) => void;
+  filter?: (item: T, value: string) => boolean;
+  toValue?: (item: T) => string;
   selected?: boolean;
 }
 
@@ -24,7 +24,7 @@ const ComboboxItemWrapper = styled.div<ComboboxItemWrapperProps>`
   border-radius: 0.5em;
 `;
 
-const ComboboxItem = (props: ComboboxItemProps) => {
+const ComboboxItem = <T extends string | object>(props: ComboboxItemProps<T>) => {
   return (
     <ComboboxItemWrapper
       data-pbl-type="combobox-item"
@@ -34,7 +34,7 @@ const ComboboxItem = (props: ComboboxItemProps) => {
         props.onSelect!(props.value);
       }}
     >
-      {props.children || props.value}
+      {props.children || props.value.toString()}
     </ComboboxItemWrapper>
   );
 };

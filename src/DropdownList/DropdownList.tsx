@@ -130,6 +130,8 @@ const DropdownList = <V, O = V>({
     onClick: () => {
       setOpen(true);
     },
+    'aria-haspopup': 'listbox',
+    'aria-expanded': open ? 'true' : undefined,
   });
 
   const usedAnchor = anchorElement || childElement;

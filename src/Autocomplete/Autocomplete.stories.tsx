@@ -18,12 +18,12 @@ const filterFn = (item: Game, searchTerm: string) => {
   );
 };
 
-const render = ({ item }) => {
+const render = ({ value }) => {
   return (
     <Box>
-      <Body inline>{item.name}</Body>
+      <Body inline>{value.name}</Body>
       <Body inline small textColor="gray.300">
-        {item.system}
+        {value.system}
       </Body>
     </Box>
   );

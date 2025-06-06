@@ -1,73 +1,33 @@
-import React, { forwardRef, useMemo, Children } from 'react';
-import styled from '@emotion/styled';
-import { LayoutBoxProps } from '../Box';
-import { getComponentStyle } from '../styleHelpers/getComponentStyle';
-import { BaseInput, InnerInputProps, InputVariant } from '../shared/BaseInput';
-import { useComponentStyle } from '../theme/useComponentStyle';
-import { getCustomStyles } from '../utils/useCustomStyles';
-import { baseStyle } from '../shared/baseStyle';
+import React, { forwardRef, useMemo, Children, ComponentType, Ref } from 'react';
 import { ComboboxItem, ComboboxItemProps } from './ComboboxItem';
 import { setRef } from '../utils/setRef';
-import { Autocomplete, AutocompleteItem } from '../Autocomplete';
+import { Autocomplete, DropdownListItem } from '../Autocomplete';
+import { Input, InputProps } from '../Input';
 
-export interface ComboboxProps extends LayoutBoxProps {
-  id?: string;
-  value?: string;
-  inputRef?: React.Ref<HTMLInputElement>;
-  children?: React.ReactElement<ComboboxItemProps>[];
-  delimiter?: string;
-  error?: React.ReactNode;
-  label?: React.ReactNode;
-  variant?: InputVariant;
-  infoText?: React.ReactNode;
-  fullWidth?: boolean;
-  end?: React.ReactNode;
+export interface ComboboxProps<T extends string | object = string> extends InputProps {
+  children?: React.ReactElement<ComboboxItemProps<T>>[];
+  value: string;
+  ref?: Ref<HTMLDivElement>;
   showOnEmpty?: boolean;
   maxItems?: number;
-  filter?: (item: string | object, value: string) => boolean;
-  toValue?: (item: string | object) => string;
-  onChange: (newValue: string) => void;
+  filter?: (item: T, value: string) => boolean;
+  toValue?: (item: T) => string;
 }
-
-const InnerComboBox = styled.input<InnerInputProps>`
-  ${baseStyle}
-  flex-grow: 1;
-  flex-shrink: 1;
-  border: 0;
-  padding: ${getComponentStyle('input.padding')};
-  background-color: transparent;
-  font-family: ${getComponentStyle('input.fontFamily')};
-  font-size: ${getComponentStyle('input.fontSize')};
-  outline: none;
-  ${getCustomStyles('input.styles', 'field')}
-  width: 100%;
-`;
 
 type ComboboxToValueFn = <T extends string | object>(item: T) => string;
 
-const defaultToValue: ComboboxToValueFn = (item) => item.toString();
-export const Combobox = forwardRef<HTMLDivElement, ComboboxProps>(
-  (
-    {
-      width,
-      variant = 'filled',
-      children,
-      filter,
-      toValue = defaultToValue,
-      onChange,
-      value,
-      ...props
-    },
-    ref
-  ) => {
-    const defaultWidth = useComponentStyle('input.defaultWidth') as any;
-    const adornmentGap = useComponentStyle('input.adornmentGap');
+type ComboboxComponent = ComponentType<ComboboxProps<string | object>> & {
+  Item: typeof ComboboxItem;
+};
 
+const defaultToValue: ComboboxToValueFn = (item) => item.toString();
+const Combobox = forwardRef<HTMLDivElement, ComboboxProps>(
+  ({ children, filter, toValue = defaultToValue, onChange, value, ...props }, ref) => {
     const setInputRef = (node) => {
       setRef(ref, node);
     };
 
-    const items: AutocompleteItem<any, string>[] = useMemo(
+    const items: DropdownListItem<string | object, string>[] = useMemo(
       () =>
         children
           ? Children.map(children, (child) => {
@@ -90,25 +50,17 @@ export const Combobox = forwardRef<HTMLDivElement, ComboboxProps>(
       <Autocomplete
         items={items}
         showOnEmpty={props.showOnEmpty}
-        filterTerm={value}
+        filterTerm={value as any}
         maxItems={props.maxItems}
-        onChange={onChange}
+        onChange={onChange as any}
         toOutput={toValue}
       >
-        <BaseInput<InnerInputProps, HTMLInputElement>
-          name="input"
-          inputRef={setInputRef}
-          variant={variant}
-          adornmentGap={adornmentGap}
-          inputComponent={InnerComboBox}
-          {...props}
-          value={value}
-          onChange={onChange}
-          width={width || defaultWidth}
-        />
+        <Input inputRef={setInputRef} {...props} onChange={onChange} value={value} />
       </Autocomplete>
     );
   }
-);
+) as unknown as ComboboxComponent;
 
 Combobox.Item = ComboboxItem;
+
+export { Combobox };

@@ -15,7 +15,8 @@
     "strictNullChecks": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom/vitest"],
   },
   "include": ["src", "testUtils", "emotion.d.ts"],
   "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest"]

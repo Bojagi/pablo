@@ -1,7 +1,8 @@
 type DropdownListFilterFn<V> = (value: V, filterTerm: string) => boolean;
 
 interface DropdownListItemRenderFnOptions<V> {
-  item: V;
+  value: V;
+  label?: string | React.ReactNode;
   onSelect: () => void;
   selected?: boolean;
 }
@@ -12,6 +13,7 @@ type DropdownListItemRenderFn<V> = (
 
 interface DropdownListItem<V, O = V> {
   value: V;
+  label?: string;
   render?: DropdownListItemRenderFn<V>;
   wrap?: boolean;
   key?: string | number;

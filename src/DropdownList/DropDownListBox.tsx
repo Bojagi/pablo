@@ -6,7 +6,11 @@ interface WrapperProps extends LayoutBoxProps {
   availableHeight?: number;
 }
 
-const Wrapper = componentPrimitive<WrapperProps>(['dropdownList', 'container'])`
+const Wrapper = componentPrimitive<WrapperProps, 'ul'>(['dropdownList', 'container'], {
+  tag: 'ul',
+})`
+  margin: 0;
+  list-style: none;
   background-color: ${getPrimitiveStyle('backgroundColor')};
   border-radius: ${getPrimitiveStyle('borderRadius')};
   box-shadow: ${getPrimitiveStyle('boxShadow')};
@@ -47,6 +51,7 @@ const DropdownListBox = forwardRef<HTMLDivElement, DropdownListBoxProps>((props,
 
   return (
     <Wrapper
+      role="listbox"
       ref={ref}
       style={{
         maxHeight: availableHeight ? `${availableHeight}px` : '300px',

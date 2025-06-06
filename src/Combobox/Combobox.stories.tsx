@@ -19,15 +19,22 @@ const filter = (item, value) => {
   );
 };
 
+interface Game {
+  value: string;
+  system: string;
+  filter?: (item: Game, value: string) => boolean;
+  toValue?: (item: Game) => string;
+}
+
 const ControlledInput = ({
   value: valueInitial = '',
   ...props
-}: Omit<ComboboxProps, 'onChange'>) => {
+}: Omit<ComboboxProps, 'onChange' | 'value'> & { value?: string }) => {
   const [value, setValue] = useState(valueInitial);
   return (
     <Combobox
       filter={filter}
-      toValue={(item) => item.value}
+      toValue={(item: Game) => item.value}
       showOnEmpty
       value={value}
       mb={4}
@@ -37,7 +44,7 @@ const ControlledInput = ({
   );
 };
 
-const items = [
+const items: Game[] = [
   {
     value: 'Final Fantasy VI',
     system: 'SNES',
@@ -86,18 +93,22 @@ const Label = ({ item }) => (
   </Box>
 );
 
-const baseStory = (args) => (
+const baseStory = ({ children, ...args }) => (
   <ControlledInput showOnEmpty {...args}>
-    {items.map((item) => (
-      <Combobox.Item key={item.value} filter={item.filter} toValue={item.toValue} value={item}>
-        <Label item={item} />
-      </Combobox.Item>
-    ))}
+    {children ??
+      items.map((item) => (
+        <Combobox.Item key={item.value} filter={item.filter} toValue={item.toValue} value={item}>
+          <Label item={item} />
+        </Combobox.Item>
+      ))}
   </ControlledInput>
 );
 
 export const FullWidth = baseStory.bind(null);
 FullWidth.args = { fullWidth: true };
+
+export const EmptyChildren = baseStory.bind(null);
+EmptyChildren.args = { fullWidth: true, children: [] };
 
 export const FixedWidth = baseStory.bind(null);
 FixedWidth.args = { width: 800 };

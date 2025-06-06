@@ -6,6 +6,7 @@ import {
   DropdownListItemRenderFn,
 } from '../DropdownList/types';
 import { DropdownList } from '../DropdownList/DropdownList';
+import { hijackCbBefore } from '../utils/hijackCb';
 
 interface AutocompleteProps<V, O = V> {
   children: ComponentElement<any, any>;
@@ -53,7 +54,7 @@ const Autocomplete = <V, O = V>({
   }, [inputElement, handleBlur]);
 
   const clonedChildren = cloneElement(children, {
-    onBlur: handleBlur,
+    onBlur: hijackCbBefore(children.props.onBlur, handleBlur),
   });
 
   return (
