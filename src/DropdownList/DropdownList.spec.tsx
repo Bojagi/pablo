@@ -283,7 +283,7 @@ test('uses custom renderItem function', async () => {
 
 test('handles custom itemFilter function', async () => {
   const user = userEvent.setup();
-  const customFilter = vi.fn((value: string, filterTerm: string) => value.endsWith('a'));
+  const customFilter = vi.fn((value: string) => value.endsWith('a'));
 
   renderWithTheme(
     <DropdownList

@@ -37,9 +37,9 @@ export interface BaseInputProps<E extends HTMLElement>
   start?: React.ReactNode;
   end?: React.ReactNode;
   onChange?: (newValue: string, e: React.FormEvent<E>) => void;
-  onFocus?: () => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onKeyDown?: (e: React.KeyboardEvent<E>) => void;
-  onBlur?: () => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
 export type InputVariant = 'filled' | 'outline';

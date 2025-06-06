@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { test, expect, beforeEach, vi } from 'vitest';
@@ -78,7 +78,7 @@ test('filter options based on input', async () => {
 });
 
 test('forwards ref to input element', () => {
-  const ref = createRef<HTMLDivElement>();
+  const ref = React.createRef<HTMLDivElement>();
 
   renderWithTheme(
     <Combobox ref={ref} value="" onChange={mockOnChange}>
