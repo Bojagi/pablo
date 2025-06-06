@@ -1,8 +1,9 @@
 import React, { forwardRef, useMemo, Children, ComponentType, Ref } from 'react';
 import { ComboboxItem, ComboboxItemProps } from './ComboboxItem';
 import { setRef } from '../utils/setRef';
-import { Autocomplete, DropdownListItem } from '../Autocomplete';
+import { Autocomplete } from '../Autocomplete';
 import { Input, InputProps } from '../Input';
+import { DropdownListItem } from '../DropdownList';
 
 export interface ComboboxProps<T extends string | object = string> extends InputProps {
   children?: React.ReactElement<ComboboxItemProps<T>>[];
