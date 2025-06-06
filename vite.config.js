@@ -23,7 +23,7 @@ const config = defineConfig({
     test: {
       environment: 'jsdom',
       globals: true,
-      setupFiles: './vitestSetup.js', // assuming the test folder is in the root of our project
+      setupFiles: './vitestSetup.ts', // assuming the test folder is in the root of our project
     },
   })
 

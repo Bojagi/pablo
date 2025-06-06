@@ -32,12 +32,14 @@ export interface BaseInputProps<E extends HTMLElement>
   infoText?: React.ReactNode;
   fullWidth?: boolean;
   innerRef?: React.ForwardedRef<HTMLDivElement>;
+  inputWrapperRef?: React.ForwardedRef<HTMLDivElement>;
   inputRef?: React.Ref<E>;
   start?: React.ReactNode;
   end?: React.ReactNode;
   onChange?: (newValue: string, e: React.FormEvent<E>) => void;
-  onFocus?: () => void;
-  onBlur?: () => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onKeyDown?: (e: React.KeyboardEvent<E>) => void;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
 }
 
 export type InputVariant = 'filled' | 'outline';
@@ -112,6 +114,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   id: idProp,
   width,
   innerRef,
+  inputWrapperRef,
   inputRef,
   fullWidth = false,
   adornmentGap = 0,
@@ -144,6 +147,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
         </label>
       )}
       <InputWrapper
+        ref={inputWrapperRef}
         data-testid={`pbl-${name}-wrapper`}
         name={name}
         fullWidth={fullWidth}

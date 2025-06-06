@@ -29,14 +29,26 @@ const useNanopop = ({
 
     const container = targetWindow.document.documentElement?.getBoundingClientRect();
 
-    const newPlacement = reposition(referenceElement, popperElement, {
-      margin,
-      position,
-      container,
-      arrow: arrowElement || undefined,
-    });
-
-    onChange(newPlacement);
+    setTimeout(() => {
+      const newPlacement = reposition(referenceElement, popperElement, {
+        margin,
+        position,
+        container,
+        positionFlipOrder: {
+          top: 'tb',
+          bottom: 'bt',
+          left: 'lr',
+          right: 'rl',
+        },
+        variantFlipOrder: {
+          start: 's',
+          middle: 'm',
+          end: 'e',
+        },
+        arrow: arrowElement || undefined,
+      });
+      onChange(newPlacement);
+    }, 5);
   }, [onChange, referenceElement, popperElement, targetWindow, margin, position, arrowElement]);
 
   useLayoutEffect(() => {

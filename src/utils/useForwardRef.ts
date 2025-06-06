@@ -1,4 +1,13 @@
-import { MutableRefObject, Ref, RefObject, useCallback, useMemo, useRef, useState } from 'react';
+import {
+  MutableRefObject,
+  Ref,
+  RefObject,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { setRef } from './setRef';
 
 export function useForwardRef<T>(outsideRef: Ref<T>): [RefObject<T>, (newValue: T) => void] {
@@ -14,15 +23,26 @@ export function useForwardRef<T>(outsideRef: Ref<T>): [RefObject<T>, (newValue: 
   return useMemo(() => [innerRef, setInnerRef], [innerRef, setInnerRef]);
 }
 
-export function useReRenderForwardRef<T>(outsideRef: Ref<T>): [T | null, (newValue: T) => void] {
-  const [innerRef, setInnerRefValue] = useState(null);
+export function useReRenderForwardRef<T>(
+  outsideRef: Ref<T>,
+  override?: T
+): [T | null, (newValue: T) => void] {
+  const [innerRef, setInnerRefValue] = useState(override || null);
   const setInnerRef = useCallback(
     (value) => {
-      setInnerRefValue(value);
-      setRef(outsideRef, value);
+      if (override === undefined || override === null) {
+        setInnerRefValue(value);
+        setRef(outsideRef, value);
+      }
     },
-    [outsideRef]
+    [outsideRef, override]
   );
+
+  useEffect(() => {
+    if (override !== undefined && override !== null) {
+      setInnerRefValue(override || null);
+    }
+  }, [override, setInnerRef]);
 
   return useMemo(() => [innerRef, setInnerRef], [innerRef, setInnerRef]);
 }
