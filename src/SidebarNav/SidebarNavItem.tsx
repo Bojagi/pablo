@@ -14,6 +14,7 @@ export interface SidebarNavItemProps extends ButtonBaseProps {
 const SidebarNavItemWrapper = styled.li<SidebarNavItemProps>`
   ${buttonBaseStyles}
   display: flex;
+  cursor: pointer;
   margin: ${getComponentStyle('sidebarNav.item.marginY')} 0;
   ${getCustomStyles('sidebar.item.styles', 'root')}
 

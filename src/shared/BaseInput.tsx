@@ -135,7 +135,7 @@ export function BaseInput<P extends Record<string, any>, E extends HTMLElement>(
   const getCustomStyles = useCustomStyles(`${name}.styles`, customStyles);
 
   return (
-    <Box ref={innerRef} css={getCustomStyles('root')} {...boxProps}>
+    <Box ref={innerRef} mb={2} css={getCustomStyles('root')} {...boxProps}>
       {label && (
         <label data-testid={`pbl-${name}-label`} htmlFor={id}>
           <Paragraph mb={0.75} customStyles={{ body: getCustomStyles('label') }}>

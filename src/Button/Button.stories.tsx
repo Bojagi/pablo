@@ -162,3 +162,11 @@ WithCustomStyles.args = {
     `,
   },
 };
+
+export const Test = () => (
+  <Flex>
+    <div>hi</div>
+    <Button>to big!</Button>
+    <Box height={100}>I am a tall box!</Box>
+  </Flex>
+);
