@@ -1,4 +1,5 @@
 import { animationStyles } from '../animation/styles';
+import { dropdownListStyles } from '../DropdownList/styles';
 import { avatarStyles } from '../Avatar/styles';
 import { buttonStyles } from '../Button/styles';
 import { buttonBarStyles } from '../ButtonBar/styles';
@@ -30,6 +31,7 @@ const defaultComponentStyles = {
   buttonBar: buttonBarStyles,
   card: cardStyles,
   checkbox: checkboxStyles,
+  dropdownList: dropdownListStyles,
   iconButton: iconButtonStyles,
   image: imageStyles,
   input: inputStyles,

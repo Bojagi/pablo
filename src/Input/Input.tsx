@@ -15,6 +15,10 @@ export interface InputProps extends LayoutBoxProps {
   label?: React.ReactNode;
   variant?: InputVariant;
   infoText?: React.ReactNode;
+  placeholder?: string;
+  disabled?: boolean;
+  onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
+  onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   fullWidth?: boolean;
   end?: React.ReactNode;
   onChange: (newValue: string, e: React.FormEvent<HTMLInputElement>) => void;

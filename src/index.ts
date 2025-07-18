@@ -2,6 +2,7 @@
 // ../packageExports.js
 
 export * from './animation';
+export * from './Autocomplete';
 export * from './Avatar';
 export * from './Box';
 export * from './breakpoints';
@@ -11,6 +12,8 @@ export * from './ButtonBase';
 export * from './Card';
 export * from './Checkbox';
 export * from './ClickOutside';
+export * from './Combobox';
+export * from './DropdownList';
 export * from './IconButton';
 export * from './Image';
 export * from './Input';
