@@ -33,6 +33,7 @@ exports[`Render multiple nav items 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
   margin: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) 0;
 }
 
@@ -99,6 +100,7 @@ exports[`Render multiple nav items 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
   margin: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) 0;
   background-color: var(--pbl-theme-colors-brand-lightest);
 }
@@ -196,6 +198,7 @@ exports[`Render one nav item 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
   margin: clamp(0.5rem, 0.4285714285714286rem + 0.35714285714285715vw, 0.75rem) 0;
   background-color: var(--pbl-theme-colors-brand-lightest);
 }

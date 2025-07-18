@@ -3,6 +3,7 @@
 exports[`Render without value 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  margin-bottom: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
 }
 
 .emotion-1 {
@@ -67,6 +68,7 @@ exports[`Render without value 1`] = `
 exports[`Show error when an error message is given 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  margin-bottom: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
 }
 
 .emotion-1 {
@@ -168,6 +170,7 @@ exports[`Show error when an error message is given 1`] = `
 exports[`Show infotext when available 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  margin-bottom: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
 }
 
 .emotion-1 {
@@ -263,6 +266,7 @@ exports[`Show infotext when available 1`] = `
 exports[`Show label when available 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  margin-bottom: clamp(1rem, 0.8571428571428572rem + 0.7142857142857143vw, 1.5rem);
 }
 
 .emotion-1 {
